@@ -1,9 +1,12 @@
-function App() {
+import React from "react";
+import { Provider } from "react-redux";
+import Routes from "./routes";
+import store from "./store";
+
+export default function App() {
   return (
-    <div className="App">
-      <h1>Comming Soon!</h1>
-    </div>
+    <Provider store={store}>
+      <Routes />
+    </Provider>
   );
 }
-
-export default App;
