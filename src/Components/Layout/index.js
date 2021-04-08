@@ -7,6 +7,7 @@ import LayoutStyle from "./style";
 import Container from "@material-ui/core/Container";
 import { Button } from "@material-ui/core";
 import { ToggleType } from "../../Redux/Actions/layoutActions";
+import { BoxedWidth, FullWidth } from "./constants";
 
 const Layout = ({ children }) => {
   const { root, paper } = LayoutStyle();
@@ -30,9 +31,9 @@ const Layout = ({ children }) => {
             <Button
               variant="outlined"
               onClick={() =>
-                layoutType === "lg"
-                  ? dispatch(ToggleType(false))
-                  : dispatch(ToggleType("lg"))
+                layoutType === BoxedWidth
+                  ? dispatch(ToggleType(FullWidth))
+                  : dispatch(ToggleType(BoxedWidth))
               }
             >
               btn {layoutType}

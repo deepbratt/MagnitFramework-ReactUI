@@ -3,7 +3,7 @@ const initialNewsState = {
 };
 const layoutReducer = (state = initialNewsState, action) => {
   switch (action.type) {
-    case "TOGGLETYPE":
+    case TOGGLETYPE:
       return {
         ...state,
         layoutType: action.payload,
@@ -13,4 +13,5 @@ const layoutReducer = (state = initialNewsState, action) => {
   }
 };
 
+export const TOGGLETYPE = "TOGGLETYPE";
 export default layoutReducer;

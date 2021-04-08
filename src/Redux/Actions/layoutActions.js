@@ -1,6 +1,8 @@
+import { TOGGLETYPE } from "../Reducers/layoutReducer";
+
 export const ToggleType = (layoutType) => {
   return {
-    type: "TOGGLETYPE",
+    type: TOGGLETYPE,
     payload: layoutType,
   };
 };

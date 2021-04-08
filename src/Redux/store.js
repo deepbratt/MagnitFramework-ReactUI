@@ -10,12 +10,12 @@ const persistConfig = {
   storage: storage,
   whitelist: ["layoutReducer"],
 };
-const pReducer = persistReducer(persistConfig, rootReducer);
+const _persistReducer = persistReducer(persistConfig, rootReducer);
 
 const middleware = [thunk, createLogger()];
 
 const store = createStore(
-  pReducer,
+  _persistReducer,
   compose(
     applyMiddleware(...middleware),
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
