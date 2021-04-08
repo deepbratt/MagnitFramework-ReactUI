@@ -1,6 +1,6 @@
 const initialNewsState = {
   user: {},
-  isLoggedin: false,
+  isLoggedin: true,
 };
 const userReducer = (state = initialNewsState, action) => {
   switch (action.type) {
