@@ -8,7 +8,7 @@ import storage from "redux-persist/lib/storage";
 const persistConfig = {
   key: "layoutReducer",
   storage: storage,
-  whitelist: ["layoutReducer"], // which reducer want to store
+  whitelist: ["layoutReducer"],
 };
 const pReducer = persistReducer(persistConfig, rootReducer);
 

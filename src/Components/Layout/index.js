@@ -10,11 +10,8 @@ import { ToggleType } from "../../Redux/Actions/layoutActions";
 
 const Layout = ({ children }) => {
   const { root, paper } = LayoutStyle();
-  // const [layoutType, setLayoutType] = useState();
-  const layoutType = useSelector((state) => {
-    return state.layoutReducer.layoutType;
-    console.log("layouttype", layoutType);
-  });
+  const layoutType = useSelector((state) => state.layoutReducer.layoutType);
+
   const dispatch = useDispatch();
   return (
     <div className={root}>
@@ -31,6 +28,7 @@ const Layout = ({ children }) => {
           </Grid>
           <Grid item xs={12}>
             <Button
+              variant="outlined"
               onClick={() =>
                 layoutType === "lg"
                   ? dispatch(ToggleType(false))
