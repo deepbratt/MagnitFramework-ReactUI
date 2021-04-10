@@ -5,7 +5,7 @@ import Paper from "@material-ui/core/Paper";
 import { ThemeProvider } from "@material-ui/styles";
 import Button from "@material-ui/core/Button";
 import { DarkTheme, NightTheme } from "./Theme/index";
-import Switch from "./Components/Layout/Switch";
+import Switch from "./Components/themeToggle/Switch";
 
 const App = (props) => {
   const { value } = props;
