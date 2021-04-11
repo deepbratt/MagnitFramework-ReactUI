@@ -23,7 +23,8 @@ touch "target/server.war"
         stage('Client') {
           agent {
             docker {
-              image 'node'
+              image 'node:lts-buster-slim'
+              args 'args \'-p 8989:8989\''
             }
 
           }
