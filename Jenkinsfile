@@ -23,7 +23,7 @@ touch "target/server.war"
         stage('Client') {
           agent {
             docker {
-              image 'node:10-alpine image'
+              image 'node'
             }
 
           }
