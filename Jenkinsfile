@@ -4,9 +4,7 @@ pipeline {
       image 'node:lts-buster-slim'
       args '-p 8989:8989'
     }
-  }
-  environment {
-    NODE_ENV = 'production'
+
   }
   stages {
     stage('Install') {
@@ -16,6 +14,7 @@ pipeline {
         echo 'Install Success'
       }
     }
+
     stage('Build') {
       steps {
         echo 'Building..'
@@ -24,5 +23,8 @@ pipeline {
       }
     }
 
+  }
+  environment {
+    NODE_ENV = 'production'
   }
 }
