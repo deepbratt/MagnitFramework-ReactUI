@@ -1,6 +1,6 @@
 {
   "name": "myapp",
-  "version": "1.0.7",
+  "version": "1.0.2",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.3",
@@ -47,6 +47,7 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
     "jest": "^26.6.0",
-    "jest-enzyme": "^7.1.2"
+    "jest-enzyme": "^7.1.2",
+    "enzyme-to-json": "^3.6.2"
   }
 }
