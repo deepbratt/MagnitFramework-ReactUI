@@ -22,20 +22,14 @@ pipeline {
 
         stage('Client') {
           agent {
-            docker {
-              image 'node:6-alpine'
-              args '-p 3000:3000'
+            node {
+              label 'npm'
             }
 
           }
           steps {
-            sh '''echo "Building the client code ..."
-              npm install --save react
-              mkdir -p dist
-              cat > dist/index.html <<EOF
-              hello!
-              EOF
-              touch "dist/client.js"'''
+            sh '''npm install --save react
+'''
           }
         }
 
