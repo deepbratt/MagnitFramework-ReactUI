@@ -38,7 +38,9 @@ pipeline {
               touch "dist/client.js"'''
           }
         }
+
       }
     }
+
   }
 }
