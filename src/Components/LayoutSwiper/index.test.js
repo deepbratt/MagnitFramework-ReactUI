@@ -35,11 +35,5 @@ describe("LayoutSwiper Component", () => {
       const button = findByTestAtrr(wrapper, "layoutSwiperComponent");
       expect(button.length).toBe(1);
     });
-
-    it("should not render a button", () => {
-      wrapper = shallow(<LayoutSwiper />);
-      const button = findByTestAtrr(wrapper, "layoutSwiperComponent");
-      expect(button.length).toBe(0);
-    });
   });
 });
