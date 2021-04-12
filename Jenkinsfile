@@ -4,19 +4,10 @@ pipeline {
     stage('Server') {
       parallel {
         stage('Server') {
-          agent {
-            docker {
-              image 'maven:3.5.jdk-8-slim'
-            }
-
-          }
+          agent any
           steps {
             sh '''echo "Building the server code..."
-              mvn -version
-              mkdir -p target
-              touch "target/server.war"
               '''
-            stash(name: 'server', includes: '**/*war')
           }
         }
 
@@ -29,6 +20,7 @@ pipeline {
           }
           steps {
             sh '''npm install --save react
+npm build
 '''
           }
         }
