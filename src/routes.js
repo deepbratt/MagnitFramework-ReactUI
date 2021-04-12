@@ -11,13 +11,6 @@ const Routes = () => {
     <Router>
       <Switch>
         <Layout>
-          {/* <Route path="/" exact component={Home} /> */}
-          {/* <Route
-            path="/"
-            render={() =>
-              isLoggedIn ? <Home /> : <h1>You need to login first</h1>
-            }
-          /> */}
           <RequireAuth path="/" exact component={Home} />
         </Layout>
       </Switch>

@@ -7,7 +7,7 @@ const AuthRoute = ({ component: Component, isLoggedIn, ...rest }) => {
   return (
     <Route
       render={(props) =>
-        isLoggedIn ? <Component {...props} /> : <h1>Login First</h1>
+        isLoggedIn ? <Component {...props} /> : <h1>You need to login first</h1>
       }
     />
   );
