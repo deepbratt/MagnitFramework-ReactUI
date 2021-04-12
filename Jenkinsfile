@@ -4,7 +4,6 @@ pipeline {
     stage('Server') {
       parallel {
         stage('Server') {
-          agent any
           steps {
             sh '''echo "Building the server code..."
               '''
@@ -14,7 +13,7 @@ pipeline {
         stage('Client') {
           agent {
             node {
-              label 'npm'
+              label '14'
             }
 
           }
