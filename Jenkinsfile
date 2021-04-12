@@ -1,43 +1,26 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'node:lts-buster-slim'
+      args '-p 8989:8989'
+    }
+  }
+  environment {
+    NODE_ENV = 'production'
+  }
   stages {
-    stage('Server') {
-      parallel {
-        stage('Server') {
-          agent {
-            docker {
-              image 'maven:3.5.jdk-8-slim'
-            }
-
-          }
-          steps {
-            sh '''echo "Building the server code..."
-              mvn -version
-              mkdir -p target
-              touch "target/server.war"
-              '''
-            stash(name: 'server', includes: '**/*war')
-          }
-        }
-
-        stage('Client') {
-          agent {
-            docker {
-              image 'node:6-alpine'
-              args '-p 3000:3000'
-            }
-
-          }
-          steps {
-            sh '''echo "Building the client code ..."
-              npm install --save react
-              mkdir -p dist
-              cat > dist/index.html <<EOF
-              hello!
-              EOF
-              touch "dist/client.js"'''
-          }
-        }
+    stage('Install') {
+      steps {
+        echo 'Installing..'
+        sh 'yarn'
+        echo 'Install Success'
+      }
+    }
+    stage('Build') {
+      steps {
+        echo 'Building..'
+        sh 'yarn build'
+        echo 'Build Success'
       }
     }
   }
