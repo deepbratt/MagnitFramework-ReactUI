@@ -9,12 +9,8 @@ pipeline {
 
       }
       steps {
-        sh '''echo "Building the server code..."
-              mvn -version
-              mkdir -p target
-              touch "target/server.war"
-              '''
-        stash(name: 'server', includes: '**/*war')
+        echo 'initiating.....'
+        readFile(file: 'package.json', encoding: 'utf-8')
       }
     }
 
