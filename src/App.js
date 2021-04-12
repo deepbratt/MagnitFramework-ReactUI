@@ -1,5 +1,8 @@
 import React from "react";
+import { Provider } from "react-redux";
+import { store } from "./Redux/store";
 import { connect } from "react-redux";
+import Routes from "./routes"
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import { ThemeProvider } from "@material-ui/styles";
@@ -13,20 +16,9 @@ const App = (props) => {
   const defaultTheme = value === "DARK" ? { ...DarkTheme } : { ...NightTheme };
 
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <Paper style={{ height: "100vh" }} elevation={8}>
-        <Grid style = {{display: "flex", flexDirection: "column", marginTop: "10px"}}
-        container justify="center">
-          <Button variant="contained" color="secondary">
-            Theme
-          </Button>
-          <Button variant="contained" color="primary">
-            Theme
-          </Button>
-          <Switch />
-        </Grid>
-      </Paper>
-    </ThemeProvider>
+      <ThemeProvider theme={defaultTheme}>
+        <Routes />
+      </ThemeProvider>
   );
 };
 

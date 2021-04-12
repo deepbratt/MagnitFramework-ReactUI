@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Layout from "./Components/Layout";
+import RequireAuth from "./container/RequireAuth";
 import Home from "./Pages/Home";
 const Routes = () => {
   const isLoggedIn = useSelector((state) => state.userReducer.isLoggedin);
@@ -10,7 +11,7 @@ const Routes = () => {
     <Router>
       <Switch>
         <Layout>
-          <Route path="/" exact component={Home} />
+          <RequireAuth path="/" exact component={Home} />
         </Layout>
       </Switch>
     </Router>
