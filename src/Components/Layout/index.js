@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 import LayoutStyle from "./style";
 import Container from "@material-ui/core/Container";
 import LayoutSwiper from "../LayoutSwiper";
+import Switch from "../themeToggle/Switch";
 
 const Layout = ({ children }) => {
   const { root, paper } = LayoutStyle();
@@ -25,6 +26,7 @@ const Layout = ({ children }) => {
           </Grid>
           <Grid item xs={12}>
             <LayoutSwiper layoutType={layoutType} />
+            <Switch />
           </Grid>
         </Grid>
       </Container>
