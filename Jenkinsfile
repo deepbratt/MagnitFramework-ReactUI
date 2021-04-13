@@ -12,8 +12,8 @@ pipeline {
 
         stage('Client') {
           agent {
-            node {
-              label '14.0.0'
+            docker {
+              image 'node:7-alpine'
             }
 
           }
