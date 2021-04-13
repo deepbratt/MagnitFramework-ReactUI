@@ -8,6 +8,12 @@ pipeline {
   }
   stages {
     stage('Install Packages') {
+      agent {
+        node {
+          label 'agent any'
+        }
+
+      }
       steps {
         sh 'npm install'
       }
