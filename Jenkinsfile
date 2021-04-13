@@ -1,30 +1,35 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+     image 'node:6-alpine'
+     args '-p 3000:3000'
+    }
+  }
+  environment {
+    CI = 'true'
+    HOME = '.'
+    npm_config_cache = 'npm-cache'
+  }
   stages {
-    stage('Server') {
+    stage('Install Packages') {
+      steps {
+        sh 'npm install'
+      }
+    }
+    stage('Test and Build') {
       parallel {
-        stage('Server') {
+        stage('Run Tests') {
           steps {
-            sh '''echo "Building the server code..."
-              '''
+            sh 'npm run test'
           }
         }
-
-        stage('Client') {
-          agent {
-            docker {
-              image 'node:7-alpine'
-            }
-
-          }
+        stage('Create Build Artifacts') {
           steps {
-            sh '''npm install
-'''
+            sh 'npm run build'
           }
         }
-
       }
     }
 
-  }
+    }
 }
