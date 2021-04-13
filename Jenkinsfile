@@ -13,13 +13,12 @@ pipeline {
         stage('Client') {
           agent {
             node {
-              label '14'
+              label '14.0.0'
             }
 
           }
           steps {
-            sh '''npm install --save react
-npm build
+            sh '''npm install
 '''
           }
         }
