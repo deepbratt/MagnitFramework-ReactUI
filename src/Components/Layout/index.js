@@ -10,13 +10,13 @@ const Layout = ({ children }) => {
     <div className={root}>
       <Grid container spacing={3}>
         <Grid item xs={12}>
-          <Paper className={paper}>Header</Paper>
+          <Paper className={paper}></Paper>
         </Grid>
         <Grid item xs={12}>
           <Paper className={paper}>{children}</Paper>
         </Grid>
         <Grid item xs={12}>
-          <Paper className={paper}>Footer</Paper>
+          <Paper className={paper}></Paper>
         </Grid>
       </Grid>
     </div>
