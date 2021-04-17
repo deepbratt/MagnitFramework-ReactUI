@@ -3,7 +3,9 @@ import Grid from "@material-ui/core/Grid";
 import Switch from "../../Components/themeToggle/Switch";
 import Header from "../Section/Header/Header";
 import Slider from "../../Components/Slider/Slider";
+import { connect } from "react-redux";
 import Services from "../Section/Header/Services/Services"
+
 const Home = (props) => {
   return (
     <>
@@ -23,4 +25,8 @@ const Home = (props) => {
   );
 };
 
-export default Home;
+const mapStateToProps = (state) => ({
+  value: state.themeReducer.lightThemeEnabled,
+});
+
+export default connect(mapStateToProps)(Home);

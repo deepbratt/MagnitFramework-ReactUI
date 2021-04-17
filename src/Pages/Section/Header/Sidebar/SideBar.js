@@ -12,21 +12,21 @@ import { useStyles } from "./sidebarStyles";
 
 const SideBar = () => {
   const classes = useStyles();
-
+  const {root,drawer,drawerHeader,closeIcon,menuIcon} = classes
   const [open, setOpen] = useState(false);
 
   return (
     <>
       <Drawer
-        className={classes.drawer}
+        className={drawer}
         variant="temporary"
         anchor="left"
         open={open}
         classes={{
-          paper: classes.root,
+          paper: root,
         }}>
-        <div className={classes.drawerHeader}>
-          <CloseIcon className={classes.closeIcon} onClick={() => {setOpen()}} />
+        <div className={drawerHeader}>
+          <CloseIcon className={closeIcon} onClick={() => {setOpen()}} />
         </div>
         <Typography
           style={{ fontSize: "20px", textAlign: "center" }}
@@ -44,7 +44,7 @@ const SideBar = () => {
           )}
         </List>
       </Drawer>
-      <MenuIcon className={classes.menuIcon} onClick={() => {setOpen(!open)}} />
+      <MenuIcon className={menuIcon} onClick={() => {setOpen(!open)}} />
     </>
   );
 };

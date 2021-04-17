@@ -7,27 +7,26 @@ import {
   ListItemText,
   Toolbar,
   Button,
-  useMediaQuery,
-  useTheme,
 } from "@material-ui/core";
 import { MuiThemeProvider } from "@material-ui/core/styles";
+import Sizes from "../../../Theme/theme.constants"
 import SideBar from "./Sidebar/SideBar";
 
 const Header = (props) => {
   const { value } = props;
   const classes = useStyles();
-  // Breakpoints
-  const theme = useTheme();
-  const isMatch = useMediaQuery(theme.breakpoints.down("sm"));
+  const {toolbar,toolbarSub,logo,list,listItem,button} = classes
+  const {isMatch} = Sizes()
+  
 
   return (
     <>
       <Toolbar
-        className={value === "LIGHT" ? classes.toolbar : classes.toolbarSub}
+        className={value === "LIGHT" ? toolbar : toolbarSub}
         variant="dense"
       >
         <MuiThemeProvider theme={THEME}>
-          <Typography className={classes.logo} variant="h5" color="inherit">
+          <Typography className={logo} variant="h5" color="inherit">
             Logo Here
           </Typography>
         </MuiThemeProvider>
@@ -35,7 +34,7 @@ const Header = (props) => {
         {isMatch ? (
           <SideBar />
         ) : (
-          <List className={classes.list}>
+          <List className={list}>
             {[
               "Company",
               "Services",
@@ -45,14 +44,14 @@ const Header = (props) => {
             ].map((text, index) => (
               <MuiThemeProvider key={index} theme={THEME}>
                 <ListItem>
-                  <ListItemText className={classes.listItem} primary={text} />
+                  <ListItemText className={listItem} primary={text} />
                 </ListItem>
               </MuiThemeProvider>
             ))}
             <ListItem>
               <Button
                 style={{ textTransform: "none" }}
-                className={classes.button}
+                className={button}
                 variant="contained"
                 color="secondary"
               >

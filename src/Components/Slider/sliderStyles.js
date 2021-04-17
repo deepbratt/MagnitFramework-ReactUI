@@ -10,7 +10,7 @@ export const heading = createMuiTheme({
       h1: {
         fontFamily: "Poppins",
         fontStyle: "normal",
-        fontSize: "48px",
+        fontSize: "40px",
         lineHeight: 1.6,
         fontWeight: "bolder",
         [breakpoints.down("md")]: {
@@ -50,18 +50,21 @@ export const heading = createMuiTheme({
 export const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: "#F3FDFE",
+    
     margin: 0,
     padding: 0,
     color: "#151B27",
     display: "flex",
     position: "relative",
     [theme.breakpoints.up("lg")]: {
+      textAlign: "left",
       paddingLeft: "100px",
       overflow: "hidden",
       paddingTop: "60px",
       height: "100vh",
     },
     [theme.breakpoints.only("md")]: {
+      textAlign: "left",
       paddingLeft: "100px",
       paddingTop: "60px",
     },
@@ -82,13 +85,14 @@ export const useStyles = makeStyles((theme) => ({
     display: "flex",
     position: "relative",
     [theme.breakpoints.up("lg")]: {
-     
+      textAlign: "left",
       paddingLeft: "100px",
       overflow: "hidden",
       paddingTop: "60px",
       height: "100vh",
     },
     [theme.breakpoints.only("md")]: {
+      textAlign: "left",
       paddingLeft: "100px",
       paddingTop: "60px",
     },

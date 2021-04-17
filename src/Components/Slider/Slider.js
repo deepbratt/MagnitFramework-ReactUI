@@ -2,27 +2,19 @@ import React from "react";
 import { useStyles, heading } from "./sliderStyles";
 import { Typography, ListItem, Button, useMediaQuery , Paper} from "@material-ui/core";
 import CheckIcon from "@material-ui/icons/Check";
-import { MuiThemeProvider, useTheme } from "@material-ui/core/styles";
+import { MuiThemeProvider} from "@material-ui/core/styles";
 import slider from "../../../src/assets/slider.png";
+import Breakpoints from "../../Theme/theme.breakpoints"
 
 const Slider = (props) => {
   const { value } = props;
 
-  const theme = useTheme();
-  const desktop = useMediaQuery(theme.breakpoints.up("lg"));
-  const tablet = useMediaQuery(theme.breakpoints.only("md"));
-  const mobile = useMediaQuery(theme.breakpoints.only("xs"));
-
-  const sizes = () => {
-    if (desktop) return "large";
-    if (tablet) return "medium";
-    if (mobile) return "small";
-  };
   const classes = useStyles();
+  const {root, rootSub,headingSec,listSec,list,tick,tickSub,sec,vector} = classes
   return (
     <>
-      <Paper className={value === "LIGHT" ? classes.root: classes.rootSub} elevation= {0} >
-        <section className={classes.headingSec}>
+      <Paper className={value === "LIGHT" ? root: rootSub} elevation= {0} >
+        <section className={headingSec}>
           <MuiThemeProvider theme={heading}>
             <Typography variant="h1" color="inherit">
               We deliver absolute & <br />
@@ -31,8 +23,8 @@ const Slider = (props) => {
             </Typography>
           </MuiThemeProvider>
           <MuiThemeProvider theme={heading}>
-            <section className={classes.listSec}>
-              <ListItem className={classes.list}>
+            <section className={listSec}>
+              <ListItem className={list}>
                 <section>
                   {[
                     "Free Life-Time Support",
@@ -40,7 +32,7 @@ const Slider = (props) => {
                     "On-Time Delivery",
                   ].map((text, index) => (
                     <Typography key={index} variant="h5" color="inherit">
-                      <CheckIcon className={value === "LIGHT"? classes.tick : classes.tickSub } /> {text}
+                      <CheckIcon className={value === "LIGHT"? tick : tickSub } /> {text}
                     </Typography>
                   ))}
                 </section>
@@ -51,7 +43,7 @@ const Slider = (props) => {
             <Button
               style={{ textTransform: "none", marginLeft: "10px" }}
               variant="contained"
-              size={sizes()}
+              size={Breakpoints()}
               color="secondary"
             >
               Partner with us save 50%
@@ -59,8 +51,8 @@ const Slider = (props) => {
           </section>
         </section>
 
-        <section className={classes.sec}>
-         <img alt="sliderImg" src={slider} className={classes.vector}/>
+        <section className={sec}>
+         <img alt="sliderImg" src={slider} className={vector}/>
         </section>
       </Paper>
     </>
