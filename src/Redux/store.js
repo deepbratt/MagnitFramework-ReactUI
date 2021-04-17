@@ -6,20 +6,22 @@ import thunk from "redux-thunk";
 import rootReducer from "./Reducers/rootReducer";
 
 const persistConfig = {
-  key: "LIGHT",
+  key: "root",
   storage,
+  blackList: ["userReducer"],
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-const middleware = [thunk, createLogger()];
+export const middleware = [thunk, createLogger()];
 
-export const store = createStore(
+const store = createStore(
   persistedReducer,
   compose(
-    applyMiddleware(...middleware)
-    // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    applyMiddleware(...middleware),
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
   )
 );
 
-export const persistor = persistStore(store);
+const persistor = persistStore(store);
+export { persistor, store };

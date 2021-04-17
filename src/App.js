@@ -1,4 +1,6 @@
 import React from "react";
+import { Provider } from "react-redux";
+import { store } from "./Redux/store";
 import { connect } from "react-redux";
 import Paper from "@material-ui/core/Paper";
 import { ThemeProvider } from "@material-ui/styles";
