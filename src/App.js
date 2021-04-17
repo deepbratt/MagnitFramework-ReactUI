@@ -1,11 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
-import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import { ThemeProvider } from "@material-ui/styles";
-import Button from "@material-ui/core/Button";
 import { DarkTheme, NightTheme } from "./Theme/index";
-import Switch from "./Components/themeToggle/Switch";
+import Home from "./Pages/Home"
+
 
 const App = (props) => {
   const { value } = props;
@@ -14,18 +13,9 @@ const App = (props) => {
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <Paper style={{ height: "100vh" }} elevation={8}>
-        <Grid style = {{display: "flex", flexDirection: "column", marginTop: "10px"}}
-        container justify="center">
-          <Button variant="contained" color="secondary">
-            Theme
-          </Button>
-          <Button variant="contained" color="primary">
-            Theme
-          </Button>
-          <Switch />
-        </Grid>
-      </Paper>
+     <Paper  style= {{height: "100vh"}} elevation= {0} >
+       <Home {...props}/>
+     </Paper>
     </ThemeProvider>
   );
 };
