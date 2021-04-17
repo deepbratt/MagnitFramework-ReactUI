@@ -19,7 +19,9 @@ const Layout = ({ children }) => {
             <Paper className={paper}>Header</Paper>
           </Grid>
           <Grid item xs={12}>
-            <Paper className={paper}>{children}</Paper>
+            <Paper elevation={0} className={paper}>
+              {children}
+            </Paper>
           </Grid>
           <Grid item xs={12}>
             <Paper className={paper}>Footer</Paper>
@@ -37,4 +39,5 @@ const Layout = ({ children }) => {
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 };
+
 export default Layout;
