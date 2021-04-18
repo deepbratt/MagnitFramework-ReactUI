@@ -11,7 +11,7 @@ const Routes = () => {
     <Router>
       <Switch>
         <Layout>
-          <RequireAuth path="/" exact component={Home} />
+          <RequireAuth path="/" exact  component={Home} />
         </Layout>
       </Switch>
     </Router>
