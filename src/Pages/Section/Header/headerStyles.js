@@ -40,6 +40,7 @@ export const useStyles = makeStyles((theme) => ({
     justifyContent: "space-around"
   },
   toolbarSub: {
+    backgroundColor: "#F3FDFE",
     fontSize: "16px",
     display: "flex",
     justifyContent: "space-around"

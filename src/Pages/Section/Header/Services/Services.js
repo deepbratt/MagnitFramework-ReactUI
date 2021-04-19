@@ -7,10 +7,10 @@ import {
   Paper,
 } from "@material-ui/core";
 import { MuiThemeProvider} from "@material-ui/core/styles";
-import App from "../../../../assets/app.svg"
-import Profile from "../../../../assets/profile.svg" 
-import Web from "../../../../assets/web.svg" 
-import Digital from "../../../../assets/digital.svg" 
+import App from "../../../../assets/services/app.svg"
+import Profile from "../../../../assets/services/profile.svg" 
+import Web from "../../../../assets/services/web.svg" 
+import Digital from "../../../../assets/services/digital.svg" 
 
 const Services = (props) => {
   const {value} = props

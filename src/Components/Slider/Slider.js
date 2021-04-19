@@ -10,10 +10,10 @@ const Slider = (props) => {
   const { value } = props;
 
   const classes = useStyles();
-  const {root, rootSub,headingSec,listSec,list,tick,tickSub,sec,vector} = classes
+  const {root,headingSec,listSec,list,tick,tickSub,sec,vector} = classes
   return (
     <>
-      <Paper className={value === "LIGHT" ? root: rootSub} elevation= {0} >
+      <Paper className={value === "LIGHT" ? root: root} elevation= {0} >
         <section className={headingSec}>
           <MuiThemeProvider theme={heading}>
             <Typography variant="h1" color="inherit">

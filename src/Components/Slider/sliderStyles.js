@@ -184,4 +184,41 @@ export const useStyles = makeStyles((theme) => ({
       marginTop: "20px",
     },
   },
+  slider: {
+    backgroundColor: "#F3FDFE",
+    height: "100%",
+    margin: 0,
+    padding: 0,
+    overflow: "hidden",
+    color: "#151B27",
+    display: "flex",
+    alignItems: "center",
+    position: "relative",
+  },
+  slide: {
+    backgroundColor: "#F3FDFE",
+    minWidth: "100%",
+    position: "relative",
+    transition: "ease 1000ms",
+  },
+  leftBtn: {
+    position: "absolute",
+    top: "50%",
+    left: "0px",
+    transform: "translateY(-50%)",
+    color: "#c4c4c4",
+    "&:hover":{
+      cursor:"pointer"
+    }
+  },
+  rightBtn: {
+    position: "absolute",
+    top: "50%",
+    right: "0px",
+    transform: "translateY(-50%)",
+    color: "#c4c4c4",
+    "&:hover":{
+      cursor:"pointer"
+    }
+  },
 }));

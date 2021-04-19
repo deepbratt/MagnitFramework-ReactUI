@@ -1,24 +1,23 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
-import Switch from "../../Components/themeToggle/Switch";
-import Header from "../Section/Header/Header";
 import Slider from "../../Components/Slider/Slider";
 import { connect } from "react-redux";
 import Services from "../Section/Header/Services/Services"
+import Slide from "../../Components/Slider/Container"
+import Solutions from "../Solutions/Solutions";
 
 const Home = (props) => {
   return (
     <>
       <Grid  container >
-        <Grid  item md={12} xs={12}>
-          <Header {...props}/>
-        </Grid>
         <Grid item md={12} xs={12}>
-          <Slider {...props} />
+          <Slide />
         </Grid>
         <Grid  item md={12} xs={12}>
           <Services {...props}/>
-          <Switch/>
+        </Grid>
+        <Grid  item md={12} xs={12}>
+          <Solutions/>
         </Grid>
       </Grid>
     </>
