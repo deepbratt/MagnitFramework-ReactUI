@@ -1,12 +1,31 @@
 import React from "react";
 import { Provider } from "react-redux";
-import Routes from "./routes";
-import store from "./Redux/store";
+import { store } from "./Redux/store";
+import { connect } from "react-redux";
+import Paper from "@material-ui/core/Paper";
+import {useStyles} from "./globalStyles"
+import { ThemeProvider } from "@material-ui/styles";
+import { DarkTheme, NightTheme } from "./Theme/index";
+import Route from "./routes"
 
-export default function App() {
+
+const App = (props) => {
+  useStyles()
+  const { value } = props;
+  // IF the value is Dark change it to Dark and vice versa
+  const defaultTheme = value === "DARK" ? { ...DarkTheme } : { ...NightTheme };
+
   return (
-    <Provider store={store}>
-      <Routes />
-    </Provider>
+    <ThemeProvider theme={defaultTheme}>
+     <Paper  style= {{height: "100vh"}} elevation= {0} >
+       <Route />
+     </Paper>
+    </ThemeProvider>
   );
-}
+};
+
+const mapStateToProps = (state) => ({
+  value: state.themeReducer.lightThemeEnabled,
+});
+
+export default connect(mapStateToProps)(App);
