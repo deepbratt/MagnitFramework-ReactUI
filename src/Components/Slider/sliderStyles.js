@@ -50,7 +50,7 @@ export const heading = createMuiTheme({
 export const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: "#F3FDFE",
-    
+
     margin: 0,
     padding: 0,
     color: "#151B27",
@@ -59,9 +59,8 @@ export const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("lg")]: {
       textAlign: "left",
       paddingLeft: "100px",
-      overflow: "hidden",
       paddingTop: "60px",
-      height: "100vh",
+      height: "100%",
     },
     [theme.breakpoints.only("md")]: {
       textAlign: "left",
@@ -109,13 +108,14 @@ export const useStyles = makeStyles((theme) => ({
   headingSec: {
     display: "flex",
     flexDirection: "column",
+    width: "auto",
     [theme.breakpoints.down("sm")]: {
       alignItems: "center",
     },
-  }, 
+  },
   vector: {
     [theme.breakpoints.up("lg")]: {
-      width: "600px",
+      width: "300px",
     },
     [theme.breakpoints.only("md")]: {
       width: "400px",
@@ -184,41 +184,30 @@ export const useStyles = makeStyles((theme) => ({
       marginTop: "20px",
     },
   },
-  slider: {
-    backgroundColor: "#F3FDFE",
-    height: "100%",
-    margin: 0,
-    padding: 0,
-    overflow: "hidden",
-    color: "#151B27",
-    display: "flex",
-    alignItems: "center",
-    position: "relative",
-  },
   slide: {
-    backgroundColor: "#F3FDFE",
-    minWidth: "100%",
-    position: "relative",
-    transition: "ease 1000ms",
-  },
-  leftBtn: {
-    position: "absolute",
-    top: "50%",
-    left: "0px",
-    transform: "translateY(-50%)",
-    color: "#c4c4c4",
-    "&:hover":{
-      cursor:"pointer"
-    }
-  },
-  rightBtn: {
-    position: "absolute",
-    top: "50%",
-    right: "0px",
-    transform: "translateY(-50%)",
-    color: "#c4c4c4",
-    "&:hover":{
-      cursor:"pointer"
-    }
+    [breakpoints.up("lg")]: {
+      "& .carousel .slide img": {
+        width: "100% !important",
+        height: "100% !important",
+        maxHeight: "600px",
+        width: "auto",
+      },
+    },
+    [breakpoints.down("md")]: {
+      "& .carousel .slide img": {
+        width: "100% !important",
+        height: "100% !important",
+        maxHeight: "400px",
+        width: "auto",
+      },
+    },
+    [breakpoints.down("sm")]: {
+      "& .carousel .slide img": {
+        width: "100% !important",
+        height: "100% !important",
+        maxHeight: "300px",
+        width: "auto",
+      },
+    },
   },
 }));

@@ -17,7 +17,22 @@ import user from "../../assets/solutions/user.svg"
 import hospitality from "../../assets/solutions/nurse.svg"
 import travel from "../../assets/solutions/airplane.svg"
 
+import app from "../../assets/Partnersec/house.svg"
+import reliable from "../../assets/Partnersec/handshake.svg"
+import innovative from "../../assets/Partnersec/idea.svg"
+import agile from "../../assets/Partnersec/agile.svg"
+import transparency from "../../assets/Partnersec/loupe.svg"
+import money from "../../assets/Partnersec/bank.svg"
 
+import quality from "../../assets/Partnersec/quality.svg"
+import support from "../../assets/Partnersec/share.svg"
+import geeky from "../../assets/Partnersec/geeky.svg"
+import time from "../../assets/Partnersec/time.svg"
+import data from "../../assets/Partnersec/shield.svg"
+import iso from "../../assets/Partnersec/iso.svg"
+
+
+// Solutions section icon
 export const chatIcon = chat
 export const classifiedIcon = classified
 export const fundIcon = moneyJar
@@ -39,6 +54,18 @@ export const travelIcon = travel
 
 
 
-
+// Partner section icons
+export const appIcon = app
+export const reliableIcon = reliable
+export const innovativeIcon = innovative
+export const agileIcon = agile
+export const transparencyIcon = transparency
+export const moneyIcon = money
+export const qualityIcon = quality
+export const supportIcon = support
+export const geekyIcon = geeky
+export const timeIcon = time
+export const dataIcon = data
+export const isoIcon = iso
 
 

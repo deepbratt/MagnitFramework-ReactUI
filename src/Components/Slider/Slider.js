@@ -1,6 +1,6 @@
 import React from "react";
 import { useStyles, heading } from "./sliderStyles";
-import { Typography, ListItem, Button, useMediaQuery , Paper} from "@material-ui/core";
+import { Typography, ListItem, Button , Paper} from "@material-ui/core";
 import CheckIcon from "@material-ui/icons/Check";
 import { MuiThemeProvider} from "@material-ui/core/styles";
 import slider from "../../../src/assets/slider.png";
@@ -14,6 +14,7 @@ const Slider = (props) => {
   return (
     <>
       <Paper className={value === "LIGHT" ? root: root} elevation= {0} >
+        
         <section className={headingSec}>
           <MuiThemeProvider theme={heading}>
             <Typography variant="h1" color="inherit">

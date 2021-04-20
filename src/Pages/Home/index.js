@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import Services from "../Section/Header/Services/Services"
 import Slide from "../../Components/Slider/Container"
 import Solutions from "../Solutions/Solutions";
+import Partner from "../Partnersec/Container"
 
 const Home = (props) => {
   return (
@@ -19,7 +20,11 @@ const Home = (props) => {
         <Grid  item md={12} xs={12}>
           <Solutions/>
         </Grid>
+        <Grid  item md={12} xs={12}>
+          <Partner/>
+        </Grid>
       </Grid>
+     
     </>
   );
 };

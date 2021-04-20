@@ -1,42 +1,28 @@
 import React from "react";
 import { useStyles } from "./sliderStyles";
-import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
-import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
-import Autoplay from "./Autoplay";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Slider from "./Slider";
 
 const Container = () => {
   const classes = useStyles();
-  const { x, slideArr, setX } = Autoplay();
-  const { slider, slide, rightBtn, leftBtn } = classes;
-
-  <Autoplay />;
+  const { slide } = classes;
+  let slideArr = [<Slider />, <Slider />];
 
   return (
-    <div className={slider}>
+    <Carousel
+      className={slide}
+      autoPlay
+      showStatus={false}
+      interval={2500}
+      showArrows={false}
+      infiniteLoop={true}
+      transitionTime={500}
+    >
       {slideArr.map((text, index) => {
-        return (
-          <section className={slide} style={{ transform: `translateX(${x}%)` }}>
-            {text}
-          </section>
-        );
+        return <section>{text}</section>;
       })}
-      <ArrowForwardIosIcon
-        onClick={() =>
-          x === -100 * (slideArr.length - 1) ? setX(0) : setX(x - 100)
-        }
-        className={rightBtn}
-      >
-        Right
-      </ArrowForwardIosIcon>
-      <ArrowBackIosIcon
-        onClick={() =>
-          x === 0 ? setX(-100 * (slideArr.length - 1)) : setX(x + 100)
-        }
-        className={leftBtn}
-      >
-        Right
-      </ArrowBackIosIcon>
-    </div>
+    </Carousel>
   );
 };
 
