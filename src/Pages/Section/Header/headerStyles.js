@@ -1,5 +1,8 @@
 import {  makeStyles } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
+import {Colors} from "../../../Theme/color.constants"
+
+const {sliderBackground} = Colors
 
 export const THEME = createMuiTheme({
   overrides:{
@@ -34,7 +37,7 @@ export const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
   },
   toolbar: {
-    backgroundColor: "#F3FDFE",
+    backgroundColor: sliderBackground,
     fontSize: "16px",
     display: "flex",
     justifyContent: "space-around"

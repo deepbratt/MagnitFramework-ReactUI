@@ -3,7 +3,7 @@ import { useStyles, heading } from "./sliderStyles";
 import { Typography, ListItem, Button , Paper} from "@material-ui/core";
 import CheckIcon from "@material-ui/icons/Check";
 import { MuiThemeProvider} from "@material-ui/core/styles";
-import slider from "../../../src/assets/slider.png";
+import {hero} from "../../Components/Hero/Images";
 import Breakpoints from "../../Theme/theme.breakpoints"
 
 const Slider = (props) => {
@@ -53,7 +53,7 @@ const Slider = (props) => {
         </section>
 
         <section className={sec}>
-         <img alt="sliderImg" src={slider} className={vector}/>
+         <img alt="sliderImg" src={hero} className={vector}/>
         </section>
       </Paper>
     </>

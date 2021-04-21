@@ -1,7 +1,20 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
+import { Colors } from "../../Theme/color.constants";
 
+const { PartnerSectionIcons } = Colors;
+const {
+  appIcon,
+  reliableIcon,
+  innovativeIcon,
+  agileIcon,
+  transparencyIcon,
+  moneyIcon,
+  supportIcon,
+  timeIcon,
+  dataIcon,
+} = PartnerSectionIcons;
 const breakpoints = createBreakpoints({});
 
 export const THEME = createMuiTheme({
@@ -13,8 +26,8 @@ export const THEME = createMuiTheme({
         fontSize: "22px",
         whiteSpace: "nowrap",
         [breakpoints.down("xs")]: {
-            fontSize: "17px",
-          },
+          fontSize: "17px",
+        },
       },
       paragraph: {
         fontFamily: "Poppins",
@@ -29,35 +42,35 @@ export const THEME = createMuiTheme({
 });
 
 export const useStyles = makeStyles((theme) => ({
-    cardSec: {
-        display: "flex",
-        width: "100%",
-        flexFlow: "wrap",
-      },
-      card: {
-        width: "100%",
-        height: "165px",
-        margin: "10px",
-        cursor: "pointer",
-        boxShadow: "none",
-        [breakpoints.down("md")]: {
-          width: "100%",
-        },
-        [breakpoints.down("xs")]: {
-          height: "210px",
-        },
-      },
-    
-      devSec: {
-        height: "100px",
-        display: "flex",
-        textAlign: "left",
-      },
-      content: {
-        paddingLeft: "20px",
-      },
+  cardSec: {
+    display: "flex",
+    width: "100%",
+    flexFlow: "wrap",
+  },
+  card: {
+    width: "100%",
+    height: "165px",
+    margin: "10px",
+    cursor: "pointer",
+    boxShadow: "none",
+    [breakpoints.down("md")]: {
+      width: "100%",
+    },
+    [breakpoints.down("xs")]: {
+      height: "210px",
+    },
+  },
+
+  devSec: {
+    height: "100px",
+    display: "flex",
+    textAlign: "left",
+  },
+  content: {
+    paddingLeft: "20px",
+  },
   devSub: {
-    backgroundColor: "#FFEAE9",
+    backgroundColor: appIcon,
     height: "120px",
     width: "280px",
     display: "flex",
@@ -65,29 +78,29 @@ export const useStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
   reliableSub: {
-    backgroundColor: "#FFF6E4",
+    backgroundColor: reliableIcon,
     height: "120px",
     width: "280px",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     [breakpoints.only("sm")]: {
-        width: "250px",
-      },
+      width: "250px",
+    },
   },
   innovativeSub: {
-    backgroundColor: "#E4FFFA",
+    backgroundColor: innovativeIcon,
     height: "120px",
     width: "280px",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     [breakpoints.only("sm")]: {
-        width: "260px",
-      },
+      width: "260px",
+    },
   },
   agileSub: {
-    backgroundColor: "#E6E4FF",
+    backgroundColor: agileIcon,
     height: "120px",
     width: "280px",
     display: "flex",
@@ -95,7 +108,7 @@ export const useStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
   transparencySub: {
-    backgroundColor: "#E4FFFD",
+    backgroundColor: transparencyIcon,
     height: "120px",
     width: "280px",
     display: "flex",
@@ -103,29 +116,29 @@ export const useStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
   moneySub: {
-    backgroundColor: "#FCEDFB",
+    backgroundColor: moneyIcon,
     height: "120px",
     width: "280px",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     [breakpoints.only("sm")]: {
-        width: "250px",
-      },
+      width: "250px",
+    },
   },
   supportSub: {
-    backgroundColor: "#E9FFF0",
+    backgroundColor: supportIcon,
     height: "120px",
     width: "280px",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     [breakpoints.only("sm")]: {
-        width: "220px",
-      },
+      width: "220px",
+    },
   },
   timeSub: {
-    backgroundColor: "#FBE9FF",
+    backgroundColor: timeIcon,
     height: "120px",
     width: "280px",
     display: "flex",
@@ -133,14 +146,14 @@ export const useStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
   dataSub: {
-    backgroundColor: "#EEF2FC",
+    backgroundColor: dataIcon,
     height: "120px",
     width: "280px",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
   },
-  
+
   app: {
     filter:
       "invert(67%) sepia(75%) saturate(700%) hue-rotate(329deg) brightness(101%) contrast(101%)",
@@ -214,4 +227,3 @@ export const useStyles = makeStyles((theme) => ({
     height: "60px",
   },
 }));
-

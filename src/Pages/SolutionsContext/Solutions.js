@@ -2,9 +2,9 @@ import React from "react";
 import { useStyles, THEME } from "./solutionStyles";
 import { Typography, Paper } from "@material-ui/core";
 import { MuiThemeProvider } from "@material-ui/core/styles";
-import FirstRow from "./FirstSec";
-import SecondRow from "./SecondSec"
-import ThirdRow from "./ThirdSec"
+import PrimarySection from "./SolutionsPrimarySection";
+import MidSection from "./SolutionsMidSection"
+import LastSection from "./SolutionsLastSection"
 
 const Solutions = () => {
   const classes = useStyles();
@@ -22,9 +22,9 @@ const Solutions = () => {
             </Typography>
           </MuiThemeProvider>
         </section>
-        <FirstRow />
-        <SecondRow/>
-        <ThirdRow/>
+        <PrimarySection />
+        <MidSection/>
+        <LastSection/>
       </Paper>
     </>
   );

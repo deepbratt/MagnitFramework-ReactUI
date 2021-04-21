@@ -16,20 +16,32 @@ import spa from "../../assets/solutions/spa.svg"
 import user from "../../assets/solutions/user.svg"
 import hospitality from "../../assets/solutions/nurse.svg"
 import travel from "../../assets/solutions/airplane.svg"
+import Appicon from "../../assets/services/app.svg"
+import Profileicon from "../../assets/services/profile.svg" 
+import Webicon from "../../assets/services/web.svg" 
+import Digitalicon from "../../assets/services/digital.svg" 
 
-import app from "../../assets/Partnersec/house.svg"
-import reliable from "../../assets/Partnersec/handshake.svg"
-import innovative from "../../assets/Partnersec/idea.svg"
-import agile from "../../assets/Partnersec/agile.svg"
-import transparency from "../../assets/Partnersec/loupe.svg"
-import money from "../../assets/Partnersec/bank.svg"
+import app from "../../assets/PartnerWithUsImg/house.svg"
+import reliable from "../../assets/PartnerWithUsImg/handshake.svg"
+import innovative from "../../assets/PartnerWithUsImg/idea.svg"
+import agile from "../../assets/PartnerWithUsImg/agile.svg"
+import transparency from "../../assets/PartnerWithUsImg/loupe.svg"
+import money from "../../assets/PartnerWithUsImg/bank.svg"
 
-import quality from "../../assets/Partnersec/quality.svg"
-import support from "../../assets/Partnersec/share.svg"
-import geeky from "../../assets/Partnersec/geeky.svg"
-import time from "../../assets/Partnersec/time.svg"
-import data from "../../assets/Partnersec/shield.svg"
-import iso from "../../assets/Partnersec/iso.svg"
+import quality from "../../assets/PartnerWithUsImg/quality.svg"
+import support from "../../assets/PartnerWithUsImg/share.svg"
+import geeky from "../../assets/PartnerWithUsImg/geeky.svg"
+import time from "../../assets/PartnerWithUsImg/time.svg"
+import data from "../../assets/PartnerWithUsImg/shield.svg"
+import iso from "../../assets/PartnerWithUsImg/iso.svg"
+
+
+
+// Services section icons
+export const App = Appicon
+export const Profile = Profileicon
+export const Web = Webicon
+export const Digital = Digitalicon
 
 
 // Solutions section icon
@@ -53,8 +65,7 @@ export const hospIcon = hospitality
 export const travelIcon = travel
 
 
-
-// Partner section icons
+// Partner with us section icons
 export const appIcon = app
 export const reliableIcon = reliable
 export const innovativeIcon = innovative

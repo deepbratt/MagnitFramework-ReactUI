@@ -8,7 +8,7 @@ import {
 import { MuiThemeProvider} from "@material-ui/core/styles";
 import * as icons from "../../Components/icons/icon.constants"
 
-const FirstSec = () => {
+const SolutionsPrimarySection = () => {
     const classes = useStyles()
     const {cardSec,card,devSec,profileIcon} = classes
     const {chatIcon,classifiedIcon,fundIcon,designIcon,datingIcon,fitnessIcon} = icons
@@ -118,4 +118,4 @@ const FirstSec = () => {
     )
 }
 
-export default FirstSec
+export default SolutionsPrimarySection

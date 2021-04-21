@@ -8,10 +8,10 @@ import {
 import { MuiThemeProvider} from "@material-ui/core/styles";
 import * as icons from "../../Components/icons/icon.constants"
 
-const ThirdSec = () => {
+const SolutionsSecondarySection = () => {
     const classes = useStyles()
     const {cardSec,card,devSec,profileIcon} = classes
-    const {realEstateIcon,rideIcon,spaIcon,userIcon,hospIcon,travelIcon} = icons
+    const {deliveryIcon,portalIcon,managementIcon,vendorIcon,serviceIcon,groceryIcon} = icons
     return (
         <>
               <section className={cardSec}>
@@ -19,12 +19,12 @@ const ThirdSec = () => {
           <CardContent >
             <section  className={devSec}>
           
-            <img alt= "icon" className={profileIcon} src = {realEstateIcon} />
+            <img alt= "icon" className={profileIcon} src = {deliveryIcon} />
             </section>
             <section>
             <MuiThemeProvider theme={THEME}>
               <Typography variant="h5" color="inherit">
-              Real Estate
+              Food Delivery App
               </Typography>
              
               </MuiThemeProvider>
@@ -35,12 +35,12 @@ const ThirdSec = () => {
           <CardContent >
             <section  className={devSec}>
           
-            <img alt= "icon" className={profileIcon} src = {rideIcon}  />
+            <img alt= "icon" className={profileIcon} src = {portalIcon}  />
             </section>
             <section>
             <MuiThemeProvider theme={THEME}>
               <Typography variant="h5" color="inherit">
-              Ride Sharing
+              Job portal
               </Typography>
              
               </MuiThemeProvider>
@@ -51,12 +51,12 @@ const ThirdSec = () => {
           <CardContent >
             <section  className={devSec}>
           
-            <img alt= "icon" className={profileIcon} src={spaIcon} />
+            <img alt= "icon" className={profileIcon} src={managementIcon} />
             </section>
             <section>
             <MuiThemeProvider theme={THEME}>
               <Typography variant="h5" color="inherit">
-              Spa/salon
+              Learn Management
               </Typography>
              
               </MuiThemeProvider>
@@ -67,12 +67,12 @@ const ThirdSec = () => {
           <CardContent >
             <section  className={devSec}>
           
-            <img alt= "icon" className={profileIcon} src={userIcon} />
+            <img alt= "icon" className={profileIcon} src={vendorIcon} />
             </section>
             <section>
             <MuiThemeProvider theme={THEME}>
               <Typography variant="h5" color="inherit">
-              Social Media
+              Multiple Vendors
               </Typography>
              
               </MuiThemeProvider>
@@ -83,12 +83,13 @@ const ThirdSec = () => {
           <CardContent >
             <section  className={devSec}>
           
-            <img alt= "icon" className={profileIcon} src={hospIcon} />
+            <img alt= "icon" className={profileIcon} src={serviceIcon} />
             </section>
             <section>
             <MuiThemeProvider theme={THEME}>
               <Typography variant="h5" color="inherit">
-              Hospitality
+            
+              On demand Service
               </Typography>
              
               </MuiThemeProvider>
@@ -99,12 +100,12 @@ const ThirdSec = () => {
           <CardContent >
             <section  className={devSec}>
           
-            <img alt= "icon" className={profileIcon} src={travelIcon} />
+            <img alt= "icon" className={profileIcon} src={groceryIcon} />
             </section>
             <section>
             <MuiThemeProvider theme={THEME}>
               <Typography variant="h5" color="inherit">
-              Travel & Tourism
+              Online Grocery
               </Typography>
              
               </MuiThemeProvider>
@@ -118,4 +119,4 @@ const ThirdSec = () => {
     )
 }
 
-export default ThirdSec
+export default SolutionsSecondarySection

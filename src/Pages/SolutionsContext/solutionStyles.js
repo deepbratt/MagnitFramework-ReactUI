@@ -1,7 +1,9 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
+import {Colors} from "../../Theme/color.constants"
 
+const {solutionsBackground} = Colors
 const breakpoints = createBreakpoints({});
 
 export const THEME = createMuiTheme({
@@ -39,7 +41,7 @@ export const useStyles = makeStyles((theme) => ({
     paddingTop: "25px",
     margin: "0px",
     padding: "0px",
-    backgroundColor: "#F5EFE5",
+    backgroundColor: solutionsBackground,
     width: "100%",
     paddingBottom: "50px"
   },
@@ -50,7 +52,7 @@ export const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   card: {
-    backgroundColor: "#F8F3EC",
+    backgroundColor: solutionsBackground,
     width: "15%",
     height: "165px",
     display: "flex",

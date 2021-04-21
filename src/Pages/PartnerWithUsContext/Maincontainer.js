@@ -2,8 +2,8 @@ import React from "react";
 import { useStyles, THEME } from "./containerStyles";
 import { Typography, Paper, Grid} from "@material-ui/core";
 import { MuiThemeProvider } from "@material-ui/core/styles";
-import FirstRow from "./FirstRow"
-import SecondRow from "./SecondRow"
+import PrimarySection from "./PrimarySection"
+import SecondarySection from "./SecondarySection"
 
 const Container = () => {
   const classes = useStyles();
@@ -23,10 +23,10 @@ const Container = () => {
           </Paper>
         </Grid>
         <Grid item md={6} xs={12}>
-            <FirstRow/>
+            <PrimarySection/>
         </Grid>
         <Grid item md={6} xs={12}>
-          <SecondRow />
+          <SecondarySection />
         </Grid>
       </Grid>
     </>

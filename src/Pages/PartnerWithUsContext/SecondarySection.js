@@ -1,10 +1,10 @@
 import React from "react";
-import { useStyles, THEME } from "./rowStyles";
+import { useStyles, THEME } from "./sectionStyles";
 import { Typography, Card, CardContent } from "@material-ui/core";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import * as icons from "../../Components/icons/icon.constants";
 
-const SecondRow = () => {
+const SecondarySection = () => {
   const classes = useStyles();
   const {
     cardSec,
@@ -179,4 +179,4 @@ const SecondRow = () => {
   );
 };
 
-export default SecondRow;
+export default SecondarySection;

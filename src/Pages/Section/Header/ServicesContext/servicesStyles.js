@@ -1,7 +1,9 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
+import {Colors} from "../../../../Theme/color.constants"
 
+const {servicesDev,servicesApp,servicesWeb,servicesDigital} = Colors
 const breakpoints = createBreakpoints({});
 
 export const THEME = createMuiTheme({
@@ -78,7 +80,7 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   appSub:{
-    backgroundColor: "#FFF1E4", 
+    backgroundColor: servicesApp, 
     height: "120px",
      width:"120px", 
      display: "flex",
@@ -93,7 +95,7 @@ export const useStyles = makeStyles((theme) => ({
        alignItems: "center"
   },
   devSub:{
-    backgroundColor: "#FFEAE9", 
+    backgroundColor: servicesDev, 
     height: "120px",
      width:"120px", 
      display: "flex",
@@ -108,7 +110,7 @@ export const useStyles = makeStyles((theme) => ({
        alignItems: "center"
   },
   webSub:{
-    backgroundColor: "#EEFAF6", 
+    backgroundColor: servicesWeb, 
     height: "120px",
      width:"120px", 
      display: "flex",
@@ -123,7 +125,7 @@ export const useStyles = makeStyles((theme) => ({
        alignItems: "center"
   },
   digitalSub:{
-    backgroundColor: "#E5F9FF", 
+    backgroundColor: servicesDigital, 
     height: "120px",
      width:"120px", 
      display: "flex",
