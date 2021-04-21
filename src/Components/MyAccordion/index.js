@@ -7,25 +7,26 @@ import LayoutStyle from "./style";
 // import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 const MyAccordion = ({ questions }) => {
-  const { root, accordion, summary, detail } = LayoutStyle();
+  const { root } = LayoutStyle();
+
   return (
     <div className={root}>
-      {questions.map((question, index) => (
-        <>
-          <Accordion square key={index}>
-            <AccordionSummary
+      {questions
+        .filter((question, idx) => idx < 3)
+        .map((question, index) => (
+          <>
+            <Accordion square key={index}>
+              <AccordionSummary
               //   expandIcon={<ExpandMoreIcon />}
-            >
-              <Typography variant="caption">
-                {question.summary}
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography variant="body1">{question.detail}</Typography>
-            </AccordionDetails>
-          </Accordion>
-        </>
-      ))}
+              >
+                <Typography variant="h6">{question.summary}</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography variant="body2">{question.detail}</Typography>
+              </AccordionDetails>
+            </Accordion>
+          </>
+        ))}
     </div>
   );
 };

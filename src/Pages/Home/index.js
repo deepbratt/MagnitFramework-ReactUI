@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Typography } from "@material-ui/core";
+import { Button, Grid, Typography } from "@material-ui/core";
 import MyAccordion from "../../Components/MyAccordion";
 import ContactUs from "../ContactUs";
 import Section from "../Section";
@@ -8,6 +8,15 @@ import Image2 from "../../assets/images/awardAccredationSection/image 3.png";
 import Image3 from "../../assets/images/awardAccredationSection/image 4.png";
 import Image4 from "../../assets/images/awardAccredationSection/image 5.png";
 import Image5 from "../../assets/images/awardAccredationSection/image 6.png";
+import CardImage1 from "../../assets/images/cards/Rectangle 89.png";
+import CardImage2 from "../../assets/images/cards/Rectangle 90.png";
+import CardImage3 from "../../assets/images/cards/Rectangle 91.png";
+import AuthImage1 from "../../assets/images/cards/author1.png";
+import AuthImage2 from "../../assets/images/cards/author2.png";
+import AuthImage3 from "../../assets/images/cards/author3.png";
+import CardComponent from "../../Components/CardComponent";
+import NewsletterForm from "../../Components/NewsletterForm";
+import FactCard from "../../Components/FactCard";
 
 const questions = [
   {
@@ -26,6 +35,46 @@ const questions = [
     detail:
       "India is the hub of highly skilled software professionals. Brainium is one of the best Digital Agencies in India which offer cost effective services to its clients scattered all over the globe. We treat every client's project like our own and provide the best solution to improve their business. We see client success as our own success.",
   },
+  {
+    summary: "3. Can you walk me through an example?",
+    detail:
+      "India is the hub of highly skilled software professionals. Brainium is one of the best Digital Agencies in India which offer cost effective services to its clients scattered all over the globe. We treat every client's project like our own and provide the best solution to improve their business. We see client success as our own success.",
+  },
+  {
+    summary: "3. Can you walk me through an example?",
+    detail:
+      "India is the hub of highly skilled software professionals. Brainium is one of the best Digital Agencies in India which offer cost effective services to its clients scattered all over the globe. We treat every client's project like our own and provide the best solution to improve their business. We see client success as our own success.",
+  },
+];
+
+const cards = [
+  {
+    title: "Web Design",
+    text:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip",
+    authName: "Charls dolo",
+    lesson: "13",
+    coverImg: CardImage1,
+    authImg: AuthImage1,
+  },
+  {
+    title: "Graphic Design",
+    text:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip",
+    authName: "Jenny Tailor",
+    lesson: "19",
+    coverImg: CardImage2,
+    authImg: AuthImage2,
+  },
+  {
+    title: "Social Media Marketing",
+    text:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip",
+    authName: "Catrina Doe",
+    lesson: "15",
+    coverImg: CardImage3,
+    authImg: AuthImage3,
+  },
 ];
 
 const images = [Image1, Image2, Image3, Image4, Image5];
@@ -38,6 +87,76 @@ const Home = () => {
   }
   return (
     <div className="App">
+      {/* SOME FACTS ABOUT US SECTION */}
+      <Section title="Some Quick Fast About Us">
+        <Grid container direction="row" spacing={2}>
+          <Grid item xs={12} md={6} lg={4}>
+            <FactCard
+              backColor="#E9F7FF"
+              title="10+ Years"
+              subtitle="Experience"
+            />
+          </Grid>
+          <Grid item xs={12} md={6} lg={4}>
+            <FactCard backColor="#FBE9FF" title="200+" subtitle="Team" />
+          </Grid>
+          <Grid item xs={12} md={6} lg={4}>
+            <FactCard
+              backColor="#EEF2FC"
+              title="94%"
+              subtitle="Happy Customers"
+            />
+          </Grid>
+          <Grid item xs={12} md={6} lg={4}>
+            <FactCard
+              backColor="#E4FFFD"
+              title="35+ Countries"
+              subtitle="Served"
+            />
+          </Grid>
+          <Grid item xs={12} md={6} lg={4}>
+            <FactCard
+              backColor="#E9FFF0"
+              title="2000+"
+              subtitle="Successful Projects"
+            />
+          </Grid>
+          <Grid item xs={12} md={6} lg={4}>
+            <FactCard
+              backColor="#FFF6E4"
+              title="ISO 9001:2015"
+              subtitle="Certification"
+            />
+          </Grid>
+        </Grid>
+      </Section>
+      {/* TRAINING AND CERTIFICATION */}
+      <Section title="Training and Certification">
+        <Grid container direction="row" spacing={2}>
+          {cards &&
+            cards
+              .filter((card, idx) => idx < 3)
+              .map((card, index) => (
+                <Grid item xs={12} md={6} lg={4}>
+                  <CardComponent key={index} cardData={card} />
+                </Grid>
+              ))}
+        </Grid>
+        <Button
+          style={{ marginTop: "30px" }}
+          color="primary"
+          variant="contained"
+        >
+          <Typography
+            style={{ textAlign: "center", color: "#fff" }}
+            variant="button"
+          >
+            See more
+          </Typography>
+        </Button>
+      </Section>
+      {/* NEWSLETTER SECTION */}
+      <NewsletterForm></NewsletterForm>
       {/* AWARD AND ACCREDITATIONS SECTION */}
       <Section title="Awards & Accreditations">
         <div>
