@@ -1,6 +1,10 @@
+// <<<<<<< HEAD
 import React, { useState } from "react";
+import { connect } from "react-redux";
 import { Button, Grid, Typography } from "@material-ui/core";
 import MyAccordion from "../../Components/MyAccordion";
+import Slider from "../../Components/Slider/Slider";
+import Services from "../Section/Header/Services/Services";
 import ContactUs from "../ContactUs";
 import Section from "../Section";
 import Image1 from "../../assets/images/awardAccredationSection/image 2.png";
@@ -79,7 +83,7 @@ const cards = [
 
 const images = [Image1, Image2, Image3, Image4, Image5];
 
-const Home = () => {
+const Home = (props) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   function submitForm() {
@@ -87,6 +91,14 @@ const Home = () => {
   }
   return (
     <div className="App">
+      <Grid item md={12} xs={12}>
+        <Slider {...props} />
+      </Grid>
+      <Grid item md={12} xs={12}>
+        <Section>
+          <Services {...props} />
+        </Section>
+      </Grid>
       {/* SOME FACTS ABOUT US SECTION */}
       <Section title="Some Quick Fast About Us">
         <Grid container direction="row" spacing={2}>
@@ -131,7 +143,7 @@ const Home = () => {
         </Grid>
       </Section>
       {/* TRAINING AND CERTIFICATION */}
-      <Section title="Training and Certification">
+      <Section title="Training and Certification" backColor="#FAFBFD">
         <Grid container direction="row" spacing={2}>
           {cards &&
             cards
@@ -156,7 +168,10 @@ const Home = () => {
         </Button>
       </Section>
       {/* NEWSLETTER SECTION */}
-      <NewsletterForm></NewsletterForm>
+      <Section>
+        <NewsletterForm />
+      </Section>
+
       {/* AWARD AND ACCREDITATIONS SECTION */}
       <Section title="Awards & Accreditations">
         <div>
@@ -171,13 +186,15 @@ const Home = () => {
         </div>
       </Section>
       {/* CONTACT US FORM SECTION */}
-      {!isSubmitted ? (
-        <ContactUs submitForm={submitForm} />
-      ) : (
-        <Typography style={{ textAlign: "center" }} variant="button">
-          Submitted
-        </Typography>
-      )}
+      <Section>
+        {!isSubmitted ? (
+          <ContactUs submitForm={submitForm} />
+        ) : (
+          <Typography style={{ textAlign: "center" }} variant="button">
+            Submitted
+          </Typography>
+        )}
+      </Section>
       {/* FQA SECTION */}
       <Section title="Frequently Asked Question">
         <MyAccordion questions={questions} />
@@ -194,4 +211,8 @@ const Home = () => {
   );
 };
 
-export default Home;
+const mapStateToProps = (state) => ({
+  value: state.themeReducer.lightThemeEnabled,
+});
+
+export default connect(mapStateToProps)(Home);

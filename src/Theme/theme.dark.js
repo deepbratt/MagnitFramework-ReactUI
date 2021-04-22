@@ -1,15 +1,20 @@
 import createTheme from "./theme";
 import createPalette from "@material-ui/core/styles/createPalette";
-import { grey, amber } from "@material-ui/core/colors";
+
 
 
 // Styles for Grey Theme
 export default createTheme({
   palette: createPalette({
     type: "dark",
-    primary: grey,
+    primary: {
+      main: '#f50057',
+      dark: '#008732',
+      contrastText: '#151B27',
+    },
     text: {
-      primary: amber[800]
+      primary:'#151B27',
+     
     }
   })
 });
