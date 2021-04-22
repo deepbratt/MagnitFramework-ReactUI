@@ -4,7 +4,7 @@ import Accordion from "@material-ui/core/Accordion";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import LayoutStyle from "./style";
-// import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 const MyAccordion = ({ questions }) => {
   const { root } = LayoutStyle();
@@ -16,9 +16,7 @@ const MyAccordion = ({ questions }) => {
         .map((question, index) => (
           <>
             <Accordion square key={index}>
-              <AccordionSummary
-              //   expandIcon={<ExpandMoreIcon />}
-              >
+              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography variant="h6">{question.summary}</Typography>
               </AccordionSummary>
               <AccordionDetails>
@@ -39,6 +37,5 @@ MyAccordion.propTypes = {
     })
   ).isRequired,
 };
-
 
 export default MyAccordion;
