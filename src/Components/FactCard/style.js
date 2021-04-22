@@ -7,6 +7,9 @@ const FactCardStyles = makeStyles((theme) => ({
   header: {
     fontSize: "3rem",
     fontWeight: "500",
+    [theme.breakpoints.down("lg")]: {
+      fontSize: "2.5rem",
+    },
     [theme.breakpoints.down("sm")]: {
       fontSize: "2rem",
     },

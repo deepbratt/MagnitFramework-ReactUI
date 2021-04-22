@@ -63,8 +63,8 @@ export const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "center",
     transition: "all .25s linear",
-    boxShadow: "0px 1px 2px 0px rgba(0,0,0,0.4)",
-    "&:hover": { boxShadow: "-1px 10px 29px 0px rgba(0,0,0,0.48)" },
+    boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)",
+    "&:hover": { boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)" },
     margin: "20px",
     cursor: "pointer",
     [breakpoints.only("md")]: {

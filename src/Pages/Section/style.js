@@ -2,10 +2,13 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const LayoutStyle = makeStyles((theme) => ({
   root: {
-    margin: "100px 0",
+    padding: "80px 0",
+  },
+  content: {
+    margin: "40px 8%",
   },
   header: {
-    margin: "60px 0",
+    marginBottom: "60px"
   },
 }));
 

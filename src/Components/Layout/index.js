@@ -7,7 +7,7 @@ import Footer from "../../container/Footer";
 
 const Layout = ({ children }) => {
   const { root, paper } = LayoutStyle();
-  const layoutType = useSelector((state) => state.layoutReducer.layoutType);
+  // const layoutType = useSelector((state) => state.layoutReducer.layoutType);
   return (
     <div className={root}>
       <Grid container>
