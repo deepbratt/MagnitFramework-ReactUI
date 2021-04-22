@@ -3,7 +3,7 @@ import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import PropTypes from "prop-types";
 import LayoutStyle from "./style";
-import Footer from "../../container/Footer";
+import Footer from "../container/Footer";
 
 const Layout = ({ children }) => {
   const { root, paper } = LayoutStyle();

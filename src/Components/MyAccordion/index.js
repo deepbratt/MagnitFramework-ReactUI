@@ -31,18 +31,14 @@ const MyAccordion = ({ questions }) => {
   );
 };
 
-// Accordian.propTypes = {
-//   questions: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       summary: PropTypes.string,
-//       detail: PropTypes.string,
-//     })
-//   ).isRequired,
-// };
+MyAccordion.propTypes = {
+  questions: PropTypes.arrayOf(
+    PropTypes.shape({
+      summary: PropTypes.string,
+      detail: PropTypes.string,
+    })
+  ).isRequired,
+};
 
-// Accordian.propTypes = {
-//   question: PropTypes.string,
-//   description: PropTypes.string,
-// };
 
 export default MyAccordion;

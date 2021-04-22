@@ -21,6 +21,7 @@ import AuthImage3 from "../../assets/images/cards/author3.png";
 import CardComponent from "../../Components/CardComponent";
 import NewsletterForm from "../../Components/NewsletterForm";
 import FactCard from "../../Components/FactCard";
+import QuoteCard from "../../Components/QuoteCard";
 
 const questions = [
   {
@@ -100,7 +101,7 @@ const Home = (props) => {
         </Section>
       </Grid>
       {/* SOME FACTS ABOUT US SECTION */}
-      <Section title="Some Quick Fast About Us">
+      <Section title="Some Quick Facts About Us">
         <Grid container direction="row" spacing={2}>
           <Grid item xs={12} md={6} lg={4}>
             <FactCard
@@ -140,6 +141,19 @@ const Home = (props) => {
               subtitle="Certification"
             />
           </Grid>
+        </Grid>
+      </Section>
+      {/* What do our Client Say */}
+      <Section title="What Do Our Client Say?">
+        <Grid container direction="row" spacing={2}>
+          {cards &&
+            cards
+              .filter((card, idx) => idx < 3)
+              .map((card, index) => (
+                <Grid item xs={12} md={6} lg={4}>
+                  <QuoteCard key={index} cardData={card} />
+                </Grid>
+              ))}
         </Grid>
       </Section>
       {/* TRAINING AND CERTIFICATION */}
