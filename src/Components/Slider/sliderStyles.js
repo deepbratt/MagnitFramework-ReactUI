@@ -1,8 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
-import {Colors} from "../../Theme/color.constants"
-const {sliderBackground} = Colors
 
 const breakpoints = createBreakpoints({});
 
@@ -51,8 +49,7 @@ export const heading = createMuiTheme({
 
 export const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: sliderBackground,
-
+    // backgroundColor: sliderBackground,
     margin: 0,
     padding: 0,
     color: "#151B27",
@@ -212,4 +209,7 @@ export const useStyles = makeStyles((theme) => ({
       },
     },
   },
+  slide1:{
+    backgroundColor: "pink"
+  }
 }));

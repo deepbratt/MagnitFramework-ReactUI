@@ -4,7 +4,7 @@ export const Colors = {
   servicesApp: "#FFEAE9",
   servicesWeb: "#EEFAF6",
   servicesDigital: "#E5F9FF",
-  solutionsBackground: "#F5EFE5",
+  solutionsBackground: "#f8ede3",
   PartnerSectionIcons: {
     appIcon: "#FFF1E4",
     reliableIcon: "#FFF6E4",

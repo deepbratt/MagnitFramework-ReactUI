@@ -13,8 +13,6 @@ const Slider = (props) => {
   const {root,headingSec,listSec,list,tick,tickSub,sec,vector} = classes
   return (
     <>
-      <Paper className={value === "LIGHT" ? root: root} elevation= {0} >
-        
         <section className={headingSec}>
           <MuiThemeProvider theme={heading}>
             <Typography variant="h1" color="inherit">
@@ -55,7 +53,6 @@ const Slider = (props) => {
         <section className={sec}>
          <img alt="sliderImg" src={hero} className={vector}/>
         </section>
-      </Paper>
     </>
   );
 };
