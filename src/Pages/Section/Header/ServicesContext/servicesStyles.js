@@ -38,7 +38,7 @@ export const THEME = createMuiTheme({
         textAlign: "center",
         marginTop: "10px",
         [breakpoints.down("xs")]: {
-          fontSize: "14px",
+          fontSize: "16px",
         },
       },
     },
@@ -47,8 +47,7 @@ export const THEME = createMuiTheme({
 
 export const useStyles = makeStyles((theme) => ({
   root: {
-    paddingTop: "25px",
-    margin: "0px"
+    margin: "0px",
   },
   cardSec: {
     display: "flex",
@@ -65,18 +64,18 @@ export const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "center",
     transition: "all .25s linear",
-    boxShadow: "0px 1px 2px 0px rgba(0,0,0,0.4)",
-    "&:hover": { boxShadow: "-1px 10px 29px 0px rgba(0,0,0,0.48)" },
+    boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)",
+    "&:hover": { boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)" },
     margin: "20px",
     cursor: "pointer",
     [breakpoints.only("md")]: {
       width: "30%",
     },
     [breakpoints.only("sm")]: {
-      width: "40%",
+      width: "60%",
     },
     [breakpoints.down("xs")]: {
-      width: "60%",
+      width: "70%",
     },
   },
   appSub:{

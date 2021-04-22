@@ -1,4 +1,3 @@
-import React from "react";
 import { useSelector } from "react-redux";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
@@ -8,6 +7,7 @@ import Container from "@material-ui/core/Container";
 import LayoutSwiper from "../LayoutSwiper";
 import Switch from "../themeToggle/Switch";
 import Header from "../../Pages/Section/Header/Header"
+import Footer from "../../container/Footer";
 
 const Layout = ({ children}) => {
   const { root, paper } = LayoutStyle();
@@ -15,21 +15,19 @@ const Layout = ({ children}) => {
   return (
     <div className={root}>
       <Container maxWidth={layoutType} disableGutters={true}>
-        <Grid container spacing={3} >
-          <Grid item xs={12} >
-            <Paper className={paper}><Header/></Paper>
-          </Grid>
-          <Grid item xs={12}>
-            <Paper className={paper}>{children}</Paper>
-          </Grid>
-          <Grid item xs={12}>
-            <Paper className={paper}>Footer</Paper>
-          </Grid>
-          <Grid item xs={12}>
-            <LayoutSwiper layoutType={layoutType} />
-            <Switch />
-          </Grid>
+      <Grid container>
+        <Grid item xs={12}>
+          <Paper className={paper}><Header/></Paper>
         </Grid>
+        <Grid item xs={12}>
+          <Paper elevation={0} className={paper}>
+            {children}
+          </Paper>
+        </Grid>
+        <Grid item xs={12}>
+          <Footer />
+        </Grid>
+      </Grid>
       </Container>
     </div>
   );
@@ -38,4 +36,5 @@ const Layout = ({ children}) => {
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 };
+
 export default Layout;

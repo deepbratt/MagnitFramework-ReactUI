@@ -6,10 +6,11 @@ const LayoutStyle = makeStyles((theme) => ({
     
   },
   paper: {
-    padding: "0px",
-    margin: "0px",
+    padding: theme.spacing(0),
     textAlign: "center",
     color: theme.palette.text.secondary,
+    padding: "0px",
+    margin: "0px",
   },
 }));
 

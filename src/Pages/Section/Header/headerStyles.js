@@ -54,9 +54,6 @@ export const useStyles = makeStyles((theme) => ({
     fontWeight: "600",
     fontFamily: "Poppins', sans-serif",
     whiteSpace: "nowrap",
-    "&:hover": {
-      color: "black",
-    },
   },
   listItem:{
     "&:hover": {
