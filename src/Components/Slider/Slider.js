@@ -1,19 +1,20 @@
 import React from "react";
 import { useStyles, heading } from "./sliderStyles";
-import { Typography, ListItem, Button, useMediaQuery , Paper} from "@material-ui/core";
+import { Typography, ListItem, Button , Paper} from "@material-ui/core";
 import CheckIcon from "@material-ui/icons/Check";
 import { MuiThemeProvider} from "@material-ui/core/styles";
-import slider from "../../../src/assets/slider.png";
+import {hero} from "../../Components/Hero/Images";
 import Breakpoints from "../../Theme/theme.breakpoints"
 
 const Slider = (props) => {
   const { value } = props;
 
   const classes = useStyles();
-  const {root, rootSub,headingSec,listSec,list,tick,tickSub,sec,vector} = classes
+  const {root,headingSec,listSec,list,tick,tickSub,sec,vector} = classes
   return (
     <>
-      <Paper className={value === "LIGHT" ? root: rootSub} elevation= {0} >
+      <Paper className={value === "LIGHT" ? root: root} elevation= {0} >
+        
         <section className={headingSec}>
           <MuiThemeProvider theme={heading}>
             <Typography variant="h1" color="inherit">
@@ -52,7 +53,7 @@ const Slider = (props) => {
         </section>
 
         <section className={sec}>
-         <img alt="sliderImg" src={slider} className={vector}/>
+         <img alt="sliderImg" src={hero} className={vector}/>
         </section>
       </Paper>
     </>

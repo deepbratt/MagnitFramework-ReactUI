@@ -11,6 +11,7 @@ import {
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import Sizes from "../../../Theme/theme.constants"
 import SideBar from "./Sidebar/SideBar";
+import Breakpoints from "../../../Theme/theme.breakpoints"
 
 const Header = (props) => {
   const { value } = props;
@@ -53,6 +54,7 @@ const Header = (props) => {
                 style={{ textTransform: "none" }}
                 className={button}
                 variant="contained"
+                size={Breakpoints()}
                 color="secondary"
               >
                 Contact Us

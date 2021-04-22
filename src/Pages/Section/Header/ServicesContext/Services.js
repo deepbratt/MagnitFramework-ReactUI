@@ -7,16 +7,12 @@ import {
   Paper,
 } from "@material-ui/core";
 import { MuiThemeProvider} from "@material-ui/core/styles";
-import App from "../../../../assets/app.svg"
-import Profile from "../../../../assets/profile.svg" 
-import Web from "../../../../assets/web.svg" 
-import Digital from "../../../../assets/digital.svg" 
-
+import * as Icons from "../../../../Components/icons/icon.constants"
 const Services = (props) => {
   const {value} = props
     const classes = useStyles()
   const {root,serviceHeading,cardSec,card, devSec,devSub, dev,appSec,appSub,app,webSub,webSec,web,digital,digitalSec,digitalSub} = classes
-
+  const {App,Profile,Web,Digital}= Icons
    return ( <>
     
     <Paper className={root} elevation={0}>

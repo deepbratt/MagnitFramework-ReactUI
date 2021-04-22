@@ -5,10 +5,10 @@ const LayoutStyle = makeStyles((theme) => ({
     padding: "60px 0",
   },
   content: {
-    margin: "0 10%",
+    margin: "0 8%",
   },
   header: {
-    marginBottom: "60px"
+    marginBottom: "60px",
   },
 }));
 

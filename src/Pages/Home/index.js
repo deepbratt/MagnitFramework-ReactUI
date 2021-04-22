@@ -1,10 +1,15 @@
-// <<<<<<< HEAD
-import React, { useState } from "react";
-import { connect } from "react-redux";
-import { Button, Grid, Typography } from "@material-ui/core";
-import MyAccordion from "../../Components/MyAccordion";
+
+import Grid from "@material-ui/core/Grid";
 import Slider from "../../Components/Slider/Slider";
-import Services from "../Section/Header/Services/Services";
+import { connect } from "react-redux";
+import Services from "../Section/Header/ServicesContext/Services"
+import Slide from "../../Components/Slider/Container"
+import Solutions from "../SolutionsContext/Solutions";
+import PartnerContext from "../PartnerWithUsContext/Maincontainer"
+import GlanceSection from "../GlanceAtWorkContext/Container"
+import React, { useState } from "react";
+import { Button, Typography } from "@material-ui/core";
+import MyAccordion from "../../Components/MyAccordion";
 import ContactUs from "../ContactUs";
 import Section from "../Section";
 import Image1 from "../../assets/images/awardAccredationSection/image 2.png";
@@ -31,13 +36,22 @@ const Home = (props) => {
   return (
     <div className="App">
       <Grid item md={12} xs={12}>
-        <Slider {...props} />
+      <Slide />
       </Grid>
       <Grid item md={12} xs={12}>
         <Section>
           <Services {...props} />
         </Section>
       </Grid>
+      <Grid  item md={12} xs={12}>
+          <Solutions/>
+        </Grid>
+        <Grid  item md={12} xs={12}>
+          <PartnerContext/>
+        </Grid>
+        <Grid  item md={12} xs={12}>
+          <GlanceSection/>
+        </Grid>
       {/* SOME FACTS ABOUT US SECTION */}
       <Section title="Some Quick Facts About Us">
         <Grid container direction="row" spacing={2}>
