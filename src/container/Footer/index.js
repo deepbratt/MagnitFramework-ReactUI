@@ -12,8 +12,8 @@ const Footer = () => {
   const lsTwo = ["Case Study", "Blog", "Career"];
   return (
     <footer className={root}>
-      <Grid container spacing={1} direction="row" justify="flex-end">
-        <Grid item xs={12} md={4} lg={3}>
+      <Grid container spacing={1} direction="row" justify="space-between">
+        {/* <Grid item xs={12} md={4} lg={3}>
           <div className={logo}>
             <Typography
               style={{ color: "#FFFFFF" }}
@@ -24,8 +24,8 @@ const Footer = () => {
               Logo Here
             </Typography>
           </div>
-        </Grid>
-        <Grid item xs={12} md={4} lg={1}>
+        </Grid> */}
+        <Grid item xs={12} md={4} lg={2}>
           <div className={list}>
             {ls
               .filter((item, idx) => idx < 5)
@@ -43,7 +43,7 @@ const Footer = () => {
               ))}
           </div>
         </Grid>
-        <Grid item xs={12} md={4} lg={1}>
+        <Grid item xs={12} md={4} lg={2}>
           <div className={list}>
             {lsTwo
               .filter((item, idx) => idx < 5)
@@ -85,6 +85,16 @@ const Footer = () => {
         </Grid>
         <Grid item xs={12} md={4} lg={3}>
           <div className={section}>
+            <div className={logo}>
+              <Typography
+                style={{ color: "#FFFFFF" }}
+                align="left"
+                gutterBottom
+                variant="h2"
+              >
+                Logo Here
+              </Typography>
+            </div>
             <Typography align="left" gutterBottom variant="h3">
               CONNECT WITH US
             </Typography>
