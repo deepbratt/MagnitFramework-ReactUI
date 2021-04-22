@@ -80,11 +80,7 @@ export const useStyles = makeStyles((theme) => ({
     transition: "all .25s linear",
     boxShadow: "none",
     margin: "20px",
-    boxShadow: "none",
-    "&:hover": {
-      boxShadow: "-1px 10px 29px 0px rgba(0,0,0,0.38)",
-      cursor: "pointer",
-    },
+    boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
     [breakpoints.only("md")]: {
       width: "40%",
       height: "550px",

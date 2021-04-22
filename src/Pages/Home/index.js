@@ -1,12 +1,11 @@
-
 import Grid from "@material-ui/core/Grid";
 import Slider from "../../Components/Slider/Slider";
 import { connect } from "react-redux";
-import Services from "../Section/Header/ServicesContext/Services"
-import Slide from "../../Components/Slider/Container"
+import Services from "../Section/Header/ServicesContext/Services";
+import Slide from "../../Components/Slider/Container";
 import Solutions from "../SolutionsContext/Solutions";
-import PartnerContext from "../PartnerWithUsContext/Maincontainer"
-import GlanceSection from "../GlanceAtWorkContext/Container"
+import PartnerContext from "../PartnerWithUsContext/Maincontainer";
+import GlanceSection from "../GlanceAtWorkContext/Container";
 import React, { useState } from "react";
 import { Button, Typography } from "@material-ui/core";
 import MyAccordion from "../../Components/MyAccordion";
@@ -24,7 +23,6 @@ import FactCard from "../../Components/FactCard";
 import QuoteCard from "../../Components/QuoteCard";
 import { cards } from "./cardData";
 
-
 const images = [Image1, Image2, Image3, Image4, Image5];
 
 const Home = (props) => {
@@ -36,25 +34,29 @@ const Home = (props) => {
   return (
     <div className="App">
       <Grid item md={12} xs={12}>
-      <Slide />
+        <Slide />
       </Grid>
       <Grid item md={12} xs={12}>
         <Section>
           <Services {...props} />
         </Section>
       </Grid>
-      <Grid  item md={12} xs={12}>
-          <Solutions/>
-        </Grid>
-        <Grid  item md={12} xs={12}>
-          <PartnerContext/>
-        </Grid>
-        <Grid  item md={12} xs={12}>
-          <GlanceSection/>
-        </Grid>
+      <Grid item md={12} xs={12}>
+        <Solutions />
+      </Grid>
+      <Grid item md={12} xs={12}>
+        <Section>
+          <PartnerContext />
+        </Section>
+      </Grid>
+      <Grid item md={12} xs={12}>
+        <Section backColor="#F5F5F5">
+          <GlanceSection />
+        </Section>
+      </Grid>
       {/* SOME FACTS ABOUT US SECTION */}
       <Section title="Some Quick Facts About Us">
-        <Grid container direction="row" spacing={2}>
+        <Grid style={{ padding: "0 5%" }} container direction="row" spacing={2}>
           <Grid item xs={12} md={6} lg={4}>
             <FactCard
               backColor="#E9F7FF"
