@@ -1,7 +1,9 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
+import {Colors} from "../../../../Theme/color.constants"
 
+const {servicesDev,servicesApp,servicesWeb,servicesDigital} = Colors
 const breakpoints = createBreakpoints({});
 
 export const THEME = createMuiTheme({
@@ -36,7 +38,7 @@ export const THEME = createMuiTheme({
         textAlign: "center",
         marginTop: "10px",
         [breakpoints.down("xs")]: {
-          fontSize: "14px",
+          fontSize: "16px",
         },
       },
     },
@@ -45,8 +47,7 @@ export const THEME = createMuiTheme({
 
 export const useStyles = makeStyles((theme) => ({
   root: {
-    paddingTop: "25px",
-    margin: "0px"
+    margin: "0px",
   },
   cardSec: {
     display: "flex",
@@ -71,14 +72,14 @@ export const useStyles = makeStyles((theme) => ({
       width: "30%",
     },
     [breakpoints.only("sm")]: {
-      width: "40%",
+      width: "60%",
     },
     [breakpoints.down("xs")]: {
-      width: "60%",
+      width: "70%",
     },
   },
   appSub:{
-    backgroundColor: "#FFF1E4", 
+    backgroundColor: servicesApp, 
     height: "120px",
      width:"120px", 
      display: "flex",
@@ -93,7 +94,7 @@ export const useStyles = makeStyles((theme) => ({
        alignItems: "center"
   },
   devSub:{
-    backgroundColor: "#FFEAE9", 
+    backgroundColor: servicesDev, 
     height: "120px",
      width:"120px", 
      display: "flex",
@@ -108,7 +109,7 @@ export const useStyles = makeStyles((theme) => ({
        alignItems: "center"
   },
   webSub:{
-    backgroundColor: "#EEFAF6", 
+    backgroundColor: servicesWeb, 
     height: "120px",
      width:"120px", 
      display: "flex",
@@ -123,7 +124,7 @@ export const useStyles = makeStyles((theme) => ({
        alignItems: "center"
   },
   digitalSub:{
-    backgroundColor: "#E5F9FF", 
+    backgroundColor: servicesDigital, 
     height: "120px",
      width:"120px", 
      display: "flex",

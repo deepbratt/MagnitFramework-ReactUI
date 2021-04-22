@@ -1,0 +1,28 @@
+export const Colors = {
+  sliderBackground: "#F3FDFE",
+  servicesDev: "#FFF1E4",
+  servicesApp: "#FFEAE9",
+  servicesWeb: "#EEFAF6",
+  servicesDigital: "#E5F9FF",
+  solutionsBackground: "#F5EFE5",
+  PartnerSectionIcons: {
+    appIcon: "#FFF1E4",
+    reliableIcon: "#FFF6E4",
+    innovativeIcon: "#E4FFFA",
+    agileIcon: "#E6E4FF",
+    transparencyIcon: "#E4FFFD",
+    moneyIcon: "#FCEDFB",
+    qualityIcon: "#FFEAE9",
+    supportIcon: "#E9FFF0",
+    geekyIcon: "#E9F7FF",
+    timeIcon: "#FBE9FF",
+    dataIcon: "#EEF2FC",
+    isoIcon: "#EEFBFC",
+  },
+  glanceSectionBackground: "#F5F5F5",
+  glanceImages: {
+    Img1: "#EDEDED",
+    Img2: "#F2F5FA",
+    Img3: "#F2F5FA",
+  },
+};
