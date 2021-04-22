@@ -8,10 +8,10 @@ const FactCardStyles = makeStyles((theme) => ({
     fontSize: "3rem",
     fontWeight: "500",
     [theme.breakpoints.down("lg")]: {
-      fontSize: "2.5rem",
+      fontSize: "2rem",
     },
     [theme.breakpoints.down("sm")]: {
-      fontSize: "2rem",
+      fontSize: "1.5rem",
     },
   },
   subText: {
