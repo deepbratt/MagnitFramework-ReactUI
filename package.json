@@ -1,6 +1,6 @@
 {
   "name": "MagnitFramework-ReactUI",
-  "version": "1.0.15",
+  "version": "1.0.14",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.3",
