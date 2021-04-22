@@ -7,16 +7,17 @@ import LayoutStyle from "./style";
 import Container from "@material-ui/core/Container";
 import LayoutSwiper from "../LayoutSwiper";
 import Switch from "../themeToggle/Switch";
+import Header from "../../Pages/Section/Header/Header"
 
-const Layout = ({ children }) => {
+const Layout = ({ children}) => {
   const { root, paper } = LayoutStyle();
   const layoutType = useSelector((state) => state.layoutReducer.layoutType);
   return (
     <div className={root}>
       <Container maxWidth={layoutType} disableGutters={true}>
-        <Grid container spacing={3}>
-          <Grid item xs={12}>
-            <Paper className={paper}>Header</Paper>
+        <Grid container spacing={3} >
+          <Grid item xs={12} >
+            <Paper className={paper}><Header/></Paper>
           </Grid>
           <Grid item xs={12}>
             <Paper className={paper}>{children}</Paper>

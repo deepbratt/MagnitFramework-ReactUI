@@ -1,6 +1,8 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
+import {Colors} from "../../Theme/color.constants"
+const {sliderBackground} = Colors
 
 const breakpoints = createBreakpoints({});
 
@@ -49,8 +51,8 @@ export const heading = createMuiTheme({
 
 export const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: "#F3FDFE",
-    
+    backgroundColor: sliderBackground,
+
     margin: 0,
     padding: 0,
     color: "#151B27",
@@ -59,9 +61,8 @@ export const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("lg")]: {
       textAlign: "left",
       paddingLeft: "100px",
-      overflow: "hidden",
       paddingTop: "60px",
-      height: "100vh",
+      height: "100%",
     },
     [theme.breakpoints.only("md")]: {
       textAlign: "left",
@@ -109,13 +110,14 @@ export const useStyles = makeStyles((theme) => ({
   headingSec: {
     display: "flex",
     flexDirection: "column",
+    width: "auto",
     [theme.breakpoints.down("sm")]: {
       alignItems: "center",
     },
-  }, 
+  },
   vector: {
     [theme.breakpoints.up("lg")]: {
-      width: "600px",
+      width: "300px",
     },
     [theme.breakpoints.only("md")]: {
       width: "400px",
@@ -182,6 +184,32 @@ export const useStyles = makeStyles((theme) => ({
     },
     [breakpoints.down("xs")]: {
       marginTop: "20px",
+    },
+  },
+  slide: {
+    [breakpoints.up("lg")]: {
+      "& .carousel .slide img": {
+        width: "100% !important",
+        height: "100% !important",
+        maxHeight: "600px",
+        width: "auto",
+      },
+    },
+    [breakpoints.down("md")]: {
+      "& .carousel .slide img": {
+        width: "100% !important",
+        height: "100% !important",
+        maxHeight: "400px",
+        width: "auto",
+      },
+    },
+    [breakpoints.down("sm")]: {
+      "& .carousel .slide img": {
+        width: "100% !important",
+        height: "100% !important",
+        maxHeight: "300px",
+        width: "auto",
+      },
     },
   },
 }));
