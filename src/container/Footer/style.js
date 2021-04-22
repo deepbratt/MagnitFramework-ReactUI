@@ -27,11 +27,10 @@ const FooterStyle = makeStyles((theme) => ({
   },
   policy: {
     display: "flex",
-    justifyContent: "space-around",
+    justifyContent: "space-evenly",
   },
   contact: {
     display: "flex",
-    justifyContent: "flex-start",
     "& > img": {
       margin: "10px",
       padding: "15px 18px",

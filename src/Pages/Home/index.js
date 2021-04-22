@@ -1,12 +1,11 @@
-
 import Grid from "@material-ui/core/Grid";
 import Slider from "../../Components/Slider/Slider";
 import { connect } from "react-redux";
-import Services from "../Section/Header/ServicesContext/Services"
-import Slide from "../../Components/Slider/Container"
+import Services from "../Section/Header/ServicesContext/Services";
+import Slide from "../../Components/Slider/Container";
 import Solutions from "../SolutionsContext/Solutions";
-import PartnerContext from "../PartnerWithUsContext/Maincontainer"
-import GlanceSection from "../GlanceAtWorkContext/Container"
+import PartnerContext from "../PartnerWithUsContext/Maincontainer";
+import GlanceSection from "../GlanceAtWorkContext/Container";
 import React, { useState } from "react";
 import { Button, Typography } from "@material-ui/core";
 import MyAccordion from "../../Components/MyAccordion";
@@ -17,74 +16,12 @@ import Image2 from "../../assets/images/awardAccredationSection/image 3.png";
 import Image3 from "../../assets/images/awardAccredationSection/image 4.png";
 import Image4 from "../../assets/images/awardAccredationSection/image 5.png";
 import Image5 from "../../assets/images/awardAccredationSection/image 6.png";
-import CardImage1 from "../../assets/images/cards/Rectangle 89.png";
-import CardImage2 from "../../assets/images/cards/Rectangle 90.png";
-import CardImage3 from "../../assets/images/cards/Rectangle 91.png";
-import AuthImage1 from "../../assets/images/cards/author1.png";
-import AuthImage2 from "../../assets/images/cards/author2.png";
-import AuthImage3 from "../../assets/images/cards/author3.png";
 import CardComponent from "../../Components/CardComponent";
 import NewsletterForm from "../../Components/NewsletterForm";
+import QuestionData from "./questions.json";
 import FactCard from "../../Components/FactCard";
-
-const questions = [
-  {
-    summary:
-      "1. Why should I outsource to India and choose Brainium for my project?",
-    detail:
-      "India is the hub of highly skilled software professionals. Brainium is one of the best Digital Agencies in India which offer cost effective services to its clients scattered all over the globe. We treat every client's project like our own and provide the best solution to improve their business. We see client success as our own success.",
-  },
-  {
-    summary: "2. What makes you believe that you are the best?",
-    detail:
-      "India is the hub of highly skilled software professionals. Brainium is one of the best Digital Agencies in India which offer cost effective services to its clients scattered all over the globe. We treat every client's project like our own and provide the best solution to improve their business. We see client success as our own success.",
-  },
-  {
-    summary: "3. Can you walk me through an example?",
-    detail:
-      "India is the hub of highly skilled software professionals. Brainium is one of the best Digital Agencies in India which offer cost effective services to its clients scattered all over the globe. We treat every client's project like our own and provide the best solution to improve their business. We see client success as our own success.",
-  },
-  {
-    summary: "3. Can you walk me through an example?",
-    detail:
-      "India is the hub of highly skilled software professionals. Brainium is one of the best Digital Agencies in India which offer cost effective services to its clients scattered all over the globe. We treat every client's project like our own and provide the best solution to improve their business. We see client success as our own success.",
-  },
-  {
-    summary: "3. Can you walk me through an example?",
-    detail:
-      "India is the hub of highly skilled software professionals. Brainium is one of the best Digital Agencies in India which offer cost effective services to its clients scattered all over the globe. We treat every client's project like our own and provide the best solution to improve their business. We see client success as our own success.",
-  },
-];
-
-const cards = [
-  {
-    title: "Web Design",
-    text:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip",
-    authName: "Charls dolo",
-    lesson: "13",
-    coverImg: CardImage1,
-    authImg: AuthImage1,
-  },
-  {
-    title: "Graphic Design",
-    text:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip",
-    authName: "Jenny Tailor",
-    lesson: "19",
-    coverImg: CardImage2,
-    authImg: AuthImage2,
-  },
-  {
-    title: "Social Media Marketing",
-    text:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip",
-    authName: "Catrina Doe",
-    lesson: "15",
-    coverImg: CardImage3,
-    authImg: AuthImage3,
-  },
-];
+import QuoteCard from "../../Components/QuoteCard";
+import { cards } from "./cardData";
 
 const images = [Image1, Image2, Image3, Image4, Image5];
 
@@ -97,25 +34,29 @@ const Home = (props) => {
   return (
     <div className="App">
       <Grid item md={12} xs={12}>
-      <Slide />
+        <Slide />
       </Grid>
       <Grid item md={12} xs={12}>
         <Section>
           <Services {...props} />
         </Section>
       </Grid>
-      <Grid  item md={12} xs={12}>
-          <Solutions/>
-        </Grid>
-        <Grid  item md={12} xs={12}>
-          <PartnerContext/>
-        </Grid>
-        <Grid  item md={12} xs={12}>
-          <GlanceSection/>
-        </Grid>
+      <Grid item md={12} xs={12}>
+        <Solutions />
+      </Grid>
+      <Grid item md={12} xs={12}>
+        <Section>
+          <PartnerContext />
+        </Section>
+      </Grid>
+      <Grid item md={12} xs={12}>
+        <Section backColor="#F5F5F5">
+          <GlanceSection />
+        </Section>
+      </Grid>
       {/* SOME FACTS ABOUT US SECTION */}
-      <Section title="Some Quick Fast About Us">
-        <Grid container direction="row" spacing={2}>
+      <Section title="Some Quick Facts About Us">
+        <Grid style={{ padding: "0 5%" }} container direction="row" spacing={2}>
           <Grid item xs={12} md={6} lg={4}>
             <FactCard
               backColor="#E9F7FF"
@@ -154,6 +95,19 @@ const Home = (props) => {
               subtitle="Certification"
             />
           </Grid>
+        </Grid>
+      </Section>
+      {/* What do our Client Say */}
+      <Section title="What Do Our Client Say?">
+        <Grid container direction="row" spacing={2}>
+          {cards &&
+            cards
+              .filter((card, idx) => idx < 3)
+              .map((card, index) => (
+                <Grid item xs={12} md={6} lg={4}>
+                  <QuoteCard key={index} cardData={card} />
+                </Grid>
+              ))}
         </Grid>
       </Section>
       {/* TRAINING AND CERTIFICATION */}
@@ -211,7 +165,7 @@ const Home = (props) => {
       </Section>
       {/* FQA SECTION */}
       <Section title="Frequently Asked Question">
-        <MyAccordion questions={questions} />
+        <MyAccordion questions={QuestionData} />
         <Button color="primary" variant="contained">
           <Typography
             style={{ textAlign: "center", color: "#fff" }}

@@ -27,10 +27,10 @@ const CardComponent = ({
       <CardActionArea>
         <CardMedia
           component="img"
-          alt="Contemplative Reptile"
+          alt="Card Cover Image"
           height="270"
           image={coverImg}
-          title="Contemplative Reptile"
+          title={title}
         />
         <CardContent className={content}>
           <Typography align="left" gutterBottom variant="h3">

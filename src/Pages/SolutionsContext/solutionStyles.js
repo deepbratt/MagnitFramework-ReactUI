@@ -1,9 +1,9 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
-import {Colors} from "../../Theme/color.constants"
+import { Colors } from "../../Theme/color.constants";
 
-const {solutionsBackground} = Colors
+const { solutionsBackground } = Colors;
 const breakpoints = createBreakpoints({});
 
 export const THEME = createMuiTheme({
@@ -19,7 +19,7 @@ export const THEME = createMuiTheme({
         [breakpoints.only("sm")]: {
           fontSize: "28px",
           marginTop: "40px",
-          textAlign: "center"
+          textAlign: "center",
         },
         [breakpoints.down("xs")]: {
           fontSize: "20px",
@@ -30,7 +30,7 @@ export const THEME = createMuiTheme({
         fontWeight: "bolder",
         fontSize: "18px",
         textAlign: "center",
-        whiteSpace: "nowrap"
+        whiteSpace: "nowrap",
       },
     },
   },
@@ -43,7 +43,7 @@ export const useStyles = makeStyles((theme) => ({
     padding: "0px",
     backgroundColor: solutionsBackground,
     width: "100%",
-    paddingBottom: "50px"
+    paddingBottom: "50px",
   },
   cardSec: {
     display: "flex",
@@ -53,16 +53,18 @@ export const useStyles = makeStyles((theme) => ({
   },
   card: {
     backgroundColor: solutionsBackground,
-    width: "15%",
-    height: "165px",
+    width: "13%",
+    height: "150px",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     transition: "all .25s linear",
-    boxShadow: "0px 1px 2px 0px rgba(0,0,0,0.4)",
-    "&:hover": { boxShadow: "-1px 10px 29px 0px rgba(0,0,0,0.38)" ,
-    backgroundColor: "#fff",
-},
+    borderRadius: "5px",
+    boxShadow: "0px 0px 0px 0px rgba(0, 0, 0, 0)",
+    "&:hover": {
+      boxShadow: "0px 4px 50px 5px rgba(0, 0, 0, 0.06)",
+      backgroundColor: "#fff",
+    },
     margin: "10px",
     cursor: "pointer",
     [breakpoints.only("md")]: {
@@ -83,9 +85,9 @@ export const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   profileIcon: {
-    filter: "invert(51%) sepia(7%) saturate(4863%) hue-rotate(314deg) brightness(113%) contrast(89%)",
+    filter:
+      "invert(51%) sepia(7%) saturate(4863%) hue-rotate(314deg) brightness(113%) contrast(89%)",
     width: "98px",
     height: "50px",
   },
- 
 }));

@@ -7,6 +7,7 @@ const FactCard = ({ backColor, title, subtitle }) => {
     <Card
       style={{
         padding: "30px 20px",
+        margin: "0 5%",
         borderRadius: "5px",
         backgroundColor: backColor,
       }}
