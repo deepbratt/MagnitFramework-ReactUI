@@ -30,8 +30,7 @@ const Container = ({ slides }) => {
       {slideArr.map((text, i) => {
         return   <Paper style={{backgroundColor: colors[i]}} key={i} className={root} elevation= {0} >
           {text}</Paper>
-      {slides.map((slide, index) => {
-        return <section>{slide}</section>
+
       })}
     </Carousel>
   );
