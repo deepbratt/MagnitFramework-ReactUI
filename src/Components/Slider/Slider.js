@@ -14,7 +14,6 @@ const Slider = (props) => {
   return (
     <>
       <Paper className={value === "LIGHT" ? root: root} elevation= {0} >
-        
         <section className={headingSec}>
           <MuiThemeProvider theme={heading}>
             <Typography variant="h1" color="inherit">

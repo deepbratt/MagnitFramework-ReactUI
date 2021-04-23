@@ -1,22 +1,28 @@
 import { Card, Button, Typography } from "@material-ui/core";
 import InputField from "../FormInputs/InputField";
 import NewsletterStyle from "./style";
-import Vector1 from "../../assets/images/newletterSectionVector1.png";
-import Vector2 from "../../assets/images/newletterSectionVector2.png";
-import Vector3 from "../../assets/images/newletterSectionVector3.png";
-import Vector4 from "../../assets/images/newletterSectionVector4.png";
+import QuarterCircle from "../../assets/images/QuarterCircle.png";
+import HalfCircle from "../../assets/images/HalfCircle.png";
+import Triangle from "../../assets/images/Triangle.png";
 
 const NewsletterForm = () => {
-  const { root, title, form, input } = NewsletterStyle();
+  const {
+    root,
+    title,
+    form,
+    input,
+    quarterCircle,
+    halfCircle,
+    triangle,
+  } = NewsletterStyle();
   return (
     <Card className={root}>
       <Typography className={title} variant="h2" gutterBottom>
         Ready to Discuss Your Project?
       </Typography>
-      {/* <img style={{ position: "relative", left: "0%", top:"-80%" }} src={Vector4} />
-      <img style={{ position: "relative", left: "-20%", top:"20px" }} src={Vector1} />
-      {/* <img src={Vector2} />
-      <img src={Vector3} /> */}
+      <img className={quarterCircle} src={QuarterCircle} />
+      <img className={halfCircle} src={HalfCircle} />
+      <img className={triangle} src={Triangle} />
       <form className={form}>
         <InputField
           className={input}
