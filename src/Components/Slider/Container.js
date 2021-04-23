@@ -4,10 +4,10 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Slider from "./Slider";
 
-const Container = () => {
+let slideArr = [<Slider />, <Slider />];
+const Container = ({ slides }) => {
   const classes = useStyles();
   const { slide } = classes;
-  let slideArr = [<Slider />, <Slider />];
 
   return (
     <Carousel
@@ -19,11 +19,14 @@ const Container = () => {
       infiniteLoop={true}
       transitionTime={500}
     >
-      {slideArr.map((text, index) => {
-        return <section>{text}</section>;
+      {slides.map((slide, index) => {
+        return <section>{slide}</section>;
       })}
     </Carousel>
   );
 };
 
+Container.defaultProps = {
+  slides: slideArr,
+};
 export default Container;

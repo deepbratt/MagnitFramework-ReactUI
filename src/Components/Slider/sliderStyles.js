@@ -1,8 +1,8 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
-import {Colors} from "../../Theme/color.constants"
-const {sliderBackground} = Colors
+import { Colors } from "../../Theme/color.constants";
+const { sliderBackground } = Colors;
 
 const breakpoints = createBreakpoints({});
 
@@ -190,7 +190,6 @@ export const useStyles = makeStyles((theme) => ({
     [breakpoints.up("lg")]: {
       "& .carousel .slide img": {
         width: "100% !important",
-        height: "100% !important",
         maxHeight: "600px",
         width: "auto",
       },
@@ -198,7 +197,6 @@ export const useStyles = makeStyles((theme) => ({
     [breakpoints.down("md")]: {
       "& .carousel .slide img": {
         width: "100% !important",
-        height: "100% !important",
         maxHeight: "400px",
         width: "auto",
       },
@@ -206,7 +204,6 @@ export const useStyles = makeStyles((theme) => ({
     [breakpoints.down("sm")]: {
       "& .carousel .slide img": {
         width: "100% !important",
-        height: "100% !important",
         maxHeight: "300px",
         width: "auto",
       },

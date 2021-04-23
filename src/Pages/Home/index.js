@@ -22,11 +22,18 @@ import QuestionData from "./questions.json";
 import FactCard from "../../Components/FactCard";
 import QuoteCard from "../../Components/QuoteCard";
 import { cards } from "./cardData";
+import CardSlyder from "../../Components/CardSlider";
+import startQuote from "../../assets/images/cards/startQuote.png";
+import endQuote from "../../assets/images/cards/EndingQuoteBlue.png";
 
 const images = [Image1, Image2, Image3, Image4, Image5];
 
 const Home = (props) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const cardArr = [
+    <CardSlyder cardData={cards} />,
+    <CardSlyder cardData={cards} />,
+  ];
 
   function submitForm() {
     setIsSubmitted(true);
@@ -98,17 +105,12 @@ const Home = (props) => {
         </Grid>
       </Section>
       {/* What do our Client Say */}
-      <Section title="What Do Our Client Say?">
-        <Grid container direction="row" spacing={2}>
-          {cards &&
-            cards
-              .filter((card, idx) => idx < 3)
-              .map((card, index) => (
-                <Grid item xs={12} md={6} lg={4}>
-                  <QuoteCard key={index} cardData={card} />
-                </Grid>
-              ))}
-        </Grid>
+      <Section
+        title="What Do Our Client Say?"
+        startQuote={startQuote}
+        endQuote={endQuote}
+      >
+        <Slide slides={cardArr} />
       </Section>
       {/* TRAINING AND CERTIFICATION */}
       <Section title="Training and Certification" backColor="#FAFBFD">
