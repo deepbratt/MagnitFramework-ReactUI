@@ -3,12 +3,12 @@ import { makeStyles } from "@material-ui/core/styles";
 const CardStyle = makeStyles((theme) => ({
   root: {
     margin: "20px 0",
-    padding: "50px",
-    boxShadow: "0px 4px 50px 5px rgba(0, 0, 0, 0.03)",
+    padding: "40px",
+    boxShadow: "0px 4px 20px 2px rgba(0, 0, 0, 0.03)",
   },
   content: {
     display: "flex",
-    padding: "40px 0 0 0",
+    padding: "30px 0 0 0",
     flexWrap: "wrap",
     "& > p": {
       margin: "10px",

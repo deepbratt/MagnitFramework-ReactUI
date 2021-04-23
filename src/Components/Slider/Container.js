@@ -12,6 +12,9 @@ const Container = () => {
   const { slide,root } = classes;
   const colors = [mainSlide,midSlide,lastSlide]
   let slideArr = [<Slider />, <Slider />,<Slider />];
+const Container = ({ slides }) => {
+  const classes = useStyles();
+  const { slide } = classes;
 
   return (
     <Carousel
@@ -23,12 +26,18 @@ const Container = () => {
       infiniteLoop={true}
       transitionTime={500}
     >
+
       {slideArr.map((text, i) => {
         return   <Paper style={{backgroundColor: colors[i]}} key={i} className={root} elevation= {0} >
           {text}</Paper>
+      {slides.map((slide, index) => {
+        return <section>{slide}</section>
       })}
     </Carousel>
   );
 };
 
+Container.defaultProps = {
+  slides: slideArr,
+};
 export default Container;
