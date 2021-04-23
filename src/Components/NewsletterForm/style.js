@@ -3,9 +3,13 @@ import Image from "../../assets/images/newletterSection.png";
 
 const NewsletterStyle = makeStyles((theme) => ({
   root: {
+    position: "relative",
     backgroundImage: `url(${Image})`,
     alignItems: "center",
     justifyContent: "center",
+    "& > img": {
+      position: "absolute",
+    },
   },
   title: {
     textAlign: "center",
@@ -19,7 +23,17 @@ const NewsletterStyle = makeStyles((theme) => ({
   input: {
     boxShadow: "0px 4px 60px rgba(0, 0, 0, 0.1)",
     width: "60%",
-    borderRadius: "5px"
+    borderRadius: "5px",
+  },
+  halfCircle: { height: "83px", right: "4%", bottom: "0px" },
+  quarterCircle: {
+    height: "182px",
+    left: "0px",
+  },
+  triangle: {
+    height: "83px",
+    right: "4%",
+    top:"5%"
   },
 }));
 
