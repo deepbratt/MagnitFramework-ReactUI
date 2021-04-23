@@ -3,7 +3,7 @@ import { createMuiTheme } from "@material-ui/core/styles";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 import { Colors } from "../../Theme/color.constants";
 
-const { solutionsBackground} = Colors;
+const { solutionsBackground, solutionsSub} = Colors;
 const breakpoints = createBreakpoints({});
 
 export const THEME = createMuiTheme({
@@ -52,7 +52,7 @@ export const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   card: {
-    backgroundColor: "#fafafa",
+    backgroundColor: solutionsSub,
     width: "13%",
     height: "150px",
     display: "flex",

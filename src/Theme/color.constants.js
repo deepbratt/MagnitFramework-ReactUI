@@ -1,10 +1,14 @@
 export const Colors = {
-  sliderBackground: "#F3FDFE",
+  mainSlide: "#F3FDFE",
+  midSlide: "#fdfdc4",
+  lastSlide: "#fff0f0",
+  tickColor: "white",
   servicesDev: "#FFF1E4",
   servicesApp: "#FFEAE9",
   servicesWeb: "#EEFAF6",
   servicesDigital: "#E5F9FF",
   solutionsBackground: "#f8ede3",
+  solutionsSub: "#fafafa",
   PartnerSectionIcons: {
     appIcon: "#FFF1E4",
     reliableIcon: "#FFF6E4",

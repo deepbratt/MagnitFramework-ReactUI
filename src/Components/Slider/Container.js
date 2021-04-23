@@ -4,11 +4,13 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Paper} from "@material-ui/core";
 import Slider from "./Slider";
+import {Colors} from "../../Theme/color.constants"
 
+const {mainSlide, midSlide,lastSlide} = Colors
 const Container = () => {
   const classes = useStyles();
   const { slide,root } = classes;
-  const colors = ["#F3FDFE","#fdfdc4","#fff0f0"]
+  const colors = [mainSlide,midSlide,lastSlide]
   let slideArr = [<Slider />, <Slider />,<Slider />];
 
   return (
