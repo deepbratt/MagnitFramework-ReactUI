@@ -2,12 +2,17 @@ import React from "react";
 import { useStyles } from "./sliderStyles";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Paper} from "@material-ui/core";
 import Slider from "./Slider";
+import {Colors} from "../../Theme/color.constants"
 
-let slideArr = [<Slider />, <Slider />];
+const slideArr = [<Slider/>,<Slider/>,<Slider/>]
 const Container = ({ slides }) => {
+
   const classes = useStyles();
-  const { slide } = classes;
+  const {mainSlide,midSlide,lastSlide} = Colors
+  const { slide,root } = classes;
+  const colors = [mainSlide,midSlide,lastSlide]
 
   return (
     <Carousel
@@ -19,9 +24,12 @@ const Container = ({ slides }) => {
       infiniteLoop={true}
       transitionTime={500}
     >
-      {slides.map((slide, index) => {
-        return <section>{slide}</section>;
-      })}
+   
+      {slides.map((slide, i) => {
+        return <Paper style={{backgroundColor: colors[i]}} key={i} className={root} elevation= {0} >
+          {slide}
+        </Paper>
+})}
     </Carousel>
   );
 };

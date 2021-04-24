@@ -3,7 +3,7 @@ import { createMuiTheme } from "@material-ui/core/styles";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 import { Colors } from "../../Theme/color.constants";
 
-const { solutionsBackground } = Colors;
+const { solutionsBackground, solutionsSub} = Colors;
 const breakpoints = createBreakpoints({});
 
 export const THEME = createMuiTheme({
@@ -28,7 +28,7 @@ export const THEME = createMuiTheme({
       h5: {
         fontFamily: "Poppins",
         fontWeight: "bolder",
-        fontSize: "18px",
+        fontSize: "16px",
         textAlign: "center",
         whiteSpace: "nowrap",
       },
@@ -52,7 +52,7 @@ export const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   card: {
-    backgroundColor: solutionsBackground,
+    backgroundColor: solutionsSub,
     width: "13%",
     height: "150px",
     display: "flex",
@@ -86,7 +86,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   profileIcon: {
     filter:
-      "invert(51%) sepia(7%) saturate(4863%) hue-rotate(314deg) brightness(113%) contrast(89%)",
+      "invert(40%) sepia(60%) saturate(3193%) hue-rotate(323deg) brightness(98%) contrast(93%)",
     width: "98px",
     height: "50px",
   },

@@ -35,7 +35,7 @@ export const THEME = createMuiTheme({
       },
       paragraph: {
         fontFamily: "Poppins",
-        fontSize: "16px",
+        fontSize: "15px",
         textAlign: "left",
         marginTop: "10px",
         paddingLeft: "20px",
@@ -79,7 +79,7 @@ export const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     transition: "all .25s linear",
     boxShadow: "none",
-    margin: "20px",
+    margin: "10px",
     boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
     [breakpoints.only("md")]: {
       width: "40%",
