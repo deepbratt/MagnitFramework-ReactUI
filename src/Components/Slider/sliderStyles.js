@@ -55,6 +55,7 @@ export const useStyles = makeStyles((theme) => ({
   root: {
     margin: 0,
     padding: 0,
+    marginTop: "50px",
     display: "flex",
     position: "relative",
     [theme.breakpoints.up("lg")]: {
