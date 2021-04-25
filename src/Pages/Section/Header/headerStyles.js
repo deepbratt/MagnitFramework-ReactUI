@@ -2,7 +2,7 @@ import {  makeStyles } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import {Colors} from "../../../Theme/color.constants"
 
-const {navColor,scrolledNavColor} = Colors
+const {mainSlide,scrolledNavColor} = Colors
 
 export const THEME = createMuiTheme({
   overrides:{
@@ -32,7 +32,7 @@ export const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     boxShadow: "none",
     margin: 0,
-    backgroundColor: navColor ,
+    backgroundColor: mainSlide ,
     transition: "all .5s ease-out"
   
   },
