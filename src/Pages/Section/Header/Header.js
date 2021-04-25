@@ -6,25 +6,29 @@ import {
   List,
   ListItemText,
   Toolbar,
+  AppBar,
   Button,
 } from "@material-ui/core";
+import Scrolltrigger from "../../../Theme/Scrolltrigger"
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import Sizes from "../../../Theme/theme.constants"
 import SideBar from "./Sidebar/SideBar";
 import Breakpoints from "../../../Theme/theme.breakpoints"
 
 const Header = (props) => {
-  const { value } = props;
   const classes = useStyles();
-  const {toolbar,toolbarSub,logo,list,listItem,button} = classes
+  const {trigger} = Scrolltrigger()
+  const {toolbar,logo,list,listItem,button,root,scrolled} = classes
   const {isMatch} = Sizes()
   
 
   return (
-    <>
+    <> 
+    <AppBar className={trigger === false? root : scrolled}  position="fixed" >
       <Toolbar
-        className={value === "LIGHT" ? toolbar : toolbarSub}
+        className={toolbar}
         variant="dense"
+      
       >
         <MuiThemeProvider theme={THEME}>
           <Typography className={logo} variant="h5" color="inherit">
@@ -38,6 +42,7 @@ const Header = (props) => {
           <List className={list}>
             {[
               "Company",
+              "About",
               "Services",
               "Solutions",
               "Case Studies",
@@ -63,6 +68,7 @@ const Header = (props) => {
           </List>
         )}
       </Toolbar>
+      </AppBar>
     </>
   );
 };

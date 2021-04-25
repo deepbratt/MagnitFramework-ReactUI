@@ -2,7 +2,7 @@ import {  makeStyles } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import {Colors} from "../../../Theme/color.constants"
 
-const {sliderBackground} = Colors
+const {mainSlide,scrolledNavColor} = Colors
 
 export const THEME = createMuiTheme({
   overrides:{
@@ -31,19 +31,29 @@ export const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     boxShadow: "none",
-    margin: 0
+    margin: 0,
+    backgroundColor: mainSlide ,
+    transition: "all .5s ease-out"
+  
+  },
+  scrolled:{
+    flexGrow: 1,
+    boxShadow: "none",
+    margin: 0,
+    backgroundColor: scrolledNavColor,
+    height: 63,
+    transition: "all .5s ease-out"
   },
   menuButton: {
     marginRight: theme.spacing(2),
   },
   toolbar: {
-    backgroundColor: sliderBackground,
     fontSize: "16px",
     display: "flex",
-    justifyContent: "space-around"
+    justifyContent: "space-around",
+   
   },
   toolbarSub: {
-    backgroundColor: "#F3FDFE",
     fontSize: "16px",
     display: "flex",
     justifyContent: "space-around"

@@ -1,4 +1,5 @@
 export const Colors = {
+  scrolledNavColor: "#d5f9fc",
   mainSlide: "#F3FDFE",
   midSlide: "#fdfdc4",
   lastSlide: "#fff0f0",
