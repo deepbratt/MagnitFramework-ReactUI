@@ -38,6 +38,7 @@ const Home = (props) => {
   function submitForm() {
     setIsSubmitted(true);
   }
+  
   return (
     <div className="App">
       <Grid item md={12} xs={12}>

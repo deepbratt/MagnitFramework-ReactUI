@@ -21,9 +21,13 @@ const NewsletterStyle = makeStyles((theme) => ({
     marginBottom: "60px",
   },
   input: {
-    boxShadow: "0px 4px 60px rgba(0, 0, 0, 0.1)",
-    width: "60%",
+    display: "block",
+    margin: "20px",
     borderRadius: "5px",
+    boxShadow: "0px 4px 60px rgba(0, 0, 0, 0.1)",
+    "& > .MuiOutlinedInput-root": {
+      boxShadow: "0px 4px 60px rgba(0, 0, 0, 0.1)",
+    },
   },
   halfCircle: { height: "83px", right: "4%", bottom: "0px" },
   quarterCircle: {
@@ -33,7 +37,7 @@ const NewsletterStyle = makeStyles((theme) => ({
   triangle: {
     height: "83px",
     right: "4%",
-    top:"5%"
+    top: "5%",
   },
 }));
 

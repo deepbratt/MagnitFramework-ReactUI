@@ -1,5 +1,4 @@
-import { Card, Button, Typography } from "@material-ui/core";
-import InputField from "../FormInputs/InputField";
+import { Card, Button, Typography, TextField } from "@material-ui/core";
 import NewsletterStyle from "./style";
 import QuarterCircle from "../../assets/images/QuarterCircle.png";
 import HalfCircle from "../../assets/images/HalfCircle.png";
@@ -24,8 +23,11 @@ const NewsletterForm = () => {
       <img className={halfCircle} src={HalfCircle} />
       <img className={triangle} src={Triangle} />
       <form className={form}>
-        <InputField
+        <TextField
+          variant="outlined"
           className={input}
+          size="small"
+          fullWidth
           id="input-email"
           fullWidth
           placeholder="Your Email Address"
