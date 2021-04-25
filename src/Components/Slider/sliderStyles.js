@@ -1,8 +1,10 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
-import { Colors } from "../../Theme/color.constants";
-const { sliderBackground } = Colors;
+
+import {Colors} from "../../Theme/color.constants"
+
+const { sliderBackground , tickColor} = Colors;
 
 const breakpoints = createBreakpoints({});
 
@@ -51,11 +53,8 @@ export const heading = createMuiTheme({
 
 export const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: sliderBackground,
-
     margin: 0,
     padding: 0,
-    color: "#151B27",
     display: "flex",
     position: "relative",
     [theme.breakpoints.up("lg")]: {
@@ -63,34 +62,6 @@ export const useStyles = makeStyles((theme) => ({
       paddingLeft: "100px",
       paddingTop: "60px",
       height: "100%",
-    },
-    [theme.breakpoints.only("md")]: {
-      textAlign: "left",
-      paddingLeft: "100px",
-      paddingTop: "60px",
-    },
-    [theme.breakpoints.only("sm")]: {
-      flexDirection: "column",
-      alignItems: "center",
-    },
-    [breakpoints.down("xs")]: {
-      flexDirection: "column",
-      alignItems: "center",
-      paddingTop: "20px",
-    },
-  },
-  rootSub: {
-    margin: 0,
-    padding: 0,
-    color: "#151B27",
-    display: "flex",
-    position: "relative",
-    [theme.breakpoints.up("lg")]: {
-      textAlign: "left",
-      paddingLeft: "100px",
-      overflow: "hidden",
-      paddingTop: "60px",
-      height: "100vh",
     },
     [theme.breakpoints.only("md")]: {
       textAlign: "left",
@@ -146,7 +117,7 @@ export const useStyles = makeStyles((theme) => ({
   },
 
   tick: {
-    backgroundColor: "white",
+    backgroundColor: tickColor,
     borderRadius: "15px",
     marginRight: "10px",
     fontSize: "23px",
@@ -209,4 +180,7 @@ export const useStyles = makeStyles((theme) => ({
       },
     },
   },
+  slide1:{
+    backgroundColor: "pink"
+  }
 }));
