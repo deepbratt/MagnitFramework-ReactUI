@@ -1,16 +1,16 @@
-import {  makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
-import {Colors} from "../../../Theme/color.constants"
+import { Colors } from "../../../Theme/color.constants";
 
-const {mainSlide,scrolledNavColor} = Colors
+const { transparentAppBar, solidAppBar, mainSlide } = Colors;
 
 export const THEME = createMuiTheme({
-  overrides:{
-    MuiTypography:{
-     h5:{
-      fontFamily: "Poppins",
-     }
-    }
+  overrides: {
+    MuiTypography: {
+      h5: {
+        fontFamily: "Poppins",
+      },
+    },
   },
   typography: {
     fontSize: 15,
@@ -19,7 +19,6 @@ export const THEME = createMuiTheme({
     fontFamily: "Poppins",
     h5: {
       fontWeight: 600,
-     
     },
     button: {
       textTransform: "none",
@@ -29,20 +28,23 @@ export const THEME = createMuiTheme({
 
 export const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
-    boxShadow: "none",
-    margin: 0,
-    backgroundColor: mainSlide ,
-    transition: "all .5s ease-out"
-  
+    backgroundColor: mainSlide,
   },
-  scrolled:{
+  transparentAppbar: {
     flexGrow: 1,
     boxShadow: "none",
     margin: 0,
-    backgroundColor: scrolledNavColor,
+    backgroundColor: transparentAppBar ,
     height: 63,
-    transition: "all .5s ease-out"
+    transition: "all .5s ease-out",
+  },
+  solidAppbar: {
+    flexGrow: 1,
+    boxShadow: "none",
+    margin: 0,
+    backgroundColor: solidAppBar,
+    height: 63,
+    transition: "all .5s ease-out",
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -51,12 +53,11 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: "16px",
     display: "flex",
     justifyContent: "space-around",
-   
   },
   toolbarSub: {
     fontSize: "16px",
     display: "flex",
-    justifyContent: "space-around"
+    justifyContent: "space-around",
   },
   list: {
     fontSize: "16px",
@@ -65,10 +66,10 @@ export const useStyles = makeStyles((theme) => ({
     fontFamily: "Poppins', sans-serif",
     whiteSpace: "nowrap",
   },
-  listItem:{
+  listItem: {
     "&:hover": {
       color: "black",
-      cursor: "pointer"
+      cursor: "pointer",
     },
   },
   logo: {
