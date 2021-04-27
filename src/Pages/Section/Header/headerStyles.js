@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import { Colors } from "../../../Theme/color.constants";
 
-const { transparentAppBar, solidAppBar, mainSlide } = Colors;
+const { transparentAppBar, solidAppBar, mainSlide, blackColor,greyColor } = Colors;
 
 export const THEME = createMuiTheme({
   overrides: {
@@ -68,7 +68,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   listItem: {
     "&:hover": {
-      color: "black",
+      color: blackColor,
       cursor: "pointer",
     },
   },
@@ -77,4 +77,12 @@ export const useStyles = makeStyles((theme) => ({
       fontSize: "30px",
     },
   },
+  link:{
+    marginTop: "5px",
+    textDecoration: "none",
+    color: greyColor,
+  },
+  active:{
+    color: blackColor
+  }
 }));

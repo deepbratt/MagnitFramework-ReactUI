@@ -10,13 +10,16 @@ import {
   Button,
   Paper,
 } from "@material-ui/core";
+import { NavLink } from "react-router-dom";
 import Scrolltrigger from "../../../Theme/Scrolltrigger";
 import { MuiThemeProvider } from "@material-ui/core/styles";
-import Sizes from "../../../Theme/theme.constants";
 import SideBar from "./Sidebar/SideBar";
 import Breakpoints from "../../../Theme/theme.breakpoints";
+import { pageRoutes } from "../../../Components/Path";
+import { Hidden } from "@material-ui/core";
 
 const Header = (props) => {
+  const routes = Object.values(pageRoutes);
   const classes = useStyles();
   const { trigger } = Scrolltrigger();
   const {
@@ -28,8 +31,9 @@ const Header = (props) => {
     root,
     transparentAppbar,
     solidAppbar,
+    link,
+    active,
   } = classes;
-  const { isMatch } = Sizes();
 
   return (
     <>
@@ -46,24 +50,30 @@ const Header = (props) => {
               </Typography>
             </MuiThemeProvider>
             {/* Header Menu */}
-            {isMatch ? (
+            <Hidden mdUp>
               <SideBar />
-            ) : (
+            </Hidden>
+            <Hidden smDown>
               <List className={list}>
-                {[
-                  "Company",
-                  "About",
-                  "Services",
-                  "Solutions",
-                  "Case Studies",
-                  "Careers",
-                ].map((text, index) => (
-                  <MuiThemeProvider key={index} theme={THEME}>
-                    <ListItem>
-                      <ListItemText className={listItem} primary={text} />
-                    </ListItem>
-                  </MuiThemeProvider>
-                ))}
+                {routes.map(({ path, sidebarName, ...prop }, index) => {
+                  return (
+                    <MuiThemeProvider key={index} theme={THEME}>
+                      <NavLink
+                        activeClassName={active}
+                        className={link}
+                        to={path}
+                        key={`route-${index}}`}
+                      >
+                        <ListItem>
+                          <ListItemText
+                            className={listItem}
+                            primary={sidebarName}
+                          />
+                        </ListItem>
+                      </NavLink>
+                    </MuiThemeProvider>
+                  );
+                })}
                 <ListItem>
                   <Button
                     style={{ textTransform: "none" }}
@@ -76,7 +86,7 @@ const Header = (props) => {
                   </Button>
                 </ListItem>
               </List>
-            )}
+            </Hidden>
           </Toolbar>
         </AppBar>
       </Paper>
