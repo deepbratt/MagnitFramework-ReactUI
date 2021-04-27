@@ -1,6 +1,7 @@
 export const Colors = {
-  scrolledNavColor: "#d5f9fc",
-  mainSlide: "#F3FDFE",
+  solidAppBar: "#d5f9fc",
+  transparentAppBar: "rgb(243, 253, 254, 0.8)",
+  mainSlide: "#f3fdfe",
   midSlide: "#fdfdc4",
   lastSlide: "#fff0f0",
   tickColor: "white",
