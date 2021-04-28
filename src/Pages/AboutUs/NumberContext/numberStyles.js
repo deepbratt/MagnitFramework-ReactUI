@@ -14,8 +14,8 @@ export const useStyles = makeStyles((theme) => ({
     display: "flex",
     width: "100%",
     flexFlow: "wrap",
-    marginBottom: "40px",
     justifyContent: "center",
+  
   },
   card: {
     backgroundColor: skyBlueColor,
