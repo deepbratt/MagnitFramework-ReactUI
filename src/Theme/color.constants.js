@@ -1,5 +1,7 @@
 export const Colors = {
   solidAppBar: "#d5f9fc",
+  blackColor: "black",
+  greyColor: "grey",
   transparentAppBar: "rgb(243, 253, 254, 0.8)",
   mainSlide: "#f3fdfe",
   midSlide: "#fdfdc4",
@@ -31,4 +33,9 @@ export const Colors = {
     Img2: "#F2F5FA",
     Img3: "#F2F5FA",
   },
+    mustardColor: "#F5A12C",
+    skyBlueColor: "#60D2D9",
+    darkBlueColor: "#376AED",
+    rosePinkColor: "#EF6E78"
+  
 };
