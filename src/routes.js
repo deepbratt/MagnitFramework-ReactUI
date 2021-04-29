@@ -3,9 +3,9 @@ import { useSelector } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Layout from "./Layout";
 import RequireAuth from "./container/RequireAuth";
-import ContactUs from "./Pages/ContactUs";
 import { pageRoutes } from "./Components/Path";
 import Home from "./Pages/Home";
+
 const Routes = () => {
   const routeArray = Object.values(pageRoutes);
   const isLoggedIn = useSelector((state) => state.userReducer.isLoggedin);
@@ -15,6 +15,7 @@ const Routes = () => {
       <Switch>
         <Layout>
           <RequireAuth path="/" exact component={Home} />
+          {/* <RequireAuth path="/services" exact component={Services} /> */}
           {routeArray.map((prop, key) => {
             return (
               <RequireAuth

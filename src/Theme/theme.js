@@ -37,6 +37,9 @@ export default function createTheme(options) {
         root: {
           marginTop: "20px",
           position: "inherit",
+          "&::before": {
+            height: "0",
+          },
         },
       },
       MuiAccordionSummary: {

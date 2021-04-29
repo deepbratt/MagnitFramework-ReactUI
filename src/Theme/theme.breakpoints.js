@@ -1,16 +1,11 @@
-import Sizes from "./theme.constants"
+import Sizes from "./theme.constants";
 
 const Breakpoints = () => {
-    const {desktop,tablet,mobile} = Sizes()
-       
+  const { desktop, tablet, mobile } = Sizes();
 
-    if (desktop) return "large";
-    if (tablet) return "medium";
-    if (mobile) return "small";
-    
-            
-        
-    
-}
+  if (desktop) return "large";
+  if (tablet) return "medium";
+  if (mobile) return "small";
+};
 
-export default Breakpoints
+export default Breakpoints;

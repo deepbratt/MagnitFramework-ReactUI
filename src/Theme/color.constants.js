@@ -34,6 +34,39 @@ export const Colors = {
     Img2: "#F2F5FA",
     Img3: "#F2F5FA",
   },
+
+  sectionBackgroundColors: {
+    header: "#F3FDFE",
+    solutions: "#F5EFE5",
+    glanceAtOurWork: "#F5F5F5",
+    trainingAndCertification: "#FAFBFD",
+    footer: "#161C28",
+  },
+  factCards: {
+    blue: "#E9F7FF",
+    purple: "#FBE9FF",
+    violet: "#EEF2FC",
+    skyBlue: "#E4FFFD",
+    seaGreen: "#E9FFF0",
+    peach: "#FFF6E4",
+  },
+  yellowOrange: "#FFA24C",
+  lightblue: "#5B4CFF",
+  pastelOrange: "#FFC04C",
+  persianGreen: "#08A89E",
+  skyblue: "#6ADBE1",
+  Orchid: "#E666D9",
+  orangeRed: "#FF554C",
+  pictonBlue: "#4CBFFF",
+  heliotrope: "#DB4CFF",
+  blueGreen: "#2EBEB5",
+  hanBlue: "#486FD5",
+  mustardColor: "#F5A12C",
+  skyBlueColor: "#60D2D9",
+  darkBlueColor: "#376AED",
+  rosePinkColor: "#EF6E78",
+  // MOSTLY BACKGROUND
+  aliceBlue: "#E8F2FE",
   // WhyUsSectionIcons: {
   //   appIcon: "#FFA24C",
   //   reliableIcon: "#FFC14C",
@@ -49,10 +82,5 @@ export const Colors = {
   //   isoIcon: "#6ADBE1",
   //   fillColor: "invert(100%) sepia(6%) saturate(7462%) hue-rotate(267deg) brightness(114%) contrast(97%)"
   // },
-    mustardColor: "#F5A12C",
-    skyBlueColor: "#60D2D9",
-    darkBlueColor: "#376AED",
-    rosePinkColor: "#EF6E78",
-    InfrastrutureColor: "#E8F2FE"
-  
+  InfrastrutureColor: "#E8F2FE",
 };

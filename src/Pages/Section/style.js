@@ -7,7 +7,7 @@ const LayoutStyle = makeStyles((theme) => ({
   content: {
     position: "relative",
     margin: "0 8%",
-    "&> img": {
+    "& > img": {
       position: "absolute",
       height: "146px",
     },

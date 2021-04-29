@@ -38,7 +38,7 @@ const Container = () => {
             <CardContent>
               <section className={devSec}>
                 <section>
-                  <img width="100%" height="100%" src={image1} />
+                  <img width="100%" height="100%" src={image1} alt=""/>
                 </section>
               </section>
               <section>
@@ -60,7 +60,7 @@ const Container = () => {
             <CardContent>
               <section className={cardContent}>
                 <section>
-                  <img width="100%" height="100%" src={image2} />
+                  <img width="100%" height="100%" src={image2} alt=""/>
                 </section>
               </section>
               <section>
@@ -82,7 +82,7 @@ const Container = () => {
             <CardContent>
               <section className={dev}>
                 <section>
-                  <img width="100%" height="100%" src={image3} />
+                  <img width="100%" height="100%" src={image3} alt=""/>
                 </section>
               </section>
               <section>

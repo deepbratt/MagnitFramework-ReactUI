@@ -1,5 +1,4 @@
 import Grid from "@material-ui/core/Grid";
-import Slider from "../../Components/Slider/Slider";
 import { connect } from "react-redux";
 import Services from "../Section/Header/ServicesContext/Services";
 import Slide from "../../Components/Slider/Container";
@@ -20,16 +19,27 @@ import CardComponent from "../../Components/CardComponent";
 import NewsletterForm from "../../Components/NewsletterForm";
 import QuestionData from "./questions.json";
 import FactCard from "../../Components/FactCard";
-import QuoteCard from "../../Components/QuoteCard";
 import { cards } from "./cardData";
 import CardSlyder from "../../Components/CardSlider";
 import startQuote from "../../assets/images/cards/startQuote.png";
 import endQuote from "../../assets/images/cards/EndingQuoteBlue.png";
+import { Colors } from "../../Theme/color.constants";
+import {
+  AwardSectionTitle,
+  FactsCardSectionTitle,
+  FQASectionTitle,
+  TrainingAndCertificationSectionTitle,
+  WhatDoClientSaySectionTitle,
+} from "./constants";
 
 const images = [Image1, Image2, Image3, Image4, Image5];
 
 const Home = (props) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const { sectionBackgroundColors, factCards } = Colors;
+  const { peach, seaGreen, skyBlue, violet, purple, blue } = factCards;
+  const { trainingAndCertification } = sectionBackgroundColors;
   const cardArr = [
     <CardSlyder cardData={cards} />,
     <CardSlyder cardData={cards} />,
@@ -38,6 +48,7 @@ const Home = (props) => {
   function submitForm() {
     setIsSubmitted(true);
   }
+
   return (
     <div className="App">
       <Grid item md={12} xs={12}>
@@ -62,42 +73,42 @@ const Home = (props) => {
         </Section>
       </Grid>
       {/* SOME FACTS ABOUT US SECTION */}
-      <Section title="Some Quick Facts About Us">
+      <Section title={FactsCardSectionTitle}>
         <Grid style={{ padding: "0 5%" }} container direction="row" spacing={2}>
           <Grid item xs={12} md={6} lg={4}>
             <FactCard
-              backColor="#E9F7FF"
+              backColor={blue}
               title="10+ Years"
               subtitle="Experience"
             />
           </Grid>
           <Grid item xs={12} md={6} lg={4}>
-            <FactCard backColor="#FBE9FF" title="200+" subtitle="Team" />
+            <FactCard backColor={purple} title="200+" subtitle="Team" />
           </Grid>
           <Grid item xs={12} md={6} lg={4}>
             <FactCard
-              backColor="#EEF2FC"
+              backColor={violet}
               title="94%"
               subtitle="Happy Customers"
             />
           </Grid>
           <Grid item xs={12} md={6} lg={4}>
             <FactCard
-              backColor="#E4FFFD"
+              backColor={skyBlue}
               title="35+ Countries"
               subtitle="Served"
             />
           </Grid>
           <Grid item xs={12} md={6} lg={4}>
             <FactCard
-              backColor="#E9FFF0"
+              backColor={seaGreen}
               title="2000+"
               subtitle="Successful Projects"
             />
           </Grid>
           <Grid item xs={12} md={6} lg={4}>
             <FactCard
-              backColor="#FFF6E4"
+              backColor={peach}
               title="ISO 9001:2015"
               subtitle="Certification"
             />
@@ -106,14 +117,17 @@ const Home = (props) => {
       </Section>
       {/* What do our Client Say */}
       <Section
-        title="What Do Our Client Say?"
+        title={WhatDoClientSaySectionTitle}
         startQuote={startQuote}
         endQuote={endQuote}
       >
         <Slide slides={cardArr} />
       </Section>
       {/* TRAINING AND CERTIFICATION */}
-      <Section title="Training and Certification" backColor="#FAFBFD">
+      <Section
+        title={TrainingAndCertificationSectionTitle}
+        backColor={trainingAndCertification}
+      >
         <Grid container direction="row" spacing={2}>
           {cards &&
             cards
@@ -143,7 +157,7 @@ const Home = (props) => {
       </Section>
 
       {/* AWARD AND ACCREDITATIONS SECTION */}
-      <Section title="Awards & Accreditations">
+      <Section title={AwardSectionTitle}>
         <div>
           {images &&
             images.map((image, index) => (
@@ -166,7 +180,7 @@ const Home = (props) => {
         )}
       </Section>
       {/* FQA SECTION */}
-      <Section title="Frequently Asked Question">
+      <Section title={FQASectionTitle}>
         <MyAccordion questions={QuestionData} />
         <Button color="primary" variant="contained">
           <Typography
