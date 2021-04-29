@@ -38,8 +38,8 @@ export default function createTheme(options) {
           marginTop: "20px",
           position: "inherit",
           "&::before": {
-            height: "0"
-          }
+            height: "0",
+          },
         },
       },
       MuiAccordionSummary: {

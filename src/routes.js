@@ -5,6 +5,7 @@ import Layout from "./Layout";
 import RequireAuth from "./container/RequireAuth";
 import ContactUs from "./Pages/ContactUs";
 import Home from "./Pages/Home";
+import Services from "./Pages/Services";
 const Routes = () => {
   const isLoggedIn = useSelector((state) => state.userReducer.isLoggedin);
 
@@ -12,7 +13,8 @@ const Routes = () => {
     <Router>
       <Switch>
         <Layout>
-          <RequireAuth path="/" exact  component={Home} />
+          <RequireAuth path="/" exact component={Home} />
+          <RequireAuth path="/services" exact component={Services} />
         </Layout>
       </Switch>
     </Router>
