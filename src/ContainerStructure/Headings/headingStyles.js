@@ -20,6 +20,12 @@ export const THEME = createMuiTheme({
         fontSize: "18px",
         whiteSpace: "nowrap",
       },
+      h6: {
+        fontFamily: "Poppins",
+        fontWeight: "600",
+        fontSize: "25px",
+        whiteSpace: "nowrap",
+      },
     },
   },
 });

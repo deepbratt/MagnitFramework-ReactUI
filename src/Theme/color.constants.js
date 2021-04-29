@@ -2,6 +2,7 @@ export const Colors = {
   solidAppBar: "#d5f9fc",
   blackColor: "black",
   greyColor: "grey",
+  whiteColor: "white",
   transparentAppBar: "rgb(243, 253, 254, 0.8)",
   mainSlide: "#f3fdfe",
   midSlide: "#fdfdc4",

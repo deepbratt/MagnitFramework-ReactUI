@@ -8,7 +8,7 @@ export const THEME = createMuiTheme({
     MuiTypography: {
       paragraph: {
         fontFamily: "Poppins",
-        fontSize: "18px",
+        fontSize: "16px",
         textAlign: "left",
         [breakpoints.down("sm")]: {
           marginTop: "15px",
