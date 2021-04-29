@@ -3,6 +3,7 @@ import { useStyles, THEME } from "./servicesStyles";
 import { Typography, Card, CardContent, Paper } from "@material-ui/core";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import * as Icons from "../../../../assets/icons/icon.constants";
+import { ServicesAndSolutionSectionTitle } from "./constant";
 const Services = (props) => {
   const { value } = props;
   const classes = useStyles();
@@ -31,7 +32,7 @@ const Services = (props) => {
         <section className={serviceHeading}>
           <MuiThemeProvider theme={THEME}>
             <Typography variant="h4" color="inherit">
-              We Offer Quality Services and Solutions
+              {ServicesAndSolutionSectionTitle}
             </Typography>
             <Typography paragraph={true} color="inherit">
               To start-ups and enterprises across the globe

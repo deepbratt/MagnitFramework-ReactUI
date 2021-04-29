@@ -64,4 +64,6 @@ export const Colors = {
   skyBlueColor: "#60D2D9",
   darkBlueColor: "#376AED",
   rosePinkColor: "#EF6E78",
+  // MOSTLY BACKGROUND
+  aliceBlue: "#E8F2FE"
 };
