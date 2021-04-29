@@ -15,7 +15,7 @@ const AboutMainSection = () => {
     ellipse2Imgsrc,
   } = MainData;
   const classes = useStyles();
-  const { root, cardSec, Img, paragraph, Ellipse, Ellipse2,hero} = classes;
+  const { root, cardSec, Img, paragraph, Ellipse, Ellipse2,hero, card} = classes;
   return (
     <>
       <Paper className={root} elevation={0}>
@@ -23,7 +23,7 @@ const AboutMainSection = () => {
           <Heading title={title} />
         </section>
         <section>
-          <Card>
+          <Card className={card} >
             <CardContent className={cardSec}>
               <section className={Img}>
                 <img className={hero} alt="hero" src={heroImgsrc} />
