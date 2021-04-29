@@ -34,6 +34,7 @@ export const Colors = {
     Img2: "#F2F5FA",
     Img3: "#F2F5FA",
   },
+
   sectionBackgroundColors: {
     header: "#F3FDFE",
     solutions: "#F5EFE5",
@@ -65,5 +66,21 @@ export const Colors = {
   darkBlueColor: "#376AED",
   rosePinkColor: "#EF6E78",
   // MOSTLY BACKGROUND
-  aliceBlue: "#E8F2FE"
+  aliceBlue: "#E8F2FE",
+  // WhyUsSectionIcons: {
+  //   appIcon: "#FFA24C",
+  //   reliableIcon: "#FFC14C",
+  //   innovativeIcon: "#1DD5B4",
+  //   agileIcon: "#5B4CFF",
+  //   transparencyIcon: "#08A89E",
+  //   moneyIcon: "#E666D9",
+  //   qualityIcon: "#FF554C",
+  //   supportIcon: "#60D2D9",
+  //   geekyIcon: "#4DBFFF",
+  //   timeIcon: "#DB4DFF",
+  //   dataIcon: "#6A8BE2",
+  //   isoIcon: "#6ADBE1",
+  //   fillColor: "invert(100%) sepia(6%) saturate(7462%) hue-rotate(267deg) brightness(114%) contrast(97%)"
+  // },
+  InfrastrutureColor: "#E8F2FE",
 };
