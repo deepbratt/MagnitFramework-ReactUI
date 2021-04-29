@@ -1,16 +1,16 @@
-import {  makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
-import {Colors} from "../../../Theme/color.constants"
+import { Colors } from "../../../Theme/color.constants";
 
-const {sliderBackground} = Colors
+const { transparentAppBar, solidAppBar, mainSlide, blackColor,greyColor } = Colors;
 
 export const THEME = createMuiTheme({
-  overrides:{
-    MuiTypography:{
-     h5:{
-      fontFamily: "Poppins",
-     }
-    }
+  overrides: {
+    MuiTypography: {
+      h5: {
+        fontFamily: "Poppins",
+      },
+    },
   },
   typography: {
     fontSize: 15,
@@ -19,7 +19,6 @@ export const THEME = createMuiTheme({
     fontFamily: "Poppins",
     h5: {
       fontWeight: 600,
-     
     },
     button: {
       textTransform: "none",
@@ -29,24 +28,36 @@ export const THEME = createMuiTheme({
 
 export const useStyles = makeStyles((theme) => ({
   root: {
+    backgroundColor: mainSlide,
+  },
+  transparentAppbar: {
     flexGrow: 1,
     boxShadow: "none",
-    margin: 0
+    margin: 0,
+    backgroundColor: transparentAppBar ,
+    height: 63,
+    transition: "all .5s ease-out",
+  },
+  solidAppbar: {
+    flexGrow: 1,
+    boxShadow: "none",
+    margin: 0,
+    backgroundColor: solidAppBar,
+    height: 63,
+    transition: "all .5s ease-out",
   },
   menuButton: {
     marginRight: theme.spacing(2),
   },
   toolbar: {
-    backgroundColor: sliderBackground,
     fontSize: "16px",
     display: "flex",
-    justifyContent: "space-around"
+    justifyContent: "space-around",
   },
   toolbarSub: {
-    backgroundColor: "#F3FDFE",
     fontSize: "16px",
     display: "flex",
-    justifyContent: "space-around"
+    justifyContent: "space-around",
   },
   list: {
     fontSize: "16px",
@@ -55,10 +66,10 @@ export const useStyles = makeStyles((theme) => ({
     fontFamily: "Poppins', sans-serif",
     whiteSpace: "nowrap",
   },
-  listItem:{
+  listItem: {
     "&:hover": {
-      color: "black",
-      cursor: "pointer"
+      color: blackColor,
+      cursor: "pointer",
     },
   },
   logo: {
@@ -66,4 +77,12 @@ export const useStyles = makeStyles((theme) => ({
       fontSize: "30px",
     },
   },
+  link:{
+    marginTop: "5px",
+    textDecoration: "none",
+    color: greyColor,
+  },
+  active:{
+    color: blackColor
+  }
 }));

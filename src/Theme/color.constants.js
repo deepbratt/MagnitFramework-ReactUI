@@ -1,5 +1,10 @@
 export const Colors = {
-  mainSlide: "#F3FDFE",
+  solidAppBar: "#d5f9fc",
+  blackColor: "black",
+  greyColor: "grey",
+  whiteColor: "white",
+  transparentAppBar: "rgb(243, 253, 254, 0.8)",
+  mainSlide: "#f3fdfe",
   midSlide: "#fdfdc4",
   lastSlide: "#fff0f0",
   tickColor: "white",
@@ -54,5 +59,9 @@ export const Colors = {
   pictonBlue: "#4CBFFF",
   heliotrope: "#DB4CFF",
   blueGreen: "#2EBEB5",
-  hanBlue: "#486FD5"
+  hanBlue: "#486FD5",
+  mustardColor: "#F5A12C",
+  skyBlueColor: "#60D2D9",
+  darkBlueColor: "#376AED",
+  rosePinkColor: "#EF6E78",
 };

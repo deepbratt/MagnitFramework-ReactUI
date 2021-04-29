@@ -1,9 +1,9 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
-import {Colors} from "../../../../Theme/color.constants"
+import { Colors } from "../../../../Theme/color.constants";
 
-const {servicesDev,servicesApp,servicesWeb,servicesDigital} = Colors
+const { servicesDev, servicesApp, servicesWeb, servicesDigital } = Colors;
 const breakpoints = createBreakpoints({});
 
 export const THEME = createMuiTheme({
@@ -19,7 +19,7 @@ export const THEME = createMuiTheme({
         [breakpoints.only("sm")]: {
           fontSize: "28px",
           marginTop: "40px",
-          textAlign: "center"
+          textAlign: "center",
         },
         [breakpoints.down("xs")]: {
           fontSize: "20px",
@@ -58,7 +58,7 @@ export const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   card: {
-    width: "20%",
+    width: "25%",
     height: "360px",
     display: "flex",
     flexDirection: "column",
@@ -66,77 +66,80 @@ export const useStyles = makeStyles((theme) => ({
     transition: "all .25s linear",
     boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)",
     "&:hover": { boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)" },
-    margin: "20px",
+
     cursor: "pointer",
     [breakpoints.only("md")]: {
       width: "30%",
+      margin: "20px",
     },
     [breakpoints.only("sm")]: {
       width: "60%",
+      margin: "20px",
     },
     [breakpoints.down("xs")]: {
       width: "70%",
+      margin: "20px",
     },
   },
-  appSub:{
-    backgroundColor: servicesApp, 
+  appSub: {
+    backgroundColor: servicesApp,
     height: "120px",
-     width:"120px", 
-     display: "flex",
-      justifyContent: "center",
-       alignItems: "center"
+    width: "120px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
-  app:{
+  app: {
     height: "120px",
-     width:"120px", 
-     display: "flex",
-      justifyContent: "center",
-       alignItems: "center"
+    width: "120px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
-  devSub:{
-    backgroundColor: servicesDev, 
+  devSub: {
+    backgroundColor: servicesDev,
     height: "120px",
-     width:"120px", 
-     display: "flex",
-      justifyContent: "center",
-       alignItems: "center"
+    width: "120px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
-  dev:{
+  dev: {
     height: "120px",
-     width:"120px", 
-     display: "flex",
-      justifyContent: "center",
-       alignItems: "center"
+    width: "120px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
-  webSub:{
-    backgroundColor: servicesWeb, 
+  webSub: {
+    backgroundColor: servicesWeb,
     height: "120px",
-     width:"120px", 
-     display: "flex",
-      justifyContent: "center",
-       alignItems: "center"
+    width: "120px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
-  web:{
+  web: {
     height: "120px",
-     width:"120px", 
-     display: "flex",
-      justifyContent: "center",
-       alignItems: "center"
+    width: "120px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
-  digitalSub:{
-    backgroundColor: servicesDigital, 
+  digitalSub: {
+    backgroundColor: servicesDigital,
     height: "120px",
-     width:"120px", 
-     display: "flex",
-      justifyContent: "center",
-       alignItems: "center"
+    width: "120px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
-  digital:{
+  digital: {
     height: "120px",
-     width:"120px", 
-     display: "flex",
-      justifyContent: "center",
-       alignItems: "center"
+    width: "120px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
   devSec: {
     height: "120px",
@@ -157,7 +160,6 @@ export const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   digitalSec: {
- 
     height: "120px",
     display: "flex",
     alignItems: "center",

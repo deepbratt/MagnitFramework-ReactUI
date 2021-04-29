@@ -5,7 +5,8 @@ import { connect } from "react-redux";
 const AuthRoute = ({ component: Component, isLoggedIn, path, ...rest }) => {
   console.log(isLoggedIn);
   return (
-    <Route exact path={path}
+    <Route
+      {...rest}
       render={(props) =>
         isLoggedIn ? <Component {...props} /> : <h1>You need to login first</h1>
       }

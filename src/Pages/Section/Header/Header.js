@@ -6,67 +6,92 @@ import {
   List,
   ListItemText,
   Toolbar,
+  AppBar,
   Button,
+  Paper,
 } from "@material-ui/core";
+import { NavLink } from "react-router-dom";
+import Scrolltrigger from "../../../Theme/Scrolltrigger";
 import { MuiThemeProvider } from "@material-ui/core/styles";
-import Sizes from "../../../Theme/theme.constants"
 import SideBar from "./Sidebar/SideBar";
-import Breakpoints from "../../../Theme/theme.breakpoints"
+import Breakpoints from "../../../Theme/theme.breakpoints";
+import { pageRoutes } from "../../../Components/Path";
+import { Hidden } from "@material-ui/core";
 
 const Header = (props) => {
-  const { value } = props;
+  const routes = Object.values(pageRoutes);
   const classes = useStyles();
-  const {toolbar,toolbarSub,logo,list,listItem,button} = classes
-  const {isMatch} = Sizes()
-  
+  const { trigger } = Scrolltrigger();
+  const {
+    toolbar,
+    logo,
+    list,
+    listItem,
+    button,
+    root,
+    transparentAppbar,
+    solidAppbar,
+    link,
+    active,
+  } = classes;
 
   return (
     <>
-      <Toolbar
-        className={value === "LIGHT" ? toolbar : toolbarSub}
-        variant="dense"
-      >
-        <MuiThemeProvider theme={THEME}>
-          <Typography className={logo} variant="h5" color="inherit">
-            Logo Here
-          </Typography>
-        </MuiThemeProvider>
-        {/* Header Menu */}
-        {isMatch ? (
-          <SideBar />
-        ) : (
-          <List className={list}>
-            {[
-              "Company",
-              "Services",
-              "Solutions",
-              "Case Studies",
-              "Careers",
-            ].map((text, index) => (
-              <MuiThemeProvider key={index} theme={THEME}>
+      <Paper className={root}>
+        <AppBar
+          color="default"
+          className={trigger === false ? transparentAppbar : solidAppbar}
+          position="fixed"
+        >
+          <Toolbar className={toolbar} variant="dense">
+            <MuiThemeProvider theme={THEME}>
+              <Typography className={logo} variant="h5" color="inherit">
+                Logo Here
+              </Typography>
+            </MuiThemeProvider>
+            {/* Header Menu */}
+            <Hidden mdUp>
+              <SideBar />
+            </Hidden>
+            <Hidden smDown>
+              <List className={list}>
+                {routes.map(({ path, sidebarName, ...prop }, index) => {
+                  return (
+                    <MuiThemeProvider key={index} theme={THEME}>
+                      <NavLink
+                        activeClassName={active}
+                        className={link}
+                        to={path}
+                        key={`route-${index}}`}
+                      >
+                        <ListItem>
+                          <ListItemText
+                            className={listItem}
+                            primary={sidebarName}
+                          />
+                        </ListItem>
+                      </NavLink>
+                    </MuiThemeProvider>
+                  );
+                })}
                 <ListItem>
-                  <ListItemText className={listItem} primary={text} />
+                  <Button
+                    style={{ textTransform: "none" }}
+                    className={button}
+                    variant="contained"
+                    size={Breakpoints()}
+                    color="secondary"
+                  >
+                    Contact Us
+                  </Button>
                 </ListItem>
-              </MuiThemeProvider>
-            ))}
-            <ListItem>
-              <Button
-                style={{ textTransform: "none" }}
-                className={button}
-                variant="contained"
-                size={Breakpoints()}
-                color="secondary"
-              >
-                Contact Us
-              </Button>
-            </ListItem>
-          </List>
-        )}
-      </Toolbar>
+              </List>
+            </Hidden>
+          </Toolbar>
+        </AppBar>
+      </Paper>
     </>
   );
 };
 
-
-
-export default Header
+export default Header;
