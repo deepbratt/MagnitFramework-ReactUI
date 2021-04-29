@@ -2,7 +2,7 @@ import React from "react";
 import { Route } from "react-router";
 import { connect } from "react-redux";
 
-const AuthRoute = ({ component: Component, isLoggedIn, path, ...rest }) => {
+const AuthRoute = ({ component: Component, isLoggedIn, ...rest }) => {
   console.log(isLoggedIn);
   return (
     <Route
