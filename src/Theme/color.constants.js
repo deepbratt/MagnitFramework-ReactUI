@@ -3,7 +3,7 @@ export const Colors = {
   blackColor: "black",
   greyColor: "grey",
   whiteColor: "white",
-  transparentAppBar: "rgb(243, 253, 254, 0.8)",
+  transparentAppBar: "rgb(243, 253, 254, 0.7)",
   mainSlide: "#f3fdfe",
   midSlide: "#fdfdc4",
   lastSlide: "#fff0f0",
