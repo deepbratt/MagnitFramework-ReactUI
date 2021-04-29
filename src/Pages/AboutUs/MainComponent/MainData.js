@@ -5,6 +5,14 @@ import Ellipse3 from "../../../assets/Testimonials/Ellipse 3.png"
 import Secretary from "../../../assets/Testimonials/secretary.png"
 import Sales from "../../../assets/Testimonials/sales.png"
 import Edrece from "../../../assets/Testimonials/edrece.png"
+import Fatma from "../../../assets/Infrastructure/fatmahatam.png"
+import Cyber from "../../../assets/Infrastructure/cybersecurity.png"
+import Kazantceva from "../../../assets/Infrastructure/kazantceva.png"
+import Office from "../../../assets/Infrastructure/office.png"
+import Reames from "../../../assets/Infrastructure/reames.png"
+import Apartment from "../../../assets/Infrastructure/apartment.png"
+import City from "../../../assets/Infrastructure/city.png"
+import Building from "../../../assets/Infrastructure/buildings.png"
 
 
 const MainData = {
@@ -57,4 +65,24 @@ const MidSection = {
   paragraph: "Working with Brainium has been nothing short of excellent. The response time, commitment and delivery far exceeded my expectations."
 }
 
-export { MainData, titles, subTitles, Testimonials , MidSection};
+
+// Infrastructure
+
+const Infrastructure = {
+  heading: "Infrastructure",
+  subTitleOne: "Development Center",
+  subTitleTwo: "In IT Hub",
+  subTitleThree: "Leased Line",
+  subTitleFour: "Our Workplace",
+  paragraphOne: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  Img1: Fatma,
+  Img2: Cyber,
+  Img3: Kazantceva,
+  Img4: Office,
+  Img5: Reames,
+  Img6: Apartment,
+  Img7: City,
+  Img8: Building
+}
+
+export { MainData, titles, subTitles, Testimonials , MidSection,Infrastructure};

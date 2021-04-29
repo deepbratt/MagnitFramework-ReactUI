@@ -10,6 +10,11 @@ export const useStyles = makeStyles((theme) => ({
     padding: "0px",
     overflow: "hidden",
   },
+  card: {
+    [breakpoints.up("lg")]: {
+      margin: "0px 4%",
+    },
+  },
   cardSec: {
     padding: "0px",
     margin: "0px",
@@ -44,7 +49,7 @@ export const useStyles = makeStyles((theme) => ({
       zIndex: -1,
       left: 0,
       borderRadius: "10px",
-      width: "620px",
+      width: "560px",
       height: "5rem",
       display: "block",
       backgroundColor: mustardColor,
@@ -85,7 +90,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   hero: {
     [breakpoints.up("lg")]: {
-      width: "600px",
+      width: "550px",
     },
     [breakpoints.only("md")]: {
       width: "480px",

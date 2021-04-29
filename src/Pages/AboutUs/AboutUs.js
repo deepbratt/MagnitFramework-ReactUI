@@ -4,23 +4,26 @@ import Main from "./MainComponent/AboutMainSection";
 import AboutUsNumberContext from "./NumberContext/AboutUsNumberContext";
 import Testimonial from "./Testimonials/Testimonial";
 import MissionContext from "./Mission&Vision/MissionContext"
-// import US from "../../Pages/PartnerWithUsContext/Maincontainer"
-
+// import WhyUsContainer from "./WhyUsContainer"
+import Infrastructure from "./InfrastructureSection/InfrastructureContainer"
 const AboutUs = () => {
   return (
     <>
       <Grid container>
-        <Grid item md={12} xs={12}>
+        <Grid item lg={12} md={12} xs={12}>
           <Main />
         </Grid>
-        <Grid item md={12} xs={12}>
+        <Grid item lg={12} md={12} xs={12}>
           <AboutUsNumberContext />
         </Grid>
-        <Grid item md={12} xs={12}>
+        <Grid item lg={12} md={12} xs={12}>
           <Testimonial />
         </Grid>
-        <Grid item md={12} xs={12}>
+        <Grid item lg={12} md={12} xs={12}>
           <MissionContext />
+        </Grid>
+        <Grid item lg={12} md={12} xs={12}>
+          <Infrastructure />
         </Grid>
       </Grid>
     </>
