@@ -4,7 +4,7 @@ import Main from "./MainComponent/AboutMainSection";
 import AboutUsNumberContext from "./NumberContext/AboutUsNumberContext";
 import Testimonial from "./Testimonials/Testimonial";
 import MissionContext from "./Mission&Vision/MissionContext"
-// import WhyUsContainer from "./WhyUsContainer"
+import WhyUsContainer from "./WhyUsContainer"
 import Infrastructure from "./InfrastructureSection/InfrastructureContainer"
 const AboutUs = () => {
   return (
@@ -21,6 +21,9 @@ const AboutUs = () => {
         </Grid>
         <Grid item lg={12} md={12} xs={12}>
           <MissionContext />
+        </Grid>
+        <Grid item lg={12} md={12} xs={12}>
+          <WhyUsContainer />
         </Grid>
         <Grid item lg={12} md={12} xs={12}>
           <Infrastructure />

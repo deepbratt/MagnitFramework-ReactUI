@@ -58,8 +58,8 @@ export const useStyles = makeStyles((theme) => ({
   Secretary: {
     position: "absolute",
     borderRadius: "100px",
-    right: "10px",
-    bottom: "3px",
+    right: "4px",
+    bottom: "4px",
     opacity: 0.6
   },
 }));
