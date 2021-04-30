@@ -3,6 +3,7 @@ import { useStyles, THEME } from "./sectionStyles";
 import { Typography, Card, CardContent } from "@material-ui/core";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import * as icons from "../../assets/icons/icon.constants";
+import { SecondartData, SecondaryData } from "./SectionData";
 
 const SecondarySection = ({
   qualityColor,
@@ -38,6 +39,20 @@ const SecondarySection = ({
     dataIcon,
     isoIcon,
   } = icons;
+  const {
+    qualityTitle,
+    qualityParagraph,
+    geekyTitle,
+    geekyParagraph,
+    timeTitle,
+    timeParagraph,
+    dataTitle,
+    dataParagraph,
+    isoTitle,
+    isoParagraph,
+    supportTitle,
+    supportParagraph,
+  } = SecondaryData;
   return (
     <>
       <section className={cardSec}>
@@ -58,12 +73,10 @@ const SecondarySection = ({
               <MuiThemeProvider theme={THEME}>
                 <section className={content}>
                   <Typography variant="h5" color="inherit">
-                    Quality
+                    {qualityTitle}
                   </Typography>
                   <Typography paragraph={true} color="inherit">
-                    100% Quality standards and Client satisfaction are what we
-                    assure and ensure when we deliver. We strive to improve our
-                    people and processes continuously.
+                    {qualityParagraph}
                   </Typography>
                 </section>
               </MuiThemeProvider>
@@ -89,12 +102,10 @@ const SecondarySection = ({
               <MuiThemeProvider theme={THEME}>
                 <section className={content}>
                   <Typography variant="h5" color="inherit">
-                    Life-Time Support
+                    {supportTitle}
                   </Typography>
                   <Typography paragraph={true} color="inherit">
-                    We offer Free Life-Time Support post project delivery. This
-                    includes fixing bugs, resolving issues and training on the
-                    system.
+                    {supportParagraph}
                   </Typography>
                 </section>
               </MuiThemeProvider>
@@ -120,12 +131,10 @@ const SecondarySection = ({
               <MuiThemeProvider theme={THEME}>
                 <section className={content}>
                   <Typography variant="h5" color="inherit">
-                    Geeky
+                    {geekyTitle}
                   </Typography>
                   <Typography paragraph={true} color="inherit">
-                    Our talent pool is full of geeks. We can assure that your
-                    project is not with just highly skilled resources, but tech
-                    lovers who love to innovate.
+                    {geekyParagraph}
                   </Typography>
                 </section>
               </MuiThemeProvider>
@@ -151,12 +160,10 @@ const SecondarySection = ({
               <MuiThemeProvider theme={THEME}>
                 <section className={content}>
                   <Typography variant="h5" color="inherit">
-                    Always On Time
+                    {timeTitle}
                   </Typography>
                   <Typography paragraph={true} color="inherit">
-                    On-Time Delivery is one of our key focus areas. We always
-                    follow a proactive approach to identify and mitigate issues
-                    which can impede the process.
+                    {timeParagraph}
                   </Typography>
                 </section>
               </MuiThemeProvider>
@@ -182,12 +189,10 @@ const SecondarySection = ({
               <MuiThemeProvider theme={THEME}>
                 <section className={content}>
                   <Typography variant="h5" color="inherit">
-                    Data Security
+                    {dataTitle}
                   </Typography>
                   <Typography paragraph={true} color="inherit">
-                    Protecting confidential information of our clients is our
-                    top priority. We keep updated with latest data security best
-                    practices, compliance, and regulations.
+                    {dataParagraph}
                   </Typography>
                 </section>
               </MuiThemeProvider>
@@ -213,12 +218,10 @@ const SecondarySection = ({
               <MuiThemeProvider theme={THEME}>
                 <section className={content}>
                   <Typography variant="h5" color="inherit">
-                    ISO Certified
+                    {isoTitle}
                   </Typography>
                   <Typography paragraph={true} color="inherit">
-                    We are an ISO 9001:2015 certified company. We have a sturdy
-                    Quality Management System and we follow a process oriented
-                    approach to deliver.
+                    {isoParagraph}
                   </Typography>
                 </section>
               </MuiThemeProvider>
