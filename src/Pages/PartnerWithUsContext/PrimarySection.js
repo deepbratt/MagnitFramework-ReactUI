@@ -4,24 +4,32 @@ import { Typography, Card, CardContent } from "@material-ui/core";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import * as icons from "../../assets/icons/icon.constants";
 
-const PrimarySection = () => {
+const PrimarySection = ({
+  appColor,
+  reliableColor,
+  innovativeColor,
+  agileColor,
+  transparencyColor,
+  moneyColor,
+  appFill,
+  reliableFill,
+  innovativeFill,
+  agileFill,
+  moneyFill,
+  transparencyFill,
+}) => {
   const classes = useStyles();
   const {
     cardSec,
     card,
     devSec,
-    app,
+    Icons,
     devSub,
     content,
-    reliable,
     reliableSub,
     innovativeSub,
-    innovative,
-    agile,
     agileSub,
-    transparency,
     transparencySub,
-    money,
     moneySub,
   } = classes;
   const {
@@ -38,8 +46,13 @@ const PrimarySection = () => {
         <Card className={card}>
           <CardContent>
             <section className={devSec}>
-              <section className={devSub}>
-                <img alt="icon" className={app} src={appIcon} />
+              <section style={{ backgroundColor: appColor }} className={devSub}>
+                <img
+                  style={{ filter: appFill }}
+                  alt="icon"
+                  className={Icons}
+                  src={appIcon}
+                />
               </section>
               <MuiThemeProvider theme={THEME}>
                 <section className={content}>
@@ -61,8 +74,16 @@ const PrimarySection = () => {
         <Card className={card}>
           <CardContent>
             <section className={devSec}>
-              <section className={reliableSub}>
-                <img alt="icon" className={reliable} src={reliableIcon} />
+              <section
+                style={{ backgroundColor: reliableColor }}
+                className={reliableSub}
+              >
+                <img
+                  alt="icon"
+                  style={{ filter: reliableFill }}
+                  className={Icons}
+                  src={reliableIcon}
+                />
               </section>
               <MuiThemeProvider theme={THEME}>
                 <section className={content}>
@@ -84,8 +105,16 @@ const PrimarySection = () => {
         <Card className={card}>
           <CardContent>
             <section className={devSec}>
-              <section className={innovativeSub}>
-                <img alt="icon" className={innovative} src={innovativeIcon} />
+              <section
+                style={{ backgroundColor: innovativeColor }}
+                className={innovativeSub}
+              >
+                <img
+                  alt="icon"
+                  style={{ filter: innovativeFill }}
+                  className={Icons}
+                  src={innovativeIcon}
+                />
               </section>
               <MuiThemeProvider theme={THEME}>
                 <section className={content}>
@@ -107,8 +136,16 @@ const PrimarySection = () => {
         <Card className={card}>
           <CardContent>
             <section className={devSec}>
-              <section className={agileSub}>
-                <img alt="icon" className={agile} src={agileIcon} />
+              <section
+                style={{ backgroundColor: agileColor }}
+                className={agileSub}
+              >
+                <img
+                  alt="icon"
+                  style={{ filter: agileFill }}
+                  className={Icons}
+                  src={agileIcon}
+                />
               </section>
               <MuiThemeProvider theme={THEME}>
                 <section className={content}>
@@ -130,10 +167,14 @@ const PrimarySection = () => {
         <Card className={card}>
           <CardContent>
             <section className={devSec}>
-              <section className={transparencySub}>
+              <section
+                style={{ backgroundColor: transparencyColor }}
+                className={transparencySub}
+              >
                 <img
                   alt="icon"
-                  className={transparency}
+                  style={{ filter: transparencyFill }}
+                  className={Icons}
                   src={transparencyIcon}
                 />
               </section>
@@ -157,8 +198,16 @@ const PrimarySection = () => {
         <Card className={card}>
           <CardContent>
             <section className={devSec}>
-              <section className={moneySub}>
-                <img alt="icon" className={money} src={moneyIcon} />
+              <section
+                style={{ backgroundColor: moneyColor }}
+                className={moneySub}
+              >
+                <img
+                  alt="icon"
+                  style={{ filter: moneyFill }}
+                  className={Icons}
+                  src={moneyIcon}
+                />
               </section>
               <MuiThemeProvider theme={THEME}>
                 <section className={content}>
