@@ -1,6 +1,7 @@
 import { Carousel } from "react-responsive-carousel";
 import ReviewCard from "./ReviewCard";
 import Avatar7 from "../../assets/services/Avatar7.png";
+import { Paper } from "@material-ui/core";
 
 const card = {
   title: "Web Design",
@@ -21,16 +22,26 @@ const ReviewSlider = ({ slides }) => {
     <Carousel
       autoPlay
       showStatus={false}
-      interval={2500}
+      interval={200500}
       showArrows={false}
       infiniteLoop={true}
       transitionTime={500}
     >
       {slides.map((slide, i) => {
         return (
-          <div key={i} elevation={0}>
+          <Paper
+            key={i}
+            elevation={0}
+            style={{
+              margin: 0,
+              padding: 0,
+              marginTop: "50px",
+              display: "flex",
+              backgroundColor: "transparent"
+            }}
+          >
             {slide}
-          </div>
+          </Paper>
         );
       })}
     </Carousel>

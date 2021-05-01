@@ -31,6 +31,7 @@ import {
   TrainingAndCertificationSectionTitle,
   WhatDoClientSaySectionTitle,
 } from "./constants";
+import ReviewSlider from "../../Components/ReviewSlider";
 
 const images = [Image1, Image2, Image3, Image4, Image5];
 
@@ -121,7 +122,7 @@ const Home = (props) => {
         startQuote={startQuote}
         endQuote={endQuote}
       >
-        <Slide slides={cardArr} />
+        <ReviewSlider slides={cardArr} />
       </Section>
       {/* TRAINING AND CERTIFICATION */}
       <Section

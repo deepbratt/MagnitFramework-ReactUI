@@ -65,9 +65,21 @@ const Services = () => {
       <Section title={ServicesSectionTitle}>
         <PointList data={servicesData} />
       </Section>
+      <img
+        style={{ left: "-5%", top: "8%", opacity: 0.3, width: "700px" }}
+        src={StarFishPattern}
+        alt=""
+        srcset=""
+      />
       <Section title={HiringSectionTitle}>
         <OptionsTab />
       </Section>
+      <img
+        style={{ right: "0%", top: "25%", opacity: 0.3, width: "700px" }}
+        src={StarFishPattern}
+        alt=""
+        srcset=""
+      />
       <Section title={WhyHireSectionTitle}>
         <PointList data={hireUsData} horizontal={true} />
       </Section>
