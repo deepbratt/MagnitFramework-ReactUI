@@ -1,6 +1,5 @@
 import createTheme from "./theme";
 import createPalette from "@material-ui/core/styles/createPalette";
-import { grey } from "@material-ui/core/colors";
 
 export default createTheme({
   // Styles for Light Theme
@@ -8,7 +7,7 @@ export default createTheme({
     type: "light",
     primary: {
       main: "#1DBF73",
-      contrastText: grey,
+      contrastText: "#fff",
     },
     secondary: {
       main: "#1dbf73",
@@ -30,5 +29,9 @@ export default createTheme({
     typography: {
       fontFamily: ["Poppins', sans-serif"].join(","),
     },
+    text: {
+      primary: "#000000",
+      secondary: "#000000"
+    }
   }),
 });

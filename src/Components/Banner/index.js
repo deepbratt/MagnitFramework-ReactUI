@@ -1,18 +1,29 @@
-import { Typography } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import PropTypes from "prop-types";
 import BannerStyles from "./styles";
+import StarFishPinkPattern from "../../assets/patterns/starfish-pink.png";
 
-const Banner = ({ backColor, image, backGroundPattern, text, subtext }) => {
-  const { root, title } = BannerStyles();
+const Banner = ({ backColor, image, children, backgroundPattern }) => {
+  const { root, imageWrapper, content, patternPosition } = BannerStyles();
   return (
-    <div className={root} style={{ backgroundColor: backColor }}>
-      <img src={image} alt="" />
-      <img src={backGroundPattern} alt="" />
-      <Typography className={title} variant="h2">
-        {text}
-      </Typography>
-      <Typography variant="subtitle1">{subtext}</Typography>
-    </div>
+    <>
+      <Grid className={root} container>
+        <Grid item sm={12} md={7}>
+          <div className={content}>{children}</div>
+        </Grid>
+        <Grid item sm={12} md={5}>
+          <img
+            className={patternPosition}
+            src={StarFishPinkPattern}
+            alt=""
+            srcset=""
+          />
+          <div className={imageWrapper}>
+            <img src={image} alt="" />
+          </div>
+        </Grid>
+      </Grid>
+    </>
   );
 };
 
@@ -22,8 +33,7 @@ Banner.defaultProps = {
 
 Banner.propTypes = {
   backColor: PropTypes.string,
-  text: PropTypes.string,
-  subtext: PropTypes.string,
+  children: PropTypes.element,
 };
 
 export default Banner;

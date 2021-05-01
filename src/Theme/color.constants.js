@@ -87,6 +87,7 @@ export const Colors = {
   heliotrope: "#DB4CFF",
   blueGreen: "#2EBEB5",
   hanBlue: "#486FD5",
+  prussianBlue: "#0B3158",
   mustardColor: "#F5A12C",
   skyBlueColor: "#60D2D9",
   darkBlueColor: "#376AED",
