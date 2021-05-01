@@ -5,13 +5,12 @@ import Rating from "@material-ui/lab/Rating";
 import { Avatar, Grid } from "@material-ui/core";
 import ReviewSliderStyles from "./style";
 
-
 const ReviewCard = ({ cardData }) => {
   const { text, authName, authImg } = cardData;
-  const { root, avatar, content, large } = ReviewSliderStyles();
+  const { grid, root, avatar, content, large } = ReviewSliderStyles();
   return (
-    <Grid style={{margin: "80px 0"}}container justify="center" alignContent="center">
-      <Grid item xs={12} lg={6}>
+    <Grid className={grid} container justify="center" alignContent="center">
+      <Grid item sm={12} lg={6}>
         <div className={avatar}>
           <div>
             <Avatar alt="Remy Sharp" src={authImg} className={large} />
