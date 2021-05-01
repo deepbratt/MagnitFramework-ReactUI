@@ -13,6 +13,12 @@ export default function createTheme(options) {
           },
         },
       },
+      // MuiTab: {
+      //   selected: {
+      //     backgroundColor: "#1DBF73",
+      //     border: "none",
+      //   },
+      // },
       MuiButton: {
         contained: {
           boxShadow: "0px 0px 0px rgba(0, 0, 0, 0);",
@@ -58,6 +64,10 @@ export default function createTheme(options) {
     },
     typography: {
       fontFamily: "'Poppins', 'Arial', sans-serif",
+      h1: {
+        fontSize: "3rem",
+        fontWeight: 600,
+      },
       h2: {
         fontSize: "2.1875rem",
         fontWeight: 600,
