@@ -4,7 +4,7 @@ import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 
 import {Colors} from "../../Theme/color.constants"
 
-const { sliderBackground , tickColor} = Colors;
+const {tickColor} = Colors;
 
 const breakpoints = createBreakpoints({});
 
@@ -161,21 +161,18 @@ export const useStyles = makeStyles((theme) => ({
   slide: {
     [breakpoints.up("lg")]: {
       "& .carousel .slide img": {
-        width: "100% !important",
         maxHeight: "600px",
         width: "auto",
       },
     },
     [breakpoints.down("md")]: {
       "& .carousel .slide img": {
-        width: "100% !important",
         maxHeight: "400px",
         width: "auto",
       },
     },
     [breakpoints.down("sm")]: {
       "& .carousel .slide img": {
-        width: "100% !important",
         maxHeight: "300px",
         width: "auto",
       },

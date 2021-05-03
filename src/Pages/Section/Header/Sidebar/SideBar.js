@@ -4,7 +4,6 @@ import {
   ListItem,
   List,
   ListItemText,
-  Typography,
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
@@ -35,7 +34,7 @@ const SideBar = () => {
           <CloseIcon className={closeIcon} onClick={() => {setOpen()}} />
         </div>
        <section className={logo}>
-       <img src={Logo} width="120px" />
+       <img alt="logo" src={Logo} width="120px" />
        </section>
       
         <List style={{ marginTop: "30px" }}>

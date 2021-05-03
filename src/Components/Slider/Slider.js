@@ -1,6 +1,6 @@
 import React from "react";
 import { useStyles, heading } from "./sliderStyles";
-import { Typography, ListItem, Button, Paper } from "@material-ui/core";
+import { Typography, ListItem, Button} from "@material-ui/core";
 import CheckIcon from "@material-ui/icons/Check";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import { hero } from "../../Components/Hero/Images";
@@ -12,7 +12,6 @@ const Slider = (props) => {
   const { headingLineOne, headingLineTwo, headingLineLast, buttonText } = Data;
   const classes = useStyles();
   const {
-    root,
     headingSec,
     listSec,
     list,

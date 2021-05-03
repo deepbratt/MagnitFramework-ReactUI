@@ -84,11 +84,7 @@ export const useStyles = makeStyles((theme) => ({
       cursor: "pointer",
     },
   },
-  logo: {
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "30px",
-    },
-  },
+
   link: {
     marginTop: "5px",
     textDecoration: "none",

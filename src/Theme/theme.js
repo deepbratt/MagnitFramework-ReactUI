@@ -1,6 +1,4 @@
 import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
-import { ThemeProvider } from "@material-ui/styles";
-
 // Object of our themes
 export default function createTheme(options) {
   return createMuiTheme({
