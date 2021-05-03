@@ -100,6 +100,7 @@ export const useStyles = makeStyles((theme) => ({
   logo: {
     [theme.breakpoints.up("lg")]: {
       width: "150px",
+      marginRight: "15px"
     },
     [theme.breakpoints.down("md")]: {
       width: "110px",
