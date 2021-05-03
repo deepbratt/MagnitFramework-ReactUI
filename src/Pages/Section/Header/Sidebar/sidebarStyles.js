@@ -63,7 +63,7 @@ export const useStyles = makeStyles((theme) => ({
   link: {
     marginTop: "5px",
     textDecoration: "none",
-    color: blackColor,
+    color: "grey",
   },
   logo: {
     display: "flex",
