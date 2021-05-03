@@ -18,6 +18,38 @@ const ServicesSectionStyles = makeStyles((theme) => ({
       position: "absolute",
     },
   },
+  leftPattern: {
+    left: "-5%",
+    top: "8%",
+    opacity: 0.3,
+    width: "700px",
+    [theme.breakpoints.down("md")]: {
+      width: "500px",
+      left: "2%",
+      top: "8%",
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: "300px",
+      left: "0%",
+      top: "10%",
+    },
+  },
+  rightPattern: {
+    right: "0%",
+    top: "25%",
+    opacity: 0.3,
+    width: "700px",
+    [theme.breakpoints.down("md")]: {
+      width: "500px",
+      right: "0%",
+    top: "25%",
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: "300px",
+      right: "0%",
+      top: "25%",
+    },
+  },
   avatar1: {
     position: "absolute",
     width: "130px",
@@ -189,7 +221,7 @@ const ServicesSectionStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       width: "30px",
       right: "40%",
-    top: "0%",
+      top: "0%",
     },
   },
 }));

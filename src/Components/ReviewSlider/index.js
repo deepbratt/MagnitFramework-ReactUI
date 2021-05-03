@@ -2,12 +2,12 @@ import { Carousel } from "react-responsive-carousel";
 import ReviewCard from "./ReviewCard";
 import Avatar7 from "../../assets/services/Avatar7.png";
 import { Paper } from "@material-ui/core";
-
+import { reviewSliderText } from "../../Utils/Constants/Language";
+const { title, text, author } = reviewSliderText;
 const card = {
-  title: "Web Design",
-  text: `This is the third project I have done with it the company, with many more to come in the and years ahead. Thank you for all you did.” \n
-   This is the third project I have done with it the company, with many more to come in the and years ahead. Thank you for all you did.”`,
-  authName: "Aaron Doe",
+  title: title,
+  text: text,
+  authName: author,
   authImg: Avatar7,
 };
 
@@ -37,7 +37,7 @@ const ReviewSlider = ({ slides }) => {
               padding: 0,
               marginTop: "50px",
               display: "flex",
-              backgroundColor: "transparent"
+              backgroundColor: "transparent",
             }}
           >
             {slide}
