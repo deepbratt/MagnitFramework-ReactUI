@@ -1,18 +1,18 @@
-import { image4, ellipse, ellipse2 } from "../../../Components/Hero/Images";
-import Ellipse1 from "../../../assets/Testimonials/Ellipse 1.png"
-import Ellipse2 from "../../../assets/Testimonials/Ellipse 2.png"
-import Ellipse3 from "../../../assets/Testimonials/Ellipse 3.png"
-import Secretary from "../../../assets/Testimonials/secretary.png"
-import Sales from "../../../assets/Testimonials/sales.png"
-import Edrece from "../../../assets/Testimonials/edrece.png"
-import Fatma from "../../../assets/Infrastructure/fatmahatam.png"
-import Cyber from "../../../assets/Infrastructure/cybersecurity.png"
-import Kazantceva from "../../../assets/Infrastructure/kazantceva.png"
-import Office from "../../../assets/Infrastructure/office.png"
-import Reames from "../../../assets/Infrastructure/reames.png"
-import Apartment from "../../../assets/Infrastructure/apartment.png"
-import City from "../../../assets/Infrastructure/city.png"
-import Building from "../../../assets/Infrastructure/buildings.png"
+import { image4, ellipse, ellipse2 } from "../Hero/Images";
+import Ellipse1 from "../../assets/Testimonials/Ellipse 1.png"
+import Ellipse2 from "../../assets/Testimonials/Ellipse 2.png"
+import Ellipse3 from "../../assets/Testimonials/Ellipse 3.png"
+import Secretary from "../../assets/Testimonials/secretary.png"
+import Sales from "../../assets/Testimonials/sales.png"
+import Edrece from "../../assets/Testimonials/edrece.png"
+import Fatma from "../../assets/Infrastructure/fatmahatam.png"
+import Cyber from "../../assets/Infrastructure/cybersecurity.png"
+import Kazantceva from "../../assets/Infrastructure/kazantceva.png"
+import Office from "../../assets/Infrastructure/office.png"
+import Reames from "../../assets/Infrastructure/reames.png"
+import Apartment from "../../assets/Infrastructure/apartment.png"
+import City from "../../assets/Infrastructure/city.png"
+import Building from "../../assets/Infrastructure/buildings.png"
 
 
 const MainData = {

@@ -6,6 +6,9 @@ const { mustardColor, skyBlueColor, whiteColor } = Colors;
 const breakpoints = createBreakpoints({});
 
 export const missionStyles = makeStyles((theme) => ({
+  grid:{
+   overflow: "hidden"
+  },
   card: {
     backgroundColor: skyBlueColor,
     width: "30%",

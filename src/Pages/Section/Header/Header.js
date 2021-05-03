@@ -15,6 +15,7 @@ import SideBar from "./Sidebar/SideBar";
 import Breakpoints from "../../../Theme/theme.breakpoints";
 import { pageRoutes } from "../../../Components/Path";
 import { Hidden } from "@material-ui/core";
+import {Logo} from "../../../Components/Hero/Images"
 
 
 const Header = (props) => {
@@ -36,11 +37,9 @@ const Header = (props) => {
     <>
 
           <Toolbar  className={!trigger ? appbar : appbarsolid} >
-            <MuiThemeProvider theme={THEME}>
-              <Typography className={logo} variant="h5" color="inherit">
-                Logo Here
-              </Typography>
-            </MuiThemeProvider>
+            <section>
+              <img className={logo} alt="logo" src={Logo}/>
+            </section>
             {/* Header Menu */}
             <Hidden mdUp>
               <SideBar />
