@@ -30,21 +30,27 @@ export const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: mainSlide,
   },
-  transparentAppbar: {
-    flexGrow: 1,
+  appbar: {
     boxShadow: "none",
-    margin: 0,
     backgroundColor: transparentAppBar ,
-    height: 63,
-    transition: "all .5s ease-out",
+    width: "100%",
+    fontSize: "16px",
+    display: "flex",
+    justifyContent: "space-around",
+    position: "fixed",
+    zIndex: 2,
+    transition: "all .5s linear"
   },
-  solidAppbar: {
-    flexGrow: 1,
+  appbarsolid: {
     boxShadow: "none",
-    margin: 0,
     backgroundColor: solidAppBar,
-    height: 63,
-    transition: "all .5s ease-out",
+    width: "100%",
+    position: "fixed",
+    zIndex: 2,
+    fontSize: "16px",
+    display: "flex",
+    justifyContent: "space-around",
+    transition: "all .5s linear"
   },
   menuButton: {
     marginRight: theme.spacing(2),

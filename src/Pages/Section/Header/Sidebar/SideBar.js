@@ -8,11 +8,15 @@ import {
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
+import { NavLink } from "react-router-dom";
+import { pageRoutes } from "../../../../Components/Path";
 import { useStyles } from "./sidebarStyles";
+
 
 const SideBar = () => {
   const classes = useStyles();
-  const {root,drawer,drawerHeader,closeIcon,menuIcon} = classes
+  const {root,drawer,drawerHeader,closeIcon,menuIcon, active,link} = classes
+  const routes = Object.values(pageRoutes);
   const [open, setOpen] = useState(false);
 
   return (
@@ -35,13 +39,24 @@ const SideBar = () => {
           Logo Here
         </Typography>
         <List style={{ marginTop: "30px" }}>
-          {["Company", "Services", "Solutions", "Case Studies", "Careers"].map(
-            (text, index) => (
-              <ListItem key = {index} style={{ padding: "15px" }} button >
-                <ListItemText primary={text} />
-              </ListItem>
-            )
-          )}
+             {routes.map(({ path, sidebarName, ...prop }, index) => {
+                  return (
+                      <NavLink
+                        activeClassName={active}
+                        className={link}
+                        to={path}
+                        key={`route-${index}}`}
+                        onClick={() => {setOpen()}}
+                      >
+                        <ListItem>
+                          <ListItemText
+                            key = {index} style={{ padding: "15px" }}
+                            primary={sidebarName}
+                          />
+                        </ListItem>
+                      </NavLink>
+                  );
+                })}
         </List>
       </Drawer>
       <MenuIcon className={menuIcon} onClick={() => {setOpen(!open)}} />

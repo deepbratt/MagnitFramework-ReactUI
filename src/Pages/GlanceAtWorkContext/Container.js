@@ -11,7 +11,7 @@ import {
 import Breakpoints from "../../Theme/theme.breakpoints";
 import * as Images from "../../Components/Hero/Images"
 
-const Container = () => {
+const Container = ({backColor}) => {
   const classes = useStyles();
   const {image1,image2,image3} = Images
   const {
@@ -25,7 +25,7 @@ const Container = () => {
   } = classes;
   return (
     <>
-      <Paper className={root} elevation={0}>
+      <Paper style={{backgroundColor: backColor}} className={root} elevation={0}>
         <section className={serviceHeading}>
           <MuiThemeProvider theme={THEME}>
             <Typography variant="h4" color="inherit">

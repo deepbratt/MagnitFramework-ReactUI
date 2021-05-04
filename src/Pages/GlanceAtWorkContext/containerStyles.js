@@ -4,7 +4,7 @@ import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 import {Colors} from "../../Theme/color.constants"
 
 
-const {glanceSectionBackground, glanceImages} = Colors
+const {glanceImages} = Colors
 const {Img1,Img2,Img3} = glanceImages
 const breakpoints = createBreakpoints({});
 
@@ -55,7 +55,6 @@ export const useStyles = makeStyles((theme) => ({
   root: {
     paddingTop: "25px",
     margin: "0px",
-    backgroundColor: glanceSectionBackground,
     paddingBottom: "40px",
   },
   cardSec: {

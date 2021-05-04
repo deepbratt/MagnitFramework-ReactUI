@@ -3,25 +3,34 @@ import { useStyles, THEME } from "./sectionStyles";
 import { Typography, Card, CardContent } from "@material-ui/core";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import * as icons from "../../assets/icons/icon.constants";
+import { PrimaryData } from "./SectionData";
 
-const PrimarySection = () => {
+const PrimarySection = ({
+  appColor,
+  reliableColor,
+  innovativeColor,
+  agileColor,
+  transparencyColor,
+  moneyColor,
+  appFill,
+  reliableFill,
+  innovativeFill,
+  agileFill,
+  moneyFill,
+  transparencyFill,
+}) => {
   const classes = useStyles();
   const {
     cardSec,
     card,
     devSec,
-    app,
+    Icons,
     devSub,
     content,
-    reliable,
     reliableSub,
     innovativeSub,
-    innovative,
-    agile,
     agileSub,
-    transparency,
     transparencySub,
-    money,
     moneySub,
   } = classes;
   const {
@@ -32,24 +41,41 @@ const PrimarySection = () => {
     transparencyIcon,
     moneyIcon,
   } = icons;
+  const {
+    appTitle,
+    appParagraph,
+    reliableTitle,
+    reliableParagraph,
+    innovativeTitle,
+    innovativeParagraph,
+    agileTitle,
+    agileParagraph,
+    transparencyTitle,
+    transparencyParagraph,
+    moneyTitle,
+    moneyParagraph,
+  } = PrimaryData;
   return (
     <>
       <section className={cardSec}>
         <Card className={card}>
           <CardContent>
             <section className={devSec}>
-              <section className={devSub}>
-                <img alt="icon" className={app} src={appIcon} />
+              <section style={{ backgroundColor: appColor }} className={devSub}>
+                <img
+                  style={{ filter: appFill }}
+                  alt="icon"
+                  className={Icons}
+                  src={appIcon}
+                />
               </section>
               <MuiThemeProvider theme={THEME}>
                 <section className={content}>
                   <Typography variant="h5" color="inherit">
-                    App Development
+                    {appTitle}
                   </Typography>
                   <Typography paragraph={true} color="inherit">
-                    Our Web Technology, Mobile Technology, and Digital Marketing
-                    resources work under the same roof, so you don’t need to
-                    depend on multiple companies.
+                    {appParagraph}
                   </Typography>
                 </section>
               </MuiThemeProvider>
@@ -61,91 +87,111 @@ const PrimarySection = () => {
         <Card className={card}>
           <CardContent>
             <section className={devSec}>
-              <section className={reliableSub}>
-                <img alt="icon" className={reliable} src={reliableIcon} />
-              </section>
-              <MuiThemeProvider theme={THEME}>
-                <section className={content}>
-                  <Typography variant="h5" color="inherit">
-                    Reliable
-                  </Typography>
-                  <Typography paragraph={true} color="inherit">
-                    We have the trust of more than 2,000 businesses globally.
-                    You can rely on us to get your work done the right way at
-                    the right time.
-                  </Typography>
-                </section>
-              </MuiThemeProvider>
-            </section>
-          </CardContent>
-        </Card>
-      </section>
-      <section className={cardSec}>
-        <Card className={card}>
-          <CardContent>
-            <section className={devSec}>
-              <section className={innovativeSub}>
-                <img alt="icon" className={innovative} src={innovativeIcon} />
-              </section>
-              <MuiThemeProvider theme={THEME}>
-                <section className={content}>
-                  <Typography variant="h5" color="inherit">
-                    Innovative
-                  </Typography>
-                  <Typography paragraph={true} color="inherit">
-                    Our focus is not just to deliver, but to innovate, implement
-                    new ideas and technologies and help you succeed in growing
-                    your business.
-                  </Typography>
-                </section>
-              </MuiThemeProvider>
-            </section>
-          </CardContent>
-        </Card>
-      </section>
-      <section className={cardSec}>
-        <Card className={card}>
-          <CardContent>
-            <section className={devSec}>
-              <section className={agileSub}>
-                <img alt="icon" className={agile} src={agileIcon} />
-              </section>
-              <MuiThemeProvider theme={THEME}>
-                <section className={content}>
-                  <Typography variant="h5" color="inherit">
-                    Agile
-                  </Typography>
-                  <Typography paragraph={true} color="inherit">
-                    We believe in the agile approach to delivering your project.
-                    We advocate adaptive planning, evolutionary development, and
-                    continuous improvement.
-                  </Typography>
-                </section>
-              </MuiThemeProvider>
-            </section>
-          </CardContent>
-        </Card>
-      </section>
-      <section className={cardSec}>
-        <Card className={card}>
-          <CardContent>
-            <section className={devSec}>
-              <section className={transparencySub}>
+              <section
+                style={{ backgroundColor: reliableColor }}
+                className={reliableSub}
+              >
                 <img
                   alt="icon"
-                  className={transparency}
+                  style={{ filter: reliableFill }}
+                  className={Icons}
+                  src={reliableIcon}
+                />
+              </section>
+              <MuiThemeProvider theme={THEME}>
+                <section className={content}>
+                  <Typography variant="h5" color="inherit">
+                    {reliableTitle}
+                  </Typography>
+                  <Typography paragraph={true} color="inherit">
+                    {reliableParagraph}
+                  </Typography>
+                </section>
+              </MuiThemeProvider>
+            </section>
+          </CardContent>
+        </Card>
+      </section>
+      <section className={cardSec}>
+        <Card className={card}>
+          <CardContent>
+            <section className={devSec}>
+              <section
+                style={{ backgroundColor: innovativeColor }}
+                className={innovativeSub}
+              >
+                <img
+                  alt="icon"
+                  style={{ filter: innovativeFill }}
+                  className={Icons}
+                  src={innovativeIcon}
+                />
+              </section>
+              <MuiThemeProvider theme={THEME}>
+                <section className={content}>
+                  <Typography variant="h5" color="inherit">
+                    {innovativeTitle}
+                  </Typography>
+                  <Typography paragraph={true} color="inherit">
+                    {innovativeParagraph}
+                  </Typography>
+                </section>
+              </MuiThemeProvider>
+            </section>
+          </CardContent>
+        </Card>
+      </section>
+      <section className={cardSec}>
+        <Card className={card}>
+          <CardContent>
+            <section className={devSec}>
+              <section
+                style={{ backgroundColor: agileColor }}
+                className={agileSub}
+              >
+                <img
+                  alt="icon"
+                  style={{ filter: agileFill }}
+                  className={Icons}
+                  src={agileIcon}
+                />
+              </section>
+              <MuiThemeProvider theme={THEME}>
+                <section className={content}>
+                  <Typography variant="h5" color="inherit">
+                    {agileTitle}
+                  </Typography>
+                  <Typography paragraph={true} color="inherit">
+                    {agileParagraph}
+                  </Typography>
+                </section>
+              </MuiThemeProvider>
+            </section>
+          </CardContent>
+        </Card>
+      </section>
+      <section className={cardSec}>
+        <Card className={card}>
+          <CardContent>
+            <section className={devSec}>
+              <section
+                style={{ backgroundColor: transparencyColor }}
+                className={transparencySub}
+              >
+                <img
+                  alt="icon"
+                  style={{ filter: transparencyFill }}
+                  className={Icons}
                   src={transparencyIcon}
                 />
               </section>
               <MuiThemeProvider theme={THEME}>
                 <section className={content}>
                   <Typography variant="h5" color="inherit">
-                    Transparency
+                    {transparencyTitle}
                   </Typography>
                   <Typography paragraph={true} color="inherit">
-                    We maintain complete transparency in rendering services and
-                    solutions with regular communication, user testing option
-                    for clients, and review meetings.
+                    {transparencyParagraph}
                   </Typography>
                 </section>
               </MuiThemeProvider>
@@ -157,18 +203,24 @@ const PrimarySection = () => {
         <Card className={card}>
           <CardContent>
             <section className={devSec}>
-              <section className={moneySub}>
-                <img alt="icon" className={money} src={moneyIcon} />
+              <section
+                style={{ backgroundColor: moneyColor }}
+                className={moneySub}
+              >
+                <img
+                  alt="icon"
+                  style={{ filter: moneyFill }}
+                  className={Icons}
+                  src={moneyIcon}
+                />
               </section>
               <MuiThemeProvider theme={THEME}>
                 <section className={content}>
                   <Typography variant="h5" color="inherit">
-                    Value For Money
+                    {moneyTitle}
                   </Typography>
                   <Typography paragraph={true} color="inherit">
-                    With an effective cost and benefit analysis, we ensure the
-                    best value for money in terms of the services and solutions
-                    we offer our clients.
+                    {moneyParagraph}
                   </Typography>
                 </section>
               </MuiThemeProvider>

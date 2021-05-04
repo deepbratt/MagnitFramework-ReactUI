@@ -3,7 +3,7 @@ export const Colors = {
   blackColor: "black",
   greyColor: "grey",
   whiteColor: "white",
-  transparentAppBar: "rgb(243, 253, 254, 0.8)",
+  transparentAppBar: "rgb(243, 253, 254, 0.7)",
   mainSlide: "#f3fdfe",
   midSlide: "#fdfdc4",
   lastSlide: "#fff0f0",
@@ -27,6 +27,32 @@ export const Colors = {
     timeIcon: "#FBE9FF",
     dataIcon: "#EEF2FC",
     isoIcon: "#EEFBFC",
+
+    // Filter
+    appFill:
+      "invert(67%) sepia(75%) saturate(700%) hue-rotate(329deg) brightness(101%) contrast(101%)",
+    reliableFill:
+      "invert(76%) sepia(57%) saturate(544%) hue-rotate(340deg) brightness(101%) contrast(101%)",
+    innovativeFill:
+      "invert(78%) sepia(53%) saturate(604%) hue-rotate(105deg) brightness(91%) contrast(87%)",
+    agileFill:
+      "invert(55%) sepia(36%) saturate(593%) hue-rotate(205deg) brightness(91%) contrast(82%)",
+    transparencyFill:
+      "invert(58%) sepia(33%) saturate(5510%) hue-rotate(140deg) brightness(98%) contrast(77%)",
+    moneyFill:
+      "invert(23%) sepia(100%) saturate(2158%) hue-rotate(288deg) brightness(79%) contrast(102%)",
+    qualityFill:
+      "invert(60%) sepia(54%) saturate(1822%) hue-rotate(318deg) brightness(99%) contrast(91%)",
+    supportFill:
+      "invert(80%) sepia(23%) saturate(605%) hue-rotate(86deg) brightness(90%) contrast(94%)",
+    geekyFill:
+      " invert(51%) sepia(90%) saturate(1553%) hue-rotate(176deg) brightness(101%) contrast(102%)",
+    timeFill:
+      "invert(68%) sepia(38%) saturate(3810%) hue-rotate(227deg) brightness(102%) contrast(101%)",
+    dataFill:
+      "invert(62%) sepia(38%) saturate(4558%) hue-rotate(200deg) brightness(91%) contrast(93%)",
+    isoFill:
+      "invert(74%) sepia(83%) saturate(333%) hue-rotate(136deg) brightness(101%) contrast(76%)",
   },
   glanceSectionBackground: "#F5F5F5",
   glanceImages: {
@@ -66,22 +92,13 @@ export const Colors = {
   skyBlueColor: "#60D2D9",
   darkBlueColor: "#376AED",
   rosePinkColor: "#EF6E78",
+  lightOrange: "#FFC14C",
+  peacockGreen: "#1DD5B4",
+  darkBlue: "#6A8BE2",
+  pastelBlue: "#4DBFFF",
   // MOSTLY BACKGROUND
   aliceBlue: "#E8F2FE",
-  // WhyUsSectionIcons: {
-  //   appIcon: "#FFA24C",
-  //   reliableIcon: "#FFC14C",
-  //   innovativeIcon: "#1DD5B4",
-  //   agileIcon: "#5B4CFF",
-  //   transparencyIcon: "#08A89E",
-  //   moneyIcon: "#E666D9",
-  //   qualityIcon: "#FF554C",
-  //   supportIcon: "#60D2D9",
-  //   geekyIcon: "#4DBFFF",
-  //   timeIcon: "#DB4DFF",
-  //   dataIcon: "#6A8BE2",
-  //   isoIcon: "#6ADBE1",
-  //   fillColor: "invert(100%) sepia(6%) saturate(7462%) hue-rotate(267deg) brightness(114%) contrast(97%)"
-  // },
+  fillColor:
+    "invert(100%) sepia(6%) saturate(7462%) hue-rotate(267deg) brightness(114%) contrast(97%)",
   InfrastrutureColor: "#E8F2FE",
 };

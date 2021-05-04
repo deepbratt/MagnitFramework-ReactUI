@@ -46,13 +46,13 @@ const Testimonial = () => {
                 </section>
                 <section className={Images}>
                   <span className={Ellipse1}>
-                    <img alt="ellipse" src={ellipse2} />
+                    <img alt="ellipse" src={ellipse3} />
                     <img className={Secretary} alt="ellipse" src={sales} />
                   </span>
                 </section>
                 <section className={Images}>
                   <span className={Ellipse1}>
-                    <img alt="ellipse" src={ellipse3} />
+                    <img alt="ellipse" src={ellipse2} />
                     <img className={Secretary} alt="ellipse" src={edrece} />
                   </span>
                 </section>

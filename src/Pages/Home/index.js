@@ -38,7 +38,7 @@ const images = [Image1, Image2, Image3, Image4, Image5];
 const Home = (props) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const { sectionBackgroundColors, factCards } = Colors;
+  const { sectionBackgroundColors, factCards,glanceSectionBackground,  } = Colors;
   const { peach, seaGreen, skyBlue, violet, purple, blue } = factCards;
   const { trainingAndCertification } = sectionBackgroundColors;
   const cardArr = [
@@ -70,7 +70,7 @@ const Home = (props) => {
       </Grid>
       <Grid item md={12} xs={12}>
         <Section backColor="#F5F5F5">
-          <GlanceSection />
+          <GlanceSection backColor={glanceSectionBackground} />
         </Section>
       </Grid>
       {/* SOME FACTS ABOUT US SECTION */}

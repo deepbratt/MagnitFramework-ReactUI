@@ -76,7 +76,7 @@ const Services = () => {
         <PointList data={hireUsData} horizontal={true} />
       </Section>
       <Section backColor={aliceBlue}>
-        <GlanceSection />
+        <GlanceSection backColor = {aliceBlue} />
       </Section>
       <Section backColor={prussianBlue}>
         <div className={reviewSlider}>

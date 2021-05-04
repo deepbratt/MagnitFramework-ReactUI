@@ -34,5 +34,8 @@ export const useStyles = makeStyles((theme) => ({
     width: "100%",
     paddingBottom: "50px",
   },
+  grid: {
+    margin: "0px 4%"
+  }
  
 }));

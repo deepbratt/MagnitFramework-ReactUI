@@ -6,9 +6,7 @@ import {
   List,
   ListItemText,
   Toolbar,
-  AppBar,
   Button,
-  Paper,
 } from "@material-ui/core";
 import { NavLink } from "react-router-dom";
 import Scrolltrigger from "../../../Theme/Scrolltrigger";
@@ -18,32 +16,26 @@ import Breakpoints from "../../../Theme/theme.breakpoints";
 import { pageRoutes } from "../../../Components/Path";
 import { Hidden } from "@material-ui/core";
 
+
 const Header = (props) => {
   const routes = Object.values(pageRoutes);
   const classes = useStyles();
   const { trigger } = Scrolltrigger();
   const {
-    toolbar,
     logo,
     list,
     listItem,
     button,
-    root,
-    transparentAppbar,
-    solidAppbar,
+    appbar,
+    appbarsolid,
     link,
     active,
   } = classes;
 
   return (
     <>
-      <Paper className={root}>
-        <AppBar
-          color="default"
-          className={trigger === false ? transparentAppbar : solidAppbar}
-          position="fixed"
-        >
-          <Toolbar className={toolbar} variant="dense">
+
+          <Toolbar  className={!trigger ? appbar : appbarsolid} >
             <MuiThemeProvider theme={THEME}>
               <Typography className={logo} variant="h5" color="inherit">
                 Logo Here
@@ -88,8 +80,6 @@ const Header = (props) => {
               </List>
             </Hidden>
           </Toolbar>
-        </AppBar>
-      </Paper>
     </>
   );
 };
