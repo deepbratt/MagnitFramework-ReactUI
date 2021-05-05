@@ -17,12 +17,13 @@ const CardStyle = makeStyles((theme) => ({
   },
   startQuote: {
     margin: "2px",
-    height: "20px",
+    maxWidth: "10px",
     alignItems: "left",
   },
   endQuote: {
     margin: "2px",
-    justifyContent: "right"
+    maxWidth: "10px",
+    justifyContent: "right",
   },
   large: {
     width: theme.spacing(9),
