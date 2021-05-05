@@ -3,7 +3,7 @@ import { useStyles } from "./numberStyles";
 import { Card, CardContent, Paper } from "@material-ui/core";
 import Heading5 from "../../../ContainerStructure/Headings/Heading5";
 import Heading4 from "../../../ContainerStructure/Headings/Heading4";
-import { titles, subTitles } from "../MainComponent/MainData";
+import { titles, subTitles } from "../../../Components/textConstants/AboutUsData";
 
 const AboutUsNumberContext = () => {
   const classes = useStyles();

@@ -2,7 +2,13 @@ import { makeStyles } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import { Colors } from "../../../Theme/color.constants";
 
-const { transparentAppBar, solidAppBar, mainSlide, blackColor,greyColor } = Colors;
+const {
+  transparentAppBar,
+  solidAppBar,
+  mainSlide,
+  blackColor,
+  greyColor,
+} = Colors;
 
 export const THEME = createMuiTheme({
   overrides: {
@@ -32,14 +38,14 @@ export const useStyles = makeStyles((theme) => ({
   },
   appbar: {
     boxShadow: "none",
-    backgroundColor: transparentAppBar ,
+    backgroundColor: transparentAppBar,
     width: "100%",
     fontSize: "16px",
     display: "flex",
     justifyContent: "space-around",
     position: "fixed",
     zIndex: 2,
-    transition: "all .5s linear"
+    transition: "all .5s linear",
   },
   appbarsolid: {
     boxShadow: "none",
@@ -50,7 +56,7 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: "16px",
     display: "flex",
     justifyContent: "space-around",
-    transition: "all .5s linear"
+    transition: "all .5s linear",
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -78,17 +84,25 @@ export const useStyles = makeStyles((theme) => ({
       cursor: "pointer",
     },
   },
-  logo: {
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "30px",
-    },
-  },
-  link:{
+
+  link: {
     marginTop: "5px",
     textDecoration: "none",
     color: greyColor,
   },
-  active:{
-    color: blackColor
-  }
+  active: {
+    color: blackColor,
+  },
+  logo: {
+    [theme.breakpoints.up("lg")]: {
+      width: "150px",
+      marginRight: "15px"
+    },
+    [theme.breakpoints.down("md")]: {
+      width: "110px",
+    },
+    [theme.breakpoints.down("xs")]: {
+      width: "100px",
+    },
+  },
 }));

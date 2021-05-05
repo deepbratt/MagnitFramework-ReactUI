@@ -3,7 +3,7 @@ import { useStyles, THEME } from "./sectionStyles";
 import { Typography, Card, CardContent } from "@material-ui/core";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import * as icons from "../../assets/icons/icon.constants";
-import { PrimaryData } from "./SectionData";
+import { PrimaryData } from "../../Components/textConstants/PartnerWithUsData";
 
 const PrimarySection = ({
   appColor,

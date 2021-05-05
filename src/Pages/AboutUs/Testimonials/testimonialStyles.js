@@ -9,10 +9,7 @@ export const useStyles = makeStyles((theme) => ({
     width: "100%",
     overflow: "hidden",
   },
-  imageSec: {
-    display: "flex",
-    flexDirection: "column",
-  },
+
   card: {
     display: "flex",
     width: "100%",
@@ -37,12 +34,13 @@ export const useStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
   Images: {
-    padding: "0px",
     margin: "0px",
     padding: "20px",
   },
   imageSec: {
     width: "100%",
+    display: "flex",
+    flexDirection: "column",
   },
   Ellipse1: {
     position: "relative",

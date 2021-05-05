@@ -4,7 +4,7 @@ import { Card, CardContent, Paper, Grid } from "@material-ui/core";
 import Heading4 from "../../../ContainerStructure/Headings/Heading4";
 import Heading5 from "../../../ContainerStructure/Headings/Heading5";
 import Paragraph from "../../../ContainerStructure/Headings/Paragraphs/Paragraph";
-import { Infrastructure } from "../MainComponent/MainData";
+import { Infrastructure } from "../../../Components/textConstants/AboutUsData";
 
 const InfrastructureContainer = () => {
   const {
