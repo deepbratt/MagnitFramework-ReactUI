@@ -34,6 +34,7 @@ export default function createTheme(options) {
       MuiButton: {
         contained: {
           boxShadow: "0px 0px 0px rgba(0, 0, 0, 0);",
+          borderRadius: "0px",
         },
       },
       MuiInputBase: {
@@ -107,6 +108,11 @@ export default function createTheme(options) {
         fontSize: "1.125rem",
         fontWeight: 500,
         lineHeight: "29.34px",
+      },
+      subtitle1: {
+        fontSize: "1.5rem",
+        fontWeight: 300,
+        lineHeight: "43.2px",
       },
       button: {
         fontSize: "1.25rem",

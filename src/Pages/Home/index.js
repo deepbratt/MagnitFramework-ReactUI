@@ -7,7 +7,7 @@ import PartnerContext from "../PartnerWithUsContext/Maincontainer";
 import GlanceSection from "../GlanceAtWorkContext/Container";
 import React, { useState } from "react";
 import { Button, Typography } from "@material-ui/core";
-import MyAccordion from "../../Components/MyAccordion";
+
 import ContactUs from "../ContactUs";
 import Section from "../Section";
 import Image1 from "../../assets/images/awardAccredationSection/image 2.png";
@@ -16,9 +16,6 @@ import Image3 from "../../assets/images/awardAccredationSection/image 4.png";
 import Image4 from "../../assets/images/awardAccredationSection/image 5.png";
 import Image5 from "../../assets/images/awardAccredationSection/image 6.png";
 import CardComponent from "../../Components/CardComponent";
-import NewsletterForm from "../../Components/NewsletterForm";
-import QuestionData from "./questions.json";
-import FactCard from "../../Components/FactCard";
 import { cards } from "./cardData";
 import CardSlyder from "../../Components/CardSlider";
 import startQuote from "../../assets/images/cards/startQuote.png";
@@ -26,12 +23,12 @@ import endQuote from "../../assets/images/cards/EndingQuoteBlue.png";
 import { Colors } from "../../Theme/color.constants";
 import {
   AwardSectionTitle,
-  FactsCardSectionTitle,
-  FQASectionTitle,
   TrainingAndCertificationSectionTitle,
   WhatDoClientSaySectionTitle,
 } from "./constants";
 import ReviewSlider from "../../Components/ReviewSlider";
+import { trainingAndCertificationText as TCData } from "../../Utils/Constants/Language";
+import CertificationList from "../../Components/certificationList";
 
 const images = [Image1, Image2, Image3, Image4, Image5];
 
@@ -40,10 +37,10 @@ const Home = (props) => {
 
   const {
     sectionBackgroundColors,
-    factCards,
+    // factCards,
     glanceSectionBackground,
   } = Colors;
-  const { peach, seaGreen, skyBlue, violet, purple, blue } = factCards;
+  // const { peach, seaGreen, skyBlue, violet, purple, blue } = factCards;
   const { trainingAndCertification } = sectionBackgroundColors;
   const cardArr = [
     <CardSlyder cardData={cards} />,
@@ -117,24 +114,19 @@ const Home = (props) => {
               title="ISO 9001:2015"
               subtitle="Certification"
             />
-          </Grid>
+          </Grid>s
         </Grid>
       </Section> */}
 
       {/* TRAINING AND CERTIFICATION */}
-      <Section
-        title={TrainingAndCertificationSectionTitle}
-        backColor={trainingAndCertification}
-      >
+      <Section title={TrainingAndCertificationSectionTitle}>
         <Grid container direction="row" spacing={2}>
-          {cards &&
-            cards
-              .filter((card, idx) => idx < 3)
-              .map((card, index) => (
-                <Grid item xs={12} md={6} lg={4}>
-                  <CardComponent key={index} cardData={card} />
-                </Grid>
-              ))}
+          {TCData &&
+            TCData.filter((card, idx) => idx < 4).map((card, index) => (
+              <Grid item xs={12}>
+                <CertificationList data={card} />
+              </Grid>
+            ))}
         </Grid>
         <Button
           style={{ marginTop: "30px" }}
@@ -149,10 +141,10 @@ const Home = (props) => {
           </Typography>
         </Button>
       </Section>
-      {/* NEWSLETTER SECTION */}
+      {/* NEWSLETTER SECTION
       <Section>
         <NewsletterForm />
-      </Section>
+      </Section> */}
       {/* CONTACT US FORM SECTION */}
       <Section>
         {!isSubmitted ? (
