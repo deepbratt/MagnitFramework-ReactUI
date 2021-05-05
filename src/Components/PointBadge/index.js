@@ -23,7 +23,9 @@ const PointBadge = ({ horizontal, data }) => {
         <Typography variant="h3" gutterBottom>
           {title}
         </Typography>
-        <Typography variant="subtitle2">{desc}</Typography>
+        <Typography variant="subtitle2" component="p">
+          {desc}
+        </Typography>
       </div>
     </div>
   );

@@ -10,15 +10,17 @@ import CardStyle from "./style";
 
 const QuoteCard = ({ cardData }) => {
   const { text, authName, authImg } = cardData;
-  const { root, content, startQuote, large, endQuote } = CardStyle();
+  const { root, author, content, startQuote, large, endQuote } = CardStyle();
   return (
     <Card className={root}>
-      <div>
-        <Avatar alt="Remy Sharp" src={authImg} className={large} />
-      </div>
-      <div>
-        <Typography variant="h6">By {authName}</Typography>
-        <Rating name="read-only" value={4} readOnly />
+      <div className={author}>
+        <div>
+          <Avatar alt="Remy Sharp" src={authImg} className={large} />
+        </div>
+        <div>
+          <Typography variant="h6">By {authName}</Typography>
+          <Rating name="read-only" value={4} readOnly />
+        </div>
       </div>
 
       <CardActionArea>
