@@ -23,7 +23,7 @@ export default function createTheme(options) {
         root: {
           "&$selected": {
             backgroundColor: "#1DBF73",
-            color: "#fff"
+            color: "#fff",
           },
         },
 
@@ -76,18 +76,37 @@ export default function createTheme(options) {
     },
     typography: {
       fontFamily: "'Poppins', 'Arial', sans-serif",
+      // htmlFontSize: "10px",
+      fontSize: 14,
       h1: {
-        fontSize: "3rem",
+        fontSize: "3.4375rem",
         fontWeight: 600,
+        lineHeight: "71.77px",
       },
       h2: {
         fontSize: "2.1875rem",
         fontWeight: 600,
-        lineHeight: "52.5px",
+        lineHeight: "57.05px",
       },
       h3: {
         fontSize: "1.5rem",
         fontWeight: 600,
+        lineHeight: "39.12px",
+      },
+      h4: {
+        fontSize: "1.5rem",
+        fontWeight: 600,
+        lineHeight: "39.12px",
+      },
+      h5: {
+        fontSize: "1.25rem",
+        fontWeight: 500,
+        lineHeight: "30px",
+      },
+      h6: {
+        fontSize: "1.125rem",
+        fontWeight: 500,
+        lineHeight: "29.34px",
       },
       button: {
         fontSize: "1.25rem",
@@ -96,16 +115,13 @@ export default function createTheme(options) {
       caption: {
         fontWeight: 400,
         fontSize: "1rem",
-        color: "#FFFFFF",
       },
       body1: {
         fontWeight: 500,
         size: "1rem",
-        color: "#FFFFFF",
       },
       body2: {
         fontSize: "1rem",
-        color: "#151B27",
       },
     },
     shape: {

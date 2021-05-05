@@ -12,12 +12,17 @@ const LayoutStyle = makeStyles((theme) => ({
   wrap: {
     height: "100%",
     width: "100%",
+    position: "relative",
   },
   cover: {
+    position: "absolute",
     objectFit: "cover",
     minWidth: "100%",
     minHeight: "100%",
     maxWidth: "100%",
+    left: "0%",
+    top: "0%",
+    opacity: 0.2,
     maxHeight: "100%",
   },
   label: {

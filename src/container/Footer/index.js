@@ -5,65 +5,47 @@ import FooterStyle from "./style";
 import IconFB from "../../assets/images/icon-fb.png";
 import IconTwitter from "../../assets/images/icon-twitter.png";
 import IconLI from "../../assets/images/icon-linkedIn.png";
+import Logo from "../../assets/Logo-white.png";
 
 const Footer = () => {
   const { root, logo, list, section, policy, contact } = FooterStyle();
-  const ls = ["Company", "Service", "Solutions", "FAQ'S"];
-  const lsTwo = ["Case Study", "Blog", "Career"];
+  const ls = ["Service", "Solutions", "FAQ'S", "Case Study", "Blog", "Career"];
   return (
     <footer className={root}>
       <Grid container spacing={1} direction="row" justify="space-between">
-        {/* <Grid item xs={12} md={4} lg={3}>
-          <div className={logo}>
-            <Typography
-              style={{ color: "#FFFFFF" }}
-              align="left"
-              gutterBottom
-              variant="h2"
-            >
-              Logo Here
+        <Grid item xs={12} md={4} lg={3}>
+          <div className={section}>
+            <div className={logo}>
+              <img src={Logo} alt="Maginit Logo" />
+            </div>
+            <Typography align="left" gutterBottom variant="h5">
+              CONNECT WITH US
             </Typography>
-          </div>
-        </Grid> */}
-        <Grid item xs={12} md={4} lg={2}>
-          <div className={list}>
-            {ls
-              .filter((item, idx) => idx < 5)
-              .map((item) => (
-                <Link to={`\${item}`}>
-                  <Typography
-                    style={{ marginBottom: "30px" }}
-                    align="left"
-                    gutterBottom
-                    variant="body1"
-                  >
-                    {item}
-                  </Typography>
-                </Link>
-              ))}
+            <div className={contact}>
+              <img src={IconFB} alt="Facebook Icon" />
+              <img src={IconTwitter} alt="Twitter Icon" />
+              <img src={IconLI} alt="Linked Icon" />
+            </div>
           </div>
         </Grid>
         <Grid item xs={12} md={4} lg={2}>
           <div className={list}>
-            {lsTwo
-              .filter((item, idx) => idx < 5)
-              .map((item) => (
-                <Link to={`\${item}`}>
-                  <Typography
-                    style={{ marginBottom: "30px" }}
-                    align="left"
-                    gutterBottom
-                    variant="body1"
-                  >
-                    {item}
-                  </Typography>
-                </Link>
-              ))}
+            <Typography align="left" gutterBottom variant="h6" component="h3">
+              Company
+            </Typography>
+            {ls.map((item) => (
+              <Link to={`\${item}`}>
+                <Typography align="left" gutterBottom variant="body1">
+                  {item}
+                </Typography>
+              </Link>
+            ))}
           </div>
         </Grid>
+
         <Grid item xs={12} md={4} lg={2}>
           <div className={section}>
-            <Typography align="left" gutterBottom variant="h3">
+            <Typography align="left" gutterBottom variant="h5">
               TALK TO US
             </Typography>
             <Typography align="left" gutterBottom variant="body1">
@@ -75,34 +57,12 @@ const Footer = () => {
         </Grid>
         <Grid item xs={12} md={4} lg={2}>
           <div className={section}>
-            <Typography align="left" gutterBottom variant="h3">
+            <Typography align="left" gutterBottom variant="h5">
               INDIA OFFICE
             </Typography>
             <Typography align="left" gutterBottom variant="body1">
               Shakti Tower, EN 60, 5th Floor, Sector V, Saltlake, Kolkata 700091
             </Typography>
-          </div>
-        </Grid>
-        <Grid item xs={12} md={4} lg={3}>
-          <div className={section}>
-            <div className={logo}>
-              <Typography
-                style={{ color: "#FFFFFF" }}
-                align="left"
-                gutterBottom
-                variant="h2"
-              >
-                Logo Here
-              </Typography>
-            </div>
-            <Typography align="left" gutterBottom variant="h3">
-              CONNECT WITH US
-            </Typography>
-            <div className={contact}>
-              <img src={IconFB} alt="Facebook Icon" />
-              <img src={IconTwitter} alt="Twitter Icon" />
-              <img src={IconLI} alt="Linked Icon" />
-            </div>
           </div>
         </Grid>
         <Grid item xs={12} md={6}>

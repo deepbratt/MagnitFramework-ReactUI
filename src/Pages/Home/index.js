@@ -38,7 +38,11 @@ const images = [Image1, Image2, Image3, Image4, Image5];
 const Home = (props) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const { sectionBackgroundColors, factCards,glanceSectionBackground,  } = Colors;
+  const {
+    sectionBackgroundColors,
+    factCards,
+    glanceSectionBackground,
+  } = Colors;
   const { peach, seaGreen, skyBlue, violet, purple, blue } = factCards;
   const { trainingAndCertification } = sectionBackgroundColors;
   const cardArr = [
@@ -73,7 +77,7 @@ const Home = (props) => {
           <GlanceSection backColor={glanceSectionBackground} />
         </Section>
       </Grid>
-      {/* SOME FACTS ABOUT US SECTION */}
+      {/* SOME FACTS ABOUT US SECTION
       <Section title={FactsCardSectionTitle}>
         <Grid style={{ padding: "0 5%" }} container direction="row" spacing={2}>
           <Grid item xs={12} md={6} lg={4}>
@@ -115,15 +119,8 @@ const Home = (props) => {
             />
           </Grid>
         </Grid>
-      </Section>
-      {/* What do our Client Say */}
-      <Section
-        title={WhatDoClientSaySectionTitle}
-        startQuote={startQuote}
-        endQuote={endQuote}
-      >
-        <ReviewSlider slides={cardArr} />
-      </Section>
+      </Section> */}
+
       {/* TRAINING AND CERTIFICATION */}
       <Section
         title={TrainingAndCertificationSectionTitle}
@@ -156,7 +153,24 @@ const Home = (props) => {
       <Section>
         <NewsletterForm />
       </Section>
-
+      {/* CONTACT US FORM SECTION */}
+      <Section>
+        {!isSubmitted ? (
+          <ContactUs submitForm={submitForm} />
+        ) : (
+          <Typography style={{ textAlign: "center" }} variant="button">
+            Submitted
+          </Typography>
+        )}
+      </Section>
+      {/* What do our Client Say */}
+      <Section
+        title={WhatDoClientSaySectionTitle}
+        startQuote={startQuote}
+        endQuote={endQuote}
+      >
+        <ReviewSlider slides={cardArr} />
+      </Section>
       {/* AWARD AND ACCREDITATIONS SECTION */}
       <Section title={AwardSectionTitle}>
         <div>
@@ -169,28 +183,6 @@ const Home = (props) => {
               />
             ))}
         </div>
-      </Section>
-      {/* CONTACT US FORM SECTION */}
-      <Section>
-        {!isSubmitted ? (
-          <ContactUs submitForm={submitForm} />
-        ) : (
-          <Typography style={{ textAlign: "center" }} variant="button">
-            Submitted
-          </Typography>
-        )}
-      </Section>
-      {/* FQA SECTION */}
-      <Section title={FQASectionTitle}>
-        <MyAccordion questions={QuestionData} />
-        <Button color="primary" variant="contained">
-          <Typography
-            style={{ textAlign: "center", color: "#fff" }}
-            variant="button"
-          >
-            See more
-          </Typography>
-        </Button>
       </Section>
     </div>
   );

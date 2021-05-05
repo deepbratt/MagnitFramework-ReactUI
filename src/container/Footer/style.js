@@ -1,8 +1,11 @@
 import { makeStyles } from "@material-ui/core/styles";
+import { Colors } from "../../Theme/color.constants";
+
+const { Citrine, darkJungleGreen } = Colors;
 
 const FooterStyle = makeStyles((theme) => ({
   root: {
-    backgroundColor: "#161C28",
+    backgroundColor: darkJungleGreen,
     padding: "40px 150px",
     [theme.breakpoints.down("lg")]: {
       padding: "40px 100px",
@@ -18,11 +21,15 @@ const FooterStyle = makeStyles((theme) => ({
   list: {
     "& > a": {
       textDecoration: "none",
+      color: Citrine,
     },
   },
   section: {
-    "& > h3": {
-      color: "#FFFFFF",
+    "& > h5": {
+      color: "white",
+    },
+    "& > p": {
+      color: Citrine,
     },
   },
   policy: {
