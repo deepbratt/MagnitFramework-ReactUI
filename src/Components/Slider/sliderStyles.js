@@ -2,14 +2,21 @@ import { makeStyles } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 
-import {Colors} from "../../Theme/color.constants"
+import { Colors } from "../../Theme/color.constants";
 
-const {tickColor} = Colors;
+const { whiteColor, Harlequin, blackColor } = Colors;
 
 const breakpoints = createBreakpoints({});
 
 export const heading = createMuiTheme({
   overrides: {
+    MuiButton: {
+      root: {
+        borderRadius: "none",
+        fontFamily: "Poppins",
+        color: blackColor,
+      },
+    },
     MuiTypography: {
       h1: {
         fontFamily: "Poppins",
@@ -55,9 +62,8 @@ export const useStyles = makeStyles((theme) => ({
   root: {
     margin: 0,
     padding: 0,
-    marginTop: "50px",
+    marginTop: "60px",
     display: "flex",
-    position: "relative",
     [theme.breakpoints.up("lg")]: {
       textAlign: "left",
       paddingLeft: "100px",
@@ -68,6 +74,7 @@ export const useStyles = makeStyles((theme) => ({
       textAlign: "left",
       paddingLeft: "100px",
       paddingTop: "60px",
+      paddingBottom: "60px",
     },
     [theme.breakpoints.only("sm")]: {
       flexDirection: "column",
@@ -89,36 +96,22 @@ export const useStyles = makeStyles((theme) => ({
   },
   vector: {
     [theme.breakpoints.up("lg")]: {
-      width: "300px",
+      height: "530px",
+      marginLeft: "100px",
     },
     [theme.breakpoints.only("md")]: {
-      width: "400px",
+      height: "530px",
     },
     [theme.breakpoints.only("sm")]: {
-      width: "300px",
+      height: "400px",
     },
     [breakpoints.down("xs")]: {
-      width: "200px",
-    },
-  },
-  vectorSub: {
-    filter: "grayscale(90%)",
-    [theme.breakpoints.up("lg")]: {
-      width: "600px",
-    },
-    [theme.breakpoints.only("md")]: {
-      width: "400px",
-    },
-    [theme.breakpoints.only("sm")]: {
-      width: "300px",
-    },
-    [breakpoints.down("xs")]: {
-      width: "200px",
+      height: "230px",
     },
   },
 
   tick: {
-    backgroundColor: tickColor,
+    backgroundColor: whiteColor,
     borderRadius: "15px",
     marginRight: "10px",
     fontSize: "23px",
@@ -134,6 +127,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   tickSub: {
     borderRadius: "15px",
+    border: `solid 1px ${Harlequin}`,
     marginRight: "10px",
     fontSize: "23px",
     [breakpoints.only("md")]: {
@@ -151,6 +145,9 @@ export const useStyles = makeStyles((theme) => ({
     marginBottom: "10px",
   },
   sec: {
+    position: "relative",
+    zIndex: 1,
+    width: "50%",
     [breakpoints.only("sm")]: {
       marginTop: "20px",
     },
@@ -163,12 +160,14 @@ export const useStyles = makeStyles((theme) => ({
       "& .carousel .slide img": {
         maxHeight: "600px",
         width: "auto",
+        overflow: "hidden",
       },
     },
     [breakpoints.down("md")]: {
       "& .carousel .slide img": {
         maxHeight: "400px",
         width: "auto",
+        overflow: "hidden",
       },
     },
     [breakpoints.down("sm")]: {
@@ -178,7 +177,18 @@ export const useStyles = makeStyles((theme) => ({
       },
     },
   },
-  slide1:{
-    backgroundColor: "pink"
-  }
+  spiral: {
+    width: "100px",
+    position: "absolute",
+    left: "800px",
+    mixBlendMode: "screen",
+    [breakpoints.up("lg")]: {
+      height: "520px",
+      left: "750px",
+    },
+    [breakpoints.down("md")]: {
+      left: "450px",
+      height: "400px",
+    },
+  },
 }));

@@ -2,20 +2,23 @@ import { makeStyles } from "@material-ui/core/styles";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 import { Colors } from "../../../Theme/color.constants";
 
-const { mustardColor, skyBlueColor, whiteColor } = Colors;
+const { BlueRibbon, HarlequinRgb, Harlequin } = Colors;
 const breakpoints = createBreakpoints({});
 
 export const missionStyles = makeStyles((theme) => ({
-  grid:{
-   overflow: "hidden"
+  grid: {
+    overflow: "hidden",
+  },
+  root: {
+    backgroundColor: BlueRibbon,
+    paddingTop: "20px",
   },
   card: {
-    backgroundColor: skyBlueColor,
     width: "30%",
-    height: "180px",
+
+    height: "300px",
     display: "flex",
     flexDirection: "column",
-    color: whiteColor,
     alignItems: "center",
     justifyContent: "center",
     transition: "all .25s linear",
@@ -25,26 +28,18 @@ export const missionStyles = makeStyles((theme) => ({
     [breakpoints.only("md")]: {
       width: "30%",
     },
-    [breakpoints.up("md")]: {
-      textAlign: "left",
-    },
     [breakpoints.only("sm")]: {
       width: "40%",
     },
     [breakpoints.down("xs")]: {
       width: "70%",
-    },
-    [breakpoints.down("sm")]: {
-      height: "200px",
     },
   },
   card2: {
-    backgroundColor: mustardColor,
     width: "30%",
-    height: "180px",
+    height: "300px",
     display: "flex",
     flexDirection: "column",
-    color: whiteColor,
     alignItems: "center",
     justifyContent: "center",
     transition: "all .25s linear",
@@ -60,11 +55,32 @@ export const missionStyles = makeStyles((theme) => ({
     [breakpoints.down("xs")]: {
       width: "70%",
     },
-    [breakpoints.up("md")]: {
-      textAlign: "left",
-    },
-    [breakpoints.down("sm")]: {
-      height: "200px",
+  },
+  Icon: {
+    width: "70px",
+    filter: HarlequinRgb,
+  },
+  underlined: {
+    position: "relative",
+    zIndex: 1,
+    "&:after": {
+      position: "absolute",
+      height: "3px",
+      content: '""',
+      width: "100px",
+      zIndex: -1,
+      right: "38%",
+      color: "#000",
+      backgroundColor: Harlequin,
+      [breakpoints.down("md")]: {
+        right: "35%",
+      },
+      [breakpoints.down("sm")]: {
+        right: "36%",
+      },
+      [breakpoints.down("sm")]: {
+        right: "32%",
+      },
     },
   },
 }));
