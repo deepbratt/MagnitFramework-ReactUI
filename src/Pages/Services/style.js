@@ -20,15 +20,15 @@ const ServicesSectionStyles = makeStyles((theme) => ({
   },
   avatar1: {
     position: "absolute",
-    width: "130px",
-    height: "130px",
-    left: "5%",
+    width: "120px",
+    height: "120px",
+    left: "3%",
     bottom: "1%",
   },
   avatar2: {
     position: "absolute",
-    width: "120px",
-    height: "120px",
+    width: "110px",
+    height: "110px",
     left: "0",
     top: "15%",
   },
@@ -41,23 +41,23 @@ const ServicesSectionStyles = makeStyles((theme) => ({
   },
   avatar4: {
     position: "absolute",
-    width: "110px",
-    height: "110px",
-    right: "15%",
+    width: "100px",
+    height: "100px",
+    right: "14%",
     top: "3%",
   },
   avatar5: {
     position: "absolute",
-    width: "111px",
-    height: "111px",
-    right: "4%",
-    top: "25%",
+    width: "108px",
+    height: "108px",
+    right: "-2%",
+    top: "27%",
   },
   avatar6: {
     position: "absolute",
-    width: "123px",
-    height: "123px",
-    right: "10%",
+    width: "115px",
+    height: "115px",
+    right: "5%",
     bottom: "8%",
   },
   starFishPink: {
@@ -67,23 +67,53 @@ const ServicesSectionStyles = makeStyles((theme) => ({
     zIndex: -1,
   },
   leftStarFishPattern: {
-    left: "-16%",
+    left: "-8%",
     top: "1%",
-    height: "500px",
+    height: "665px",
   },
+  commaPattern: {
+    top:" 78%",
+    height: "70px",
+    right: "267px",
+  },
+  yellowCommaPattern:{
+      top: "33%",
+      left: "20%",
+      height: "70px"
+    },
+    pinkDotPattern:{
+      top: "-4%",
+    left: "-3%",
+    height: "40px"
+    },
+    yellowDotPattern:{
+      top: "97%",
+      right: "-4%",
+      height: "40px"
+    },
+    miniYellowPattern: {
+      top: "62%",
+      left: "4%",
+      height: "18px"
+     },
+     smallDotPattern:{
+      top: "-4%",
+      right: "27%",
+      height: "13px"
+     },
   leftDottedPattern: {
     left: "-12%",
     top: "60%",
     height: "100px",
   },
   rightStarFishPattern: {
-    right: "-16%",
+    right: "-13%",
     top: "1%",
-    height: "500px",
+    height: "650px",
   },
   rightDottedPattern: {
-    right: "-12%",
-    top: "-18%",
+    right: "-10%",
+    top: "-9%",
     height: "100px",
   },
   squareDotsPattern: {

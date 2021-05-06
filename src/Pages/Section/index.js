@@ -3,6 +3,7 @@ import Typography from "@material-ui/core/Typography";
 import PropTypes from "prop-types";
 import LayoutStyle from "./style";
 
+
 const Section = ({ title, children, backColor, startQuote, endQuote }) => {
   const {
     root,
@@ -13,6 +14,7 @@ const Section = ({ title, children, backColor, startQuote, endQuote }) => {
     endQuote1,
     endQuote2,
   } = LayoutStyle();
+
   return (
     <div className={root} style={{ backgroundColor: backColor }}>
       <div className={content}>
@@ -41,6 +43,7 @@ const Section = ({ title, children, backColor, startQuote, endQuote }) => {
             {title}
           </Typography>
         )}
+       
         <Grid item xs={12}>
           {children}
         </Grid>

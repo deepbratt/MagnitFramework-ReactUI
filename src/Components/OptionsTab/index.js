@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React from "react";
 import PropTypes from "prop-types";
 import Tabs from "@material-ui/core/Tabs";
@@ -5,11 +6,15 @@ import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import OptionTabStyles from "./style";
+import { Grid, Paper } from "@material-ui/core";
+import vector from "../../assets/services/vector.png";
+import { TabText } from "./TabText";
+
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
-  const { root, tabs, tab, tabPanel } = OptionTabStyles();
-
+  const { root, tabs, tab, tabPanel, } = OptionTabStyles();
+  
   return (
     <div
       className={tabPanel}
@@ -57,18 +62,18 @@ export default function OptionsTab() {
         onChange={handleChange}
         aria-label="Vertical tabs example"
       >
-        <Tab className={tab} label="Item One" {...a11yProps(0)} />
-        <Tab className={tab} label="Item Two" {...a11yProps(1)} />
-        <Tab className={tab} label="Item Three" {...a11yProps(2)} />
+        <Tab className={tab} label="Full Time Hiring" {...a11yProps(0)} />
+        <Tab className={tab} label="Pay as you Go Hiring" {...a11yProps(1)} />
+        <Tab className={tab} label="Fixed Cost Hiring" {...a11yProps(2)} />
       </Tabs>
       <TabPanel className={tabPanel} value={value} index={0}>
-        Item One
+        <TabText />
       </TabPanel>
       <TabPanel className={tabPanel} value={value} index={1}>
-        Item Two
+      Pay as you Go Hiring
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
+      Fixed Cost Hiring
       </TabPanel>
     </div>
   );

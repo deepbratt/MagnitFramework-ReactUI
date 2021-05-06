@@ -12,10 +12,17 @@ import {
   WhyHireSectionTitle,
 } from "./constants";
 import OptionsTab from "../../Components/OptionsTab";
-import StarFishPattern from "../../assets/patterns/starfish.png";
-// import StarFishPinkPattern from "../../assets/patterns/starfish-pink.png";
-import DottedPattern from "../../assets/patterns/dots.png";
-import SquareDottedPattern from "../../assets/patterns/dots-squar.png";
+import StarFishPattern from "../../assets/patterns/starfishBlue.png";
+import StarFishPinkPattern from "../../assets/patterns/leftStarfish.png";
+import DottedPattern from "../../assets/patterns/circleDot.png";
+import TopDottedPattern from "../../assets/patterns/topCircle.png";
+import yellowComma from "../../assets/patterns/yellowComma.png";
+import comma from "../../assets/patterns/comma.png";
+import miniYellow from "../../assets/patterns/miniYellow.png";
+import pinkDot from "../../assets/patterns/pinkDot.png";
+import yellowDot from "../../assets/patterns/yellowDot.png";
+import smallDot from "../../assets/patterns/smalldot.png";
+import SquareDottedPattern from "../../assets/patterns/dotsPattern.png";
 import ReviewSlider from "../../Components/ReviewSlider";
 import ServicesSectionStyles from "./style";
 import BannerImage from "../../assets/services/BannerImage.png";
@@ -27,12 +34,17 @@ import Avatar5 from "../../assets/services/Avatar5.png";
 import Avatar6 from "../../assets/services/Avatar6.png";
 
 const Services = () => {
-  const { aliceBlue, prussianBlue } = Colors;
+  const { skyBlue, aliceBlue ,linearBackground} = Colors;
   const {
     root,
+    // background,
     bannerBtn,
     reviewSlider,
     leftStarFishPattern,
+    pinkDotPattern,
+    yellowDotPattern,
+    miniYellowPattern,
+    smallDotPattern,
     rightStarFishPattern,
     leftDottedPattern,
     rightDottedPattern,
@@ -43,10 +55,12 @@ const Services = () => {
     avatar5,
     avatar6,
     squareDotsPattern,
+    commaPattern,
+    yellowCommaPattern
   } = ServicesSectionStyles();
   return (
-    <div className={root}>
-      <Banner image={BannerImage}>
+    <div className={root} >
+      <Banner image={BannerImage} backColor={linearBackground}>
         <Typography variant="h1" gutterBottom>
           We Hire Best <br /> Web Developers & Save 50%
         </Typography>
@@ -57,12 +71,13 @@ const Services = () => {
           className={bannerBtn}
           variant="contained"
           size="small"
-          color="primary"
+          color="secondary"
         >
           <Typography variant="buttom">Get Started</Typography>
         </Button>
       </Banner>
       <Section title={ServicesSectionTitle}>
+   
         <PointList data={servicesData} />
       </Section>
       <Section title={HiringSectionTitle}>
@@ -71,11 +86,13 @@ const Services = () => {
       <Section title={WhyHireSectionTitle}>
         <PointList data={hireUsData} horizontal={true} />
       </Section>
-      <Section backColor={aliceBlue}>
-        <GlanceSection backColor = {aliceBlue} />
+     
+      <Section backColor={skyBlue}>
+        <GlanceSection backColor={skyBlue} />
       </Section>
-      <Section backColor={prussianBlue}>
+      <Section backColor={aliceBlue}>
         <div className={reviewSlider}>
+      
           <Avatar alt="" src={Avatar1} className={avatar1} />
           <Avatar alt="" src={Avatar2} className={avatar2} />
           <Avatar alt="" src={Avatar3} className={avatar3} />
@@ -88,9 +105,45 @@ const Services = () => {
             alt=""
             srcset=""
           />
+            <img
+            className={yellowCommaPattern}
+            src={yellowComma}
+            alt=""
+            srcset=""
+          />
+              <img
+            className={commaPattern}
+            src={comma}
+            alt=""
+            srcset=""
+          />
+          <img
+            className={pinkDotPattern}
+            src={pinkDot}
+            alt=""
+            srcset=""
+          />
+           <img
+            className={yellowDotPattern}
+            src={yellowDot}
+            alt=""
+            srcset=""
+          />
+          <img
+            className={miniYellowPattern}
+            src={miniYellow}
+            alt=""
+            srcset=""
+          /> 
+          <img
+            className={smallDotPattern}
+            src={smallDot}
+            alt=""
+            srcset=""
+          /> 
           <img
             className={leftStarFishPattern}
-            src={StarFishPattern}
+            src={StarFishPinkPattern}
             alt=""
             srcset=""
           />
@@ -108,7 +161,7 @@ const Services = () => {
           />
           <img
             className={rightDottedPattern}
-            src={DottedPattern}
+            src={TopDottedPattern}
             alt=""
             srcset=""
           />

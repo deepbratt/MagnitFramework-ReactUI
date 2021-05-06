@@ -1,6 +1,7 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 const FooterStyle = makeStyles((theme) => ({
+ 
   root: {
     backgroundColor: "#161C28",
     padding: "40px 150px",
@@ -13,7 +14,9 @@ const FooterStyle = makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {
       padding: "30px 40px",
     },
+    
   },
+
   logo: {},
   list: {
     "& > a": {
@@ -23,6 +26,7 @@ const FooterStyle = makeStyles((theme) => ({
   section: {
     "& > h3": {
       color: "#FFFFFF",
+      fontSize:"20px"
     },
   },
   policy: {
@@ -33,11 +37,21 @@ const FooterStyle = makeStyles((theme) => ({
     display: "flex",
     "& > img": {
       margin: "10px",
-      padding: "15px 18px",
+      padding: "10px 12px",
       border: "1px solid white",
       borderRadius: "5px",
     },
   },
+  head:{
+    marginBottom:"15px",
+    color:"#ffff"
+  },
+  footer:{
+    borderTop:"1px solid gray",
+  display:"flex" ,
+  flexDirection:"row"
+},
+
 }));
 
 export default FooterStyle;

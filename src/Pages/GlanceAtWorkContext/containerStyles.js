@@ -15,6 +15,7 @@ export const THEME = createMuiTheme({
         fontFamily: "Poppins",
         fontStyle: "normal",
         fontSize: "35px",
+        color:"white",
         lineHeight: 1.6,
         fontWeight: "bolder",
         textAlign: "center",
@@ -29,9 +30,20 @@ export const THEME = createMuiTheme({
       },
       h5: {
         fontFamily: "Poppins",
-        fontWeight: "bolder",
+        textAlign:"left",
+        fontWeight: "600",
+        fontSize: "16px",
+        marginTop: "10px",
+        marginLeft:"10px",
+      
+      },
+      h6: {
+        fontFamily: "Poppins",
+        textAlign:"left",
+        fontWeight: "600",
         fontSize: "24px",
-        marginTop: "22px",
+        marginTop: "10px",
+        marginLeft:"10px"
       },
       paragraph: {
         fontFamily: "Poppins",
@@ -72,24 +84,26 @@ export const useStyles = makeStyles((theme) => ({
   },
   card: {
     width: "30%",
-    height: "500px",
+    height: "260px",
     display: "flex",
     flexDirection: "column",
-    alignItems: "center",
+    alignItems: "left",
     transition: "all .25s linear",
     boxShadow: "none",
-    margin: "10px",
+    backgroundColor:"#1e4cc7",
+    color:"white",
+    margin: "15px",
     boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
     [breakpoints.only("md")]: {
-      width: "40%",
-      height: "550px",
+      width: "50%",
+      height: "210px",
     },
     [breakpoints.only("sm")]: {
       width: "50%",
     },
     [breakpoints.down("xs")]: {
       width: "85%",
-      height: "530px",
+      height: "210px",
     },
     "& .MuiCardContent-root": {
       padding: "0px",
@@ -97,40 +111,57 @@ export const useStyles = makeStyles((theme) => ({
   },
 
   devSec: {
-    backgroundColor: Img1,
+    backgroundColor: "#ffff",
     width: "100%",
-    height: "60%",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  dev: {
-    backgroundColor: Img2,
-    width: "100%",
+    height: "100%",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
     [breakpoints.up("md")]: {
-      height: "66%",
+      height: "100%",
     },
-    [breakpoints.down("sm")]: {
-      height: "63%",
+    // [breakpoints.down("sm")]: {
+    //   height: "63%",
+    // },
+   
+  },
+
+
+  dev: {
+    backgroundColor: "#ffff",
+    width: "100%",
+    height: "100%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    [breakpoints.up("xl")]: {
+      height: "90%",
+    },
+    [breakpoints.up("lg")]: {
+      height: "100%",
     },
   },
   cardContent: {
-    backgroundColor: Img3,
+    backgroundColor: "#ffff",
     width: "100%",
+    height: "96%",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
     [breakpoints.up("lg")]: {
-      height: "57%",
+      height: "96%",
     },
-    [breakpoints.only("md")]: {
-      height: "58%",
+    [breakpoints.only("xl")]: {
+      height: "93%",
     },
-    [breakpoints.down("sm")]: {
-      height: "58%",
-    },
+    // [breakpoints.down("sm")]: {
+    //   height: "58%",
+    // },
   },
+  seeMore:{ 
+    textTransform: "none",
+   marginLeft: "10px",
+   borderRadius:"0px",
+   width: "150px",
+   height: "50px" }
 }));

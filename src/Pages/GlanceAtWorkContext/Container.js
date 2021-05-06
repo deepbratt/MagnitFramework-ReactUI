@@ -22,13 +22,14 @@ const Container = ({backColor}) => {
     devSec,
     cardSec,
     cardContent,
+    seeMore
   } = classes;
   return (
     <>
       <Paper style={{backgroundColor: backColor}} className={root} elevation={0}>
         <section className={serviceHeading}>
           <MuiThemeProvider theme={THEME}>
-            <Typography variant="h4" color="inherit">
+            <Typography variant="h4" color="white">
               A Glance at Our Work
             </Typography>
           </MuiThemeProvider>
@@ -38,19 +39,13 @@ const Container = ({backColor}) => {
             <CardContent>
               <section className={devSec}>
                 <section>
-                  <img width="100%" height="100%" src={image1} alt=""/>
+                  <img width="83%" height="100%" src={image1} alt=""/>
                 </section>
               </section>
-              <section>
+              <section >
                 <MuiThemeProvider theme={THEME}>
                   <Typography variant="h5" color="inherit">
                     Alife App
-                  </Typography>
-                  <Typography paragraph={true} color="inherit">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elitse do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud xercitation ullamco
-                    laboris nisi ut aliquip
                   </Typography>
                 </MuiThemeProvider>
               </section>
@@ -60,19 +55,13 @@ const Container = ({backColor}) => {
             <CardContent>
               <section className={cardContent}>
                 <section>
-                  <img width="100%" height="100%" src={image2} alt=""/>
+                  <img width="83%" height="100%" src={image2} alt="" />
                 </section>
               </section>
               <section>
                 <MuiThemeProvider theme={THEME}>
                   <Typography variant="h5" color="inherit">
                     Alife App
-                  </Typography>
-                  <Typography paragraph={true} color="inherit">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elitse do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud xercitation ullamco
-                    laboris nisi ut aliquip
                   </Typography>
                 </MuiThemeProvider>
               </section>
@@ -82,19 +71,13 @@ const Container = ({backColor}) => {
             <CardContent>
               <section className={dev}>
                 <section>
-                  <img width="100%" height="100%" src={image3} alt=""/>
+                  <img width="83%" height="100%" src={image3} alt=""/>
                 </section>
               </section>
               <section>
                 <MuiThemeProvider theme={THEME}>
                   <Typography variant="h5" color="inherit">
                     Alife App
-                  </Typography>
-                  <Typography paragraph={true} color="inherit">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elitse do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud xercitation ullamco
-                    laboris nisi ut aliquip
                   </Typography>
                 </MuiThemeProvider>
               </section>
@@ -103,10 +86,10 @@ const Container = ({backColor}) => {
         </section>
         <section>
           <Button
-            style={{ textTransform: "none", marginLeft: "10px" }}
+          className={seeMore}
             variant="contained"
             size={Breakpoints()}
-            color="secondary"
+            color="white"
           >
             See More
           </Button>

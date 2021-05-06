@@ -2,8 +2,11 @@ import { makeStyles } from "@material-ui/core";
 
 const BannerStyles = makeStyles((theme) => ({
   root: {
-    marginTop: "80px",
+    marginTop: "75px",
     backgroundColor: "transparent",
+    
+    background: " linear-gradient(-181.96deg , #2CD400 -98.18%, rgba(255, 255, 255, 0) 85.96%)",
+backgroundBlendMode: "multiply"
   },
   imageWrapper: {
     position: "relative",

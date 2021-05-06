@@ -27,7 +27,7 @@ export const Colors = {
     timeIcon: "#FBE9FF",
     dataIcon: "#EEF2FC",
     isoIcon: "#EEFBFC",
-
+    linearBackground: 'linear-gradient(180.04deg, #2CD400 -46.18%, rgba(255, 255, 255, 0) 99.96%)',
     // Filter
     appFill:
       "invert(67%) sepia(75%) saturate(700%) hue-rotate(329deg) brightness(101%) contrast(101%)",
@@ -84,6 +84,7 @@ export const Colors = {
   Orchid: "#E666D9",
   orangeRed: "#FF554C",
   pictonBlue: "#4CBFFF",
+  skyBlue:"#116EF0",
   heliotrope: "#DB4CFF",
   blueGreen: "#2EBEB5",
   hanBlue: "#486FD5",
