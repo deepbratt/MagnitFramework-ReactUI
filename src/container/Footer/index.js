@@ -45,7 +45,7 @@ const Footer = () => {
             </Typography>
             {navigation.links.map((item) => (
               <Link to={`\${item}`}>
-                <Typography align="left" gutterBottom variant="h6">
+                <Typography align="left" gutterBottom variant="body2">
                   {item}
                 </Typography>
               </Link>
@@ -59,7 +59,7 @@ const Footer = () => {
               {talkToUsSection.title}
             </Typography>
             {talkToUsSection.numbers.map((num, index) => (
-              <Typography key={index} align="left" gutterBottom variant="h6">
+              <Typography key={index} align="left" gutterBottom variant="body2">
                 {num}
               </Typography>
             ))}
@@ -70,7 +70,7 @@ const Footer = () => {
             <Typography align="left" gutterBottom variant="h5">
               {addressSection.title}
             </Typography>
-            <Typography align="left" gutterBottom variant="h6">
+            <Typography align="left" gutterBottom variant="body2">
               {addressSection.address}
             </Typography>
           </div>
@@ -80,20 +80,21 @@ const Footer = () => {
             className="copyrights"
             align="left"
             gutterBottom
-            variant="caption"
+            variant="body2"
+            component="p"
           >
             {copyrights}
           </Typography>
         </Grid>
         <Grid item xs={12} md={6}>
           <div className={policy}>
-            <Typography gutterBottom variant="h6">
+            <Typography gutterBottom variant="body2">
               {lifeTimeSupport}
             </Typography>
-            <Typography align="right" gutterBottom variant="h6">
+            <Typography align="right" gutterBottom variant="body2">
               {terms}
             </Typography>
-            <Typography align="right" gutterBottom variant="h6">
+            <Typography align="right" gutterBottom variant="body2">
               {disclaimer}
             </Typography>
           </div>

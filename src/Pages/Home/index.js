@@ -29,19 +29,24 @@ import {
 import ReviewSlider from "../../Components/ReviewSlider";
 import { trainingAndCertificationText as TCData } from "../../Utils/Constants/Language";
 import CertificationList from "../../Components/certificationList";
+import HomeStyles from "./style";
 
 const images = [Image1, Image2, Image3, Image4, Image5];
 
 const Home = (props) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
-
+  const { leftRoot, rightRoot } = HomeStyles();
   const {
-    sectionBackgroundColors,
+    // sectionBackgroundColors,
     // factCards,
     glanceSectionBackground,
   } = Colors;
   // const { peach, seaGreen, skyBlue, violet, purple, blue } = factCards;
-  const { trainingAndCertification } = sectionBackgroundColors;
+  // const { trainingAndCertification } = sectionBackgroundColors;
+
+  // prop for training and certification
+  const rootClasses = [rightRoot, leftRoot, rightRoot, leftRoot];
+
   const cardArr = [
     <CardSlyder cardData={cards} />,
     <CardSlyder cardData={cards} />,
@@ -124,7 +129,7 @@ const Home = (props) => {
           {TCData &&
             TCData.filter((card, idx) => idx < 4).map((card, index) => (
               <Grid key={index} item xs={12}>
-                <CertificationList data={card} />
+                <CertificationList root={rootClasses[index]} data={card} />
               </Grid>
             ))}
         </Grid>

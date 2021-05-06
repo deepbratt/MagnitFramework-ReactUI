@@ -1,5 +1,6 @@
 import { makeStyles } from "@material-ui/core";
-
+import { Colors } from "../../Theme/color.constants";
+const { darkSilver } = Colors;
 const CertificationListStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
@@ -9,6 +10,9 @@ const CertificationListStyles = makeStyles((theme) => ({
   },
   text: {
     textAlign: "left",
+    "& > p": {
+      color: darkSilver,
+    },
   },
   imageWrapper: {
     "& > img": {

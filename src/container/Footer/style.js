@@ -16,29 +16,27 @@ const FooterStyle = makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {
       padding: "30px 40px",
     },
+    "& > *": {
+      color: "white",
+    },
   },
   logo: {
     marginBottom: "30px",
   },
   list: {
-    "& > a": {
+    "& > a, h5": {
       textDecoration: "none",
       color: Citrine,
     },
     "& > h6": {
-      color: "white",
       fontSize: "16px",
-      fontWeight: 400
+      fontWeight: 400,
     },
   },
   section: {
-    "& > h5": {
-      color: "white",
-    },
     "& > h6": {
-      color: "white",
       fontSize: "16px",
-      fontWeight: 400
+      fontWeight: 400,
     },
     "& > p": {
       color: Citrine,
@@ -47,6 +45,9 @@ const FooterStyle = makeStyles((theme) => ({
   policy: {
     display: "flex",
     justifyContent: "flex-end",
+    "& > *": {
+      margin: "0 0 0 15px",
+    },
   },
   contact: {
     display: "flex",

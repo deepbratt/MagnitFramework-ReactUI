@@ -121,11 +121,14 @@ export default function createTheme(options) {
         fontSize: "1rem",
       },
       body1: {
-        fontWeight: 500,
-        size: "1rem",
+        fontWeight: 400,
+        size: "1.125rem",
+        lineHeight: "29.34px",
       },
       body2: {
-        fontSize: "1rem",
+        fontWeight: 300,
+        size: "1rem",
+        lineHeight: "29.36px",
       },
     },
     shape: {

@@ -1,7 +1,7 @@
 import * as WebDesignAnimationData from "../../../Components/certificationList/webDesignAnimation.json";
 import * as GraphicDesignAnimationData from "../../../Components/certificationList/graphicDesignAnimation.json";
 import * as MarketingAnimationData from "../../../Components/certificationList/marketingAnimation.json";
-import * as CulturallyAlignedAnimationData from "../../../Components/certificationList/test.json";
+import * as CulturallyAlignedAnimationData from "../../../Components/certificationList/culturallyAlignedAnimation.json";
 
 export const reviewSliderText = {
   title: "Web Design",
