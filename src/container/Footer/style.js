@@ -17,16 +17,28 @@ const FooterStyle = makeStyles((theme) => ({
       padding: "30px 40px",
     },
   },
-  logo: {},
+  logo: {
+    marginBottom: "30px",
+  },
   list: {
     "& > a": {
       textDecoration: "none",
       color: Citrine,
     },
+    "& > h6": {
+      color: "white",
+      fontSize: "16px",
+      fontWeight: 400
+    },
   },
   section: {
     "& > h5": {
       color: "white",
+    },
+    "& > h6": {
+      color: "white",
+      fontSize: "16px",
+      fontWeight: 400
     },
     "& > p": {
       color: Citrine,
@@ -34,12 +46,14 @@ const FooterStyle = makeStyles((theme) => ({
   },
   policy: {
     display: "flex",
-    justifyContent: "space-evenly",
+    justifyContent: "flex-end",
   },
   contact: {
     display: "flex",
     "& > img": {
-      margin: "10px",
+      maxWidth: "46px",
+      maxHeight: "46px",
+      margin: "10px 10px 0px 0px",
       padding: "15px 18px",
       border: "1px solid white",
       borderRadius: "5px",

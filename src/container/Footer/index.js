@@ -6,10 +6,20 @@ import IconFB from "../../assets/images/icon-fb.png";
 import IconTwitter from "../../assets/images/icon-twitter.png";
 import IconLI from "../../assets/images/icon-linkedIn.png";
 import Logo from "../../assets/Logo-white.png";
+import { footerText } from "../../Utils/Constants/Language";
 
 const Footer = () => {
   const { root, logo, list, section, policy, contact } = FooterStyle();
-  const ls = ["Service", "Solutions", "FAQ'S", "Case Study", "Blog", "Career"];
+  const {
+    contactUs,
+    navigation,
+    addressSection,
+    talkToUsSection,
+    copyrights,
+    lifeTimeSupport,
+    terms,
+    disclaimer,
+  } = footerText;
   return (
     <footer className={root}>
       <Grid container spacing={1} direction="row" justify="space-between">
@@ -19,7 +29,7 @@ const Footer = () => {
               <img src={Logo} alt="Maginit Logo" />
             </div>
             <Typography align="left" gutterBottom variant="h5">
-              CONNECT WITH US
+              {contactUs}
             </Typography>
             <div className={contact}>
               <img src={IconFB} alt="Facebook Icon" />
@@ -30,12 +40,12 @@ const Footer = () => {
         </Grid>
         <Grid item xs={12} md={4} lg={2}>
           <div className={list}>
-            <Typography align="left" gutterBottom variant="h6" component="h3">
-              Company
+            <Typography align="left" gutterBottom variant="h6" component="h5">
+              {navigation.title}
             </Typography>
-            {ls.map((item) => (
+            {navigation.links.map((item) => (
               <Link to={`\${item}`}>
-                <Typography align="left" gutterBottom variant="body1">
+                <Typography align="left" gutterBottom variant="h6">
                   {item}
                 </Typography>
               </Link>
@@ -46,22 +56,22 @@ const Footer = () => {
         <Grid item xs={12} md={4} lg={2}>
           <div className={section}>
             <Typography align="left" gutterBottom variant="h5">
-              TALK TO US
+              {talkToUsSection.title}
             </Typography>
-            <Typography align="left" gutterBottom variant="body1">
-              USA/Canada: 713-489-0845
-              <br /> Australia: (02)-9191-2621
-              <br /> UK: (0)-203-514-2412
-            </Typography>
+            {talkToUsSection.numbers.map((num, index) => (
+              <Typography key={index} align="left" gutterBottom variant="h6">
+                {num}
+              </Typography>
+            ))}
           </div>
         </Grid>
         <Grid item xs={12} md={4} lg={2}>
           <div className={section}>
             <Typography align="left" gutterBottom variant="h5">
-              INDIA OFFICE
+              {addressSection.title}
             </Typography>
-            <Typography align="left" gutterBottom variant="body1">
-              Shakti Tower, EN 60, 5th Floor, Sector V, Saltlake, Kolkata 700091
+            <Typography align="left" gutterBottom variant="h6">
+              {addressSection.address}
             </Typography>
           </div>
         </Grid>
@@ -72,19 +82,19 @@ const Footer = () => {
             gutterBottom
             variant="caption"
           >
-            © 2021 Company name, All Rights Reserved. CIN: U72300WB2013PTC191520
+            {copyrights}
           </Typography>
         </Grid>
         <Grid item xs={12} md={6}>
           <div className={policy}>
-            <Typography gutterBottom variant="caption">
-              Life-Time Support
+            <Typography gutterBottom variant="h6">
+              {lifeTimeSupport}
             </Typography>
-            <Typography align="right" gutterBottom variant="caption">
-              Terms of Service
+            <Typography align="right" gutterBottom variant="h6">
+              {terms}
             </Typography>
-            <Typography align="right" gutterBottom variant="caption">
-              Disclaimer & Privacy Policy
+            <Typography align="right" gutterBottom variant="h6">
+              {disclaimer}
             </Typography>
           </div>
         </Grid>

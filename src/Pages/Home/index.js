@@ -120,10 +120,10 @@ const Home = (props) => {
 
       {/* TRAINING AND CERTIFICATION */}
       <Section title={TrainingAndCertificationSectionTitle}>
-        <Grid container direction="row" spacing={2}>
+        <Grid container direction="row">
           {TCData &&
             TCData.filter((card, idx) => idx < 4).map((card, index) => (
-              <Grid item xs={12}>
+              <Grid key={index} item xs={12}>
                 <CertificationList data={card} />
               </Grid>
             ))}
