@@ -2,7 +2,7 @@ import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
-// import Rating from "@material-ui/lab/Rating";
+import Rating from "@material-ui/lab/Rating";
 import { Avatar } from "@material-ui/core";
 import StartQuote from "../../assets/images/cards/startQuote.png";
 import EndQuote from "../../assets/images/cards/EndingQuote.png";
@@ -19,7 +19,7 @@ const QuoteCard = ({ cardData }) => {
         </div>
         <div>
           <Typography variant="h6">By {authName}</Typography>
-          {/* <Rating name="read-only" value={4} readOnly /> */}
+          <Rating name="read-only" value={4} readOnly />
         </div>
       </div>
 
