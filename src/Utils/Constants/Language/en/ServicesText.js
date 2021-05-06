@@ -1,4 +1,6 @@
 const Data = {
+    title :"We Offer Quality",
+    subTitle: "Services and Solutions",
     subheading: "To start-ups and enterprises across the globe",
     devTitle: "Developer Hiring",
     devParagraph: " We let you hire developers from our talent pool at competitive prices with Dedicated hiring, Project based hiring, and Hourly hiring options.",

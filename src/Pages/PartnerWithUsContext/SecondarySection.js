@@ -3,7 +3,7 @@ import { useStyles, THEME } from "./sectionStyles";
 import { Typography, Card, CardContent } from "@material-ui/core";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import * as icons from "../../assets/icons/icon.constants";
-import {SecondaryData } from "../../Components/textConstants/PartnerWithUsData";
+import {SecondaryData } from "../../Utils/Constants/Language/en/PartnerWithUsData";
 
 const SecondarySection = ({
   qualityColor,
@@ -11,12 +11,7 @@ const SecondarySection = ({
   timeColor,
   supportColor,
   geekyColor,
-  qualityFill,
-  dataFill,
-  isoFill,
-  geekyFill,
-  supportFill,
-  timeFill,
+  IconFill
 }) => {
   const classes = useStyles();
   const {
@@ -64,7 +59,7 @@ const SecondarySection = ({
                 className={devSub}
               >
                 <img
-                  style={{ filter: qualityFill }}
+                  style={{ filter: IconFill }}
                   alt="icon"
                   className={Icons}
                   src={qualityIcon}
@@ -93,7 +88,7 @@ const SecondarySection = ({
                 className={supportSub}
               >
                 <img
-                  style={{ filter: supportFill }}
+                  style={{ filter: IconFill }}
                   alt="icon"
                   className={Icons}
                   src={supportIcon}
@@ -122,7 +117,7 @@ const SecondarySection = ({
                 className={innovativeSub}
               >
                 <img
-                  style={{ filter: geekyFill }}
+                  style={{ filter: IconFill }}
                   alt="icon"
                   className={Icons}
                   src={geekyIcon}
@@ -151,7 +146,7 @@ const SecondarySection = ({
                 className={timeSub}
               >
                 <img
-                  style={{ filter: timeFill }}
+                  style={{ filter: IconFill }}
                   alt="icon"
                   className={Icons}
                   src={timeIcon}
@@ -180,7 +175,7 @@ const SecondarySection = ({
                 className={dataSub}
               >
                 <img
-                  style={{ filter: dataFill }}
+                  style={{ filter: IconFill }}
                   alt="icon"
                   className={Icons}
                   src={dataIcon}
@@ -209,7 +204,7 @@ const SecondarySection = ({
                 className={dataSub}
               >
                 <img
-                  style={{ filter: isoFill }}
+                  style={{ filter: IconFill }}
                   alt="icon"
                   className={Icons}
                   src={isoIcon}

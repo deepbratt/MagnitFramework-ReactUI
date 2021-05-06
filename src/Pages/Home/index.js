@@ -47,6 +47,10 @@ const Home = (props) => {
   // prop for training and certification
   const rootClasses = [rightRoot, leftRoot, rightRoot, leftRoot];
 
+  const { sectionBackgroundColors, factCards, BlueRibbon } = Colors;
+  const { peach, seaGreen, skyBlue, violet, purple, blue } = factCards;
+  const { trainingAndCertification } = sectionBackgroundColors;
+
   const cardArr = [
     <CardSlyder cardData={cards} />,
     <CardSlyder cardData={cards} />,
@@ -75,9 +79,7 @@ const Home = (props) => {
         </Section>
       </Grid>
       <Grid item md={12} xs={12}>
-        <Section backColor="#F5F5F5">
-          <GlanceSection backColor={glanceSectionBackground} />
-        </Section>
+        <GlanceSection backColor={BlueRibbon} />
       </Grid>
       {/* SOME FACTS ABOUT US SECTION
       <Section title={FactsCardSectionTitle}>
