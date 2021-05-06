@@ -1,5 +1,6 @@
 export const Colors = {
   WildSand: "	rgb(245, 245, 247)",
+  Ash: "rgb(217, 217, 219)",
   blackColor: "black",
   greyColor: "grey",
   whiteColor: "white",

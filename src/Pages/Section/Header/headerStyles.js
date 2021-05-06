@@ -8,6 +8,7 @@ const {
   mainSlide,
   blackColor,
   greyColor,
+  Ash
 } = Colors;
 
 export const THEME = createMuiTheme({
@@ -53,7 +54,7 @@ export const useStyles = makeStyles((theme) => ({
     position: "fixed",
     zIndex: 2,
     transition: "all .5s linear",
-   
+    borderBottom: `solid 1px ${transparentWildSand}`
   },
   appbarsolid: {
     boxShadow: "none",
@@ -65,6 +66,7 @@ export const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-around",
     transition: "all .5s linear",
+    borderBottom: `solid 3px ${Ash}`
   },
   menuButton: {
     marginRight: theme.spacing(2),

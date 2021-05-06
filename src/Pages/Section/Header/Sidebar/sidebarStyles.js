@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import { Colors } from "../../../../Theme/color.constants";
 const drawerWidth = 260;
-const { blackColor, mainSlide } = Colors;
+const { blackColor, WildSand } = Colors;
 export const THEME = createMuiTheme({
   overrides: {
     MuiTypography: {
@@ -27,7 +27,7 @@ export const THEME = createMuiTheme({
 
 export const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: mainSlide,
+    backgroundColor: WildSand,
     width: drawerWidth,
   },
   menuButton: {
