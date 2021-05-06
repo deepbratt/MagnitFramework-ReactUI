@@ -27,7 +27,7 @@ const LayoutStyle = makeStyles((theme) => ({
   },
   label: {
     fontSize: "1.125rem",
-    color: "#000000",
+    color: "white",
   },
   error: {
     fontSize: "0.75rem",

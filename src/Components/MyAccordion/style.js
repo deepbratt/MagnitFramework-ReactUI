@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const LayoutStyle = makeStyles((theme) => ({
   root: {
-    margin: "10px",
+    margin: "5px",
   },
   detail: {
     fontSize: "38px",

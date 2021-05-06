@@ -52,6 +52,7 @@ export default function createTheme(options) {
       },
       MuiAccordion: {
         root: {
+          margin: "0px",
           marginTop: "20px",
           position: "inherit",
           "&::before": {
@@ -63,8 +64,8 @@ export default function createTheme(options) {
         root: {
           backgroundColor: "rgba(141, 152, 191, 0.1)",
           marginBottom: "20px",
-          padding: "15px 45px",
-          borderRadius: "10px",
+          padding: "5px 10px",
+          borderRadius: "5px",
         },
       },
       MuiAccordionDetails: {

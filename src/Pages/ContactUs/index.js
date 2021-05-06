@@ -30,7 +30,7 @@ const ContactUs = () => {
                   background:
                     "linear-gradient(223.7deg, rgba(11, 102, 35, 0.56) 0%, rgba(0, 104, 250, 0.56) 133.78%)",
                   color: "#fff",
-                  minHeight:"100%"
+                  minHeight: "100%",
                 }}
               >
                 <Typography
@@ -40,7 +40,7 @@ const ContactUs = () => {
                   Contact Us
                 </Typography>
                 <Typography
-                  style={{ textAlign: "center" }}
+                  style={{ textAlign: "center", color: "white" }}
                   variant="subtitle1"
                   color="textSecondary"
                 >
@@ -108,8 +108,8 @@ const ContactUs = () => {
             </div>
           </Grid>
           <Grid item xs={12} md={6}>
-          <Section title={FQASectionTitle}>
-            <MyAccordion questions={QuestionData} />
+            <Section title={FQASectionTitle}>
+              <MyAccordion questions={QuestionData} />
             </Section>
           </Grid>
         </Grid>
