@@ -1,121 +1,76 @@
-import React from 'react'
+import React from "react";
 import { useStyles, THEME } from "./solutionStyles";
-import {
-  Typography,
-  Card,
-  CardContent,
-} from "@material-ui/core";
-import { MuiThemeProvider} from "@material-ui/core/styles";
-import * as icons from "../../assets/icons/icon.constants"
-
+import { Typography, Card, CardContent } from "@material-ui/core";
+import { MuiThemeProvider } from "@material-ui/core/styles";
+import * as icons from "../../assets/icons/icon.constants";
+import {Data} from "../../Utils/Constants/Language/en/SolutionsText"
 const SolutionsPrimarySection = () => {
-    const classes = useStyles()
-    const {cardSec,card,devSec,profileIcon} = classes
-    const {chatIcon,classifiedIcon,fundIcon,designIcon,datingIcon,fitnessIcon} = icons
-    return (
-        <>
-              <section className={cardSec}>
+  const classes = useStyles();
+  const {chatTitle,classifiedTitle,fundingTitle,designTitle} = Data
+  const { cardSec, card, devSec, profileIcon } = classes;
+  const { chatIcon, classifiedIcon, fundIcon, designIcon } = icons;
+  return (
+    <>
+      <section className={cardSec}>
         <Card className={card}>
-          <CardContent >
-            <section  className={devSec}>
-          
-            <img alt= "icon" className={profileIcon} src = {chatIcon} />
+          <CardContent>
+            <section className={devSec}>
+              <img alt="icon" className={profileIcon} src={chatIcon} />
             </section>
             <section>
-            <MuiThemeProvider theme={THEME}>
-              <Typography variant="h5" color="inherit">
-              Chat App
-              </Typography>
-             
+              <MuiThemeProvider theme={THEME}>
+                <Typography variant="h5" color="inherit">
+                  {chatTitle}
+                </Typography>
               </MuiThemeProvider>
             </section>
           </CardContent>
         </Card>
         <Card className={card}>
-          <CardContent >
-            <section  className={devSec}>
-          
-            <img alt= "icon" className={profileIcon} src = {classifiedIcon}  />
+          <CardContent>
+            <section className={devSec}>
+              <img alt="icon" className={profileIcon} src={classifiedIcon} />
             </section>
             <section>
-            <MuiThemeProvider theme={THEME}>
-              <Typography variant="h5" color="inherit">
-              Classified App
-              </Typography>
-             
+              <MuiThemeProvider theme={THEME}>
+                <Typography variant="h5" color="inherit">
+                  {classifiedTitle}
+                </Typography>
               </MuiThemeProvider>
             </section>
           </CardContent>
         </Card>
         <Card className={card}>
-          <CardContent >
-            <section  className={devSec}>
-          
-            <img alt= "icon" className={profileIcon} src={fundIcon} />
+          <CardContent>
+            <section className={devSec}>
+              <img alt="icon" className={profileIcon} src={fundIcon} />
             </section>
             <section>
-            <MuiThemeProvider theme={THEME}>
-              <Typography variant="h5" color="inherit">
-              Croud funding
-              </Typography>
-             
+              <MuiThemeProvider theme={THEME}>
+                <Typography variant="h5" color="inherit">
+                  {fundingTitle}
+                </Typography>
               </MuiThemeProvider>
             </section>
           </CardContent>
         </Card>
         <Card className={card}>
-          <CardContent >
-            <section  className={devSec}>
-          
-            <img alt= "icon" className={profileIcon} src={designIcon} />
+          <CardContent>
+            <section className={devSec}>
+              <img alt="icon" className={profileIcon} src={designIcon} />
             </section>
             <section>
-            <MuiThemeProvider theme={THEME}>
-              <Typography variant="h5" color="inherit">
-              Product Design
-              </Typography>
-             
+              <MuiThemeProvider theme={THEME}>
+                <Typography variant="h5" color="inherit">
+                  {designTitle}
+                </Typography>
               </MuiThemeProvider>
             </section>
           </CardContent>
         </Card>
-        <Card className={card}>
-          <CardContent >
-            <section  className={devSec}>
-          
-            <img alt= "icon" className={profileIcon} src={datingIcon} />
-            </section>
-            <section>
-            <MuiThemeProvider theme={THEME}>
-              <Typography variant="h5" color="inherit">
-              Dating App
-              </Typography>
-             
-              </MuiThemeProvider>
-            </section>
-          </CardContent>
-        </Card>
-        <Card className={card}>
-          <CardContent >
-            <section  className={devSec}>
-          
-            <img alt= "icon" className={profileIcon} src={fitnessIcon} />
-            </section>
-            <section>
-            <MuiThemeProvider theme={THEME}>
-              <Typography variant="h5" color="inherit">
-              Fitness App
-              </Typography>
-             
-              </MuiThemeProvider>
-            </section>
-          </CardContent>
-        </Card>
-       
-      
       </section>
-        </>
-    )
-}
+    </>
+  );
+};
 
-export default SolutionsPrimarySection
+export default SolutionsPrimarySection;

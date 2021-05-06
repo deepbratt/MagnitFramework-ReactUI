@@ -1,10 +1,11 @@
 import React from "react";
 import { useStyles } from "../PartnerWithUsContext/containerStyles";
-import { Paper, Grid } from "@material-ui/core";
+import { Paper, Grid , Typography} from "@material-ui/core";
 import PrimarySection from "../PartnerWithUsContext/PrimarySection";
 import SecondarySection from "../PartnerWithUsContext/SecondarySection";
-import Heading4 from "../../ContainerStructure/Headings/Heading4";
 import { Colors } from "../../Theme/color.constants";
+import {THEME} from "../../ContainerStructure/Headings/headingStyles"
+import { MuiThemeProvider } from "@material-ui/core/styles";
 
 const {
   yellowOrange,
@@ -22,13 +23,21 @@ const {
 } = Colors;
 
 const WhyUsContainer = () => {
-  const { root, grid } = useStyles();
+  const { root, grid ,underlinedText} = useStyles();
   return (
     <>
       <Grid container>
         <Grid item md={12} xs={12}>
           <Paper className={root} elevation={0}>
-            <Heading4 title="Why Us?" />
+          <section>
+          <MuiThemeProvider theme={THEME}>
+                <Typography variant="h4" color="inherit">
+                  <span className={underlinedText}>
+                  Why Us? 
+                  </span>
+                </Typography>
+                </MuiThemeProvider>
+            </section>
           </Paper>
         </Grid>
         <Grid className={grid} item lg={5} md={5} xs={12}>
@@ -39,12 +48,8 @@ const WhyUsContainer = () => {
             agileColor={lightblue}
             transparencyColor={persianGreen}
             moneyColor={Orchid}
-            appFill={fillColor}
-            reliableFill={fillColor}
-            innovativeFill={fillColor}
-            agileFill={fillColor}
-            transparencyFill={fillColor}
-            moneyFill={fillColor}
+            IconFill={fillColor}
+           
           />
         </Grid>
         <Grid className={grid} item lg={5} md={5} xs={12}>
@@ -54,12 +59,7 @@ const WhyUsContainer = () => {
             supportColor={skyBlueColor}
             timeColor={heliotrope}
             dataColor={darkBlue}
-            qualityFill={fillColor}
-            geekyFill={fillColor}
-            supportFill={fillColor}
-            timeFill={fillColor}
-            dataFill={fillColor}
-            isoFill={fillColor}
+            IconFill={fillColor}
           />
         </Grid>
       </Grid>

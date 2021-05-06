@@ -10,15 +10,17 @@ import {
 } from "@material-ui/core";
 import Breakpoints from "../../Theme/theme.breakpoints";
 import * as Images from "../../Components/Hero/Images"
-
+import {Colors} from "../../Theme/color.constants"
+import {Data} from "../../Utils/Constants/Language/en/GlanceAtWorkData"
 const Container = ({backColor}) => {
   const classes = useStyles();
   const {image1,image2,image3} = Images
+  const {title,subtitle,buttonText} = Data
+  const {whiteColor} = Colors
   const {
     serviceHeading,
     root,
     card,
-    dev,
     devSec,
     cardSec,
     cardContent,
@@ -28,88 +30,75 @@ const Container = ({backColor}) => {
       <Paper style={{backgroundColor: backColor}} className={root} elevation={0}>
         <section className={serviceHeading}>
           <MuiThemeProvider theme={THEME}>
-            <Typography variant="h4" color="inherit">
-              A Glance at Our Work
+            <Typography variant="h4" >
+            {title}
             </Typography>
           </MuiThemeProvider>
         </section>
         <section className={cardSec}>
           <Card className={card}>
             <CardContent>
-              <section className={devSec}>
-                <section>
-                  <img width="100%" height="100%" src={image1} alt=""/>
-                </section>
-              </section>
-              <section>
+              <section >
+                <section className={devSec}>
+                  <img width="250px" src={image1} alt=""/>
+                  <section className={cardContent}>
                 <MuiThemeProvider theme={THEME}>
-                  <Typography variant="h5" color="inherit">
-                    Alife App
-                  </Typography>
-                  <Typography paragraph={true} color="inherit">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elitse do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud xercitation ullamco
-                    laboris nisi ut aliquip
+                  <Typography variant="h5">
+                   {subtitle}
                   </Typography>
                 </MuiThemeProvider>
               </section>
+                </section>
+              </section>
+            
             </CardContent>
           </Card>
           <Card className={card}>
             <CardContent>
-              <section className={cardContent}>
-                <section>
-                  <img width="100%" height="100%" src={image2} alt=""/>
-                </section>
-              </section>
-              <section>
+              <section >
+                <section className={devSec}>
+                  <img width="300px" src={image2} alt=""/>
+                  <section className={cardContent}>
                 <MuiThemeProvider theme={THEME}>
-                  <Typography variant="h5" color="inherit">
-                    Alife App
-                  </Typography>
-                  <Typography paragraph={true} color="inherit">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elitse do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud xercitation ullamco
-                    laboris nisi ut aliquip
+                  <Typography variant="h5" >
+                  {subtitle}
                   </Typography>
                 </MuiThemeProvider>
               </section>
+                </section>
+                
+              </section>
+             
             </CardContent>
           </Card>
           <Card className={card}>
             <CardContent>
-              <section className={dev}>
-                <section>
-                  <img width="100%" height="100%" src={image3} alt=""/>
-                </section>
-              </section>
-              <section>
+              <section >
+                <section className={devSec}>
+                  <img width="317px"  src={image3} alt=""/>
+                  <section className={cardContent}>
                 <MuiThemeProvider theme={THEME}>
-                  <Typography variant="h5" color="inherit">
-                    Alife App
-                  </Typography>
-                  <Typography paragraph={true} color="inherit">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elitse do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud xercitation ullamco
-                    laboris nisi ut aliquip
+                  <Typography variant="h5">
+                  {subtitle}
                   </Typography>
                 </MuiThemeProvider>
+              </section>
+                </section>
               </section>
             </CardContent>
           </Card>
         </section>
         <section>
+        <MuiThemeProvider theme={THEME}>
           <Button
-            style={{ textTransform: "none", marginLeft: "10px" }}
+            style={{ textTransform: "none", marginLeft: "10px", backgroundColor: whiteColor }}
             variant="contained"
             size={Breakpoints()}
-            color="secondary"
+            color="white"
           >
-            See More
+            {buttonText}
           </Button>
+          </MuiThemeProvider>
         </section>
       </Paper>
     </>

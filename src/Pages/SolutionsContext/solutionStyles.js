@@ -3,17 +3,25 @@ import { createMuiTheme } from "@material-ui/core/styles";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 import { Colors } from "../../Theme/color.constants";
 
-const { solutionsBackground, solutionsSub} = Colors;
+const { BlueRibbon, whiteColor} = Colors;
 const breakpoints = createBreakpoints({});
 
 export const THEME = createMuiTheme({
   overrides: {
+    MuiButton: {
+      root: {
+        borderRadius: 0,
+        color: 'black',
+        fontFamily: "Poppins",
+        boxShadow: "none"
+      }},
     MuiTypography: {
       h4: {
         fontFamily: "Poppins",
         fontStyle: "normal",
         fontSize: "35px",
         lineHeight: 1.6,
+        color: whiteColor,
         fontWeight: "bolder",
         textAlign: "center",
         [breakpoints.only("sm")]: {
@@ -24,6 +32,9 @@ export const THEME = createMuiTheme({
         [breakpoints.down("xs")]: {
           fontSize: "20px",
         },
+      },
+      paragraph:{
+        color: whiteColor,
       },
       h5: {
         fontFamily: "Poppins",
@@ -41,7 +52,7 @@ export const useStyles = makeStyles((theme) => ({
     paddingTop: "25px",
     margin: "0px",
     padding: "0px",
-    backgroundColor: solutionsBackground,
+    backgroundColor: BlueRibbon,
     width: "100%",
     paddingBottom: "50px",
   },
@@ -50,9 +61,10 @@ export const useStyles = makeStyles((theme) => ({
     width: "100%",
     flexFlow: "wrap",
     justifyContent: "center",
+    paddingBottom: "20px"
   },
   card: {
-    backgroundColor: solutionsSub,
+    backgroundColor: whiteColor,
     width: "13%",
     height: "150px",
     display: "flex",
@@ -68,7 +80,7 @@ export const useStyles = makeStyles((theme) => ({
     margin: "10px",
     cursor: "pointer",
     [breakpoints.only("md")]: {
-      width: "30%",
+      width: "40%",
     },
     [breakpoints.only("sm")]: {
       width: "40%",
@@ -85,9 +97,7 @@ export const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   profileIcon: {
-    filter:
-      "invert(40%) sepia(60%) saturate(3193%) hue-rotate(323deg) brightness(98%) contrast(93%)",
-    width: "98px",
-    height: "50px",
+    width: "65px",
+    // height: "50px",
   },
 }));

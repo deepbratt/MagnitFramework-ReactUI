@@ -2,17 +2,41 @@ import React from "react";
 import { useStyles } from "./sliderStyles";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Paper} from "@material-ui/core";
 import Slider from "./Slider";
-import {Colors} from "../../Theme/color.constants"
-
-const slideArr = [<Slider/>,<Slider/>,<Slider/>]
+import { Colors } from "../../Theme/color.constants";
+import { Data, array } from "../../Utils/Constants/Language/en/SliderText";
+const { mainSlide, PalePrim, Chablis } = Colors;
+const { headingLineOne, headingLineTwo, headingLineLast, buttonText } = Data;
+const slideArr = [
+  <Slider
+    headingOne={headingLineOne}
+    headingTwo={headingLineTwo}
+    headingThree={headingLineLast}
+    text={buttonText}
+    data={array}
+    color={mainSlide}
+  />,
+  <Slider
+    headingOne={headingLineOne}
+    headingTwo={headingLineTwo}
+    headingThree={headingLineLast}
+    text={buttonText}
+    data={array}
+    color={PalePrim}
+  />,
+  <Slider
+    headingOne={headingLineOne}
+    headingTwo={headingLineTwo}
+    headingThree={headingLineLast}
+    text={buttonText}
+    data={array}
+    color={Chablis}
+  />,
+];
 const Container = ({ slides }) => {
-
   const classes = useStyles();
-  const {mainSlide,midSlide,lastSlide} = Colors
-  const { slide,root } = classes;
-  const colors = [mainSlide,midSlide,lastSlide]
+
+  const { slide } = classes;
 
   return (
     <Carousel
@@ -24,12 +48,9 @@ const Container = ({ slides }) => {
       infiniteLoop={true}
       transitionTime={500}
     >
-   
       {slides.map((slide, i) => {
-        return <Paper style={{backgroundColor: colors[i]}} key={i} className={root} elevation= {0} >
-          {slide}
-        </Paper>
-})}
+        return <section>{slide}</section>;
+      })}
     </Carousel>
   );
 };
