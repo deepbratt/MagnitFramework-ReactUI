@@ -5,7 +5,7 @@ import { Card, CardContent, Paper } from "@material-ui/core";
 import Heading4 from "../../../ContainerStructure/Headings/Heading4";
 import Heading6 from "../../../ContainerStructure/Headings/Heading6";
 import Paragraph from "../../../ContainerStructure/Headings/Paragraphs/Paragraph";
-import { MidSection } from "../MainComponent/MainData";
+import { MidSection } from "../../../Components/textConstants/AboutUsData";
 
 const MissionContext = () => {
   const { root, cardSec, devSec, dev } = useStyles();

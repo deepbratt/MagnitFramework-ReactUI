@@ -3,7 +3,7 @@ import { useStyles } from "./mainStyles";
 import { Card, CardContent, Paper } from "@material-ui/core";
 import Heading from "../../../ContainerStructure/Headings/Heading4";
 import Paragraph from "../../../ContainerStructure/Headings/Paragraphs/Paragraph";
-import { MainData } from "./MainData";
+import { MainData } from "../../../Components/textConstants/AboutUsData";
 
 const AboutMainSection = () => {
   const {

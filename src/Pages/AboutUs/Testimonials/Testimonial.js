@@ -3,7 +3,7 @@ import { useStyles } from "./testimonialStyles";
 import { Card, CardContent, Paper, Grid } from "@material-ui/core";
 import Paragraph from "../../../ContainerStructure/Headings/Paragraphs/Paragraph";
 import Heading4 from "../../../ContainerStructure/Headings/Heading4";
-import { Testimonials } from "../MainComponent/MainData";
+import { Testimonials } from "../../../Components/textConstants/AboutUsData";
 
 const Testimonial = () => {
   const {

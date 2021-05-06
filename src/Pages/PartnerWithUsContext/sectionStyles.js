@@ -4,7 +4,6 @@ import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 import { Colors } from "../../Theme/color.constants";
 
 const { PartnerSectionIcons } = Colors;
-const {} = PartnerSectionIcons;
 const breakpoints = createBreakpoints({});
 
 export const THEME = createMuiTheme({
