@@ -1,17 +1,24 @@
 import { makeStyles } from "@material-ui/core";
 import { Colors } from "../../Theme/color.constants";
-
+import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
+const breakpoints = createBreakpoints({});
 const { skyBlue } = Colors;
 
 const OptionTabStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
+    [breakpoints.down("sm")]: {
+      flexDirection:"column"
+       },
   },
   tabs: {
     margin: "10px",
     border: "none",
     width: "40%",
-   
+    [breakpoints.down("sm")]: {
+      width: "100%",
+       },
+  
   },
   tab: {
     margin: "10px",

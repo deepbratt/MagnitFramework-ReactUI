@@ -10,6 +10,8 @@ import {
 } from "@material-ui/core";
 import Breakpoints from "../../Theme/theme.breakpoints";
 import * as Images from "../../Components/Hero/Images"
+import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
+const breakpoints = createBreakpoints({});
 
 const Container = ({backColor}) => {
   const classes = useStyles();
@@ -38,8 +40,8 @@ const Container = ({backColor}) => {
           <Card className={card}>
             <CardContent>
               <section className={devSec}>
-                <section>
-                  <img width="83%" height="100%" src={image1} alt=""/>
+                <section> 
+                  <img  src={image1} alt="" style={{width:"67%",height:"100%",}}/>
                 </section>
               </section>
               <section >

@@ -25,12 +25,12 @@ backgroundBlendMode: "multiply"
     height: "700px",
     [theme.breakpoints.down("md")]: {
       height: "500px",
-      right: "-5%",
+      right: "0%",
       top: "-5%",
     },
     [theme.breakpoints.down("sm")]: {
       height: "350px",
-      right: "-3%",
+      right: "3%",
       top: "3%",
     },
   },

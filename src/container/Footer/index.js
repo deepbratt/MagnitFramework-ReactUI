@@ -7,12 +7,12 @@ import IconTwitter from "../../assets/images/icon-twitter.png";
 import IconLI from "../../assets/images/icon-linkedIn.png";
 import Magnit from "../../assets/images/Magnit.png";
 const Footer = () => {
-  const { root, logo, list, section, policy, contact,head,footer } = FooterStyle();
+  const { root,rootRow, logo, list, section, policy, contact,head,footer } = FooterStyle();
   const ls = [ "Service", "Solutions", "FAQ'S,Case Study", "Blog", "Career"];
   const lsTwo = [""];
   return (
     <footer className={root}>
-      <Grid container spacing={1} direction="row" justify="space-between">
+      <Grid container spacing={1} direction="row" justify="space-between" className={rootRow}>
         {/* <Grid item xs={12} md={4} lg={3}>
           <div className={logo}>
             <Typography
@@ -92,6 +92,7 @@ const Footer = () => {
             </Typography>
           </div>
         </Grid>
+        </Grid>
         <Grid xs={12} className={footer} >
         <Grid item xs={12} md={6}>
           <Typography
@@ -116,8 +117,9 @@ const Footer = () => {
             </Typography>
           </div>
         </Grid>
+        
         </Grid>
-      </Grid>
+      
     
     </footer>
   );

@@ -118,12 +118,11 @@ export const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "center",
     [breakpoints.up("md")]: {
-      height: "100%",
+      height: "119%",
     },
-    // [breakpoints.down("sm")]: {
-    //   height: "63%",
-    // },
-   
+    [breakpoints.down("md")]: {
+      height: "100%",
+    }, 
   },
 
 

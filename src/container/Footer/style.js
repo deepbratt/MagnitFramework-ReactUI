@@ -4,7 +4,20 @@ const FooterStyle = makeStyles((theme) => ({
  
   root: {
     backgroundColor: "#161C28",
-    padding: "40px 150px",
+    // padding: "40px 150px",
+    // [theme.breakpoints.down("lg")]: {
+    //   padding: "40px 100px",
+    // },
+    // [theme.breakpoints.down("md")]: {
+    //   padding: "40px 70px",
+    // },
+    // [theme.breakpoints.down("xs")]: {
+    //   padding: "30px 40px",
+    // },
+    
+  },
+  rootRow:{
+     padding: "40px 150px",
     [theme.breakpoints.down("lg")]: {
       padding: "40px 100px",
     },
@@ -49,7 +62,17 @@ const FooterStyle = makeStyles((theme) => ({
   footer:{
     borderTop:"1px solid gray",
   display:"flex" ,
-  flexDirection:"row"
+  flexDirection:"row",
+  padding: "40px 150px 10px",
+  [theme.breakpoints.down("lg")]: {
+    padding: "40px 100px 10px",
+  },
+  [theme.breakpoints.down("md")]: {
+    padding: "40px 70px 10px",
+  },
+  [theme.breakpoints.down("xs")]: {
+    padding: "30px 40px 0px",
+  },
 },
 
 }));
