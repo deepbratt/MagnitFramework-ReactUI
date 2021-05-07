@@ -4,7 +4,9 @@ import { Colors } from "../../Theme/color.constants";
 const { Citrine, darkJungleGreen } = Colors;
 
 const FooterStyle = makeStyles((theme) => ({
+ 
   root: {
+
     backgroundColor: darkJungleGreen,
     padding: "40px 150px",
     [theme.breakpoints.down("lg")]: {

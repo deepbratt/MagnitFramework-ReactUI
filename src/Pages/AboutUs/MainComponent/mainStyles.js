@@ -5,10 +5,11 @@ const { Luigi, Harlequin } = Colors;
 const breakpoints = createBreakpoints({});
 export const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: "76px",
     width: "100%",
-    padding: "0px",
     overflow: "hidden",
+    margin: 0,
+    padding: 0,
+    width: "100vw"
   },
   card: {
     backgroundImage: "linear-gradient(rgb(44,212,0,0.4),white)",

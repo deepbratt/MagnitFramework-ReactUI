@@ -3,7 +3,14 @@ import Typography from "@material-ui/core/Typography";
 import PropTypes from "prop-types";
 import LayoutStyle from "./style";
 
-const Section = ({ title, children, backColor, startQuote, endQuote }) => {
+const Section = ({
+  title,
+  children,
+  backColor,
+  startQuote,
+  endQuote,
+  highlightWords,
+}) => {
   const {
     root,
     content,
@@ -18,12 +25,6 @@ const Section = ({ title, children, backColor, startQuote, endQuote }) => {
   const titleText = title.split("/");
   const normalTitle = titleText[0];
   const underlinedTitle = titleText[1];
-
-  const UnderLinedTitle = () => {
-    return (
-      normalTitle + <span className={underlinedStyles}>{underlinedTitle}</span>
-    );
-  };
 
   return (
     <div className={root} style={{ backgroundColor: backColor }}>
@@ -54,6 +55,7 @@ const Section = ({ title, children, backColor, startQuote, endQuote }) => {
             <span className={underlinedStyles}>{underlinedTitle}</span>
           </Typography>
         )}
+
         <Grid item xs={12}>
           {children}
         </Grid>

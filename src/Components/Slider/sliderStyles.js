@@ -62,28 +62,32 @@ export const useStyles = makeStyles((theme) => ({
   root: {
     margin: 0,
     padding: 0,
-    marginTop: "60px",
+    width: "100vw",
     display: "flex",
     [theme.breakpoints.up("lg")]: {
       textAlign: "left",
       paddingLeft: "100px",
-      paddingTop: "60px",
-      height: "100%",
+      paddingTop: "100px",
+      alignItems:"center",
+      // height:"100vh",
     },
     [theme.breakpoints.only("md")]: {
       textAlign: "left",
       paddingLeft: "100px",
-      paddingTop: "60px",
-      paddingBottom: "60px",
+      paddingTop: "100px",
+      alignItems:"center",
+      // height:"100vh"
     },
     [theme.breakpoints.only("sm")]: {
       flexDirection: "column",
       alignItems: "center",
+      paddingTop: "70px",
+      justifyContent:"center"
     },
     [breakpoints.down("xs")]: {
       flexDirection: "column",
       alignItems: "center",
-      paddingTop: "20px",
+      paddingTop: "80px",
     },
   },
   headingSec: {

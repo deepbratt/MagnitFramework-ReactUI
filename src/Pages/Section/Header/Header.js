@@ -7,6 +7,7 @@ import {
   ListItemText,
   Toolbar,
   Button,
+  AppBar
 } from "@material-ui/core";
 import { NavLink } from "react-router-dom";
 import Scrolltrigger from "../../../Theme/Scrolltrigger";
@@ -28,15 +29,16 @@ const Header = (props) => {
     list,
     listItem,
     button,
-    appbar,
     appbarsolid,
     link,
+    root,
     active,
   } = classes;
 
   return (
     <>
-      <Toolbar className={!trigger ? appbar : appbarsolid}>
+    <AppBar  className={root} position="sticky">
+      <Toolbar  className={appbarsolid}>
         <section>
           <img className={logo} alt="logo" src={Logo} />
         </section>
@@ -84,6 +86,7 @@ const Header = (props) => {
           </List>
         </Hidden>
       </Toolbar>
+      </AppBar>
     </>
   );
 };

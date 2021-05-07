@@ -15,6 +15,7 @@ const Footer = () => {
     list,
     section,
     policy,
+    head,
     contact,
     sectionBorder,
   } = FooterStyle();
@@ -39,6 +40,7 @@ const Footer = () => {
             <Typography align="left" gutterBottom variant="h5">
               {contactUs}
             </Typography>
+
             <div className={contact}>
               <img src={IconFB} alt="Facebook Icon" />
               <img src={IconTwitter} alt="Twitter Icon" />
@@ -47,6 +49,9 @@ const Footer = () => {
           </div>
         </Grid>
         <Grid item xs={12} md={4} lg={2}>
+          <Typography align="left" gutterBottom variant="h3" className={head}>
+            Company
+          </Typography>
           <div className={list}>
             <Typography align="left" gutterBottom variant="h6" component="h5">
               {navigation.title}
@@ -73,6 +78,7 @@ const Footer = () => {
             ))}
           </div>
         </Grid>
+
         <Grid item xs={12} md={4} lg={2}>
           <div className={section}>
             <Typography align="left" gutterBottom variant="h5">

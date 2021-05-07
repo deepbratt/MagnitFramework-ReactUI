@@ -21,6 +21,7 @@ export const THEME = createMuiTheme({
         fontFamily: "Poppins",
         fontStyle: "normal",
         fontSize: "35px",
+        color:"white",
         lineHeight: 1.6,
         color: whiteColor,
         fontWeight: "bolder",
@@ -36,7 +37,17 @@ export const THEME = createMuiTheme({
       },
       h5: {
         fontFamily: "Poppins",
-        fontWeight: "bolder",
+        textAlign:"left",
+        fontWeight: "600",
+        fontSize: "16px",
+        marginTop: "10px",
+        marginLeft:"10px",
+      
+      },
+      h6: {
+        fontFamily: "Poppins",
+        textAlign:"left",
+        fontWeight: "600",
         fontSize: "24px",
         marginTop: "22px",
         color: whiteColor,
@@ -119,5 +130,10 @@ cardContent: {
   textAlign: "left",
   paddingLeft: "20px",
 
+},
+seeMore:{
+  textTransform: "none", 
+  marginLeft: "10px",
+   backgroundColor: whiteColor
 }
 }));

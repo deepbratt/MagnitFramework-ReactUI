@@ -1,4 +1,6 @@
 import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
+import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
+const breakpoints = createBreakpoints({});
 // Object of our themes
 export default function createTheme(options) {
   return createMuiTheme({
@@ -20,7 +22,7 @@ export default function createTheme(options) {
       MuiTab: {
         root: {
           "&$selected": {
-            backgroundColor: "#1DBF73",
+            backgroundColor: "#2cd400",
             color: "#fff",
           },
         },

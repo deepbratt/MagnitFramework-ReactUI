@@ -1,8 +1,17 @@
 import { makeStyles } from "@material-ui/core";
-
+import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
+const breakpoints = createBreakpoints({});
 const ServicesSectionStyles = makeStyles((theme) => ({
   root: {
     position: "relative",
+    marginTop: "0px",
+    [theme.breakpoints.only("md")]: {
+      marginTop: "-7px"
+    },
+    [theme.breakpoints.down("sm")]: {
+      marginTop: "-19px"
+    },
+  
     "& > img": {
       position: "absolute",
     },
@@ -52,9 +61,9 @@ const ServicesSectionStyles = makeStyles((theme) => ({
   },
   avatar1: {
     position: "absolute",
-    width: "130px",
-    height: "130px",
-    left: "5%",
+    width: "120px",
+    height: "120px",
+    left: "3%",
     bottom: "1%",
     [theme.breakpoints.down("md")]: {
       width: "100px",
@@ -69,8 +78,8 @@ const ServicesSectionStyles = makeStyles((theme) => ({
   },
   avatar2: {
     position: "absolute",
-    width: "120px",
-    height: "120px",
+    width: "110px",
+    height: "110px",
     left: "0",
     top: "15%",
     [theme.breakpoints.down("md")]: {
@@ -101,9 +110,9 @@ const ServicesSectionStyles = makeStyles((theme) => ({
   },
   avatar4: {
     position: "absolute",
-    width: "110px",
-    height: "110px",
-    right: "15%",
+    width: "100px",
+    height: "100px",
+    right: "14%",
     top: "3%",
     [theme.breakpoints.down("md")]: {
       width: "80px",
@@ -134,9 +143,9 @@ const ServicesSectionStyles = makeStyles((theme) => ({
   },
   avatar6: {
     position: "absolute",
-    width: "123px",
-    height: "123px",
-    right: "10%",
+    width: "115px",
+    height: "115px",
+    right: "5%",
     bottom: "8%",
     [theme.breakpoints.down("md")]: {
       width: "103px",
@@ -156,7 +165,7 @@ const ServicesSectionStyles = makeStyles((theme) => ({
     zIndex: -1,
   },
   leftStarFishPattern: {
-    left: "-16%",
+    left: "-8%",
     top: "1%",
     height: "500px",
     [theme.breakpoints.down("md")]: {
@@ -170,6 +179,60 @@ const ServicesSectionStyles = makeStyles((theme) => ({
       top: "5%",
     },
   },
+  commaPattern: {
+    top:" 78%",
+    height: "70px",
+    right: "267px",
+    [breakpoints.down("sm")]: {
+      right: "-5px",
+      top:" 82%",
+      height: "50px",
+     },
+     [breakpoints.down("md")]: {
+      top:" 75%",
+      right: "-10px",
+     },
+  },
+  yellowCommaPattern:{
+      top: "38%",
+      left: "20%",
+      height: "70px",
+      [breakpoints.down("sm")]: {
+        top: "29%",
+        left: "-5%",
+        height: "50px",
+       },
+       [breakpoints.down("md")]: {
+        top: "34%",
+        left: "-6%",
+       },
+    },
+    pinkDotPattern:{
+      top: "-4%",
+    left: "-3%",
+    height: "40px",
+    [breakpoints.down("sm")]: {
+      height: "30px"
+       },
+    },
+    yellowDotPattern:{
+      top: "97%",
+      right: "-4%",
+      height: "40px",
+      [breakpoints.down("sm")]: {
+        height: "30px"
+         },
+    },
+    miniYellowPattern: {
+      top: "62%",
+      left: "4%",
+      height: "18px"
+     },
+     smallDotPattern:{
+      top: "-4%",
+      right: "27%",
+      height: "13px"
+     },
   leftDottedPattern: {
     left: "-12%",
     top: "60%",
@@ -185,17 +248,17 @@ const ServicesSectionStyles = makeStyles((theme) => ({
     },
   },
   rightStarFishPattern: {
-    right: "-16%",
+    right: "-13%",
     top: "1%",
     height: "500px",
     [theme.breakpoints.down("md")]: {
       height: "400px",
-      right: "-25%",
+      right: "-0%",
       top: "2%",
     },
     [theme.breakpoints.down("sm")]: {
       height: "300px",
-      right: "-35%",
+      right: "0%",
       top: "-10%",
     },
   },

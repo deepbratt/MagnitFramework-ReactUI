@@ -42,6 +42,7 @@ export const Colors = {
   Orchid: "#E666D9",
   orangeRed: "#FF554C",
   pictonBlue: "#4CBFFF",
+  skyBlue:"#116EF0",
   heliotrope: "#DB4CFF",
   blueGreen: "#2EBEB5",
   hanBlue: "#486FD5",

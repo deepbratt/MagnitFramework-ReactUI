@@ -10,7 +10,7 @@ export default createTheme({
       contrastText: "#fff",
     },
     secondary: {
-      main: "#1dbf73",
+      main: "#2CD400",
       dark: "#008732",
       contrastText: "#fff",
     },
