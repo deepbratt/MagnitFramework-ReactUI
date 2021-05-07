@@ -1,4 +1,7 @@
 import { makeStyles } from "@material-ui/core/styles";
+import {Colors} from '../../Theme/color.constants'
+
+const {Harlequin} = Colors;
 
 const LayoutStyle = makeStyles((theme) => ({
   root: {
@@ -31,6 +34,9 @@ const LayoutStyle = makeStyles((theme) => ({
     right: "1%",
     bottom: "-3%"
   },
+  hightlightWords:{
+    background:`linear-gradient(to top, ${Harlequin} 50%, transparent 50%)`
+  }
 }));
 
 export default LayoutStyle;
