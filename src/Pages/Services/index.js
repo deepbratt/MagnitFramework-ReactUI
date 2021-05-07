@@ -78,16 +78,16 @@ const Services = () => {
           <Typography variant="buttom">Get Started</Typography>
         </Button>
       </Banner>
-      <Section title={ServicesSectionTitle}>
+      <Section title={ServicesSectionTitle} highlightWords={1}>
    
         <PointList data={servicesData} />
       </Section>
       <img className={leftPattern} src={StarFishPattern} alt="" srcset="" />
-      <Section title={HiringSectionTitle}>
+      <Section title={HiringSectionTitle} highlightWords={2}>
         <OptionsTab />
       </Section>
       <img className={rightPattern} src={StarFishPattern} alt="" srcset="" />
-      <Section title={WhyHireSectionTitle}>
+      <Section title={WhyHireSectionTitle} highlightWords={3}>
         <PointList data={hireUsData} horizontal={true} />
       </Section>
       <Section backColor={skyBlue}>

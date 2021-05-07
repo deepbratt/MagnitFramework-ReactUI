@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import LayoutStyle from "./style";
 
 
-const Section = ({ title, children, backColor, startQuote, endQuote }) => {
+const Section = ({ title, children, backColor, startQuote, endQuote, highlightWords}) => {
   const {
     root,
     content,
@@ -13,7 +13,15 @@ const Section = ({ title, children, backColor, startQuote, endQuote }) => {
     startQuote2,
     endQuote1,
     endQuote2,
+    hightlightWords
   } = LayoutStyle();
+
+  const underLineWords = (sentence, numOfWords)=>{
+    return sentence.split(" ").splice(-numOfWords).join(" ");
+  }
+  const removeUnderLineWords = (sentence, numOfWords)=>{
+    return sentence.split(" ").slice(0, -numOfWords).join(" ");
+  }
 
   return (
     <div className={root} style={{ backgroundColor: backColor }}>
@@ -40,7 +48,9 @@ const Section = ({ title, children, backColor, startQuote, endQuote }) => {
         )}
         {title && (
           <Typography className={header} color="textPrimary" variant="h2">
-            {title}
+            {removeUnderLineWords(title, highlightWords)}
+            {" "}
+            <span className={hightlightWords}>{underLineWords(title, highlightWords)}</span>
           </Typography>
         )}
        
