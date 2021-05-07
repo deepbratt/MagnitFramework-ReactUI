@@ -21,8 +21,8 @@ const pathRouting = {
 };
 
 const pageRoutes = {
-  [pathIds.company]: {
-    path: pathRouting.company,
+  [pathIds.home]: {
+    path: pathRouting.home,
     sidebarName: "Home",
     component: Home
   },
