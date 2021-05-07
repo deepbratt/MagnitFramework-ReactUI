@@ -3,7 +3,7 @@ import Services from "./../Pages/Services";
 import Home from "../Pages/Home/index"
 
 const pathIds = {
-  company: "company",
+  home: "home",
   about: "about",
   services: "services",
   solutions: "solutions",
@@ -22,7 +22,7 @@ const pathRouting = {
 
 const pageRoutes = {
   [pathIds.company]: {
-    path: pathRouting.home,
+    path: pathRouting.company,
     sidebarName: "Home",
     component: Home
   },
