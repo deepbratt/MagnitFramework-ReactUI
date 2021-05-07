@@ -12,12 +12,19 @@ const CertificationListStyles = makeStyles((theme) => ({
     textAlign: "left",
     "& > p": {
       color: darkSilver,
+      [theme.breakpoints.down("md")]: {
+        fontSize: "1rem",
+      },
     },
   },
   imageWrapper: {
     "& > img": {
       maxwidth: "458px",
       maxHeight: "458px",
+      [theme.breakpoints.down("sm")]: {
+        maxwidth: "300px",
+        maxHeight: "300px",
+      },
     },
   },
 }));

@@ -24,7 +24,7 @@ const CertificationList = ({ root, data }) => {
         </div>
       </Grid>
       <Grid xs={12} md={6} className={imageWrapper}>
-        <Lottie options={defaultOptions} height={400} width={400} />
+        <Lottie options={defaultOptions} />
       </Grid>
     </Grid>
   );

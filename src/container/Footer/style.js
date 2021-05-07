@@ -60,6 +60,22 @@ const FooterStyle = makeStyles((theme) => ({
       borderRadius: "5px",
     },
   },
+  sectionBorder: {
+    position: "relative",
+    borderTop: "1px solid white",
+    marginTop: "5px",
+    paddingTop: "10px",
+    "&::before": {
+      content: "",
+      position: "absolute",
+      top: 0,
+      borderTop: "1px solid white",
+      width: "100vw",
+      height: "0px",
+      // left: "50%",
+      // transform: "translateX(-50%)",
+    },
+  },
 }));
 
 export default FooterStyle;

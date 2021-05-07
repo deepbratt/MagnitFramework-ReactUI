@@ -8,11 +8,23 @@ const Section = ({ title, children, backColor, startQuote, endQuote }) => {
     root,
     content,
     header,
+    underlinedStyles,
     startQuote1,
     startQuote2,
     endQuote1,
     endQuote2,
   } = LayoutStyle();
+
+  const titleText = title.split("/");
+  const normalTitle = titleText[0];
+  const underlinedTitle = titleText[1];
+
+  const UnderLinedTitle = () => {
+    return (
+      normalTitle + <span className={underlinedStyles}>{underlinedTitle}</span>
+    );
+  };
+
   return (
     <div className={root} style={{ backgroundColor: backColor }}>
       <div className={content}>
@@ -38,7 +50,8 @@ const Section = ({ title, children, backColor, startQuote, endQuote }) => {
         )}
         {title && (
           <Typography className={header} color="textPrimary" variant="h2">
-            {title}
+            {normalTitle}
+            <span className={underlinedStyles}>{underlinedTitle}</span>
           </Typography>
         )}
         <Grid item xs={12}>
@@ -51,6 +64,7 @@ const Section = ({ title, children, backColor, startQuote, endQuote }) => {
 
 Section.defaultProps = {
   backColor: "#FFFFFF",
+  title: "",
 };
 
 Section.propTypes = {

@@ -9,7 +9,15 @@ import Logo from "../../assets/Logo-white.png";
 import { footerText } from "../../Utils/Constants/Language";
 
 const Footer = () => {
-  const { root, logo, list, section, policy, contact } = FooterStyle();
+  const {
+    root,
+    logo,
+    list,
+    section,
+    policy,
+    contact,
+    sectionBorder,
+  } = FooterStyle();
   const {
     contactUs,
     navigation,
@@ -43,8 +51,8 @@ const Footer = () => {
             <Typography align="left" gutterBottom variant="h6" component="h5">
               {navigation.title}
             </Typography>
-            {navigation.links.map((item) => (
-              <Link to={`\${item}`}>
+            {navigation.links.map((item, idx) => (
+              <Link key={idx} to={`\${item}`}>
                 <Typography align="left" gutterBottom variant="body2">
                   {item}
                 </Typography>
@@ -75,6 +83,8 @@ const Footer = () => {
             </Typography>
           </div>
         </Grid>
+      </Grid>
+      <Grid className={sectionBorder} container>
         <Grid item xs={12} md={6}>
           <Typography
             className="copyrights"
