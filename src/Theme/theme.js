@@ -1,4 +1,7 @@
 import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
+import { ThemeProvider } from "@material-ui/styles";
+import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
+const breakpoints = createBreakpoints({});
 // Object of our themes
 export default function createTheme(options) {
   return createMuiTheme({
@@ -20,7 +23,7 @@ export default function createTheme(options) {
       MuiTab: {
         root: {
           "&$selected": {
-            backgroundColor: "#1DBF73",
+            backgroundColor: "#2cd400",
             color: "#fff"
           },
         },
@@ -86,6 +89,7 @@ export default function createTheme(options) {
       h3: {
         fontSize: "1.5rem",
         fontWeight: 600,
+       
       },
       button: {
         fontSize: "1.25rem",
@@ -95,15 +99,22 @@ export default function createTheme(options) {
         fontWeight: 400,
         fontSize: "1rem",
         color: "#FFFFFF",
+        [breakpoints.down("sm")]: {
+          fontSize: ".7rem",
+           },
       },
       body1: {
         fontWeight: 500,
         size: "1rem",
         color: "#FFFFFF",
+        [breakpoints.down("sm")]: {
+          fontSize: ".8rem",
+           },
       },
       body2: {
         fontSize: "1rem",
         color: "#151B27",
+        
       },
     },
     shape: {

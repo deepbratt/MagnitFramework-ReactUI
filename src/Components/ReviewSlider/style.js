@@ -1,5 +1,6 @@
 import { makeStyles } from "@material-ui/core";
-
+import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
+const breakpoints = createBreakpoints({});
 const ReviewSliderStyles = makeStyles((theme) => ({
   grid: {
     margin: "80px 0",
@@ -40,6 +41,51 @@ const ReviewSliderStyles = makeStyles((theme) => ({
       },
     },
   },
+
+  nextBtn:{
+    position: "absolute",
+    top: "31.7em",
+    right:"16.3em",
+    bottom: "auto",
+    padding: ".4em",
+    zIndex: 1,
+    color:"white",
+    border:"none",
+    width:"50px",
+    height:"50px",
+    borderRadius:"50%",
+    backgroundColor: "#151B27",
+    [breakpoints.down("sm")]: {
+      display:"none"
+       },
+       [breakpoints.only("md")]: {
+        display:"none"
+      
+         },
+  },
+  prevBtn:{
+    position: "absolute",
+    inset:"31.7em 16.3em auto 13.5rem",
+    padding: ".4em",
+    zIndex: 1,
+    color:"white",
+    border:"none",
+    width:"50px",
+    height:"50px",
+    borderRadius:"50%",
+    backgroundColor: "#151B27",
+    [breakpoints.down("sm")]: {
+      display:"none"
+       },
+       [breakpoints.only("md")]: {
+        display:"none"
+     
+         },
+         
+  },
+ 
+  
+
 }));
 
 export default ReviewSliderStyles;

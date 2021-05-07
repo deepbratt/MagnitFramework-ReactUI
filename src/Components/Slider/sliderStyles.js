@@ -67,21 +67,21 @@ export const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("lg")]: {
       textAlign: "left",
       paddingLeft: "100px",
-      paddingTop: "60px",
+      paddingTop: "100px",
       alignItems:"center",
       // height:"100vh",
     },
     [theme.breakpoints.only("md")]: {
       textAlign: "left",
       paddingLeft: "100px",
-      paddingTop: "60px",
+      paddingTop: "100px",
       alignItems:"center",
       // height:"100vh"
     },
     [theme.breakpoints.only("sm")]: {
       flexDirection: "column",
       alignItems: "center",
-      paddingTop: "10px",
+      paddingTop: "70px",
       justifyContent:"center"
     },
     [breakpoints.down("xs")]: {
