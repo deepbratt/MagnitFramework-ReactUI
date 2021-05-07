@@ -4,6 +4,14 @@ const breakpoints = createBreakpoints({});
 const ServicesSectionStyles = makeStyles((theme) => ({
   root: {
     position: "relative",
+    marginTop: "0px",
+    [theme.breakpoints.only("md")]: {
+      marginTop: "-7px"
+    },
+    [theme.breakpoints.down("sm")]: {
+      marginTop: "-19px"
+    },
+  
     "& > img": {
       position: "absolute",
     },

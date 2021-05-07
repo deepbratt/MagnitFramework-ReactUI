@@ -56,14 +56,10 @@ const ReviewSliderStyles = makeStyles((theme) => ({
     borderRadius:"50%",
     backgroundColor: "#151B27",
     [breakpoints.down("sm")]: {
-      top: "21.7em",
-      right:"0.3em",
-      width:"40px",
-    height:"40px",
+      display:"none"
        },
        [breakpoints.only("md")]: {
-        top: "26.7em",
-        right:"0em",
+        display:"none"
       
          },
   },
@@ -79,12 +75,10 @@ const ReviewSliderStyles = makeStyles((theme) => ({
     borderRadius:"50%",
     backgroundColor: "#151B27",
     [breakpoints.down("sm")]: {
-      inset:"21.7em 16.3em auto 0.5rem",
-      width:"40px",
-    height:"40px",
+      display:"none"
        },
        [breakpoints.only("md")]: {
-        inset:"26.7em 16.3em auto 0rem",
+        display:"none"
      
          },
          
