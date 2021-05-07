@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React from "react";
 import PropTypes from "prop-types";
 import Tabs from "@material-ui/core/Tabs";
@@ -5,12 +6,13 @@ import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import OptionTabStyles from "./style";
+import { TabText } from "./TabText";
 import Breakpoints from "../../Theme/theme.breakpoints";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
-  const { tabPanel } = OptionTabStyles();
-
+  const { tabPanel, } = OptionTabStyles();
+  
   return (
     <div
       className={tabPanel}
@@ -63,79 +65,13 @@ export default function OptionsTab() {
         <Tab className={tab} label="Fixed Cost Hiring" {...a11yProps(2)} />
       </Tabs>
       <TabPanel className={tabPanel} value={value} index={0}>
-        <Typography variant="h3" gutterBottom>
-          Full Time Hiring
-        </Typography>
-        <Typography variant="subtitle1" gutterBottom>
-          The developer works for total 160 hours in a month (20 days a month
-          and 8 hours per day)
-        </Typography>
-        <Typography variant="subtitle1" gutterBottom>
-          Online time sheet is maintained and shared with you
-        </Typography>
-        <Typography variant="subtitle1" gutterBottom>
-          Developer communicates through your preferred communication channel
-          (Email/Skype/WhatsApp/TeamViewer)
-        </Typography>
-        <Typography variant="subtitle1" gutterBottom>
-          Monthly Billing
-        </Typography>
-        <Typography variant="subtitle1" gutterBottom>
-          No minimum commitment
-        </Typography>
-        <Typography variant="subtitle1" gutterBottom>
-          Anytime contract cancellation
-        </Typography>
+        <TabText />
       </TabPanel>
       <TabPanel className={tabPanel} value={value} index={1}>
-        <Typography variant="h3" gutterBottom>
-          Pay as you Go Hiring
-        </Typography>
-        <Typography variant="subtitle1" gutterBottom>
-          The developer works for total 160 hours in a month (20 days a month
-          and 8 hours per day)
-        </Typography>
-        <Typography variant="subtitle1" gutterBottom>
-          Online time sheet is maintained and shared with you
-        </Typography>
-        <Typography variant="subtitle1" gutterBottom>
-          Developer communicates through your preferred communication channel
-          (Email/Skype/WhatsApp/TeamViewer)
-        </Typography>
-        <Typography variant="subtitle1" gutterBottom>
-          Monthly Billing
-        </Typography>
-        <Typography variant="subtitle1" gutterBottom>
-          No minimum commitment
-        </Typography>
-        <Typography variant="subtitle1" gutterBottom>
-          Anytime contract cancellation
-        </Typography>
+      Pay as you Go Hiring
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <Typography variant="h3" gutterBottom>
-          Fixed Cost Hiring
-        </Typography>
-        <Typography variant="subtitle1" gutterBottom>
-          The developer works for total 160 hours in a month (20 days a month
-          and 8 hours per day)
-        </Typography>
-        <Typography variant="subtitle1" gutterBottom>
-          Online time sheet is maintained and shared with you
-        </Typography>
-        <Typography variant="subtitle1" gutterBottom>
-          Developer communicates through your preferred communication channel
-          (Email/Skype/WhatsApp/TeamViewer)
-        </Typography>
-        <Typography variant="subtitle1" gutterBottom>
-          Monthly Billing
-        </Typography>
-        <Typography variant="subtitle1" gutterBottom>
-          No minimum commitment
-        </Typography>
-        <Typography variant="subtitle1" gutterBottom>
-          Anytime contract cancellation
-        </Typography>
+      Fixed Cost Hiring
       </TabPanel>
     </div>
   );

@@ -24,6 +24,7 @@ const Container = ({backColor}) => {
     devSec,
     cardSec,
     cardContent,
+    seeMore
   } = classes;
   return (
     <>
@@ -91,9 +92,10 @@ const Container = ({backColor}) => {
         <section>
         <MuiThemeProvider theme={THEME}>
           <Button
-            style={{ textTransform: "none", marginLeft: "10px", backgroundColor: whiteColor }}
+           
             variant="contained"
             size={Breakpoints()}
+            className={seeMore}
             color="white"
           >
             {buttonText}

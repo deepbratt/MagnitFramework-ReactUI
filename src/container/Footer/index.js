@@ -5,14 +5,14 @@ import FooterStyle from "./style";
 import IconFB from "../../assets/images/icon-fb.png";
 import IconTwitter from "../../assets/images/icon-twitter.png";
 import IconLI from "../../assets/images/icon-linkedIn.png";
-
+import Magnit from "../../assets/images/Magnit.png";
 const Footer = () => {
-  const { root, logo, list, section, policy, contact } = FooterStyle();
-  const ls = ["Company", "Service", "Solutions", "FAQ'S"];
-  const lsTwo = ["Case Study", "Blog", "Career"];
+  const { root,rootRow, logo, list, section, policy, contact,head,footer } = FooterStyle();
+  const ls = [ "Service", "Solutions", "FAQ'S,Case Study", "Blog", "Career"];
+  const lsTwo = [""];
   return (
     <footer className={root}>
-      <Grid container spacing={1} direction="row" justify="space-between">
+      <Grid container spacing={1} direction="row" justify="space-between" className={rootRow}>
         {/* <Grid item xs={12} md={4} lg={3}>
           <div className={logo}>
             <Typography
@@ -25,64 +25,6 @@ const Footer = () => {
             </Typography>
           </div>
         </Grid> */}
-        <Grid item xs={12} md={4} lg={2}>
-          <div className={list}>
-            {ls
-              .filter((item, idx) => idx < 5)
-              .map((item) => (
-                <Link to={`\${item}`}>
-                  <Typography
-                    style={{ marginBottom: "30px" }}
-                    align="left"
-                    gutterBottom
-                    variant="body1"
-                  >
-                    {item}
-                  </Typography>
-                </Link>
-              ))}
-          </div>
-        </Grid>
-        <Grid item xs={12} md={4} lg={2}>
-          <div className={list}>
-            {lsTwo
-              .filter((item, idx) => idx < 5)
-              .map((item) => (
-                <Link to={`\${item}`}>
-                  <Typography
-                    style={{ marginBottom: "30px" }}
-                    align="left"
-                    gutterBottom
-                    variant="body1"
-                  >
-                    {item}
-                  </Typography>
-                </Link>
-              ))}
-          </div>
-        </Grid>
-        <Grid item xs={12} md={4} lg={2}>
-          <div className={section}>
-            <Typography align="left" gutterBottom variant="h3">
-              TALK TO US
-            </Typography>
-            <Typography align="left" gutterBottom variant="body1">
-              USA/Canada: 713-489-0845
-              <br /> Australia: (02)-9191-2621
-              <br /> UK: (0)-203-514-2412
-            </Typography>
-          </div>
-        </Grid>
-        <Grid item xs={12} md={4} lg={2}>
-          <div className={section}>
-            <Typography align="left" gutterBottom variant="h3">
-              INDIA OFFICE
-            </Typography>
-            <Typography align="left" gutterBottom variant="body1">
-              Shakti Tower, EN 60, 5th Floor, Sector V, Saltlake, Kolkata 700091
-            </Typography>
-          </div>
-        </Grid>
         <Grid item xs={12} md={4} lg={3}>
           <div className={section}>
             <div className={logo}>
@@ -92,7 +34,7 @@ const Footer = () => {
                 gutterBottom
                 variant="h2"
               >
-                Logo Here
+               <img src={Magnit} alt="magnit" />
               </Typography>
             </div>
             <Typography align="left" gutterBottom variant="h3">
@@ -105,6 +47,53 @@ const Footer = () => {
             </div>
           </div>
         </Grid>
+        <Grid item xs={12} md={4} lg={2}>
+        <Typography align="left" gutterBottom variant="h3" className={head}>
+        Company
+        </Typography>
+          <div className={list}>
+            {ls
+              .filter((item, idx) => idx < 5)
+              .map((item) => (
+                <Link to={`\${item}`}>
+                  <Typography
+                    style={{ marginBottom: "10px",fontSize:"16px" }}
+                    align="left"
+                    gutterBottom
+                    variant="body1"
+                  >
+                    {item}
+                  </Typography>
+                </Link>
+              ))}
+          </div>
+        </Grid>
+
+        <Grid item xs={12} md={4} lg={2}>
+          <div className={section}>
+            <Typography align="left" gutterBottom variant="h3" className={head}>
+              INDIA OFFICE
+            </Typography>
+            <Typography align="left" gutterBottom variant="body1">
+              Shakti Tower, EN 60, 5th Floor, Sector V, Saltlake, Kolkata 700091
+            </Typography>
+          </div>
+        </Grid>
+
+        <Grid item xs={12} md={4} lg={2}>
+          <div className={section}>
+            <Typography align="left" gutterBottom variant="h3" className={head}>
+              TALK TO US
+            </Typography>
+            <Typography align="left" gutterBottom variant="body1">
+              USA/Canada: 713-489-0845
+              <br /> Australia: (02)-9191-2621
+              <br /> UK: (0)-203-514-2412
+            </Typography>
+          </div>
+        </Grid>
+        </Grid>
+        <Grid xs={12} className={footer} >
         <Grid item xs={12} md={6}>
           <Typography
             className="copyrights"
@@ -128,7 +117,10 @@ const Footer = () => {
             </Typography>
           </div>
         </Grid>
-      </Grid>
+        
+        </Grid>
+      
+    
     </footer>
   );
 };
