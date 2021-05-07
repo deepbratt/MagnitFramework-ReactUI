@@ -54,6 +54,7 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   menuIcon: {
+    color: blackColor,
     closeIcon: {
       "&:hover": {
         cursor: "pointer",
