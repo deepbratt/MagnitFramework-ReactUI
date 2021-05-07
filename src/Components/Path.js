@@ -1,6 +1,6 @@
 import AboutUs from "./../Pages/AboutUs/AboutUs";
 import Services from "./../Pages/Services";
-import Solutions from "./../Pages/SolutionsPage/Solutions"
+// import Solutions from "./../Pages/SolutionsPage/Solutions"
 import Home from "../Pages/Home/index"
 
 const pathIds = {
@@ -40,7 +40,7 @@ const pageRoutes = {
   [pathIds.solutions]: {
     path: pathRouting.solutions,
     sidebarName: "Solutions",
-    component: Solutions,
+    // component: Solutions,
   },
   [pathIds.caseStudies]: {
     path: pathRouting.caseStudies,
