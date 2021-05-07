@@ -188,7 +188,7 @@ export const useStyles = makeStyles((theme) => ({
     mixBlendMode: "screen",
     [breakpoints.up("lg")]: {
       height: "520px",
-      left: "1045px",
+      left: "750px",
     },
     [breakpoints.down("md")]: {
       left: "450px",
