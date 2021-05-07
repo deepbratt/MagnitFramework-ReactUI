@@ -1,12 +1,31 @@
 import React from "react";
 import { useStyles, THEME } from "./servicesStyles";
-import { Typography, Card, CardContent, Paper } from "@material-ui/core";
+import {
+  Typography,
+  Card,
+  CardContent,
+  Paper,
+  Hidden,
+} from "@material-ui/core";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import * as Icons from "../../../../assets/icons/icon.constants";
-import { ServicesAndSolutionSectionTitle } from "./constant";
+import { Data } from "../../../../Utils/Constants/Language/en/ServicesText";
 const Services = (props) => {
   const { value } = props;
   const classes = useStyles();
+  const {
+    title,
+    subTitle,
+    subheading,
+    devTitle,
+    devParagraph,
+    appTitle,
+    appParagraph,
+    webTitle,
+    webParagraph,
+    digitalTitle,
+    digitalParagraph,
+  } = Data;
   const {
     root,
     serviceHeading,
@@ -24,6 +43,7 @@ const Services = (props) => {
     digital,
     digitalSec,
     digitalSub,
+    underlined,
   } = classes;
   const { App, Profile, Web, Digital } = Icons;
   return (
@@ -32,10 +52,17 @@ const Services = (props) => {
         <section className={serviceHeading}>
           <MuiThemeProvider theme={THEME}>
             <Typography variant="h4" color="inherit">
-              {ServicesAndSolutionSectionTitle}
+              <Hidden smDown>
+                {title}
+                <span className={underlined}>{subTitle}</span>
+              </Hidden>
+              <Hidden mdUp>
+                {title} <br />
+                <span className={underlined}>{subTitle}</span>
+              </Hidden>
             </Typography>
             <Typography paragraph={true} color="inherit">
-              To start-ups and enterprises across the globe
+              {subheading}
             </Typography>
           </MuiThemeProvider>
         </section>
@@ -54,12 +81,10 @@ const Services = (props) => {
               <section>
                 <MuiThemeProvider theme={THEME}>
                   <Typography variant="h5" color="inherit">
-                    Developer Hiring
+                    {devTitle}
                   </Typography>
                   <Typography paragraph={true} color="inherit">
-                    We let you hire developers from our talent pool at
-                    competitive prices with Dedicated hiring, Project based
-                    hiring, and Hourly hiring options.
+                    {devParagraph}
                   </Typography>
                 </MuiThemeProvider>
               </section>
@@ -75,12 +100,10 @@ const Services = (props) => {
               <section>
                 <MuiThemeProvider theme={THEME}>
                   <Typography variant="h5" color="inherit">
-                    App Development
+                    {appTitle}
                   </Typography>
                   <Typography paragraph={true} color="inherit">
-                    We develop and design applications for iOS, android and
-                    windows devices using our expertise in native and hybrid
-                    technologies
+                    {appParagraph}
                   </Typography>
                 </MuiThemeProvider>
               </section>
@@ -96,12 +119,10 @@ const Services = (props) => {
               <section>
                 <MuiThemeProvider theme={THEME}>
                   <Typography variant="h5" color="inherit">
-                    Web Development
+                    {webTitle}
                   </Typography>
                   <Typography paragraph={true} color="inherit">
-                    We offer agile and cost-efficient web development solutions
-                    to give you a peerless experience in creating a strong
-                    online footprint.
+                    {webParagraph}
                   </Typography>
                 </MuiThemeProvider>
               </section>
@@ -121,12 +142,10 @@ const Services = (props) => {
               <section>
                 <MuiThemeProvider theme={THEME}>
                   <Typography variant="h5" color="inherit">
-                    Digital Marketing
+                    {digitalTitle}
                   </Typography>
                   <Typography paragraph={true} color="inherit">
-                    We provide integrated digital marketing solutions with the
-                    strategy and approach that is best suited to grow your
-                    business.
+                    {digitalParagraph}
                   </Typography>
                 </MuiThemeProvider>
               </section>

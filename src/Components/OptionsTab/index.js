@@ -6,14 +6,12 @@ import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import OptionTabStyles from "./style";
-import { Grid, Paper } from "@material-ui/core";
-import vector from "../../assets/services/vector.png";
 import { TabText } from "./TabText";
-
+import Breakpoints from "../../Theme/theme.breakpoints";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
-  const { root, tabs, tab, tabPanel, } = OptionTabStyles();
+  const { tabPanel, } = OptionTabStyles();
   
   return (
     <div
@@ -52,12 +50,12 @@ export default function OptionsTab() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
   return (
     <div className={root}>
       <Tabs
         className={tabs}
-        orientation="vertical"
+        orientation={Breakpoints === "medium" ? "horizontal" : "vertical"}
+        variant="scrollable"
         value={value}
         onChange={handleChange}
         aria-label="Vertical tabs example"

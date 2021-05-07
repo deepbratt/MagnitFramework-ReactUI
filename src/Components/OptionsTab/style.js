@@ -6,36 +6,40 @@ const { skyBlue } = Colors;
 
 const OptionTabStyles = makeStyles((theme) => ({
   root: {
+    flexGrow: 1,
     display: "flex",
-    [breakpoints.down("sm")]: {
-      flexDirection:"column"
-       },
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+    },
   },
   tabs: {
     margin: "10px",
     border: "none",
-    width: "40%",
-    [breakpoints.down("sm")]: {
+    width: "35%",
+    [theme.breakpoints.down("sm")]: {
       width: "100%",
-       },
-  
+    },
+    "& > .PrivateTabIndicator-colorSecondary-79, .PrivateTabIndicator-colorSecondary-81": {
+      width: "0px",
+    },
   },
   tab: {
     margin: "10px",
-    border: "1px solid #2CD400",
-    fontSize:"1rem",
-    textAlign:"left",
-    alignItems:"left",
+    border: "1px solid rgba(44, 212, 0, 1)",
+    color: "rgba(44, 212, 0, 1)",
+    fontSize: "14px",
     borderRadius: "5px",
-    "&.Mui-selected": { backgroundColor:"#2CD400",color:"white"},
+    "& > .MuiTab-textColorInherit .Mui-selected": {
+      backgroundColor: "#2cd400",
+      color: "white",
+    },
   },
- 
-
   tabPanel: {
     backgroundColor: skyBlue,
     height: "100%",
     width: "100%",
     borderRadius: "5px",
+    textAlign: "left",
   },
   detail:{
     fontWeight: 400,

@@ -4,12 +4,18 @@ import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 import {Colors} from "../../Theme/color.constants"
 
 
-const {glanceImages} = Colors
-const {Img1,Img2,Img3} = glanceImages
+const {Mariner,whiteColor,blackColor} = Colors
 const breakpoints = createBreakpoints({});
 
 export const THEME = createMuiTheme({
   overrides: {
+    MuiButton: {
+      root:{
+        borderRadius: "none",
+        fontFamily: "Poppins",
+        color: blackColor
+      }
+    },
     MuiTypography: {
       h4: {
         fontFamily: "Poppins",
@@ -17,6 +23,7 @@ export const THEME = createMuiTheme({
         fontSize: "35px",
         color:"white",
         lineHeight: 1.6,
+        color: whiteColor,
         fontWeight: "bolder",
         textAlign: "center",
         [breakpoints.only("sm")]: {
@@ -42,8 +49,8 @@ export const THEME = createMuiTheme({
         textAlign:"left",
         fontWeight: "600",
         fontSize: "24px",
-        marginTop: "10px",
-        marginLeft:"10px"
+        marginTop: "22px",
+        color: whiteColor,
       },
       paragraph: {
         fontFamily: "Poppins",
@@ -83,27 +90,25 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   card: {
-    width: "30%",
-    height: "260px",
+    paddingTop: "20px",
+    width: "25%",
+    height: "auto",
     display: "flex",
     flexDirection: "column",
     alignItems: "left",
     transition: "all .25s linear",
-    boxShadow: "none",
-    backgroundColor:"#1e4cc7",
-    color:"white",
-    margin: "15px",
+    margin: "10px",
     boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
     [breakpoints.only("md")]: {
-      width: "50%",
-      height: "210px",
+      width: "40%",
+  
     },
     [breakpoints.only("sm")]: {
       width: "50%",
     },
     [breakpoints.down("xs")]: {
-      width: "85%",
-      height: "210px",
+      width: "78%",
+     
     },
     "& .MuiCardContent-root": {
       padding: "0px",
@@ -111,56 +116,19 @@ export const useStyles = makeStyles((theme) => ({
   },
 
   devSec: {
-    backgroundColor: "#ffff",
     width: "100%",
     height: "100%",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    [breakpoints.up("md")]: {
-      height: "119%",
-    },
-    [breakpoints.down("md")]: {
-      height: "100%",
-    }, 
+    flexDirection: "column"
   },
+cardContent: {
+  width: "100%",
+  backgroundColor: Mariner,
+  paddingBottom: "10px",
+  textAlign: "left",
+  paddingLeft: "20px",
 
-
-  dev: {
-    backgroundColor: "#ffff",
-    width: "100%",
-    height: "100%",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    [breakpoints.up("xl")]: {
-      height: "90%",
-    },
-    [breakpoints.up("lg")]: {
-      height: "100%",
-    },
-  },
-  cardContent: {
-    backgroundColor: "#ffff",
-    width: "100%",
-    height: "96%",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    [breakpoints.up("lg")]: {
-      height: "96%",
-    },
-    [breakpoints.only("xl")]: {
-      height: "93%",
-    },
-    // [breakpoints.down("sm")]: {
-    //   height: "58%",
-    // },
-  },
-  seeMore:{ 
-    textTransform: "none",
-   marginLeft: "10px",
-   borderRadius:"0px",
-   width: "150px",
-   height: "50px" }
+}
 }));

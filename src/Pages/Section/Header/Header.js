@@ -15,11 +15,13 @@ import SideBar from "./Sidebar/SideBar";
 import Breakpoints from "../../../Theme/theme.breakpoints";
 import { pageRoutes } from "../../../Components/Path";
 import { Hidden } from "@material-ui/core";
-
+import { Logo } from "../../../Components/Hero/Images";
+import { Colors } from "../../../Theme/color.constants";
 
 const Header = (props) => {
   const routes = Object.values(pageRoutes);
   const classes = useStyles();
+  const { Harlequin, whiteColor } = Colors;
   const { trigger } = Scrolltrigger();
   const {
     logo,
@@ -34,52 +36,54 @@ const Header = (props) => {
 
   return (
     <>
-
-          <Toolbar  className={!trigger ? appbar : appbarsolid} >
-            <MuiThemeProvider theme={THEME}>
-              <Typography className={logo} variant="h5" color="inherit">
-                Logo Here
-              </Typography>
-            </MuiThemeProvider>
-            {/* Header Menu */}
-            <Hidden mdUp>
-              <SideBar />
-            </Hidden>
-            <Hidden smDown>
-              <List className={list}>
-                {routes.map(({ path, sidebarName, ...prop }, index) => {
-                  return (
-                    <MuiThemeProvider key={index} theme={THEME}>
-                      <NavLink
-                        activeClassName={active}
-                        className={link}
-                        to={path}
-                        key={`route-${index}}`}
-                      >
-                        <ListItem>
-                          <ListItemText
-                            className={listItem}
-                            primary={sidebarName}
-                          />
-                        </ListItem>
-                      </NavLink>
-                    </MuiThemeProvider>
-                  );
-                })}
-                <ListItem>
-                  <Button
-                    style={{ textTransform: "none" }}
-                    className={button}
-                    variant="contained"
-                    size={Breakpoints()}
-                    color="secondary"
+      <Toolbar className={!trigger ? appbar : appbarsolid}>
+        <section>
+          <img className={logo} alt="logo" src={Logo} />
+        </section>
+        {/* Header Menu */}
+        <Hidden mdUp>
+          <SideBar />
+        </Hidden>
+        <Hidden smDown>
+          <List className={list}>
+            {routes.map(({ path, sidebarName, ...prop }, index) => {
+              return (
+                <MuiThemeProvider key={index} theme={THEME}>
+                  <NavLink
+                    activeClassName={active}
+                    className={link}
+                    to={path}
+                    key={`route-${index}}`}
                   >
-                    Contact Us
-                  </Button>
-                </ListItem>
-              </List>
-            </Hidden>
-          </Toolbar>
+                    <ListItem>
+                      <ListItemText
+                        className={listItem}
+                        primary={sidebarName}
+                      />
+                    </ListItem>
+                  </NavLink>
+                </MuiThemeProvider>
+              );
+            })}
+            <ListItem>
+              <MuiThemeProvider theme={THEME}>
+                <Button
+                  style={{
+                    textTransform: "none",
+                    backgroundColor: Harlequin,
+                    color: whiteColor,
+                  }}
+                  className={button}
+                  variant="contained"
+                  size={Breakpoints()}
+                >
+                  Contact Us
+                </Button>
+              </MuiThemeProvider>
+            </ListItem>
+          </List>
+        </Hidden>
+      </Toolbar>
     </>
   );
 };

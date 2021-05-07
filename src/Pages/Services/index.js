@@ -40,6 +40,8 @@ const Services = () => {
     // background,
     bannerBtn,
     reviewSlider,
+    leftPattern,
+    rightPattern,
     leftStarFishPattern,
     pinkDotPattern,
     yellowDotPattern,
@@ -80,9 +82,11 @@ const Services = () => {
    
         <PointList data={servicesData} />
       </Section>
+      <img className={leftPattern} src={StarFishPattern} alt="" srcset="" />
       <Section title={HiringSectionTitle}>
         <OptionsTab />
       </Section>
+      <img className={rightPattern} src={StarFishPattern} alt="" srcset="" />
       <Section title={WhyHireSectionTitle}>
         <PointList data={hireUsData} horizontal={true} />
       </Section>

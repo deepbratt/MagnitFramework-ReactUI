@@ -3,7 +3,7 @@ import { useStyles, THEME } from "./sectionStyles";
 import { Typography, Card, CardContent } from "@material-ui/core";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import * as icons from "../../assets/icons/icon.constants";
-import { PrimaryData } from "./SectionData";
+import { PrimaryData } from "../../Utils/Constants/Language/en/PartnerWithUsData";
 
 const PrimarySection = ({
   appColor,
@@ -12,12 +12,8 @@ const PrimarySection = ({
   agileColor,
   transparencyColor,
   moneyColor,
-  appFill,
-  reliableFill,
-  innovativeFill,
-  agileFill,
-  moneyFill,
-  transparencyFill,
+  IconFill,
+
 }) => {
   const classes = useStyles();
   const {
@@ -63,7 +59,7 @@ const PrimarySection = ({
             <section className={devSec}>
               <section style={{ backgroundColor: appColor }} className={devSub}>
                 <img
-                  style={{ filter: appFill }}
+                  style={{ filter: IconFill }}
                   alt="icon"
                   className={Icons}
                   src={appIcon}
@@ -93,7 +89,7 @@ const PrimarySection = ({
               >
                 <img
                   alt="icon"
-                  style={{ filter: reliableFill }}
+                  style={{ filter: IconFill }}
                   className={Icons}
                   src={reliableIcon}
                 />
@@ -122,7 +118,7 @@ const PrimarySection = ({
               >
                 <img
                   alt="icon"
-                  style={{ filter: innovativeFill }}
+                  style={{ filter: IconFill }}
                   className={Icons}
                   src={innovativeIcon}
                 />
@@ -151,7 +147,7 @@ const PrimarySection = ({
               >
                 <img
                   alt="icon"
-                  style={{ filter: agileFill }}
+                  style={{ filter: IconFill }}
                   className={Icons}
                   src={agileIcon}
                 />
@@ -180,7 +176,7 @@ const PrimarySection = ({
               >
                 <img
                   alt="icon"
-                  style={{ filter: transparencyFill }}
+                  style={{ filter: IconFill }}
                   className={Icons}
                   src={transparencyIcon}
                 />
@@ -209,7 +205,7 @@ const PrimarySection = ({
               >
                 <img
                   alt="icon"
-                  style={{ filter: moneyFill }}
+                  style={{ filter: IconFill }}
                   className={Icons}
                   src={moneyIcon}
                 />

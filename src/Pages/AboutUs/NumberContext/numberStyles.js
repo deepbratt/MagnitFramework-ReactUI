@@ -1,5 +1,4 @@
 import { makeStyles } from "@material-ui/core/styles";
-import { createMuiTheme } from "@material-ui/core/styles";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 import {Colors} from "../../../Theme/color.constants"
 
@@ -9,6 +8,8 @@ const breakpoints = createBreakpoints({});
 export const useStyles = makeStyles((theme) => ({
   root: {
     margin: "0px",
+    marginTop:  "80px",
+    marginBottom:  "50px"
   },
   cardSec: {
     display: "flex",
@@ -20,7 +21,7 @@ export const useStyles = makeStyles((theme) => ({
   card: {
     backgroundColor: skyBlueColor,
     width: "20%",
-    height: "150px",
+    height: "200px",
     display: "flex",
     flexDirection: "column",
     color: "white",
@@ -44,7 +45,7 @@ export const useStyles = makeStyles((theme) => ({
   card2: {
     backgroundColor: rosePinkColor,
     width: "20%",
-    height: "150px",
+    height: "200px",
     display: "flex",
     flexDirection: "column",
     color: "white",
@@ -68,7 +69,7 @@ export const useStyles = makeStyles((theme) => ({
   card3: {
     backgroundColor: darkBlueColor,
     width: "20%",
-    height: "150px",
+    height: "200px",
     display: "flex",
     flexDirection: "column",
     color: "white",
@@ -92,7 +93,7 @@ export const useStyles = makeStyles((theme) => ({
   card4: {
     backgroundColor: mustardColor,
     width: "20%",
-    height: "150px",
+    height: "200px",
     display: "flex",
     flexDirection: "column",
     color: "white",
@@ -113,7 +114,6 @@ export const useStyles = makeStyles((theme) => ({
       width: "70%",
     },
   },
-  
   
   
 }));

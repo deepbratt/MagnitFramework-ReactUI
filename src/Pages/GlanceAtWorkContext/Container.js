@@ -10,17 +10,17 @@ import {
 } from "@material-ui/core";
 import Breakpoints from "../../Theme/theme.breakpoints";
 import * as Images from "../../Components/Hero/Images"
-import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
-const breakpoints = createBreakpoints({});
-
+import {Colors} from "../../Theme/color.constants"
+import {Data} from "../../Utils/Constants/Language/en/GlanceAtWorkData"
 const Container = ({backColor}) => {
   const classes = useStyles();
   const {image1,image2,image3} = Images
+  const {title,subtitle,buttonText} = Data
+  const {whiteColor} = Colors
   const {
     serviceHeading,
     root,
     card,
-    dev,
     devSec,
     cardSec,
     cardContent,
@@ -31,70 +31,75 @@ const Container = ({backColor}) => {
       <Paper style={{backgroundColor: backColor}} className={root} elevation={0}>
         <section className={serviceHeading}>
           <MuiThemeProvider theme={THEME}>
-            <Typography variant="h4" color="white">
-              A Glance at Our Work
+            <Typography variant="h4" >
+            {title}
             </Typography>
           </MuiThemeProvider>
         </section>
         <section className={cardSec}>
           <Card className={card}>
             <CardContent>
-              <section className={devSec}>
-                <section> 
-                  <img  src={image1} alt="" style={{width:"67%",height:"100%",}}/>
-                </section>
-              </section>
               <section >
+                <section className={devSec}>
+                  <img width="250px" src={image1} alt=""/>
+                  <section className={cardContent}>
                 <MuiThemeProvider theme={THEME}>
-                  <Typography variant="h5" color="inherit">
-                    Alife App
+                  <Typography variant="h5">
+                   {subtitle}
                   </Typography>
                 </MuiThemeProvider>
               </section>
+                </section>
+              </section>
+            
             </CardContent>
           </Card>
           <Card className={card}>
             <CardContent>
-              <section className={cardContent}>
-                <section>
-                  <img width="83%" height="100%" src={image2} alt="" />
-                </section>
-              </section>
-              <section>
+              <section >
+                <section className={devSec}>
+                  <img width="300px" src={image2} alt=""/>
+                  <section className={cardContent}>
                 <MuiThemeProvider theme={THEME}>
-                  <Typography variant="h5" color="inherit">
-                    Alife App
+                  <Typography variant="h5" >
+                  {subtitle}
                   </Typography>
                 </MuiThemeProvider>
               </section>
+                </section>
+                
+              </section>
+             
             </CardContent>
           </Card>
           <Card className={card}>
             <CardContent>
-              <section className={dev}>
-                <section>
-                  <img width="83%" height="100%" src={image3} alt=""/>
-                </section>
-              </section>
-              <section>
+              <section >
+                <section className={devSec}>
+                  <img width="317px"  src={image3} alt=""/>
+                  <section className={cardContent}>
                 <MuiThemeProvider theme={THEME}>
-                  <Typography variant="h5" color="inherit">
-                    Alife App
+                  <Typography variant="h5">
+                  {subtitle}
                   </Typography>
                 </MuiThemeProvider>
+              </section>
+                </section>
               </section>
             </CardContent>
           </Card>
         </section>
         <section>
+        <MuiThemeProvider theme={THEME}>
           <Button
-          className={seeMore}
+            style={{ textTransform: "none", marginLeft: "10px", backgroundColor: whiteColor }}
             variant="contained"
             size={Breakpoints()}
             color="white"
           >
-            See More
+            {buttonText}
           </Button>
+          </MuiThemeProvider>
         </section>
       </Paper>
     </>

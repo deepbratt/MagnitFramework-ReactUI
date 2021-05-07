@@ -20,6 +20,18 @@ export default function createTheme(options) {
       //     border: "none",
       //   },
       // },
+      MuiTab: {
+        root: {
+          "&$selected": {
+            backgroundColor: "#2cd400",
+            color: "#fff"
+          },
+        },
+
+        wrapper: {
+          border: "none",
+        },
+      },
       MuiButton: {
         contained: {
           boxShadow: "0px 0px 0px rgba(0, 0, 0, 0);",

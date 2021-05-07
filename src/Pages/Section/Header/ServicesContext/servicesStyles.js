@@ -3,7 +3,7 @@ import { createMuiTheme } from "@material-ui/core/styles";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 import { Colors } from "../../../../Theme/color.constants";
 
-const { servicesDev, servicesApp, servicesWeb, servicesDigital } = Colors;
+const { Serenade, FairPink, AquaSpring, LilyWhite, Harlequin,whiteColor } = Colors;
 const breakpoints = createBreakpoints({});
 
 export const THEME = createMuiTheme({
@@ -51,21 +51,25 @@ export const useStyles = makeStyles((theme) => ({
   },
   cardSec: {
     display: "flex",
-    width: "100%",
     flexFlow: "wrap",
     marginTop: "40px",
     marginBottom: "40px",
     justifyContent: "center",
   },
   card: {
-    width: "25%",
+    width: "24%",
     height: "360px",
     display: "flex",
+    margin: "4px",
     flexDirection: "column",
+    border: `solid 1px ${whiteColor}`,
     alignItems: "center",
     transition: "all .25s linear",
     boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)",
-    "&:hover": { boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)" },
+    "&:hover": { boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
+    border: `solid 1px ${Harlequin}`,
+    transition: "all .25s linear",
+   },
 
     cursor: "pointer",
     [breakpoints.only("md")]: {
@@ -82,7 +86,7 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   appSub: {
-    backgroundColor: servicesApp,
+    backgroundColor: Serenade,
     height: "120px",
     width: "120px",
     display: "flex",
@@ -97,7 +101,7 @@ export const useStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
   devSub: {
-    backgroundColor: servicesDev,
+    backgroundColor: FairPink,
     height: "120px",
     width: "120px",
     display: "flex",
@@ -112,7 +116,7 @@ export const useStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
   webSub: {
-    backgroundColor: servicesWeb,
+    backgroundColor: AquaSpring,
     height: "120px",
     width: "120px",
     display: "flex",
@@ -127,7 +131,7 @@ export const useStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
   digitalSub: {
-    backgroundColor: servicesDigital,
+    backgroundColor: LilyWhite,
     height: "120px",
     width: "120px",
     display: "flex",
@@ -189,4 +193,26 @@ export const useStyles = makeStyles((theme) => ({
     width: "98px",
     height: "60px",
   },
+  underlined:{
+    position: "relative",
+    zIndex: 1,
+    marginLeft: "10px",
+    "&:after ":{
+      position: "absolute",
+      height: "17px",
+      content: '""',
+      left: 0,
+      zIndex: -1,
+      right: 0,
+      color: "#000",
+      backgroundColor: Harlequin,
+      bottom: "5px", 
+      [breakpoints.down("sm")]: {
+        height: "11px",
+      },
+      [breakpoints.down("xs")]: {
+        height: "8px",
+      },
+  }
+  }
 }));
