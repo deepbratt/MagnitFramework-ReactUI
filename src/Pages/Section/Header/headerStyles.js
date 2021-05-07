@@ -41,29 +41,25 @@ export const THEME = createMuiTheme({
 
 export const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: mainSlide,
-    
-  },
-  appbar: {
     boxShadow: "none",
     backgroundColor: transparentWildSand,
     width: "100%",
     fontSize: "16px",
     display: "flex",
     justifyContent: "space-around",
-    position: "fixed",
     zIndex: 2,
     transition: "all .5s linear",
-    borderBottom: `solid 1px ${transparentWildSand}`
+    borderBottom: `solid 1px ${transparentWildSand}`,
+
   },
   appbarsolid: {
     boxShadow: "none",
     backgroundColor: WildSand,
     width: "100%",
-    position: "fixed",
-    zIndex: 2,
     fontSize: "16px",
     display: "flex",
+ 
+    zIndex: 2,
     justifyContent: "space-around",
     transition: "all .5s linear",
     borderBottom: `solid 3px ${Ash}`

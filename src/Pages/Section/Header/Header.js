@@ -28,15 +28,15 @@ const Header = (props) => {
     list,
     listItem,
     button,
-    appbar,
     appbarsolid,
     link,
+    root,
     active,
   } = classes;
 
   return (
     <>
-      <Toolbar className={!trigger ? appbar : appbarsolid}>
+      <Toolbar style={{position: "fixed"}} className={!trigger ? root : appbarsolid}>
         <section>
           <img className={logo} alt="logo" src={Logo} />
         </section>
