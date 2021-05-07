@@ -7,7 +7,7 @@ export const useStyles = createUseStyles({
       padding: "0px",
       width: "100%",
       height: "100%",
-     
+      overflowX: "hidden"
     },
     html: {
       overflowX: "hidden",
