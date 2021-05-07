@@ -18,6 +18,13 @@ const OptionTabStyles = makeStyles((theme) => ({
     width: "35%",
     [theme.breakpoints.down("sm")]: {
       width: "100%",
+     },
+      "& .MuiTabs-flexContainerVertical":{
+        [theme.breakpoints.down("sm")]: {
+          width: "100%",
+          justifyContent: "space-around",
+          flexDirection:" row",},
+    
     },
     "& > .PrivateTabIndicator-colorSecondary-79, .PrivateTabIndicator-colorSecondary-81": {
       width: "0px",
