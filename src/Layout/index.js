@@ -12,12 +12,8 @@ const Layout = ({ children }) => {
   const layoutType = useSelector((state) => state.layoutReducer.layoutType);
   return (
     <div className={root}>
+      <Header />
       <Grid container>
-        <Grid item xs={12}>
-          <Paper className={paper}>
-            <Header />
-          </Paper>
-        </Grid>
         <Grid item xs={12}>
           <Paper elevation={0} className={paper}>
             {children}
