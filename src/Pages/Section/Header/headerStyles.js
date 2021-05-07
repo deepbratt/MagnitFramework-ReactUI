@@ -40,7 +40,7 @@ export const THEME = createMuiTheme({
 });
 
 export const useStyles = makeStyles((theme) => ({
-  // root: {
+  // transparentAppbarsolid: {
   //   boxShadow: "none",
   //   backgroundColor: transparentWildSand,
   //   width: "100%",
@@ -105,7 +105,8 @@ export const useStyles = makeStyles((theme) => ({
   logo: {
     [theme.breakpoints.up("lg")]: {
       width: "150px",
-      marginRight: "15px"
+      marginRight: "15px",
+      marginTop: "15px"
     },
     [theme.breakpoints.down("md")]: {
       width: "110px",

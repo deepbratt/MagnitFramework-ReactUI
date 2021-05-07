@@ -12,7 +12,7 @@ const pathIds = {
 };
 
 const pathRouting = {
-  company: "/company",
+  home: "/home",
   about: "/about",
   services: "/services",
   solutions: "/solutions",
@@ -22,8 +22,8 @@ const pathRouting = {
 
 const pageRoutes = {
   [pathIds.company]: {
-    path: pathRouting.company,
-    sidebarName: "Company",
+    path: pathRouting.home,
+    sidebarName: "Home",
     component: Home
   },
   [pathIds.about]: {
