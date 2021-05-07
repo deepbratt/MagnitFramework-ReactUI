@@ -130,5 +130,10 @@ cardContent: {
   textAlign: "left",
   paddingLeft: "20px",
 
+},
+seeMore:{
+  textTransform: "none", 
+  marginLeft: "10px",
+   backgroundColor: whiteColor
 }
 }));
