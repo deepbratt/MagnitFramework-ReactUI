@@ -9,7 +9,7 @@ export const THEME = createMuiTheme({
       paragraph: {
         fontFamily: "Poppins",
         fontSize: "16px",
-        textAlign: "left",
+        textAlign: "center",
         [breakpoints.down("sm")]: {
           marginTop: "15px",
           whiteSpace: "wrap,",

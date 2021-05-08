@@ -1,7 +1,7 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { Colors } from "../../../Theme/color.constants";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
-const { Luigi, Harlequin } = Colors;
+const { Luigi, Harlequin,mainSlide } = Colors;
 const breakpoints = createBreakpoints({});
 export const useStyles = makeStyles((theme) => ({
   root: {
@@ -12,7 +12,7 @@ export const useStyles = makeStyles((theme) => ({
     width: "100vw"
   },
   card: {
-    backgroundImage: "linear-gradient(rgb(44,212,0,0.4),white)",
+    backgroundImage: `linear-gradient(${mainSlide},white)`,
   },
   cardSec: {
     padding: "0px",
@@ -43,6 +43,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   Img: {
     borderRadius: "70%",
+    marginRight: "10px",
     marginTop: "60px",
     display: "flex",
     alignItems: "center",
