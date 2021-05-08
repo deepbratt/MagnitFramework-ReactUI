@@ -108,7 +108,6 @@ const ReviewSlider = ({ slides }) => {
             style={{
               margin: 0,
               padding: 0,
-              marginTop: "50px",
               display: "flex",
               backgroundColor: "transparent",
             }}

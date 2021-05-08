@@ -14,7 +14,7 @@ const ReviewSliderStyles = makeStyles((theme) => ({
     margin: "20px",
     [theme.breakpoints.down("md")]: {
       padding: "10px",
-    margin: "5px",
+      margin: "5px",
     },
   },
   avatar: {
