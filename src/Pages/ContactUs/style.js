@@ -32,6 +32,12 @@ const LayoutStyle = makeStyles((theme) => ({
   error: {
     fontSize: "0.75rem",
   },
+  button: {
+    display: "flex",
+    justifyContent: "center",
+    alignContent: "center",
+    width: "100%",
+  },
 }));
 
 export default LayoutStyle;

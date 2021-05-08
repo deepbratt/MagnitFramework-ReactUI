@@ -51,8 +51,7 @@ export const footerText = {
     address:
       "Shakti Tower, EN 60, 5th Floor, Sector V, Saltlake, Kolkata 700091",
   },
-  copyrights:
-    "© 2021 Company name, All Rights Reserved. CIN: U72300WB2013PTC191520",
+  copyrights: "© 2021 The Magnit, All Rights Reserved.",
   contactUs: "CONNECT WITH US",
   navigation: {
     title: "Company",
@@ -61,4 +60,14 @@ export const footerText = {
   lifeTimeSupport: "Life-Time Support",
   terms: "Terms of Service",
   disclaimer: "Disclaimer & Privacy Policy",
+};
+
+export const contactUsLabelsText = {
+  heading: "Contact Us",
+  subHeading: "Need any kind of help?",
+  name: "Name",
+  email: "Email",
+  PhoneNum: "Phone Number",
+  message: "Message",
+  submit: "Submit",
 };

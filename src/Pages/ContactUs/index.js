@@ -5,13 +5,23 @@ import Typography from "@material-ui/core/Typography";
 import image from "../../assets/images/contact-us-banner.jpg";
 import InputField from "../../Components/FormInputs/InputField";
 import MyAccordion from "../../Components/MyAccordion";
+import { contactUsLabelsText } from "../../Utils/Constants/Language";
 import { FQASectionTitle } from "../Home/constants";
 import Section from "../Section";
 import QuestionData from "./questions.json";
 import LayoutStyle from "./style";
 
 const ContactUs = () => {
-  const { root, wrap, cover, form, label } = LayoutStyle();
+  const { root, wrap, cover, form, label, button } = LayoutStyle();
+  const {
+    heading,
+    subHeading,
+    name,
+    email,
+    phoneNum,
+    message,
+    submit,
+  } = contactUsLabelsText;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -29,7 +39,7 @@ const ContactUs = () => {
                 style={{
                   background:
                     "linear-gradient(223.7deg, rgba(11, 102, 35, 0.56) 0%, rgba(0, 104, 250, 0.56) 133.78%)",
-                  color: "#fff",
+                  color: "white",
                   minHeight: "100%",
                 }}
               >
@@ -37,19 +47,19 @@ const ContactUs = () => {
                   style={{ textAlign: "center", marginTop: "30px" }}
                   variant="h2"
                 >
-                  Contact Us
+                  {heading}
                 </Typography>
                 <Typography
                   style={{ textAlign: "center", color: "white" }}
                   variant="subtitle1"
                   color="textSecondary"
                 >
-                  Need any kind of help?
+                  {subHeading}
                 </Typography>
 
                 <form className={form} onSubmit={handleSubmit}>
                   <InputLabel className={label} htmlFor="input-name">
-                    Name
+                    {name}
                   </InputLabel>
 
                   <InputField
@@ -60,7 +70,7 @@ const ContactUs = () => {
                   />
 
                   <InputLabel className={label} htmlFor="input-email">
-                    Email
+                    {email}
                   </InputLabel>
 
                   <InputField
@@ -70,7 +80,7 @@ const ContactUs = () => {
                   />
 
                   <InputLabel className={label} htmlFor="input-phone">
-                    Phone Number
+                    {phoneNum}
                   </InputLabel>
 
                   <InputField
@@ -80,7 +90,7 @@ const ContactUs = () => {
                   />
 
                   <InputLabel className={label} htmlFor="input-message">
-                    Message
+                    {message}
                   </InputLabel>
 
                   <InputField
@@ -89,20 +99,16 @@ const ContactUs = () => {
                     placeholder="Type your message here..."
                     multiline
                   />
-
-                  <Button
-                    type="submit"
-                    color="primary"
-                    variant="contained"
-                    fullWidth
-                  >
-                    <Typography
-                      style={{ textAlign: "center", color: "#fff" }}
-                      variant="button"
-                    >
-                      Submit
-                    </Typography>
-                  </Button>
+                  <div className={button}>
+                    <Button type="submit" color="primary" variant="contained">
+                      <Typography
+                        style={{ textAlign: "center", color: "#fff" }}
+                        variant="button"
+                      >
+                        {submit}
+                      </Typography>
+                    </Button>
+                  </div>
                 </form>
               </CardContent>
             </div>

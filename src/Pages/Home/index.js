@@ -31,6 +31,7 @@ import { trainingAndCertificationText as TCData } from "../../Utils/Constants/La
 import CertificationList from "../../Components/certificationList";
 import HomeStyles from "./style";
 import QuoteCard from "../../Components/QuoteCard";
+import CustomButton from "../../Components/CustomButton";
 
 const images = [Image1, Image2, Image3, Image4, Image5];
 
@@ -139,18 +140,7 @@ const Home = (props) => {
               </Grid>
             ))}
         </Grid>
-        <Button
-          style={{ marginTop: "30px" }}
-          color="primary"
-          variant="contained"
-        >
-          <Typography
-            style={{ textAlign: "center", color: "#fff" }}
-            variant="button"
-          >
-            See more
-          </Typography>
-        </Button>
+        <CustomButton text="See More" />
       </Section>
       {/* NEWSLETTER SECTION
       <Section>

@@ -8,6 +8,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import ExpandIcon from "../../assets/icons/expandIcon.png";
 import CloseIcon from "../../assets/icons/closeIcon.png";
 import { useState } from "react";
+import CustomButton from "../CustomButton";
 
 const MyAccordion = ({ questions }) => {
   const { root, title, details } = LayoutStyle();
@@ -39,6 +40,7 @@ const MyAccordion = ({ questions }) => {
             </AccordionDetails>
           </Accordion>
         ))}
+      <CustomButton text="See More" />
     </div>
   );
 };

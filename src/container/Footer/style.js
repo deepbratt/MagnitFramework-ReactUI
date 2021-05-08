@@ -4,9 +4,7 @@ import { Colors } from "../../Theme/color.constants";
 const { Citrine, darkJungleGreen } = Colors;
 
 const FooterStyle = makeStyles((theme) => ({
- 
   root: {
-
     backgroundColor: darkJungleGreen,
     padding: "40px 150px",
     [theme.breakpoints.down("lg")]: {
@@ -64,19 +62,9 @@ const FooterStyle = makeStyles((theme) => ({
   },
   sectionBorder: {
     position: "relative",
-    borderTop: "1px solid white",
-    marginTop: "5px",
+    marginTop: "10px",
     paddingTop: "10px",
-    "&::before": {
-      content: "",
-      position: "absolute",
-      top: 0,
-      borderTop: "1px solid white",
-      width: "100vw",
-      height: "0px",
-      // left: "50%",
-      // transform: "translateX(-50%)",
-    },
+    borderTop: "1px solid white",
   },
 }));
 
