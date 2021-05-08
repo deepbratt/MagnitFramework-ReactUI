@@ -1,0 +1,34 @@
+import React from "react";
+import { Typography, Button } from "@material-ui/core";
+import Breakpoints from "../../Theme/theme.breakpoints"
+import Banner from "../../Components/Banner/index";
+import { Colors } from "../../Theme/color.constants";
+import { BannerImage } from "../../Utils/Constants/Language/en/SolutionsPageData";
+import Paragraph from "../../ContainerStructure/Headings/Paragraphs/Paragraph"
+import {BannerHeading,Bannersubheading,paragraph} from "../../Utils/Constants/Language/en/SolutionsPageData"
+
+const BannerSection = () => {
+  const { linearBackground } = Colors;
+  return (
+    <>
+      <Banner image={BannerImage} backColor={linearBackground}>
+      <Typography variant="h1" gutterBottom>
+          {BannerHeading} <br/> {Bannersubheading}
+          </Typography>
+          <Paragraph para={paragraph} />
+        <section style={{ marginTop: "15px" }}>
+          <Button
+            style={{ borderRadius: "none" }}
+            variant="contained"
+            size={Breakpoints()}
+            color="secondary"
+          >
+            <Typography variant="buttom">Get Started</Typography>
+          </Button>
+        </section>
+      </Banner>
+    </>
+  );
+};
+
+export default BannerSection;
