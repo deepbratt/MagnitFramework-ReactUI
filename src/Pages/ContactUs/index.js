@@ -12,7 +12,7 @@ import QuestionData from "./questions.json";
 import LayoutStyle from "./style";
 
 const ContactUs = () => {
-  const { root, wrap, cover, form, label, button } = LayoutStyle();
+  const { root, wrap, content, cover, form, label, button } = LayoutStyle();
   const {
     heading,
     subHeading,
@@ -35,24 +35,12 @@ const ContactUs = () => {
           <Grid item xs={12} md={6}>
             <div className={wrap}>
               <img className={cover} src={image} alt="A lady with laptop" />
-              <CardContent
-                style={{
-                  background:
-                    "linear-gradient(223.7deg, rgba(11, 102, 35, 0.56) 0%, rgba(0, 104, 250, 0.56) 133.78%)",
-                  color: "white",
-                  minHeight: "100%",
-                }}
-              >
+              <CardContent className={content}>
+                <Typography variant="h2">{heading}</Typography>
                 <Typography
-                  style={{ textAlign: "center", marginTop: "30px" }}
-                  variant="h2"
-                >
-                  {heading}
-                </Typography>
-                <Typography
-                  style={{ textAlign: "center", color: "white" }}
                   variant="subtitle1"
                   color="textSecondary"
+                  component="h5"
                 >
                   {subHeading}
                 </Typography>
@@ -100,7 +88,12 @@ const ContactUs = () => {
                     multiline
                   />
                   <div className={button}>
-                    <Button type="submit" color="primary" variant="contained">
+                    <Button
+                      type="submit"
+                      size="small"
+                      color="primary"
+                      variant="contained"
+                    >
                       <Typography
                         style={{ textAlign: "center", color: "#fff" }}
                         variant="button"

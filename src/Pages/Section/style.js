@@ -45,18 +45,30 @@ const LayoutStyle = makeStyles((theme) => ({
   startQuote1: {
     left: "-8%",
     top: "9%",
+    [theme.breakpoints.down("md")]: {
+      visibility: "hidden",
+    },
   },
   startQuote2: {
     left: "1%",
     top: "9%",
+    [theme.breakpoints.down("md")]: {
+      visibility: "hidden",
+    },
   },
   endQuote1: {
     right: "-8%",
     bottom: "-3%",
+    [theme.breakpoints.down("md")]: {
+      visibility: "hidden",
+    },
   },
   endQuote2: {
     right: "1%",
     bottom: "-3%",
+    [theme.breakpoints.down("md")]: {
+      visibility: "hidden",
+    },
   },
   hightlightWords: {
     background: `linear-gradient(to top, ${Harlequin} 50%, transparent 50%)`,
