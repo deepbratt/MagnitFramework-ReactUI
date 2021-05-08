@@ -2,7 +2,7 @@ import { Card, Typography } from "@material-ui/core";
 import FactCardStyles from "./style";
 
 const FactCard = ({ backColor, title, subtitle }) => {
-  const { root, header, subText } = FactCardStyles();
+  const { header, subText } = FactCardStyles();
   return (
     <Card
       style={{

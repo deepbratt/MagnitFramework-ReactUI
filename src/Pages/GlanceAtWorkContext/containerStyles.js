@@ -21,7 +21,7 @@ export const THEME = createMuiTheme({
         fontFamily: "Poppins",
         fontStyle: "normal",
         fontSize: "35px",
-        color:"white",
+        // color:"white",
         lineHeight: 1.6,
         color: whiteColor,
         fontWeight: "bolder",

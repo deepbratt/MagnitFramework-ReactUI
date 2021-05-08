@@ -5,7 +5,7 @@ const { Luigi, Harlequin,mainSlide } = Colors;
 const breakpoints = createBreakpoints({});
 export const useStyles = makeStyles((theme) => ({
   root: {
-    width: "100%",
+    // width: "100%",
     overflow: "hidden",
     margin: 0,
     padding: 0,

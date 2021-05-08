@@ -6,7 +6,7 @@ const LayoutStyle = makeStyles((theme) => ({
     
   },
   paper: {
-    padding: theme.spacing(0),
+    // padding: theme.spacing(0),
     textAlign: "center",
     color: theme.palette.text.secondary,
     padding: "0px",

@@ -133,7 +133,7 @@ const Home = (props) => {
             cards
               .filter((card, idx) => idx < 3)
               .map((card, index) => (
-                <Grid item xs={12} md={6} lg={4}>
+                <Grid item xs={12} md={6} lg={4} key={"training-"+index}>
                   <CardComponent key={index} cardData={card} />
                 </Grid>
               ))}
@@ -165,6 +165,7 @@ const Home = (props) => {
                 style={{ margin: "10px 40px", width: "130px" }}
                 src={image}
                 alt={`client${index}`}
+                key={`awards-accred-${index}`}
               />
             ))}
         </div>

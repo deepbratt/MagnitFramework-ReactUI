@@ -10,13 +10,13 @@ import {
 } from "@material-ui/core";
 import Breakpoints from "../../Theme/theme.breakpoints";
 import * as Images from "../../Components/Hero/Images"
-import {Colors} from "../../Theme/color.constants"
+// import {Colors} from "../../Theme/color.constants"
 import {Data} from "../../Utils/Constants/Language/en/GlanceAtWorkData"
 const Container = ({backColor}) => {
   const classes = useStyles();
   const {image1,image2,image3} = Images
   const {title,subtitle,buttonText} = Data
-  const {whiteColor} = Colors
+  // const {whiteColor} = Colors
   const {
     serviceHeading,
     root,
@@ -96,7 +96,7 @@ const Container = ({backColor}) => {
             variant="contained"
             size={Breakpoints()}
             className={seeMore}
-            color="white"
+            // color="white"
           >
             {buttonText}
           </Button>

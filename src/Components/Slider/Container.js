@@ -47,9 +47,10 @@ const Container = ({ slides }) => {
       showArrows={false}
       infiniteLoop={true}
       transitionTime={500}
+      showThumbs={false}
     >
       {slides.map((slide, i) => {
-        return <section>{slide}</section>;
+        return <section key={`slide-${i}`}>{slide}</section>;
       })}
     </Carousel>
   );

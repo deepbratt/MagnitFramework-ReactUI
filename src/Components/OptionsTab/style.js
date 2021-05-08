@@ -1,7 +1,7 @@
 import { makeStyles } from "@material-ui/core";
 import { Colors } from "../../Theme/color.constants";
-import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
-const breakpoints = createBreakpoints({});
+// import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
+// const breakpoints = createBreakpoints({});
 const { skyBlue } = Colors;
 
 const OptionTabStyles = makeStyles((theme) => ({

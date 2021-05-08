@@ -1,6 +1,6 @@
 import { Carousel } from "react-responsive-carousel";
-import CardImage1 from "../../assets/images/cards/Rectangle 89.png";
-import AuthImage1 from "../../assets/services/Person1.png";
+// import CardImage1 from "../../assets/images/cards/Rectangle 89.png";
+// import AuthImage1 from "../../assets/services/Person1.png";
 import ReviewCard from "./ReviewCard";
 import ReviewSliderStyles from "./style";
 import prev from "../../assets/services/prev.png";
@@ -98,7 +98,7 @@ const ReviewSlider = ({ slides }) => {
       infiniteLoop={true}
       transitionTime={500}
       renderIndicator={customDots}
-     
+      showThumbs={false}
     >
       {slides.map((slide, i) => {
         return (

@@ -3,9 +3,9 @@ import { createMuiTheme } from "@material-ui/core/styles";
 import { Colors } from "../../../Theme/color.constants";
 
 const {
-  transparentWildSand,
+  // transparentWildSand,
   WildSand,
-  mainSlide,
+  // mainSlide,
   blackColor,
   greyColor,
   Ash

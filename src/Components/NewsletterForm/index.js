@@ -19,9 +19,9 @@ const NewsletterForm = () => {
       <Typography className={title} variant="h2" gutterBottom>
         Ready to Discuss Your Project?
       </Typography>
-      <img className={quarterCircle} src={QuarterCircle} />
-      <img className={halfCircle} src={HalfCircle} />
-      <img className={triangle} src={Triangle} />
+      <img className={quarterCircle} src={QuarterCircle} alt="quarterCircle"/>
+      <img className={halfCircle} src={HalfCircle} alt="HalfCircle"/>
+      <img className={triangle} src={Triangle} alt="triangle"/>
       <form className={form}>
         <TextField
           variant="outlined"
@@ -29,7 +29,6 @@ const NewsletterForm = () => {
           size="small"
           fullWidth
           id="input-email"
-          fullWidth
           placeholder="Your Email Address"
         />
         <Button type="submit" color="primary" variant="contained">

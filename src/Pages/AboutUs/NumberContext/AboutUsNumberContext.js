@@ -29,7 +29,7 @@ const AboutUsNumberContext = () => {
             <section className={devSec}>
                 <section className={dev}></section>
                 <section>
-                <img width="40px" src={foundedIcon} />
+                <img width="40px" src={foundedIcon} alt="foundedIcon"/>
                   <Heading4 title={divOne} />
                   <Heading5 subTitle={FOUNDEDINTHEYEAR} />
                 </section>
@@ -41,7 +41,7 @@ const AboutUsNumberContext = () => {
               <section className={devSec}>
                 <section className={dev}></section>
                 <section>
-                <img width="70px" src={employeeIcon} />
+                <img width="70px" src={employeeIcon} alt="employeeIcon"/>
                   <Heading4 title={divTwo} />
                   <Heading5 subTitle={FULLTIMEEMPLOYEES} />
                 </section>
@@ -53,7 +53,7 @@ const AboutUsNumberContext = () => {
               <section className={devSec}>
                 <section className={dev}></section>
                 <section>
-                <img width="60px" src={projectsIcon} />
+                <img width="60px" src={projectsIcon} alt="projectsIcon" />
                   <Heading4 title={divThree} />
                   <Heading5 subTitle={TOTALPROJECTSCOMPLETE} />
                 </section>
@@ -65,7 +65,7 @@ const AboutUsNumberContext = () => {
               <section className={devSec}>
                 <section className={dev}></section>
                 <section>
-                <img width="60px" src={ratingIcon} />
+                <img width="60px" src={ratingIcon} alt="ratingIcon" />
                   <Heading4 title={divFour} />
                   <Heading5 subTitle={CUSTOMERRETENTIONRATE} />
                 </section>

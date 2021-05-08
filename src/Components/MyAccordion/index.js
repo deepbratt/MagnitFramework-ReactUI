@@ -14,7 +14,6 @@ const MyAccordion = ({ questions }) => {
       {questions
         .filter((question, idx) => idx < 3)
         .map((question, index) => (
-          <>
             <Accordion square key={index}>
               <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography variant="h6">{question.summary}</Typography>
@@ -23,7 +22,6 @@ const MyAccordion = ({ questions }) => {
                 <Typography variant="body2">{question.detail}</Typography>
               </AccordionDetails>
             </Accordion>
-          </>
         ))}
     </div>
   );

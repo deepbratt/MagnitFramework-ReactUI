@@ -1,6 +1,6 @@
 import { Grid } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import FooterStyle from "./style";
 import IconFB from "../../assets/images/icon-fb.png";
 import IconTwitter from "../../assets/images/icon-twitter.png";
@@ -9,7 +9,7 @@ import Magnit from "../../assets/images/Magnit.png";
 const Footer = () => {
   const { root,rootRow, logo, list, section, policy, contact,head,footer } = FooterStyle();
   const ls = [ "Service", "Solutions", "FAQ'S,Case Study", "Blog", "Career"];
-  const lsTwo = [""];
+  // const lsTwo = [""];
   return (
     <footer className={root}>
       <Grid container spacing={1} direction="row" justify="space-between" className={rootRow}>
@@ -54,8 +54,8 @@ const Footer = () => {
           <div className={list}>
             {ls
               .filter((item, idx) => idx < 5)
-              .map((item) => (
-                <Link to={`\${item}`}>
+              .map((item,index) => (
+                <Link to={`\${item}`} key={`footer-${index}`}>
                   <Typography
                     style={{ marginBottom: "10px",fontSize:"16px" }}
                     align="left"
@@ -93,7 +93,7 @@ const Footer = () => {
           </div>
         </Grid>
         </Grid>
-        <Grid xs={12} className={footer} >
+        <Grid className={footer} >
         <Grid item xs={12} md={6}>
           <Typography
             className="copyrights"
