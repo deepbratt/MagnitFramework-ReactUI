@@ -3,7 +3,7 @@ import { useStyles, THEME } from "./sectionStyles";
 import { Typography, Card, CardContent } from "@material-ui/core";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import * as icons from "../../assets/icons/icon.constants";
-import {SecondaryData } from "../../Utils/Constants/Language/en/PartnerWithUsData";
+import { SecondaryData } from "../../Utils/Constants/Language/en/PartnerWithUsData";
 
 const SecondarySection = ({
   qualityColor,
@@ -11,7 +11,7 @@ const SecondarySection = ({
   timeColor,
   supportColor,
   geekyColor,
-  IconFill
+  IconFill,
 }) => {
   const classes = useStyles();
   const {

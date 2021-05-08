@@ -13,7 +13,6 @@ const PrimarySection = ({
   transparencyColor,
   moneyColor,
   IconFill,
-
 }) => {
   const classes = useStyles();
   const {

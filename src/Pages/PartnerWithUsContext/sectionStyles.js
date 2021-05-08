@@ -44,7 +44,7 @@ export const useStyles = makeStyles((theme) => ({
     boxShadow: "none",
     [breakpoints.down("md")]: {
       width: "100%",
-      height: "200px"
+      height: "200px",
     },
     [breakpoints.down("xs")]: {
       height: "210px",
@@ -139,5 +139,4 @@ export const useStyles = makeStyles((theme) => ({
     width: "120px",
     height: "60px",
   },
- 
 }));

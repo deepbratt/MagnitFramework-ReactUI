@@ -5,41 +5,41 @@ import FooterStyle from "./style";
 import IconFB from "../../assets/images/icon-fb.png";
 import IconTwitter from "../../assets/images/icon-twitter.png";
 import IconLI from "../../assets/images/icon-linkedIn.png";
-import Magnit from "../../assets/images/Magnit.png";
+import Logo from "../../assets/Logo-white.png";
+import { footerText } from "../../Utils/Constants/Language";
+
 const Footer = () => {
-  const { root,rootRow, logo, list, section, policy, contact,head,footer } = FooterStyle();
-  const ls = [ "Service", "Solutions", "FAQ'S,Case Study", "Blog", "Career"];
-  const lsTwo = [""];
+  const {
+    root,
+    logo,
+    list,
+    section,
+    policy,
+    contact,
+    sectionBorder,
+  } = FooterStyle();
+  const {
+    contactUs,
+    navigation,
+    addressSection,
+    talkToUsSection,
+    copyrights,
+    lifeTimeSupport,
+    terms,
+    disclaimer,
+  } = footerText;
   return (
     <footer className={root}>
-      <Grid container spacing={1} direction="row" justify="space-between" className={rootRow}>
-        {/* <Grid item xs={12} md={4} lg={3}>
-          <div className={logo}>
-            <Typography
-              style={{ color: "#FFFFFF" }}
-              align="left"
-              gutterBottom
-              variant="h2"
-            >
-              Logo Here
-            </Typography>
-          </div>
-        </Grid> */}
+      <Grid container spacing={1} direction="row" justify="space-between">
         <Grid item xs={12} md={4} lg={3}>
           <div className={section}>
             <div className={logo}>
-              <Typography
-                style={{ color: "#FFFFFF" }}
-                align="left"
-                gutterBottom
-                variant="h2"
-              >
-               <img src={Magnit} alt="magnit" />
-              </Typography>
+              <img src={Logo} alt="Maginit Logo" />
             </div>
-            <Typography align="left" gutterBottom variant="h3">
-              CONNECT WITH US
+            <Typography align="left" gutterBottom variant="h5">
+              {contactUs}
             </Typography>
+
             <div className={contact}>
               <img src={IconFB} alt="Facebook Icon" />
               <img src={IconTwitter} alt="Twitter Icon" />
@@ -48,79 +48,70 @@ const Footer = () => {
           </div>
         </Grid>
         <Grid item xs={12} md={4} lg={2}>
-        <Typography align="left" gutterBottom variant="h3" className={head}>
-        Company
-        </Typography>
           <div className={list}>
-            {ls
-              .filter((item, idx) => idx < 5)
-              .map((item) => (
-                <Link to={`\${item}`}>
-                  <Typography
-                    style={{ marginBottom: "10px",fontSize:"16px" }}
-                    align="left"
-                    gutterBottom
-                    variant="body1"
-                  >
-                    {item}
-                  </Typography>
-                </Link>
-              ))}
+            <Typography align="left" gutterBottom variant="h6" component="h5">
+              {navigation.title}
+            </Typography>
+            {navigation.links.map((item, idx) => (
+              <Link key={idx} to={`\${item}`}>
+                <Typography align="left" gutterBottom variant="body2">
+                  {item}
+                </Typography>
+              </Link>
+            ))}
           </div>
         </Grid>
 
         <Grid item xs={12} md={4} lg={2}>
           <div className={section}>
-            <Typography align="left" gutterBottom variant="h3" className={head}>
-              INDIA OFFICE
+            <Typography align="left" gutterBottom variant="h5">
+              {talkToUsSection.title}
             </Typography>
-            <Typography align="left" gutterBottom variant="body1">
-              Shakti Tower, EN 60, 5th Floor, Sector V, Saltlake, Kolkata 700091
-            </Typography>
+            {talkToUsSection.numbers.map((num, index) => (
+              <Typography key={index} align="left" gutterBottom variant="body2">
+                {num}
+              </Typography>
+            ))}
           </div>
         </Grid>
 
         <Grid item xs={12} md={4} lg={2}>
           <div className={section}>
-            <Typography align="left" gutterBottom variant="h3" className={head}>
-              TALK TO US
+            <Typography align="left" gutterBottom variant="h5">
+              {addressSection.title}
             </Typography>
-            <Typography align="left" gutterBottom variant="body1">
-              USA/Canada: 713-489-0845
-              <br /> Australia: (02)-9191-2621
-              <br /> UK: (0)-203-514-2412
+            <Typography align="left" gutterBottom variant="body2">
+              {addressSection.address}
             </Typography>
           </div>
         </Grid>
-        </Grid>
-        <Grid xs={12} className={footer} >
+      </Grid>
+      <Grid className={sectionBorder} container>
         <Grid item xs={12} md={6}>
           <Typography
             className="copyrights"
             align="left"
             gutterBottom
-            variant="caption"
+            variant="body2"
+            component="p"
           >
-            © 2021 Company name, All Rights Reserved. CIN: U72300WB2013PTC191520
+            {copyrights}
           </Typography>
         </Grid>
         <Grid item xs={12} md={6}>
           <div className={policy}>
-            <Typography gutterBottom variant="caption">
-              Life-Time Support
+            <Typography gutterBottom variant="body2">
+              {lifeTimeSupport}
             </Typography>
-            <Typography align="right" gutterBottom variant="caption">
-              Terms of Service
+            <Typography align="right" gutterBottom variant="body2">
+              {terms}
             </Typography>
-            <Typography align="right" gutterBottom variant="caption">
-              Disclaimer & Privacy Policy
+            <Typography align="right" gutterBottom variant="body2">
+              {disclaimer}
             </Typography>
           </div>
         </Grid>
-        
-        </Grid>
-      
-    
+      </Grid>
     </footer>
   );
 };
