@@ -30,7 +30,7 @@ const {
   heliotrope,
   darkBlue,
 } = Colors;
- export const Primaryarray = [{
+ export const PrimaryArray = [{
   color: yellowOrange,
   icon: appIcon,
   title: "App Development",
@@ -64,7 +64,7 @@ const {
 ]
 
 
-export const Secondaryarray = [{
+export const SecondaryArray = [{
   color: orangeRed,
   icon: qualityIcon,
   title: "Quality",
@@ -97,4 +97,4 @@ export const Secondaryarray = [{
 },
 ]
 
-export default {Primaryarray,Secondaryarray}
+export default {PrimaryArray,SecondaryArray}

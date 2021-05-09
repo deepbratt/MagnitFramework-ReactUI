@@ -4,7 +4,7 @@ import { Typography, Paper, Grid } from "@material-ui/core";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import PrimarySection from "./PrimarySection";
 import SecondarySection from "./SecondarySection";
-import {Primaryarray,Secondaryarray} from "../../Utils/Constants/Language/en/PartnerWithUsData"
+import {PrimaryArray,SecondaryArray} from "../../Utils/Constants/Language/en/PartnerWithUsData"
 
 const Container = () => {
   const classes = useStyles();
@@ -25,12 +25,12 @@ const Container = () => {
         </Grid>
         <Grid item md={6} xs={12}>
           <PrimarySection
-          data={Primaryarray}
+          data={PrimaryArray}
           />
         </Grid>
         <Grid item md={6} xs={12}>
           <SecondarySection
-            data={Secondaryarray}
+            data={SecondaryArray}
 
           />
         </Grid>

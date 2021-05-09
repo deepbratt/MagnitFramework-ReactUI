@@ -5,7 +5,7 @@ import PrimarySection from "../PartnerWithUsContext/PrimarySection";
 import SecondarySection from "../PartnerWithUsContext/SecondarySection";
 import {THEME} from "../../ContainerStructure/Headings/headingStyles"
 import { MuiThemeProvider } from "@material-ui/core/styles";
-import {Primaryarray,Secondaryarray} from "../../Utils/Constants/Language/en/PartnerWithUsData"
+import {PrimaryArray,SecondaryArray} from "../../Utils/Constants/Language/en/PartnerWithUsData"
 
 const WhyUsContainer = () => {
   const { root, grid ,underlinedText} = useStyles();
@@ -28,14 +28,14 @@ const WhyUsContainer = () => {
         <Grid className={grid} item lg={5} md={5} xs={12}>
           <setion>
           <PrimarySection
-            data={Primaryarray}
+            data={PrimaryArray}
           />
           </setion>
          
         </Grid>
         <Grid className={grid} item lg={5} md={5} xs={12}>
           <SecondarySection
-          data={Secondaryarray}
+          data={SecondaryArray}
           />
         </Grid>
       </Grid>
