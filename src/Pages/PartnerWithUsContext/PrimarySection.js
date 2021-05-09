@@ -3,6 +3,7 @@ import { useStyles, THEME } from "./sectionStyles";
 import { Typography, Card, CardContent } from "@material-ui/core";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 
+
 const PrimarySection = (props) => {
   const data = props.data
   const classes = useStyles();

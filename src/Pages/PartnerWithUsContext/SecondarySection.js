@@ -2,9 +2,13 @@ import React from "react";
 import { useStyles, THEME } from "./sectionStyles";
 import { Typography, Card, CardContent } from "@material-ui/core";
 import { MuiThemeProvider } from "@material-ui/core/styles";
+<<<<<<< HEAD
 
 const SecondarySection = (props) => {
   const data = props.data
+import * as icons from "../../assets/icons/icon.constants";
+import { SecondaryData } from "../../Utils/Constants/Language/en/PartnerWithUsData";
+
   const classes = useStyles();
   const {
     cardSec,

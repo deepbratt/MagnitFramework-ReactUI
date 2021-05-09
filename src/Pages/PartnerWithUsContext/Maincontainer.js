@@ -8,7 +8,7 @@ import {Primaryarray,Secondaryarray} from "../../Utils/Constants/Language/en/Par
 
 const Container = () => {
   const classes = useStyles();
-  const { root,underlined } = classes;
+  const { root, underlined } = classes;
   return (
     <>
       <Grid container>
@@ -17,9 +17,7 @@ const Container = () => {
             <section>
               <MuiThemeProvider theme={THEME}>
                 <Typography variant="h4" color="inherit">
-                  Why Partner <span className={underlined}>
-                  with Us?
-                  </span>
+                  Why Partner <span className={underlined}>with Us?</span>
                 </Typography>
               </MuiThemeProvider>
             </section>
@@ -33,6 +31,7 @@ const Container = () => {
         <Grid item md={6} xs={12}>
           <SecondarySection
             data={Secondaryarray}
+
           />
         </Grid>
       </Grid>
