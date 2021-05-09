@@ -57,6 +57,10 @@ export const benefitsData = [
     desc:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
   },
+  
+];
+
+export const benefitsSecondaryData = [
   {
     color: TexasRose,
     icon: customIcon,
@@ -85,9 +89,9 @@ export const benefitsData = [
     desc:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
   },
-];
+]
 
-const Array = [
+export const Array = [
   {
     Icon: ride,
     title: "Solutions we offer",
@@ -136,4 +140,8 @@ export const BannerHeading = "Wide range of Custom Solutions"
 export const Bannersubheading = "for your Business"
 export const paragraph = "We have a talent pool of qualified & well-experienced web developers."
 
-export default Array;
+export default {
+  Array,
+  benefitsData,
+  benefitsSecondaryData
+}

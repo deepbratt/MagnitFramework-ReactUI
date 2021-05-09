@@ -26,7 +26,7 @@ export const useStyles = makeStyles((theme) => ({
     paddingTop: "20px",
   },
   card: {
-    width: "25%",
+    width: "27%",
     height: "280px",
     display: "flex",
     flexDirection: "column",

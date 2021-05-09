@@ -6,7 +6,7 @@ import Heading4 from "../../../ContainerStructure/Headings/Heading4";
 import Paragraph from "../../../ContainerStructure/Headings/Paragraphs/Paragraph";
 import Breakpoints from "../../../Theme/theme.breakpoints";
 import { Colors } from "../../../Theme/color.constants";
-import Array  from "../../../Utils/Constants/Language/en/SolutionsPageData";
+import {Array}  from "../../../Utils/Constants/Language/en/SolutionsPageData";
 import {heading,subheading}  from "../../../Utils/Constants/Language/en/SolutionsPageData"
 
 const WeOfferContext = () => {
@@ -21,12 +21,12 @@ const WeOfferContext = () => {
           <Paragraph para= {subheading}/>
         </section>
         <section className={cardSec}>
-         {Array.map(data => {
-          return( <Card className={card}>
-            <CardContent>
+         {Array.map((data,index) =>{
+           return( <Card className={card}>
+            <CardContent key = {index}>
               <section className={devSec}>
                 <section>
-                  <img width="50px" src = {data.Icon} />
+                  <img alt="image" width="50px" src = {data.Icon} />
                   <Heading5 subTitle={data.title} />
                   <section style={{ color: DoveGray, paddingTop: "10px" }}>
                     <Paragraph para={data.paragraph} />

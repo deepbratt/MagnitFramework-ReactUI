@@ -99,6 +99,11 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   vector: {
+   zIndex: 1,
+    height: "530px",
+    margin: 0,
+    padding: 0,
+    width: "100vw",
     [theme.breakpoints.up("lg")]: {
       height: "530px",
       marginLeft: "100px",
@@ -150,8 +155,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   sec: {
     position: "relative",
-    zIndex: 1,
-    width: "50%",
+    width: "100%",
     [breakpoints.only("sm")]: {
       marginTop: "20px",
     },
@@ -160,6 +164,7 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   slide: {
+    position: "relative",
     [breakpoints.up("lg")]: {
       "& .carousel .slide img": {
         maxHeight: "600px",
@@ -182,17 +187,9 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   spiral: {
-    width: "100px",
     position: "absolute",
-    left: "800px",
-    mixBlendMode: "screen",
-    [breakpoints.up("lg")]: {
-      height: "520px",
-      left: "750px",
-    },
-    [breakpoints.down("md")]: {
-      left: "450px",
-      height: "400px",
-    },
+    zIndex: 0,
+    height: "500px",
   },
+
 }));

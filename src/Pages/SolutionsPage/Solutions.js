@@ -7,14 +7,8 @@ import { MuiThemeProvider } from "@material-ui/core/styles";
 import { THEME } from "../../ContainerStructure/Headings/headingStyles";
 import { Colors } from "../../Theme/color.constants";
 import Banner from "./Banner";
-import PointBage from "../../Components/PointBadge/PointList";
-import {
-  benefitsData,
-  benefitsHeading,
-  benefitsSubheading,
-} from "../../Utils/Constants/Language/en/SolutionsPageData";
-import Section from "../../Pages/Section";
 import Slider from "./ReviewSlider";
+import Main from "./WhyUsContainer"
 
 const Solutions = () => {
   const { linearBackground } = Colors;
@@ -36,17 +30,9 @@ const Solutions = () => {
         <Grid item lg={12} md={12} xs={12}>
           <WeOffer />
         </Grid>
-        <Section>
-          <MuiThemeProvider theme={THEME}>
-            <section>
-              <Typography variant="h4" color="inherit">
-                {benefitsHeading}
-                <span className={underlined}>{benefitsSubheading}</span>
-              </Typography>
-            </section>
-          </MuiThemeProvider>
-          <PointBage data={benefitsData} horizontal={true} />
-        </Section>
+        <Grid item lg={12} md={12} xs={12}>
+          <Main />
+        </Grid>
         <Grid item lg={12} md={12} xs={12}>
           <Slider />
         </Grid>

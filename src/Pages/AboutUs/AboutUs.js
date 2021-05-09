@@ -28,7 +28,7 @@ const AboutUs = () => {
         <Grid item lg={12} md={12} xs={12}>
           <Slider slides={array} />
         </Grid>
-        <Grid item lg={12} md={12} xs={12}>
+        <Grid item  md={12} xs={12}>
           <WhyUsContainer />
         </Grid>
       </Grid>
