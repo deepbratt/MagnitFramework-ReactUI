@@ -3,6 +3,7 @@ import CustomButton from "../CustomButton";
 import ErrorBoundaryImage from "../../assets/ErrorBoundary/errorBoundary.png";
 import MagnitLogo from "../../assets/MagnitLogo.png";
 import ErrorBoundaryStyles from "./ErrorBoundaryStyles";
+import {errorBoundaryText} from '../../Utils/Constants/Language/index'
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -51,10 +52,10 @@ class ErrorBoundary extends React.Component {
           </div>
           <img src={ErrorBoundaryImage} alt="error-image" style={errorImage} />
           <div style={textWrapper}>
-            <h1>OOPS! Something went wrong.</h1>
-            <h3>ERROR</h3>
+            <h1>{errorBoundaryText.heading}</h1>
+            <h3>{errorBoundaryText.error}</h3>
             <span>{this.state.error.toString()}</span>
-            <h3>ERROR INFO</h3>
+            <h3>{errorBoundaryText.errorInformationHeading}</h3>
             <details style={errorDetails}>
               {this.state.errorInfo.componentStack}
             </details>
