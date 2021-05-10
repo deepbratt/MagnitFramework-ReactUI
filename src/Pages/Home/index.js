@@ -7,7 +7,7 @@ import PartnerContext from "../PartnerWithUsContext/Maincontainer";
 import GlanceSection from "../GlanceAtWorkContext/Container";
 import React, { useState } from "react";
 import { Button, Typography } from "@material-ui/core";
-import MyAccordion from "../../Components/MyAccordion";
+
 import ContactUs from "../ContactUs";
 import Section from "../Section";
 import Image1 from "../../assets/images/awardAccredationSection/image 2.png";
@@ -15,10 +15,7 @@ import Image2 from "../../assets/images/awardAccredationSection/image 3.png";
 import Image3 from "../../assets/images/awardAccredationSection/image 4.png";
 import Image4 from "../../assets/images/awardAccredationSection/image 5.png";
 import Image5 from "../../assets/images/awardAccredationSection/image 6.png";
-import CardComponent from "../../Components/CardComponent";
-import NewsletterForm from "../../Components/NewsletterForm";
-import QuestionData from "./questions.json";
-import FactCard from "../../Components/FactCard";
+// import CardComponent from "../../Components/CardComponent";
 import { cards } from "./cardData";
 import CardSlyder from "../../Components/CardSlider";
 import startQuote from "../../assets/images/cards/startQuote.png";
@@ -26,21 +23,39 @@ import endQuote from "../../assets/images/cards/EndingQuoteBlue.png";
 import { Colors } from "../../Theme/color.constants";
 import {
   AwardSectionTitle,
-  FactsCardSectionTitle,
-  FQASectionTitle,
   TrainingAndCertificationSectionTitle,
   WhatDoClientSaySectionTitle,
 } from "./constants";
 import ReviewSlider from "../../Components/ReviewSlider";
+import { trainingAndCertificationText as TCData } from "../../Utils/Constants/Language";
+import CertificationList from "../../Components/certificationList";
+import HomeStyles from "./style";
+import QuoteCard from "../../Components/QuoteCard";
+import CustomButton from "../../Components/CustomButton";
 
 const images = [Image1, Image2, Image3, Image4, Image5];
 
 const Home = (props) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const { leftRoot, rightRoot } = HomeStyles();
+  // const {
+  //   // sectionBackgroundColors,
+  //   // factCards,
+  //   glanceSectionBackground,
+  // } = Colors;
+  // const { peach, seaGreen, skyBlue, violet, purple, blue } = factCards;
+  // const { trainingAndCertification } = sectionBackgroundColors;
 
-  const { sectionBackgroundColors, factCards,BlueRibbon,  } = Colors;
-  const { peach, seaGreen, skyBlue, violet, purple, blue } = factCards;
-  const { trainingAndCertification } = sectionBackgroundColors;
+  // prop for training and certification
+  const rootClasses = [rightRoot, leftRoot, rightRoot, leftRoot];
+
+  const {
+    // sectionBackgroundColors, factCards,
+    BlueRibbon,
+  } = Colors;
+  // const { peach, seaGreen, skyBlue, violet, purple, blue } = factCards;
+  // const { trainingAndCertification } = sectionBackgroundColors;
+
   const cardArr = [
     <CardSlyder cardData={cards} />,
     <CardSlyder cardData={cards} />,
@@ -69,10 +84,9 @@ const Home = (props) => {
         </Section>
       </Grid>
       <Grid item md={12} xs={12}>
-          <GlanceSection backColor={BlueRibbon} />
-
+        <GlanceSection backColor={BlueRibbon} />
       </Grid>
-      {/* SOME FACTS ABOUT US SECTION */}
+      {/* SOME FACTS ABOUT US SECTION
       <Section title={FactsCardSectionTitle}>
         <Grid style={{ padding: "0 5%" }} container direction="row" spacing={2}>
           <Grid item xs={12} md={6} lg={4}>
@@ -112,64 +126,26 @@ const Home = (props) => {
               title="ISO 9001:2015"
               subtitle="Certification"
             />
-          </Grid>
+          </Grid>s
         </Grid>
-      </Section>
-      {/* What do our Client Say */}
-      <Section
-        title={WhatDoClientSaySectionTitle}
-        startQuote={startQuote}
-        endQuote={endQuote}
-      >
-        <ReviewSlider slides={cardArr} />
-      </Section>
+      </Section> */}
+
       {/* TRAINING AND CERTIFICATION */}
-      <Section
-        title={TrainingAndCertificationSectionTitle}
-        backColor={trainingAndCertification}
-      >
-        <Grid container direction="row" spacing={2}>
-          {cards &&
-            cards
-              .filter((card, idx) => idx < 3)
-              .map((card, index) => (
-                <Grid item xs={12} md={6} lg={4} key={"training-"+index}>
-                  <CardComponent key={index} cardData={card} />
-                </Grid>
-              ))}
+      <Section title={TrainingAndCertificationSectionTitle}>
+        <Grid container direction="row">
+          {TCData &&
+            TCData.filter((card, idx) => idx < 4).map((card, index) => (
+              <Grid key={index} item xs={12}>
+                <CertificationList root={rootClasses[index]} data={card} />
+              </Grid>
+            ))}
         </Grid>
-        <Button
-          style={{ marginTop: "30px" }}
-          color="primary"
-          variant="contained"
-        >
-          <Typography
-            style={{ textAlign: "center", color: "#fff" }}
-            variant="button"
-          >
-            See more
-          </Typography>
-        </Button>
+        <CustomButton text="See More" />
       </Section>
-      {/* NEWSLETTER SECTION */}
+      {/* NEWSLETTER SECTION
       <Section>
         <NewsletterForm />
-      </Section>
-
-      {/* AWARD AND ACCREDITATIONS SECTION */}
-      <Section title={AwardSectionTitle}>
-        <div>
-          {images &&
-            images.map((image, index) => (
-              <img
-                style={{ margin: "10px 40px", width: "130px" }}
-                src={image}
-                alt={`client${index}`}
-                key={`awards-accred-${index}`}
-              />
-            ))}
-        </div>
-      </Section>
+      </Section> */}
       {/* CONTACT US FORM SECTION */}
       <Section>
         {!isSubmitted ? (
@@ -180,17 +156,36 @@ const Home = (props) => {
           </Typography>
         )}
       </Section>
-      {/* FQA SECTION */}
-      <Section title={FQASectionTitle}>
-        <MyAccordion questions={QuestionData} />
-        <Button color="primary" variant="contained">
-          <Typography
-            style={{ textAlign: "center", color: "#fff" }}
-            variant="button"
-          >
-            See more
-          </Typography>
-        </Button>
+      {/* What do our Client Say */}
+      <Section
+        title={WhatDoClientSaySectionTitle}
+        startQuote={startQuote}
+        endQuote={endQuote}
+      >
+        <Grid style={{ position: "sticky" }} container direction="row">
+          {cards &&
+            cards.map((data, index) => (
+              <Grid key={index} item xs={12} md={6} lg={4}>
+                <QuoteCard cardData={data} />
+              </Grid>
+            ))}
+        </Grid>
+        {/* <ReviewSlider slides={cardArr} /> */}
+      </Section>
+      {/* AWARD AND ACCREDITATIONS SECTION */}
+      <Section title={AwardSectionTitle}>
+        <div>
+          {images &&
+            images.map((image, index) => (
+              <img
+                key={index}
+                style={{ margin: "10px 40px", width: "130px" }}
+                src={image}
+                alt={`client${index}`}
+                key={`awards-accred-${index}`}
+              />
+            ))}
+        </div>
       </Section>
     </div>
   );

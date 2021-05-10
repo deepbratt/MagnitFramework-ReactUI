@@ -1,12 +1,11 @@
-import { image4, ellipse, ellipse2 } from "../../../Components/Hero/Images";
 import missionIcon from "../../../assets/AboutUs/rocket.svg"
 import visionIcon from "../../../assets/AboutUs/vision.svg"
-import vector from "../../../assets/AboutUs/vector.png"
 import founded from "../../../assets/AboutUs/founded.png"
 import employee from "../../../assets/AboutUs/employee.png"
 import projects from "../../../assets/AboutUs/projects.png"
 import rating from "../../../assets/AboutUs/rating.png"
 import FoundersyImg from "../../../assets/AboutUs/Img2.png"
+import Img from "../../../assets/AboutUs/Img3.png"
 
 
 
@@ -14,15 +13,12 @@ const MainData = {
   title: "About Us",
   mission : missionIcon,
   vision : visionIcon,
-  heroImgsrc: image4,
-  ellipseImgsrc: ellipse,
-  ellipse2Imgsrc: ellipse2,
-  Vector: vector,
   foundedIcon : founded,
   employeeIcon : employee,
   projectsIcon : projects,
   ratingIcon : rating,
   Img: FoundersyImg,
+  heroImgsrc: Img,
   subTitle: "Cathrine Doe",
   span: "CEO Megmite",
   heading: "Meet Our Foundersy",

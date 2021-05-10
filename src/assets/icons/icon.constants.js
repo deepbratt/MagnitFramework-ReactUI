@@ -11,19 +11,27 @@ import Profileicon from "../services/profile.svg";
 import Webicon from "../services/web.svg";
 import Digitalicon from "../services/digital.svg";
 
-import app from "../PartnerWithUsImg/house.svg";
-import reliable from "../PartnerWithUsImg/handshake.svg";
-import innovative from "../PartnerWithUsImg/idea.svg";
-import agile from "../PartnerWithUsImg/agile.svg";
-import transparency from "../PartnerWithUsImg/loupe.svg";
-import money from "../PartnerWithUsImg/bank.svg";
+import app from "../PartnerWithUsImg/house.png";
+import reliable from "../PartnerWithUsImg/handshake.png";
+import innovative from "../PartnerWithUsImg/idea.png";
+import agile from "../PartnerWithUsImg/agile.png";
+import transparency from "../PartnerWithUsImg/loupe.png";
+import money from "../PartnerWithUsImg/bank.png";
 
-import quality from "../PartnerWithUsImg/quality.svg";
-import support from "../PartnerWithUsImg/share.svg";
-import geeky from "../PartnerWithUsImg/geeky.svg";
-import time from "../PartnerWithUsImg/time.svg";
-import data from "../PartnerWithUsImg/shield.svg";
-import iso from "../PartnerWithUsImg/iso.svg";
+import quality from "../icons/qualityIcon.png";
+import support from "../PartnerWithUsImg/support.png";
+import geeky from "../PartnerWithUsImg/geeky.png";
+import time from "../icons/timeIcon.png";
+import data from "../icons/dataIcon.png";
+import iso from "../PartnerWithUsImg/iso.png";
+import tech from "../icons/Tech.png";
+import idea from "../icons/idea.png";
+import custom from "../icons/custom.png";
+import TimeIcon from "../icons/timeIcon.png";
+import MoneyIcon from "../icons/moneyIcon.png";
+import QualityIcon from "../icons/qualityIcon.png";
+import SupportIcon from "../icons/supportIcon.png";
+import DataIcon from "../icons/dataIcon.png";
 
 // Web development Services Icons
 import CMS from "../icons/CMS.png";
@@ -60,6 +68,14 @@ export const datingIcon = dating;
 export const fitnessIcon = barbell;
 export const deliveryIcon = delivery;
 export const portalIcon = jobPortal;
+export const techIcon = tech;
+export const ideaIcon = idea;
+export const customIcon = custom;
+export const Time = TimeIcon;
+export const Money = MoneyIcon;
+export const Quality = QualityIcon;
+export const Support = SupportIcon;
+export const Data = DataIcon;
 
 // Partner with us section icons
 export const appIcon = app;

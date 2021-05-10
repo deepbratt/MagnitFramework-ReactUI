@@ -1,5 +1,4 @@
 import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
-// import { ThemeProvider } from "@material-ui/styles";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 const breakpoints = createBreakpoints({});
 // Object of our themes
@@ -24,7 +23,7 @@ export default function createTheme(options) {
         root: {
           "&$selected": {
             backgroundColor: "#2cd400",
-            color: "#fff"
+            color: "#fff",
           },
         },
 
@@ -35,6 +34,7 @@ export default function createTheme(options) {
       MuiButton: {
         contained: {
           boxShadow: "0px 0px 0px rgba(0, 0, 0, 0);",
+          borderRadius: "0px",
         },
       },
       MuiInputBase: {
@@ -54,6 +54,8 @@ export default function createTheme(options) {
       },
       MuiAccordion: {
         root: {
+          margin: "0px",
+
           marginTop: "20px",
           position: "inherit",
           "&::before": {
@@ -65,8 +67,9 @@ export default function createTheme(options) {
         root: {
           backgroundColor: "rgba(141, 152, 191, 0.1)",
           marginBottom: "20px",
-          padding: "15px 45px",
-          borderRadius: "10px",
+          padding: "5px 15px",
+
+          borderRadius: "5px",
         },
       },
       MuiAccordionDetails: {
@@ -77,19 +80,42 @@ export default function createTheme(options) {
     },
     typography: {
       fontFamily: "'Poppins', 'Arial', sans-serif",
+      // htmlFontSize: "10px",
+      fontSize: 14,
       h1: {
-        fontSize: "3rem",
+        fontSize: "3.4375rem",
         fontWeight: 600,
+        lineHeight: "71.77px",
       },
       h2: {
         fontSize: "2.1875rem",
         fontWeight: 600,
-        lineHeight: "52.5px",
+        lineHeight: "57.05px",
       },
       h3: {
         fontSize: "1.5rem",
         fontWeight: 600,
-       
+        lineHeight: "39.12px",
+      },
+      h4: {
+        fontSize: "1.5rem",
+        fontWeight: 600,
+        lineHeight: "39.12px",
+      },
+      h5: {
+        fontSize: "1.25rem",
+        fontWeight: 500,
+        lineHeight: "30px",
+      },
+      h6: {
+        fontSize: "1.125rem",
+        fontWeight: 500,
+        lineHeight: "29.34px",
+      },
+      subtitle1: {
+        fontSize: "1.5rem",
+        fontWeight: 300,
+        lineHeight: "43.2px",
       },
       button: {
         fontSize: "1.25rem",
@@ -98,23 +124,16 @@ export default function createTheme(options) {
       caption: {
         fontWeight: 400,
         fontSize: "1rem",
-        color: "#FFFFFF",
-        [breakpoints.down("sm")]: {
-          fontSize: ".7rem",
-           },
       },
       body1: {
-        fontWeight: 500,
-        size: "1rem",
-        color: "#FFFFFF",
-        [breakpoints.down("sm")]: {
-          fontSize: ".8rem",
-           },
+        fontWeight: 400,
+        size: "1.125rem",
+        lineHeight: "29.34px",
       },
       body2: {
-        fontSize: "1rem",
-        color: "#151B27",
-        
+        fontWeight: 300,
+        size: "1rem",
+        lineHeight: "29.36px",
       },
     },
     shape: {

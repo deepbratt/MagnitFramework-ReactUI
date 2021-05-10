@@ -52,20 +52,6 @@ export const THEME = createMuiTheme({
         marginTop: "22px",
         color: whiteColor,
       },
-      paragraph: {
-        fontFamily: "Poppins",
-        fontSize: "15px",
-        textAlign: "left",
-        marginTop: "10px",
-        paddingLeft: "20px",
-        [breakpoints.only("md")]: {
-          paddingLeft: "10px",
-        },
-        [breakpoints.down("xs")]: {
-          fontSize: "14px",
-          paddingLeft: "10px",
-        },
-      },
     },
   },
 });
@@ -97,7 +83,7 @@ export const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "left",
     transition: "all .25s linear",
-    margin: "10px",
+    margin: "20px",
     boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
     [breakpoints.only("md")]: {
       width: "40%",
