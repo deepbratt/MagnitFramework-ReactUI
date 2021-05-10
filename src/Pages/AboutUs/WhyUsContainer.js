@@ -3,24 +3,9 @@ import { useStyles } from "../PartnerWithUsContext/containerStyles";
 import { Paper, Grid , Typography} from "@material-ui/core";
 import PrimarySection from "../PartnerWithUsContext/PrimarySection";
 import SecondarySection from "../PartnerWithUsContext/SecondarySection";
-import { Colors } from "../../Theme/color.constants";
 import {THEME} from "../../ContainerStructure/Headings/headingStyles"
 import { MuiThemeProvider } from "@material-ui/core/styles";
-
-const {
-  yellowOrange,
-  lightOrange,
-  pastelBlue,
-  peacockGreen,
-  lightblue,
-  persianGreen,
-  orangeRed,
-  Orchid,
-  skyBlueColor,
-  heliotrope,
-  darkBlue,
-  fillColor,
-} = Colors;
+import {PrimaryArray,SecondaryArray} from "../../Utils/Constants/Language/en/PartnerWithUsData"
 
 const WhyUsContainer = () => {
   const { root, grid ,underlinedText} = useStyles();
@@ -41,25 +26,16 @@ const WhyUsContainer = () => {
           </Paper>
         </Grid>
         <Grid className={grid} item lg={5} md={5} xs={12}>
+          <setion>
           <PrimarySection
-            appColor={yellowOrange}
-            reliableColor={lightOrange}
-            innovativeColor={peacockGreen}
-            agileColor={lightblue}
-            transparencyColor={persianGreen}
-            moneyColor={Orchid}
-            IconFill={fillColor}
-           
+            data={PrimaryArray}
           />
+          </setion>
+         
         </Grid>
         <Grid className={grid} item lg={5} md={5} xs={12}>
           <SecondarySection
-            qualityColor={orangeRed}
-            geekyColor={pastelBlue}
-            supportColor={skyBlueColor}
-            timeColor={heliotrope}
-            dataColor={darkBlue}
-            IconFill={fillColor}
+          data={SecondaryArray}
           />
         </Grid>
       </Grid>

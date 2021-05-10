@@ -23,7 +23,7 @@ const {Harlequin ,whiteColor} = Colors;
     root
   } = classes;
   return (
-    <>
+    <div className={sec}>
        <Paper
             style={{
               background: `linear-gradient(${color} 5%, ${whiteColor} 95% `,
@@ -31,7 +31,7 @@ const {Harlequin ,whiteColor} = Colors;
             className={root}
             elevation={0}
           >
-      <section className={headingSec}>
+     <section className={headingSec}>
         <MuiThemeProvider theme={heading}>
           <Typography variant="h1" color="inherit">
             {headingOne} <br />
@@ -65,15 +65,13 @@ const {Harlequin ,whiteColor} = Colors;
         </section>
         </MuiThemeProvider>
       </section>
-
-      <section className={sec}>
-        <img  alt="sliderImg" src={hero} className={vector} />
+      
+      <img  alt="sliderImg" src={hero} className={vector} />
         <Hidden smDown>
         <img  alt="sliderImg" src={Vector} className={spiral}  />
         </Hidden>
-      </section>
       </Paper>
-    </>
+    </div>
   );
 };
 
