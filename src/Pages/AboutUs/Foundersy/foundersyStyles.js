@@ -18,7 +18,7 @@ export const FoundersyStyles = makeStyles((theme) => ({
   card: {
     marginTop: "30px",
     paddingTop: "20px",
-    width: "30%",
+    width: "28%",
     height: "500px",
     display: "flex",
     flexDirection: "column",
@@ -32,7 +32,7 @@ export const FoundersyStyles = makeStyles((theme) => ({
       width: "50%",
     },
     [breakpoints.only("sm")]: {
-      width: "50%",
+      width: "70%",
     },
     [breakpoints.down("xs")]: {
       width: "70%",
