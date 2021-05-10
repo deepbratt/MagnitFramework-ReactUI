@@ -52,7 +52,7 @@ const Container = ( props) => {
       showIndicators={show}
     >
       {slides.map((slide, i) => {
-        return <section>{slide}</section>;
+        return <section key={i}>{slide}</section>;
       })}
     </Carousel>
   );
