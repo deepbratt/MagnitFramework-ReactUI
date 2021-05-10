@@ -31,13 +31,15 @@ const slideArr = [
     text={buttonText}
     data={array}
     color={Chablis}
+ 
   />,
 ];
-const Container = ({ slides }) => {
+const Container = ( props) => {
   const classes = useStyles();
-
-  const { slide } = classes;
-
+  const { slide } = classes
+  const show = props.indicator
+  const slides = props.slides
+  console.log(show)
   return (
     <Carousel
       className={slide}
@@ -47,9 +49,10 @@ const Container = ({ slides }) => {
       showArrows={false}
       infiniteLoop={true}
       transitionTime={500}
+      showIndicators={show}
     >
       {slides.map((slide, i) => {
-        return <section>{slide}</section>;
+        return <section key={i}>{slide}</section>;
       })}
     </Carousel>
   );

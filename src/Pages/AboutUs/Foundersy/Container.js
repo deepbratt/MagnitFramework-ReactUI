@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 import { useStyles } from "../NumberContext/numberStyles";
 import { FoundersyStyles } from "./foundersyStyles";
 import Heading5 from "../../../ContainerStructure/Headings/Heading5";
@@ -6,29 +6,19 @@ import Heading6 from "../../../ContainerStructure/Headings/Heading6";
 import {
   Card,
   CardContent,
-  Paper,
-  Typography,
   Hidden,
 } from "@material-ui/core";
 import Paragraph from "../../../ContainerStructure/Headings/Paragraphs/Paragraph";
 import { MainData } from "../../../Utils/Constants/Language/AboutUsData";
-import { THEME } from "../../../ContainerStructure/Headings/headingStyles";
-import { MuiThemeProvider } from "@material-ui/core/styles";
 
-const FoundersySection = () => {
-  const { cardSec, devSec } = useStyles();
-  const { card, root, Icon, underlined, dev } = FoundersyStyles();
-  const { Img, subTitle, span, paragraph, heading } = MainData;
 
-  return (
-    <>
-      <Paper className={root} elevation={0}>
-        <MuiThemeProvider theme={THEME}>
-          <Typography variant="h4" color="inherit">
-            <span className={underlined}>{heading}</span>
-          </Typography>
-        </MuiThemeProvider>
-        <section style={{ paddingBottom: "20px" }} className={cardSec}>
+const Container = () => {
+    const { cardSec, devSec } = useStyles();
+    const { card, Icon, dev } = FoundersyStyles();
+    const { Img, subTitle, span, paragraph } = MainData;
+    return (
+        <>
+          <section className={cardSec}>
           <Hidden lgUp>
             <Card className={card}>
               <CardContent>
@@ -81,10 +71,9 @@ const FoundersySection = () => {
               </CardContent>
             </Card>
           </Hidden>
-        </section>
-      </Paper>
-    </>
-  );
-};
+        </section> 
+        </>
+    )
+}
 
-export default FoundersySection;
+export default Container

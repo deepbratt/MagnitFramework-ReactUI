@@ -32,6 +32,7 @@ const ServicesSectionStyles = makeStyles((theme) => ({
     top: "8%",
     opacity: 0.3,
     width: "700px",
+    zIndex: -1,
     [theme.breakpoints.down("md")]: {
       width: "500px",
       left: "2%",
