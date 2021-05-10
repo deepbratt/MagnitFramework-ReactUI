@@ -8,7 +8,7 @@ import GlanceSection from "../GlanceAtWorkContext/Container";
 import React, { useState } from "react";
 import { Button, Typography } from "@material-ui/core";
 
-import ContactUs from "../ContactUs";
+import ContactUsAndFQA from "../ContactUsAndFQA";
 import Section from "../Section";
 import Image1 from "../../assets/images/awardAccredationSection/image 2.png";
 import Image2 from "../../assets/images/awardAccredationSection/image 3.png";
@@ -149,7 +149,7 @@ const Home = (props) => {
       {/* CONTACT US FORM SECTION */}
       <Section>
         {!isSubmitted ? (
-          <ContactUs submitForm={submitForm} />
+          <ContactUsAndFQA submitForm={submitForm} />
         ) : (
           <Typography style={{ textAlign: "center" }} variant="button">
             Submitted
