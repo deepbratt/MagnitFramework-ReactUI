@@ -12,10 +12,12 @@ export const missionStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: BlueRibbon,
     paddingTop: "20px",
+    width: "100%",
     position: "relative",
   },
   card: {
     width: "30%",
+    zIndex: 1,
     height: "300px",
     display: "flex",
     flexDirection: "column",
@@ -37,6 +39,7 @@ export const missionStyles = makeStyles((theme) => ({
   },
   card2: {
     width: "30%",
+    zIndex: 1,
     height: "300px",
     display: "flex",
     flexDirection: "column",

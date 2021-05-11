@@ -13,7 +13,7 @@ import Patten2 from "../../../assets/AboutUs/vision2.png";
 
 const MissionContext = () => {
   const { cardSec, devSec, dev } = useStyles();
-  const { card, card2, root, Icon, underlined, leftPattern, rigthPattern } =
+  const { card, card2, root, Icon, underlined, leftPattern, rightPattern } =
     missionStyles();
   const { firstTitle, secondTitle, paragraph } = MidSection;
   const { mission, vision } = MainData;
@@ -21,7 +21,7 @@ const MissionContext = () => {
     <>
       <Paper className={root} elevation={0}>
         <img className={leftPattern} src={Patten1} alt="" />
-        <img className={rigthPattern} src={Patten2} alt="" />
+        <img className={rightPattern} src={Patten2} alt="" />
         <section style={{ paddingBottom: "20px" }} className={cardSec}>
           <Card className={card2}>
             <CardContent>
