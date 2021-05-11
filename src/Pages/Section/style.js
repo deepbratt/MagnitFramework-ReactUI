@@ -14,14 +14,17 @@ const LayoutStyle = makeStyles((theme) => ({
       height: "146px",
     },
   },
+  sectionHeader: { marginBottom: "60px" },
   header: {
-    marginBottom: "60px",
     [theme.breakpoints.down("sm")]: {
       fontSize: "1.75rem",
     },
     [theme.breakpoints.down("sm")]: {
       fontSize: "1.5rem",
     },
+  },
+  subHeader: {
+    color: "grey",
   },
   underlinedStyles: {
     position: "relative",

@@ -1,6 +1,7 @@
 import AboutUs from "./../Pages/AboutUs/AboutUs";
 import Services from "./../Pages/Services";
-import Home from "../Pages/Home/index"
+import ContactUs from "./../Pages/ContactUs";
+import Home from "../Pages/Home/index";
 
 const pathIds = {
   home: "home",
@@ -9,6 +10,7 @@ const pathIds = {
   solutions: "solutions",
   caseStudies: "caseStudies",
   careers: "careers",
+  contactUs: "contactUs",
 };
 
 const pathRouting = {
@@ -18,13 +20,14 @@ const pathRouting = {
   solutions: "/solutions",
   caseStudies: "/caseStudies",
   careers: "/careers",
+  contactUs: "/contactUs",
 };
 
 const pageRoutes = {
   [pathIds.home]: {
     path: pathRouting.home,
     sidebarName: "Home",
-    component: Home
+    component: Home,
   },
   [pathIds.about]: {
     path: pathRouting.about,
@@ -47,6 +50,11 @@ const pageRoutes = {
   [pathIds.careers]: {
     path: pathRouting.careers,
     sidebarName: "Careers",
+  },
+  [pathIds.contactUs]: {
+    path: pathRouting.contactUs,
+    sidebarName: "Contact Us",
+    component: ContactUs,
   },
 };
 

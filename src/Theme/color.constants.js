@@ -58,6 +58,12 @@ export const Colors = {
   Citrine: "#D7D7D7",
   darkJungleGreen: "#161C28",
   darkSilver : "#717171",
+  deepSaffron: "#F5A12C",
+  ultramarineBlue: "#376AED",
+  carrotOrange: "#E36A2C",
+  seaSerpent: "#60D2D9",
+  begonia: "#EF6E78",
+  brunswickGreen: "#1A584F",
   // MOSTLY BACKGROUND
   aliceBlue: "#E8F2FE",
   fillColor:

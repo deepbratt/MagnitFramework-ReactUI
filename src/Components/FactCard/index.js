@@ -5,17 +5,15 @@ const FactCard = ({ backColor, title, subtitle }) => {
   const { root, header, subText } = FactCardStyles();
   return (
     <Card
+      className={root}
       style={{
-        padding: "30px 20px",
-        margin: "0 5%",
-        borderRadius: "5px",
         backgroundColor: backColor,
       }}
     >
       <Typography className={header} variant="h2">
         {title}
       </Typography>
-      <Typography className={subText} variant="h3">
+      <Typography className={subText} variant="h3" gutterBottom>
         {subtitle}
       </Typography>
     </Card>

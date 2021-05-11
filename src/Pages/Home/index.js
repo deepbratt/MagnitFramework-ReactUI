@@ -86,50 +86,6 @@ const Home = (props) => {
       <Grid item md={12} xs={12}>
         <GlanceSection backColor={BlueRibbon} />
       </Grid>
-      {/* SOME FACTS ABOUT US SECTION
-      <Section title={FactsCardSectionTitle}>
-        <Grid style={{ padding: "0 5%" }} container direction="row" spacing={2}>
-          <Grid item xs={12} md={6} lg={4}>
-            <FactCard
-              backColor={blue}
-              title="10+ Years"
-              subtitle="Experience"
-            />
-          </Grid>
-          <Grid item xs={12} md={6} lg={4}>
-            <FactCard backColor={purple} title="200+" subtitle="Team" />
-          </Grid>
-          <Grid item xs={12} md={6} lg={4}>
-            <FactCard
-              backColor={violet}
-              title="94%"
-              subtitle="Happy Customers"
-            />
-          </Grid>
-          <Grid item xs={12} md={6} lg={4}>
-            <FactCard
-              backColor={skyBlue}
-              title="35+ Countries"
-              subtitle="Served"
-            />
-          </Grid>
-          <Grid item xs={12} md={6} lg={4}>
-            <FactCard
-              backColor={seaGreen}
-              title="2000+"
-              subtitle="Successful Projects"
-            />
-          </Grid>
-          <Grid item xs={12} md={6} lg={4}>
-            <FactCard
-              backColor={peach}
-              title="ISO 9001:2015"
-              subtitle="Certification"
-            />
-          </Grid>s
-        </Grid>
-      </Section> */}
-
       {/* TRAINING AND CERTIFICATION */}
       <Section title={TrainingAndCertificationSectionTitle}>
         <Grid container direction="row">

@@ -5,6 +5,7 @@ import LayoutStyle from "./style";
 
 const Section = ({
   title,
+  subTitle,
   children,
   backColor,
   startQuote,
@@ -15,6 +16,8 @@ const Section = ({
     root,
     content,
     header,
+    subHeader,
+    sectionHeader,
     underlinedStyles,
     startQuote1,
     startQuote2,
@@ -49,12 +52,23 @@ const Section = ({
             <img className={endQuote2} src={endQuote} alt="End Quote Icon" />
           </>
         )}
-        {title && (
-          <Typography className={header} color="textPrimary" variant="h2">
-            {normalTitle}
-            <span className={underlinedStyles}>{underlinedTitle}</span>
-          </Typography>
-        )}
+        <div className={sectionHeader}>
+          {title && (
+            <Typography className={header} color="textPrimary" variant="h2">
+              {normalTitle}
+              <span className={underlinedStyles}>{underlinedTitle}</span>
+            </Typography>
+          )}
+          {subTitle && (
+            <Typography
+              className={subHeader}
+              color="textPrimary"
+              variant="subtitle1"
+            >
+              {subTitle}
+            </Typography>
+          )}
+        </div>
 
         <Grid item xs={12}>
           {children}
@@ -67,10 +81,12 @@ const Section = ({
 Section.defaultProps = {
   backColor: "#FFFFFF",
   title: "",
+  subTitle: "",
 };
 
 Section.propTypes = {
   title: PropTypes.string,
+  subTitle: PropTypes.string,
   children: PropTypes.node.isRequired,
   backColor: PropTypes.string,
 };
