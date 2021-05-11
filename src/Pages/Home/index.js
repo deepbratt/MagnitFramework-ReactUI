@@ -6,7 +6,7 @@ import Solutions from "../SolutionsContext/Solutions";
 import PartnerContext from "../PartnerWithUsContext/Maincontainer";
 import GlanceSection from "../GlanceAtWorkContext/Container";
 import React, { useState } from "react";
-import { Button, Typography } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 
 import ContactUsAndFQA from "../ContactUsAndFQA";
 import Section from "../Section";
@@ -17,7 +17,7 @@ import Image4 from "../../assets/images/awardAccredationSection/image 5.png";
 import Image5 from "../../assets/images/awardAccredationSection/image 6.png";
 // import CardComponent from "../../Components/CardComponent";
 import { cards } from "./cardData";
-import CardSlyder from "../../Components/CardSlider";
+// import CardSlyder from "../../Components/CardSlider";
 import startQuote from "../../assets/images/cards/startQuote.png";
 import endQuote from "../../assets/images/cards/EndingQuoteBlue.png";
 import { Colors } from "../../Theme/color.constants";
@@ -26,14 +26,14 @@ import {
   TrainingAndCertificationSectionTitle,
   WhatDoClientSaySectionTitle,
 } from "./constants";
-import ReviewSlider from "../../Components/ReviewSlider";
+// import ReviewSlider from "../../Components/ReviewSlider";
 import { trainingAndCertificationText as TCData } from "../../Utils/Constants/Language";
 import CertificationList from "../../Components/certificationList";
 import HomeStyles from "./style";
 import QuoteCard from "../../Components/QuoteCard";
 import CustomButton from "../../Components/CustomButton";
 
-const images = [Image1, Image2, Image3, Image4, Image5];
+export const AwardSectionImages = [Image1, Image2, Image3, Image4, Image5];
 
 const Home = (props) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -56,10 +56,10 @@ const Home = (props) => {
   // const { peach, seaGreen, skyBlue, violet, purple, blue } = factCards;
   // const { trainingAndCertification } = sectionBackgroundColors;
 
-  const cardArr = [
-    <CardSlyder cardData={cards} />,
-    <CardSlyder cardData={cards} />,
-  ];
+  // const cardArr = [
+  //   <CardSlyder cardData={cards} />,
+  //   <CardSlyder cardData={cards} />,
+  // ];
 
   function submitForm() {
     setIsSubmitted(true);
@@ -131,8 +131,8 @@ const Home = (props) => {
       {/* AWARD AND ACCREDITATIONS SECTION */}
       <Section title={AwardSectionTitle}>
         <div>
-          {images &&
-            images.map((image, index) => (
+          {AwardSectionImages &&
+            AwardSectionImages.map((image, index) => (
               <img
                 key={index}
                 style={{ margin: "10px 40px", width: "130px" }}

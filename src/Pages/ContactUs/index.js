@@ -1,13 +1,15 @@
-import { Grid } from "@material-ui/core";
+import { Grid, Paper } from "@material-ui/core";
 import Section from "../Section";
 import FactCard from "../../Components/FactCard";
 import {
   RequestAQuote,
   RequestAQuoteSub,
   SomeQuickFactsAboutUs,
+  AwardSectionTitleContactUs,
 } from "../../Utils/Constants/Language/en/SectionHeaders";
 import { Colors } from "../../Theme/color.constants";
 import { FactCardText } from "../../Utils/Constants/Language/en/ContactUsPageText";
+import ContactUsForm from "../../Components/ContactUsForm";
 import {
   ExperienceIcon,
   TeamIcon,
@@ -16,6 +18,8 @@ import {
   ProjectIcon,
   CertificationIcon,
 } from "../../assets/icons/icon.constants";
+import { AwardSectionImages } from "../Home";
+import ContactUsStyles from "./style";
 
 const ContactUs = () => {
   const {
@@ -27,13 +31,42 @@ const ContactUs = () => {
     Luigi,
   } = Colors;
 
+  const { root, awardSection, imageContainer } = ContactUsStyles();
+
   const { experience, team, customers, served, projects, certification } =
     FactCardText;
   return (
     <>
       <Section title={RequestAQuote} subTitle={RequestAQuoteSub}>
         <Grid container>
-          <Grid item xs={12}></Grid>
+          <Grid item xs={12} md={7}>
+            <div style={{ margin: "50px 0" }} className={awardSection}>
+              <Section title={AwardSectionTitleContactUs}>
+                <Grid container item xs={12}>
+                  {AwardSectionImages &&
+                    AwardSectionImages.map((image, index) => (
+                      <Grid
+                        item
+                        xs={12}
+                        md={3}
+                        key={index}
+                        className={imageContainer}
+                      >
+                        <img src={image} alt={`client${index}`} />
+                      </Grid>
+                    ))}
+                </Grid>
+              </Section>
+            </div>
+          </Grid>
+          <Grid item xs={12} md={5}>
+            <Paper
+              // className={form}
+              style={{ boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)" }}
+            >
+              <ContactUsForm />
+            </Paper>
+          </Grid>
         </Grid>
       </Section>
       {/* SOME FACTS ABOUT US SECTION */}

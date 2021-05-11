@@ -79,7 +79,7 @@ const Section = ({
 };
 
 Section.defaultProps = {
-  backColor: "#FFFFFF",
+  backColor: "transparent",
   title: "",
   subTitle: "",
 };
