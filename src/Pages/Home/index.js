@@ -67,7 +67,7 @@ const Home = (props) => {
 
   return (
     <div className="App">
-      <Grid item md={12} xs={12}>
+      <Grid item md={12} xs={12} style={{width:"100vw"}}>
         <Slide />
       </Grid>
       <Grid item md={12} xs={12}>

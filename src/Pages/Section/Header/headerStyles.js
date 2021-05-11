@@ -27,7 +27,7 @@ export const THEME = createMuiTheme({
   },
   typography: {
     fontSize: 15,
-    lineHeight: 1.5,
+    // lineHeight: 1.5,
     letterSpacing: 0.32,
     fontFamily: "Poppins",
     h5: {
@@ -53,7 +53,9 @@ export const useStyles = makeStyles((theme) => ({
 
   // },
   root:{
-    boxShadow: "none"
+    boxShadow: "none",
+    width:"100%",
+    padding:"0"
   },
   appbarsolid: {
     boxShadow: "none",
@@ -61,24 +63,25 @@ export const useStyles = makeStyles((theme) => ({
     width: "100%",
     fontSize: "16px",
     display: "flex",
- 
+    alignItems:"center",
     zIndex: 1,
-    justifyContent: "space-around",
+    justifyContent: "space-between",
     transition: "all .5s linear",
-    borderBottom: `solid 3px ${Ash}`
+    borderBottom: `solid 3px ${Ash}`,
+    padding:"0",
   },
   menuButton: {
-    marginRight: theme.spacing(2),
+    paddingRight: theme.spacing(2),
   },
   toolbar: {
     fontSize: "16px",
     display: "flex",
-    justifyContent: "space-around",
+    // justifyContent: "space-around",
   },
   toolbarSub: {
     fontSize: "16px",
     display: "flex",
-    justifyContent: "space-around",
+    // justifyContent: "space-around",
   },
   list: {
     fontSize: "16px",
@@ -95,7 +98,7 @@ export const useStyles = makeStyles((theme) => ({
   },
 
   link: {
-    marginTop: "5px",
+    // marginTop: "5px",
     textDecoration: "none",
     color: greyColor,
   },
@@ -103,16 +106,18 @@ export const useStyles = makeStyles((theme) => ({
     color: blackColor,
   },
   logo: {
-    [theme.breakpoints.up("lg")]: {
-      width: "150px",
-      marginRight: "15px",
-      marginTop: "15px"
-    },
-    [theme.breakpoints.down("md")]: {
-      width: "110px",
-    },
-    [theme.breakpoints.down("xs")]: {
-      width: "100px",
-    },
+    width:"7rem",
+    padding:"16px"
+    // [theme.breakpoints.up("lg")]: {
+    //   width: "150px",
+    //   marginRight: "15px",
+    //   marginTop: "15px"
+    // },
+    // [theme.breakpoints.down("md")]: {
+    //   width: "110px",
+    // },
+    // [theme.breakpoints.down("xs")]: {
+    //   width: "100px",
+    // },
   },
 }));
