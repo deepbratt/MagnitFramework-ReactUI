@@ -6,7 +6,8 @@ export const Colors = {
   whiteColor: "white",
   transparentWildSand: "	rgb(245, 245, 245, 0.7)",
   Harlequin: "#2CD400",
-  HarlequinRgb: "invert(72%) sepia(38%) saturate(6434%) hue-rotate(67deg) brightness(100%) contrast(111%)",
+  HarlequinRgb:
+    "invert(72%) sepia(38%) saturate(6434%) hue-rotate(67deg) brightness(100%) contrast(111%)",
   mainSlide: "rgb(44,212,0,0.4)",
   PalePrim: "#fdfdc4",
   Chablis: "#fff0f0",
@@ -33,7 +34,7 @@ export const Colors = {
     seaGreen: "#E9FFF0",
     peach: "#FFF6E4",
   },
-  
+
   yellowOrange: "#FFA24C",
   lightblue: "#5B4CFF",
   pastelOrange: "#FFC04C",
@@ -42,7 +43,7 @@ export const Colors = {
   Orchid: "#E666D9",
   orangeRed: "#FF554C",
   pictonBlue: "#4CBFFF",
-  skyBlue:"#116EF0",
+  skyBlue: "#116EF0",
   heliotrope: "#DB4CFF",
   blueGreen: "#2EBEB5",
   hanBlue: "#486FD5",
@@ -57,13 +58,14 @@ export const Colors = {
   pastelBlue: "#4DBFFF",
   Citrine: "#D7D7D7",
   darkJungleGreen: "#161C28",
-  darkSilver : "#717171",
+  darkSilver: "#717171",
   deepSaffron: "#F5A12C",
   ultramarineBlue: "#376AED",
   carrotOrange: "#E36A2C",
   seaSerpent: "#60D2D9",
   begonia: "#EF6E78",
   brunswickGreen: "#1A584F",
+  spaceCadet: "#1F3259",
   // MOSTLY BACKGROUND
   aliceBlue: "#E8F2FE",
   fillColor:

@@ -45,6 +45,14 @@ import AlwaysOnTime from "../icons/alwaysOnTime.png";
 import Transparency from "../icons/transparency.png";
 import Consultation from "../icons/consultation.png";
 
+// Contact Us Page Icon
+import experienceIcon from "../ContactUs/experience.png";
+import teamIcon from "../ContactUs/team.png";
+import customerIcon from "../ContactUs/customer.png";
+import servedIcon from "../ContactUs/served.png";
+import projectsIcon from "../ContactUs/projects.png";
+import certificationIcon from "../ContactUs/certification.png";
+
 // Services section icons
 export const App = Appicon;
 export const Profile = Profileicon;
@@ -94,3 +102,11 @@ export const FlexibleBillingIcon = FlexibleBilling;
 export const AlwaysOnTimeIcon = AlwaysOnTime;
 export const TransparencyIcon = Transparency;
 export const ConsultationIcon = Consultation;
+
+// Contact Us Page Icons
+export const ExperienceIcon = experienceIcon;
+export const TeamIcon = teamIcon;
+export const CustomerIcon = customerIcon;
+export const ServedIcon = servedIcon;
+export const ProjectIcon = projectsIcon;
+export const CertificationIcon = certificationIcon;

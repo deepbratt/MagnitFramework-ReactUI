@@ -4,7 +4,7 @@ const FactCardStyles = makeStyles((theme) => ({
   root: {
     borderRadius: "5px",
     margin: "10px",
-    padding: "25px"
+    padding: "25px",
   },
   header: {
     fontSize: "3rem",
@@ -18,7 +18,8 @@ const FactCardStyles = makeStyles((theme) => ({
     },
   },
   subText: {
-    fontSize: "1.5rem",
+    fontSize: "1.25rem",
+    lineHeight: "20px",
     fontWeight: "400",
     color: "white",
     [theme.breakpoints.down("xs")]: {

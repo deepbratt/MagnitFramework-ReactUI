@@ -1,7 +1,7 @@
 import { Card, Typography } from "@material-ui/core";
 import FactCardStyles from "./style";
 
-const FactCard = ({ backColor, title, subtitle }) => {
+const FactCard = ({ backColor, icon, title, subtitle }) => {
   const { root, header, subText } = FactCardStyles();
   return (
     <Card
@@ -10,6 +10,7 @@ const FactCard = ({ backColor, title, subtitle }) => {
         backgroundColor: backColor,
       }}
     >
+      {icon && <img height="60px" src={icon} alt="" />}
       <Typography className={header} variant="h2">
         {title}
       </Typography>
