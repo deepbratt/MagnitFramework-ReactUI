@@ -6,10 +6,10 @@ import dating from "../solutions/dating.png";
 import barbell from "../solutions/barbell.png";
 import delivery from "../solutions/food.png";
 import jobPortal from "../solutions/portal.png";
-import Appicon from "../services/app.svg";
-import Profileicon from "../services/profile.svg";
-import Webicon from "../services/web.svg";
-import Digitalicon from "../services/digital.svg";
+import Appicon from "../icons/App.png";
+import Profileicon from "../icons/Dev.png";
+import Webicon from "../icons/Web.png";
+import Digitalicon from "../icons/Digital.png";
 
 import app from "../PartnerWithUsImg/house.png";
 import reliable from "../PartnerWithUsImg/handshake.png";
@@ -52,6 +52,16 @@ import FlexibleBilling from "../icons/flexibleBilling.png";
 import AlwaysOnTime from "../icons/alwaysOnTime.png";
 import Transparency from "../icons/transparency.png";
 import Consultation from "../icons/consultation.png";
+
+// Career Page Icon 
+import timing from "../career/time.png";
+import geo from "../career/geography.png";
+import grow from "../career/grow.png";
+import health from "../career/health.png";
+export const Timing = timing;
+export const Geo = geo;
+export const Grow = grow;
+export const Health = health;
 
 // Services section icons
 export const App = Appicon;

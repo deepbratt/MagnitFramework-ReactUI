@@ -58,6 +58,7 @@ export const Colors = {
   mustardColor: "#F5A12C",
   skyBlueColor: "#60D2D9",
   darkBlueColor: "#376AED",
+  SeaGreen: "#318065",
   rosePinkColor: "#EF6E78",
   lightOrange: "#FFC14C",
   peacockGreen: "#1DD5B4",

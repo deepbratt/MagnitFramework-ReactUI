@@ -1,5 +1,7 @@
 import { makeStyles } from "@material-ui/core";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
+import {fontSizes} from "../../Utils/Constants/Font/index"
+const {p} = fontSizes
 const breakpoints = createBreakpoints({});
 const ReviewSliderStyles = makeStyles((theme) => ({
   grid: {
@@ -34,10 +36,10 @@ const ReviewSliderStyles = makeStyles((theme) => ({
   content: {
     "& > p": {
       [theme.breakpoints.down("md")]: {
-        fontSize: "16px",
+        fontSize: p.lg,
       },
       [theme.breakpoints.down("sm")]: {
-        fontSize: "10px",
+        fontSize: p.sm,
       },
     },
   },
