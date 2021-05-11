@@ -1,12 +1,14 @@
 import { makeStyles } from "@material-ui/core";
-
+import { fontSizes } from "../../Utils/Constants/Font/index";
+import { Colors } from "../../Theme/color.constants";
+const { h3 } = fontSizes;
+const { lg } = h3;
+const { Harlequin } = Colors;
 const BannerStyles = makeStyles((theme) => ({
   root: {
     marginTop: "0",
     backgroundColor: "transparent",
-
-    background:
-      " linear-gradient(-181.96deg , #2CD400 -98.18%, rgba(255, 255, 255, 0) 85.96%)",
+    background: `linear-gradient(-181.96deg , ${Harlequin} -98.18%, rgba(255, 255, 255, 0) 85.96%)`,
     backgroundBlendMode: "multiply",
   },
   imageWrapper: {
@@ -44,7 +46,7 @@ const BannerStyles = makeStyles((theme) => ({
     color: "black",
     "& > h1": {
       [theme.breakpoints.down("sm")]: {
-        fontSize: "1.5rem",
+        fontSize: lg,
       },
     },
   },

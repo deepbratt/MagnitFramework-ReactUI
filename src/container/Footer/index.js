@@ -49,7 +49,7 @@ const Footer = () => {
         </Grid>
         <Grid item xs={12} md={4} lg={2}>
           <div className={list}>
-            <Typography align="left" gutterBottom variant="h6" component="h5">
+            <Typography align="left" gutterBottom variant="h5" component="h5">
               {navigation.title}
             </Typography>
             {navigation.links.map((item, idx) => (

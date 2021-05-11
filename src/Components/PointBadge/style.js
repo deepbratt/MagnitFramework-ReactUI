@@ -1,5 +1,4 @@
 import { makeStyles } from "@material-ui/core";
-
 const PointBadgeStyles = makeStyles((theme) => ({
   vertical: {
     margin: "15px",
