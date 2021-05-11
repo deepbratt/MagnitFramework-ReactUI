@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core";
 import { Colors } from "../../Theme/color.constants";
-const { skyBlue } = Colors;
+const { skyBlue, Harlequin, chineseWhite } = Colors;
 
 const OptionTabStyles = makeStyles((theme) => ({
   root: {
@@ -36,7 +36,7 @@ const OptionTabStyles = makeStyles((theme) => ({
     fontSize: "14px",
     borderRadius: "2px",
     "& > .MuiTab-textColorInherit .Mui-selected": {
-      backgroundColor: "#2cd400",
+      backgroundColor: Harlequin,
       color: "white",
     },
   },
@@ -52,7 +52,7 @@ const OptionTabStyles = makeStyles((theme) => ({
   detail: {
     fontWeight: 400,
     fontSize: ".8rem",
-    color: "#E1E1E1",
+    color: chineseWhite,
     lineHeight: "1.5",
     margin: ".5rem 0rem 1rem 0rem",
     letterSpacing: ".4",
@@ -60,7 +60,7 @@ const OptionTabStyles = makeStyles((theme) => ({
   bulletText: {
     fontWeight: 400,
     fontSize: ".7rem",
-    color: "#FFFFFF",
+    color: "white",
     lineHeight: "17.34px",
   },
   textDiv: {
