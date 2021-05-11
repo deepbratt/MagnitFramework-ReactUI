@@ -89,6 +89,8 @@ export const useStyles = makeStyles((theme) => ({
     fontWeight: "600",
     fontFamily: "Poppins', sans-serif",
     whiteSpace: "nowrap",
+    justifyContent:"center",
+    alignItems: 'center'
   },
   listItem: {
     "&:hover": {
@@ -107,7 +109,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   logo: {
     width:"7rem",
-    padding:"16px"
+    paddingLeft:"24px"
     // [theme.breakpoints.up("lg")]: {
     //   width: "150px",
     //   marginRight: "15px",

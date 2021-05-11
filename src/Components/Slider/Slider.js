@@ -31,6 +31,8 @@ const Slider = ({
     sec,
     vector,
     spiral,
+    gridImage,
+    gridText,
   } = classes;
   return (
     <Grid
@@ -46,18 +48,16 @@ const Slider = ({
       <Hidden smDown>
         <img alt="sliderImg" src={Vector} className={spiral} />
       </Hidden>
+      {/* <Hidden smDown>
+        <Grid item xs={12} md={1} lg={1}></Grid>
+      </Hidden> */}
       <Grid
         item
         xs={12}
         sm={12}
-        md={8}
-        lg={8}
-        style={{
-          textAlign: "left",
-          padding: "16px",
-          zIndex: 1,
-          // backgroundColor:"yellow"
-        }}
+        md={9}
+        lg={9}
+        className={gridText}
       >
         <MuiThemeProvider theme={heading}>
           <Typography variant="h1" color="inherit">
@@ -96,14 +96,15 @@ const Slider = ({
           xs={12}
           md={3}
           lg={3}
-          style={{ zIndex: 1, padding: "16px" }}
+          className={gridImage}
+          justify="flex-start"
         >
           <img alt="sliderImg" src={hero} className={vector} />
         </Grid>
       </Hidden>
-      <Hidden smDown>
+      {/* <Hidden smDown>
         <Grid item xs={12} md={4} lg={1}></Grid>
-      </Hidden>
+      </Hidden> */}
     </Grid>
   );
 };

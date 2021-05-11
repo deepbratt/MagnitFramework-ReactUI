@@ -66,7 +66,7 @@ const Header = (props) => {
                     </NavLink>
                   );
                 })}
-                <ListItem>
+                <ListItem style={{paddingRight:"24px"}}>
                   <Button
                     style={{
                       textTransform: "none",

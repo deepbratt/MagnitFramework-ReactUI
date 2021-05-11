@@ -115,6 +115,16 @@ export const useStyles = makeStyles((theme) => ({
   sec: {
     position: "relative",
     width: "100vw",
+    padding:"24px"
+  },
+  gridImage:{ 
+    zIndex: 1, 
+    // padding: "16px" 
+  },
+  gridText:{
+    textAlign: "left",
+    // padding: "16px",
+    zIndex: 1,
   },
   slide: {
     position: "relative",
