@@ -4,9 +4,10 @@ const BannerStyles = makeStyles((theme) => ({
   root: {
     marginTop: "0",
     backgroundColor: "transparent",
-    
-    background: " linear-gradient(-181.96deg , #2CD400 -98.18%, rgba(255, 255, 255, 0) 85.96%)",
-backgroundBlendMode: "multiply"
+
+    background:
+      " linear-gradient(-181.96deg , #2CD400 -98.18%, rgba(255, 255, 255, 0) 85.96%)",
+    backgroundBlendMode: "multiply",
   },
   imageWrapper: {
     position: "relative",
@@ -14,7 +15,7 @@ backgroundBlendMode: "multiply"
     "& > img": {
       width: "350px",
       [theme.breakpoints.down("sm")]: {
-        width: "250px"
+        width: "250px",
       },
     },
   },
@@ -34,6 +35,7 @@ backgroundBlendMode: "multiply"
       top: "3%",
     },
   },
+  breadCrumbStyle: { margin: "20px 50px" },
   content: {
     display: "flex",
     flexDirection: "column",
