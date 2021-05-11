@@ -32,9 +32,22 @@ import Avatar3 from "../../assets/services/Avatar3.png";
 import Avatar4 from "../../assets/services/Avatar4.png";
 import Avatar5 from "../../assets/services/Avatar5.png";
 import Avatar6 from "../../assets/services/Avatar6.png";
+import BreadCrumb from "../../Components/BreadCrumb";
 
 const Services = () => {
-  const { skyBlue, aliceBlue ,linearBackground} = Colors;
+  const { skyBlue, aliceBlue, linearBackground } = Colors;
+
+  const breadCrumData = [
+    {
+      path: "/",
+      text: "Home",
+    },
+    {
+      path: "/Services",
+      text: "Web Development Services",
+    },
+  ];
+
   const {
     root,
     // background,
@@ -58,11 +71,15 @@ const Services = () => {
     avatar6,
     squareDotsPattern,
     commaPattern,
-    yellowCommaPattern
+    yellowCommaPattern,
   } = ServicesSectionStyles();
   return (
-    <div className={root} >
-      <Banner image={BannerImage} backColor={linearBackground}>
+    <div className={root}>
+      <Banner
+        image={BannerImage}
+        backColor={linearBackground}
+        breadCrumb={<BreadCrumb links={breadCrumData} />}
+      >
         <Typography variant="h1" gutterBottom>
           We Hire Best <br /> Web Developers & Save 50%
         </Typography>
@@ -79,7 +96,6 @@ const Services = () => {
         </Button>
       </Banner>
       <Section title={ServicesSectionTitle} highlightWords={1}>
-   
         <PointList data={servicesData} />
       </Section>
       <img className={leftPattern} src={StarFishPattern} alt="" srcset="" />
@@ -95,7 +111,6 @@ const Services = () => {
       </Section>
       <Section backColor={aliceBlue}>
         <div className={reviewSlider}>
-      
           <Avatar alt="" src={Avatar1} className={avatar1} />
           <Avatar alt="" src={Avatar2} className={avatar2} />
           <Avatar alt="" src={Avatar3} className={avatar3} />
@@ -108,42 +123,22 @@ const Services = () => {
             alt=""
             srcset=""
           />
-            <img
+          <img
             className={yellowCommaPattern}
             src={yellowComma}
             alt=""
             srcset=""
           />
-              <img
-            className={commaPattern}
-            src={comma}
-            alt=""
-            srcset=""
-          />
-          <img
-            className={pinkDotPattern}
-            src={pinkDot}
-            alt=""
-            srcset=""
-          />
-           <img
-            className={yellowDotPattern}
-            src={yellowDot}
-            alt=""
-            srcset=""
-          />
+          <img className={commaPattern} src={comma} alt="" srcset="" />
+          <img className={pinkDotPattern} src={pinkDot} alt="" srcset="" />
+          <img className={yellowDotPattern} src={yellowDot} alt="" srcset="" />
           <img
             className={miniYellowPattern}
             src={miniYellow}
             alt=""
             srcset=""
-          /> 
-          <img
-            className={smallDotPattern}
-            src={smallDot}
-            alt=""
-            srcset=""
-          /> 
+          />
+          <img className={smallDotPattern} src={smallDot} alt="" srcset="" />
           <img
             className={leftStarFishPattern}
             src={StarFishPinkPattern}

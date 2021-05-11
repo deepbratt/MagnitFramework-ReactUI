@@ -54,14 +54,14 @@ import Transparency from "../icons/transparency.png";
 import Consultation from "../icons/consultation.png";
 
 // Career Page Icon 
-import timing from "../career/time.png";
-import geo from "../career/geography.png";
-import grow from "../career/grow.png";
-import health from "../career/health.png";
-export const Timing = timing;
-export const Geo = geo;
-export const Grow = grow;
-export const Health = health;
+// import timing from "../career/time.png";
+// import geo from "../career/geography.png";
+// import grow from "../career/grow.png";
+// import health from "../career/health.png";
+// export const Timing = timing;
+// export const Geo = geo;
+// export const Grow = grow;
+// export const Health = health;
 
 // Services section icons
 export const App = Appicon;

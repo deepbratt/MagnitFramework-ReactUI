@@ -1,17 +1,15 @@
 import { makeStyles } from "@material-ui/core";
-import {fontSizes} from "../../Utils/Constants/Font/index"
-import {Colors} from "../../Theme/color.constants"
-const {h3} = fontSizes
-const {lg} = h3
-const {Harlequin} = Colors
+import { fontSizes } from "../../Utils/Constants/Font/index";
+import { Colors } from "../../Theme/color.constants";
+const { h3 } = fontSizes;
+const { lg } = h3;
+const { Harlequin } = Colors;
 const BannerStyles = makeStyles((theme) => ({
-
   root: {
     marginTop: "0",
     backgroundColor: "transparent",
-    
     background: `linear-gradient(-181.96deg , ${Harlequin} -98.18%, rgba(255, 255, 255, 0) 85.96%)`,
-    backgroundBlendMode: "multiply"
+    backgroundBlendMode: "multiply",
   },
   imageWrapper: {
     position: "relative",
@@ -19,7 +17,7 @@ const BannerStyles = makeStyles((theme) => ({
     "& > img": {
       width: "350px",
       [theme.breakpoints.down("sm")]: {
-        width: "250px"
+        width: "250px",
       },
     },
   },
@@ -39,6 +37,7 @@ const BannerStyles = makeStyles((theme) => ({
       top: "3%",
     },
   },
+  breadCrumbStyle: { margin: "20px 50px" },
   content: {
     display: "flex",
     flexDirection: "column",
