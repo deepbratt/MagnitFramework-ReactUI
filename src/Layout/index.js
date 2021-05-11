@@ -6,12 +6,20 @@ import LayoutStyle from "./style";
 import Footer from "../container/Footer";
 import Container from "@material-ui/core/Container";
 import Header from "../Pages/Section/Header/Header";
+import { useLocation } from "react-router";
+import { useEffect, useRef } from "react";
 
 const Layout = ({ children }) => {
   const { root, paper } = LayoutStyle();
   const layoutType = useSelector((state) => state.layoutReducer.layoutType);
+
+  const location = useLocation()
+  const element = useRef()
+  useEffect(()=>{
+    element.current.scrollIntoView();
+  },[location.pathname])
   return (
-    <div className={root}>
+    <div className={root} ref={element}>
       <Header />
       <Grid container>
         <Grid item xs={12}>
