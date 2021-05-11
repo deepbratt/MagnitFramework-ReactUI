@@ -8,6 +8,7 @@ import {
   Toolbar,
   Button,
   AppBar,
+  LinearProgress
 } from "@material-ui/core";
 import { NavLink } from "react-router-dom";
 import Scrolltrigger from "../../../Theme/Scrolltrigger";
@@ -35,55 +36,64 @@ const Header = (props) => {
     active,
   } = classes;
 
+  const navigated=()=>{
+    props.resetLoader()
+  }
+
   return (
     <>
-      <AppBar className={root} position="sticky">
-        <Toolbar className={appbarsolid}>
-          <section>
-            <img className={logo} alt="logo" src={Logo} />
-          </section>
-          {/* Header Menu */}
-          <Hidden mdUp>
-            <SideBar />
-          </Hidden>
-          <Hidden smDown>
-            <MuiThemeProvider theme={THEME}>
-              <List className={list}>
-                {routes.map(({ path, sidebarName, ...prop }, index) => {
-                  return (
-                    <NavLink
-                      activeClassName={active}
-                      className={link}
-                      to={path}
-                      key={`route-${index}}`}
-                    >
-                      <ListItem>
-                        <ListItemText
-                          className={listItem}
-                          primary={sidebarName}
-                        />
-                      </ListItem>
-                    </NavLink>
-                  );
-                })}
-                <ListItem style={{paddingRight:"24px"}}>
-                  <Button
-                    style={{
-                      textTransform: "none",
-                      backgroundColor: Harlequin,
-                      color: whiteColor,
-                    }}
-                    className={button}
-                    variant="contained"
-                    size={Breakpoints()}
+    <AppBar  className={root} position="sticky">
+      <Toolbar  className={appbarsolid}>
+        <section>
+          <img className={logo} alt="logo" src={Logo} />
+        </section>
+        {/* Header Menu */}
+        <Hidden mdUp>
+          <SideBar />
+        </Hidden>
+        <Hidden smDown>
+          <List className={list}>
+            {routes.map(({ path, sidebarName, ...prop }, index) => {
+              return (
+                <MuiThemeProvider key={index} theme={THEME}>
+                  <NavLink
+                    activeClassName={active}
+                    className={link}
+                    to={path}
+                    key={`route-${index}}`}
+                    onClick={navigated}
                   >
-                    Contact Us
-                  </Button>
-                </ListItem>
-              </List>
-            </MuiThemeProvider>
-          </Hidden>
-        </Toolbar>
+                    <ListItem>
+                      <ListItemText
+                        className={listItem}
+                        primary={sidebarName}
+                      />
+                    </ListItem>
+                  </NavLink>
+                </MuiThemeProvider>
+              );
+            })}
+            <ListItem>
+              <MuiThemeProvider theme={THEME}>
+                <Button
+                  style={{
+                    textTransform: "none",
+                    backgroundColor: Harlequin,
+                    color: whiteColor,
+                  }}
+                  className={button}
+                  variant="contained"
+                  size={Breakpoints()}
+                  onClick={navigated}
+                >
+                  Contact Us
+                </Button>
+              </MuiThemeProvider>
+            </ListItem>
+          </List>
+        </Hidden>
+      </Toolbar>
+      <LinearProgress variant="determinate" value={props.scroll}/>
       </AppBar>
     </>
   );

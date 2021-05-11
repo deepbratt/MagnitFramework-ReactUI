@@ -3,7 +3,7 @@ import { createMuiTheme } from "@material-ui/core/styles";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 import { Colors } from "../../../../Theme/color.constants";
 
-const { Serenade, FairPink, AquaSpring, LilyWhite, Harlequin,whiteColor } = Colors;
+const {Harlequin,whiteColor } = Colors;
 const breakpoints = createBreakpoints({});
 
 export const THEME = createMuiTheme({
@@ -86,7 +86,6 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   appSub: {
-    backgroundColor: Serenade,
     height: "120px",
     width: "120px",
     display: "flex",
@@ -101,7 +100,6 @@ export const useStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
   devSub: {
-    backgroundColor: FairPink,
     height: "120px",
     width: "120px",
     display: "flex",
@@ -116,7 +114,6 @@ export const useStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
   webSub: {
-    backgroundColor: AquaSpring,
     height: "120px",
     width: "120px",
     display: "flex",
@@ -131,7 +128,6 @@ export const useStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
   digitalSub: {
-    backgroundColor: LilyWhite,
     height: "120px",
     width: "120px",
     display: "flex",
@@ -170,29 +166,10 @@ export const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   profileIcon: {
-    filter:
-      "invert(67%) sepia(75%) saturate(700%) hue-rotate(329deg) brightness(101%) contrast(101%)",
     width: "98px",
     height: "60px",
   },
-  appIcon: {
-    filter:
-      "invert(60%) sepia(54%) saturate(1822%) hue-rotate(318deg) brightness(99%) contrast(91%)",
-    width: "98px",
-    height: "60px",
-  },
-  webIcon: {
-    filter:
-      "invert(78%) sepia(53%) saturate(604%) hue-rotate(105deg) brightness(91%) contrast(87%)",
-    width: "98px",
-    height: "60px",
-  },
-  digitalIcon: {
-    filter:
-      "invert(72%) sepia(90%) saturate(3023%) hue-rotate(170deg) brightness(104%) contrast(111%)",
-    width: "98px",
-    height: "60px",
-  },
+  
   underlined:{
     position: "relative",
     zIndex: 1,

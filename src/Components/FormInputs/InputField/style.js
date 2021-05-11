@@ -1,15 +1,16 @@
 import { makeStyles } from "@material-ui/core/styles";
-
+import {fontSizes} from "../../../Utils/Constants/Font/index"
+const {p} = fontSizes
 const LayoutStyle = makeStyles((theme) => ({
   root: {
     marginTop: "10px",
     marginBottom: "16px",
     "& > *": {
       [theme.breakpoints.down("md")]: {
-        fontSize: "1rem",
+        fontSize: p.lg,
       },
       [theme.breakpoints.down("sm")]: {
-        fontSize: "0.75rem",
+        fontSize: p.sm,
       },
     },
   },
