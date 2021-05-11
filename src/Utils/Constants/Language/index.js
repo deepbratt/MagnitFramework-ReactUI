@@ -71,3 +71,9 @@ export const contactUsLabelsText = {
   message: "Message",
   submit: "Submit",
 };
+
+export const errorBoundaryText = {
+  heading: 'OOPS! Something went wrong.',
+  error: 'Error',
+  errorInformationHeading: "Error Information"
+}
