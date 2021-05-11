@@ -2,18 +2,18 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const CardStyle = makeStyles((theme) => ({
   root: {
-    margin: "20px 0",
+    margin: "20px 10px",
     padding: "40px",
 
     [theme.breakpoints.down("sm")]: {
-      margin: "10px 0",
+      margin: "10px 5px",
       padding: "20px",
     },
-    boxShadow: "0px 4px 20px 2px rgba(0, 0, 0, 0.03)",
+    boxShadow: "0px 4px 50px 5px rgba(0, 0, 0, 0.03)",
   },
   content: {
     display: "flex",
-    padding: "30px 0 0 0",
+    padding: "25px 0 0 0",
     flexWrap: "wrap",
     "& > p": {
       margin: "10px",
