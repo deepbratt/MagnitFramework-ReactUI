@@ -7,7 +7,8 @@ import {
   ListItemText,
   Toolbar,
   Button,
-  AppBar
+  AppBar,
+  LinearProgress
 } from "@material-ui/core";
 import { NavLink } from "react-router-dom";
 import Scrolltrigger from "../../../Theme/Scrolltrigger";
@@ -86,6 +87,7 @@ const Header = (props) => {
           </List>
         </Hidden>
       </Toolbar>
+      <LinearProgress variant="determinate" value={props.scroll}/>
       </AppBar>
     </>
   );
