@@ -36,6 +36,10 @@ const Header = (props) => {
     active,
   } = classes;
 
+  const navigated=()=>{
+    props.resetLoader()
+  }
+
   return (
     <>
     <AppBar  className={root} position="sticky">
@@ -57,6 +61,7 @@ const Header = (props) => {
                     className={link}
                     to={path}
                     key={`route-${index}}`}
+                    onClick={navigated}
                   >
                     <ListItem>
                       <ListItemText
@@ -79,6 +84,7 @@ const Header = (props) => {
                   className={button}
                   variant="contained"
                   size={Breakpoints()}
+                  onClick={navigated}
                 >
                   Contact Us
                 </Button>
