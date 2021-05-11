@@ -1,9 +1,8 @@
 import { makeStyles } from "@material-ui/core";
-import { createMuiTheme } from "@material-ui/core/styles";
 import { Colors } from "../../Theme/color.constants";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 const breakpoints = createBreakpoints({});
-const { skyBlue, whiteColor } = Colors;
+const { skyBlue, whiteColor,Harlequin } = Colors;
 
 
 const OptionTabStyles = makeStyles((theme) => ({
@@ -21,7 +20,6 @@ const OptionTabStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       width: "100%",
     },
-
     "& .MuiTabs-flexContainerVertical": {
       [theme.breakpoints.down("sm")]: {
         width: "100%",
@@ -43,7 +41,7 @@ const OptionTabStyles = makeStyles((theme) => ({
       opacity:1
     },
     "& .MuiTab-textColorInherit .Mui-selected": {
-      backgroundColor: "#2cd400",
+      backgroundColor: Harlequin,
       color: "white",
     },
     [theme.breakpoints.down("sm")]: {
@@ -51,7 +49,7 @@ const OptionTabStyles = makeStyles((theme) => ({
     },
   },
   tabPanel: {
-    backgroundColor: "rgba(17, 110, 240, 1)",
+    backgroundColor: skyBlue,
     color: whiteColor,
     height: "100%",
     width: "100%",
