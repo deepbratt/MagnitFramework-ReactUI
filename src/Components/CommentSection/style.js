@@ -1,68 +1,29 @@
 import { makeStyles } from "@material-ui/core";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 const breakpoints = createBreakpoints({});
-const ServicesSectionStyles = makeStyles((theme) => ({
+const SectionStyles = makeStyles((theme) => ({
   root: {
     position: "relative",
     marginTop: "0px",
-   
     [theme.breakpoints.only("md")]: {
       marginTop: "-7px"
     },
     [theme.breakpoints.down("sm")]: {
       marginTop: "-19px"
     },
-   
+  
     "& > img": {
       position: "absolute",
     },
   },
-  textColor: {
-    color:"rgba(21, 27, 39, 1)",
-  },
-  bannerBtn: {
-    maxWidth: "133px",
-    margin: "20px 0",
-    padding: "10px",
-  },
+
   reviewSlider: {
     position: "relative",
     "& > img": {
       position: "absolute",
     },
   },
-  leftPattern: {
-    left: "-5%",
-    top: "8%",
-    opacity: 0.3,
-    width: "700px",
-    [theme.breakpoints.down("md")]: {
-      width: "500px",
-      left: "2%",
-      top: "8%",
-    },
-    [theme.breakpoints.down("sm")]: {
-      width: "300px",
-      left: "0%",
-      top: "10%",
-    },
-  },
-  rightPattern: {
-    right: "0%",
-    top: "25%",
-    opacity: 0.3,
-    width: "700px",
-    [theme.breakpoints.down("md")]: {
-      width: "500px",
-      right: "0%",
-    top: "25%",
-    },
-    [theme.breakpoints.down("sm")]: {
-      width: "300px",
-      right: "0%",
-      top: "25%",
-    },
-  },
+
   avatar1: {
     position: "absolute",
     width: "120px",
@@ -293,4 +254,4 @@ const ServicesSectionStyles = makeStyles((theme) => ({
   },
 }));
 
-export default ServicesSectionStyles;
+export default SectionStyles;

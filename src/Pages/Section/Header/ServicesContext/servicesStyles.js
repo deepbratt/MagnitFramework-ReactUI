@@ -8,6 +8,12 @@ const breakpoints = createBreakpoints({});
 
 export const THEME = createMuiTheme({
   overrides: {
+    MuiButton:{
+      "& .MuiButton-root: hover":{
+        backgroundColor: "#2CD400",
+        
+      }     
+    },
     MuiTypography: {
       h4: {
         fontFamily: "Poppins",

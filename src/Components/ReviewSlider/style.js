@@ -44,8 +44,9 @@ const ReviewSliderStyles = makeStyles((theme) => ({
 
   nextBtn:{
     position: "absolute",
-    top: "31.7em",
-    right:"16.3em",
+    top:"60%",
+    right:"50%",
+    transform: "translate(27rem, 0rem)",
     bottom: "auto",
     padding: ".4em",
     zIndex: 1,
@@ -65,7 +66,9 @@ const ReviewSliderStyles = makeStyles((theme) => ({
   },
   prevBtn:{
     position: "absolute",
-    inset:"31.7em 16.3em auto 13.5rem",
+    top:"60%",
+    left:"50%",
+    transform: "translate(-27rem, 0rem)",
     padding: ".4em",
     zIndex: 1,
     color:"white",

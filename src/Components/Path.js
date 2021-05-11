@@ -2,7 +2,8 @@ import AboutUs from "./../Pages/AboutUs/AboutUs";
 import Services from "./../Pages/Services";
 import Home from "../Pages/Home/index"
 import Solutions from "../Pages/SolutionsPage/Solutions"
-
+import Event from "../Pages/Event/Index"
+import Testimonials from "../Pages/Testimonials";
 const pathIds = {
   home: "home",
   about: "about",
@@ -10,6 +11,8 @@ const pathIds = {
   solutions: "solutions",
   caseStudies: "caseStudies",
   careers: "careers",
+  event: "event",
+  testimonial: "/testimonial",
 };
 
 const pathRouting = {
@@ -19,6 +22,8 @@ const pathRouting = {
   solutions: "/solutions",
   caseStudies: "/caseStudies",
   careers: "/careers",
+  event: "/event",
+  testimonial: "/testimonial",
 };
 
 const pageRoutes = {
@@ -49,6 +54,14 @@ const pageRoutes = {
   [pathIds.careers]: {
     path: pathRouting.careers,
     sidebarName: "Careers",
+  },
+    [pathIds.event]: {
+    path: pathRouting.event,
+    component:Event,
+  },
+  [pathIds.testimonial]: {
+    path: pathRouting.testimonial,
+    component:Testimonials,
   },
 };
 

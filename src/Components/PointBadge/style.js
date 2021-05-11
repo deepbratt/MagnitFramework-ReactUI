@@ -3,8 +3,9 @@ import { makeStyles } from "@material-ui/core";
 const PointBadgeStyles = makeStyles((theme) => ({
   vertical: {
     margin: "15px",
+    zIndex:1,
     "&:hover": {
-     border: "1px solid #2CD400"
+     border: "1px solid #2CD400",
     },
   },
   inline: { display: "flex",

@@ -31,7 +31,8 @@ export default createTheme({
     },
     text: {
       primary: "#000000",
-      secondary: "#000000"
+      secondary: "#000000",
+      textSecondary:"rgba(113, 113, 113, 1)",
     }
   }),
 });

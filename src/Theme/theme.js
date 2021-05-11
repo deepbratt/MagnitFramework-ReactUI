@@ -35,6 +35,9 @@ export default function createTheme(options) {
         contained: {
           boxShadow: "0px 0px 0px rgba(0, 0, 0, 0);",
           borderRadius: "0px",
+          "& :hover":{
+            backgroundColor:"inherit"
+          }
         },
       },
       MuiInputBase: {
