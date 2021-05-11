@@ -1,9 +1,8 @@
 import { makeStyles } from "@material-ui/core";
 import { Colors } from "../../Theme/color.constants";
-import {fontSizes} from "../../Utils/Constants/Font/index"
-const {h3,p} = fontSizes
-const {lg} = h3
-const {sm,lg} = p
+import { fontSizes } from "../../Utils/Constants/Font/index";
+const { h3, p } = fontSizes;
+const { lg, sm } = h3;
 const { darkSilver } = Colors;
 const CertificationListStyles = makeStyles((theme) => ({
   root: {
@@ -25,12 +24,12 @@ const CertificationListStyles = makeStyles((theme) => ({
     "& > p": {
       color: darkSilver,
       [theme.breakpoints.down("md")]: {
-        fontSize: lg,
-        lineHeight: "32px"
+        fontSize: p.lg,
+        lineHeight: "32px",
       },
       [theme.breakpoints.down("sm")]: {
-        fontSize: lg,
-        lineHeight: "24px"
+        fontSize: p.sm,
+        lineHeight: "24px",
       },
     },
   },
