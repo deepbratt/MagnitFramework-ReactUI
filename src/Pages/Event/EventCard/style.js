@@ -1,6 +1,8 @@
 import { makeStyles } from "@material-ui/core";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
+import { Colors } from "../../../Theme/color.constants";
 const breakpoints = createBreakpoints({});
+const {darkSilver}=Colors;
 const ActivityStyles = makeStyles((theme) => ({
   cardRoot:{
     // width:460,
@@ -31,7 +33,7 @@ const ActivityStyles = makeStyles((theme) => ({
     fontWeight:600,
 },
   cardpara:{
-    color:"rgba(113, 113, 113, 1)",
+    color:darkSilver,
     textAlign:"left",
     fontSize:"18px",
     fontWeight:400,

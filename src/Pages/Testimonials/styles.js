@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         marginTop: "0",
         backgroundColor: "transparent",
-        background: " linear-gradient(-181.96deg , #2CD400 -98.18%, rgba(255, 255, 255, 0) 85.96%)",
+        background: `linear-gradient(-181.96deg , ${ Harlequin} -98.18%, rgba(255, 255, 255, 0) 85.96%)`,
     backgroundBlendMode: "multiply"
       },
       reviewSlider: {
