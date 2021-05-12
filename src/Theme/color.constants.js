@@ -1,6 +1,14 @@
 export const Colors = {
   WildSand: "	rgb(245, 245, 247)",
   Ash: "rgb(217, 217, 219)",
+  Malibu: "#4CBFFF",
+  Heliotrope: "#DB4CFF",
+  AquamarineBlue: "#6ADBE1",
+  HavelockBlue: "#6A8BE2",
+  DoveGray: "#717171",
+  TexasRose: "#FFC04C",
+  Niagara: "#08A89E",
+  DodgerBlue: "#5B4CFF",
   blackColor: "black",
   greyColor: "grey",
   whiteColor: "white",
@@ -66,6 +74,7 @@ export const Colors = {
   begonia: "#EF6E78",
   brunswickGreen: "#1A584F",
   spaceCadet: "#1F3259",
+  chineseWhite: "#E1E1E1",
   // MOSTLY BACKGROUND
   aliceBlue: "#E8F2FE",
   fillColor:

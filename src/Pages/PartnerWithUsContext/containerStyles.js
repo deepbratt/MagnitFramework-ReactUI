@@ -36,7 +36,10 @@ export const useStyles = makeStyles((theme) => ({
     paddingBottom: "50px",
   },
   grid: {
-    margin: "0px 4%",
+    margin: "0 4%",
+    [breakpoints.up("lg")]: {
+      margin: "0px 4px 0px 80px",
+    },
   },
   underlined: {
     position: "relative",

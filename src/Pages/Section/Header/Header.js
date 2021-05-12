@@ -8,6 +8,7 @@ import {
   Toolbar,
   Button,
   AppBar,
+  LinearProgress,
 } from "@material-ui/core";
 import { NavLink } from "react-router-dom";
 // import Scrolltrigger from "../../../Theme/Scrolltrigger";
@@ -24,16 +25,12 @@ const Header = (props) => {
   const classes = useStyles();
   const { Harlequin, whiteColor } = Colors;
   // const { trigger } = Scrolltrigger();
-  const {
-    logo,
-    list,
-    listItem,
-    button,
-    appbarsolid,
-    link,
-    root,
-    active,
-  } = classes;
+  const { logo, list, listItem, button, appbarsolid, link, root, active } =
+    classes;
+
+  const navigated = () => {
+    props.resetLoader();
+  };
 
   return (
     <>
@@ -56,6 +53,7 @@ const Header = (props) => {
                       className={link}
                       to={path}
                       key={`route-${index}}`}
+                      onClick={navigated}
                     >
                       <ListItem>
                         <ListItemText
@@ -68,7 +66,7 @@ const Header = (props) => {
                 );
               })}
               <ListItem>
-                {/* <MuiThemeProvider theme={THEME}>
+                <MuiThemeProvider theme={THEME}>
                   <Button
                     style={{
                       textTransform: "none",
@@ -78,20 +76,16 @@ const Header = (props) => {
                     className={button}
                     variant="contained"
                     size={Breakpoints()}
+                    onClick={navigated}
                   >
-                    <NavLink
-                      className={link}
-                      activeClassName={active}
-                      to={"/contactUs"}
-                    >
-                      Contact Us
-                    </NavLink>
+                    Contact Us
                   </Button>
-                </MuiThemeProvider> */}
+                </MuiThemeProvider>
               </ListItem>
             </List>
           </Hidden>
         </Toolbar>
+        <LinearProgress variant="determinate" value={props.scroll} />
       </AppBar>
     </>
   );

@@ -1,24 +1,19 @@
 import { Button } from "@material-ui/core";
+import CustomButtonStyles from './style';
 
-const CustomButton = ({
-  text,
-  variant,
-  fullWidth,
-  style,
-  size,
-  handleClick,
-}) => {
-  const { root } = CustomButton;
+const CustomButton = (props) => {
+  const { root } = CustomButtonStyles;
   return (
     <Button
-      variant={variant}
-      className={`${root} ${style}`}
+      variant={props.variant}
+      className={`${root} ${props.style}`}
       color="primary"
-      size={size}
-      onClick={() => handleClick()}
-      fullWidth={fullWidth}
+      size={props.size}
+      onClick={() => props.handleClick()}
+      fullWidth={props.fullWidth}
+      {...props}
     >
-      {text}
+      {props.text}
     </Button>
   );
 };

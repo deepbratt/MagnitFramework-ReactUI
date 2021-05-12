@@ -126,6 +126,7 @@ const Home = (props) => {
               </Grid>
             ))}
         </Grid>
+        <CustomButton text="See More" />
         {/* <ReviewSlider slides={cardArr} /> */}
       </Section>
       {/* AWARD AND ACCREDITATIONS SECTION */}

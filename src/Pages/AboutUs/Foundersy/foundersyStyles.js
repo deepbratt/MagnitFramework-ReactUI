@@ -12,13 +12,14 @@ export const FoundersyStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: MoonWhite,
     paddingTop: "30px",
+    paddingBottom: "30px",
     marginTop: "50px",
     marginBottom: "50px"
   },
   card: {
-    marginTop: "30px",
+    marginTop: "70px",
     paddingTop: "20px",
-    width: "30%",
+    width: "28%",
     height: "500px",
     display: "flex",
     flexDirection: "column",
@@ -32,7 +33,7 @@ export const FoundersyStyles = makeStyles((theme) => ({
       width: "50%",
     },
     [breakpoints.only("sm")]: {
-      width: "50%",
+      width: "70%",
     },
     [breakpoints.down("xs")]: {
       width: "70%",
@@ -62,4 +63,16 @@ export const FoundersyStyles = makeStyles((theme) => ({
       },
     },
   },
+  button:{
+    border: "none",
+    outline: "none",
+    margin: "0px 10px",
+    backgroundColor: "white",
+    padding: "5px 5px",
+    borderRadius: "5px",
+    textAlign: "center",
+    "&:hover":{
+      cursor: "pointer"
+    }
+  }
 }));

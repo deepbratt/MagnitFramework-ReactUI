@@ -4,42 +4,33 @@ import { Card, CardContent, Paper } from "@material-ui/core";
 import Heading from "../../../ContainerStructure/Headings/Heading4";
 import Paragraph from "../../../ContainerStructure/Headings/Paragraphs/Paragraph";
 import { MainData } from "../../../Utils/Constants/Language/AboutUsData";
+import BreadCrumb from "../../../Components/BreadCrumb";
 
-const AboutMainSection = () => {
-  const {
-    title,
-    paragraphPrimary,
-    paragraphSecondary,
-    heroImgsrc,
-    ellipseImgsrc,
-    ellipse2Imgsrc,
-    Vector,
-  } = MainData;
+const AboutMainSection = (props) => {
+  const { title, paragraphPrimary, paragraphSecondary } = MainData;
+  const breadcrumbData = [
+    {
+      path: "/",
+      text: "Home",
+    },
+    {
+      path: "/about",
+      text: "About Us",
+    },
+  ];
   const classes = useStyles();
-  const {
-    root,
-    cardSec,
-    Img,
-    paragraph,
-    Ellipse,
-    Ellipse2,
-    hero,
-    card,
-    vector,
-    underlined,
-  } = classes;
+  const { root, cardSec, breadCrumbStyles, paragraph, hero, card, underlined } =
+    classes;
   return (
     <>
       <Paper className={root} elevation={0}>
         <section>
           <Card className={card}>
+            <div className={breadCrumbStyles}>
+              <BreadCrumb links={breadcrumbData} />
+            </div>
             <CardContent className={cardSec}>
-              <section className={Img}>
-                <img width="200px" className={vector} alt="hero" src={Vector} />
-                <img className={hero} alt="hero" src={heroImgsrc} />
-                <img className={Ellipse} alt="ellipse" src={ellipseImgsrc} />
-                <img className={Ellipse2} alt="ellipse" src={ellipse2Imgsrc} />
-              </section>
+              <img className={hero} alt="hero" src={props.hero} />
             </CardContent>
           </Card>
           <Card>

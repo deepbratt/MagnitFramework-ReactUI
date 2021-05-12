@@ -1,9 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
-import { Colors } from "../../Theme/color.constants";
-
-const { PartnerSectionIcons } = Colors;
 const breakpoints = createBreakpoints({});
 
 export const THEME = createMuiTheme({
@@ -37,8 +34,8 @@ export const useStyles = makeStyles((theme) => ({
     flexFlow: "wrap",
   },
   card: {
-    width: "100%",
     height: "165px",
+    width: "100%",
     margin: "10px",
     cursor: "pointer",
     boxShadow: "none",
@@ -46,97 +43,48 @@ export const useStyles = makeStyles((theme) => ({
       width: "100%",
       height: "200px",
     },
-    [breakpoints.down("xs")]: {
-      height: "210px",
+    [breakpoints.down("sm")]: {
+      height: "310px",
+    },
+  },
+  content: {
+    display: "flex",
+    textAlign: "left",
+    [breakpoints.down("sm")]: {
+      flexDirection: "column",
+      textAlign: "center",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
     },
   },
 
   devSec: {
     height: "100px",
+    width: "50%",
     display: "flex",
     textAlign: "left",
-  },
-  content: {
-    paddingLeft: "20px",
-  },
-  devSub: {
-    height: "120px",
-    width: "280px",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  reliableSub: {
-    height: "120px",
-    width: "280px",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    [breakpoints.only("sm")]: {
-      width: "250px",
-    },
-  },
-  innovativeSub: {
-    height: "120px",
-    width: "280px",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    [breakpoints.only("sm")]: {
-      width: "260px",
-    },
-  },
-  agileSub: {
-    height: "120px",
-    width: "280px",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  transparencySub: {
-    height: "120px",
-    width: "280px",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  moneySub: {
-    height: "120px",
-    width: "280px",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    [breakpoints.only("sm")]: {
-      width: "250px",
+    [breakpoints.down("sm")]: {
+      justifyContent: "center",
+      display: "flex",
     },
   },
   supportSub: {
+    borderRadius: "5px",
     height: "120px",
-    width: "280px",
+    width: "120px",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    [breakpoints.only("sm")]: {
+    [breakpoints.down("sm")]: {
       width: "220px",
     },
   },
-  timeSub: {
-    height: "120px",
-    width: "280px",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  dataSub: {
-    height: "120px",
-    width: "280px",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-
-  Icons: {
-    width: "120px",
-    height: "60px",
+  para: {
+    paddingLeft: "20px",
+    [breakpoints.down("sm")]: {
+      paddingTop: "30px",
+      paddingLeft: "0px",
+    },
   },
 }));
