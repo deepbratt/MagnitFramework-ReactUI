@@ -1,6 +1,5 @@
-
-import React from 'react'
-import { Button, Grid,Typography } from "@material-ui/core";
+import React from "react";
+import { Grid, Typography,Button } from "@material-ui/core";
 import vector from "../../assets/services/vector.png";
 import OptionTabStyles  from "./style";
 import dataText, { FullTimeHiring, HiringOption } from './constant';
@@ -20,8 +19,7 @@ export const TabText = () => {
          <Grid xs={11}>
          <Typography className={bulletText} >{a.text}</Typography></Grid></Grid>);
     })}
-  
-    <Button color="primary" variant="contained" className={trialBtn} >
+   <Button color="primary" variant="contained" className={trialBtn} >
         <Typography>Get a Risk Free Trial
 (Start your trial in 24 hours!)</Typography>
     </Button>
