@@ -4,6 +4,8 @@ import Home from "../Pages/Home/index"
 import Solutions from "../Pages/SolutionsPage/Solutions"
 import Event from "../Pages/Event/Index"
 import Testimonials from "../Pages/Testimonials";
+import Career from "../Pages/Careers/Container"
+
 const pathIds = {
   home: "home",
   about: "about",
@@ -54,6 +56,7 @@ const pageRoutes = {
   [pathIds.careers]: {
     path: pathRouting.careers,
     sidebarName: "Careers",
+    component: Career
   },
     [pathIds.event]: {
     path: pathRouting.event,

@@ -25,7 +25,7 @@ export const fontSizes = {
   h5: {
     lg: "18px", // 1.125rem
     md: "",
-    sm: "",
+    sm: "15px",
     fontWeight: 500
   },
 
