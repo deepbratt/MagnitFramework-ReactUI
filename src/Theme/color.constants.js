@@ -27,6 +27,7 @@ export const Colors = {
   Luigi: "#46BB28",
   MoonWhite: "#E8F2FE",
   BlackSqueeze:"#F6F9FC",
+  Tundora:"#4D4D4D",
   Mirage:"#151B27",
   DoveGray:"#737373",
   sectionBackgroundColors: {

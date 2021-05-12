@@ -33,7 +33,7 @@ const {Harlequin ,whiteColor} = Colors;
           >
      <section className={headingSec}>
         <MuiThemeProvider theme={heading}>
-          <Typography variant="h1" color="inherit">
+          <Typography variant="h1" >
             {headingOne} <br />
            {headingTwo} <br/>
            {headingThree} <br/>
@@ -44,7 +44,7 @@ const {Harlequin ,whiteColor} = Colors;
             <ListItem className={list}>
               <section>
                 {data.map((text, index) => (
-                  <Typography key={index} variant="h5" color="inherit">
+                  <Typography key={index} variant="h5" >
                     <CheckIcon className={value === "LIGHT" ? tick : tickSub} />
                     {text}
                   </Typography>

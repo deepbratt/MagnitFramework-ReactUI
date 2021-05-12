@@ -11,7 +11,7 @@ import { useState } from "react";
 import CustomButton from "../CustomButton";
 
 const MyAccordion = ({ questions }) => {
-  const { root, title, details } = LayoutStyle();
+  const { root, title, details,customBtn } = LayoutStyle();
 
   const [expanded, setExpanded] = useState(false);
   return (
@@ -40,7 +40,7 @@ const MyAccordion = ({ questions }) => {
             </AccordionDetails>
           </Accordion>
         ))}
-      <CustomButton text="See More" />
+      <CustomButton text="See More" className={customBtn} />
     </div>
   );
 };

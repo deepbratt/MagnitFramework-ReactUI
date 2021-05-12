@@ -51,6 +51,7 @@ const Home = (props) => {
 
   const {
     // sectionBackgroundColors, factCards,
+    Mirage,
     BlueRibbon,
   } = Colors;
   // const { peach, seaGreen, skyBlue, violet, purple, blue } = factCards;
@@ -180,7 +181,7 @@ const Home = (props) => {
             images.map((image, index) => (
               <img
                 key={index}
-                style={{ margin: "10px 40px", width: "130px" }}
+                style={{ margin: "10px 40px", width: "130px",color:Mirage }}
                 src={image}
                 alt={`client${index}`}
               />

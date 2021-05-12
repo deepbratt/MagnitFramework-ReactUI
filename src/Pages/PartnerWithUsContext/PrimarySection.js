@@ -3,7 +3,8 @@ import { useStyles, THEME } from "./sectionStyles";
 import { Typography, Card, CardContent } from "@material-ui/core";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 
-
+import { Colors } from "../../Theme/color.constants";
+const {Mirage}=Colors;
 const PrimarySection = (props) => {
   const data = props.data
   const classes = useStyles();
@@ -36,7 +37,7 @@ const PrimarySection = (props) => {
                 <Typography variant="h5" >
                   {text.title}
                 </Typography>
-                <Typography paragraph={true} >
+                <Typography paragraph={true}  style={{color:Mirage}}>
                   {text.desc}
                 </Typography>
               </section>

@@ -4,7 +4,7 @@ import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 
 import { Colors } from "../../Theme/color.constants";
 
-const { whiteColor, Harlequin, blackColor } = Colors;
+const { whiteColor, Harlequin, blackColor,Mirage } = Colors;
 
 const breakpoints = createBreakpoints({});
 

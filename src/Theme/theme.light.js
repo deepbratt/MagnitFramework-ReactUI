@@ -6,6 +6,7 @@ export default createTheme({
   // Styles for Light Theme
   palette: createPalette({
     type: "light",
+  
     primary: {
       main: "#2CD400",
       contrastText: "#fff",
@@ -29,6 +30,7 @@ export default createTheme({
     },
     typography: {
       fontFamily: ["Poppins', sans-serif"].join(","),
+      textPrimary: "#151b27",
     },
     text: {
       primary: "#151b27",
