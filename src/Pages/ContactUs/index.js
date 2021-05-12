@@ -1,6 +1,8 @@
 import { Grid, Paper } from "@material-ui/core";
 import Section from "../Section";
 import FactCard from "../../Components/FactCard";
+import AboutMainSection from "../AboutUs/MainComponent/AboutMainSection";
+import Banner from "../../assets/ContactUs/banner.png";
 import {
   RequestAQuote,
   RequestAQuoteSub,
@@ -35,8 +37,26 @@ const ContactUs = () => {
 
   const { experience, team, customers, served, projects, certification } =
     FactCardText;
+
+  const breadcrumbs = [
+    {
+      path: "/",
+      text: "Home",
+    },
+    {
+      path: "/contactUs",
+      text: "Contact Us",
+    },
+  ];
   return (
     <>
+      <Grid item xs={12}>
+        <AboutMainSection
+          hero={Banner}
+          card={false}
+          breadcrumbData={breadcrumbs}
+        />
+      </Grid>
       <Section title={RequestAQuote} subTitle={RequestAQuoteSub}>
         <Grid container>
           <Grid item xs={12} md={7}>

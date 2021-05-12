@@ -17,11 +17,21 @@ const array = [<Foundersy />, <Foundersy />];
 const AboutUs = () => {
   const { heroImgsrc, heading } = MainData;
   const { underlined, root, button } = FoundersyStyles();
+  const breadcrumbs = [
+    {
+      path: "/",
+      text: "Home",
+    },
+    {
+      path: "/about",
+      text: "About Us",
+    },
+  ];
   return (
     <>
       <Grid container>
         <Grid item lg={12} md={12} xs={12}>
-          <Main hero={heroImgsrc} />
+          <Main hero={heroImgsrc} card={true} breadcrumbData={breadcrumbs} />
         </Grid>
         <Grid item lg={12} md={12} xs={12}>
           <MissionContext />
