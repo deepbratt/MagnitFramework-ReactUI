@@ -5,6 +5,7 @@ import Layout from "./Layout";
 import RequireAuth from "./container/RequireAuth";
 import { pageRoutes } from "./Components/Path";
 import Home from "./Pages/Home";
+import ContactUs from "./Pages/ContactUs";
 
 const Routes = () => {
   const routeArray = Object.values(pageRoutes);
@@ -15,6 +16,7 @@ const Routes = () => {
       <Switch>
         <Layout>
           <RequireAuth path="/" exact component={Home} />
+          <RequireAuth path="/contactUs" exact component={ContactUs} />
           {/* <RequireAuth path="/services" exact component={Services} /> */}
           {routeArray.map((prop, key) => {
             return (

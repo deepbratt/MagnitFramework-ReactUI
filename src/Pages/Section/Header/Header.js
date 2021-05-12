@@ -19,6 +19,7 @@ import { pageRoutes } from "../../../Components/Path";
 import { Hidden } from "@material-ui/core";
 import { Logo } from "../../../Components/Hero/Images";
 import { Colors } from "../../../Theme/color.constants";
+import CustomButton from "../../../Components/CustomButton";
 
 const Header = (props) => {
   const routes = Object.values(pageRoutes);
@@ -66,21 +67,14 @@ const Header = (props) => {
                 );
               })}
               <ListItem>
-                <MuiThemeProvider theme={THEME}>
-                  <Button
-                    style={{
-                      textTransform: "none",
-                      backgroundColor: Harlequin,
-                      color: whiteColor,
-                    }}
-                    className={button}
-                    variant="contained"
-                    size={Breakpoints()}
-                    onClick={navigated}
-                  >
-                    Contact Us
-                  </Button>
-                </MuiThemeProvider>
+                <NavLink
+                  activeClassName={active}
+                  className={link}
+                  to="/contactUs"
+                  onClick={navigated}
+                >
+                  <CustomButton text="Contact Us"></CustomButton>
+                </NavLink>
               </ListItem>
             </List>
           </Hidden>
