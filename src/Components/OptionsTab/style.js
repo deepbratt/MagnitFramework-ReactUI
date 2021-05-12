@@ -4,13 +4,14 @@ import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 import { fontSizes } from "../../Utils/Constants/Font/index";
 const { h5, p } = fontSizes;
 const breakpoints = createBreakpoints({});
-const { skyBlue, whiteColor,Harlequin,chineseWhite } = Colors;
+const { skyBlue, whiteColor,Harlequin,chineseWhite, BlackSqueeze } = Colors;
 
 
 const OptionTabStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     display: "flex",
+    backgroundColor: BlackSqueeze,
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
     },

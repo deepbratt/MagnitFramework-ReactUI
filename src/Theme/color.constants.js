@@ -26,6 +26,7 @@ export const Colors = {
   Mariner: "#234EDB",
   Luigi: "#46BB28",
   MoonWhite: "#E8F2FE",
+  BlackSqueeze:"#F6F9FC",
   Mirage:"#151B27",
   DoveGray:"#737373",
   sectionBackgroundColors: {
