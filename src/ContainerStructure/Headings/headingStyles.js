@@ -18,7 +18,10 @@ export const THEME = createMuiTheme({
         fontFamily: "Poppins",
         fontWeight: "600",
         fontSize: "18px",
-        whiteSpace: "nowrap",
+        whiteSpace: "wrap",
+        [breakpoints.down("sm")]: {
+          fontSize: "15px",
+        },
       },
       h6: {
         fontFamily: "Poppins",
