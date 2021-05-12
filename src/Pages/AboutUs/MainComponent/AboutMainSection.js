@@ -4,30 +4,33 @@ import { Card, CardContent, Paper } from "@material-ui/core";
 import Heading from "../../../ContainerStructure/Headings/Heading4";
 import Paragraph from "../../../ContainerStructure/Headings/Paragraphs/Paragraph";
 import { MainData } from "../../../Utils/Constants/Language/AboutUsData";
+import BreadCrumb from "../../../Components/BreadCrumb";
 
 const AboutMainSection = (props) => {
-  const {
-    title,
-    paragraphPrimary,
-    paragraphSecondary,
-  } = MainData;
+  const { title, paragraphPrimary, paragraphSecondary } = MainData;
+  const breadcrumbData = [
+    {
+      path: "/",
+      text: "Home",
+    },
+    {
+      path: "/about",
+      text: "About Us",
+    },
+  ];
   const classes = useStyles();
-  const {
-    root,
-    cardSec,
-    paragraph,
-    hero,
-    card,
-    underlined,
-  } = classes;
+  const { root, cardSec, breadCrumbStyles, paragraph, hero, card, underlined } =
+    classes;
   return (
     <>
       <Paper className={root} elevation={0}>
         <section>
           <Card className={card}>
+            <div className={breadCrumbStyles}>
+              <BreadCrumb links={breadcrumbData} />
+            </div>
             <CardContent className={cardSec}>
-                <img className={hero} alt="hero" src={props.hero} />
-          
+              <img className={hero} alt="hero" src={props.hero} />
             </CardContent>
           </Card>
           <Card>

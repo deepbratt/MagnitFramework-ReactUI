@@ -1,7 +1,7 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { Colors } from "../../../Theme/color.constants";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
-const { DoveGray, Harlequin,mainSlide } = Colors;
+const { DoveGray, Harlequin, mainSlide } = Colors;
 const breakpoints = createBreakpoints({});
 export const useStyles = makeStyles((theme) => ({
   root: {
@@ -9,15 +9,21 @@ export const useStyles = makeStyles((theme) => ({
     overflow: "hidden",
     margin: 0,
     padding: 0,
-    width: "100vw"
+    width: "100vw",
   },
   card: {
     backgroundImage: `linear-gradient(${mainSlide},white)`,
+    position: "relative",
+  },
+  breadCrumbStyles: {
+    position: "absolute",
+    top: "20px",
+    left: "50px",
   },
   cardSec: {
     padding: "0px",
     marginBottom: "30px",
-    margin: "0px",
+    margin: "0",
     display: "flex",
     flexDirection: "column",
     [breakpoints.down("sm")]: {
