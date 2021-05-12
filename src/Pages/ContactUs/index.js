@@ -8,6 +8,7 @@ import {
   RequestAQuoteSub,
   SomeQuickFactsAboutUs,
   AwardSectionTitleContactUs,
+  ContactUsTitle,
 } from "../../Utils/Constants/Language/en/SectionHeaders";
 import { Colors } from "../../Theme/color.constants";
 import { FactCardText } from "../../Utils/Constants/Language/en/ContactUsPageText";
@@ -33,7 +34,7 @@ const ContactUs = () => {
     Luigi,
   } = Colors;
 
-  const { root, awardSection, imageContainer } = ContactUsStyles();
+  const { awardSection, imageContainer, label } = ContactUsStyles();
 
   const { experience, team, customers, served, projects, certification } =
     FactCardText;
@@ -82,9 +83,12 @@ const ContactUs = () => {
           <Grid item xs={12} md={5}>
             <Paper
               // className={form}
-              style={{ boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)" }}
+              style={{
+                boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
+                padding: "50px 0",
+              }}
             >
-              <ContactUsForm />
+              <ContactUsForm styles={label} heading="Contact /Us" />
             </Paper>
           </Grid>
         </Grid>

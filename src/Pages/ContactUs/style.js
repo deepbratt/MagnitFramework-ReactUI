@@ -17,7 +17,13 @@ export const ContactUsStyles = makeStyles((theme) => ({
     margin: "20px",
     "& > img": {
       maxHeight: "100px",
-      margin: "-25px 0"
+      margin: "-25px 0",
+    },
+  },
+  label: {
+    color: "black",
+    "& > *": {
+      color: "black",
     },
   },
 }));

@@ -23,6 +23,7 @@ import endQuote from "../../assets/images/cards/EndingQuoteBlue.png";
 import { Colors } from "../../Theme/color.constants";
 import {
   AwardSectionTitle,
+  ContactUsTitle,
   TrainingAndCertificationSectionTitle,
   WhatDoClientSaySectionTitle,
 } from "./constants";
@@ -105,7 +106,7 @@ const Home = (props) => {
       {/* CONTACT US FORM SECTION */}
       <Section>
         {!isSubmitted ? (
-          <ContactUsAndFQA submitForm={submitForm} />
+          <ContactUsAndFQA submitForm={submitForm} heading={ContactUsTitle} />
         ) : (
           <Typography style={{ textAlign: "center" }} variant="button">
             Submitted

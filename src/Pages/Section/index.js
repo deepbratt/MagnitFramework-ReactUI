@@ -1,6 +1,7 @@
-import { Grid, Paper } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import PropTypes from "prop-types";
+import SectionHeading from "./SectionHeading";
 import LayoutStyle from "./style";
 
 const Section = ({
@@ -15,19 +16,13 @@ const Section = ({
   const {
     root,
     content,
-    header,
     subHeader,
     sectionHeader,
-    underlinedStyles,
     startQuote1,
     startQuote2,
     endQuote1,
     endQuote2,
   } = LayoutStyle();
-
-  const titleText = title.split("/");
-  const normalTitle = titleText[0];
-  const underlinedTitle = titleText[1];
 
   return (
     <div className={root} style={{ backgroundColor: backColor }}>
@@ -53,12 +48,8 @@ const Section = ({
           </>
         )}
         <div className={sectionHeader}>
-          {title && (
-            <Typography className={header} color="textPrimary" variant="h2">
-              {normalTitle}
-              <span className={underlinedStyles}>{underlinedTitle}</span>
-            </Typography>
-          )}
+          {title && <SectionHeading header={title} />}
+
           {subTitle && (
             <Typography
               className={subHeader}

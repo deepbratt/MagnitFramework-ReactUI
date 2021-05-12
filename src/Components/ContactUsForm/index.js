@@ -1,21 +1,16 @@
-import { Button, InputLabel } from "@material-ui/core";
+import { InputLabel } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import InputField from "../../Components/FormInputs/InputField";
+import SectionHeading from "../../Pages/Section/SectionHeading";
 import { contactUsLabelsText } from "../../Utils/Constants/Language";
+import CustomButton from "../CustomButton";
 import FormStyles from "./style";
 
-const ContactUsForm = () => {
+const ContactUsForm = (props) => {
   const { form, label, button } = FormStyles();
 
-  const {
-    heading,
-    subHeading,
-    name,
-    email,
-    phoneNum,
-    message,
-    submit,
-  } = contactUsLabelsText;
+  const { subHeading, name, email, phoneNum, message, submit } =
+    contactUsLabelsText;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -24,13 +19,13 @@ const ContactUsForm = () => {
 
   return (
     <>
-      <Typography variant="h2">{heading}</Typography>
+      <SectionHeading header={props.heading} />
       <Typography variant="subtitle1" color="textSecondary" component="h5">
         {subHeading}
       </Typography>
 
       <form className={form} onSubmit={handleSubmit}>
-        <InputLabel className={label} htmlFor="input-name">
+        <InputLabel className={`${label} ${props.styles}`} htmlFor="input-name">
           {name}
         </InputLabel>
 
@@ -41,7 +36,10 @@ const ContactUsForm = () => {
           placeholder="e.g Jamshed Ahmed"
         />
 
-        <InputLabel className={label} htmlFor="input-email">
+        <InputLabel
+          className={`${label} ${props.styles}`}
+          htmlFor="input-email"
+        >
           {email}
         </InputLabel>
 
@@ -51,13 +49,19 @@ const ContactUsForm = () => {
           placeholder="e.g abc@gmail.com"
         />
 
-        <InputLabel className={label} htmlFor="input-phone">
+        <InputLabel
+          className={`${label} ${props.styles}`}
+          htmlFor="input-phone"
+        >
           {phoneNum}
         </InputLabel>
 
         <InputField id="input-phone" fullWidth placeholder="+1 225 8777 461" />
 
-        <InputLabel className={label} htmlFor="input-message">
+        <InputLabel
+          className={`${label} ${props.styles}`}
+          htmlFor="input-message"
+        >
           {message}
         </InputLabel>
 
@@ -68,19 +72,12 @@ const ContactUsForm = () => {
           multiline
         />
         <div className={button}>
-          <Button
+          <CustomButton
             type="submit"
-            size="small"
-            color="primary"
+            size="medium"
             variant="contained"
-          >
-            <Typography
-              style={{ textAlign: "center", color: "#fff" }}
-              variant="button"
-            >
-              {submit}
-            </Typography>
-          </Button>
+            text={submit}
+          />
         </div>
       </form>
     </>
