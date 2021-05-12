@@ -18,9 +18,6 @@ const LayoutStyle = makeStyles((theme) => ({
     marginBottom: "60px",
     color:"rgba(21, 27, 39, 1)",
     [theme.breakpoints.down("sm")]: {
-      fontSize: "1.75rem",
-    },
-    [theme.breakpoints.down("sm")]: {
       fontSize: "1.5rem",
     },
   },

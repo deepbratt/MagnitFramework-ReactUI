@@ -33,10 +33,10 @@ const SecondarySection = (props) => {
               </section>
               <MuiThemeProvider theme={THEME}>
                 <section className={para}>
-                  <Typography variant="h5" color="inherit">
+                  <Typography variant="h5" >
                     {text.title}
                   </Typography>
-                  <Typography paragraph={true} color="inherit">
+                  <Typography paragraph={true} >
                     {text.desc}
                   </Typography>
                 </section>

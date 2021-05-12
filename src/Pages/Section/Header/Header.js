@@ -7,7 +7,8 @@ import {
   ListItemText,
   Toolbar,
   Button,
-  AppBar
+  AppBar,
+  LinearProgress
 } from "@material-ui/core";
 import { NavLink } from "react-router-dom";
 import Scrolltrigger from "../../../Theme/Scrolltrigger";
@@ -35,6 +36,10 @@ const Header = (props) => {
     active,
   } = classes;
 
+  const navigated=()=>{
+    props.resetLoader()
+  }
+
   return (
     <>
     <AppBar  className={root} position="sticky">
@@ -56,6 +61,7 @@ const Header = (props) => {
                     className={link}
                     to={path}
                     key={`route-${index}}`}
+                    onClick={navigated}
                   >
                     <ListItem>
                       <ListItemText
@@ -78,6 +84,7 @@ const Header = (props) => {
                   className={button}
                   variant="contained"
                   size={Breakpoints()}
+                  onClick={navigated}
                 >
                   Contact Us
                 </Button>
@@ -86,6 +93,7 @@ const Header = (props) => {
           </List>
         </Hidden>
       </Toolbar>
+      <LinearProgress variant="determinate" value={props.scroll}/>
       </AppBar>
     </>
   );

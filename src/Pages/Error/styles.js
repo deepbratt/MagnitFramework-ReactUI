@@ -1,7 +1,8 @@
 import { makeStyles } from "@material-ui/core";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
-
+import {Colors} from "../../Theme/color.constants";
 const breakpoints = createBreakpoints({});
+const {Mirage,DoveGray} =Colors;
 const useStyles = makeStyles((theme) => ({
     root:{
         height:"100vh",
@@ -24,11 +25,11 @@ Img:{
 },
 head:{
     margin:"2.5rem 0rem 0rem 0rem",
-    color:"rgba(21, 27, 39, 1)"
+    color:Mirage
 },
 paragraph:{
     padding: ".5rem 23rem",
-    color:"#737373",
+    color:DoveGray,
     [theme.breakpoints.down("sm")]: {
         padding: "0rem",
       },

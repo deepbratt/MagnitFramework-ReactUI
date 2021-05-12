@@ -11,6 +11,7 @@ import VideoCard from './TestimonialVideo';
 import linked from "../../assets/Testimonials/linked.png"
 import prof from "../../assets/Testimonials/prof.png"
 import VideosData from '../../Utils/Constants/Language/en/TestimonialVideos';
+import { ClientsHaveToSay, Testmonial } from './constant';
 function Testimonials() {
     const { skyBlue, aliceBlue ,linearBackground} = Colors;
     const {
@@ -43,10 +44,10 @@ incididunt ut labore et dolore magna aliqua.
       <Card>
             <CardContent className={cardSec}>
               <section className={underlined}>
-                <Heading title="Testimonials" />
+                <Heading title={Testmonial} />
               </section>
               <section className={paragraph}>
-                <Paragraph para="Here is what our clients have to say about our work" />
+                <Paragraph para={ClientsHaveToSay} />
               </section>
             </CardContent>
           </Card>

@@ -1,6 +1,8 @@
 import { makeStyles } from "@material-ui/core";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
+import { Colors } from "../../Theme/color.constants";
 const breakpoints = createBreakpoints({});
+const {Mirage}=Colors;
 const ServicesSectionStyles = makeStyles((theme) => ({
   root: {
     position: "relative",
@@ -18,7 +20,7 @@ const ServicesSectionStyles = makeStyles((theme) => ({
     },
   },
   textColor: {
-    color:"rgba(21, 27, 39, 1)",
+    color:Mirage,
   },
   bannerBtn: {
     maxWidth: "133px",
@@ -32,10 +34,12 @@ const ServicesSectionStyles = makeStyles((theme) => ({
     },
   },
   leftPattern: {
-    left: "-5%",
-    top: "8%",
+    position:"absolute",
+    left: "-4%",
+    top: "-120%",
     opacity: 0.3,
     width: "700px",
+    zIndex: 0,
     [theme.breakpoints.down("md")]: {
       width: "500px",
       left: "2%",

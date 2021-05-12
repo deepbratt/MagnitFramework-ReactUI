@@ -1,6 +1,10 @@
 import { makeStyles } from "@material-ui/core";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
+import { Colors } from "../../Theme/color.constants";
+import {fontSizes} from "../../Utils/Constants/Font/index"
+const {p} = fontSizes
 const breakpoints = createBreakpoints({});
+const {Mirage}=Colors;
 const ReviewSliderStyles = makeStyles((theme) => ({
   grid: {
     margin: "80px 0",
@@ -33,11 +37,12 @@ const ReviewSliderStyles = makeStyles((theme) => ({
   },
   content: {
     "& > p": {
+      color:Mirage,
       [theme.breakpoints.down("md")]: {
-        fontSize: "16px",
+        fontSize: p.lg,
       },
       [theme.breakpoints.down("sm")]: {
-        fontSize: "10px",
+        fontSize: p.sm,
       },
     },
   },

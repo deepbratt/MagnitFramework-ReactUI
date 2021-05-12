@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 
 import { Colors } from "../../Theme/color.constants";
-const {  Harlequin } = Colors;
+const {  Harlequin,DoveGray } = Colors;
 
 const breakpoints = createBreakpoints({});
 const EventStyles = makeStyles((theme) => ({
@@ -27,7 +27,7 @@ const EventStyles = makeStyles((theme) => ({
   paragraph: {
     width: "80%",
     marginTop: "10px",
-    color: "hsl(0deg 0% 45%)",
+    color: DoveGray,
     [breakpoints.only("md")]: {
       width: "500px",
     },

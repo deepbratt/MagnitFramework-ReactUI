@@ -1,6 +1,8 @@
 import { makeStyles } from "@material-ui/core";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
+import { Colors } from "../../../Theme/color.constants";
 const breakpoints = createBreakpoints({});
+const {Mirage} =Colors;
 const useStyles = makeStyles((theme) => ({
   cardRoot:{
     // width:460,
@@ -39,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
       },
   },
   cardTitle:{
-    color:"rgba(21, 27, 39, 1)",
+    color:Mirage,
     textAlign:"left",
     fontSize:"20px",
     fontWeight:600,

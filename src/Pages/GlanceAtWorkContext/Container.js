@@ -44,7 +44,7 @@ const Container = ({backColor}) => {
                   <img width="250px" src={image1} alt=""/>
                   <section className={cardContent}>
                 <MuiThemeProvider theme={THEME}>
-                  <Typography variant="h5">
+                  <Typography variant="h5" >
                    {subtitle}
                   </Typography>
                 </MuiThemeProvider>

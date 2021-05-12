@@ -1,6 +1,7 @@
 import createTheme from "./theme";
 import createPalette from "@material-ui/core/styles/createPalette";
-
+import { Colors } from "./color.constants";
+const {Mirage,darkSilver}=Colors;
 export default createTheme({
   // Styles for Light Theme
   palette: createPalette({
@@ -30,9 +31,10 @@ export default createTheme({
       fontFamily: ["Poppins', sans-serif"].join(","),
     },
     text: {
-      primary: "#000000",
+      primary: "#151b27",
       secondary: "#000000",
-      textSecondary:"rgba(113, 113, 113, 1)",
+      textPrimary:"#151b27",
+      textSecondary:darkSilver,
     }
   }),
 });

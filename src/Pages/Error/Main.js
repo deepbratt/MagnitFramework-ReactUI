@@ -3,6 +3,7 @@ import React from 'react'
 import useStyles from "./styles";
 import Heading from "../../ContainerStructure/Headings/Heading4";
 import Paragraph from "../../ContainerStructure/Headings/Paragraphs/Paragraph";
+import { Oops, PageNotFound } from './constants';
  const Main = ({ErrorImg}) => {
    const {root,Img,head,paragraph,HomeBtn}= useStyles();
     return (
@@ -12,13 +13,11 @@ import Paragraph from "../../ContainerStructure/Headings/Paragraphs/Paragraph";
                  <img src={ErrorImg} alt="error" className={Img}/>
                </section>
                <section className={head}>
-               <Heading title="OOPS!PAGE NOT FOUND"/>
+               <Heading title={PageNotFound}/>
                </section>
                <section className={paragraph}>
-               <Paragraph para="oops! the page you are looking for does not exist. It might have been moved or deleted.  "/>
+               <Paragraph para={Oops}/>
                </section>
-                
-              
                 <Button type="submit" color="primary" variant="contained">
           <Typography
             className={HomeBtn}

@@ -6,11 +6,11 @@ import {
 } from "@material-ui/core";
 import PropTypes from "prop-types";
 
-const Heading4 = ({ title }) => {
+const Heading4 = ({ title,color }) => {
   return (
     <>
       <MuiThemeProvider theme={THEME}>
-        <Typography variant="h4" color="inherit">
+        <Typography variant="h4" color={color}>
           {title}
         </Typography>
       </MuiThemeProvider>

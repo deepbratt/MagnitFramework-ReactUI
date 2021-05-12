@@ -95,7 +95,7 @@ const ContactUs = () => {
                       variant="contained"
                     >
                       <Typography
-                        style={{ textAlign: "center", color: "#fff" }}
+                        style={{ textAlign: "center", color: "#fff",padding:".1rem 1.6rem" }}
                         variant="button"
                       >
                         {submit}

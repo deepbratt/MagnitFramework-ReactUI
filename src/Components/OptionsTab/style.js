@@ -1,8 +1,10 @@
 import { makeStyles } from "@material-ui/core";
 import { Colors } from "../../Theme/color.constants";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
+import { fontSizes } from "../../Utils/Constants/Font/index";
+const { h5, p } = fontSizes;
 const breakpoints = createBreakpoints({});
-const { skyBlue, whiteColor,Harlequin } = Colors;
+const { skyBlue, whiteColor,Harlequin,chineseWhite } = Colors;
 
 
 const OptionTabStyles = makeStyles((theme) => ({
@@ -27,13 +29,14 @@ const OptionTabStyles = makeStyles((theme) => ({
         flexDirection: " column",
       },
     },
-    "& > .PrivateTabIndicator-colorSecondary-79, .PrivateTabIndicator-colorSecondary-81": {
-      width: "0px",
-    },
+    "& > .PrivateTabIndicator-colorSecondary-79, .PrivateTabIndicator-colorSecondary-81":
+      {
+        width: "0px",
+      },
   },
   tab: {
     margin: "10px",
-    border: "1px solid rgba(44, 212, 0, 1)",
+    border: `solid 1px ${Harlequin}`,
     color: "black",
     fontSize: "14px",
     borderRadius: "5px",
@@ -42,7 +45,7 @@ const OptionTabStyles = makeStyles((theme) => ({
     },
     "& .MuiTab-textColorInherit .Mui-selected": {
       backgroundColor: Harlequin,
-      color: "white",
+      color: whiteColor,
     },
     [theme.breakpoints.down("sm")]: {
       maxWidth: "100%",
@@ -54,32 +57,32 @@ const OptionTabStyles = makeStyles((theme) => ({
     height: "100%",
     width: "100%",
     borderRadius: "5px",
-    textAlign: "left",
+    "& > *": {
+      color: whiteColor,
+    },
   },
-
   detail: {
     fontWeight: 400,
-    fontSize: ".8rem",
-    color: "#E1E1E1",
-    lineHeight: "1.5",
+    fontSize: h5.lg,
+    color: chineseWhite,
+    lineHeight: 1.5,
     margin: ".5rem 0rem 1rem 0rem",
     letterSpacing: ".4",
   },
   bulletText: {
     fontWeight: 400,
-    fontSize: ".7rem",
-    color: "#FFFFFF",
-    lineHeight: "17.34px",
+    fontSize: p.lg,
+    color: whiteColor,
+    lineHeight: "20.34px",
   },
-  textDiv: {
-    display: "flex",
-    flexDirection: "row",
-  },
-  trialBtn: {
-    margin: ".8rem 0rem .1rem 0rem",
-    padding: ".3rem 1.2rem",
-  
-  },
+  textDiv:{
+    display:"flex",
+    marginBottom:".4rem"
+  }
+  ,
+  trialBtn:{
+    marginTop:".5rem"
+  }
 }));
 
 

@@ -1,16 +1,13 @@
 import { makeStyles } from "@material-ui/core";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
-
-
 import { Colors } from "../../Theme/color.constants";
-const {  Harlequin } = Colors;
-
+const {  Harlequin,Mirage,DoveGray } = Colors;
 const breakpoints = createBreakpoints({});
 const useStyles = makeStyles((theme) => ({
+
     root: {
         marginTop: "0",
         backgroundColor: "transparent",
-        
         background: " linear-gradient(-181.96deg , #2CD400 -98.18%, rgba(255, 255, 255, 0) 85.96%)",
     backgroundBlendMode: "multiply"
       },
@@ -32,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
       },
       content: {
         display: "flex",
-        color:"rgba(21, 27, 39, 1)",
+        color:Mirage,
         flexDirection: "column",
         textAlign: "left",
         marginTop:"10.5rem",
@@ -69,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
       paragraph: {
         width: "80%",
         marginTop: "10px",
-        color: "hsl(0deg 0% 45%)",
+        color: DoveGray,
         [breakpoints.only("md")]: {
           width: "500px",
         },
@@ -81,7 +78,7 @@ const useStyles = makeStyles((theme) => ({
     
       underlined: {
         position: "relative",
-        color:"rgba(21, 27, 39, 1)",
+        color:Harlequin,
         zIndex: 1,
         marginLeft: "10px",
         "&:after ": {
