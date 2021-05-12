@@ -6,8 +6,10 @@ import {
   TrendingBlogsSectionText,
 } from "../../Utils/Constants/Language/en/OurBlogsPageText";
 import BannerImage from "../../assets/OurBlogs/BannerImage.png";
+import TrendingBlogCard from "../../assets/OurBlogs/TrendingBlogCard.png";
 import BreadCrumb from "../../Components/BreadCrumb";
 import Section from "../Section";
+import TrendingBlogs from "./TrendingBlogs";
 
 const OurBlogs = () => {
   const { title, subtitle } = BannerText;
@@ -23,7 +25,7 @@ const OurBlogs = () => {
       text: "Blog",
     },
   ];
-
+  const { header, card } = TrendingBlogsSectionText;
   return (
     <>
       <Banner
@@ -38,7 +40,9 @@ const OurBlogs = () => {
           {subtitle}
         </Typography>
       </Banner>
-      <Section title={TrendingBlogsSectionText.title}></Section>
+      <Section title={header}>
+        <TrendingBlogs featureImage={TrendingBlogCard} cardData={card} />
+      </Section>
     </>
   );
 };
