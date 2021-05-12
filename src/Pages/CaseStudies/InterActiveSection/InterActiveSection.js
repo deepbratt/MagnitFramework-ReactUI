@@ -12,11 +12,11 @@ import MobileChat from "../../../assets/CaseStudies/mobile-chat.svg";
 import MobileApp from "../../../assets/CaseStudies/mobile-app.svg";
 import LoveBirds from "../../../assets/CaseStudies/love-birds.svg";
 import CircleImageText from "../../../Components/CircleImageText";
+import { caseStudies } from "../../../Utils/Constants/Language";
 
 const InterActiveSection = () => {
   const classes = useStyles();
-  const text =
-    "hello worldhello worldhdhello worldhello imaa baby girld worldhello world";
+  const text = caseStudies.demoText
   return (
       <span className={classes.wrapper}>
         <MiddleImgBtn className={classes.middleImage} />

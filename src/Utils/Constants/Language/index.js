@@ -77,3 +77,9 @@ export const errorBoundaryText = {
   error: 'Error',
   errorInformationHeading: "Error Information"
 }
+
+export const caseStudies = {
+  heading:"Case /Studies",
+  subHeading:'On How We Innovate, Implement, and Deliver',
+  demoText:"hello worldhello worldhdhello worldhello imaa baby girld worldhello world"
+}
