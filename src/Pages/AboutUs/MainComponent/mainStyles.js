@@ -31,7 +31,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   paragraph: {
     width: "80%",
-    marginBottom: "50px",
+    // marginBottom: "50px",
     marginTop: "20px",
     color: DoveGray,
     [breakpoints.only("md")]: {
@@ -71,6 +71,25 @@ export const useStyles = makeStyles((theme) => ({
       [breakpoints.down("sm")]: {
         height: "11px",
         width: "30px",
+      },
+    },
+  },
+  textUnderlined: {
+    position: "relative",
+    zIndex: 1,
+    marginLeft: "10px",
+    "&:after ": {
+      position: "absolute",
+      height: "17px",
+      content: '""',
+      zIndex: -1,
+      width: "100px",
+      right: 0,
+      backgroundColor: Harlequin,
+      bottom: "5px",
+      [breakpoints.down("sm")]: {
+        height: "11px",
+        width: "70px",
       },
     },
   },

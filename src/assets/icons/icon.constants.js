@@ -58,10 +58,12 @@ import timing from "../career/time.png";
 import geo from "../career/geography.png";
 import grow from "../career/grow.png";
 import health from "../career/health.png";
+import map from "../icons/mapIcon.png";
 export const Timing = timing;
 export const Geo = geo;
 export const Grow = grow;
 export const Health = health;
+export const mapIcon = map;
 
 // Services section icons
 export const App = Appicon;

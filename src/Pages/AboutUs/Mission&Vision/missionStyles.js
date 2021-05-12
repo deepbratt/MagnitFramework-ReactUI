@@ -15,7 +15,6 @@ export const missionStyles = makeStyles((theme) => ({
   },
   card: {
     width: "30%",
-
     height: "300px",
     display: "flex",
     flexDirection: "column",

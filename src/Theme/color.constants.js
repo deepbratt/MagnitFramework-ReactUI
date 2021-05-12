@@ -67,6 +67,7 @@ export const Colors = {
   Citrine: "#D7D7D7",
   darkJungleGreen: "#161C28",
   darkSilver : "#717171",
+  paletteBlue: "#EFF6FF",
   // MOSTLY BACKGROUND
   aliceBlue: "#E8F2FE",
   fillColor:
