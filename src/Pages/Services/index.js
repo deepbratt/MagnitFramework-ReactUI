@@ -61,15 +61,17 @@ const Services = () => {
           <Typography variant="buttom">Get Started</Typography>
         </Button>
       </Banner>
+      <div style={{position:"relative"}}>
+      <img className={leftPattern} src={PatternLeft} alt="" srcset="" />
       <Section title={ServicesSectionTitle} highlightWords={1}>
         <PointList data={servicesData} />
       </Section>
-      <div style={{position:"relative"}}>
-      <img className={leftPattern} src={PatternLeft} alt="" srcset="" />
+      </div>
+    
       <Section title={HiringSectionTitle} highlightWords={2}>
         <OptionsTab />
       </Section>
-      </div>
+     
       <img className={rightPattern} src={StarFishPattern} alt="" srcset="" />
       <Section title={WhyHireSectionTitle} highlightWords={3}>
       

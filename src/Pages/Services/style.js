@@ -36,10 +36,11 @@ const ServicesSectionStyles = makeStyles((theme) => ({
   leftPattern: {
     position:"absolute",
     left: "-4%",
-    top: "-120%",
+    top: "0%",
     opacity: 0.3,
     width: "700px",
     zIndex: 0,
+    
     [theme.breakpoints.down("md")]: {
       width: "500px",
       left: "2%",
