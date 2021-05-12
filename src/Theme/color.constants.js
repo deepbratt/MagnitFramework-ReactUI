@@ -66,6 +66,7 @@ export const Colors = {
   pastelBlue: "#4DBFFF",
   Citrine: "#D7D7D7",
   darkJungleGreen: "#161C28",
+  paletteBlue: "#EFF6FF",
   darkSilver: "#717171",
   deepSaffron: "#F5A12C",
   ultramarineBlue: "#376AED",

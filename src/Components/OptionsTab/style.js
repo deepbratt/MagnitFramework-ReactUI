@@ -67,6 +67,11 @@ const OptionTabStyles = makeStyles((theme) => ({
     color: "white",
     lineHeight: "20.34px",
   },
+  buttonStyle: {
+    borderRadius: "5px",
+    margin: "20px 0 0 0",
+    padding: "8px 25px",
+  },
 }));
 
 export default OptionTabStyles;

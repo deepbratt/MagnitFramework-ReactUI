@@ -31,7 +31,7 @@ export const useStyles = makeStyles((theme) => ({
     width: drawerWidth,
   },
   menuButton: {
-    marginRight: theme.spacing(2),
+    padding: theme.spacing(2),
   },
   hide: {
     display: "none",
@@ -55,6 +55,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   menuIcon: {
     color: blackColor,
+    paddingRight:"24px",
     closeIcon: {
       "&:hover": {
         cursor: "pointer",

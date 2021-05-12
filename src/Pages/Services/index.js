@@ -74,16 +74,13 @@ const Services = () => {
     yellowCommaPattern,
   } = ServicesSectionStyles();
   return (
-    <div className={root}>
-      <Banner
-        image={BannerImage}
-        backColor={linearBackground}
-        breadCrumb={<BreadCrumb links={breadCrumData} />}
-      >
-        <Typography variant="h1" gutterBottom>
+
+    <div className={root} >
+      <Banner image={BannerImage} backColor={linearBackground}>
+        <Typography variant="h2" gutterBottom>
           We Hire Best <br /> Web Developers & Save 50%
         </Typography>
-        <Typography variant="subtitle1" gutterBottom>
+        <Typography variant="h6" gutterBottom>
           We have a talent pool of qualified & well-experienced web developers.
         </Typography>
         <Button

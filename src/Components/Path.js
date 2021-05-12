@@ -3,6 +3,7 @@ import Services from "./../Pages/Services";
 import ContactUs from "./../Pages/ContactUs";
 import Home from "../Pages/Home/index";
 import Solutions from "../Pages/SolutionsPage/Solutions"
+import Career from "../Pages/Careers/Container"
 
 const pathIds = {
   home: "home",
@@ -52,6 +53,7 @@ const pageRoutes = {
   [pathIds.careers]: {
     path: pathRouting.careers,
     sidebarName: "Careers",
+    component: Career
   },
   [pathIds.contactUs]: {
     path: pathRouting.contactUs,
