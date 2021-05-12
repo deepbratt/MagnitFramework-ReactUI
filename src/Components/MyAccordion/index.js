@@ -4,42 +4,58 @@ import Accordion from "@material-ui/core/Accordion";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import LayoutStyle from "./style";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import ExpandIcon from "../../assets/icons/expandIcon.png";
-import CloseIcon from "../../assets/icons/closeIcon.png";
 import { useState } from "react";
 import CustomButton from "../CustomButton";
+import Plus from "../../assets/icons/expandIcon.png";
+import Minus from "../../assets/icons/closeIcon.png";
+import Data from "../../Pages/ContactUs/questions"
 
-const MyAccordion = ({ questions }) => {
-  const { root, title, details } = LayoutStyle();
-
+const MyAccordion = () => {
+  const [payload, setPayload] = useState(Data);
   const [expanded, setExpanded] = useState(false);
+  const handleChange = (panel) => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
+  };
+  const { root } = LayoutStyle();
+
+  const dispatchClick = (index) => {
+    let _shallowCopy = [...payload];
+    let _cItem = { ..._shallowCopy[index] };
+    _cItem["x"] = _cItem["x"] === "+" ? "-" : "+";
+    _shallowCopy[index] = _cItem;
+    setPayload(_shallowCopy);
+  };
+
   return (
     <div className={root}>
-      {questions
-        .filter((question, idx) => idx < 3)
-        .map((question, index) => (
+      {(
+        payload.map((question, index) => (
           <Accordion
-            onChange={() => setExpanded(expanded ? false : true)}
-            square
-            key={index}
+            // expanded={…(expanded === "panel" && {expanded: true})}
+            {...(expanded === "panel" && {expanded: true})}
+            onChange={handleChange("panel1")}
           >
             <AccordionSummary
               expandIcon={
-                <img src={expanded === true ? CloseIcon : ExpandIcon} alt="" />
+                <div onClick={() => dispatchClick(index)}>
+                  {question.x === "+" ? (
+                    <img src={Plus} />
+                  ) : (
+                    <img src={Minus} />
+                  )}
+                </div>
               }
+              aria-controls="panel1bh-content"
+              id="panel1bh-header"
             >
-              <Typography className={title} variant="h6">
-                {question.summary}
-              </Typography>
+              <Typography>{question.summary}</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography className={details} variant="body2">
-                {question.detail}
-              </Typography>
+              <Typography>{question.detail}</Typography>
             </AccordionDetails>
           </Accordion>
-        ))}
+        ))
+      )}
       <CustomButton text="See More" />
     </div>
   );

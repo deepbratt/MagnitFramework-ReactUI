@@ -36,7 +36,7 @@ const AboutUs = () => {
                 <span className={underlined}>{heading}</span>
               </Typography>
             </MuiThemeProvider>
-            <Slider indicator={false} slides={array} />
+            <Foundersy indicator={false} slides={array} />
             <button style={{ paddingLeft: "15px" }} className={button}>
               <ArrowBackIosIcon />
             </button>
