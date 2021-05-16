@@ -74,5 +74,11 @@ export const FoundersyStyles = makeStyles((theme) => ({
     "&:hover":{
       cursor: "pointer"
     }
+  },
+  slide:{
+    "& .carousel .slide img": {
+      width: "auto",
+      overflow: "hidden",
+    },
   }
 }));

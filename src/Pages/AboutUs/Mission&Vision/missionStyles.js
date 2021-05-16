@@ -14,6 +14,7 @@ export const missionStyles = makeStyles((theme) => ({
     paddingTop: "20px",
     width: "100%",
     position: "relative",
+    display: "flex"
   },
   card: {
     width: "30%",
@@ -42,7 +43,6 @@ export const missionStyles = makeStyles((theme) => ({
     zIndex: 1,
     height: "300px",
     display: "flex",
-    flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
     transition: "all .25s linear",

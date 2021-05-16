@@ -5,7 +5,7 @@ import AboutUsNumberContext from "./NumberContext/AboutUsNumberContext";
 import MissionContext from "./Mission&Vision/MissionContext";
 import WhyUsContainer from "./WhyUsContainer";
 import Foundersy from "./Foundersy/Container";
-import Slider from "../../Components/Slider/Container";
+import Slider from "./Foundersy/CardSlider";
 import { MainData } from "../../Utils/Constants/Language/AboutUsData";
 import { THEME } from "../../ContainerStructure/Headings/headingStyles";
 import { MuiThemeProvider } from "@material-ui/core/styles";
@@ -36,7 +36,7 @@ const AboutUs = () => {
                 <span className={underlined}>{heading}</span>
               </Typography>
             </MuiThemeProvider>
-            <Foundersy indicator={false} slides={array} />
+            <Slider  slides={array}  />
             <button style={{ paddingLeft: "15px" }} className={button}>
               <ArrowBackIosIcon />
             </button>

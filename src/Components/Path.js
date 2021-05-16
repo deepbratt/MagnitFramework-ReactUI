@@ -3,6 +3,7 @@ import Services from "./../Pages/Services";
 import Home from "../Pages/Home/index"
 import Solutions from "../Pages/SolutionsPage/Solutions"
 import Career from "../Pages/Careers/Container"
+import AppSolutions from "../Pages/AppSolutionsPage/Container"
 
 const pathIds = {
   home: "home",
@@ -11,6 +12,7 @@ const pathIds = {
   solutions: "solutions",
   caseStudies: "caseStudies",
   careers: "careers",
+  appSolutions: "appSolutions"
 };
 
 const pathRouting = {
@@ -20,6 +22,7 @@ const pathRouting = {
   solutions: "/solutions",
   caseStudies: "/caseStudies",
   careers: "/careers",
+  appSolutions: "/appSolutions"
 };
 
 const pageRoutes = {
@@ -51,6 +54,10 @@ const pageRoutes = {
     path: pathRouting.careers,
     sidebarName: "Careers",
     component: Career
+  },
+  [pathIds.appSolutions]: {
+    path: pathRouting.appSolutions,
+    component: AppSolutions
   },
 };
 
