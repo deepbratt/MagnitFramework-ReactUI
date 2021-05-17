@@ -6,7 +6,7 @@ import Solutions from "../SolutionsContext/Solutions";
 import PartnerContext from "../PartnerWithUsContext/Maincontainer";
 import GlanceSection from "../GlanceAtWorkContext/Container";
 import React, { useState } from "react";
-import { Typography , Hidden} from "@material-ui/core";
+import { Button, Typography , Hidden} from "@material-ui/core";
 import ContactUs from "../ContactUs";
 import Section from "../Section";
 import Image1 from "../../assets/images/awardAccredationSection/image 2.png";
@@ -52,7 +52,6 @@ const Home = (props) => {
 
   const {
     // sectionBackgroundColors, factCards,
-    Mirage,
     BlueRibbon,
   } = Colors;
   // const { peach, seaGreen, skyBlue, violet, purple, blue } = factCards;
@@ -190,7 +189,7 @@ const Home = (props) => {
             images.map((image, index) => (
               <CustomImage
                 key={index}
-                style={{ margin: "10px 40px", width: "130px",color:Mirage }}
+                style={{ margin: "10px 40px", width: "130px"}}
                 src={image}
                 alt={`client${index}`}
               />

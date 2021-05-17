@@ -12,6 +12,3 @@ const dataText = [
             
   ];
   export default dataText;
-  export const FullTimeHiring = "Full Time Hiring";
-  export const HiringOption = "Under this hiring option, the Web Developer will become a part of your team on a full-time basis. He/She will be working as a virtual employee for you from the development center in India. The developer will be exclusively working for you. Here is how it works:";
-  

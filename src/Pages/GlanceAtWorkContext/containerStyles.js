@@ -38,7 +38,6 @@ export const THEME = createMuiTheme({
       h5: {
         fontFamily: "Poppins",
         textAlign:"left",
-        color:whiteColor,
         fontWeight: "600",
         fontSize: "16px",
         marginTop: "10px",

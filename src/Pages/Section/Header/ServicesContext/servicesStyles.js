@@ -3,17 +3,11 @@ import { createMuiTheme } from "@material-ui/core/styles";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 import { Colors } from "../../../../Theme/color.constants";
 
-const {Harlequin,whiteColor,darkSilver } = Colors;
+const {Harlequin,whiteColor } = Colors;
 const breakpoints = createBreakpoints({});
 
 export const THEME = createMuiTheme({
   overrides: {
-    MuiButton:{
-      "& .MuiButton-root: hover":{
-        backgroundColor: Harlequin,
-        
-      }     
-    },
     MuiTypography: {
       h4: {
         fontFamily: "Poppins",
@@ -41,7 +35,6 @@ export const THEME = createMuiTheme({
       paragraph: {
         fontFamily: "Poppins",
         fontSize: "16px",
-        color:darkSilver,
         textAlign: "center",
         marginTop: "10px",
         [breakpoints.down("xs")]: {

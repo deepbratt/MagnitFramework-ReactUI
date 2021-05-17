@@ -5,11 +5,9 @@ import Heading from "../../../ContainerStructure/Headings/Heading4";
 import Paragraph from "../../../ContainerStructure/Headings/Paragraphs/Paragraph";
 import { MainData } from "../../../Utils/Constants/Language/AboutUsData";
 import BreadCrumb from "../../../Components/BreadCrumb";
-import { Colors } from "../../../Theme/color.constants";
 import CustomImage from "../../../Components/CustomImage";
-const {Mirage}=Colors;
+
 const AboutMainSection = (props) => {
- 
   const { title, paragraphPrimary, paragraphSecondary } = MainData;
   const breadcrumbData = [
     {

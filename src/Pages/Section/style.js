@@ -16,7 +16,6 @@ const LayoutStyle = makeStyles((theme) => ({
   },
   header: {
     marginBottom: "60px",
-    color:"rgba(21, 27, 39, 1)",
     [theme.breakpoints.down("sm")]: {
       fontSize: "1.5rem",
     },

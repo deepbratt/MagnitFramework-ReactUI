@@ -4,7 +4,6 @@ import { Typography, Card, CardContent } from "@material-ui/core";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import * as icons from "../../assets/icons/icon.constants";
 import {Data} from "../../Utils/Constants/Language/en/SolutionsText"
-import { Colors } from "../../Theme/color.constants";
 import CustomImage from "../../Components/CustomImage";
 
 const SolutionsSecondarySection = () => {
@@ -12,7 +11,6 @@ const SolutionsSecondarySection = () => {
   const {foodTitle,portalTitle,datingTitle,fitnessTitle} = Data
   const { cardSec, card, devSec, profileIcon } = classes;
   const { deliveryIcon, portalIcon, fitnessIcon, datingIcon } = icons;
-  const {Tundora}=Colors;
   return (
     <>
       <section className={cardSec}>
@@ -23,7 +21,7 @@ const SolutionsSecondarySection = () => {
             </section>
             <section>
               <MuiThemeProvider theme={THEME}>
-                <Typography variant="h5"  style={{color:Tundora}} >
+                <Typography variant="h5" color="inherit">
                   {foodTitle}
                 </Typography>
               </MuiThemeProvider>
@@ -37,7 +35,7 @@ const SolutionsSecondarySection = () => {
             </section>
             <section>
               <MuiThemeProvider theme={THEME}>
-                <Typography variant="h5" style={{color:Tundora}}>
+                <Typography variant="h5" color="inherit">
                   {portalTitle}
                 </Typography>
               </MuiThemeProvider>
@@ -52,7 +50,7 @@ const SolutionsSecondarySection = () => {
             </section>
             <section>
               <MuiThemeProvider theme={THEME}>
-                <Typography variant="h5"  style={{color:Tundora}}>
+                <Typography variant="h5" color="inherit">
                   {datingTitle}
                 </Typography>
               </MuiThemeProvider>
@@ -66,7 +64,7 @@ const SolutionsSecondarySection = () => {
             </section>
             <section>
               <MuiThemeProvider theme={THEME}>
-                <Typography variant="h5"  style={{color:Tundora}}>
+                <Typography variant="h5" color="inherit">
                   {fitnessTitle}
                 </Typography>
               </MuiThemeProvider>

@@ -18,7 +18,7 @@ const Services = () => {
       <Paper className={root} elevation={0}>
         <section className={serviceHeading}>
           <MuiThemeProvider theme={THEME}>
-            <Typography variant="h4" >
+            <Typography variant="h4" color="inherit">
               <Hidden smDown>
                 {title}
                 <span className={underlined}>{subTitle}</span>

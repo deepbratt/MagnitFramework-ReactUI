@@ -1,16 +1,14 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
-import { Colors } from "../../Theme/color.constants";
 const breakpoints = createBreakpoints({});
-const {Mirage,darkSilver}= Colors
+
 export const THEME = createMuiTheme({
   overrides: {
     MuiTypography: {
       h5: {
         fontFamily: "Poppins",
         fontWeight: "600",
-        color:Mirage,
         fontSize: "22px",
         whiteSpace: "nowrap",
         [breakpoints.down("xs")]: {
@@ -20,8 +18,6 @@ export const THEME = createMuiTheme({
       paragraph: {
         fontFamily: "Poppins",
         fontSize: "16px",
-        fontWeight:300,
-        color:darkSilver,
         marginTop: "10px",
         [breakpoints.down("xs")]: {
           fontSize: "14px",

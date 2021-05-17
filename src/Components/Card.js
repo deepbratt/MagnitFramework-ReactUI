@@ -30,10 +30,10 @@ const CardData = ({ data }) => {
               </section>
               <section>
                 <MuiThemeProvider theme={THEME}>
-                  <Typography variant="h5" >
+                  <Typography variant="h5" color="inherit">
                     {text.title}
                   </Typography>
-                  <Typography paragraph={true} >
+                  <Typography paragraph={true} color="inherit">
                     {text.desc}
                   </Typography>
                 </MuiThemeProvider>

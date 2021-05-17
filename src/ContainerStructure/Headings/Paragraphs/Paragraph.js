@@ -10,7 +10,7 @@ const Paragraph = ({para}) => {
   return (
     <>
       <MuiThemeProvider theme={THEME}>
-        <Typography paragraph={true} > {para} </Typography>
+        <Typography paragraph={true} color="inherit"> {para} </Typography>
       </MuiThemeProvider>
     </>
   );

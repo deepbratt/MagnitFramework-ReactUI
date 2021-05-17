@@ -10,13 +10,12 @@ import Plus from "../../assets/icons/expandIcon.png";
 import Minus from "../../assets/icons/closeIcon.png";
 import Data from "../../Pages/ContactUs/questions";
 
-const MyAccordion = ({ questions }) => {
-  const { root, title, details,customBtn } = LayoutStyle();
-
+const MyAccordion = () => {
   const [expanded, setExpanded] = useState(false);
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
+  const { root } = LayoutStyle();
 
   const accordionDataController = [
     {
@@ -55,24 +54,14 @@ const MyAccordion = ({ questions }) => {
             aria-controls={item.ariaControl}
             id={item.ariaId}
           >
-            <AccordionSummary
-              expandIcon={
-                <img src={expanded === true ? Minus : Plus} alt="" />
-              }
-            >
-              <Typography className={title} variant="h6">
-                {item.summary}
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography className={details} variant="body2">
-                {item.detail}
-              </Typography>
-            </AccordionDetails>
-            </AccordionSummary>
-          </Accordion>
-        ))}
-      <CustomButton text="See More" className={customBtn} />
+            <Typography>{item.summary}</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>{item.detail}</Typography>
+          </AccordionDetails>
+        </Accordion>
+      ))}
+      <CustomButton>See More</CustomButton>
     </div>
   );
 };

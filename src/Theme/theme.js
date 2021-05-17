@@ -1,9 +1,7 @@
 import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
-import { Colors } from "./color.constants";
 const breakpoints = createBreakpoints({});
 // Object of our themes
-const {Harlequin}= Colors;
 export default function createTheme(options) {
   return createMuiTheme({
     ...options,
@@ -24,7 +22,7 @@ export default function createTheme(options) {
       MuiTab: {
         root: {
           "&$selected": {
-            backgroundColor:Harlequin,
+            backgroundColor: "#2cd400",
             color: "#fff",
           },
         },

@@ -23,7 +23,7 @@ const ReviewCard = ({ cardData }) => {
           </div>
 
           <CardContent className={content}>
-            <Typography align="left" variant="h5" component="p" paragraph>
+            <Typography align="left" variant="body2" component="p" paragraph>
               {text}
             </Typography>
           </CardContent>

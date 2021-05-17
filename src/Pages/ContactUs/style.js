@@ -69,7 +69,6 @@ const LayoutStyle = makeStyles((theme) => ({
     justifyContent: "center",
     alignContent: "center",
     width: "100%",
-    marginTop:"7rem"
   },
 }));
 

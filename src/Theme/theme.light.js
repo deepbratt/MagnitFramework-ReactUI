@@ -1,18 +1,16 @@
 import createTheme from "./theme";
 import createPalette from "@material-ui/core/styles/createPalette";
-import { Colors } from "./color.constants";
-const {Mirage,darkSilver,Harlequin}=Colors;
+
 export default createTheme({
   // Styles for Light Theme
   palette: createPalette({
     type: "light",
-  
     primary: {
-      main: Harlequin,
+      main: "#2CD400",
       contrastText: "#fff",
     },
     secondary: {
-      main: Harlequin,
+      main: "#2CD400",
       dark: "#008732",
       contrastText: "#fff",
     },
@@ -30,13 +28,10 @@ export default createTheme({
     },
     typography: {
       fontFamily: ["Poppins', sans-serif"].join(","),
-      textPrimary: "#151b27",
     },
     text: {
-      primary: "#151b27",
-      secondary: "#000000",
-      textPrimary:"#151b27",
-      textSecondary:darkSilver,
+      primary: "#000000",
+      secondary: "#000000"
     }
   }),
 });
