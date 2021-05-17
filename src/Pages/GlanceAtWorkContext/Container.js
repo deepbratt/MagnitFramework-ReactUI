@@ -12,6 +12,7 @@ import Breakpoints from "../../Theme/theme.breakpoints";
 import * as Images from "../../Components/Hero/Images"
 import {Colors} from "../../Theme/color.constants"
 import {Data} from "../../Utils/Constants/Language/en/GlanceAtWorkData"
+import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
 const Container = ({backColor}) => {
   const classes = useStyles();
@@ -92,15 +93,14 @@ const Container = ({backColor}) => {
         </section>
         <section>
         <MuiThemeProvider theme={THEME}>
-          <Button
-           
+          <CustomButton
             variant="contained"
             size={Breakpoints()}
             className={seeMore}
             color="white"
           >
             {buttonText}
-          </Button>
+          </CustomButton>
           </MuiThemeProvider>
         </section>
       </Paper>

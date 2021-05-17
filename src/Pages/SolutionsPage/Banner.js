@@ -9,6 +9,7 @@ import {
   Bannersubheading,
   paragraph,
 } from "../../Utils/Constants/Language/en/SolutionsPageData";
+import CustomButton from "../../Components/CustomButton";
 
 const BannerSection = () => {
   const { linearBackground } = Colors;
@@ -22,14 +23,14 @@ const BannerSection = () => {
           {paragraph}
         </Typography>
         <section style={{ marginTop: "15px" }}>
-          <Button
+          <CustomButton
             style={{ borderRadius: "none" }}
             variant="contained"
             size={Breakpoints()}
             color="secondary"
           >
             <Typography variant="buttom">Get Started</Typography>
-          </Button>
+          </CustomButton>
         </section>
       </Banner>
     </>

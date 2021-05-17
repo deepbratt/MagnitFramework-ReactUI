@@ -39,8 +39,7 @@ export const TabText = () => {
         styles={buttonStyle}
         variant="contained"
         size="small"
-        text=" Get a Risk Free Trial (Start your trial in 24 hours!)"
-      />
+      >Get a Risk Free Trial (Start your trial in 24 hours!)</CustomButton>
     </Grid>
   );
 };

@@ -19,6 +19,7 @@ import { pageRoutes } from "../../../Components/Path";
 import { Hidden } from "@material-ui/core";
 import { Logo } from "../../../Components/Hero/Images";
 import { Colors } from "../../../Theme/color.constants";
+import CustomButton from "../../../Components/CustomButton";
 import CustomImage from "../../../Components/CustomImage";
 
 const Header = (props) => {
@@ -76,7 +77,8 @@ const Header = (props) => {
             })}
             <ListItem>
               <MuiThemeProvider theme={THEME}>
-                <Button
+                <CustomButton
+
                   style={{
                     textTransform: "none",
                     backgroundColor: Harlequin,
@@ -88,7 +90,7 @@ const Header = (props) => {
                   onClick={navigated}
                 >
                   Contact Us
-                </Button>
+                </CustomButton>
               </MuiThemeProvider>
             </ListItem>
           </List>

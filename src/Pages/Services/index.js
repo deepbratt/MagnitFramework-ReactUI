@@ -33,6 +33,7 @@ import Avatar4 from "../../assets/services/Avatar4.png";
 import Avatar5 from "../../assets/services/Avatar5.png";
 import Avatar6 from "../../assets/services/Avatar6.png";
 import BreadCrumb from "../../Components/BreadCrumb";
+import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
 
 const Services = () => {
@@ -87,14 +88,14 @@ const Services = () => {
         <Typography variant="h6" gutterBottom>
           We have a talent pool of qualified & well-experienced web developers.
         </Typography>
-        <Button
+        <CustomButton
           className={bannerBtn}
           variant="contained"
           size="small"
           color="secondary"
         >
           <Typography variant="buttom">Get Started</Typography>
-        </Button>
+        </CustomButton>
       </Banner>
       <Section title={ServicesSectionTitle} highlightWords={1}>
         <PointList data={servicesData} />

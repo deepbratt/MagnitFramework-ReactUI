@@ -61,7 +61,7 @@ const MyAccordion = () => {
           </AccordionDetails>
         </Accordion>
       ))}
-      <CustomButton text="See More" />
+      <CustomButton>See More</CustomButton>
     </div>
   );
 };

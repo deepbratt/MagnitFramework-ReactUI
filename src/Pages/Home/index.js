@@ -141,7 +141,7 @@ const Home = (props) => {
               </Grid>
             ))}
         </Grid>
-        <CustomButton text="See More" />
+        <CustomButton>See More</CustomButton>
       </Section>
       {/* NEWSLETTER SECTION
       <Section>
@@ -179,7 +179,7 @@ const Home = (props) => {
             </Hidden>
         </Grid>
        
-        <CustomButton text="See More" />
+        <CustomButton>See More</CustomButton>
         {/* <ReviewSlider slides={cardArr} /> */}
       </Section>
       {/* AWARD AND ACCREDITATIONS SECTION */}
