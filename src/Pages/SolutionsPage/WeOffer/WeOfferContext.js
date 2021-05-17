@@ -9,6 +9,7 @@ import { Colors } from "../../../Theme/color.constants";
 import {Array}  from "../../../Utils/Constants/Language/en/SolutionsPageData";
 import {heading,subheading}  from "../../../Utils/Constants/Language/en/SolutionsPageData"
 
+
 const WeOfferContext = () => {
   const classes = useStyles();
   const { root, cardSec, card, devSec, button } = classes;

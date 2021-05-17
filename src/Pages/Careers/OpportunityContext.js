@@ -13,6 +13,7 @@ import {
   leftPattern,
 } from "../../Utils/Constants/Language/en/CareersData";
 
+
 const OpportunityContext = () => {
   const classes = useStyles();
   const {

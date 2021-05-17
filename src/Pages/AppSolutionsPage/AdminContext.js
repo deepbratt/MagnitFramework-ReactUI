@@ -7,6 +7,7 @@ import {
   paragraph,
   adminImg,
 } from "../../Utils/Constants/Language/en/AppSolutionsData";
+import CustomImage from "../../Components/CustomImage"
 import { useStyles } from "./useStyles";
 
 const AdminContext = () => {
@@ -19,7 +20,7 @@ const AdminContext = () => {
             <Heading4 title={adminHeading} />
           </Grid>
           <Grid item lg={4} xs={12}>
-            <img className={image} width="400px" src={adminImg} alt="image" />
+            <CustomImage className={image} width="400px" src={adminImg} alt="image" />
           </Grid>
           <Grid className={content} xs={10} item lg={6}>
             <Paragraph para={paragraph} />

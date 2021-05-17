@@ -4,6 +4,7 @@ import { Typography, Card, CardContent } from "@material-ui/core";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import * as icons from "../../assets/icons/icon.constants";
 import {Data} from "../../Utils/Constants/Language/en/SolutionsText"
+import CustomImage from "../../Components/CustomImage"
 
 const SolutionsSecondarySection = () => {
   const classes = useStyles();
@@ -16,7 +17,7 @@ const SolutionsSecondarySection = () => {
         <Card className={card}>
           <CardContent>
             <section className={devSec}>
-              <img alt="icon" className={profileIcon} src={deliveryIcon} />
+              <CustomImage alt="icon" className={profileIcon} src={deliveryIcon} />
             </section>
             <section>
               <MuiThemeProvider theme={THEME}>
@@ -45,7 +46,7 @@ const SolutionsSecondarySection = () => {
         <Card className={card}>
           <CardContent>
             <section className={devSec}>
-              <img alt="icon" className={profileIcon} src={datingIcon} />
+              <CustomImage alt="icon" className={profileIcon} src={datingIcon} />
             </section>
             <section>
               <MuiThemeProvider theme={THEME}>
@@ -59,7 +60,7 @@ const SolutionsSecondarySection = () => {
         <Card className={card}>
           <CardContent>
             <section className={devSec}>
-              <img alt="icon" className={profileIcon} src={fitnessIcon} />
+              <CustomImage alt="icon" className={profileIcon} src={fitnessIcon} />
             </section>
             <section>
               <MuiThemeProvider theme={THEME}>
