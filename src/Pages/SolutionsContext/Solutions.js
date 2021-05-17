@@ -13,7 +13,7 @@ const Solutions = () => {
   const classes = useStyles();
   const { root } = classes;
   const {heading,subHeading} = Data
-  const {whiteColor} = Colors
+  const {whiteColor,blackColor} = Colors
   return (
     <>
       <Paper className={root} elevation={0}>
@@ -28,7 +28,7 @@ const Solutions = () => {
         <PrimarySection />
         <MidSection />
         <MuiThemeProvider theme={THEME}>
-        <CustomButton style={{backgroundColor: whiteColor,padding:".3rem 1.9rem"}} variant="contained" size={Breakpoints()} >
+        <CustomButton style={{backgroundColor: whiteColor,padding:".3rem 1.9rem", color: blackColor}} variant="contained" size={Breakpoints()} >
 
           See More
         </CustomButton>
