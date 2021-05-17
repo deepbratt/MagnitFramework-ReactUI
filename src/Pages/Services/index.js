@@ -18,6 +18,7 @@ import BannerImage from "../../assets/services/BannerImage.png";
 import PatternLeft from "../../assets/PatternLeft.png";
 import BreadCrumb from "../../Components/BreadCrumb";
 import CommentSection from "../../Components/CommentSection";
+import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
 
 const Services = () => {
@@ -55,14 +56,14 @@ const Services = () => {
         <Typography variant="subtitle1" gutterBottom  className={textColor}>
           We have a talent pool of qualified & well-experienced web developers.
         </Typography>
-        <Button
+        <CustomButton
           className={bannerBtn}
           variant="contained"
           size="small"
           color="secondary"
         >
           <Typography variant="buttom">Get Started</Typography>
-        </Button>
+        </CustomButton>
       </Banner>
 
 
