@@ -46,11 +46,20 @@ const MyAccordion = () => {
 
   return (
     <div className={root}>
-
       {accordionDataController.map((item, index) => (
-        <Accordion key={'accordion-'+index} expanded={expanded === 'accordion-'+index} onChange={handleChange('accordion-'+index)}>
+        <Accordion
+          key={"accordion-" + index}
+          expanded={expanded === "accordion-" + index}
+          onChange={handleChange("accordion-" + index)}
+        >
           <AccordionSummary
-            expandIcon={expanded === 'accordion-'+index ? <img src={Minus}/> :<img src={Plus} />}
+            expandIcon={
+              expanded === "accordion-" + index ? (
+                <img src={Minus} />
+              ) : (
+                <img src={Plus} />
+              )
+            }
             aria-controls={item.ariaControl}
             id={item.ariaId}
           >
