@@ -55,7 +55,7 @@ export const useStyles = makeStyles((theme) => ({
   root:{
     boxShadow: "none",
     width:"100%",
-    padding:"0"
+    backgroundColor: WildSand,
   },
   appbarsolid: {
     boxShadow: "none",
@@ -67,8 +67,8 @@ export const useStyles = makeStyles((theme) => ({
     zIndex: 1,
     justifyContent: "space-between",
     transition: "all .5s linear",
-    borderBottom: `solid 3px ${Ash}`,
-    padding:"0",
+    // borderBottom: `solid 3px ${Ash}`,
+    padding:"0 !important",
   },
   menuButton: {
     paddingRight: theme.spacing(2),
