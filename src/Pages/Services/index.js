@@ -73,8 +73,6 @@ const Services = () => {
         <PointList data={servicesData} />
       </Section>
       </div>
-
-     
       <Section title={HiringSectionTitle} highlightWords={2}>
         <OptionsTab />
       </Section>
