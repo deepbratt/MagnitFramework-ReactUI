@@ -11,7 +11,6 @@ export const useStyles = makeStyles((theme) => ({
   },
   root: {
     backgroundColor: MoonWhite,
-    width: "100%",
     textAlign: "center",
     marginBottom: "40px"
   },
@@ -20,6 +19,7 @@ export const useStyles = makeStyles((theme) => ({
     marginLeft: "20px",
     [breakpoints.down("sm")]: {
       textAlign: "center",
+      marginLeft: "0px"
     },
   },
   Avatar: {
@@ -31,7 +31,6 @@ export const useStyles = makeStyles((theme) => ({
   cardContent: {
     backgroundColor: "#E8F2FE",
     display: "flex",
-    width: "100%",
 
     [breakpoints.down("sm")]: {
       flexDirection: "column",

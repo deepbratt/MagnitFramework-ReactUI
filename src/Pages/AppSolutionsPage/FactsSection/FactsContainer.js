@@ -24,7 +24,7 @@ const FactsContainer = () => {
                 style={{ margin: "0 2.1%" }}
                 item
                 lg={4}
-                xs={10}
+                xs={12}
               >
                 <Card>
                   <CardContent className={cardContent}>

@@ -20,7 +20,8 @@ export const useStyles = makeStyles((theme) => ({
   },
   image:{
     [breakpoints.down("sm")]: {
-      width: "250px"
+      width: "250px",
+      marginLeft: "65px"
     },
   }
 }));
