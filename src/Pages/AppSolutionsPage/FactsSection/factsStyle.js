@@ -20,6 +20,7 @@ export const useStyles = makeStyles((theme) => ({
     marginLeft: "20px",
     [breakpoints.down("sm")]: {
       textAlign: "center",
+      marginLeft: "0px"
     },
   },
   Avatar: {
