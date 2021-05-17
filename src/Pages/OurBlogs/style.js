@@ -47,6 +47,7 @@ const OurBlogsStyles = makeStyles((theme) => ({
     height: "200px",
     maxHeight: "200px",
   },
+
   latestBlogCardContent: {
     padding: "15px",
   },
@@ -75,6 +76,11 @@ const OurBlogsStyles = makeStyles((theme) => ({
   dateStyle: {
     fontSize: "0.75rem",
     fontWeight: "400",
+  },
+  leftPattern: {
+    position: "absolute",
+    left: "0%",
+    bottom: "0%",
   },
 }));
 

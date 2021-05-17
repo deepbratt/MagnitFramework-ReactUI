@@ -1,4 +1,4 @@
-import { Grid, Paper } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import PropTypes from "prop-types";
 import LayoutStyle from "./style";
@@ -10,6 +10,7 @@ const Section = ({
   startQuote,
   endQuote,
   highlightWords,
+  titleColor,
 }) => {
   const {
     root,
@@ -50,7 +51,12 @@ const Section = ({
           </>
         )}
         {title && (
-          <Typography className={header} color="textPrimary" variant="h2">
+          <Typography
+            className={header}
+            color="textPrimary"
+            style={{ color: titleColor }}
+            variant="h2"
+          >
             {normalTitle}
             <span className={underlinedStyles}>{underlinedTitle}</span>
           </Typography>

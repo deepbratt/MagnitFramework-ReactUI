@@ -8,12 +8,14 @@ import {
 } from "../../Utils/Constants/Language/en/OurBlogsPageText";
 import BannerImage from "../../assets/OurBlogs/BannerImage.png";
 import TrendingBlogCard from "../../assets/OurBlogs/TrendingBlogCard.png";
+// import BackGroudnPatternLeft from "../../assets/OurBlogs/LatestBlogPattern.png";
 import BreadCrumb from "../../Components/BreadCrumb";
 import Section from "../Section";
 import TrendingBlogs from "./TrendingBlogs";
 import LatestBlogs from "./LatestBlogs";
 import ReviewSlider from "../../Components/ReviewSlider";
 import { Pagination } from "@material-ui/lab";
+// import OurBlogsStyles from "./style";
 
 const OurBlogs = () => {
   const { title, subtitle } = BannerText;
@@ -36,7 +38,7 @@ const OurBlogs = () => {
     <TrendingBlogs featureImage={TrendingBlogCard} cardData={card} />,
     <TrendingBlogs featureImage={TrendingBlogCard} cardData={card} />,
   ];
-
+  // const {} = OurBlogsStyles;
   return (
     <>
       <Banner
@@ -54,11 +56,27 @@ const OurBlogs = () => {
       <Section title={header}>
         <ReviewSlider slides={slideArr} showArrows={false} />
       </Section>
-      <Section title={LatestBlogsSectionText.header} backColor={BlueRibbon}>
-        <Grid container>
+      <Section
+        title={LatestBlogsSectionText.header}
+        backColor={BlueRibbon}
+        titleColor="white"
+      >
+        {/* <img className={leftPattern} src={BackGroudnPatternLeft} alt="" /> */}
+        <Grid
+          container
+          justify="center"
+          alignItems="center"
+          alignContent="center"
+        >
           {LatestBlogsSectionText.cards &&
             LatestBlogsSectionText.cards.map((card, index) => (
-              <Grid style={{ margin: "20px 0" }} key={index} item xs={12} lg={4}>
+              <Grid
+                style={{ margin: "20px 0" }}
+                key={index}
+                item
+                xs={12}
+                md={4}
+              >
                 <LatestBlogs cardData={card} />
               </Grid>
             ))}
