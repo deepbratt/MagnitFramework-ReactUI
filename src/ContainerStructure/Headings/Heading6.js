@@ -10,7 +10,7 @@ const Heading4 = ({ title }) => {
   return (
     <>
       <MuiThemeProvider theme={THEME}>
-        <Typography variant="h6" color="inherit">
+        <Typography variant="h6" >
           {title}
         </Typography>
       </MuiThemeProvider>

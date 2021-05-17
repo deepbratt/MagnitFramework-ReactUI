@@ -13,7 +13,7 @@ const CustomButton = (props) => {
       fullWidth={props.fullWidth}
       {...props}
     >
-      {props.text}
+      {props.children}
     </Button>
   );
 };

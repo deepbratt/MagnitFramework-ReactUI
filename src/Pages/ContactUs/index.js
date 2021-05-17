@@ -3,13 +3,17 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import image from "../../assets/images/contact-us-banner.jpg";
+import CustomButton from "../../Components/CustomButton";
+import CustomImage from "../../Components/CustomImage";
 import InputField from "../../Components/FormInputs/InputField";
 import MyAccordion from "../../Components/MyAccordion";
 import { contactUsLabelsText } from "../../Utils/Constants/Language";
 import { FQASectionTitle } from "../Home/constants";
 import Section from "../Section";
-import QuestionData from "./questions.json";
+import {Data} from "./questions.js";
 import LayoutStyle from "./style";
+import MyAccordian from "../../Components/MyAccordion/index"
+
 
 const ContactUs = () => {
   const { root, wrap, content, cover, form, label, button } = LayoutStyle();
@@ -34,7 +38,7 @@ const ContactUs = () => {
         <Grid container direction="row" spacing={2}>
           <Grid item xs={12} md={6}>
             <div className={wrap}>
-              <img className={cover} src={image} alt="A lady with laptop" />
+              <CustomImage className={cover} src={image} alt="A lady with laptop" />
               <CardContent className={content}>
                 <Typography variant="h2">{heading}</Typography>
                 <Typography
@@ -88,19 +92,15 @@ const ContactUs = () => {
                     multiline
                   />
                   <div className={button}>
-                    <Button
-                      type="submit"
-                      size="small"
-                      color="primary"
-                      variant="contained"
+                    <CustomButton
                     >
+
                       <Typography
-                        style={{ textAlign: "center", color: "#fff" }}
+                        style={{ textAlign: "center", color: "#fff",padding:".1rem 1.6rem" }}
                         variant="button"
                       >
                         {submit}
-                      </Typography>
-                    </Button>
+                    </CustomButton>
                   </div>
                 </form>
               </CardContent>
@@ -108,7 +108,7 @@ const ContactUs = () => {
           </Grid>
           <Grid item xs={12} md={6}>
             <Section title={FQASectionTitle}>
-              <MyAccordion questions={QuestionData} />
+              <MyAccordian />
             </Section>
           </Grid>
         </Grid>

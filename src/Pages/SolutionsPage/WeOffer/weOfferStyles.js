@@ -61,14 +61,12 @@ export const useStyles = makeStyles((theme) => ({
   underlined: {
     position: "relative",
     zIndex: 1,
-    marginLeft: "10px",
     "&:after ": {
       position: "absolute",
       height: "17px",
       content: '""',
       zIndex: -1,
       right: 0,
-      width: "240px",
       backgroundColor: Harlequin,
       bottom: "5px",
       [breakpoints.down("sm")]: {

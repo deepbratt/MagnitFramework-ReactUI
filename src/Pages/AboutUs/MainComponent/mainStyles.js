@@ -1,7 +1,7 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { Colors } from "../../../Theme/color.constants";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
-const { DoveGray, Harlequin, mainSlide } = Colors;
+const { darkSilver, Harlequin, mainSlide,Mirage } = Colors;
 const breakpoints = createBreakpoints({});
 export const useStyles = makeStyles((theme) => ({
   root: {
@@ -38,8 +38,9 @@ export const useStyles = makeStyles((theme) => ({
   paragraph: {
     width: "80%",
     // marginBottom: "50px",
+    textAlign: "center",
     marginTop: "20px",
-    color: DoveGray,
+    color: darkSilver,
     [breakpoints.only("md")]: {
       width: "500px",
     },
@@ -72,6 +73,7 @@ export const useStyles = makeStyles((theme) => ({
       zIndex: -1,
       width: "49px",
       right: 0,
+      color:Mirage,
       backgroundColor: Harlequin,
       bottom: "5px",
       [breakpoints.down("sm")]: {

@@ -5,12 +5,12 @@ export const Colors = {
   Heliotrope: "#DB4CFF",
   AquamarineBlue: "#6ADBE1",
   HavelockBlue: "#6A8BE2",
-  DoveGray: "#717171",
   TexasRose: "#FFC04C",
   Niagara: "#08A89E",
   DodgerBlue: "#5B4CFF",
   blackColor: "black",
   greyColor: "grey",
+  seaGreen: "#08A89E",
   whiteColor: "white",
   transparentWildSand: "	rgb(245, 245, 245, 0.7)",
   Harlequin: "#2CD400",
@@ -27,6 +27,10 @@ export const Colors = {
   Mariner: "#234EDB",
   Luigi: "#46BB28",
   MoonWhite: "#E8F2FE",
+  BlackSqueeze:"#F6F9FC",
+  Tundora:"#4D4D4D",
+  Mirage:"#151B27",
+  DoveGray:"#737373",
   sectionBackgroundColors: {
     header: "#F3FDFE",
     solutions: "#F5EFE5",
@@ -74,4 +78,12 @@ export const Colors = {
   fillColor:
     "invert(100%) sepia(6%) saturate(7462%) hue-rotate(267deg) brightness(114%) contrast(97%)",
   Solitude: "#E8F2FE",
+
+  // App Solutions page
+  lochmara : "#0082D2",
+  cerulean : "#00AAE1",
+  robbinEggBlue: "#00D7E1",
+  caribbeanGreen: "#00D2AA",
+  pastelGreen: "#8CD26E"
+
 };
