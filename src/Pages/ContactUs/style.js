@@ -26,6 +26,16 @@ export const ContactUsStyles = makeStyles((theme) => ({
       color: "black",
     },
   },
+  error: {
+    fontSize: "0.75rem",
+  },
+  button: {
+    display: "flex",
+    justifyContent: "center",
+    alignContent: "center",
+    width: "100%",
+    marginTop:"7rem"
+  },
 }));
 
 export default ContactUsStyles;

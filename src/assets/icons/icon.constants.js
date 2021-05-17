@@ -62,6 +62,17 @@ import projectsIcon from "../ContactUs/projects.png";
 import certificationIcon from "../ContactUs/certification.png";
 
 // Career Page Icon
+// App Solutions Icons
+import registration from"../solutions/registration.png";
+import tutorial from "../solutions/tutorial.png";
+import browsing from "../solutions/browsing.png";
+import woman from "../solutions/woman.png";
+import video from "../solutions/video.png";
+import counter from "../solutions/step.png";
+import calculator from "../solutions/calculator.png";
+import calories from "../solutions/calories.png";
+
+// Career Page Icon 
 import timing from "../career/time.png";
 import geo from "../career/geography.png";
 import grow from "../career/grow.png";
@@ -138,3 +149,13 @@ export const CustomerIcon = customerIcon;
 export const ServedIcon = servedIcon;
 export const ProjectIcon = projectsIcon;
 export const CertificationIcon = certificationIcon;
+
+// App Solutions Icons
+export const registrationIcon = registration
+export const tutorialIcon = tutorial
+export const browsingIcon = browsing
+export const womanIcon = woman
+export const videoIcon = video
+export const counterIcon = counter
+export const calculatorIcon = calculator
+export const caloriesIcon = calories

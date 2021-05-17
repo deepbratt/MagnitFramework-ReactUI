@@ -10,26 +10,50 @@ import CustomButton from "../../Components/CustomButton";
 import OurBlogsStyles from "./style";
 
 const TrendingBlogs = ({ featureImage, cardData }) => {
-  const { title, body, buttonText } = cardData;
-  const { content } = OurBlogsStyles();
+  const { detail, title, body, buttonText } = cardData;
+  const { avatar, authName, authDesig, tag, date } = detail;
+  const { coverImage, content, blogDetail, light } = OurBlogsStyles();
   return (
     <Grid container>
       <Grid item xs={12} lg={6}>
-        <img width="100%" src={featureImage} alt="" />
+        <img className={coverImage} src={featureImage} alt="" />
       </Grid>
       <Grid item xs={12} lg={6}>
         <Card>
           <CardContent className={content}>
-            {/* <div className={detail}>
-              <div>
-                <Avatar className={avatar}/>
+            <div className={blogDetail}>
+              <div className="left">
+                <div>
+                  <Avatar src={avatar} />
+                </div>
+                <div>
+                  <Typography variant="h6">{authName}</Typography>
+                  <Typography
+                    className={light}
+                    variant="subtitle2"
+                    component="p"
+                  >
+                    {authDesig}
+                  </Typography>
+                </div>
               </div>
               <div>
-                <Typography variant="h6">By {authName}</Typography>
-                <Rating name="read-only" value={4} readOnly />
+                <Typography align="right" variant="subtitle2" component="p">
+                  {tag}
+                </Typography>
+                <Typography
+                  className={light}
+                  align="right"
+                  variant="subtitle2"
+                  component="p"
+                >
+                  {date}
+                </Typography>
               </div>
-            </div> */}
-            <Typography variant="h4">{title}</Typography>
+            </div>
+            <Typography variant="h4" gutterBottom>
+              {title}
+            </Typography>
             {body &&
               body.map((para, index) => (
                 <Typography
@@ -43,7 +67,7 @@ const TrendingBlogs = ({ featureImage, cardData }) => {
               ))}
           </CardContent>
           <CardActions>
-            <CustomButton text={buttonText} />
+            <CustomButton>{buttonText}</CustomButton>
           </CardActions>
         </Card>
       </Grid>

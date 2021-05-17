@@ -1,8 +1,11 @@
 import AboutUs from "./../Pages/AboutUs/AboutUs";
 import Services from "./../Pages/Services";
-import Home from "../Pages/Home/index";
-import Solutions from "../Pages/SolutionsPage/Solutions";
-import Career from "../Pages/Careers/Container";
+import Home from "../Pages/Home/index"
+import Solutions from "../Pages/SolutionsPage/Solutions"
+import Event from "../Pages/Event/Index"
+import Testimonials from "../Pages/Testimonials";
+import Career from "../Pages/Careers/Container"
+import AppSolutions from "../Pages/AppSolutionsPage/Container"
 import OurBlogs from "../Pages/OurBlogs";
 
 const pathIds = {
@@ -13,6 +16,9 @@ const pathIds = {
   solutions: "solutions",
   caseStudies: "caseStudies",
   careers: "careers",
+  event: "event",
+  testimonial: "/testimonial",
+  appSolutions: "appSolutions"
 };
 
 const pathRouting = {
@@ -23,6 +29,9 @@ const pathRouting = {
   solutions: "/solutions",
   caseStudies: "/caseStudies",
   careers: "/careers",
+  event: "/event",
+  testimonial: "/testimonial",
+  appSolutions: "/appSolutions"
 };
 
 const pageRoutes = {
@@ -59,6 +68,18 @@ const pageRoutes = {
     path: pathRouting.careers,
     sidebarName: "Careers",
     component: Career,
+  },
+  [pathIds.appSolutions]: {
+    path: pathRouting.appSolutions,
+    component: AppSolutions
+  },
+    [pathIds.event]: {
+    path: pathRouting.event,
+    component:Event,
+  },
+  [pathIds.testimonial]: {
+    path: pathRouting.testimonial,
+    component:Testimonials,
   },
 };
 

@@ -20,6 +20,7 @@ import { Hidden } from "@material-ui/core";
 import { Logo } from "../../../Components/Hero/Images";
 import { Colors } from "../../../Theme/color.constants";
 import CustomButton from "../../../Components/CustomButton";
+import CustomImage from "../../../Components/CustomImage";
 
 const Header = (props) => {
   const routes = Object.values(pageRoutes);
@@ -35,51 +36,59 @@ const Header = (props) => {
 
   return (
     <>
-      <AppBar className={root} position="sticky">
-        <Toolbar className={appbarsolid}>
-          <section>
-            <img className={logo} alt="logo" src={Logo} />
-          </section>
-          {/* Header Menu */}
-          <Hidden mdUp>
-            <SideBar />
-          </Hidden>
-          <Hidden smDown>
-            <List className={list}>
-              {routes.map(({ path, sidebarName, ...prop }, index) => {
-                return (
-                  <MuiThemeProvider key={index} theme={THEME}>
-                    <NavLink
-                      activeClassName={active}
-                      className={link}
-                      to={path}
-                      key={`route-${index}}`}
-                      onClick={navigated}
-                    >
-                      <ListItem>
-                        <ListItemText
-                          className={listItem}
-                          primary={sidebarName}
-                        />
-                      </ListItem>
-                    </NavLink>
-                  </MuiThemeProvider>
-                );
-              })}
-              <ListItem>
-                <NavLink
-                  activeClassName={active}
-                  className={link}
-                  to="/contactUs"
+    <AppBar  className={root} position="sticky">
+      <Toolbar  className={appbarsolid}>
+        <section>
+          <CustomImage className={logo} alt="logo" src={Logo} />
+        </section>
+        {/* Header Menu */}
+        <Hidden mdUp>
+          <SideBar />
+        </Hidden>
+        <Hidden smDown>
+          <List className={list}>
+            {routes.map(({ path, sidebarName, ...prop }, index) => {
+              return (
+                <MuiThemeProvider key={index} theme={THEME}>
+                  <NavLink
+                    activeClassName={active}
+                    className={link}
+                    to={path}
+                    key={`route-${index}}`}
+                    onClick={navigated}
+                  >
+                    <ListItem>
+                      <ListItemText
+                        className={listItem}
+                        primary={sidebarName}
+                      />
+                    </ListItem>
+                  </NavLink>
+                </MuiThemeProvider>
+              );
+            })}
+            <ListItem>
+              <MuiThemeProvider theme={THEME}>
+                <CustomButton
+
+                  style={{
+                    textTransform: "none",
+                    backgroundColor: Harlequin,
+                    color: whiteColor,
+                  }}
+                  className={button}
+                  variant="contained"
+                  size={Breakpoints()}
                   onClick={navigated}
                 >
-                  <CustomButton text="Contact Us"></CustomButton>
-                </NavLink>
-              </ListItem>
-            </List>
-          </Hidden>
-        </Toolbar>
-        <LinearProgress variant="determinate" value={props.scroll} />
+                  Contact Us
+                </CustomButton>
+              </MuiThemeProvider>
+            </ListItem>
+          </List>
+        </Hidden>
+      </Toolbar>
+      <LinearProgress variant="determinate" value={props.scroll}/>
       </AppBar>
     </>
   );
