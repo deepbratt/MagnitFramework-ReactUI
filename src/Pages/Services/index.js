@@ -67,13 +67,13 @@ const Services = () => {
 
 
       <div style={{position:"relative"}}>
-      <img className={leftPattern} src={PatternLeft} alt="" srcset="" />
+      <CustomImage className={leftPattern} src={PatternLeft} alt="" srcset="" />
       <Section title={ServicesSectionTitle} highlightWords={1}>
         <PointList data={servicesData} />
       </Section>
       </div>
 
-      <CustomImage className={leftPattern} src={StarFishPattern} alt="" srcset="" />
+     
       <Section title={HiringSectionTitle} highlightWords={2}>
         <OptionsTab />
       </Section>
