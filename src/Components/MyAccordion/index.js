@@ -16,7 +16,6 @@ const MyAccordion = () => {
     setExpanded(isExpanded ? panel : false);
   };
   const { root } = LayoutStyle();
-
   const accordionDataController = [
     {
       ariaControl: "panel1a-content",
@@ -46,11 +45,20 @@ const MyAccordion = () => {
 
   return (
     <div className={root}>
-
       {accordionDataController.map((item, index) => (
-        <Accordion key={'accordion-'+index} expanded={expanded === 'accordion-'+index} onChange={handleChange('accordion-'+index)}>
+        <Accordion
+          key={"accordion-" + index}
+          expanded={expanded === "accordion-" + index}
+          onChange={handleChange("accordion-" + index)}
+        >
           <AccordionSummary
-            expandIcon={expanded === 'accordion-'+index ? <img src={Minus}/> :<img src={Plus} />}
+            expandIcon={
+              expanded === "accordion-" + index ? (
+                <img src={Minus} />
+              ) : (
+                <img src={Plus} />
+              )
+            }
             aria-controls={item.ariaControl}
             id={item.ariaId}
           >
@@ -61,7 +69,7 @@ const MyAccordion = () => {
           </AccordionDetails>
         </Accordion>
       ))}
-      <CustomButton text="See More" />
+      <CustomButton>See More</CustomButton>
     </div>
   );
 };

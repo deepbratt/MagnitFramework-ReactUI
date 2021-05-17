@@ -5,6 +5,7 @@ import Layout from "./Layout";
 import RequireAuth from "./container/RequireAuth";
 import { pageRoutes } from "./Components/Path";
 import Home from "./Pages/Home";
+import Error from "./Pages/Error/Index";
 
 const Routes = () => {
   const routeArray = Object.values(pageRoutes);
@@ -26,8 +27,11 @@ const Routes = () => {
               />
             );
           })}
+          {/* <Route component={Error} /> */}
         </Layout>
+        
       </Switch>
+      
     </Router>
   );
 };

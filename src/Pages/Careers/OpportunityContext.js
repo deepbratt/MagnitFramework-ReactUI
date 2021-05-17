@@ -12,6 +12,7 @@ import {
   rightPattern,
   leftPattern,
 } from "../../Utils/Constants/Language/en/CareersData";
+import CustomButton from "../../Components/CustomButton";
 
 
 const OpportunityContext = () => {
@@ -48,7 +49,7 @@ const OpportunityContext = () => {
                         <Paragraph para={data.span} />
                         <Paragraph para={data.desc} />
                       </section>
-                      <Button
+                      <CustomButton
                         style={{
                           textTransform: "none",
                         }}
@@ -57,7 +58,7 @@ const OpportunityContext = () => {
                         size={Breakpoints()}
                       >
                         {data.buttonText}
-                      </Button>
+                      </CustomButton>
                     </section>
                   </section>
                 </CardContent>
@@ -65,7 +66,7 @@ const OpportunityContext = () => {
             );
           })}
         </section>
-        <Button
+        <CustomButton
           style={{
             textTransform: "none",
             backgroundColor: Harlequin,
@@ -75,7 +76,7 @@ const OpportunityContext = () => {
           size={Breakpoints()}
         >
           Learn More
-        </Button>
+        </CustomButton>
       </Paper>
     </>
   );

@@ -13,6 +13,7 @@ import { MuiThemeProvider } from "@material-ui/core/styles";
 import { hero, Vector } from "../../Components/Hero/Images";
 import Breakpoints from "../../Theme/theme.breakpoints";
 import { Colors } from "../../Theme/color.constants";
+import CustomImage from "../CustomImage";
 
 const Slider = ({
   value,
@@ -46,7 +47,7 @@ const Slider = ({
       }}
     >
       <Hidden smDown>
-        <img alt="sliderImg" src={Vector} className={spiral} />
+        <CustomImage alt="sliderImg" src={Vector} className={spiral} />
       </Hidden>
       {/* <Hidden smDown>
         <Grid item xs={12} md={1} lg={1}></Grid>
@@ -60,7 +61,7 @@ const Slider = ({
         className={gridText}
       >
         <MuiThemeProvider theme={heading}>
-          <Typography variant="h1" color="inherit">
+          <Typography variant="h1" >
             {headingOne} <br />
             {headingTwo} <br />
             {headingThree} <br />
@@ -69,7 +70,7 @@ const Slider = ({
           <List>
             {data.map((text, index) => (
               <ListItem>
-                <Typography key={index} variant="h5" color="inherit">
+                <Typography key={index} variant="h5">
                   <CheckIcon className={value === "LIGHT" ? tick : tickSub} />
                   {text}
                 </Typography>
@@ -99,7 +100,7 @@ const Slider = ({
           className={gridImage}
           justify="flex-start"
         >
-          <img alt="sliderImg" src={hero} className={vector} />
+          <CustomImage alt="sliderImg" src={hero} className={vector} />
         </Grid>
       </Hidden>
       {/* <Hidden smDown>

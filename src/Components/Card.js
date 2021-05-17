@@ -5,6 +5,7 @@ import {
 } from "../Pages/Section/Header/ServicesContext/servicesStyles";
 import { Typography, Card, CardContent } from "@material-ui/core";
 import { MuiThemeProvider } from "@material-ui/core/styles";
+import CustomImage from "./CustomImage";
 const CardData = ({ data }) => {
   const classes = useStyles();
   const { card, devSec, devSub } = classes;
@@ -20,7 +21,7 @@ const CardData = ({ data }) => {
                   style={{ backgroundColor: text.color }}
                   className={devSub}
                 >
-                  <img
+                  <CustomImage
                     alt="icon"
                     src={text.icon}
                     style={{ filter: text.fill }}
@@ -29,10 +30,10 @@ const CardData = ({ data }) => {
               </section>
               <section>
                 <MuiThemeProvider theme={THEME}>
-                  <Typography variant="h5" color="inherit">
+                  <Typography variant="h5" >
                     {text.title}
                   </Typography>
-                  <Typography paragraph={true} color="inherit">
+                  <Typography paragraph={true} >
                     {text.desc}
                   </Typography>
                 </MuiThemeProvider>

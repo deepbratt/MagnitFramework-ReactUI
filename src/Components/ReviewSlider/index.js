@@ -6,6 +6,7 @@ import next from "../../assets/services/next.png";
 import Avatar7 from "../../assets/services/Avatar7.png";
 import { Paper } from "@material-ui/core";
 import { reviewSliderText } from "../../Utils/Constants/Language";
+import CustomImage from "../CustomImage";
 const { title, text, author } = reviewSliderText;
 const card = {
   title: title,
@@ -70,7 +71,7 @@ const ReviewSlider = ({ slides, showArrows }) => {
             title={label}
             className={prevBtn}
           >
-            <img
+            <CustomImage
               src={prev}
               alt="prev"
               style={{ width: "19px", height: "16px", marginTop: "0.1rem" }}
@@ -86,7 +87,7 @@ const ReviewSlider = ({ slides, showArrows }) => {
             title={label}
             className={nextBtn}
           >
-            <img
+            <CustomImage
               src={next}
               alt="next"
               style={{ width: "19px", height: "16px", marginTop: "0.1rem" }}

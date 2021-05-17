@@ -6,7 +6,7 @@ import Solutions from "../SolutionsContext/Solutions";
 import PartnerContext from "../PartnerWithUsContext/Maincontainer";
 import GlanceSection from "../GlanceAtWorkContext/Container";
 import React, { useState } from "react";
-import { Button, Typography , Hidden} from "@material-ui/core";
+import { Typography , Hidden} from "@material-ui/core";
 import ContactUs from "../ContactUs";
 import Section from "../Section";
 import Image1 from "../../assets/images/awardAccredationSection/image 2.png";
@@ -32,6 +32,7 @@ import CertificationList from "../../Components/certificationList";
 import HomeStyles from "./style";
 import QuoteCard from "../../Components/QuoteCard";
 import CustomButton from "../../Components/CustomButton";
+import CustomImage from "../../Components/CustomImage";
 
 const images = [Image1, Image2, Image3, Image4, Image5];
 
@@ -51,6 +52,7 @@ const Home = (props) => {
 
   const {
     // sectionBackgroundColors, factCards,
+    Mirage,
     BlueRibbon,
   } = Colors;
   // const { peach, seaGreen, skyBlue, violet, purple, blue } = factCards;
@@ -140,7 +142,7 @@ const Home = (props) => {
               </Grid>
             ))}
         </Grid>
-        <CustomButton text="See More" />
+        <CustomButton>See More</CustomButton>
       </Section>
       {/* NEWSLETTER SECTION
       <Section>
@@ -178,17 +180,17 @@ const Home = (props) => {
             </Hidden>
         </Grid>
        
-        <CustomButton text="See More" />
+        <CustomButton>See More</CustomButton>
         {/* <ReviewSlider slides={cardArr} /> */}
       </Section>
       {/* AWARD AND ACCREDITATIONS SECTION */}
       <Section title={AwardSectionTitle}>
-        <div>
+        <div style={{display:"flex", flexWrap:"wrap", justifyContent:"space-evenly"}}>
           {images &&
             images.map((image, index) => (
-              <img
+              <CustomImage
                 key={index}
-                style={{ margin: "10px 40px", width: "130px" }}
+                style={{ margin: "10px 40px", width: "130px",color:Mirage }}
                 src={image}
                 alt={`client${index}`}
               />
