@@ -23,7 +23,7 @@ const FeaturesSection = () => {
             </Typography>
           </MuiThemeProvider>
         </Grid>
-        <Grid style={{ margin: "0 5%" }} item lg={3} md={3} xs={12}>
+        <Grid style={{ margin: "0 8%" }} item lg={3} md={3} xs={12}>
           {featuresDataOne.map((data, index) => {
             return (
               <section className={Images}>
@@ -32,13 +32,13 @@ const FeaturesSection = () => {
             );
           })}
         </Grid>
-        <Grid style={{ zIndex: "2" }} item lg={7} md={7} xs={12}>
+        <Grid style={{ zIndex: "2" }} item lg={6} md={7} xs={12}>
           <FeaturesRow data={featuresDataOne} />
         </Grid>
-        <Grid style={{ margin: "0 8%" }} item lg={7} md={6} xs={12}>
+          <Grid style={{ margin: "0 11%" }}  item lg={5} md={5} xs={12}>
           <FeaturesRow data={featuresDataTwo} />
         </Grid>
-        <Grid item lg={1} md={1} xs={12}>
+           <Grid item lg={4} md={4} xs={12}>
           {featuresDataTwo.map((data, index) => {
             return (
               <section className={Images}>
@@ -47,7 +47,8 @@ const FeaturesSection = () => {
             );
           })}
         </Grid>
-        <Grid style={{ margin: "0 5%" }} item lg={3} md={3} xs={12}>
+      
+        <Grid style={{ margin: "0 8%" }} item lg={3} md={3} xs={12}>
           {featuresDataThree.map((data, index) => {
             return (
               <section className={Images}>
@@ -56,7 +57,7 @@ const FeaturesSection = () => {
             );
           })}
         </Grid>
-        <Grid item lg={7} md={7} xs={12}>
+        <Grid item lg={6} md={7} xs={12}>
           <FeaturesRow data={featuresDataThree} />
         </Grid>
       </Grid>

@@ -10,6 +10,7 @@ import {
 } from "@material-ui/core";
 import Paragraph from "../../../ContainerStructure/Headings/Paragraphs/Paragraph";
 import { MainData } from "../../../Utils/Constants/Language/AboutUsData";
+import CustomImage from '../../../Components/CustomImage';
 
 
 const Container = () => {
@@ -23,7 +24,7 @@ const Container = () => {
             <Card className={card}>
               <CardContent>
                 <section className={devSec}>
-                  <img className={Icon} src={Img} alt="Icon" />
+                  <CustomImage className={Icon} src={Img} alt="Icon" />
                   <section className={dev}>
                     <Heading6 title={subTitle} />
                     <Heading5 subTitle={span} />
@@ -37,7 +38,7 @@ const Container = () => {
             <Card className={card}>
               <CardContent>
                 <section className={devSec}>
-                  <img className={Icon} src={Img} alt="Icon" />
+                  <CustomImage className={Icon} src={Img} alt="Icon" />
                   <section className={dev}>
                     <Heading6 title={subTitle} />
                     <Heading5 subTitle={span} />
@@ -49,7 +50,7 @@ const Container = () => {
             <Card className={card}>
               <CardContent>
                 <section className={devSec}>
-                  <img className={Icon} src={Img} alt="Icon" />
+                  <CustomImage className={Icon} src={Img} alt="Icon" />
                   <section className={dev}>
                     <Heading6 title={subTitle} />
                     <Heading5 subTitle={span} />
@@ -61,7 +62,7 @@ const Container = () => {
             <Card className={card}>
               <CardContent>
                 <section className={devSec}>
-                  <img className={Icon} src={Img} alt="Icon" />
+                  <CustomImage className={Icon} src={Img} alt="Icon" />
                   <section className={dev}>
                     <Heading6 title={subTitle} />
                     <Heading5 subTitle={span} />

@@ -5,6 +5,7 @@ import MagnitLogo from "../../assets/MagnitLogo.png";
 import MagnitLogoWhite from "../../assets/Logo-white.png";
 import ErrorBoundaryStyles from "./ErrorBoundaryStyles";
 import { errorBoundaryText } from "../../Utils/Constants/Language/index";
+import CustomImage from "../CustomImage";
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -53,7 +54,7 @@ class ErrorBoundary extends React.Component {
             </CustomButton>
             <CustomButton href={window.location.origin}>Home</CustomButton>
           </div>
-          <img src={ErrorBoundaryImage} alt="error-image" style={errorImage} />
+          <CustomImage src={ErrorBoundaryImage} alt="error-image" style={errorImage} />
           <div style={textWrapper}>
             <h1>{errorBoundaryText.heading}</h1>
             <h3>{errorBoundaryText.error}</h3>

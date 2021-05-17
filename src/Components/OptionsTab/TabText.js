@@ -4,6 +4,7 @@ import vector from "../../assets/services/vector.png";
 import CustomButton from "../CustomButton";
 import OptionTabStyles from "./style";
 import dataText from "./data";
+import CustomImage from "../CustomImage";
 export const TabText = () => {
   const { detail, bulletText, textDiv, buttonStyle } = OptionTabStyles();
   return (
@@ -22,7 +23,7 @@ export const TabText = () => {
         return (
           <Grid xs={12} className={textDiv} key={a.id}>
             <Grid>
-              <img
+              <CustomImage
                 src={vector}
                 alt={vector}
                 style={{ marginRight: ".4rem", width: "19px", height: "19px" }}

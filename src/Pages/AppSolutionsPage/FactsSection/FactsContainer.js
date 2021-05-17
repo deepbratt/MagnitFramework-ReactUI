@@ -12,7 +12,7 @@ const FactsContainer = () => {
   return (
     <>
       <Paper className={root} elevation={0}>
-        <Grid direction="row" container>
+        <Grid justify="center" direction="row" container>
           <Grid className={card} item lg={12} xs={12}>
             <Heading4 title={factsHeading} />
           </Grid>
@@ -20,16 +20,16 @@ const FactsContainer = () => {
             return (
               <Grid
                 key={index}
-                style={{ margin: "0 4.1%" }}
+                style={{ margin: "0 2.1%" }}
                 item
-                lg={5}
+                lg={4}
                 xs={10}
               >
                 <Card>
                   <CardContent className={cardContent}>
                     <img
                       className={Avatar}
-                      height="35px"
+                      height="45px"
                       src={data.avatar}
                       alt="Icon"
                     />
