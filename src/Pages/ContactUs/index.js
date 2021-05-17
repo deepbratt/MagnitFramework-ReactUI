@@ -94,6 +94,11 @@ const ContactUs = () => {
                   <div className={button}>
                     <CustomButton
                     >
+
+                      <Typography
+                        style={{ textAlign: "center", color: "#fff",padding:".1rem 1.6rem" }}
+                        variant="button"
+                      >
                         {submit}
                     </CustomButton>
                   </div>

@@ -61,7 +61,7 @@ const Slider = ({
         className={gridText}
       >
         <MuiThemeProvider theme={heading}>
-          <Typography variant="h1" color="inherit">
+          <Typography variant="h1" >
             {headingOne} <br />
             {headingTwo} <br />
             {headingThree} <br />
@@ -70,7 +70,7 @@ const Slider = ({
           <List>
             {data.map((text, index) => (
               <ListItem>
-                <Typography key={index} variant="h5" color="inherit">
+                <Typography key={index} variant="h5">
                   <CheckIcon className={value === "LIGHT" ? tick : tickSub} />
                   {text}
                 </Typography>

@@ -28,7 +28,8 @@ const Solutions = () => {
         <PrimarySection />
         <MidSection />
         <MuiThemeProvider theme={THEME}>
-        <CustomButton style={{backgroundColor: whiteColor, color:"black"}} variant="contained" size={Breakpoints()} >
+        <Button style={{backgroundColor: whiteColor,padding:".3rem 1.9rem"}} variant="contained" size={Breakpoints()} >
+
           See More
         </CustomButton>
         </MuiThemeProvider>

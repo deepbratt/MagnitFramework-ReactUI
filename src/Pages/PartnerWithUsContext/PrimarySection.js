@@ -4,7 +4,8 @@ import { Typography, Card, CardContent } from "@material-ui/core";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import CustomImage from "../../Components/CustomImage";
 
-
+import { Colors } from "../../Theme/color.constants";
+const {Mirage}=Colors;
 const PrimarySection = (props) => {
   const data = props.data
   const classes = useStyles();
@@ -34,10 +35,10 @@ const PrimarySection = (props) => {
             </section>
             <MuiThemeProvider theme={THEME}>
               <section className={para}>
-                <Typography variant="h5" color="inherit">
+                <Typography variant="h5" >
                   {text.title}
                 </Typography>
-                <Typography paragraph={true} color="inherit">
+                <Typography paragraph={true}  style={{color:Mirage}}>
                   {text.desc}
                 </Typography>
               </section>

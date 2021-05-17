@@ -51,7 +51,7 @@ const Section = ({
           </>
         )}
         {title && (
-          <Typography className={header} color="textPrimary" variant="h2">
+          <Typography className={header} color="textPrimary" variant="h2" >
             {normalTitle}
             <span className={underlinedStyles}>{underlinedTitle}</span>
           </Typography>
