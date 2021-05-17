@@ -5,17 +5,13 @@ import PointBadgeStyles from "./style";
 
 const PointBadge = ({ horizontal, data }) => {
   const { color, icon, title, desc } = data;
-  const {
-    vertical,
-    inline,
-    badge,
-    contentLeft,
-    contentRight,
-  } = PointBadgeStyles();
+  const { vertical, inline, badge, contentLeft, contentRight } =
+    PointBadgeStyles();
   return (
     <div className={horizontal ? inline : vertical}>
       <CustomImage
         className={badge}
+        width="50px"
         style={{ backgroundColor: color }}
         src={icon}
         alt=""

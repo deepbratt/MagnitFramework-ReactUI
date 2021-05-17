@@ -44,7 +44,7 @@ const Services = () => {
       text: "Home",
     },
     {
-      path: "/Services",
+      path: "/services",
       text: "Web Development Services",
     },
   ];
@@ -77,14 +77,14 @@ const Services = () => {
   return (
     <div className={root}>
       <Banner
+        breadCrumb={<BreadCrumb links={breadCrumData} />}
         image={BannerImage}
         backColor={linearBackground}
-        breadCrumb={<BreadCrumb links={breadCrumData} />}
       >
-        <Typography variant="h1" gutterBottom>
+        <Typography variant="h2" gutterBottom>
           We Hire Best <br /> Web Developers & Save 50%
         </Typography>
-        <Typography variant="subtitle1" gutterBottom>
+        <Typography variant="h6" gutterBottom>
           We have a talent pool of qualified & well-experienced web developers.
         </Typography>
         <Button

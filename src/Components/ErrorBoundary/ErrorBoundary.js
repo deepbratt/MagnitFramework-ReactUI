@@ -2,8 +2,9 @@ import React from "react";
 import CustomButton from "../CustomButton";
 import ErrorBoundaryImage from "../../assets/ErrorBoundary/errorBoundary.png";
 import MagnitLogo from "../../assets/MagnitLogo.png";
+import MagnitLogoWhite from "../../assets/Logo-white.png";
 import ErrorBoundaryStyles from "./ErrorBoundaryStyles";
-import {errorBoundaryText} from '../../Utils/Constants/Language/index'
+import { errorBoundaryText } from "../../Utils/Constants/Language/index";
 import CustomImage from "../CustomImage";
 
 class ErrorBoundary extends React.Component {
@@ -36,6 +37,7 @@ class ErrorBoundary extends React.Component {
       errorImage,
       textWrapper,
       errorDetails,
+      footerWrapper
     } = ErrorBoundaryStyles;
     if (this.state.hasError) {
       // You can render any custom fallback UI
@@ -61,13 +63,16 @@ class ErrorBoundary extends React.Component {
               {this.state.errorInfo.componentStack}
             </details>
           </div>
-          <CustomButton
-            href={window.location.origin}
-            size={"Large"}
-            variant={"none"}
-            color="transparent"
-            text={<CustomImage src={MagnitLogo} alt="magnit_logo" style={logo} />}
-          />
+          <div style={footerWrapper}>
+            <CustomButton
+              variant={"outlined"} 
+              href={window.location.origin}
+              color="primary"
+              size={"Large"}
+              text={<CustomImage src={MagnitLogoWhite} alt="magnit_logo_white" style={logo}
+            />}
+            />
+          </div>
         </div>
       );
     }

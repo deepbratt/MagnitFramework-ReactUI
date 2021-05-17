@@ -12,10 +12,13 @@ export const missionStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: BlueRibbon,
     paddingTop: "20px",
+    width: "100%",
+    position: "relative",
+    display: "flex"
   },
   card: {
     width: "30%",
-
+    zIndex: 1,
     height: "300px",
     display: "flex",
     flexDirection: "column",
@@ -37,9 +40,9 @@ export const missionStyles = makeStyles((theme) => ({
   },
   card2: {
     width: "30%",
+    zIndex: 1,
     height: "300px",
     display: "flex",
-    flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
     transition: "all .25s linear",
@@ -59,6 +62,17 @@ export const missionStyles = makeStyles((theme) => ({
   Icon: {
     width: "70px",
     filter: HarlequinRgb,
+  },
+  leftPattern: {
+    position: "absolute",
+    left: "0px",
+    top: "0px",
+    zIndex: 0,
+  },
+  rightPattern: {
+    position: "absolute",
+    right: "0px",
+    bottom: "0px",
   },
   underlined: {
     position: "relative",
