@@ -10,6 +10,7 @@ import {
 } from "../../../Utils/Constants/Language/AboutUsData";
 import Patten1 from "../../../assets/AboutUs/vision1.png";
 import Patten2 from "../../../assets/AboutUs/vision2.png";
+import CustomImage from "../../../Components/CustomImage";
 
 const MissionContext = () => {
   const { cardSec, devSec, dev } = useStyles();
@@ -20,15 +21,15 @@ const MissionContext = () => {
   return (
     <>
       <Paper className={root} elevation={0}>
-        <img className={leftPattern} src={Patten1} alt="" />
-        <img className={rightPattern} src={Patten2} alt="" />
+        <CustomImage className={leftPattern} src={Patten1} alt="" />
+        <CustomImage className={rightPattern} src={Patten2} alt="" />
         <section style={{ paddingBottom: "20px" }} className={cardSec}>
           <Card className={card2}>
             <CardContent>
               <section className={devSec}>
                 <section className={dev}></section>
                 <section className={underlined}>
-                  <img className={Icon} src={mission} alt="Icon" />
+                  <CustomImage className={Icon} src={mission} alt="Icon" />
                   <Heading6 title={firstTitle} />
                   <Paragraph para={paragraph} />
                 </section>
@@ -40,7 +41,7 @@ const MissionContext = () => {
               <section className={devSec}>
                 <section className={dev}></section>
                 <section className={underlined}>
-                  <img className={Icon} src={vision} alt="Icon" />
+                  <CustomImage className={Icon} src={vision} alt="Icon" />
                   <Heading6 title={secondTitle} />
                   <Paragraph para={paragraph} />
                 </section>

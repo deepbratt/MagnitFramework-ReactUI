@@ -21,6 +21,7 @@ import Avatar3 from "../../assets/services/Avatar3.png";
 import Avatar4 from "../../assets/services/Avatar4.png";
 import Avatar5 from "../../assets/services/Avatar5.png";
 import Avatar6 from "../../assets/services/Avatar6.png";
+import CustomImage from "../../Components/CustomImage";
 
 const Slider = () => {
   const { aliceBlue } = Colors;
@@ -54,47 +55,47 @@ const Slider = () => {
           <Avatar alt="" src={Avatar4} className={avatar4} />
           <Avatar alt="" src={Avatar5} className={avatar5} />
           <Avatar alt="" src={Avatar6} className={avatar6} />
-          <img
+          <CustomImage
             className={squareDotsPattern}
             src={SquareDottedPattern}
             alt=""
             srcset=""
           />
-          <img
+          <CustomImage
             className={yellowCommaPattern}
             src={yellowComma}
             alt=""
             srcset=""
           />
-          <img className={commaPattern} src={comma} alt="" srcset="" />
-          <img className={pinkDotPattern} src={pinkDot} alt="" srcset="" />
-          <img className={yellowDotPattern} src={yellowDot} alt="" srcset="" />
-          <img
+          <CustomImage className={commaPattern} src={comma} alt="" srcset="" />
+          <CustomImage className={pinkDotPattern} src={pinkDot} alt="" srcset="" />
+          <CustomImage className={yellowDotPattern} src={yellowDot} alt="" srcset="" />
+          <CustomImage
             className={miniYellowPattern}
             src={miniYellow}
             alt=""
             srcset=""
           />
-          <img className={smallDotPattern} src={smallDot} alt="" srcset="" />
-          <img
+          <CustomImage className={smallDotPattern} src={smallDot} alt="" srcset="" />
+          <CustomImage
             className={leftStarFishPattern}
             src={StarFishPinkPattern}
             alt=""
             srcset=""
           />
-          <img
+          <CustomImage
             className={rightStarFishPattern}
             src={StarFishPattern}
             alt=""
             srcset=""
           />
-          <img
+          <CustomImage
             className={leftDottedPattern}
             src={DottedPattern}
             alt=""
             srcset=""
           />
-          <img
+          <CustomImage
             className={rightDottedPattern}
             src={TopDottedPattern}
             alt=""

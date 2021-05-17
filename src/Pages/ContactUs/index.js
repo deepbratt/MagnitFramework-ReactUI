@@ -3,6 +3,7 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import image from "../../assets/images/contact-us-banner.jpg";
+import CustomImage from "../../Components/CustomImage";
 import InputField from "../../Components/FormInputs/InputField";
 import MyAccordion from "../../Components/MyAccordion";
 import { contactUsLabelsText } from "../../Utils/Constants/Language";
@@ -36,7 +37,7 @@ const ContactUs = () => {
         <Grid container direction="row" spacing={2}>
           <Grid item xs={12} md={6}>
             <div className={wrap}>
-              <img className={cover} src={image} alt="A lady with laptop" />
+              <CustomImage className={cover} src={image} alt="A lady with laptop" />
               <CardContent className={content}>
                 <Typography variant="h2">{heading}</Typography>
                 <Typography

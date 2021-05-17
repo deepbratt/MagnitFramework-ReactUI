@@ -5,6 +5,7 @@ import Heading from "../../../ContainerStructure/Headings/Heading4";
 import Paragraph from "../../../ContainerStructure/Headings/Paragraphs/Paragraph";
 import { MainData } from "../../../Utils/Constants/Language/AboutUsData";
 import BreadCrumb from "../../../Components/BreadCrumb";
+import CustomImage from "../../../Components/CustomImage";
 
 const AboutMainSection = (props) => {
   const { title, paragraphPrimary, paragraphSecondary } = MainData;
@@ -30,7 +31,7 @@ const AboutMainSection = (props) => {
               <BreadCrumb links={breadcrumbData} />
             </div>
             <CardContent className={cardSec}>
-              <img className={hero} alt="hero" src={props.hero} />
+              <CustomImage className={hero} alt="hero" src={props.hero} />
             </CardContent>
           </Card>
           <Card>
