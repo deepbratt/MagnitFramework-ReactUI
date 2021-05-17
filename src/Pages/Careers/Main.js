@@ -7,6 +7,7 @@ import Heading5 from "../../ContainerStructure/Headings/Heading5";
 import {MainData} from "../../Utils/Constants/Language/en/CareersData"
 import Breakpoints from "../../Theme/theme.breakpoints"
 import {Colors} from "../../Theme/color.constants"
+import CustomButton from "../../Components/CustomButton";
 const Main = (props) => {
   const {
     heading,
@@ -48,13 +49,13 @@ const Main = (props) => {
           </Card>
         </section>
         <section>
-          <Button
+          <CustomButton
             style={{ textTransform: "none", backgroundColor: Harlequin , color: whiteColor}}
             variant="contained"
             size={Breakpoints()}
           >
             {buttonText}
-          </Button>
+          </CustomButton>
         </section>
       </Paper>
     </>
