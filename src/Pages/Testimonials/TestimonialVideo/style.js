@@ -15,8 +15,8 @@ const useStyles = makeStyles((theme) => ({
     "& .MuiCardContent-root": {
          padding: "1rem 0rem" 
     },
-    [breakpoints.only("sm")]: {
-        margin:".5rem 1.2rem",
+    [breakpoints.down("sm")]: {
+        margin:".5rem 0rem",
       },
      
   },
@@ -31,10 +31,23 @@ const useStyles = makeStyles((theme) => ({
 "& .MuiRating-icon": {
     marginRight:".2rem"
 },
+[breakpoints.down("sm")]: {
+  height:"auto",
+  "& .MuiRating-icon": {
+    marginRight:"-.1rem"
+},
+},
+},
+avatarImg:{
+  [breakpoints.down("sm")]: {
+    width:"45px"
+    
+  },
 },
   cardImage:{
-      height:264,
+      // height:264,
     //   width:460,
+    height:"auto",
       [breakpoints.down("sm")]: {
         height:"auto",
         
@@ -45,6 +58,10 @@ const useStyles = makeStyles((theme) => ({
     textAlign:"left",
     fontSize:"20px",
     fontWeight:600,
+    [breakpoints.down("sm")]: {
+      fontSize:"16px",
+      
+    },
 },
   cardpara:{
     color:darkSilver,
@@ -60,13 +77,20 @@ carddate:{
     textAlign:"right",
     fontWeight:400,
     lineHeight:"24px",
-    letterSpacing:".2"
+    letterSpacing:".2",
+    [breakpoints.down("sm")]: {
+      fontSize:".8rem",
+      marginBottom:".5rem"
+    },
 },
 playBtn:{
     position:"absolute",
-    top: "39%",
-    left: "50%",
+    top: "33%",
+    left: "53%",
     transform: "translate(-3rem, -1.5rem)",
+    "& > img ":{
+      width:"70px"
+    },
     [breakpoints.only("sm")]: {
       margin:".5rem 1.2rem",
       transform: "translate(-3rem, -4rem)",

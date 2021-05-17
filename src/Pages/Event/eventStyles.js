@@ -8,6 +8,7 @@ const breakpoints = createBreakpoints({});
 const EventStyles = makeStyles((theme) => ({
   root: {
     paddingBottom:'3rem',
+
   },
   cardSec: {
     padding: "0px",
@@ -53,22 +54,23 @@ const EventStyles = makeStyles((theme) => ({
       bottom: "5px",
       [breakpoints.down("sm")]: {
         height: "11px",
-        width: "70px",
+        maxWidth: "3.4rem",
       },
     },
   },
   cardRoot:{
   display:"flex",
 //   padding:'1rem',
+padding:" 0rem 3rem",
 paddingBottom:'1rem',
   flex: "wrap",
   marginBottom:"1rem",
   [breakpoints.down("sm")]: {
-     padding:'.4rem',
+     padding:'.4rem .8rem',
   },
   },
  seeMore:{
-        padding: ".3rem 2rem",
+        padding: ".3rem 1rem",
  }
 }));
   export default EventStyles;

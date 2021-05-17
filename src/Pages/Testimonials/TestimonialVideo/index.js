@@ -16,6 +16,7 @@ const VideoCard = ({ Img, detail, avatar, name, date }) => {
   const {
     cardRoot,
     cardImage,
+    avatarImg,
     cardTitle,
     cardpara,
     carddate,
@@ -27,7 +28,7 @@ const VideoCard = ({ Img, detail, avatar, name, date }) => {
   return (
     <Card className={cardRoot}>
       <CardHeader
-        avatar={<img src={avatar} alt="s" />}
+        avatar={<img src={avatar} alt="s" className={avatarImg} />}
         title={<Typography className={cardTitle}>{name}</Typography>}
         action={
           <Typography component="p" className={carddate}>

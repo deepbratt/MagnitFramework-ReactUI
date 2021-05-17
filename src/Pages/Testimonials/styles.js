@@ -40,13 +40,17 @@ const useStyles = makeStyles((theme) => ({
           [theme.breakpoints.down("sm")]: {
             fontSize: "1.5rem",
           },
-         
         },
         [breakpoints.down("sm")]: {
             marginTop:"5rem",
             
           },
-          
+      },
+      cardRoot:{
+        padding:" 0rem 3rem",
+        [breakpoints.down("sm")]: {
+          padding:'.4rem .8rem',
+       },
       },
       cardSec: {
         padding: "0px",
@@ -78,7 +82,7 @@ const useStyles = makeStyles((theme) => ({
     
       underlined: {
         position: "relative",
-        color:Harlequin,
+        color:Mirage,
         zIndex: 1,
         marginLeft: "10px",
         "&:after ": {
@@ -92,7 +96,7 @@ const useStyles = makeStyles((theme) => ({
           bottom: "5px",
           [breakpoints.down("sm")]: {
             height: "11px",
-            width: "10.2rem",
+            maxWidth: "8.2rem"
           },
         },
       },
@@ -100,7 +104,7 @@ const useStyles = makeStyles((theme) => ({
           margin:"3rem 0rem 5rem 0rem"
       },
       seeMore:{
-        padding: ".3rem 2rem",
+        padding: ".3rem 1rem",
  }
 }));
 export default useStyles;

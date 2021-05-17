@@ -12,13 +12,14 @@ import linked from "../../assets/Testimonials/linked.png"
 import prof from "../../assets/Testimonials/prof.png"
 import VideosData from '../../Utils/Constants/Language/en/TestimonialVideos';
 import { ClientsHaveToSay, Testmonial } from './constant';
+import Section from '../Section';
 function Testimonials() {
     const { skyBlue, aliceBlue ,linearBackground} = Colors;
     const {
       root,
     imageWrapper,
      content,
-     cardSec,underlined,paragraph,flex,seeMore
+     cardSec,underlined,paragraph,flex,seeMore,cardRoot
     } = useStyles();
     return (
         <CommentSection>
@@ -52,17 +53,15 @@ incididunt ut labore et dolore magna aliqua.
             </CardContent>
           </Card>
       </Grid>
-      <Grid xs={12} container direction="row" justify="center" >
-      
+      <Grid xs={12} container direction="row" justify="center"  className={cardRoot}>
       {VideosData.map((a)=>{
           return(
         <Grid xs={12} sm={6} md={4} key={a.id}>
         <VideoCard Img={a.Img} avatar={a.Avatar} name={a.name} detail={a.para} date={a.date}/>
         </Grid>
         );  })}
-
-      
       </Grid>
+      
       <Grid xs={12} container alignItems="center" justify="center" className={flex}>
         <Button type="submit" color="primary" variant="contained">
           <Typography

@@ -9,7 +9,7 @@ const ActivityStyles = makeStyles((theme) => ({
     padding:"1.3rem",
     borderRadius:".5rem",
     boxShadow:"0px 4px 60px rgba(0, 0, 0, 0.1)",
-    margin:"1rem",
+    margin:"1rem .5rem",
     textAlign:"left",
     "& .MuiCardContent-root": {
          padding: "1rem 0rem" 
@@ -19,7 +19,7 @@ const ActivityStyles = makeStyles((theme) => ({
       },
   },
   cardImage:{
-      height:264,
+      height:"auto",
     //   width:460,
       [breakpoints.down("sm")]: {
         height:"auto",
@@ -36,7 +36,7 @@ const ActivityStyles = makeStyles((theme) => ({
     color:darkSilver,
     textAlign:"left",
     fontSize:"18px",
-    fontWeight:400,
+    fontWeight:300,
     lineHeight:"29.34px",
     letterSpacing:".2"
 },

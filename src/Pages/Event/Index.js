@@ -11,6 +11,7 @@ import activities from '../../Utils/Constants/Language/en/EventActivites'
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import Breakpoints from "../../Theme/theme.breakpoints";
 import {Colors} from "../../Theme/color.constants"
+import Section from '../Section';
  const Event = () => {
     const {whiteColor} = Colors
      const {root,cardSec,underlined,paragraph,cardRoot,seeMore,} =EventStyles();
@@ -30,7 +31,7 @@ import {Colors} from "../../Theme/color.constants"
               </section>
             </CardContent>
           </Card>
-          
+         
      <Grid xs={12} container justify="center" className={cardRoot} >
            {
                activities.map((a=>{
@@ -42,7 +43,7 @@ import {Colors} from "../../Theme/color.constants"
                }))
            }
             </Grid>
-        
+           
     <Grid xs={12} container alignItems="center" justify="center">
         <Button type="submit" color="primary" variant="contained">
           <Typography
