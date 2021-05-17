@@ -4,6 +4,7 @@ import { Button, Grid,Typography } from "@material-ui/core";
 import vector from "../../assets/services/vector.png";
 import OptionTabStyles from "./style";
 import dataText from './data';
+import CustomImage from '../CustomImage';
 export const TabText = () => {
     const { detail,bulletText,textDiv } = OptionTabStyles();
     return (
@@ -15,7 +16,7 @@ export const TabText = () => {
     {dataText.map(a=>{
       return(
         <Grid xs={12} className={textDiv}  key={a.id}>
-         <Grid  ><img src={vector} alt={vector} style={{marginRight:".4rem",width:"19px",height:"19px"}}/></Grid>
+         <Grid  ><CustomImage src={vector} alt={vector} style={{marginRight:".4rem",width:"19px",height:"19px"}}/></Grid>
          <Grid xs={11}>
          <Typography className={bulletText} >{a.text}</Typography></Grid></Grid>);
     })}

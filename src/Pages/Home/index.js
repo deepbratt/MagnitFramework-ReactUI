@@ -32,6 +32,7 @@ import CertificationList from "../../Components/certificationList";
 import HomeStyles from "./style";
 import QuoteCard from "../../Components/QuoteCard";
 import CustomButton from "../../Components/CustomButton";
+import CustomImage from "../../Components/CustomImage";
 
 const images = [Image1, Image2, Image3, Image4, Image5];
 
@@ -175,12 +176,12 @@ const Home = (props) => {
       </Section>
       {/* AWARD AND ACCREDITATIONS SECTION */}
       <Section title={AwardSectionTitle}>
-        <div>
+        <div style={{display:"flex", flexWrap:"wrap", justifyContent:"space-evenly"}}>
           {images &&
             images.map((image, index) => (
-              <img
+              <CustomImage
                 key={index}
-                style={{ margin: "10px 40px", width: "130px" }}
+                style={{ margin: "10px 40px", width: "130px"}}
                 src={image}
                 alt={`client${index}`}
               />

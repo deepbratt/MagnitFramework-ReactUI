@@ -19,6 +19,7 @@ import { pageRoutes } from "../../../Components/Path";
 import { Hidden } from "@material-ui/core";
 import { Logo } from "../../../Components/Hero/Images";
 import { Colors } from "../../../Theme/color.constants";
+import CustomImage from "../../../Components/CustomImage";
 
 const Header = (props) => {
   const routes = Object.values(pageRoutes);
@@ -45,7 +46,7 @@ const Header = (props) => {
     <AppBar  className={root} position="sticky">
       <Toolbar  className={appbarsolid}>
         <section>
-          <img className={logo} alt="logo" src={Logo} />
+          <CustomImage className={logo} alt="logo" src={Logo} />
         </section>
         {/* Header Menu */}
         <Hidden mdUp>

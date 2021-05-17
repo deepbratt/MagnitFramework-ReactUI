@@ -6,6 +6,7 @@ import { MuiThemeProvider } from "@material-ui/core/styles";
 import { hero,Vector } from "../../Components/Hero/Images";
 import Breakpoints from "../../Theme/theme.breakpoints";
 import { Colors } from "../../Theme/color.constants";
+import CustomImage from "../CustomImage";
 
 const Slider = ({value, headingOne,headingTwo,headingThree,text,data,color}) => {
   
@@ -66,9 +67,9 @@ const {Harlequin ,whiteColor} = Colors;
         </MuiThemeProvider>
       </section>
       
-      <img  alt="sliderImg" src={hero} className={vector} />
+      <CustomImage  alt="sliderImg" src={hero} className={vector} />
         <Hidden smDown>
-        <img  alt="sliderImg" src={Vector} className={spiral}  />
+        <CustomImage  alt="sliderImg" src={Vector} className={spiral}  />
         </Hidden>
       </Paper>
     </div>

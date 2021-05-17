@@ -39,7 +39,7 @@ const CustomImage = (props) => {
       {...props}
       alt={props.alt}
       src={props.src}
-      style={isLoaded ? { display: "block" } : { display: "none" }}
+      style={isLoaded ? props.style : { display: "none" }}
       onError={() => setHasError(true)}
       onLoad={onLoad}
     />
