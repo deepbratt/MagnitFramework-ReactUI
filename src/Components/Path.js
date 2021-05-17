@@ -3,9 +3,11 @@ import Services from "./../Pages/Services";
 import Home from "../Pages/Home/index";
 import Solutions from "../Pages/SolutionsPage/Solutions";
 import Career from "../Pages/Careers/Container";
+import OurBlogs from "../Pages/OurBlogs";
 
 const pathIds = {
   home: "home",
+  blogs: "blogs",
   about: "about",
   services: "services",
   solutions: "solutions",
@@ -15,6 +17,7 @@ const pathIds = {
 
 const pathRouting = {
   home: "/home",
+  blogs: "/blogs",
   about: "/about",
   services: "/services",
   solutions: "/solutions",
@@ -27,6 +30,11 @@ const pageRoutes = {
     path: pathRouting.home,
     sidebarName: "Home",
     component: Home,
+  },
+  [pathIds.blogs]: {
+    path: pathRouting.blogs,
+    sidebarName: "Blogs",
+    component: OurBlogs,
   },
   [pathIds.about]: {
     path: pathRouting.about,

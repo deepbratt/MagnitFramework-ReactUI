@@ -43,7 +43,7 @@ const Services = () => {
       text: "Home",
     },
     {
-      path: "/Services",
+      path: "/services",
       text: "Web Development Services",
     },
   ];
@@ -74,9 +74,12 @@ const Services = () => {
     yellowCommaPattern,
   } = ServicesSectionStyles();
   return (
-
-    <div className={root} >
-      <Banner image={BannerImage} backColor={linearBackground}>
+    <div className={root}>
+      <Banner
+        breadCrumb={<BreadCrumb links={breadCrumData} />}
+        image={BannerImage}
+        backColor={linearBackground}
+      >
         <Typography variant="h2" gutterBottom>
           We Hire Best <br /> Web Developers & Save 50%
         </Typography>
