@@ -16,7 +16,7 @@ import Image4 from "../../assets/images/awardAccredationSection/image 5.png";
 import Image5 from "../../assets/images/awardAccredationSection/image 6.png";
 // import CardComponent from "../../Components/CardComponent";
 import { cards } from "./cardData";
-import CardSlyder from "../../Components/CardSlider";
+// import CardSlyder from "../../Components/CardSlider";
 import startQuote from "../../assets/images/cards/startQuote.png";
 import endQuote from "../../assets/images/cards/EndingQuoteBlue.png";
 import { Colors } from "../../Theme/color.constants";
@@ -25,7 +25,7 @@ import {
   TrainingAndCertificationSectionTitle,
   WhatDoClientSaySectionTitle,
 } from "./constants";
-import ReviewSlider from "../../Components/ReviewSlider";
+// import ReviewSlider from "../../Components/ReviewSlider";
 import { trainingAndCertificationText as TCData } from "../../Utils/Constants/Language";
 import FirstColumn from "../../Components/QuoteCard/FirstColumn"
 import CertificationList from "../../Components/certificationList";
@@ -58,10 +58,6 @@ const Home = (props) => {
   // const { peach, seaGreen, skyBlue, violet, purple, blue } = factCards;
   // const { trainingAndCertification } = sectionBackgroundColors;
 
-  const cardArr = [
-    <CardSlyder cardData={cards} />,
-    <CardSlyder cardData={cards} />,
-  ];
 
   function submitForm() {
     setIsSubmitted(true);
