@@ -11,17 +11,12 @@ export const THEME = createMuiTheme({
         fontFamily: "Poppins",
         color: DoveGray,
         fontSize: "16px",
-        textAlign: "center",
         [breakpoints.down("sm")]: {
           marginTop: "15px",
           whiteSpace: "wrap,",
-          textAlign: "center"
+    
         },
-        [breakpoints.down("xs")]: {
-          fontSize: "15px",
-          whiteSpace: "wrap,",
-          textAlign: "center"
-        },
+     
       },
     },
   },
