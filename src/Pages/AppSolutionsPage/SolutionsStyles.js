@@ -9,10 +9,6 @@ export const SolutionsStyles = makeStyles((theme) => ({
     width: "100%",
     cursor: "pointer",
     boxShadow: "none",
-    [breakpoints.down("md")]: {
-      width: "100%",
-      height: "200px",
-    },
     [breakpoints.down("sm")]: {
       height: "310px",
     },
@@ -24,9 +20,7 @@ export const SolutionsStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    [breakpoints.down("sm")]: {
-      width: "220px",
-    },
+    
   },
   imgSection:{
       display: "flex",
