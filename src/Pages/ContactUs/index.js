@@ -3,6 +3,7 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import image from "../../assets/images/contact-us-banner.jpg";
+import CustomButton from "../../Components/CustomButton";
 import InputField from "../../Components/FormInputs/InputField";
 import MyAccordion from "../../Components/MyAccordion";
 import { contactUsLabelsText } from "../../Utils/Constants/Language";
@@ -88,7 +89,7 @@ const ContactUs = () => {
                     multiline
                   />
                   <div className={button}>
-                    <Button
+                    <CustomButton
                       type="submit"
                       size="small"
                       color="primary"
@@ -100,7 +101,7 @@ const ContactUs = () => {
                       >
                         {submit}
                       </Typography>
-                    </Button>
+                    </CustomButton>
                   </div>
                 </form>
               </CardContent>

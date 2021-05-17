@@ -40,7 +40,7 @@ const MyAccordion = ({ questions }) => {
             </AccordionDetails>
           </Accordion>
         ))}
-      <CustomButton text="See More" />
+      <CustomButton>See More</CustomButton>
     </div>
   );
 };

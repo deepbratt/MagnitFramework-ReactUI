@@ -48,9 +48,10 @@ class ErrorBoundary extends React.Component {
               size={"Large"}
               variant={"none"}
               color="transparent"
-              text={<img src={MagnitLogo} alt="magnit_logo" style={logo} />}
-            />
-            <CustomButton href={window.location.origin} text="Home" />
+            >
+              {<img src={MagnitLogo} alt="magnit_logo" style={logo} />}
+            </CustomButton>
+            <CustomButton href={window.location.origin}>Home</CustomButton>
           </div>
           <img src={ErrorBoundaryImage} alt="error-image" style={errorImage} />
           <div style={textWrapper}>
@@ -68,9 +69,9 @@ class ErrorBoundary extends React.Component {
               href={window.location.origin}
               color="primary"
               size={"Large"}
-              text={<img src={MagnitLogoWhite} alt="magnit_logo_white" style={logo}
-            />}
-            />
+            >
+              {<img src={MagnitLogoWhite} alt="magnit_logo_white" style={logo}/>}
+            </CustomButton>
           </div>
         </div>
       );

@@ -12,6 +12,7 @@ import { MuiThemeProvider } from "@material-ui/core/styles";
 import { FoundersyStyles } from "./Foundersy/foundersyStyles";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
+import CustomButton from "../../Components/CustomButton";
 
 const array = [<Foundersy />, <Foundersy />];
 const AboutUs = () => {

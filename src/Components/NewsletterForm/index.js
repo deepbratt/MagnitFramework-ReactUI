@@ -3,6 +3,7 @@ import NewsletterStyle from "./style";
 import QuarterCircle from "../../assets/images/QuarterCircle.png";
 import HalfCircle from "../../assets/images/HalfCircle.png";
 import Triangle from "../../assets/images/Triangle.png";
+import CustomButton from "../CustomButton";
 
 const NewsletterForm = () => {
   const {
@@ -32,14 +33,14 @@ const NewsletterForm = () => {
           fullWidth
           placeholder="Your Email Address"
         />
-        <Button type="submit" color="primary" variant="contained">
+        <CustomButton type="submit" color="primary" variant="contained">
           <Typography
             style={{ textAlign: "center", color: "#fff" }}
             variant="button"
           >
             Get Started
           </Typography>
-        </Button>
+        </CustomButton>
       </form>
     </Card>
   );

@@ -8,6 +8,7 @@ import Breakpoints from "../../../Theme/theme.breakpoints";
 import { Colors } from "../../../Theme/color.constants";
 import {Array}  from "../../../Utils/Constants/Language/en/SolutionsPageData";
 import {heading,subheading}  from "../../../Utils/Constants/Language/en/SolutionsPageData"
+import CustomButton from "../../../Components/CustomButton";
 
 const WeOfferContext = () => {
   const classes = useStyles();
@@ -31,7 +32,7 @@ const WeOfferContext = () => {
                   <section style={{ color: DoveGray, paddingTop: "10px" }}>
                     <Paragraph para={data.paragraph} />
                   </section>
-                  <Button
+                  <CustomButton
                     style={{
                       textTransform: "none",
                     }}
@@ -40,7 +41,7 @@ const WeOfferContext = () => {
                     size={Breakpoints()}
                   >
                     Learn More
-                  </Button>
+                  </CustomButton>
                 </section>
               </section>
             </CardContent>
