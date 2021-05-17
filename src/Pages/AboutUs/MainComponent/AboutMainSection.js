@@ -6,6 +6,7 @@ import Paragraph from "../../../ContainerStructure/Headings/Paragraphs/Paragraph
 import { MainData } from "../../../Utils/Constants/Language/AboutUsData";
 import BreadCrumb from "../../../Components/BreadCrumb";
 import { Colors } from "../../../Theme/color.constants";
+import CustomImage from "../../../Components/CustomImage";
 const {Mirage}=Colors;
 const AboutMainSection = (props) => {
  
@@ -32,7 +33,7 @@ const AboutMainSection = (props) => {
               <BreadCrumb links={breadcrumbData} />
             </div>
             <CardContent className={cardSec}>
-              <img className={hero} alt="hero" src={props.hero} />
+              <CustomImage className={hero} alt="hero" src={props.hero} />
             </CardContent>
           </Card>
           <Card>

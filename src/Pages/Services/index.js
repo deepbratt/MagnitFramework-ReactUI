@@ -18,6 +18,7 @@ import BannerImage from "../../assets/services/BannerImage.png";
 import PatternLeft from "../../assets/PatternLeft.png";
 import BreadCrumb from "../../Components/BreadCrumb";
 import CommentSection from "../../Components/CommentSection";
+import CustomImage from "../../Components/CustomImage";
 
 const Services = () => {
   const { skyBlue, linearBackground } = Colors;
@@ -28,7 +29,7 @@ const Services = () => {
       text: "Home",
     },
     {
-      path: "/Services",
+      path: "/services",
       text: "Web Development Services",
     },
   ];
@@ -41,7 +42,9 @@ const Services = () => {
   } = ServicesSectionStyles();
   return (
     <CommentSection >
-      <Banner
+ 
+
+ <Banner
         image={BannerImage}
         backColor={linearBackground}
         breadCrumb={<BreadCrumb links={breadCrumData} />}
@@ -61,20 +64,21 @@ const Services = () => {
           <Typography variant="buttom">Get Started</Typography>
         </Button>
       </Banner>
+
+
       <div style={{position:"relative"}}>
       <img className={leftPattern} src={PatternLeft} alt="" srcset="" />
       <Section title={ServicesSectionTitle} highlightWords={1}>
         <PointList data={servicesData} />
       </Section>
       </div>
-    
+
+      <CustomImage className={leftPattern} src={StarFishPattern} alt="" srcset="" />
       <Section title={HiringSectionTitle} highlightWords={2}>
         <OptionsTab />
       </Section>
-     
-      <img className={rightPattern} src={StarFishPattern} alt="" srcset="" />
+      <CustomImage className={rightPattern} src={StarFishPattern} alt="" srcset="" />
       <Section title={WhyHireSectionTitle} highlightWords={3}>
-      
         <PointList data={hireUsData} horizontal={true} />
       </Section>
       
@@ -82,7 +86,7 @@ const Services = () => {
         <GlanceSection backColor={skyBlue} />
       </Section>
       </CommentSection>
-   
+
   );
 };
 
