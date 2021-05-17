@@ -25,6 +25,7 @@ export const heading = createMuiTheme({
         fontSize: "40px",
         lineHeight: 1.6,
         fontWeight: "bolder",
+        color:Mirage,
         [breakpoints.down("md")]: {
           fontSize: "37px",
         },

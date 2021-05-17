@@ -12,6 +12,7 @@ const PointBadge = ({ horizontal, data }) => {
       <CustomImage
         className={badge}
         width="50px"
+        height="50px"
         style={{ backgroundColor: color }}
         src={icon}
         alt=""
