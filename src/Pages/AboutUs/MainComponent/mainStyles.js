@@ -38,6 +38,7 @@ export const useStyles = makeStyles((theme) => ({
   paragraph: {
     width: "80%",
     // marginBottom: "50px",
+    textAlign: "center",
     marginTop: "20px",
     color: DoveGray,
     [breakpoints.only("md")]: {

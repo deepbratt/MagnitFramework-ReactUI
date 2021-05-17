@@ -8,8 +8,10 @@ import MyAccordion from "../../Components/MyAccordion";
 import { contactUsLabelsText } from "../../Utils/Constants/Language";
 import { FQASectionTitle } from "../Home/constants";
 import Section from "../Section";
-import QuestionData from "./questions.json";
+import {Data} from "./questions.js";
 import LayoutStyle from "./style";
+import MyAccordian from "../../Components/MyAccordion/index"
+
 
 const ContactUs = () => {
   const { root, wrap, content, cover, form, label, button } = LayoutStyle();
@@ -108,7 +110,7 @@ const ContactUs = () => {
           </Grid>
           <Grid item xs={12} md={6}>
             <Section title={FQASectionTitle}>
-              <MyAccordion questions={QuestionData} />
+              <MyAccordian />
             </Section>
           </Grid>
         </Grid>

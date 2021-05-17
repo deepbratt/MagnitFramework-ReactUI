@@ -8,7 +8,7 @@ export const banner = Banner;
 export const rightPattern = RightPattern
 export const leftPattern = LeftPattern
 const { Timing, Geo, Grow, Health, mapIcon } = Icons;
-const { darkBlueColor, rosePinkColor, SeaGreen, mustardColor } = Colors;
+const { darkBlueColor, rosePinkColor, seaGreen, mustardColor } = Colors;
 export const MainData = {
   heading: "Join our Team",
   subHeading:
@@ -35,12 +35,11 @@ export const Array = [
     title: "Work from Anywhere",
     desc: "Since we are a remote team, you can work from anywhere, whether it be from home, a cafe, or the beach."
   },
-
   {
-    color: SeaGreen,
+    color: seaGreen,
     icon: Grow,
     title: "Company Growth",
-    desc: "We are all learning, and we are not perfect. Any feedback or ideas you are always welcome."
+    desc:"We are all learning, and we are not perfect. Any feedback or ideas you are always welcome."
   },
 
   {
@@ -50,6 +49,8 @@ export const Array = [
     desc: "We want you to always be feeling your best, gym membership up to $100 per year for full time employees."
   },
 ];
+
+
 
 
 // Current Oppurtunities
