@@ -72,12 +72,9 @@ const ContactUsForm = (props) => {
           multiline
         />
         <div className={button}>
-          <CustomButton
-            type="submit"
-            size="medium"
-            variant="contained"
-            text={submit}
-          />
+          <CustomButton type="submit" size="medium" variant="contained">
+            {submit}
+          </CustomButton>
         </div>
       </form>
     </>
