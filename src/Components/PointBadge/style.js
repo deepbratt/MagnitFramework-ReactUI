@@ -1,9 +1,12 @@
 import { makeStyles } from "@material-ui/core";
+import {Colors} from "../../Theme/color.constants"
+const {Harlequin,Mirage,darkSilver,}=Colors;
 const PointBadgeStyles = makeStyles((theme) => ({
   vertical: {
     margin: "15px",
+    zIndex:1,
     "&:hover": {
-     border: "1px solid #2CD400"
+     border:`solid 1px ${Harlequin}`,
     },
   },
   inline: { display: "flex",
@@ -26,11 +29,13 @@ const PointBadgeStyles = makeStyles((theme) => ({
     justifyContent: "center",
     textAlign: "left",
     "& > p": {
+      color:darkSilver,
       [theme.breakpoints.down("sm")]: {
         fontSize: "10px",
       },
     },
     "& > h3": {
+    color:Mirage,
       [theme.breakpoints.down("sm")]: {
         fontSize: "12px",
       },
@@ -42,11 +47,13 @@ const PointBadgeStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     "& > p": {
+      color:darkSilver,
       [theme.breakpoints.down("sm")]: {
         fontSize: "10px",
       },
     },
     "& > h3": {
+      color:Mirage,
       [theme.breakpoints.down("sm")]: {
         fontSize: "12px",
       },

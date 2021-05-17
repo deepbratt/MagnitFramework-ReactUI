@@ -17,7 +17,7 @@ const CertificationList = ({ root, data }) => {
     <Grid container className={root}>
       <Grid item xs={12} md={6}>
         <div className={text}>
-          <Typography variant="h3">{title}</Typography>
+          <Typography variant="h3" >{title}</Typography>
           <Typography variant="subtitle1" component="p">
             {content}
           </Typography>

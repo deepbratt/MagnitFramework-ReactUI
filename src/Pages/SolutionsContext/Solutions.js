@@ -7,6 +7,7 @@ import MidSection from "./SolutionsMidSection";
 import Breakpoints from "../../Theme/theme.breakpoints";
 import {Colors} from "../../Theme/color.constants"
 import {Data} from "../../Utils/Constants/Language/en/SolutionsText"
+import CustomButton from "../../Components/CustomButton";
 
 const Solutions = () => {
   const classes = useStyles();
@@ -27,9 +28,10 @@ const Solutions = () => {
         <PrimarySection />
         <MidSection />
         <MuiThemeProvider theme={THEME}>
-        <Button style={{backgroundColor: whiteColor}} variant="contained" size={Breakpoints()} >
+        <CustomButton style={{backgroundColor: whiteColor,padding:".3rem 1.9rem"}} variant="contained" size={Breakpoints()} >
+
           See More
-        </Button>
+        </CustomButton>
         </MuiThemeProvider>
       </Paper>
     </>

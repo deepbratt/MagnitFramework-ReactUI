@@ -1,6 +1,7 @@
 import { Grid, Paper } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import PropTypes from "prop-types";
+import CustomImage from "../../Components/CustomImage";
 import LayoutStyle from "./style";
 
 const Section = ({
@@ -31,12 +32,12 @@ const Section = ({
       <div className={content}>
         {startQuote && (
           <>
-            <img
+            <CustomImage
               className={startQuote1}
               src={startQuote}
               alt="Start Quote Icon"
             />
-            <img
+            <CustomImage
               className={startQuote2}
               src={startQuote}
               alt="Start Quote Icon"
@@ -45,12 +46,12 @@ const Section = ({
         )}
         {endQuote && (
           <>
-            <img className={endQuote1} src={endQuote} alt="End Quote Icon" />
-            <img className={endQuote2} src={endQuote} alt="End Quote Icon" />
+            <CustomImage className={endQuote1} src={endQuote} alt="End Quote Icon" />
+            <CustomImage className={endQuote2} src={endQuote} alt="End Quote Icon" />
           </>
         )}
         {title && (
-          <Typography className={header} color="textPrimary" variant="h2">
+          <Typography className={header} color="textPrimary" variant="h2" >
             {normalTitle}
             <span className={underlinedStyles}>{underlinedTitle}</span>
           </Typography>

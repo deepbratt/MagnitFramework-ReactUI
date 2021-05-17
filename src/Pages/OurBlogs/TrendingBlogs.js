@@ -67,7 +67,7 @@ const TrendingBlogs = ({ featureImage, cardData }) => {
               ))}
           </CardContent>
           <CardActions>
-            <CustomButton text={buttonText} />
+            <CustomButton>{buttonText}</CustomButton>
           </CardActions>
         </Card>
       </Grid>
