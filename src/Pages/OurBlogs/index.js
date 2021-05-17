@@ -10,6 +10,7 @@ import TrendingBlogCard from "../../assets/OurBlogs/TrendingBlogCard.png";
 import BreadCrumb from "../../Components/BreadCrumb";
 import Section from "../Section";
 import TrendingBlogs from "./TrendingBlogs";
+import ReviewSlider from "../../Components/ReviewSlider";
 
 const OurBlogs = () => {
   const { title, subtitle } = BannerText;
@@ -26,6 +27,13 @@ const OurBlogs = () => {
     },
   ];
   const { header, card } = TrendingBlogsSectionText;
+
+  const slideArr = [
+    <TrendingBlogs featureImage={TrendingBlogCard} cardData={card} />,
+    <TrendingBlogs featureImage={TrendingBlogCard} cardData={card} />,
+    <TrendingBlogs featureImage={TrendingBlogCard} cardData={card} />,
+  ];
+
   return (
     <>
       <Banner
@@ -41,7 +49,7 @@ const OurBlogs = () => {
         </Typography>
       </Banner>
       <Section title={header}>
-        <TrendingBlogs featureImage={TrendingBlogCard} cardData={card} />
+        <ReviewSlider slides={slideArr} showArrows={false}/>
       </Section>
     </>
   );
