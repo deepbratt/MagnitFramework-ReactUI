@@ -29,7 +29,7 @@ const FactsContainer = () => {
                   <CardContent className={cardContent}>
                     <img
                       className={Avatar}
-                      height="50px"
+                      height="35px"
                       src={data.avatar}
                       alt="Icon"
                     />

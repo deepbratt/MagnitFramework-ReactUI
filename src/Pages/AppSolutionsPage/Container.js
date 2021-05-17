@@ -7,6 +7,7 @@ import Slider from "./ReviewSlider"
 import WhyUsContainer from "../SolutionsPage/WhyUsContainer"
 import Facts from "./FactsSection/FactsContainer"
 import StairCaseContext from "./StairCaseSection/HowItWorksContext"
+import AdminContext from "./AdminContext"
 
 const Solutions = () => {
  const {root} = ServicesSectionStyles()
@@ -18,6 +19,9 @@ const Solutions = () => {
         </Grid>
         <Grid item >
         <FeaturesSection/>
+        </Grid>
+        <Grid item lg={12} md={12} xs={12}>
+        <AdminContext/>
         </Grid>
         <Grid item lg={12} md={12} xs={12}>
         <StairCaseContext/>

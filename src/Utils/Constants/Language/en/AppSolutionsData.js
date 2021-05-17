@@ -13,6 +13,7 @@ import Icon3 from "../../../../assets/solutions/book.png"
 import Icon4 from "../../../../assets/solutions/phone.png"
 import { Colors } from "../../../../Theme/color.constants";
 import * as Icons from "../../../../assets/icons/icon.constants";
+import Admin from "../../../../assets/solutions/admin.png"
 
 const {
   lightOrange,
@@ -187,7 +188,10 @@ export const StairCaseData = [{
 }
 ]
 
+// Admin Section
 
-
+export const adminHeading = "User Friendly Admin"
+export const paragraph = "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+export const adminImg = Admin
 
 export default { featuresDataOne };
