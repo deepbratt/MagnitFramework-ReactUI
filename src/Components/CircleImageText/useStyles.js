@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
   wrapper:{
       display:"flex",
     //   justifyContent:"space-around",
-    //   alignItems:"center",
+      alignItems:"center",
       width:"500px",
     //   backgroundColor:"red"
   }

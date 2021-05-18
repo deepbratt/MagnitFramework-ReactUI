@@ -16,8 +16,9 @@ import { caseStudies } from "../../../Utils/Constants/Language";
 
 const InterActiveSection = () => {
   const classes = useStyles();
-  const text = caseStudies.demoText
+  const text = caseStudies.demoText;
   return (
+    // <span className={classes.root}>
       <span className={classes.wrapper}>
         <MiddleImgBtn className={classes.middleImage} />
         <span className={classes.leftTop}>
@@ -62,6 +63,7 @@ const InterActiveSection = () => {
         <LeftLinksPath className={classes.leftPath} />
         <RightLinksPath className={classes.rightPath} />
       </span>
+    // </span>
   );
 };
 

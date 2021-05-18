@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@material-ui/core";
+import { Grid, Hidden, Typography } from "@material-ui/core";
 import React from "react";
 import { withRouter } from "react-router";
 import Banner from "../../Components/Banner";
@@ -8,10 +8,11 @@ import useStyles from "./InterActiveSection/useStyles";
 import businessPeople from "../../assets/CaseStudies/businessPeople.png";
 import AboutMainSection from "../AboutUs/MainComponent/AboutMainSection";
 import { caseStudies } from "../../Utils/Constants/Language";
+import ResponsiveInterActiveSection from "./ResponsiveInterActiveSection/ResponsiveInterActiveSection";
 
 const CaseStudies = () => {
   const classes = useStyles();
-  const breadCrumbs = [
+  const breadcrumbData = [
     {
       path: "/",
       text: "Home",
@@ -25,17 +26,34 @@ const CaseStudies = () => {
     <Grid container>
       <Grid item xs={12}>
         {/* <Banner breadCrumb="Home / Case Studies" image={businessPeople} /> */}
-        <AboutMainSection hero={businessPeople} card={false} breadCrumbsData={breadCrumbs}/>
+        <AboutMainSection
+          hero={businessPeople}
+          card={false}
+          breadcrumbData={breadcrumbData}
+        />
       </Grid>
       <Grid item xs={12}>
-        <Section title={caseStudies.heading}>
-          <Typography variant="h5" component="h5" style={{ width: "100%" }}>
-            {caseStudies.subHeading}
-          </Typography>
-        </Section>
+        <Section
+          title={caseStudies.heading}
+          subTitle={caseStudies.subHeading}
+        ></Section>
       </Grid>
-      <Grid container className={classes.root}>
-        <InterActiveSection />
+      <Grid
+        item
+        xs={12}
+        style={{ display: "flex", minHeight: "55vh" }}
+        justify="center"
+      >
+        <Hidden lgUp>
+          <span style={{marginTop:"-120px"}}>
+            <ResponsiveInterActiveSection />
+          </span>
+        </Hidden>
+        <Hidden mdDown>
+          <Section>
+            <InterActiveSection />
+          </Section>
+        </Hidden>
       </Grid>
     </Grid>
   );
