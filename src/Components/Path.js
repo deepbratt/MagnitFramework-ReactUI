@@ -21,7 +21,7 @@ const pathIds = {
   appSolutions: "appSolutions"
 };
 
-const pathRouting = {
+ const pathRouting = {
   home: "/home",
   blogs: "/blogs",
   about: "/about",
@@ -71,14 +71,17 @@ const pageRoutes = {
   },
   [pathIds.appSolutions]: {
     path: pathRouting.appSolutions,
+    sidebarName: "App Solutions",
     component: AppSolutions
   },
     [pathIds.event]: {
     path: pathRouting.event,
+    sidebarName: "Events",
     component:Event,
   },
   [pathIds.testimonial]: {
     path: pathRouting.testimonial,
+    sidebarName: "Testimonials",
     component:Testimonials,
   },
 };

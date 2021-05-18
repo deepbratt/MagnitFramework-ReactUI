@@ -84,6 +84,9 @@ export const Colors = {
   cerulean : "#00AAE1",
   robbinEggBlue: "#00D7E1",
   caribbeanGreen: "#00D2AA",
-  pastelGreen: "#8CD26E"
+  pastelGreen: "#8CD26E",
+
+  // Menu
+  harlequinDark: "#28A300"
 
 };

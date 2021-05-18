@@ -51,7 +51,7 @@ const SideBar = () => {
                          <MuiThemeProvider  theme={THEME}>
                         <ListItem>
                           <ListItemText
-                            key = {index} style={{ padding: "15px" }}
+                            key = {index} style={{ paddingLeft: "30px", paddingBottom: "15px" }}
                             primary={sidebarName}
                             className={list}
                           />
