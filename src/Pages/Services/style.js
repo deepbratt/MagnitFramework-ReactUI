@@ -37,8 +37,8 @@ const ServicesSectionStyles = makeStyles((theme) => ({
     position:"absolute",
     left: "-4%",
     top: "0%",
-    opacity: 0.3,
-    width: "700px",
+    opacity: 0.6,
+    width: "550px",
     zIndex: 0,
     
     [theme.breakpoints.down("md")]: {
@@ -54,8 +54,8 @@ const ServicesSectionStyles = makeStyles((theme) => ({
   },
   rightPattern: {
     right: "0%",
-    top: "25%",
-    opacity: 0.3,
+    top: "28%",
+    opacity: 0.6,
     width: "700px",
     [theme.breakpoints.down("md")]: {
       width: "500px",

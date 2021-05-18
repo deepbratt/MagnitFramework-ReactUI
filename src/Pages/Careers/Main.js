@@ -7,6 +7,7 @@ import Heading5 from "../../ContainerStructure/Headings/Heading5";
 import {MainData} from "../../Utils/Constants/Language/en/CareersData"
 import Breakpoints from "../../Theme/theme.breakpoints"
 import {Colors} from "../../Theme/color.constants"
+import CustomImage from "../../Components/CustomImage"
 import CustomButton from "../../Components/CustomButton";
 const Main = (props) => {
   const {
@@ -31,7 +32,7 @@ const Main = (props) => {
         <section >
           <Card className={card}>
             <CardContent className={cardSec}>
-                <img className={hero} alt="hero" src={props.hero} />
+                <CustomImage className={hero} alt="hero" src={props.hero} />
             </CardContent>
           </Card>
           <Card>

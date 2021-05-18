@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography } from "@material-ui/core";
+import { Typography , Button} from "@material-ui/core";
 import Breakpoints from "../../Theme/theme.breakpoints";
 import Banner from "../../Components/Banner/index";
 import { Colors } from "../../Theme/color.constants";
@@ -9,12 +9,11 @@ import {
   bannerImage,
   bannerButtonText,
 } from "../../Utils/Constants/Language/en/AppSolutionsData";
-import Button from "../../Components/CustomButton/index";
 import Paragraph from "../../ContainerStructure/Headings/Paragraphs/Paragraph";
 import { SolutionsStyles } from "./SolutionsStyles";
 import BreadCrumb from "../../Components/BreadCrumb";
 const BannerSection = () => {
-  const { linearBackground } = Colors;
+  const { linearBackground , Harlequin, whiteColor} = Colors;
   const { breadCrumbStyles } = SolutionsStyles();
   const breadcrumbData = [
     {
@@ -41,8 +40,10 @@ const BannerSection = () => {
             <Button
               variant="contained"
               size={Breakpoints()}
-              text={bannerButtonText}
-            />
+              style={{backgroundColor: Harlequin, color: whiteColor}}
+              >
+                {bannerButtonText}
+              </Button>
           </section>
         </section>
       </Banner>
