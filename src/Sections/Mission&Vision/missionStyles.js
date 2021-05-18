@@ -14,10 +14,9 @@ export const missionStyles = makeStyles((theme) => ({
     paddingTop: "20px",
     width: "100%",
     position: "relative",
-    display: "flex"
+    display: "flex",
   },
   card: {
-    width: "30%",
     zIndex: 1,
     height: "300px",
     display: "flex",
@@ -28,18 +27,8 @@ export const missionStyles = makeStyles((theme) => ({
     boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
     margin: "20px",
     cursor: "pointer",
-    [breakpoints.only("md")]: {
-      width: "30%",
-    },
-    [breakpoints.only("sm")]: {
-      width: "40%",
-    },
-    [breakpoints.down("xs")]: {
-      width: "70%",
-    },
   },
   card2: {
-    width: "30%",
     zIndex: 1,
     height: "300px",
     display: "flex",
@@ -49,15 +38,6 @@ export const missionStyles = makeStyles((theme) => ({
     boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
     margin: "20px",
     cursor: "pointer",
-    [breakpoints.only("md")]: {
-      width: "30%",
-    },
-    [breakpoints.only("sm")]: {
-      width: "40%",
-    },
-    [breakpoints.down("xs")]: {
-      width: "70%",
-    },
   },
   Icon: {
     width: "70px",
