@@ -86,6 +86,7 @@ export const Colors = {
     "invert(100%) sepia(6%) saturate(7462%) hue-rotate(267deg) brightness(114%) contrast(97%)",
   Solitude: "#E8F2FE",
   shineBlue: '#006FED',
+  coldBlue: '#CEE4FF',
   // App Solutions page
   lochmara : "#0082D2",
   cerulean : "#00AAE1",

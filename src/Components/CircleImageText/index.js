@@ -4,10 +4,10 @@ import { ReactComponent as CircleImage } from "../../assets/CaseStudies/circleIm
 import CircleImageComponent from "./CircleImage";
 import useStyles from "./useStyles";
 
-const CircleImageText = ({ text, textRight=false, innerImg, props }) => {
+const CircleImageText = ({ text, textRight=false, innerImg, clickHandler,props }) => {
   const classes = useStyles();
   return (
-    <span className={classes.wrapper}>
+    <span className={classes.wrapper} onClick={clickHandler}>
       {textRight && <CircleImageComponent innerImg={innerImg} {...props} />}
       <Typography
         variant="h5"

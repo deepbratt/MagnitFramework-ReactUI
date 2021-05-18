@@ -81,5 +81,8 @@ export const errorBoundaryText = {
 export const caseStudies = {
   heading:"Case /Studies",
   subHeading:'On How We Innovate, Implement, and Deliver',
-  demoText:"hello worldhello worldhdhello worldhello imaa baby girld worldhello world"
+  demoText:"hello worldhello worldhdhello worldhello imaa baby girld worldhello world",
+  awardsTitle:"Awards & /Accreditations",
+  faqQuestions:"hello, world FaqNonInteractive FaqNonInteractive FaqNonInteractive FaqNonInteractive FaqNonInteractive",
+  faqAns:" FaqNonInteractive FaqNonInteractive FaqNonInteractive FaqNonInteractive  FaqNonInteractive FaqNonInteractive FaqNonInteractive FaqNonInteractive  FaqNonInteractive FaqNonInteractive FaqNonInteractive FaqNonInteractive  FaqNonInteractive FaqNonInteractive FaqNonInteractive FaqNonInteractive  FaqNonInteractive FaqNonInteractive FaqNonInteractive FaqNonInteractive  FaqNonInteractive FaqNonInteractive FaqNonInteractive FaqNonInteractive"
 }
