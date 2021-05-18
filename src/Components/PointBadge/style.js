@@ -7,6 +7,7 @@ const PointBadgeStyles = makeStyles((theme) => ({
     zIndex:1,
     "&:hover": {
      border:`solid 1px ${Harlequin}`,
+     boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
     },
   },
   inline: { display: "flex",
