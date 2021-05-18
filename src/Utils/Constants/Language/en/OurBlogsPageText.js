@@ -120,50 +120,5 @@ export const LatestBlogsSectionText = {
         date: "12 April,2021",
       },
     },
-    {
-      coverImage: UIUXInspiration,
-      imageText: "",
-      title: "Top UI/UX Design Works for Inspiration",
-      body: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip",
-      ],
-      buttonText: "Read More",
-      detail: {
-        authName: "Maria doe",
-        authDesig: "CEO logi infotech",
-        category: "UI/UX",
-        date: "12 April,2021",
-      },
-    },
-    {
-      coverImage: UIUXInspiration,
-      imageText: "",
-      title: "Top UI/UX Design Works for Inspiration",
-      body: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip",
-      ],
-      buttonText: "Read More",
-      detail: {
-        authName: "Maria doe",
-        authDesig: "CEO logi infotech",
-        category: "UI/UX",
-        date: "12 April,2021",
-      },
-    },
-    {
-      coverImage: UIUXInspiration,
-      imageText: "",
-      title: "Top UI/UX Design Works for Inspiration",
-      body: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip",
-      ],
-      buttonText: "Read More",
-      detail: {
-        authName: "Maria doe",
-        authDesig: "CEO logi infotech",
-        category: "UI/UX",
-        date: "12 April,2021",
-      },
-    },
   ],
 };

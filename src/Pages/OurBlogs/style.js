@@ -80,7 +80,12 @@ const OurBlogsStyles = makeStyles((theme) => ({
   leftPattern: {
     position: "absolute",
     left: "0%",
-    bottom: "0%",
+    bottom: "-1%",
+  },
+  rightPattern: {
+    position: "absolute",
+    right: "0%",
+    top: "-20%",
   },
 }));
 

@@ -8,18 +8,20 @@ import {
 } from "../../Utils/Constants/Language/en/OurBlogsPageText";
 import BannerImage from "../../assets/OurBlogs/BannerImage.png";
 import TrendingBlogCard from "../../assets/OurBlogs/TrendingBlogCard.png";
-// import BackGroudnPatternLeft from "../../assets/OurBlogs/LatestBlogPattern.png";
+import BackGroudnPatternLeft from "../../assets/OurBlogs/LatestBlogPattern.png";
+import BackGroudnPatternRight from "../../assets/OurBlogs/LatestBlogPatternRight.png";
 import BreadCrumb from "../../Components/BreadCrumb";
 import Section from "../Section";
 import TrendingBlogs from "./TrendingBlogs";
 import LatestBlogs from "./LatestBlogs";
 import ReviewSlider from "../../Components/ReviewSlider";
 import { Pagination } from "@material-ui/lab";
-// import OurBlogsStyles from "./style";
+import OurBlogsStyles from "./style";
 
 const OurBlogs = () => {
   const { title, subtitle } = BannerText;
   const { linearBackground, BlueRibbon } = Colors;
+  const { leftPattern, rightPattern } = OurBlogsStyles;
 
   const breadCrumData = [
     {
@@ -38,7 +40,21 @@ const OurBlogs = () => {
     <TrendingBlogs featureImage={TrendingBlogCard} cardData={card} />,
     <TrendingBlogs featureImage={TrendingBlogCard} cardData={card} />,
   ];
-  // const {} = OurBlogsStyles;
+
+  const latestBlogsSectionPatterns = [
+    {
+      image: (
+        <img width="100%" height="100%" src={BackGroudnPatternLeft} alt="" />
+      ),
+      styles: leftPattern,
+    },
+    // {
+    //   image: (
+    //     <img width="100%" height="100%" src={BackGroudnPatternRight} alt="" />
+    //   ),
+    //   styles: rightPattern,
+    // },
+  ];
   return (
     <>
       <Banner
@@ -60,8 +76,8 @@ const OurBlogs = () => {
         title={LatestBlogsSectionText.header}
         backColor={BlueRibbon}
         titleColor="white"
+        patterns={latestBlogsSectionPatterns}
       >
-        {/* <img className={leftPattern} src={BackGroudnPatternLeft} alt="" /> */}
         <Grid
           container
           justify="center"
