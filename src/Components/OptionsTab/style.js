@@ -22,6 +22,7 @@ const OptionTabStyles = makeStyles((theme) => ({
     width: "35%",
     [theme.breakpoints.down("sm")]: {
       width: "100%",
+      margin: "10px 5px 10px 0px"
     },
     "& .MuiTabs-flexContainerVertical": {
       [theme.breakpoints.down("sm")]: {
