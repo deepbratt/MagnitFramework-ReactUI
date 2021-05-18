@@ -86,6 +86,7 @@ export const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     color: greyColor,
+    
     "&:hover": {
       color: blackColor,
       cursor: "pointer",
@@ -98,23 +99,16 @@ export const useStyles = makeStyles((theme) => ({
       color: blackColor,
       cursor: "pointer",
     },
+  
   },
 
   link: {
     // marginTop: "5px",
     textDecoration: "none",
-    color: "white",
-    "&:hover": {
-      color: theme.palette.common.white,
-    },
+    color: "black",
   },
   active: {
     color: blackColor,
-    transition: "all .4s linear",
-    "&:hover": {
-      color: theme.palette.common.white,
-      transition: "all .4s linear",
-    },
   },
   logo: {
     width: "7rem",
@@ -122,25 +116,14 @@ export const useStyles = makeStyles((theme) => ({
   },
   menu: {
     width: "250px",
-    marginTop: "10px",
-    borderRadius: "10px",
-    border: `1px solid ${harlequinDark}`,
+    border: `1px solid ${Ash}`,
     display: "flex",
     justifyContent: "center",
     transition: "all .5s linear",
-    backgroundColor: theme.palette.primary.main,
+    backgroundColor: WildSand,
+    
 
-    "&:hover": {
-      backgroundColor: harlequinDark,
-      color: theme.palette.common.white,
-      transition: "all .5s linear",
-    },
-    "&:focus": {
-      backgroundColor: theme.palette.primary.main,
-      color: theme.palette.common.white,
-      "& .MuiListItemIcon-root, & .MuiListItemText-primary": {
-        color: theme.palette.common.white,
-      },
-    },
+   
+  
   },
 }));
