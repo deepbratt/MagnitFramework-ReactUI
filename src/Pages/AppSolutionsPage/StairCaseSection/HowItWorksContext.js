@@ -10,6 +10,7 @@ import {
   StairCaseData,
   stairCaseHeading,
 } from "../../../Utils/Constants/Language/en/AppSolutionsData";
+import CustomImage from "../../../Components/CustomImage"
 const HowItWorksContext = () => {
   const { cardSec } = useStyles();
   const { card2, root, devSec, image, underlined } = missionStyles();
@@ -32,7 +33,7 @@ const HowItWorksContext = () => {
               <Card style={{ marginTop: data.margin }} className={card2}>
                 <CardContent style={{ padding: "0px" }}>
                   <section className={image}>
-                    <img src={data.img} alt="image" />
+                    <CustomImage src={data.img} alt="image" />
                   </section>
                   <section
                     style={{

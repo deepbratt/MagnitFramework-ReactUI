@@ -72,6 +72,13 @@ export const Colors = {
   darkJungleGreen: "#161C28",
   paletteBlue: "#EFF6FF",
   darkSilver: "#717171",
+  deepSaffron: "#F5A12C",
+  ultramarineBlue: "#376AED",
+  carrotOrange: "#E36A2C",
+  seaSerpent: "#60D2D9",
+  begonia: "#EF6E78",
+  brunswickGreen: "#1A584F",
+  spaceCadet: "#1F3259",
   chineseWhite: "#E1E1E1",
   // MOSTLY BACKGROUND
   aliceBlue: "#E8F2FE",

@@ -13,7 +13,7 @@ const Solutions = () => {
   const classes = useStyles();
   const { root } = classes;
   const { heading, subHeading } = Data;
-  const { whiteColor, Mirage } = Colors;
+  const { whiteColor, blackColor } = Colors;
   return (
     <>
       <Paper className={root} elevation={0}>
@@ -30,7 +30,7 @@ const Solutions = () => {
             style={{
               backgroundColor: whiteColor,
               padding: ".3rem 1.9rem",
-              color: Mirage,
+              color: blackColor,
             }}
             variant="contained"
             size={Breakpoints()}

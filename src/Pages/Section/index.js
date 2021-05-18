@@ -1,11 +1,13 @@
 import { Grid } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import PropTypes from "prop-types";
+import SectionHeading from "./SectionHeading";
 import CustomImage from "../../Components/CustomImage";
 import LayoutStyle from "./style";
 
 const Section = ({
   title,
+  subTitle,
   children,
   backColor,
   startQuote,
@@ -17,17 +19,13 @@ const Section = ({
   const {
     root,
     content,
-    header,
-    underlinedStyles,
+    subHeader,
+    sectionHeader,
     startQuote1,
     startQuote2,
     endQuote1,
     endQuote2,
   } = LayoutStyle();
-
-  const titleText = title.split("/");
-  const normalTitle = titleText[0];
-  const underlinedTitle = titleText[1];
 
   return (
     <div className={root} style={{ backgroundColor: backColor }}>
@@ -72,18 +70,19 @@ const Section = ({
             />
           </>
         )}
-        {title && (
-          <Typography
-            className={header}
-            color="textPrimary"
-            style={{ color: titleColor }}
-            variant="h2"
-          >
-            {normalTitle}
-            <span className={underlinedStyles}>{underlinedTitle}</span>
-          </Typography>
-        )}
+        <div className={sectionHeader}>
+          {title && <SectionHeading header={title} />}
 
+          {subTitle && (
+            <Typography
+              className={subHeader}
+              color="textPrimary"
+              variant="subtitle1"
+            >
+              {subTitle}
+            </Typography>
+          )}
+        </div>
         <Grid item xs={12}>
           {children}
         </Grid>
@@ -93,12 +92,14 @@ const Section = ({
 };
 
 Section.defaultProps = {
-  backColor: "#FFFFFF",
+  backColor: "transparent",
   title: "",
+  subTitle: "",
 };
 
 Section.propTypes = {
   title: PropTypes.string,
+  subTitle: PropTypes.string,
   children: PropTypes.node.isRequired,
   backColor: PropTypes.string,
   patterns: PropTypes.array,
