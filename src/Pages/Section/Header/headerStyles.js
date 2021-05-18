@@ -123,11 +123,11 @@ export const useStyles = makeStyles((theme) => ({
   menu: {
     width: "250px",
     marginTop: "10px",
-    borderRadius: "20px",
+    borderRadius: "10px",
+    border: `1px solid ${harlequinDark}`,
     display: "flex",
     justifyContent: "center",
     transition: "all .5s linear",
-
     backgroundColor: theme.palette.primary.main,
 
     "&:hover": {
