@@ -21,7 +21,8 @@ const slideArr = [
   <ReviewCard cardData={card} />,
 ];
 
-const ReviewSlider = ({ slides, showArrows }) => {
+const ReviewSlider = ({ slides, showArrows, showDots }) => {
+  const visible = !showDots ? "hidden" : "visible";
   const indicatorStyles = {
     background: "rgba(98, 173, 244, 1)",
     width: 16,
@@ -29,6 +30,7 @@ const ReviewSlider = ({ slides, showArrows }) => {
     borderRadius: 25,
     display: "inline-block",
     margin: "0px 8px",
+    visibility: visible,
   };
   const { nextBtn, prevBtn } = ReviewSliderStyles();
   const customDots = (onClickHandler, isSelected, index, label) => {
@@ -46,6 +48,7 @@ const ReviewSlider = ({ slides, showArrows }) => {
         />
       );
     }
+
     return (
       <li
         style={indicatorStyles}
@@ -126,6 +129,7 @@ const ReviewSlider = ({ slides, showArrows }) => {
 ReviewSlider.defaultProps = {
   slides: slideArr,
   showArrows: true,
+  showDots: true,
 };
 
 export default ReviewSlider;

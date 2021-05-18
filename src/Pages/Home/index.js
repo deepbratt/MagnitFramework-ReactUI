@@ -34,6 +34,7 @@ import HomeStyles from "./style";
 import QuoteCard from "../../Components/QuoteCard";
 import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
+import ReviewSlider from "../../Components/ReviewSlider";
 
 export const AwardSectionImages = [Image1, Image2, Image3, Image4, Image5];
 
@@ -63,6 +64,39 @@ const Home = (props) => {
   //   <CardSlyder cardData={cards} />,
   //   <CardSlyder cardData={cards} />,
   // ];
+
+  const WhyUsSlides = [
+    <>
+      <Hidden smDown>
+        {cards &&
+          cards.map((data, index) => (
+            <Grid key={index} item xs={12} md={6} lg={4}>
+              <QuoteCard cardData={data} />
+            </Grid>
+          ))}
+      </Hidden>
+      <Hidden mdUp>
+        <Grid item>
+          <FirstColumn />
+        </Grid>
+      </Hidden>
+    </>,
+    <>
+      <Hidden smDown>
+        {cards &&
+          cards.map((data, index) => (
+            <Grid key={index} item xs={12} md={6} lg={4}>
+              <QuoteCard cardData={data} />
+            </Grid>
+          ))}
+      </Hidden>
+      <Hidden mdUp>
+        <Grid item>
+          <FirstColumn />
+        </Grid>
+      </Hidden>
+    </>,
+  ];
 
   function submitForm() {
     setIsSubmitted(true);
@@ -121,21 +155,11 @@ const Home = (props) => {
         startQuote={startQuote}
         endQuote={endQuote}
       >
-        <Grid style={{ position: "sticky" }} container direction="row">
-          <Hidden smDown>
-            {cards &&
-              cards.map((data, index) => (
-                <Grid key={index} item xs={12} md={6} lg={4}>
-                  <QuoteCard cardData={data} />
-                </Grid>
-              ))}
-          </Hidden>
-          <Hidden mdUp>
-            <Grid item>
-              <FirstColumn />
-            </Grid>
-          </Hidden>
-        </Grid>
+        <ReviewSlider
+          showArrows={false}
+          showDots={false}
+          slides={WhyUsSlides}
+        />
 
         <CustomButton>See More</CustomButton>
         {/* <ReviewSlider slides={cardArr} /> */}
