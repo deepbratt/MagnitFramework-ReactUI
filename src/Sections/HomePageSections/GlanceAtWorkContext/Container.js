@@ -5,7 +5,7 @@ import {
   Typography,
   Card,
   CardContent,
-  Grid,
+  Grid
 } from "@material-ui/core";
 import Breakpoints from "../../../Theme/theme.breakpoints";
 import * as Images from "../../../Components/Hero/Images"
@@ -32,6 +32,7 @@ const Container = ({backColor}) => {
       <Grid container style={{backgroundColor: backColor}} className={root} elevation={0}>
         
       <Grid style={{color: whiteColor}} item lg={12} md={12} xs={12}>
+
           <MuiThemeProvider theme={THEME}>
             <Typography variant="h4" >
             {title}
@@ -40,6 +41,7 @@ const Container = ({backColor}) => {
           </Grid>
         <Grid item className={cardSec}>
           <Card className={card}>
+
             <CardContent>
                 <Grid item className={devSec}>
                   <CustomImage width="250px" src={image1} alt=""/>

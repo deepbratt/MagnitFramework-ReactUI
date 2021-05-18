@@ -3,7 +3,6 @@ import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 import { Colors } from "../../Theme/color.constants";
 const {Mirage}=Colors;
 const ServicesSectionStyles = makeStyles((theme) => ({
-
   textColor: {
     color:Mirage,
   },
@@ -11,12 +10,6 @@ const ServicesSectionStyles = makeStyles((theme) => ({
     maxWidth: "133px",
     margin: "20px 0",
     padding: "10px",
-  },
-  reviewSlider: {
-    position: "relative",
-    "& > img": {
-      position: "absolute",
-    },
   },
   leftPattern: {
     position:"absolute",
@@ -45,16 +38,16 @@ const ServicesSectionStyles = makeStyles((theme) => ({
     zIndex: 0,
     [theme.breakpoints.down("md")]: {
       width: "500px",
-      right: "0%",
-    top: "25%",
+      right: "-10%",
+    top: "65%",
     },
     [theme.breakpoints.down("sm")]: {
       width: "300px",
-      right: "0%",
-      top: "25%",
+      right: "-10%",
+      top: "88%",
     },
   },
-
+ 
 }));
 
 export default ServicesSectionStyles;

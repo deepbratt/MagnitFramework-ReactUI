@@ -1,14 +1,13 @@
 import { Grid, Paper } from "@material-ui/core";
 import Section from "../Section";
 import FactCard from "../../Components/FactCard";
-import AboutMainSection from "../AboutUs/MainComponent/AboutMainSection";
+import AboutMainSection from "../../Sections/MainComponent/AboutMainSection";
 import Banner from "../../assets/ContactUs/banner.png";
 import {
   RequestAQuote,
   RequestAQuoteSub,
   SomeQuickFactsAboutUs,
   AwardSectionTitleContactUs,
-  ContactUsTitle,
 } from "../../Utils/Constants/Language/en/SectionHeaders";
 import { Colors } from "../../Theme/color.constants";
 import { FactCardText } from "../../Utils/Constants/Language/en/ContactUsPageText";

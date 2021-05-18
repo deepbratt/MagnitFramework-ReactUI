@@ -16,6 +16,7 @@ const HowItWorksContext = () => {
   const { card2, root, devSec, image, underlined } = missionStyles();
   return (
     <>
+
       <Grid container className={root}>
         <Grid item lg={12} xs={12}>
           <MuiThemeProvider theme={THEME}>
@@ -23,6 +24,7 @@ const HowItWorksContext = () => {
               <span className={underlined}>{stairCaseHeading}</span>
             </Typography>
           </MuiThemeProvider>
+
         </Grid>
         <Grid item style={{ paddingBottom: "20px" }} className={cardSec}>
           {StairCaseData.map((data, index) => {

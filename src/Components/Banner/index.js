@@ -16,25 +16,25 @@ const Banner = ({
     BannerStyles();
   return (
     <>
-      <Grid className={root} container style={{ background: linearBackground }}>
+      <Grid  className={root} container style={{ background: linearBackground }}>
         {breadCrumb && (
-          <Grid style={{ position: "absolute" }} item xs={12}>
-            <div className={breadCrumbStyle}>{breadCrumb}</div>
+          <Grid item xs={12} className={breadCrumbStyle}>
+           {breadCrumb}
           </Grid>
         )}
-        <Grid item xs={12} md={6}>
-          <div className={content}>{children}</div>
+        <Grid item xs={12} md={6} className={content}>
+         {children}
         </Grid>
-        <Grid style={{ position: "relative" }} item xs={12} md={6}>
+        <Grid style={{ position: "relative" }} item xs={12} md={5}>
           <CustomImage
             className={patternPosition}
             src={StarFishPinkPattern}
             alt=""
             srcset=""
           />
-          <div className={imageWrapper}>
+          <Grid className={imageWrapper} >
             <CustomImage src={image} alt="" />
-          </div>
+          </Grid>
         </Grid>
       </Grid>
     </>
