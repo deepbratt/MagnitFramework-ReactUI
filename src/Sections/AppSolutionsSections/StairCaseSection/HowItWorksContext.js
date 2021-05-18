@@ -1,5 +1,5 @@
 import React from "react";
-import { useStyles } from "../../../Pages/AboutUs/NumberContext/numberStyles";
+import { useStyles } from "../../NumberContext/numberStyles";
 import { missionStyles } from "./useStyles";
 import { Card, CardContent, Grid, Typography } from "@material-ui/core";
 import Paragraph from "../../../ContainerStructure/Headings/Paragraphs/Paragraph";

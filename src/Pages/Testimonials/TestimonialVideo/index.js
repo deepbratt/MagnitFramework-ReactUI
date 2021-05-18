@@ -10,7 +10,7 @@ import {
   CardHeader,
 } from "@material-ui/core";
 import useStyles from "./style";
-// import Rating from "@material-ui/lab/Rating";
+import Rating from "@material-ui/lab/Rating";
 import play from "../../../assets/Testimonials/play.png";
 const VideoCard = ({ Img, detail, avatar, name, date }) => {
   const {
@@ -35,9 +35,9 @@ const VideoCard = ({ Img, detail, avatar, name, date }) => {
             {date}
           </Typography>
         }
-        // subheader={
-        //   <Rating name="read-only" value={4} readOnly className={rating} />
-        // }
+        subheader={
+          <Rating name="read-only" value={4} readOnly className={rating} />
+        }
         className={header}
       />
       <CardMedia
