@@ -1,7 +1,7 @@
 import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
-import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
+// import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 import { Colors } from "./color.constants";
-const breakpoints = createBreakpoints({});
+// const breakpoints = createBreakpoints({});
 // Object of our themes
 const {Harlequin}= Colors;
 export default function createTheme(options) {
