@@ -1,20 +1,18 @@
 import { Typography } from "@material-ui/core";
 import PropTypes from "prop-types";
+import CustomImage from "../CustomImage";
 import PointBadgeStyles from "./style";
 
 const PointBadge = ({ horizontal, data }) => {
   const { color, icon, title, desc } = data;
-  const {
-    vertical,
-    inline,
-    badge,
-    contentLeft,
-    contentRight,
-  } = PointBadgeStyles();
+  const { vertical, inline, badge, contentLeft, contentRight } =
+    PointBadgeStyles();
   return (
     <div className={horizontal ? inline : vertical}>
-      <img
+      <CustomImage
         className={badge}
+        width="50px"
+        height="50px"
         style={{ backgroundColor: color }}
         src={icon}
         alt=""

@@ -5,6 +5,7 @@ const { Harlequin } = Colors;
 const LayoutStyle = makeStyles((theme) => ({
   root: {
     padding: "60px 0",
+    position: "relative",
   },
   content: {
     position: "relative",
@@ -14,11 +15,15 @@ const LayoutStyle = makeStyles((theme) => ({
       height: "146px",
     },
   },
-  header: {
+  sectionHeader: {
     marginBottom: "60px",
+    color: "rgba(21, 27, 39, 1)",
     [theme.breakpoints.down("sm")]: {
       fontSize: "1.5rem",
     },
+  },
+  subHeader: {
+    color: "grey",
   },
   underlinedStyles: {
     position: "relative",

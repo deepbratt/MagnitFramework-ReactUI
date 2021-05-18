@@ -4,12 +4,14 @@ import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 import { fontSizes } from "../../Utils/Constants/Font/index";
 const { h5, p } = fontSizes;
 const breakpoints = createBreakpoints({});
-const { skyBlue, Harlequin, chineseWhite } = Colors;
+const { skyBlue, whiteColor,Harlequin,chineseWhite, BlackSqueeze } = Colors;
+
 
 const OptionTabStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     display: "flex",
+    backgroundColor: BlackSqueeze,
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
     },
@@ -25,7 +27,7 @@ const OptionTabStyles = makeStyles((theme) => ({
       [theme.breakpoints.down("sm")]: {
         width: "100%",
         justifyContent: "space-around",
-        flexDirection: " row",
+        flexDirection: " column",
       },
     },
     "& > .PrivateTabIndicator-colorSecondary-79, .PrivateTabIndicator-colorSecondary-81":
@@ -35,22 +37,29 @@ const OptionTabStyles = makeStyles((theme) => ({
   },
   tab: {
     margin: "10px",
-    border: "1px solid rgba(44, 212, 0, 1)",
+    border: `solid 1px ${Harlequin}`,
     color: "black",
     fontSize: "14px",
-    borderRadius: "2px",
-    "& > .MuiTab-textColorInherit .Mui-selected": {
+    borderRadius: "5px",
+    "& > .MuiTab-textColorInherit": {
+      opacity:1
+    },
+    "& .MuiTab-textColorInherit .Mui-selected": {
       backgroundColor: Harlequin,
-      color: "white",
+      color: whiteColor,
+    },
+    [theme.breakpoints.down("sm")]: {
+      maxWidth: "100%",
     },
   },
   tabPanel: {
     backgroundColor: skyBlue,
+    color: whiteColor,
     height: "100%",
     width: "100%",
     borderRadius: "5px",
     "& > *": {
-      color: "white",
+      color: whiteColor,
     },
   },
   detail: {
@@ -64,9 +73,18 @@ const OptionTabStyles = makeStyles((theme) => ({
   bulletText: {
     fontWeight: 400,
     fontSize: p.lg,
-    color: "white",
+    color: whiteColor,
     lineHeight: "20.34px",
   },
+  textDiv:{
+    display:"flex",
+    marginBottom:".4rem"
+  }
+  ,
+  trialBtn:{
+    marginTop:".5rem"
+  }
 }));
+
 
 export default OptionTabStyles;

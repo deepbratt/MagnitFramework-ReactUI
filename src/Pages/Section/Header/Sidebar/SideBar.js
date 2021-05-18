@@ -12,6 +12,7 @@ import { pageRoutes } from "../../../../Components/Path";
 import { useStyles , THEME} from "./sidebarStyles";
 import {Logo} from "../../../../Components/Hero/Images"
 import { MuiThemeProvider } from "@material-ui/core/styles";
+import CustomImage from "../../../../Components/CustomImage";
 
 
 const SideBar = () => {
@@ -34,7 +35,7 @@ const SideBar = () => {
           <CloseIcon className={closeIcon} onClick={() => {setOpen()}} />
         </div>
        <section className={logo}>
-       <img alt="logo" src={Logo} width="120px" />
+       <CustomImage alt="logo" src={Logo} width="120px" />
        </section>
       
         <List style={{ marginTop: "30px" }}>

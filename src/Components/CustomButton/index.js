@@ -6,14 +6,14 @@ const CustomButton = (props) => {
   return (
     <Button
       variant={props.variant}
-      className={`${root} ${props.style}`}
+      className={`${root} ${props.styles}`}
       color="primary"
       size={props.size}
       onClick={() => props.handleClick()}
       fullWidth={props.fullWidth}
       {...props}
     >
-      {props.text}
+      {props.children}
     </Button>
   );
 };

@@ -1,17 +1,17 @@
 import React from "react";
 import { useStyles, THEME } from "./headerStyles";
 import {
-  Typography,
+  // Typography,
   ListItem,
   List,
   ListItemText,
   Toolbar,
   Button,
   AppBar,
-  LinearProgress
+  LinearProgress,
 } from "@material-ui/core";
 import { NavLink } from "react-router-dom";
-import Scrolltrigger from "../../../Theme/Scrolltrigger";
+// import Scrolltrigger from "../../../Theme/Scrolltrigger";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import SideBar from "./Sidebar/SideBar";
 import Breakpoints from "../../../Theme/theme.breakpoints";
@@ -19,33 +19,27 @@ import { pageRoutes } from "../../../Components/Path";
 import { Hidden } from "@material-ui/core";
 import { Logo } from "../../../Components/Hero/Images";
 import { Colors } from "../../../Theme/color.constants";
+import CustomButton from "../../../Components/CustomButton";
+import CustomImage from "../../../Components/CustomImage";
 
 const Header = (props) => {
   const routes = Object.values(pageRoutes);
   const classes = useStyles();
   const { Harlequin, whiteColor } = Colors;
-  const { trigger } = Scrolltrigger();
-  const {
-    logo,
-    list,
-    listItem,
-    button,
-    appbarsolid,
-    link,
-    root,
-    active,
-  } = classes;
+  // const { trigger } = Scrolltrigger();
+  const { logo, list, listItem, button, appbarsolid, link, root, active } =
+    classes;
 
-  const navigated=()=>{
-    props.resetLoader()
-  }
+  const navigated = () => {
+    props.resetLoader();
+  };
 
   return (
     <>
     <AppBar  className={root} position="sticky">
       <Toolbar  className={appbarsolid}>
         <section>
-          <img className={logo} alt="logo" src={Logo} />
+          <CustomImage className={logo} alt="logo" src={Logo} />
         </section>
         {/* Header Menu */}
         <Hidden mdUp>
@@ -75,7 +69,8 @@ const Header = (props) => {
             })}
             <ListItem>
               <MuiThemeProvider theme={THEME}>
-                <Button
+                <CustomButton
+
                   style={{
                     textTransform: "none",
                     backgroundColor: Harlequin,
@@ -87,7 +82,7 @@ const Header = (props) => {
                   onClick={navigated}
                 >
                   Contact Us
-                </Button>
+                </CustomButton>
               </MuiThemeProvider>
             </ListItem>
           </List>

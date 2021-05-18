@@ -3,7 +3,7 @@ import { Colors } from "../../Theme/color.constants";
 import { fontSizes } from "../../Utils/Constants/Font/index";
 const { h3, p } = fontSizes;
 const { lg, sm } = h3;
-const { darkSilver } = Colors;
+const { darkSilver,Mirage } = Colors;
 const CertificationListStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
@@ -14,6 +14,7 @@ const CertificationListStyles = makeStyles((theme) => ({
   text: {
     textAlign: "left",
     "& > h3": {
+      color:Mirage,
       [theme.breakpoints.down("sm")]: {
         fontSize: lg,
       },

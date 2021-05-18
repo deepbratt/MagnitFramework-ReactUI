@@ -3,12 +3,13 @@ import { Button } from "@material-ui/core";
 import PropTypes from "prop-types";
 import { BoxedWidth, FullWidth } from "../Layout/constants";
 import { ToggleType } from "../../Redux/Actions/layoutActions";
+import CustomButton from "../CustomButton";
 
 const LayoutSwiper = ({ layoutType }) => {
   const dispatch = useDispatch();
 
   return (
-    <Button
+    <CustomButton
       data-test="layoutSwiperComponent"
       variant="contained"
       color="primary"
@@ -19,7 +20,7 @@ const LayoutSwiper = ({ layoutType }) => {
       }
     >
       Toggle {layoutType}
-    </Button>
+    </CustomButton>
   );
 };
 

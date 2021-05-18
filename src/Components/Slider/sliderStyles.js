@@ -3,8 +3,9 @@ import { createMuiTheme } from "@material-ui/core/styles";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 
 import { Colors } from "../../Theme/color.constants";
+import { hero,Vector } from "../../Components/Hero/Images";
 
-const { whiteColor, Harlequin, blackColor } = Colors;
+const { whiteColor, Harlequin, blackColor,Mirage } = Colors;
 
 const breakpoints = createBreakpoints({});
 
@@ -24,12 +25,13 @@ export const heading = createMuiTheme({
         fontSize: "40px",
         lineHeight: 1.6,
         fontWeight: "bolder",
+        color:Mirage,
         [breakpoints.down("md")]: {
           fontSize: "37px",
         },
         [breakpoints.only("sm")]: {
           fontSize: "24px",
-          textAlign: "center",
+          // textAlign: "center",
           paddingTop: "15px",
         },
         [breakpoints.down("xs")]: {
@@ -64,59 +66,17 @@ export const useStyles = makeStyles((theme) => ({
     padding: 0,
     width: "100vw",
     display: "flex",
-    [theme.breakpoints.up("lg")]: {
-      textAlign: "left",
-      paddingLeft: "100px",
-      paddingTop: "100px",
-      alignItems:"center",
-      // height:"100vh",
-    },
-    [theme.breakpoints.only("md")]: {
-      textAlign: "left",
-      paddingLeft: "100px",
-      paddingTop: "100px",
-      alignItems:"center",
-      // height:"100vh"
-    },
-    [theme.breakpoints.only("sm")]: {
-      flexDirection: "column",
-      alignItems: "center",
-      paddingTop: "70px",
-      justifyContent:"center"
-    },
-    [breakpoints.down("xs")]: {
-      flexDirection: "column",
-      alignItems: "center",
-      paddingTop: "80px",
-    },
   },
   headingSec: {
     display: "flex",
     flexDirection: "column",
-    width: "auto",
-    [theme.breakpoints.down("sm")]: {
-      alignItems: "center",
-    },
   },
   vector: {
    zIndex: 1,
-    height: "530px",
+    height: "auto",
     margin: 0,
     padding: 0,
-    width: "100vw",
-    [theme.breakpoints.up("lg")]: {
-      height: "530px",
-      marginLeft: "100px",
-    },
-    [theme.breakpoints.only("md")]: {
-      height: "530px",
-    },
-    [theme.breakpoints.only("sm")]: {
-      height: "400px",
-    },
-    [breakpoints.down("xs")]: {
-      height: "230px",
-    },
+    width: "100%",
   },
 
   tick: {
@@ -155,41 +115,29 @@ export const useStyles = makeStyles((theme) => ({
   },
   sec: {
     position: "relative",
-    width: "100%",
-    [breakpoints.only("sm")]: {
-      marginTop: "20px",
-    },
-    [breakpoints.down("xs")]: {
-      marginTop: "20px",
-    },
+    width: "100vw",
+    padding:"24px"
+  },
+  gridImage:{ 
+    zIndex: 1, 
+    // padding: "16px" 
+  },
+  gridText:{
+    textAlign: "left",
+    // padding: "16px",
+    zIndex: 1,
   },
   slide: {
     position: "relative",
-    [breakpoints.up("lg")]: {
-      "& .carousel .slide img": {
-        maxHeight: "600px",
-        width: "auto",
-        overflow: "hidden",
-      },
-    },
-    [breakpoints.down("md")]: {
-      "& .carousel .slide img": {
-        maxHeight: "400px",
-        width: "auto",
-        overflow: "hidden",
-      },
-    },
-    [breakpoints.down("sm")]: {
-      "& .carousel .slide img": {
-        maxHeight: "300px",
-        width: "auto",
-      },
+    "& .carousel .slide img": {
+      width: "100%",
     },
   },
   spiral: {
     position: "absolute",
     zIndex: 0,
-    height: "500px",
+    width:"100%",
+    height:"auto"
   },
 
 }));

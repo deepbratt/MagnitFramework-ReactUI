@@ -12,6 +12,8 @@ import Breakpoints from "../../Theme/theme.breakpoints";
 import * as Images from "../../Components/Hero/Images"
 import {Colors} from "../../Theme/color.constants"
 import {Data} from "../../Utils/Constants/Language/en/GlanceAtWorkData"
+import CustomButton from "../../Components/CustomButton";
+import CustomImage from "../../Components/CustomImage";
 const Container = ({backColor}) => {
   const classes = useStyles();
   const {image1,image2,image3} = Images
@@ -41,10 +43,10 @@ const Container = ({backColor}) => {
             <CardContent>
               <section >
                 <section className={devSec}>
-                  <img width="250px" src={image1} alt=""/>
+                  <CustomImage width="250px" src={image1} alt=""/>
                   <section className={cardContent}>
                 <MuiThemeProvider theme={THEME}>
-                  <Typography variant="h5">
+                  <Typography variant="h5" >
                    {subtitle}
                   </Typography>
                 </MuiThemeProvider>
@@ -58,7 +60,7 @@ const Container = ({backColor}) => {
             <CardContent>
               <section >
                 <section className={devSec}>
-                  <img width="300px" src={image2} alt=""/>
+                  <CustomImage width="300px" src={image2} alt=""/>
                   <section className={cardContent}>
                 <MuiThemeProvider theme={THEME}>
                   <Typography variant="h5" >
@@ -76,7 +78,7 @@ const Container = ({backColor}) => {
             <CardContent>
               <section >
                 <section className={devSec}>
-                  <img width="317px"  src={image3} alt=""/>
+                  <CustomImage width="317px"  src={image3} alt=""/>
                   <section className={cardContent}>
                 <MuiThemeProvider theme={THEME}>
                   <Typography variant="h5">
@@ -91,15 +93,14 @@ const Container = ({backColor}) => {
         </section>
         <section>
         <MuiThemeProvider theme={THEME}>
-          <Button
-           
+          <CustomButton
             variant="contained"
             size={Breakpoints()}
             className={seeMore}
             color="white"
           >
             {buttonText}
-          </Button>
+          </CustomButton>
           </MuiThemeProvider>
         </section>
       </Paper>

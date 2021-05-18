@@ -1,8 +1,11 @@
+import { Colors } from "../../Theme/color.constants"
+import { makeStyles } from "@material-ui/core/styles";
+
+const { darkJungleGreen } = Colors;
 const ErrorBoundaryStyles = {
   root: {
     display: "flex",
     flexDirection: "column",
-    justifyContent: "space-between",
     minHeight: "100vh",
   },
   header: {
@@ -25,6 +28,7 @@ const ErrorBoundaryStyles = {
     height: "auto",
     margin: "auto",
     marginTop: "100px",
+    marginBottom:"10px"
   },
   textWrapper: {
     padding: "20px",
@@ -34,6 +38,12 @@ const ErrorBoundaryStyles = {
   errorDetails: {
     whiteSpace: "pre-wrap",
   },
+  footerWrapper:{
+    display:"flex",
+    justifyContent:"center",
+    padding:"20px",
+    backgroundColor: darkJungleGreen,
+  }
 };
 
 export default ErrorBoundaryStyles;

@@ -2,33 +2,35 @@ import React from "react";
 import { Typography, Button } from "@material-ui/core";
 import Breakpoints from "../../Theme/theme.breakpoints";
 import Banner from "../../Components/Banner/index";
-import Heading4 from "../../ContainerStructure/Headings/Heading4";
 import { Colors } from "../../Theme/color.constants";
 import { BannerImage } from "../../Utils/Constants/Language/en/SolutionsPageData";
-import Paragraph from "../../ContainerStructure/Headings/Paragraphs/Paragraph";
 import {
   BannerHeading,
   Bannersubheading,
   paragraph,
 } from "../../Utils/Constants/Language/en/SolutionsPageData";
+import CustomButton from "../../Components/CustomButton";
 
 const BannerSection = () => {
   const { linearBackground } = Colors;
   return (
     <>
       <Banner image={BannerImage} backColor={linearBackground}>
-        <Heading4 title={BannerHeading} />
-        <Heading4 title={Bannersubheading} />
-        <Paragraph para={paragraph} />
+      <Typography variant="h2" gutterBottom>
+          {BannerHeading} <br /> {Bannersubheading}
+        </Typography>
+        <Typography variant="h6" gutterBottom>
+          {paragraph}
+        </Typography>
         <section style={{ marginTop: "15px" }}>
-          <Button
+          <CustomButton
             style={{ borderRadius: "none" }}
             variant="contained"
             size={Breakpoints()}
             color="secondary"
           >
             <Typography variant="buttom">Get Started</Typography>
-          </Button>
+          </CustomButton>
         </section>
       </Banner>
     </>

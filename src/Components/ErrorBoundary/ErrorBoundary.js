@@ -2,8 +2,10 @@ import React from "react";
 import CustomButton from "../CustomButton";
 import ErrorBoundaryImage from "../../assets/ErrorBoundary/errorBoundary.png";
 import MagnitLogo from "../../assets/MagnitLogo.png";
+import MagnitLogoWhite from "../../assets/Logo-white.png";
 import ErrorBoundaryStyles from "./ErrorBoundaryStyles";
-import {errorBoundaryText} from '../../Utils/Constants/Language/index'
+import { errorBoundaryText } from "../../Utils/Constants/Language/index";
+import CustomImage from "../CustomImage";
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -35,6 +37,7 @@ class ErrorBoundary extends React.Component {
       errorImage,
       textWrapper,
       errorDetails,
+      footerWrapper
     } = ErrorBoundaryStyles;
     if (this.state.hasError) {
       // You can render any custom fallback UI
@@ -46,11 +49,12 @@ class ErrorBoundary extends React.Component {
               size={"Large"}
               variant={"none"}
               color="transparent"
-              text={<img src={MagnitLogo} alt="magnit_logo" style={logo} />}
-            />
-            <CustomButton href={window.location.origin} text="Home" />
+            >
+              {<img src={MagnitLogo} alt="magnit_logo" style={logo} />}
+            </CustomButton>
+            <CustomButton href={window.location.origin}>Home</CustomButton>
           </div>
-          <img src={ErrorBoundaryImage} alt="error-image" style={errorImage} />
+          <CustomImage src={ErrorBoundaryImage} alt="error-image" style={errorImage} />
           <div style={textWrapper}>
             <h1>{errorBoundaryText.heading}</h1>
             <h3>{errorBoundaryText.error}</h3>
@@ -60,13 +64,16 @@ class ErrorBoundary extends React.Component {
               {this.state.errorInfo.componentStack}
             </details>
           </div>
-          <CustomButton
-            href={window.location.origin}
-            size={"Large"}
-            variant={"none"}
-            color="transparent"
-            text={<img src={MagnitLogo} alt="magnit_logo" style={logo} />}
-          />
+          <div style={footerWrapper}>
+            <CustomButton
+              variant={"outlined"} 
+              href={window.location.origin}
+              color="primary"
+              size={"Large"}
+            >
+              {<img src={MagnitLogoWhite} alt="magnit_logo_white" style={logo}/>}
+            </CustomButton>
+          </div>
         </div>
       );
     }

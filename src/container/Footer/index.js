@@ -7,6 +7,7 @@ import IconTwitter from "../../assets/images/icon-twitter.png";
 import IconLI from "../../assets/images/icon-linkedIn.png";
 import Logo from "../../assets/Logo-white.png";
 import { footerText } from "../../Utils/Constants/Language";
+import CustomImage from "../../Components/CustomImage";
 
 const Footer = () => {
   const {
@@ -34,16 +35,16 @@ const Footer = () => {
         <Grid item xs={12} md={4} lg={3}>
           <div className={section}>
             <div className={logo}>
-              <img src={Logo} alt="Maginit Logo" />
+              <CustomImage src={Logo} alt="Maginit Logo" />
             </div>
             <Typography align="left" gutterBottom variant="h5">
               {contactUs}
             </Typography>
 
             <div className={contact}>
-              <img src={IconFB} alt="Facebook Icon" />
-              <img src={IconTwitter} alt="Twitter Icon" />
-              <img src={IconLI} alt="Linked Icon" />
+              <CustomImage src={IconFB} alt="Facebook Icon" />
+              <CustomImage src={IconTwitter} alt="Twitter Icon" />
+              <CustomImage src={IconLI} alt="Linked Icon" />
             </div>
           </div>
         </Grid>

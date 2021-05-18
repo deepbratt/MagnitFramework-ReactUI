@@ -8,6 +8,7 @@ import {
   subTitles,
   MainData
 } from "../../../Utils/Constants/Language/AboutUsData";
+import CustomImage from "../../../Components/CustomImage";
 
 const AboutUsNumberContext = () => {
   const classes = useStyles();
@@ -29,7 +30,7 @@ const AboutUsNumberContext = () => {
             <section className={devSec}>
                 <section className={dev}></section>
                 <section>
-                <img width="40px" src={foundedIcon} />
+                <CustomImage width="40px" src={foundedIcon} />
                   <Heading4 title={divOne} />
                   <Heading5 subTitle={FOUNDEDINTHEYEAR} />
                 </section>
@@ -41,7 +42,7 @@ const AboutUsNumberContext = () => {
               <section className={devSec}>
                 <section className={dev}></section>
                 <section>
-                <img width="70px" src={employeeIcon} />
+                <CustomImage width="70px" src={employeeIcon} />
                   <Heading4 title={divTwo} />
                   <Heading5 subTitle={FULLTIMEEMPLOYEES} />
                 </section>
@@ -53,7 +54,7 @@ const AboutUsNumberContext = () => {
               <section className={devSec}>
                 <section className={dev}></section>
                 <section>
-                <img width="60px" src={projectsIcon} />
+                <CustomImage width="60px" src={projectsIcon} />
                   <Heading4 title={divThree} />
                   <Heading5 subTitle={TOTALPROJECTSCOMPLETE} />
                 </section>
@@ -65,7 +66,7 @@ const AboutUsNumberContext = () => {
               <section className={devSec}>
                 <section className={dev}></section>
                 <section>
-                <img width="60px" src={ratingIcon} />
+                <CustomImage width="60px" src={ratingIcon} />
                   <Heading4 title={divFour} />
                   <Heading5 subTitle={CUSTOMERRETENTIONRATE} />
                 </section>

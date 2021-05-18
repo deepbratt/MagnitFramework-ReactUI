@@ -67,7 +67,7 @@ export const contactUsLabelsText = {
   subHeading: "Need any kind of help?",
   name: "Name",
   email: "Email",
-  PhoneNum: "Phone Number",
+  phoneNum: "Phone Number",
   message: "Message",
   submit: "Submit",
 };

@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import BannerStyles from "./styles";
 import StarFishPinkPattern from "../../assets/patterns/starfish-pink.png";
 import { Colors } from "../../Theme/color.constants";
+import CustomImage from "../CustomImage";
 const Banner = ({
   backColor,
   image,
@@ -17,22 +18,22 @@ const Banner = ({
     <>
       <Grid className={root} container style={{ background: linearBackground }}>
         {breadCrumb && (
-          <Grid item xs={12}>
+          <Grid style={{ position: "absolute" }} item xs={12}>
             <div className={breadCrumbStyle}>{breadCrumb}</div>
           </Grid>
         )}
         <Grid item xs={12} md={6}>
           <div className={content}>{children}</div>
         </Grid>
-        <Grid item xs={12} md={6}>
-          <img
+        <Grid style={{ position: "relative" }} item xs={12} md={6}>
+          <CustomImage
             className={patternPosition}
             src={StarFishPinkPattern}
             alt=""
             srcset=""
           />
           <div className={imageWrapper}>
-            <img src={image} alt="" />
+            <CustomImage src={image} alt="" />
           </div>
         </Grid>
       </Grid>
