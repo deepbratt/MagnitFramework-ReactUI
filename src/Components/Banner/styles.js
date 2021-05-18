@@ -6,6 +6,7 @@ const { lg } = h3;
 const { Harlequin } = Colors;
 const BannerStyles = makeStyles((theme) => ({
   root: {
+    position: "relative",
     marginTop: "0",
     backgroundColor: "transparent",
     background: `linear-gradient(-181.96deg , ${Harlequin} -98.18%, rgba(255, 255, 255, 0) 85.96%)`,
@@ -24,7 +25,7 @@ const BannerStyles = makeStyles((theme) => ({
   patternPosition: {
     position: "absolute",
     right: "-8%",
-    top: "-8%",
+    top: "-80%",
     height: "700px",
     [theme.breakpoints.down("md")]: {
       height: "500px",
