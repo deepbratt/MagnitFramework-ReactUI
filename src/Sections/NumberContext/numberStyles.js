@@ -1,0 +1,70 @@
+import { makeStyles } from "@material-ui/core/styles";
+import { Colors } from "../../Theme/color.constants";
+
+const { mustardColor, skyBlueColor, rosePinkColor, darkBlueColor } = Colors;
+
+export const useStyles = makeStyles((theme) => ({
+  root: {
+    margin: "0px",
+    marginTop: "80px",
+    marginBottom: "50px",
+  },
+  cardSec: {
+    display: "flex",
+    width: "100%",
+    flexFlow: "wrap",
+    justifyContent: "center",
+  },
+  card: {
+    backgroundColor: skyBlueColor,
+    height: "200px",
+    display: "flex",
+    flexDirection: "column",
+    color: "white",
+    alignItems: "center",
+    justifyContent: "center",
+    transition: "all .25s linear",
+    boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)",
+    "&:hover": { boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)" },
+    cursor: "pointer",
+  },
+  card2: {
+    backgroundColor: rosePinkColor,
+    height: "200px",
+    display: "flex",
+    flexDirection: "column",
+    color: "white",
+    alignItems: "center",
+    justifyContent: "center",
+    transition: "all .25s linear",
+    boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)",
+    "&:hover": { boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)" },
+    cursor: "pointer",
+  },
+  card3: {
+    backgroundColor: darkBlueColor,
+    height: "200px",
+    display: "flex",
+    flexDirection: "column",
+    color: "white",
+    alignItems: "center",
+    justifyContent: "center",
+    transition: "all .25s linear",
+    boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)",
+    "&:hover": { boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)" },
+    cursor: "pointer",
+  },
+  card4: {
+    backgroundColor: mustardColor,
+    height: "200px",
+    display: "flex",
+    flexDirection: "column",
+    color: "white",
+    alignItems: "center",
+    justifyContent: "center",
+    transition: "all .25s linear",
+    boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)",
+    "&:hover": { boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)" },
+    cursor: "pointer",
+  },
+}));

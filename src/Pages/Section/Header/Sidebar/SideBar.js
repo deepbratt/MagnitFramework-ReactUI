@@ -4,15 +4,21 @@ import {
   ListItem,
   List,
   ListItemText,
-  Typography,
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
-import { useStyles } from "./sidebarStyles";
+import { NavLink } from "react-router-dom";
+import { pageRoutes } from "../../../../Components/Path";
+import { useStyles , THEME} from "./sidebarStyles";
+import {Logo} from "../../../../Components/Hero/Images"
+import { MuiThemeProvider } from "@material-ui/core/styles";
+import CustomImage from "../../../../Components/CustomImage";
+
 
 const SideBar = () => {
   const classes = useStyles();
-  const {root,drawer,drawerHeader,closeIcon,menuIcon} = classes
+  const {root,drawer,drawerHeader,closeIcon,menuIcon, active,link,logo,list }= classes
+  const routes = Object.values(pageRoutes);
   const [open, setOpen] = useState(false);
 
   return (
@@ -28,20 +34,32 @@ const SideBar = () => {
         <div className={drawerHeader}>
           <CloseIcon className={closeIcon} onClick={() => {setOpen()}} />
         </div>
-        <Typography
-          style={{ fontSize: "20px", textAlign: "center" }}
-          variant="h5"
-          color="inherit">
-          Logo Here
-        </Typography>
+       <section className={logo}>
+       <CustomImage alt="logo" src={Logo} width="120px" />
+       </section>
+      
         <List style={{ marginTop: "30px" }}>
-          {["Company", "Services", "Solutions", "Case Studies", "Careers"].map(
-            (text, index) => (
-              <ListItem key = {index} style={{ padding: "15px" }} button >
-                <ListItemText primary={text} />
-              </ListItem>
-            )
-          )}
+             {routes.map(({ path, sidebarName, ...prop }, index) => {
+                  return (
+                      <NavLink
+                        activeClassName={active}
+                        className={link}
+                        to={path}
+                        key={`route-${index}}`}
+                        onClick={() => {setOpen()}}
+                      >
+                         <MuiThemeProvider  theme={THEME}>
+                        <ListItem>
+                          <ListItemText
+                            key = {index} style={{ paddingLeft: "30px", paddingBottom: "15px" }}
+                            primary={sidebarName}
+                            className={list}
+                          />
+                        </ListItem>
+                        </MuiThemeProvider>
+                      </NavLink>
+                  );
+                })}
         </List>
       </Drawer>
       <MenuIcon className={menuIcon} onClick={() => {setOpen(!open)}} />

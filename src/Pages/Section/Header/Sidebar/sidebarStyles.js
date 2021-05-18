@@ -1,15 +1,37 @@
-import { makeStyles } from "@material-ui/core";
-
+import { makeStyles } from "@material-ui/core/styles";
+import { createMuiTheme } from "@material-ui/core/styles";
+import { Colors } from "../../../../Theme/color.constants";
 const drawerWidth = 260;
+const { blackColor, WildSand } = Colors;
+export const THEME = createMuiTheme({
+  overrides: {
+    MuiTypography: {
+      color: blackColor,
+    },
+  },
+  typography: {
+    fontSize: 15,
+    lineHeight: 1.5,
+    letterSpacing: 0.32,
+    fontFamily: "Poppins",
+    color: blackColor,
+    h5: {
+      fontWeight: 600,
+    },
+    button: {
+      textTransform: "none",
+    },
+  },
+});
+
 
 export const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: WildSand,
     width: drawerWidth,
-    color: "white",
   },
   menuButton: {
-    marginRight: theme.spacing(2),
+    padding: theme.spacing(2),
   },
   hide: {
     display: "none",
@@ -26,15 +48,27 @@ export const useStyles = makeStyles((theme) => ({
     ...theme.mixins.toolbar,
     justifyContent: "flex-end",
   },
-  closeIcon:{
+  closeIcon: {
     "&:hover": {
-      cursor: "pointer"
+      cursor: "pointer",
     },
   },
   menuIcon: {
-    closeIcon:{
+    color: blackColor,
+    paddingRight:"24px",
+    closeIcon: {
       "&:hover": {
-        cursor: "pointer"
+        cursor: "pointer",
       },
-    }}
+    },
+  },
+  link: {
+    marginTop: "5px",
+    textDecoration: "none",
+    color: "grey",
+  },
+  logo: {
+    display: "flex",
+    justifyContent: "center",
+  },
 }));

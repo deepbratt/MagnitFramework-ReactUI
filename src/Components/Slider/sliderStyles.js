@@ -2,10 +2,22 @@ import { makeStyles } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 
+import { Colors } from "../../Theme/color.constants";
+import { hero,Vector } from "../../Components/Hero/Images";
+
+const { whiteColor, Harlequin, blackColor,Mirage } = Colors;
+
 const breakpoints = createBreakpoints({});
 
 export const heading = createMuiTheme({
   overrides: {
+    MuiButton: {
+      root: {
+        borderRadius: "none",
+        fontFamily: "Poppins",
+        color: blackColor,
+      },
+    },
     MuiTypography: {
       h1: {
         fontFamily: "Poppins",
@@ -13,12 +25,13 @@ export const heading = createMuiTheme({
         fontSize: "40px",
         lineHeight: 1.6,
         fontWeight: "bolder",
+        color:Mirage,
         [breakpoints.down("md")]: {
           fontSize: "37px",
         },
         [breakpoints.only("sm")]: {
           fontSize: "24px",
-          textAlign: "center",
+          // textAlign: "center",
           paddingTop: "15px",
         },
         [breakpoints.down("xs")]: {
@@ -49,102 +62,25 @@ export const heading = createMuiTheme({
 
 export const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: "#F3FDFE",
-    
     margin: 0,
     padding: 0,
-    color: "#151B27",
+    width: "100vw",
     display: "flex",
-    position: "relative",
-    [theme.breakpoints.up("lg")]: {
-      textAlign: "left",
-      paddingLeft: "100px",
-      overflow: "hidden",
-      paddingTop: "60px",
-      height: "100vh",
-    },
-    [theme.breakpoints.only("md")]: {
-      textAlign: "left",
-      paddingLeft: "100px",
-      paddingTop: "60px",
-    },
-    [theme.breakpoints.only("sm")]: {
-      flexDirection: "column",
-      alignItems: "center",
-    },
-    [breakpoints.down("xs")]: {
-      flexDirection: "column",
-      alignItems: "center",
-      paddingTop: "20px",
-    },
-  },
-  rootSub: {
-    margin: 0,
-    padding: 0,
-    color: "#151B27",
-    display: "flex",
-    position: "relative",
-    [theme.breakpoints.up("lg")]: {
-      textAlign: "left",
-      paddingLeft: "100px",
-      overflow: "hidden",
-      paddingTop: "60px",
-      height: "100vh",
-    },
-    [theme.breakpoints.only("md")]: {
-      textAlign: "left",
-      paddingLeft: "100px",
-      paddingTop: "60px",
-    },
-    [theme.breakpoints.only("sm")]: {
-      flexDirection: "column",
-      alignItems: "center",
-    },
-    [breakpoints.down("xs")]: {
-      flexDirection: "column",
-      alignItems: "center",
-      paddingTop: "20px",
-    },
   },
   headingSec: {
     display: "flex",
     flexDirection: "column",
-    [theme.breakpoints.down("sm")]: {
-      alignItems: "center",
-    },
-  }, 
-  vector: {
-    [theme.breakpoints.up("lg")]: {
-      width: "600px",
-    },
-    [theme.breakpoints.only("md")]: {
-      width: "400px",
-    },
-    [theme.breakpoints.only("sm")]: {
-      width: "300px",
-    },
-    [breakpoints.down("xs")]: {
-      width: "200px",
-    },
   },
-  vectorSub: {
-    filter: "grayscale(90%)",
-    [theme.breakpoints.up("lg")]: {
-      width: "600px",
-    },
-    [theme.breakpoints.only("md")]: {
-      width: "400px",
-    },
-    [theme.breakpoints.only("sm")]: {
-      width: "300px",
-    },
-    [breakpoints.down("xs")]: {
-      width: "200px",
-    },
+  vector: {
+   zIndex: 1,
+    height: "auto",
+    margin: 0,
+    padding: 0,
+    width: "100%",
   },
 
   tick: {
-    backgroundColor: "white",
+    backgroundColor: whiteColor,
     borderRadius: "15px",
     marginRight: "10px",
     fontSize: "23px",
@@ -160,6 +96,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   tickSub: {
     borderRadius: "15px",
+    border: `solid 1px ${Harlequin}`,
     marginRight: "10px",
     fontSize: "23px",
     [breakpoints.only("md")]: {
@@ -177,11 +114,30 @@ export const useStyles = makeStyles((theme) => ({
     marginBottom: "10px",
   },
   sec: {
-    [breakpoints.only("sm")]: {
-      marginTop: "20px",
-    },
-    [breakpoints.down("xs")]: {
-      marginTop: "20px",
+    position: "relative",
+    width: "100vw",
+    padding:"24px"
+  },
+  gridImage:{ 
+    zIndex: 1, 
+    // padding: "16px" 
+  },
+  gridText:{
+    textAlign: "left",
+    // padding: "16px",
+    zIndex: 1,
+  },
+  slide: {
+    position: "relative",
+    "& .carousel .slide img": {
+      width: "100%",
     },
   },
+  spiral: {
+    position: "absolute",
+    zIndex: 0,
+    width:"100%",
+    height:"auto"
+  },
+
 }));

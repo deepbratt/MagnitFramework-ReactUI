@@ -1,62 +1,113 @@
 import React from "react";
 import { useStyles, heading } from "./sliderStyles";
-import { Typography, ListItem, Button, useMediaQuery , Paper} from "@material-ui/core";
+import {
+  Typography,
+  ListItem,
+  Button,
+  Hidden,
+  Grid,
+  List,
+} from "@material-ui/core";
 import CheckIcon from "@material-ui/icons/Check";
-import { MuiThemeProvider} from "@material-ui/core/styles";
-import slider from "../../../src/assets/slider.png";
-import Breakpoints from "../../Theme/theme.breakpoints"
+import { MuiThemeProvider } from "@material-ui/core/styles";
+import { hero, Vector } from "../../Components/Hero/Images";
+import Breakpoints from "../../Theme/theme.breakpoints";
+import { Colors } from "../../Theme/color.constants";
+import CustomImage from "../CustomImage";
 
-const Slider = (props) => {
-  const { value } = props;
-
+const Slider = ({
+  value,
+  headingOne,
+  headingTwo,
+  headingThree,
+  text,
+  data,
+  color,
+}) => {
+  const { Harlequin, whiteColor } = Colors;
   const classes = useStyles();
-  const {root, rootSub,headingSec,listSec,list,tick,tickSub,sec,vector} = classes
+  const {
+    tick,
+    tickSub,
+    sec,
+    vector,
+    spiral,
+    gridImage,
+    gridText,
+  } = classes;
   return (
-    <>
-      <Paper className={value === "LIGHT" ? root: rootSub} elevation= {0} >
-        <section className={headingSec}>
-          <MuiThemeProvider theme={heading}>
-            <Typography variant="h1" color="inherit">
-              We deliver absolute & <br />
-              growth-oriented solutions <br />
-              App Development.
-            </Typography>
-          </MuiThemeProvider>
-          <MuiThemeProvider theme={heading}>
-            <section className={listSec}>
-              <ListItem className={list}>
-                <section>
-                  {[
-                    "Free Life-Time Support",
-                    "Assurance of Quality",
-                    "On-Time Delivery",
-                  ].map((text, index) => (
-                    <Typography key={index} variant="h5" color="inherit">
-                      <CheckIcon className={value === "LIGHT"? tick : tickSub } /> {text}
-                    </Typography>
-                  ))}
-                </section>
+    <Grid
+      container
+      className={sec}
+      direction="row"
+      justify="center"
+      alignItems="center"
+      style={{
+        background: `linear-gradient(${color} 5%, ${whiteColor} 95% `,
+      }}
+    >
+      <Hidden smDown>
+        <CustomImage alt="sliderImg" src={Vector} className={spiral} />
+      </Hidden>
+      {/* <Hidden smDown>
+        <Grid item xs={12} md={1} lg={1}></Grid>
+      </Hidden> */}
+      <Grid
+        item
+        xs={12}
+        sm={12}
+        md={9}
+        lg={9}
+        className={gridText}
+      >
+        <MuiThemeProvider theme={heading}>
+          <Typography variant="h1" >
+            {headingOne} <br />
+            {headingTwo} <br />
+            {headingThree} <br />
+          </Typography>
+          {/* <section className={listSec}> */}
+          <List>
+            {data.map((text, index) => (
+              <ListItem>
+                <Typography key={index} variant="h5">
+                  <CheckIcon className={value === "LIGHT" ? tick : tickSub} />
+                  {text}
+                </Typography>
               </ListItem>
-            </section>
-          </MuiThemeProvider>
-          <section>
-            <Button
-              style={{ textTransform: "none", marginLeft: "10px" }}
-              variant="contained"
-              size={Breakpoints()}
-              color="secondary"
-            >
-              Partner with us save 50%
-            </Button>
-          </section>
-        </section>
-
-        <section className={sec}>
-         <img alt="sliderImg" src={slider} className={vector}/>
-        </section>
-      </Paper>
-    </>
+            ))}
+          </List>
+          {/* </section> */}
+          <Button
+            style={{
+              textTransform: "none",
+              backgroundColor: Harlequin,
+            }}
+            variant="contained"
+            size={Breakpoints()}
+            color="secondary"
+          >
+            {text}
+          </Button>
+        </MuiThemeProvider>
+      </Grid>
+      <Hidden smDown>
+        <Grid
+          item
+          xs={12}
+          md={3}
+          lg={3}
+          className={gridImage}
+          justify="flex-start"
+        >
+          <CustomImage alt="sliderImg" src={hero} className={vector} />
+        </Grid>
+      </Hidden>
+      {/* <Hidden smDown>
+        <Grid item xs={12} md={4} lg={1}></Grid>
+      </Hidden> */}
+    </Grid>
   );
 };
 
-export default Slider
+export default Slider;

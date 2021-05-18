@@ -1,22 +1,31 @@
-import {  makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
+import { Colors } from "../../../Theme/color.constants";
+
+const { WildSand, harlequinDark, blackColor, greyColor, Ash } =
+  Colors;
 
 export const THEME = createMuiTheme({
-  overrides:{
-    MuiTypography:{
-     h5:{
-      fontFamily: "Poppins",
-     }
-    }
+  overrides: {
+    MuiButton: {
+      root: {
+        borderRadius: "none",
+        fontFamily: "Poppins",
+      },
+    },
+    MuiTypography: {
+      h5: {
+        fontFamily: "Poppins",
+      },
+    },
   },
   typography: {
     fontSize: 15,
-    lineHeight: 1.5,
+    // lineHeight: 1.5,
     letterSpacing: 0.32,
     fontFamily: "Poppins",
     h5: {
       fontWeight: 600,
-     
     },
     button: {
       textTransform: "none",
@@ -25,24 +34,48 @@ export const THEME = createMuiTheme({
 });
 
 export const useStyles = makeStyles((theme) => ({
+  // transparentAppbarsolid: {
+  //   boxShadow: "none",
+  //   backgroundColor: transparentWildSand,
+  //   width: "100%",
+  //   fontSize: "16px",
+  //   display: "flex",
+  //   justifyContent: "space-around",
+  //   zIndex: 1,
+  //   transition: "all .5s linear",
+  //   borderBottom: `solid 1px ${transparentWildSand}`,
+
+  // },
   root: {
-    flexGrow: 1,
     boxShadow: "none",
-    margin: 0
+    width: "100%",
+    backgroundColor: WildSand,
   },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  toolbar: {
-    backgroundColor: "#F3FDFE",
+  appbarsolid: {
+    boxShadow: "none",
+    backgroundColor: WildSand,
+    width: "100%",
     fontSize: "16px",
     display: "flex",
-    justifyContent: "space-around"
+    alignItems: "center",
+    zIndex: 1,
+    justifyContent: "space-between",
+    transition: "all .5s linear",
+    // borderBottom: `solid 3px ${Ash}`,
+    padding: "0 !important",
+  },
+  menuButton: {
+    paddingRight: theme.spacing(2),
+  },
+  toolbar: {
+    fontSize: "16px",
+    display: "flex",
+    // justifyContent: "space-around",
   },
   toolbarSub: {
     fontSize: "16px",
     display: "flex",
-    justifyContent: "space-around"
+    // justifyContent: "space-around",
   },
   list: {
     fontSize: "16px",
@@ -50,19 +83,47 @@ export const useStyles = makeStyles((theme) => ({
     fontWeight: "600",
     fontFamily: "Poppins', sans-serif",
     whiteSpace: "nowrap",
+    justifyContent: "center",
+    alignItems: "center",
+    color: greyColor,
+    
     "&:hover": {
-      color: "black",
+      color: blackColor,
+      cursor: "pointer",
     },
   },
-  listItem:{
+  listItem: {
+    color: greyColor,
+    marginRight: "20px",
     "&:hover": {
-      color: "black",
-      cursor: "pointer"
+      color: blackColor,
+      cursor: "pointer",
     },
+  
+  },
+
+  link: {
+    // marginTop: "5px",
+    textDecoration: "none",
+    color: "black",
+  },
+  active: {
+    color: blackColor,
   },
   logo: {
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "30px",
-    },
+    width: "7rem",
+    paddingLeft: "24px",
+  },
+  menu: {
+    width: "250px",
+    border: `1px solid ${Ash}`,
+    display: "flex",
+    justifyContent: "center",
+    transition: "all .5s linear",
+    backgroundColor: WildSand,
+    
+
+   
+  
   },
 }));
