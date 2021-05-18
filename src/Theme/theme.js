@@ -1,9 +1,12 @@
 import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
 // import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 import { Colors } from "./color.constants";
+import GlobalFontSize from "./GlobalFontSizes";
 // const breakpoints = createBreakpoints({});
 // Object of our themes
-const {Harlequin}= Colors;
+const { Harlequin } = Colors;
+const { H2 } = GlobalFontSize;
+
 export default function createTheme(options) {
   return createMuiTheme({
     ...options,
@@ -24,7 +27,7 @@ export default function createTheme(options) {
       MuiTab: {
         root: {
           "&$selected": {
-            backgroundColor:Harlequin,
+            backgroundColor: Harlequin,
             color: "#fff",
           },
         },
@@ -83,18 +86,13 @@ export default function createTheme(options) {
     },
     typography: {
       fontFamily: "'Poppins', 'Arial', sans-serif",
-      // htmlFontSize: "10px",
       fontSize: 14,
       h1: {
         fontSize: "3.4375rem",
         fontWeight: 600,
         lineHeight: "71.77px",
       },
-      h2: {
-        fontSize: "2.1875rem",
-        fontWeight: 600,
-        lineHeight: "57.05px",
-      },
+      h2: H2,
       h3: {
         fontSize: "1.5rem",
         fontWeight: 600,
