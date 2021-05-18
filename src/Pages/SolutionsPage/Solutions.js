@@ -7,7 +7,7 @@ import { MuiThemeProvider } from "@material-ui/core/styles";
 import { THEME } from "../../ContainerStructure/Headings/headingStyles";
 import { Colors } from "../../Theme/color.constants";
 import Banner from "./Banner";
-import Slider from "./ReviewSlider";
+import CommentSection from "../../Components/CommentSection";
 import Main from "./WhyUsContainer"
 
 const Solutions = () => {
@@ -34,7 +34,7 @@ const Solutions = () => {
           <Main />
         </Grid>
         <Grid item lg={12} md={12} xs={12}>
-          <Slider />
+          <CommentSection />
         </Grid>
       </Grid>
     </>
