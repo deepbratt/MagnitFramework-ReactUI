@@ -3,7 +3,6 @@ import { useStyles, THEME } from "./sectionStyles";
 import { Typography, Card, CardContent } from "@material-ui/core";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import CustomImage from "../../Components/CustomImage";
-
 import { Colors } from "../../Theme/color.constants";
 const {Mirage}=Colors;
 const PrimarySection = (props) => {

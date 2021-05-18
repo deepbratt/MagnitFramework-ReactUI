@@ -1,17 +1,17 @@
 import React from "react";
 import { useStyles, THEME } from "./headerStyles";
 import {
-  Typography,
+  // Typography,
   ListItem,
   List,
   ListItemText,
   Toolbar,
   Button,
   AppBar,
-  LinearProgress
+  LinearProgress,
 } from "@material-ui/core";
 import { NavLink } from "react-router-dom";
-import Scrolltrigger from "../../../Theme/Scrolltrigger";
+// import Scrolltrigger from "../../../Theme/Scrolltrigger";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import SideBar from "./Sidebar/SideBar";
 import Breakpoints from "../../../Theme/theme.breakpoints";
@@ -26,21 +26,13 @@ const Header = (props) => {
   const routes = Object.values(pageRoutes);
   const classes = useStyles();
   const { Harlequin, whiteColor } = Colors;
-  const { trigger } = Scrolltrigger();
-  const {
-    logo,
-    list,
-    listItem,
-    button,
-    appbarsolid,
-    link,
-    root,
-    active,
-  } = classes;
+  // const { trigger } = Scrolltrigger();
+  const { logo, list, listItem, button, appbarsolid, link, root, active } =
+    classes;
 
-  const navigated=()=>{
-    props.resetLoader()
-  }
+  const navigated = () => {
+    props.resetLoader();
+  };
 
   return (
     <>

@@ -25,7 +25,7 @@ const Banner = ({
         <Grid item xs={12} md={6} className={content}>
          {children}
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid style={{ position: "relative" }} item xs={12} md={6}>
           <CustomImage
             className={patternPosition}
             src={StarFishPinkPattern}

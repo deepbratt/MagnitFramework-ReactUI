@@ -7,6 +7,7 @@ import {
   FactsData,
   factsHeading,
 } from "../../../Utils/Constants/Language/en/AppSolutionsData";
+import CustomImage from "../../../Components/CustomImage"
 const FactsContainer = () => {
   const { card, root, para, cardContent, Avatar } = useStyles();
   return (
@@ -23,11 +24,11 @@ const FactsContainer = () => {
                 style={{ margin: "0 2.1%" }}
                 item
                 lg={4}
-                xs={10}
+                xs={12}
               >
                 <Card>
                   <CardContent className={cardContent}>
-                    <img
+                    <CustomImage
                       className={Avatar}
                       height="45px"
                       src={data.avatar}
