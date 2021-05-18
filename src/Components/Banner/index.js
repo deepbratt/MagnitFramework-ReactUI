@@ -16,7 +16,7 @@ const Banner = ({
     BannerStyles();
   return (
     <>
-      <Grid xs={12} className={root} container style={{ background: linearBackground }}>
+      <Grid  className={root} container style={{ background: linearBackground }}>
         {breadCrumb && (
           <Grid item xs={12} className={breadCrumbStyle}>
            {breadCrumb}
@@ -25,7 +25,7 @@ const Banner = ({
         <Grid item xs={12} md={6} className={content}>
          {children}
         </Grid>
-        <Grid style={{ position: "relative" }} item xs={12} md={6}>
+        <Grid style={{ position: "relative" }} item xs={12} md={5}>
           <CustomImage
             className={patternPosition}
             src={StarFishPinkPattern}
