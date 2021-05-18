@@ -1,7 +1,7 @@
 import PointList from "../../Components/PointBadge/PointList";
 import Section from "../Section";
 import {  Button, Typography } from "@material-ui/core";
-import GlanceSection from "../GlanceAtWorkContext/Container";
+import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
 import { webDevServicesData as servicesData } from "./webDevServicesData";
 import { whyHireData as hireUsData } from "./whyHireData";
 import { Colors } from "../../Theme/color.constants";

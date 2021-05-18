@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Paper } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import Heading4 from "../../ContainerStructure/Headings/Heading4";
 import Paragraph from "../../ContainerStructure/Headings/Paragraphs/Paragraph";
 import {
@@ -14,7 +14,7 @@ const AdminContext = () => {
   const { root, content, image } = useStyles();
   return (
     <>
-      <Paper className={root}>
+      <Grid container className={root}>
         <Grid justify="center" container>
           <Grid item md={12} lg={12} xs={12}>
             <Heading4 title={adminHeading} />
@@ -26,7 +26,7 @@ const AdminContext = () => {
             <Paragraph para={paragraph} />
           </Grid>
         </Grid>
-      </Paper>
+      </Grid>
     </>
   );
 };

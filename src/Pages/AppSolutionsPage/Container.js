@@ -1,13 +1,13 @@
 import React from "react";
 import { Grid,} from "@material-ui/core";
 import ServicesSectionStyles from "../../Pages/Services/style"
-import Banner from "./Banner";
-import FeaturesSection from "./FeaturesSection"
-import Slider from "./ReviewSlider"
+import Banner from "../../Sections/AppSolutionsSections/Banner";
+import FeaturesSection from "../../Sections/AppSolutionsSections/FeaturesSection"
+import Slider from "../../Sections/AppSolutionsSections/ReviewSlider"
 import WhyUsContainer from "../SolutionsPage/WhyUsContainer"
-import Facts from "./FactsSection/FactsContainer"
-import StairCaseContext from "./StairCaseSection/HowItWorksContext"
-import AdminContext from "./AdminContext"
+import Facts from "../../Sections/AppSolutionsSections/FactsSection/FactsContainer"
+import StairCaseContext from "../../Sections/AppSolutionsSections/StairCaseSection/HowItWorksContext"
+import AdminContext from "../../Sections/AppSolutionsSections/AdminContext"
 
 const Solutions = () => {
  const {root} = ServicesSectionStyles()

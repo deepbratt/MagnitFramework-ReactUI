@@ -8,7 +8,7 @@ import {
 } from "../../Utils/Constants/Language/en/AppSolutionsData";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import FeaturesRow from "./FeaturesRow";
-import { SolutionsStyles } from "./SolutionsStyles";
+import { SolutionsStyles } from "../../Pages/AppSolutionsPage/SolutionsStyles";
 import { THEME } from "../../ContainerStructure/Headings/headingStyles";
 
 const FeaturesSection = () => {

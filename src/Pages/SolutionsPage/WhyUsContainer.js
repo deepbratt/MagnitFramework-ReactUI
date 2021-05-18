@@ -1,15 +1,16 @@
 import React from "react";
-import { useStyles, THEME } from "../PartnerWithUsContext/containerStyles";
+import { useStyles } from "../../Sections/HomePageSections/PartnerWithUsContext/containerStyles";
 import { Typography, Paper, Grid } from "@material-ui/core";
 import { MuiThemeProvider } from "@material-ui/core/styles";
-import PrimarySection from "../PartnerWithUsContext/PrimarySection";
-import SecondarySection from "../PartnerWithUsContext/SecondarySection";
+import PrimarySection from "../../Sections/HomePageSections/PartnerWithUsContext/PrimarySection";
+import SecondarySection from "../../Sections/HomePageSections/PartnerWithUsContext/SecondarySection";
 import {
     benefitsData,
     benefitsHeading,
     benefitsSubheading,
     benefitsSecondaryData
   } from "../../Utils/Constants/Language/en/SolutionsPageData";
+  import {THEME} from "../../ContainerStructure/Headings/headingStyles"
 
 
 const WhyUsContainer = () => {

@@ -1,8 +1,8 @@
 import React from "react";
 import ReviewSlider from "../../Components/ReviewSlider/index";
 import { Avatar } from "@material-ui/core";
-import ServicesSectionStyles from "../Services/style";
-import Section from "../Section";
+import ServicesSectionStyles from "../../Pages/Services/style";
+import Section from "../../Pages/Section";
 import { Colors } from "../../Theme/color.constants";
 import StarFishPattern from "../../assets/patterns/starfishBlue.png";
 import StarFishPinkPattern from "../../assets/patterns/leftStarfish.png";

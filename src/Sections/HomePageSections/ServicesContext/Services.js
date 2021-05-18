@@ -1,24 +1,25 @@
 import React from "react";
-import { useStyles, THEME } from "./servicesStyles";
-import { Typography, Paper, Hidden } from "@material-ui/core";
+import { useStyles } from "./servicesStyles";
+import { Typography, Hidden, Grid } from "@material-ui/core";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 
 import {
   Data,
   ServicesData,
-} from "../../../../Utils/Constants/Language/en/ServicesText";
-import Content from "../../../../Components/Card";
+} from "../../../Utils/Constants/Language/en/ServicesText";
+import Content from "../../../Components/Card";
+import { THEME } from "../../../ContainerStructure/Headings/headingStyles";
 const Services = () => {
   const classes = useStyles();
-  const { title, subTitle, subheading } = Data;
-  const { root, serviceHeading, cardSec, underlined } = classes;
+  const { title, subTitle } = Data;
+  const { root, cardSec, underlined, subheading } = classes;
 
   return (
     <>
-      <Paper className={root} elevation={0}>
-        <section className={serviceHeading}>
+      <Grid container className={root} elevation={0}>
+        <Grid item lg={12} md={12} xs={12}>
           <MuiThemeProvider theme={THEME}>
-            <Typography variant="h4" >
+            <Typography variant="h4">
               <Hidden smDown>
                 {title}
                 <span className={underlined}>{subTitle}</span>
@@ -32,11 +33,11 @@ const Services = () => {
               {subheading}
             </Typography>
           </MuiThemeProvider>
-        </section>
-        <section className={cardSec}>
+        </Grid>
+        <Grid item className={cardSec}>
           <Content data={ServicesData} />
-        </section>
-      </Paper>
+        </Grid>
+      </Grid>
     </>
   );
 };

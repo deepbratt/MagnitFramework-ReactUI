@@ -1,13 +1,14 @@
 import React from "react";
-import { useStyles, THEME } from "./solutionStyles";
-import { Typography, Paper } from "@material-ui/core";
+import { useStyles } from "./solutionStyles";
+import { Typography, Grid } from "@material-ui/core";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import PrimarySection from "./SolutionsPrimarySection";
 import MidSection from "./SolutionsMidSection";
-import Breakpoints from "../../Theme/theme.breakpoints";
-import { Colors } from "../../Theme/color.constants";
-import { Data } from "../../Utils/Constants/Language/en/SolutionsText";
-import CustomButton from "../../Components/CustomButton";
+import Breakpoints from "../../../Theme/theme.breakpoints";
+import { Colors } from "../../../Theme/color.constants";
+import { Data } from "../../../Utils/Constants/Language/en/SolutionsText";
+import CustomButton from "../../../Components/CustomButton";
+import {THEME} from "../../../ContainerStructure/Headings/headingStyles"
 
 const Solutions = () => {
   const classes = useStyles();
@@ -16,15 +17,16 @@ const Solutions = () => {
   const { whiteColor, blackColor } = Colors;
   return (
     <>
-      <Paper className={root} elevation={0}>
-        <section>
-          <MuiThemeProvider theme={THEME}>
+      <Grid container className={root} elevation={0}>
+        <Grid style={{color: whiteColor}} item lg={12} md={12} xs={12}>
+        <MuiThemeProvider theme={THEME}>
             <Typography variant="h4">{heading}</Typography>
             <Typography paragraph={true}>{subHeading}</Typography>
           </MuiThemeProvider>
-        </section>
+        </Grid>
         <PrimarySection />
         <MidSection />
+        <Grid item lg={12} md={12} xs={12}>
         <MuiThemeProvider theme={THEME}>
           <CustomButton
             style={{
@@ -38,7 +40,8 @@ const Solutions = () => {
             See More
           </CustomButton>
         </MuiThemeProvider>
-      </Paper>
+        </Grid>
+      </Grid>
     </>
   );
 };

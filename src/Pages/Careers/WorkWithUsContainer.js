@@ -1,11 +1,10 @@
 import React from "react";
 import {
   useStyles,
-  THEME,
-} from "../Section/Header/ServicesContext/servicesStyles";
+} from "../../Sections/HomePageSections/ServicesContext/servicesStyles";
 import { Typography, Paper, Hidden } from "@material-ui/core";
 import { MuiThemeProvider } from "@material-ui/core/styles";
-
+import {THEME} from "../../ContainerStructure/Headings/headingStyles"
 import { Array, Data } from "../../Utils/Constants/Language/en/CareersData";
 import Content from "../../Components/Card";
 const Services = () => {
