@@ -2,15 +2,15 @@ import React from "react";
 import { useStyles } from "../NumberContext/numberStyles";
 import { missionStyles } from "./missionStyles";
 import { Card, CardContent, Paper } from "@material-ui/core";
-import Heading6 from "../../../ContainerStructure/Headings/Heading6";
-import Paragraph from "../../../ContainerStructure/Headings/Paragraphs/Paragraph";
+import Heading6 from "../../ContainerStructure/Headings/Heading6";
+import Paragraph from "../../ContainerStructure/Headings/Paragraphs/Paragraph";
 import {
   MidSection,
   MainData,
-} from "../../../Utils/Constants/Language/AboutUsData";
-import Patten1 from "../../../assets/AboutUs/vision1.png";
-import Patten2 from "../../../assets/AboutUs/vision2.png";
-import CustomImage from "../../../Components/CustomImage";
+} from "../../Utils/Constants/Language/AboutUsData";
+import Patten1 from "../../assets/AboutUs/vision1.png";
+import Patten2 from "../../assets/AboutUs/vision2.png";
+import CustomImage from "../../Components/CustomImage";
 
 const MissionContext = () => {
   const { cardSec, devSec, dev } = useStyles();

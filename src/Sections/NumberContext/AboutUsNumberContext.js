@@ -1,14 +1,14 @@
 import React from "react";
 import { useStyles } from "./numberStyles";
 import { Card, CardContent, Paper } from "@material-ui/core";
-import Heading5 from "../../../ContainerStructure/Headings/Heading5";
-import Heading4 from "../../../ContainerStructure/Headings/Heading4";
+import Heading5 from "../../ContainerStructure/Headings/Heading5";
+import Heading4 from "../../ContainerStructure/Headings/Heading4";
 import {
   titles,
   subTitles,
   MainData
-} from "../../../Utils/Constants/Language/AboutUsData";
-import CustomImage from "../../../Components/CustomImage";
+} from "../../Utils/Constants/Language/AboutUsData";
+import CustomImage from "../../Components/CustomImage";
 
 const AboutUsNumberContext = () => {
   const classes = useStyles();
