@@ -18,7 +18,6 @@ const PointBadgeStyles = makeStyles((theme) => ({
     padding: "25px",
     margin: "15px",
     [theme.breakpoints.down("sm")]: {
-      height: "25px",
       padding: "15px",
       margin: "10px",
     },

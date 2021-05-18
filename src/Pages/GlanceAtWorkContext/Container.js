@@ -7,6 +7,7 @@ import {
   CardContent,
   Button,
   Paper,
+  Grid,
 } from "@material-ui/core";
 import Breakpoints from "../../Theme/theme.breakpoints";
 import * as Images from "../../Components/Hero/Images"
@@ -30,7 +31,7 @@ const Container = ({backColor}) => {
   } = classes;
   return (
     <>
-      <Paper style={{backgroundColor: backColor}} className={root} elevation={0}>
+      <Grid style={{backgroundColor: backColor}} className={root} elevation={0}>
         <section className={serviceHeading}>
           <MuiThemeProvider theme={THEME}>
             <Typography variant="h4" >
@@ -39,7 +40,7 @@ const Container = ({backColor}) => {
           </MuiThemeProvider>
         </section>
         <section className={cardSec}>
-          <Card className={card}>
+          <Card className={card} >
             <CardContent>
               <section >
                 <section className={devSec}>
@@ -103,7 +104,7 @@ const Container = ({backColor}) => {
           </CustomButton>
           </MuiThemeProvider>
         </section>
-      </Paper>
+      </Grid>
     </>
   );
 };

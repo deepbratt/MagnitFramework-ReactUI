@@ -16,14 +16,14 @@ const Banner = ({
     BannerStyles();
   return (
     <>
-      <Grid className={root} container style={{ background: linearBackground }}>
+      <Grid xs={12} className={root} container style={{ background: linearBackground }}>
         {breadCrumb && (
-          <Grid item xs={12}>
-            <div className={breadCrumbStyle}>{breadCrumb}</div>
+          <Grid item xs={12} className={breadCrumbStyle}>
+           {breadCrumb}
           </Grid>
         )}
-        <Grid item xs={12} md={6}>
-          <div className={content}>{children}</div>
+        <Grid item xs={12} md={6} className={content}>
+         {children}
         </Grid>
         <Grid item xs={12} md={6}>
           <CustomImage
@@ -32,9 +32,9 @@ const Banner = ({
             alt=""
             srcset=""
           />
-          <div className={imageWrapper}>
+          <Grid className={imageWrapper} >
             <CustomImage src={image} alt="" />
-          </div>
+          </Grid>
         </Grid>
       </Grid>
     </>
