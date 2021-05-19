@@ -6,6 +6,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import OurBlogsStyles from "./style";
+import CustomButton from "../../Components/CustomButton";
 
 const LatestBlogCard = ({ cardData }) => {
   const { coverImage, imageText, title, body, buttonText, detail } = cardData;
@@ -60,9 +61,9 @@ const LatestBlogCard = ({ cardData }) => {
         </CardContent>
       </CardActionArea>
       <CardActions className={latestBlogCardContent}>
-        <Button size="small" color="primary">
+      <CustomButton size="small" color="primary">
           {buttonText}
-        </Button>
+        </CustomButton>
       </CardActions>
     </Card>
   );

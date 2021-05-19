@@ -14,6 +14,7 @@ import { hero, Vector } from "../../Components/Hero/Images";
 import Breakpoints from "../../Theme/theme.breakpoints";
 import { Colors } from "../../Theme/color.constants";
 import CustomImage from "../CustomImage";
+import CustomButton from "../CustomButton";
 
 const Slider = ({
   value,
@@ -76,18 +77,19 @@ const Slider = ({
             ))}
           </List>
           {/* </section> */}
-          <Button
-            style={{
-              textTransform: "none",
-              backgroundColor: Harlequin,
-            }}
-            variant="contained"
+        </MuiThemeProvider>
+        <CustomButton
+            // style={{
+            //   // textTransform: "none",
+            //   backgroundColor: Harlequin,
+            //   // borderRadius:"5px"
+            // }}
+            // variant="contained"
             size={Breakpoints()}
-            color="secondary"
+            color="primary"
           >
             {text}
-          </Button>
-        </MuiThemeProvider>
+          </CustomButton>
       </Grid>
       <Hidden smDown>
         <Grid

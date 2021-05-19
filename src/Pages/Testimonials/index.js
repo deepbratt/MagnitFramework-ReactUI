@@ -13,6 +13,7 @@ import prof from "../../assets/Testimonials/prof.png"
 import VideosData,{ ClientsHaveToSay, subTitle, Testmonial } from '../../Utils/Constants/Language/en/TestimonialVideos';
 
 import Section from '../Section';
+import CustomButton from '../../Components/CustomButton';
 function Testimonials() {
     const { skyBlue, aliceBlue ,linearBackground} = Colors;
     const {
@@ -62,14 +63,14 @@ function Testimonials() {
       </Grid>
       
       <Grid xs={12} container alignItems="center" justify="center" className={flex}>
-        <Button type="submit" color="primary" variant="contained">
+      <CustomButton type="submit" color="primary" variant="contained">
           <Typography
             className={seeMore}
             variant="button"
           >
             See More
           </Typography>
-        </Button>
+        </CustomButton>
         </Grid>
       </CommentSection>
     )
