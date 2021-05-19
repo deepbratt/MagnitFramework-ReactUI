@@ -71,6 +71,10 @@ export const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
   },
+  link: {
+    textDecoration: "none",
+    color: whiteColor
+  },
   vector: {
    zIndex: 1,
     height: "auto",
