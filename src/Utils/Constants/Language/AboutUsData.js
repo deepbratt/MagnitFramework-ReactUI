@@ -18,12 +18,11 @@ const MainData = {
   subTitle: "Cathrine Doe",
   span: "CEO Megmite",
   heading: "Meet Our Foundersy",
-  paragraph:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip",
-  paragraphPrimary:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magnaaliqua. Ut enim ad minim veniam, quis nostrud exercitationullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  paragraphSecondary:
-    "Ut enim ad minim veniam, quis nostrud exercitation ullamcolaboris nisi ut aliquip ex ea commodo consequat. Duis auteirure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  paragraph: [
+    "With the advent of the digital age, it has become imperative to have an online footprint for your Business. However, not many are able to optimize the potential of their business and get lost in this virtual sea of countless commerce.",
+    "That is where we come in.",
+    "Magnit is a digital Swissknife for your business. We provide 360-degree software solutions handpicked to cater to your industry-specific needs. We transform your ideas into solutions that puts your business a digital step ahead of the others.",
+  ],
 };
 
 // Number Section Data
@@ -58,8 +57,10 @@ const MidSection = {
   heading: "Mission and Vision",
   firstTitle: "Our Mission",
   secondTitle: "Our Vision",
-  paragraph:
-    "Working with Brainium has been nothing short of excellent. The response time, commitment and delivery far exceeded my expectations.",
+  missionText:
+    "Efficient, time-bound, error-free work generates a trust no amount of advertising can achieve. Our Mission, at Magnit, is to exceed the expectations of our clients with robust, future-proof personalized solutions that will keep adding value to them in years to come.",
+  visionText:
+    "There is no substitute to dedicated, efficient work. With a passionate work culture, we aim to be the best performers in providing IT solution services in the Global Market, achieving exponential growth and success for your businesses along the way.",
 };
 
 // Infrastructure
