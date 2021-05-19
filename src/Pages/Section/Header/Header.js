@@ -121,7 +121,7 @@ const Header = (props) => {
               ))}
               <ListItem>
                 <NavLink
-                  to="contactUS"
+                  to="request/a/quote"
                   activeClassName={active}
                   className={link}
                 >
@@ -129,6 +129,7 @@ const Header = (props) => {
                     variant="contained"
                     size={Breakpoints()}
                     onClick={navigated}
+                    style
                   >
                     Request A Quote
                   </CustomButton>
