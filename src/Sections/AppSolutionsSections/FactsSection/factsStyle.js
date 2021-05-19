@@ -31,7 +31,6 @@ export const useStyles = makeStyles((theme) => ({
   cardContent: {
     backgroundColor: "#E8F2FE",
     display: "flex",
-
     [breakpoints.down("sm")]: {
       flexDirection: "column",
       alignItems: "center",

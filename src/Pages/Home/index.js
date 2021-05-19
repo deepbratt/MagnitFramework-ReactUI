@@ -1,12 +1,12 @@
 import Grid from "@material-ui/core/Grid";
 import { connect } from "react-redux";
-import Services from "../Section/Header/ServicesContext/Services";
+import Services from "../../Sections/HomePageSections/ServicesContext/Services";
 import Slide from "../../Components/Slider/Container";
-import Solutions from "../SolutionsContext/Solutions";
-import PartnerContext from "../PartnerWithUsContext/Maincontainer";
-import GlanceSection from "../GlanceAtWorkContext/Container";
+import Solutions from "../../Sections/HomePageSections/SolutionsContext/Solutions";
+import PartnerContext from "../../Sections/HomePageSections/PartnerWithUsContext/Maincontainer";
+import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
 import React, { useState } from "react";
-import ContactUsAndFQA from "../ContactUsAndFQA";
+import ContactUsAndFQA from "../../Sections/HomePageSections/ContactUsAndFQA";
 import { Typography, Hidden } from "@material-ui/core";
 import Section from "../Section";
 import Image1 from "../../assets/images/awardAccredationSection/image 2.png";

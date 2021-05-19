@@ -22,10 +22,10 @@ const Banner = ({
            {breadCrumb}
           </Grid>
         )}
-        <Grid item xs={12} md={6} className={content}>
+        <Grid item xs={12} lg={6} md={12} className={content}>
          {children}
         </Grid>
-        <Grid style={{ position: "relative" }} item xs={12} md={5}>
+        <Grid style={{ position: "relative" }} item lg={5} xs={12} >
           <CustomImage
             className={patternPosition}
             src={StarFishPinkPattern}
