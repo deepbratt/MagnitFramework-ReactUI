@@ -42,7 +42,7 @@ const VideoCard = ({ Img, detail, avatar, name, date }) => {
         className={header}
       />
       </Grid>
-      <Grid>
+      <Grid style={{position:"relative"}}>
       <CardMedia
         component="img"
         alt="Contemplative Reptile"
@@ -51,6 +51,9 @@ const VideoCard = ({ Img, detail, avatar, name, date }) => {
         image={Img}
         title="Contemplative Reptile"
       />
+      <div className={playBtn}>
+        <img src={play} alt="s" />
+      </div>
       </Grid>
       <Grid>
       <CardContent>
@@ -59,9 +62,7 @@ const VideoCard = ({ Img, detail, avatar, name, date }) => {
         </Typography>
       </CardContent>
       </Grid>
-      <div className={playBtn}>
-        <img src={play} alt="s" />
-      </div>
+      
     </Grid>
   );
 };
