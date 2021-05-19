@@ -69,6 +69,7 @@ const PointBadgeStyles = makeStyles((theme) => ({
     justifyContent: "center",
     "& > p": {
       color:darkSilver,
+      margin:"0rem .1rem",
       [theme.breakpoints.down("sm")]: {
         fontSize: "10px",
       },
