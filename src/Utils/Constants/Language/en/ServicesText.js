@@ -15,27 +15,27 @@ export const ServicesData = [
     color: Serenade,
     icon: App,
     title: "Developer Hiring",
-    desc: " We let you hire developers from our talent pool at competitive prices with Dedicated hiring, Project based hiring, and Hourly hiring options.",
+    desc: " In compliance with global standards, we can quickly build you a team that suits your business case from our talent pool of developers with industry-specific skills.",
   },
   {
     color: FairPink,
     icon: Profile,
     title: "App Development",
-    desc: " We develop and design applications for iOS, android and windows devices using our expertise in native and hybrid technologies",
+    desc: "Through a deep understanding of our client’s environment, market, vision, we provide the latest, efficient, adaptive and value add technology to put them a step above the competition.",
   },
 
   {
     color: AquaSpring,
     icon: Web,
     title: "Web Development",
-    desc: " We offer agile and cost-efficient web development solutions to give you a peerless experience in creating a strong online footprint.",
+    desc: " We offer end-to-end, full-cycle app development solutions that deliver personalized user experiences ensuring higher life-time value.",
   },
 
   {
     color: LilyWhite,
     icon: Digital,
     title: "Digital Marketing",
-    desc: "We provide integrated digital marketing solutions with the strategy and approach that is best suited to grow your business.",
+    desc: "The future is digital. With Magnit’s help, dominate your market through conversions and lead driven content. Make information work for you to create an indestructible online presence.",
   },
 ];
 
