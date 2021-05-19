@@ -17,6 +17,8 @@ const {
   isoIcon,
 } = icons;
 
+export const PatrnerWithUsSectionTitle = "Why /Us?";
+
 const {
   yellowOrange,
   lightOrange,
@@ -97,4 +99,7 @@ export const SecondaryArray = [{
 },
 ]
 
-export default {PrimaryArray,SecondaryArray}
+
+
+
+export default { PrimaryArray, SecondaryArray };

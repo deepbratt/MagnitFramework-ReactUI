@@ -8,10 +8,10 @@ import BreadCrumb from "../../Components/BreadCrumb";
 import CustomImage from "../../Components/CustomImage";
 
 const AboutMainSection = (props) => {
-  const { title, paragraphPrimary, paragraphSecondary } = MainData;
+  const { title, paragraph } = MainData;
 
   const classes = useStyles();
-  const { root, cardSec, breadCrumbStyles, paragraph, hero, card, underlined } =
+  const { root, cardSec, breadCrumbStyles, paragraphStyle, hero, card, underlined } =
     classes;
   return (
     <>
@@ -31,9 +31,11 @@ const AboutMainSection = (props) => {
                 <section className={underlined}>
                   <Heading title={title} />
                 </section>
-                <section className={paragraph}>
-                  <Paragraph para={paragraphPrimary} />
-                  <Paragraph para={paragraphSecondary} />
+                <section className={paragraphStyle}>
+                  {paragraph &&
+                    paragraph.map((text, index) => (
+                      <Paragraph key={index} para={text} />
+                    ))}
                 </section>
               </CardContent>
             </Card>

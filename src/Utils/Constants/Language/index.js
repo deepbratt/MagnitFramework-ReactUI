@@ -35,7 +35,7 @@ export const footerText = {
   talkToUsSection: {
     title: "TALK TO US",
     numbers: [
-      "USA/: +1 (214) 329-9898",
+      "USA: +1 (214) 329-9898",
       "India: +91 63993 52116",
       "Pakistan: +92 335 1222515",
     ],
@@ -44,6 +44,7 @@ export const footerText = {
     title: "HEAD OFFICE",
     address:
       "1690 FM 423 Suite 9205,  Frisco, Texas 75033 – USA",
+
   },
   copyrights: "© 2021 The Magnit, All Rights Reserved.",
   contactUs: "CONNECT WITH US",
@@ -62,12 +63,15 @@ export const contactUsLabelsText = {
   name: "Name",
   email: "Email",
   phoneNum: "Phone Number",
-  message: "Message",
+  companyName: "Company Name",
+  message: "Project Details",
   submit: "Submit",
+  privacy:
+    "We respect your privacy and we guarantee that your contact details will never be shared with any third parties under any circumstances.",
 };
 
 export const errorBoundaryText = {
-  heading: 'OOPS! Something went wrong.',
-  error: 'Error',
-  errorInformationHeading: "Error Information"
-}
+  heading: "OOPS! Something went wrong.",
+  error: "Error",
+  errorInformationHeading: "Error Information",
+};
