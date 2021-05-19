@@ -26,7 +26,8 @@ const VideoCard = ({ Img, detail, avatar, name, date }) => {
   } = useStyles();
 
   return (
-    <Card className={cardRoot}>
+    <Grid className={cardRoot}>
+    <Grid>
       <CardHeader
         avatar={<img src={avatar} alt="s" className={avatarImg} />}
         title={<Typography className={cardTitle}>{name}</Typography>}
@@ -40,6 +41,8 @@ const VideoCard = ({ Img, detail, avatar, name, date }) => {
         }
         className={header}
       />
+      </Grid>
+      <Grid style={{position:"relative"}}>
       <CardMedia
         component="img"
         alt="Contemplative Reptile"
@@ -48,15 +51,19 @@ const VideoCard = ({ Img, detail, avatar, name, date }) => {
         image={Img}
         title="Contemplative Reptile"
       />
+      <div className={playBtn}>
+        <img src={play} alt="s" />
+      </div>
+      </Grid>
+      <Grid>
       <CardContent>
         <Typography component="p" className={cardpara}>
           {detail}
         </Typography>
       </CardContent>
-      <div className={playBtn}>
-        <img src={play} alt="s" />
-      </div>
-    </Card>
+      </Grid>
+      
+    </Grid>
   );
 };
 export default VideoCard;

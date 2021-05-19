@@ -6,6 +6,7 @@ const FactCardStyles = makeStyles((theme) => ({
     borderRadius: "5px",
     margin: "10px",
     padding: "25px",
+    width:"100%"
   },
   header: {
     fontSize: "3rem",

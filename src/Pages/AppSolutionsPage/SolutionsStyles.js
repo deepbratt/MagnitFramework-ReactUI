@@ -9,9 +9,6 @@ export const SolutionsStyles = makeStyles((theme) => ({
     width: "100%",
     cursor: "pointer",
     boxShadow: "none",
-    [breakpoints.down("sm")]: {
-      height: "310px",
-    },
   },
   supportSub: {
     borderRadius: "5px",

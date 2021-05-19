@@ -1,6 +1,6 @@
 import React from "react";
 import { useStyles } from "./careerStyles";
-import { Card, CardContent, Paper, Button } from "@material-ui/core";
+import { Card, CardContent, Paper, Button, Grid } from "@material-ui/core";
 import Heading5 from "../../ContainerStructure/Headings/Heading5";
 import Heading4 from "../../ContainerStructure/Headings/Heading4";
 import Paragraph from "../../ContainerStructure/Headings/Paragraphs/Paragraph";
@@ -26,11 +26,13 @@ const OpportunityContext = () => {
     RightPattern,
     LeftPattern,
     btn,
+    remoteArea,
+    bottomStyle
   } = classes;
   const { DoveGray, whiteColor, Harlequin } = Colors;
   return (
     <>
-      <Paper className={root} elevation={0}>
+      <Grid className={root} elevation={0}>
         <img className={RightPattern} alt="image" src={rightPattern} />
         <img className={LeftPattern} alt="image" src={leftPattern} />
         <section style={{ color: whiteColor }}>
@@ -39,16 +41,24 @@ const OpportunityContext = () => {
         <section className={cardSec}>
           {DataArray.map((data, index) => {
             return (
-              <Card className={card}>
-                <CardContent key={index}>
-                  <section className={devSec}>
-                    <section>
+              <Grid xs={12} md={3}  className={card} key={index}>
+                  <Grid className={devSec}>
+                    <Grid xs={12} >
                       <Heading5 subTitle={data.title} />
-                      <section style={{ color: DoveGray, paddingTop: "10px" }}>
+                      </Grid>
+                      <Grid className={remoteArea} >
+                        <div style={{ marginRight:".5rem"}}>
                         <img alt="image" width="10px" src={data.icon} />
+                        </div>
+                        <div>
                         <Paragraph para={data.span} />
+                        </div>
+                        </Grid>
+                        <Grid xs={12} >
                         <Paragraph para={data.desc} />
-                      </section>
+                      </Grid>
+                  </Grid>
+                  <Grid xs={12} className={bottomStyle }>
                       <CustomButton
                         style={{
                           textTransform: "none",
@@ -59,10 +69,8 @@ const OpportunityContext = () => {
                       >
                         {data.buttonText}
                       </CustomButton>
-                    </section>
-                  </section>
-                </CardContent>
-              </Card>
+                      </Grid>
+              </Grid>
             );
           })}
         </section>
@@ -77,7 +85,7 @@ const OpportunityContext = () => {
         >
           Learn More
         </CustomButton>
-      </Paper>
+      </Grid>
     </>
   );
 };

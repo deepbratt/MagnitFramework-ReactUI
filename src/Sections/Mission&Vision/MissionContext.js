@@ -16,7 +16,7 @@ const MissionContext = () => {
   const { cardSec, devSec, dev } = useStyles();
   const { card, card2, root, Icon, underlined, leftPattern, rightPattern } =
     missionStyles();
-  const { firstTitle, secondTitle, paragraph } = MidSection;
+  const { firstTitle, secondTitle, missionText, visionText } = MidSection;
   const { mission, vision } = MainData;
   return (
     <>
@@ -38,7 +38,7 @@ const MissionContext = () => {
                 <section className={underlined}>
                   <CustomImage className={Icon} src={mission} alt="Icon" />
                   <Heading6 title={firstTitle} />
-                  <Paragraph para={paragraph} />
+                  <Paragraph para={missionText} />
                 </section>
               </section>
             </CardContent>
@@ -52,14 +52,14 @@ const MissionContext = () => {
           style={{ paddingBottom: "20px" }}
           className={cardSec}
         >
-          <Card className={card}>
+            <Card className={card}>
             <CardContent>
               <section className={devSec}>
                 <section className={dev}></section>
                 <section className={underlined}>
                   <CustomImage className={Icon} src={vision} alt="Icon" />
                   <Heading6 title={secondTitle} />
-                  <Paragraph para={paragraph} />
+                  <Paragraph para={visionText} />
                 </section>
               </section>
             </CardContent>

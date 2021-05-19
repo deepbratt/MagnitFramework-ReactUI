@@ -1,12 +1,15 @@
 const Data = {
-  headingLineOne: "We deliver absolute & ",
-  headingLineTwo: "growth-oriented solutions",
-  headingLineLast: "App Development.",
+  headingLineOne: "Transforming ideas",
+  headingLineTwo: "through solutions",
+  headingLineFirstSlide: "Web Development",
+  headingLineSecondSlide: "App Development",
+  headingLineThirdSlide: "Software Development",
   buttonText: "Partner with us save 50%",
 };
 
-const subTitle = "Free Life-Time Support";
-const subtTitleTwo = "Assurance of Quality";
-const subTitleThree = "On-Time Delivery";
+const subTitle = "Industry-specific skills";
+const subtTitleTwo = "Fair and transparent pricing";
+const subTitleThree = "Adaptable and innovative solutions";
 const array = [subTitle, subtTitleTwo, subTitleThree];
 export { Data, array };
+

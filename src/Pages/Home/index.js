@@ -1,12 +1,12 @@
 import Grid from "@material-ui/core/Grid";
 import { connect } from "react-redux";
-import Services from "../Section/Header/ServicesContext/Services";
+import Services from "../../Sections/HomePageSections/ServicesContext/Services";
 import Slide from "../../Components/Slider/Container";
-import Solutions from "../SolutionsContext/Solutions";
-import PartnerContext from "../PartnerWithUsContext/Maincontainer";
-import GlanceSection from "../GlanceAtWorkContext/Container";
+import Solutions from "../../Sections/HomePageSections/SolutionsContext/Solutions";
+import PartnerContext from "../../Sections/HomePageSections/PartnerWithUsContext/Maincontainer";
+import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
 import React, { useState } from "react";
-import ContactUsAndFQA from "../ContactUsAndFQA";
+import ContactUsAndFQA from "../../Sections/HomePageSections/ContactUsAndFQA";
 import { Typography, Hidden } from "@material-ui/core";
 import Section from "../Section";
 import Image1 from "../../assets/images/awardAccredationSection/image 2.png";
@@ -29,6 +29,8 @@ import {
 // import ReviewSlider from "../../Components/ReviewSlider";
 import { trainingAndCertificationText as TCData } from "../../Utils/Constants/Language";
 import FirstColumn from "../../Components/QuoteCard/FirstColumn";
+import SecondColumn from "../../Components/QuoteCard/SecondColumn";
+import ThirdColumn from "../../Components/QuoteCard/ThirdColumn";
 import CertificationList from "../../Components/certificationList";
 import HomeStyles from "./style";
 import QuoteCard from "../../Components/QuoteCard";
@@ -67,34 +69,53 @@ const Home = (props) => {
 
   const WhyUsSlides = [
     <>
-      <Hidden smDown>
+      <Hidden mdDown>
         {cards &&
           cards.map((data, index) => (
-            <Grid key={index} item xs={12} md={6} lg={4}>
+            <Grid key={index} item xs={12} md={6} lg={4} style={{display:"flex"}}>
               <QuoteCard cardData={data} />
             </Grid>
           ))}
       </Hidden>
-      <Hidden mdUp>
+      <Hidden lgUp>
         <Grid item>
-          <FirstColumn />
+          <SecondColumn />
         </Grid>
       </Hidden>
+      
     </>,
+     <>
+     <Hidden mdDown>
+       {cards &&
+         cards.map((data, index) => (
+           <Grid key={index} item xs={12} md={6} lg={4} style={{display:"flex"}}>
+             <QuoteCard cardData={data} />
+           </Grid>
+         ))}
+     </Hidden>
+     <Hidden lgUp>
+       <Grid item>
+         <ThirdColumn />
+       </Grid>
+     </Hidden>
+     
+   </>,
     <>
-      <Hidden smDown>
+      <Hidden mdDown>
         {cards &&
           cards.map((data, index) => (
-            <Grid key={index} item xs={12} md={6} lg={4}>
+            <Grid key={index} item xs={12} md={6} lg={4} style={{display:"flex"}}>
               <QuoteCard cardData={data} />
             </Grid>
           ))}
       </Hidden>
-      <Hidden mdUp>
+      <Hidden lgUp>
         <Grid item>
           <FirstColumn />
         </Grid>
       </Hidden>
+      
+      
     </>,
   ];
 

@@ -6,7 +6,11 @@ const {Mirage,darkSilver} =Colors;
 const useStyles = makeStyles((theme) => ({
   cardRoot:{
     // width:460,
-    position:"relative",
+  display:"flex",
+  flexDirection:"column",
+  justifyContent:"space-evenly",
+  height:"90%",
+    // position:"relative",
     padding:"1.3rem 1.6rem",
     borderRadius:".5rem",
     boxShadow:"0px 4px 60px rgba(0, 0, 0, 0.1)",
@@ -16,7 +20,8 @@ const useStyles = makeStyles((theme) => ({
          padding: "1rem 0rem" 
     },
     [breakpoints.down("sm")]: {
-        margin:".5rem 0rem",
+        margin:"1rem 0rem",
+       
       },
      
   },
@@ -85,22 +90,22 @@ carddate:{
 },
 playBtn:{
     position:"absolute",
-    top: "33%",
-    left: "53%",
-    transform: "translate(-3rem, -1.5rem)",
+    top: "30%",
+    left: "40%",
+    transform: "translate(0rem, 0rem)",
     "& > img ":{
       width:"70px"
     },
     [breakpoints.only("sm")]: {
       margin:".5rem 1.2rem",
-      transform: "translate(-3rem, -4rem)",
+      transform: "translate(-1rem, -1rem)",
       "& > img ":{
         width:"3.7rem"
       },
     },
     [breakpoints.only("xs")]: {
       margin:".5rem 1.2rem",
-      transform: "translate(-3rem, -4rem)",
+      transform: "translate(-1rem, -1rem)",
       "& > img ":{
         width:"3.5rem"
       },

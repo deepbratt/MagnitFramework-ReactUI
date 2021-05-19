@@ -1,11 +1,11 @@
 import React from "react";
 import {
   useStyles,
-  THEME,
-} from "../Pages/Section/Header/ServicesContext/servicesStyles";
+} from "../Sections/HomePageSections/ServicesContext/servicesStyles";
 import { Typography, Card, CardContent } from "@material-ui/core";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import CustomImage from "./CustomImage";
+import {THEME} from "../ContainerStructure/Headings/headingStyles"
 const CardData = ({ data }) => {
   const classes = useStyles();
   const { card, devSec, devSub } = classes;
@@ -19,13 +19,12 @@ const CardData = ({ data }) => {
               <section className={devSec}>
                 <section
                   style={{ backgroundColor: text.color }}
-                  className={devSub}
-                >
+                  className={devSub} >
                   <CustomImage
                     alt="icon"
                     src={text.icon}
                     style={{ filter: text.fill }}
-                  />
+                    />
                 </section>
               </section>
               <section>

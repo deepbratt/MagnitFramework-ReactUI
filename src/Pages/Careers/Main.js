@@ -1,56 +1,80 @@
 import React from "react";
 import { useStyles } from "../../Sections/MainComponent/mainStyles";
-import { Card, CardContent, Paper } from "@material-ui/core";
+import { Card, CardContent, Grid, Typography } from "@material-ui/core";
 import Heading4 from "../../ContainerStructure/Headings/Heading4";
-import Paragraph from "../../ContainerStructure/Headings/Paragraphs/Paragraph";
 import Heading5 from "../../ContainerStructure/Headings/Heading5";
 import { MainData } from "../../Utils/Constants/Language/en/CareersData";
 import Breakpoints from "../../Theme/theme.breakpoints";
 import { Colors } from "../../Theme/color.constants";
 import CustomImage from "../../Components/CustomImage";
 import CustomButton from "../../Components/CustomButton";
+import BreadCrumb from "../../Components/BreadCrumb";
 const Main = (props) => {
   const { heading, subHeading, para, buttonText } = MainData;
   const classes = useStyles();
-  const { root, cardSec, hero, card, paragraph, textUnderlined } = classes;
+  const {
+    root,
+    breadCrumbStyles,
+    cardSec,
+    hero,
+    card,
+    paragraph,
+    textUnderlined,
+  } = classes;
   const { Harlequin, whiteColor } = Colors;
+  const breadcrumbs = [
+    {
+      path: "/",
+      text: "Home",
+    },
+    {
+      path: "/careers",
+      text: "Careers",
+    },
+  ];
   return (
     <>
-      <Paper style={{ marginBottom: "80px" }} className={root} elevation={0}>
-        <section>
+      <Grid container className={root} style={{ marginBottom: "80px" }}>
+        <Grid item xs={12}>
           <Card className={card}>
+            <div className={breadCrumbStyles}>
+              <BreadCrumb links={breadcrumbs} />
+            </div>
             <CardContent className={cardSec}>
               <CustomImage className={hero} alt="hero" src={props.hero} />
             </CardContent>
           </Card>
           <Card>
             <CardContent className={cardSec}>
-              <section className={textUnderlined}>
+              <Grid xs={12} className={textUnderlined}>
                 <Heading4 title={heading} />
-              </section>
-              <section style={{ marginTop: "20px" }}>
+              </Grid>
+              <Grid xs={12} style={{ margin: "20px" }}>
                 <Heading5 subTitle={subHeading} />
-              </section>
-              <section className={paragraph}>
-                <Paragraph className={paragraph} para={para} />
-              </section>
+              </Grid>
+              <Grid xs={12} md={6} className={paragraph}>
+                <Typography variant="h6" className={paragraph}>
+                  {para}
+                </Typography>
+              </Grid>
             </CardContent>
           </Card>
-        </section>
-        <section>
-          <CustomButton
-            style={{
-              textTransform: "none",
-              backgroundColor: Harlequin,
-              color: whiteColor,
-            }}
-            variant="contained"
-            size={Breakpoints()}
-          >
-            {buttonText}
-          </CustomButton>
-        </section>
-      </Paper>
+
+          <Grid>
+            <CustomButton
+              style={{
+                textTransform: "none",
+                backgroundColor: Harlequin,
+                color: whiteColor,
+              }}
+              variant="contained"
+              size={Breakpoints()}
+            >
+              {buttonText}
+            </CustomButton>
+          </Grid>
+        </Grid>
+      </Grid>
     </>
   );
 };

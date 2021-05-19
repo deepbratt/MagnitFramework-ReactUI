@@ -14,6 +14,7 @@ import { hero, Vector } from "../../Components/Hero/Images";
 import Breakpoints from "../../Theme/theme.breakpoints";
 import { Colors } from "../../Theme/color.constants";
 import CustomImage from "../CustomImage";
+import CustomButton from "../CustomButton";
 
 const Slider = ({
   value,
@@ -34,14 +35,15 @@ const Slider = ({
     spiral,
     gridImage,
     gridText,
+    listItem
   } = classes;
   return (
     <Grid
       container
       className={sec}
       direction="row"
-      justify="center"
-      alignItems="center"
+      // justify="center"
+      // alignItems="center"
       style={{
         background: `linear-gradient(${color} 5%, ${whiteColor} 95% `,
       }}
@@ -49,9 +51,6 @@ const Slider = ({
       <Hidden smDown>
         <CustomImage alt="sliderImg" src={Vector} className={spiral} />
       </Hidden>
-      {/* <Hidden smDown>
-        <Grid item xs={12} md={1} lg={1}></Grid>
-      </Hidden> */}
       <Grid
         item
         xs={12}
@@ -69,8 +68,8 @@ const Slider = ({
           {/* <section className={listSec}> */}
           <List>
             {data.map((text, index) => (
-              <ListItem>
-                <Typography key={index} variant="h5">
+              <ListItem className={listItem} >
+                <Typography  key={index} variant="h5">
                   <CheckIcon className={value === "LIGHT" ? tick : tickSub} />
                   {text}
                 </Typography>
@@ -78,18 +77,19 @@ const Slider = ({
             ))}
           </List>
           {/* </section> */}
-          <Button
-            style={{
-              textTransform: "none",
-              backgroundColor: Harlequin,
-            }}
-            variant="contained"
+        </MuiThemeProvider>
+        <CustomButton
+            // style={{
+            //   // textTransform: "none",
+            //   backgroundColor: Harlequin,
+            //   // borderRadius:"5px"
+            // }}
+            // variant="contained"
             size={Breakpoints()}
-            color="secondary"
+            color="primary"
           >
             {text}
-          </Button>
-        </MuiThemeProvider>
+          </CustomButton>
       </Grid>
       <Hidden smDown>
         <Grid
