@@ -49,8 +49,8 @@ const ContactUs = () => {
       text: "Home",
     },
     {
-      path: "/contactUs",
-      text: "Contact Us",
+      path: "/request-a-quote",
+      text: "Request A Quote",
     },
   ];
   return (

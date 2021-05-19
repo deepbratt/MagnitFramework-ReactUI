@@ -1,7 +1,9 @@
 const Data = {
-  headingLineOne: "Transforming ideas to solutions ",
-  headingLineTwo: "through App Development",
-  headingLineLast: " Web Development/Software Development",
+  headingLineOne: "Transforming ideas to  ",
+  headingLineTwo: "through solutions",
+  headingLineFirstSlide: "Web Development",
+  headingLineSecondSlide: "App Development",
+  headingLineThirdSlide: "Software Development",
   buttonText: "Partner with us save 50%",
 };
 

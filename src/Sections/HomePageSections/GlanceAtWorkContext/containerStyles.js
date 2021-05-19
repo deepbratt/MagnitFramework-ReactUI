@@ -32,7 +32,7 @@ export const useStyles = makeStyles((theme) => ({
     transition: "all .25s linear",
     margin: "20px",
     boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
-    [breakpoints.down("md")]: {
+    [breakpoints.down("sm")]: {
       width: "70%",
   
     },
@@ -53,11 +53,11 @@ export const useStyles = makeStyles((theme) => ({
   },
 cardContent: {
   width: "100%",
-  // backgroundColor: Mariner,
+  backgroundColor: Mariner,
   paddingBottom: "12px",
   textAlign: "center",
   paddingLeft: "20px",
-  // color: whiteColor,
+  color: whiteColor,
   padding: "20px"
 
 },

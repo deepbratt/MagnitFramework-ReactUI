@@ -52,7 +52,6 @@ const Container = ({backColor}) => {
                    {subtitleOne}
                   </Typography>
                 </MuiThemeProvider>
-                <Paragraph para={paragraphOne}/>
               </Grid>
                 </Grid>
             
@@ -68,7 +67,6 @@ const Container = ({backColor}) => {
                   {subtitleTwo}
                   </Typography>
                 </MuiThemeProvider>
-                <Paragraph para={paragraphTwo}/>
               </Grid>
                 </Grid>
 
@@ -84,7 +82,6 @@ const Container = ({backColor}) => {
                   {subtitleThree}
                   </Typography>
                 </MuiThemeProvider>
-                <Paragraph para={paragraphThree}/>
               </Grid>
                 </Grid>
             </CardContent>
