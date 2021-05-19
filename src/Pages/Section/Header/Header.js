@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useStyles, THEME } from "./headerStyles";
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles } from "@material-ui/core/styles";
 import {
   ListItem,
   List,
@@ -24,10 +24,9 @@ import CustomImage from "../../../Components/CustomImage";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { menuItems } from "./MenuDropDown/Data";
 
-
 const Header = (props) => {
   const classes = useStyles();
-  const { Harlequin, whiteColor , Ash, WildSand} = Colors;
+  const { Harlequin, whiteColor, Ash, WildSand } = Colors;
   const {
     logo,
     list,
@@ -40,9 +39,9 @@ const Header = (props) => {
     menu,
   } = classes;
   const StyledMenuItem = withStyles((theme) => ({
-    paper:{
+    paper: {
       backgroundColor: WildSand,
-    }
+    },
   }))(Menu);
   const navigated = () => {
     props.resetLoader();
@@ -70,16 +69,16 @@ const Header = (props) => {
             <SideBar />
           </Hidden>
           <Hidden smDown>
-            <List  className={list}>
+            <List className={list}>
               <NavLink activeClassName={active} className={link} to="/home">
                 <MuiThemeProvider theme={THEME}>
-                  <ListItem >
+                  <ListItem>
                     <ListItemText primary="Home" className={list} />
                   </ListItem>
                 </MuiThemeProvider>
               </NavLink>
               {Object.keys(menuItems).map((item, index) => (
-                <div  key={index}>
+                <div key={index}>
                   <MuiThemeProvider theme={THEME}>
                     <ListItem>
                       <Button
@@ -91,7 +90,6 @@ const Header = (props) => {
                     </ListItem>
                   </MuiThemeProvider>
                   <StyledMenuItem
-
                     anchorEl={anchorEl && anchorEl[index]}
                     keepMounted
                     open={anchorEl && Boolean(anchorEl[index])}
@@ -107,15 +105,13 @@ const Header = (props) => {
                         selected={menuitems === item}
                         onClick={handleClose}
                         className={menu}
- 
-                        
                       >
                         <NavLink
                           to={menuitems.path}
                           activeClassName={active}
                           className={link}
                         >
-                          <ListItemText  primary={menuitems.title} />
+                          <ListItemText primary={menuitems.title} />
                         </NavLink>
                       </MenuItem>
                     ))}
@@ -123,21 +119,19 @@ const Header = (props) => {
                 </div>
               ))}
               <ListItem>
-                <MuiThemeProvider theme={THEME}>
+                <NavLink
+                  to="contactUS"
+                  activeClassName={active}
+                  className={link}
+                >
                   <CustomButton
-                    style={{
-                      textTransform: "none",
-                      backgroundColor: Harlequin,
-                      color: whiteColor,
-                    }}
-                    className={button}
                     variant="contained"
                     size={Breakpoints()}
                     onClick={navigated}
                   >
                     Contact Us
                   </CustomButton>
-                </MuiThemeProvider>
+                </NavLink>
               </ListItem>
             </List>
           </Hidden>

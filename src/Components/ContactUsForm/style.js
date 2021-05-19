@@ -16,10 +16,15 @@ const FormStyles = makeStyles((theme) => ({
     },
   },
   button: {
+    borderRadius: "5px",
+  },
+  privacyPolicy: {
     display: "flex",
-    justifyContent: "center",
-    alignContent: "center",
-    width: "100%",
+    marginBottom: "15px",
+    "& > *": {
+      color: "grey",
+      marginRight: "5px",
+    },
   },
 }));
 
