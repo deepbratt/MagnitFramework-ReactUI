@@ -49,7 +49,7 @@ const ContactUs = () => {
       text: "Home",
     },
     {
-      path: "/request-a-quote",
+      path: "/request/quote",
       text: "Request A Quote",
     },
   ];

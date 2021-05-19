@@ -129,7 +129,7 @@ const Header = (props) => {
                     variant="contained"
                     size={Breakpoints()}
                     onClick={navigated}
-                    style
+
                   >
                     Request A Quote
                   </CustomButton>
