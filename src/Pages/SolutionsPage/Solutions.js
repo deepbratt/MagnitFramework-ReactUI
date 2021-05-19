@@ -8,12 +8,13 @@ import Banner from "./Banner";
 import CommentSection from "../../Components/CommentSection";
 import Main from "./WhyUsContainer"
 
+
 const Solutions = () => {
   const { linearBackground } = Colors;
   const { root } = ServicesSectionStyles();
   return (
     <>
-      <Grid container>
+    <CommentSection>
         <Grid
           className={root}
           style={{ paddingBottom: "50px", background: linearBackground }}
@@ -30,10 +31,10 @@ const Solutions = () => {
         <Grid item lg={12} md={12} xs={12}>
           <Main />
         </Grid>
-        <Grid item lg={12} md={12} xs={12}>
-          <CommentSection />
-        </Grid>
-      </Grid>
+
+        </CommentSection>
+      
+
     </>
   );
 };

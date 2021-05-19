@@ -10,8 +10,8 @@ import CommentSection from '../../Components/CommentSection';
 import VideoCard from './TestimonialVideo';
 import linked from "../../assets/Testimonials/linked.png"
 import prof from "../../assets/Testimonials/prof.png"
-import VideosData from '../../Utils/Constants/Language/en/TestimonialVideos';
-import { ClientsHaveToSay, Testmonial } from './constant';
+import VideosData,{ ClientsHaveToSay, subTitle, Testmonial } from '../../Utils/Constants/Language/en/TestimonialVideos';
+
 import Section from '../Section';
 function Testimonials() {
     const { skyBlue, aliceBlue ,linearBackground} = Colors;
@@ -27,11 +27,10 @@ function Testimonials() {
         <Grid item sm={12} md={6}>
           <div className={content}>  
            <Typography variant="h1" gutterBottom>
-        Our Testimonials
+        {Testmonial}
         </Typography>
         <Typography variant="h6" gutterBottom>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-incididunt ut labore et dolore magna aliqua.
+       {subTitle}
         </Typography>
     </div>
         </Grid>

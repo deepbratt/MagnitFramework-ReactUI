@@ -2,13 +2,32 @@ import * as WebDesignAnimationData from "../../../Components/certificationList/w
 import * as GraphicDesignAnimationData from "../../../Components/certificationList/graphicDesignAnimation.json";
 import * as MarketingAnimationData from "../../../Components/certificationList/marketingAnimation.json";
 import * as CulturallyAlignedAnimationData from "../../../Components/certificationList/culturallyAlignedAnimation.json";
-
-export const reviewSliderText = {
+import Avatar7 from "../../../assets/services/Avatar7.png";
+export const reviewSliderText = [{
+  id:1,
   title: "Web Design",
-  text: `This is the third project I have done with it the company, with many more to come in the and years ahead. Thank you for all you did.” \n
-    This is the third project I have done with it the company, with many more to come in the and years ahead. Thank you for all you did.”`,
-  author: "Aaron Doe",
-};
+  text: `They provide efficient, time-bound prototypes keeping all KPIs in mind. We recommend them to anyone looking to make an online footprint.
+  ”`,
+  authName: "Maria Ann (SwiftDelaz)",
+  authImg: Avatar7,
+},
+{
+  id:2,
+  title: "Web Design",
+  text: `They offer 24/7 support with a smile.They gel up easily with our current team, working for a collaborative solution rather than a compromise.
+  ”`,
+  authName: " Akriti Mehra (Nailit)",
+  authImg: Avatar7,
+},
+{
+  id:3,
+  title: "Web Design",
+  text: `This is an amazing company. They did great CMS customization for us.They are very accommodating with changes and receptive to newer ideas. 
+  ”`,
+  authName: "Adam Smith (MyNews)",
+  authImg: Avatar7,
+}
+];
 
 export const trainingAndCertificationText = [
   {

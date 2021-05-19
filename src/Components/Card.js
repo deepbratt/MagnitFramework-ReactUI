@@ -19,13 +19,12 @@ const CardData = ({ data }) => {
               <section className={devSec}>
                 <section
                   style={{ backgroundColor: text.color }}
-                  className={devSub}
-                >
+                  className={devSub} >
                   <CustomImage
                     alt="icon"
                     src={text.icon}
                     style={{ filter: text.fill }}
-                  />
+                    />
                 </section>
               </section>
               <section>

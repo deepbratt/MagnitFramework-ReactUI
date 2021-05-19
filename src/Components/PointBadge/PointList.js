@@ -13,9 +13,9 @@ const PointList = ({ horizontal, data }) => {
         data.map((item, index) => (
           <Grid item xs={12} md={breakpoint}>
             <PointBadge key={index} horizontal={horizontal} data={item} />
-          </Grid>
-        ))}
-    </Grid>
+         </Grid>
+        ))} 
+    </Grid>   
   );
 };
 

@@ -26,8 +26,8 @@ export const useStyles = makeStyles((theme) => ({
     paddingTop: "20px",
   },
   card: {
-    width: "27%",
-    height: "340px",
+    background:"white",
+    height: "auto",
     display: "flex",
     zIndex: 1,
     flexDirection: "column",
@@ -36,15 +36,7 @@ export const useStyles = makeStyles((theme) => ({
     transition: "all .25s linear",
     boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)",
     margin: "20px",
-    [breakpoints.only("md")]: {
-      width: "30%",
-    },
-    [breakpoints.only("sm")]: {
-      width: "40%",
-    },
-    [breakpoints.down("xs")]: {
-      width: "70%",
-    },
+ 
   },
   button: {
     borderRadius: "none",
