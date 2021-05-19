@@ -4,23 +4,23 @@ export const FactCardText = {
     subTitle: "Experience",
   },
   team: {
-    title: "200+",
+    title: "50+",
     subTitle: "Team",
   },
   customers: {
-    title: "94%",
+    title: "96%",
     subTitle: "Happy Customers",
   },
   served: {
-    title: "35+ Countries",
+    title: "15+ Countries",
     subTitle: "Served",
   },
   projects: {
-    title: "2000+",
+    title: "200+",
     subTitle: "Successful Projects",
   },
-  certification: {
-    title: "ISO 9001:2015",
-    subTitle: "Certification",
+  customerRentention: {
+    title: "90+",
+    subTitle: "Customer Retention",
   },
 };
