@@ -80,7 +80,7 @@ const Header = (props) => {
               {Object.keys(menuItems).map((item, index) => (
                 <div key={index}>
                   <MuiThemeProvider theme={THEME}>
-                    <ListItem>
+                    <ListItem style={{padding:"0"}}>
                       <Button
                         className={list}
                         onClick={(e) => handleClick(index, e)}
