@@ -35,7 +35,8 @@ const ContactUs = () => {
     Luigi,
   } = Colors;
 
-  const { awardSection, imageContainer, label, section } = ContactUsStyles();
+  const { awardSection, imageContainer, label, section, factCard } =
+    ContactUsStyles();
 
   const { experience, team, customers, served, projects, certification } =
     FactCardText;
@@ -146,7 +147,7 @@ const ContactUs = () => {
       {/* SOME FACTS ABOUT US SECTION */}
       <Section title={SomeQuickFactsAboutUs}>
         <Grid container>
-          <Grid item xs={12} md={6} lg={4}>
+          <Grid className={factCard} item xs={12} md={6} lg={4}>
             <FactCard
               backColor={mustardColor}
               icon={ExperienceIcon}
@@ -154,7 +155,7 @@ const ContactUs = () => {
               subtitle={experience.subTitle}
             />
           </Grid>
-          <Grid item xs={12} md={6} lg={4}>
+          <Grid className={factCard} item xs={12} md={6} lg={4}>
             <FactCard
               backColor={darkBlueColor}
               icon={TeamIcon}
@@ -162,7 +163,7 @@ const ContactUs = () => {
               subtitle={team.subTitle}
             />
           </Grid>
-          <Grid item xs={12} md={6} lg={4}>
+          <Grid className={factCard} item xs={12} md={6} lg={4}>
             <FactCard
               backColor={orangeRed}
               icon={CustomerIcon}
@@ -170,7 +171,7 @@ const ContactUs = () => {
               subtitle={customers.subTitle}
             />
           </Grid>
-          <Grid item xs={12} md={6} lg={4}>
+          <Grid className={factCard} item xs={12} md={6} lg={4}>
             <FactCard
               backColor={spaceCadet}
               icon={ServedIcon}
@@ -178,7 +179,7 @@ const ContactUs = () => {
               subtitle={served.subTitle}
             />
           </Grid>
-          <Grid item xs={12} md={6} lg={4}>
+          <Grid className={factCard} item xs={12} md={6} lg={4}>
             <FactCard
               backColor={rosePinkColor}
               icon={ProjectIcon}
@@ -186,7 +187,7 @@ const ContactUs = () => {
               subtitle={projects.subTitle}
             />
           </Grid>
-          <Grid item xs={12} md={6} lg={4}>
+          <Grid className={factCard} item xs={12} md={6} lg={4}>
             <FactCard
               backColor={Luigi}
               icon={CertificationIcon}

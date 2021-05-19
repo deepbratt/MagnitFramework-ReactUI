@@ -8,10 +8,10 @@ const AboutUsNumberContext = () => {
   return (
     <>
       <Section>
-        <Grid container justify="center">
+        <Grid container justify="center" direction="row" alignItems="stretch">
           {Stats &&
             Stats.map((stats, index) => (
-              <Grid key={index} item xs={12} md={5} lg={3}>
+              <Grid key={index} item xs={12} md={5} lg={3} style={{display:"flex"}} >
                 <FactCard
                   icon={stats.icon}
                   title={stats.title}
