@@ -98,6 +98,7 @@ const Header = (props) => {
                     className={listItem}
                     anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
                     transformOrigin={{ vertical: "top", horizontal: "center" }}
+                    disableScrollLock
                   >
                     {menuItems[item].map((menuitems, menuindex) => (
                       <MenuItem
