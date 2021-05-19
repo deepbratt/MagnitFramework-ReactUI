@@ -15,7 +15,7 @@ export const missionStyles = makeStyles((theme) => ({
   },
   card2: {
     width: "17%",
-    height: "300px",
+    height: "400px",
     marginRight: "13px",
     transition: "all .25s linear",
     [breakpoints.only("md")]: {

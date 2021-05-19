@@ -4,7 +4,6 @@ import ServicesSectionStyles from "../../Pages/Services/style"
 import Banner from "../../Sections/AppSolutionsSections/Banner";
 import FeaturesSection from "../../Sections/AppSolutionsSections/FeaturesSection"
 import WhyUsContainer from "../SolutionsPage/WhyUsContainer"
-import Facts from "../../Sections/AppSolutionsSections/FactsSection/FactsContainer"
 import StairCaseContext from "../../Sections/AppSolutionsSections/StairCaseSection/HowItWorksContext"
 import AdminContext from "../../Sections/AppSolutionsSections/AdminContext"
 import CommentSection from "../../Components/CommentSection";
@@ -31,9 +30,6 @@ const Solutions = () => {
         <StairCaseContext/>
         </Grid>
         </Section>
-        <Grid item lg={12}>
-        <Facts/>
-        </Grid>
         <Section>
         <Grid item lg={12} md={12} xs={12}>
         <WhyUsContainer/>
