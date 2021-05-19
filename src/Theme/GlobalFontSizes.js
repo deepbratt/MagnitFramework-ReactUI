@@ -1,66 +1,150 @@
-import Breakpoints from "./theme.breakpoints";
-const GlobalFontSize = {
-  H1: {
-    fontSize: "3.4375rem",
-    fontWeight: 600,
-    lineHeight: "71.77px",
-    [Breakpoints() === "small"]: {
-      fontSize: "3.4375rem",
-      lineHeight: "71.77px",
-    },
+import { createMuiTheme } from "@material-ui/core/styles";
+
+const theme = createMuiTheme();
+
+theme.typography.h1 = {
+  fontSize: "3.4375rem",
+  fontWeight: 600,
+  lineHeight: "71.77px",
+  [theme.breakpoints.down("md")]: {
+    fontSize: "1.75rem",
   },
-  H2: {
-    fontSize: "2.1875rem",
-    fontWeight: 600,
-    lineHeight: "57.05px",
-    [Breakpoints() === "small"]: {
-      fontSize: "1.5rem",
-      lineHeight: "65px",
-    },
-  },
-  H3: {
-    fontSize: "1.5rem",
-    fontWeight: 600,
-    lineHeight: "39.12px",
-  },
-  H4: {
-    fontSize: "1.5rem",
-    fontWeight: 600,
-    lineHeight: "39.12px",
-  },
-  H5: {
-    fontSize: "1.25rem",
-    fontWeight: 500,
-    lineHeight: "30px",
-  },
-  H6: {
-    fontSize: "1.125rem",
-    fontWeight: 500,
-    lineHeight: "29.34px",
-  },
-  Subtitle1: {
-    fontSize: "1.5rem",
-    fontWeight: 300,
-    lineHeight: "43.2px",
-  },
-  Button: {
-    fontSize: "1.25rem",
-    textTransform: "none",
-  },
-  Caption: {
-    fontWeight: 400,
-    fontSize: "1rem",
-  },
-  Body1: {
-    fontWeight: 400,
-    size: "1.125rem",
-    lineHeight: "29.34px",
-  },
-  Body2: {
-    fontWeight: 300,
-    size: "1rem",
-    lineHeight: "29.36px",
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "1.75rem",
   },
 };
 
-export default GlobalFontSize;
+theme.typography.h2 = {
+  fontSize: "2.1875rem",
+  fontWeight: 600,
+  lineHeight: "57.05px",
+  [theme.breakpoints.down("md")]: {
+    fontSize: "1.75rem",
+  },
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "1.25rem",
+    lineHeight: "30px",
+  },
+};
+
+theme.typography.h3 = {
+  fontSize: "1.5rem",
+  fontWeight: 600,
+  lineHeight: "39.12px",
+  [theme.breakpoints.down("md")]: {
+    fontSize: "1.75rem",
+  },
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "1.75rem",
+  },
+};
+
+theme.typography.h4 = {
+  fontSize: "1.5rem",
+  fontWeight: 600,
+  lineHeight: "39.12px",
+  [theme.breakpoints.down("md")]: {
+    fontSize: "1.75rem",
+  },
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "1.75rem",
+  },
+};
+
+theme.typography.h5 = {
+  fontSize: "1.25rem",
+  fontWeight: 500,
+  lineHeight: "30px",
+  [theme.breakpoints.down("md")]: {
+    fontSize: "1.75rem",
+  },
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "1.75rem",
+  },
+};
+
+theme.typography.h6 = {
+  fontSize: "1.125rem",
+  fontWeight: 500,
+  lineHeight: "29.34px",
+  [theme.breakpoints.down("md")]: {
+    fontSize: "1.75rem",
+  },
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "0.75rem",
+  },
+};
+
+theme.typography.subtitle1 = {
+  fontSize: "1.125rem",
+  fontWeight: 500,
+  lineHeight: "29.34px",
+  [theme.breakpoints.down("md")]: {
+    fontSize: "1.75rem",
+  },
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "0.75rem",
+  },
+};
+
+theme.typography.subtitle2 = {
+  fontSize: "1.125rem",
+  fontWeight: 500,
+  lineHeight: "29.34px",
+  [theme.breakpoints.down("md")]: {
+    fontSize: "1.75rem",
+  },
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "0.75rem",
+  },
+};
+
+theme.typography.body1 = {
+  fontSize: "1.125rem",
+  fontWeight: 500,
+  lineHeight: "29.34px",
+  [theme.breakpoints.down("md")]: {
+    fontSize: "1.75rem",
+  },
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "0.75rem",
+  },
+};
+
+theme.typography.body2 = {
+  fontSize: "1.125rem",
+  fontWeight: 500,
+  lineHeight: "29.34px",
+  [theme.breakpoints.down("md")]: {
+    fontSize: "1.75rem",
+  },
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "0.75rem",
+  },
+};
+
+theme.typography.caption = {
+  fontSize: "1.125rem",
+  fontWeight: 500,
+  lineHeight: "29.34px",
+  [theme.breakpoints.down("md")]: {
+    fontSize: "1.75rem",
+  },
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "0.75rem",
+  },
+};
+
+theme.typography.button = {
+  fontSize: "1.125rem",
+  fontWeight: 500,
+  lineHeight: "29.34px",
+  [theme.breakpoints.down("md")]: {
+    fontSize: "1.75rem",
+  },
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "0.75rem",
+  },
+};
+
+export default theme;
