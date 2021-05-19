@@ -34,14 +34,15 @@ const Slider = ({
     spiral,
     gridImage,
     gridText,
+    listItem
   } = classes;
   return (
     <Grid
       container
       className={sec}
       direction="row"
-      justify="center"
-      alignItems="center"
+      // justify="center"
+      // alignItems="center"
       style={{
         background: `linear-gradient(${color} 5%, ${whiteColor} 95% `,
       }}
@@ -69,8 +70,8 @@ const Slider = ({
           {/* <section className={listSec}> */}
           <List>
             {data.map((text, index) => (
-              <ListItem>
-                <Typography key={index} variant="h5">
+              <ListItem className={listItem} >
+                <Typography  key={index} variant="h5">
                   <CheckIcon className={value === "LIGHT" ? tick : tickSub} />
                   {text}
                 </Typography>

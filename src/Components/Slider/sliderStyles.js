@@ -124,8 +124,10 @@ export const useStyles = makeStyles((theme) => ({
   },
   gridText:{
     textAlign: "left",
-    // padding: "16px",
     zIndex: 1,
+    [breakpoints.down("sm")]: {
+      textAlign: "center",
+    },
   },
   slide: {
     position: "relative",
@@ -139,5 +141,12 @@ export const useStyles = makeStyles((theme) => ({
     width:"100%",
     height:"auto"
   },
+  listItem:{
+
+    [breakpoints.down("sm")]: {
+      textAlign: "center",
+      display: "block"
+    },
+  }
 
 }));

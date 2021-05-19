@@ -33,12 +33,12 @@ const WhyUsContainer = () => {
             </section>
           </Paper>
         </Grid>
-        <Grid className={grid} item md={5} xs={12}>
+        <Grid item md={6} xs={12}>
           <PrimarySection
           data={benefitsData}
           />
         </Grid>
-        <Grid className={grid} item md={5} xs={12}>
+        <Grid item md={6} xs={12}>
           <SecondarySection
             data={benefitsSecondaryData}
           />

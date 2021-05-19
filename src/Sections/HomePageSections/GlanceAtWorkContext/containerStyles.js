@@ -60,6 +60,8 @@ cardContent: {
 seeMore:{
   textTransform: "none", 
   marginLeft: "10px",
+  borderRadius: "0px",
+  padding: "6px 40px",
    backgroundColor: whiteColor
 }
 }));

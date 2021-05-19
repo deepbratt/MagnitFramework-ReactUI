@@ -33,6 +33,7 @@ const Solutions = () => {
               backgroundColor: whiteColor,
               padding: ".3rem 1.9rem",
               color: blackColor,
+              borderRadius: "0px"
             }}
             variant="contained"
             size={Breakpoints()}

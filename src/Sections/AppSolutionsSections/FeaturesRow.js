@@ -27,6 +27,7 @@ const FeaturesRow = (props) => {
                 item
                 xs={12}
                 lg={3}
+                md={4}
                 sm={12}
               >
                 <Grid
@@ -38,7 +39,7 @@ const FeaturesRow = (props) => {
                 </Grid>
               </Grid>
               <MuiThemeProvider theme={THEME}>
-                <Grid className={para} item xs={12} lg={9}>
+                <Grid className={para} item xs={12} md={6} lg={9}>
                   <Typography variant="h5">{text.title}</Typography>
                   <Typography paragraph={true}>{text.desc}</Typography>
                 </Grid>

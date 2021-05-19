@@ -93,6 +93,7 @@ const Container = ({backColor}) => {
             size={Breakpoints()}
             className={seeMore}
             color="white"
+       
           >
             {buttonText}
           </CustomButton>
