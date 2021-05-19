@@ -1,5 +1,5 @@
 const Data = {
-  headingLineOne: "Transforming ideas to  ",
+  headingLineOne: "Transforming ideas",
   headingLineTwo: "through solutions",
   headingLineFirstSlide: "Web Development",
   headingLineSecondSlide: "App Development",

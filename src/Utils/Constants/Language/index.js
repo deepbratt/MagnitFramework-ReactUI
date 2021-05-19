@@ -8,7 +8,7 @@ export const reviewSliderText = [{
   title: "Web Design",
   text: `They provide efficient, time-bound prototypes keeping all KPIs in mind. We recommend them to anyone looking to make an online footprint.
   ”`,
-  authName: "Maria Ann (SwiftDelaz)",
+  authName: "Maria Ann (SwiftDealz)",
   authImg: Avatar7,
 },
 {

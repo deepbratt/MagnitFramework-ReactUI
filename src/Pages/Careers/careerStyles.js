@@ -31,13 +31,13 @@ export const useStyles = makeStyles((theme) => ({
     display: "flex",
     zIndex: 1,
     flexDirection: "column",
-    alignItems: "flex-start",
-    // justifyContent:"center", 
+    alignItems: "center",
+    justifyContent:"center", 
     transition: "all .25s linear",
     boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)",
     margin: "20px",
     padding:"20px",
-    textAlign:"left"
+    textAlign:"center"
  
   },
   button: {
@@ -70,10 +70,12 @@ export const useStyles = makeStyles((theme) => ({
   { color: DoveGray, 
     paddingTop: "10px",
   display:"flex",
-  alignItems:"baseline" },
+  alignItems:"baseline",
+justifyContent:"center"
+},
   bottomStyle:{ 
     display:"flex",
-  alignItems:"center" ,
+  alignItems:"flex-end" ,
   justifyContent:"center"
  }
 
