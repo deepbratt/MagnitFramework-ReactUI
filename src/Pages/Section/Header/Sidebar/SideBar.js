@@ -77,11 +77,6 @@ const SideBar = () => {
             );
           })}
         </List>
-        <NavLink activeClassName={active} className={link} to="contactUs">
-          <CustomButton style={{ marginBottom: "15px" }} fullWidth>
-            Request A Quote
-          </CustomButton>
-        </NavLink>
       </Drawer>
       <MenuIcon
         className={menuIcon}
