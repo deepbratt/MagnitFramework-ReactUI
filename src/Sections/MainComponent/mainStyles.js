@@ -35,7 +35,12 @@ export const useStyles = makeStyles((theme) => ({
     justifyContent: "space-around",
     alignItems: "center",
   },
-  paragraphStyle: {
+  paragraph: {
+    textAlign:"center",
+    color:darkSilver,
+    fontWeight:300
+  },
+    paragraphStyle: {
     width: "80%",
     // marginBottom: "50px",
     textAlign: "center",

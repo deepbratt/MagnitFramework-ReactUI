@@ -1,6 +1,6 @@
 import React from "react";
 import { useStyles } from "./careerStyles";
-import { Card, CardContent, Paper, Button } from "@material-ui/core";
+import { Card, CardContent, Paper, Button, Grid } from "@material-ui/core";
 import Heading5 from "../../ContainerStructure/Headings/Heading5";
 import Heading4 from "../../ContainerStructure/Headings/Heading4";
 import Paragraph from "../../ContainerStructure/Headings/Paragraphs/Paragraph";
@@ -30,7 +30,7 @@ const OpportunityContext = () => {
   const { DoveGray, whiteColor, Harlequin } = Colors;
   return (
     <>
-      <Paper className={root} elevation={0}>
+      <Grid className={root} elevation={0}>
         <img className={RightPattern} alt="image" src={rightPattern} />
         <img className={LeftPattern} alt="image" src={leftPattern} />
         <section style={{ color: whiteColor }}>
@@ -39,7 +39,7 @@ const OpportunityContext = () => {
         <section className={cardSec}>
           {DataArray.map((data, index) => {
             return (
-              <Card className={card}>
+              <Grid xs={12} md={3}  className={card}>
                 <CardContent key={index}>
                   <section className={devSec}>
                     <section>
@@ -62,7 +62,7 @@ const OpportunityContext = () => {
                     </section>
                   </section>
                 </CardContent>
-              </Card>
+              </Grid>
             );
           })}
         </section>
@@ -77,7 +77,7 @@ const OpportunityContext = () => {
         >
           Learn More
         </CustomButton>
-      </Paper>
+      </Grid>
     </>
   );
 };

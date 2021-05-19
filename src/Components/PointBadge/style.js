@@ -14,16 +14,33 @@ const PointBadgeStyles = makeStyles((theme) => ({
      transition: "all .25s linear",
     },
   },
-  inline: { display: "flex",
+  inline: { 
+   display: "flex",
    margin: "20px 0px" ,
     },
   badge: {
     borderRadius: "5px",
-    padding: "25px",
+    // padding: "25px",
     margin: "15px",
+  },
+  devSec: {
+    display: "flex",
+  justifyContent:"center",
+  margin: "15px",
     [theme.breakpoints.down("sm")]: {
-      padding: "15px",
-      margin: "10px",
+      margin: "15px 10px",
+    },
+  },
+  supportSub: {
+    borderRadius: "5px",
+    height: "100px",
+    width: "100px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    [theme.breakpoints.down("sm")]: {
+      height: "80px",
+    width: "80px",
     },
   },
   contentLeft: {
@@ -52,6 +69,7 @@ const PointBadgeStyles = makeStyles((theme) => ({
     justifyContent: "center",
     "& > p": {
       color:darkSilver,
+      margin:"0rem .1rem",
       [theme.breakpoints.down("sm")]: {
         fontSize: "10px",
       },

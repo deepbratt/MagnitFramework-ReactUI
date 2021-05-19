@@ -7,19 +7,13 @@ import Avatar7 from "../../assets/services/Avatar7.png";
 import { Paper } from "@material-ui/core";
 import { reviewSliderText } from "../../Utils/Constants/Language";
 import CustomImage from "../CustomImage";
-const { title, text, author } = reviewSliderText;
-const card = {
-  title: title,
-  text: text,
-  authName: author,
-  authImg: Avatar7,
-};
 
-const slideArr = [
-  <ReviewCard cardData={card} />,
-  <ReviewCard cardData={card} />,
-  <ReviewCard cardData={card} />,
-];
+const slideArr = 
+    reviewSliderText.map((a)=>{
+      return  <ReviewCard cardData={a} />
+    })
+  
+;
 
 const ReviewSlider = ({ slides, showArrows, showDots }) => {
   const visible = !showDots ? "hidden" : "visible";
