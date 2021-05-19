@@ -121,7 +121,7 @@ const Header = (props) => {
               ))}
               <ListItem>
                 <NavLink
-                  to="request/a/quote"
+                  to="request-a-quote"
                   activeClassName={active}
                   className={link}
                 >

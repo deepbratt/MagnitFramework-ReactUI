@@ -91,7 +91,7 @@ const Slider = ({
             <NavLink
             className={link}
             activeClassName={active}
-             to="/request/a/quote">
+             to="/request-a-quote">
             {text}
             </NavLink>
           </Button>

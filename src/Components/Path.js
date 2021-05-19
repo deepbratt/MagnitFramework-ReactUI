@@ -29,12 +29,12 @@ const pathIds = {
   about: "/about",
   services: "/services",
   solutions: "/solutions",
-  caseStudies: "/case/studies",
+  caseStudies: "/case-studies",
   careers: "/careers",
   event: "/event",
   testimonial: "/testimonial",
-  appSolutions: "/app/solutions",
-  requestAQuote: "/request/a/quote",
+  appSolutions: "/app-solutions",
+  requestAQuote: "/request-a-quote",
 };
 
 const pageRoutes = {
