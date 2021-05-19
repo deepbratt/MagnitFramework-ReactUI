@@ -1,16 +1,16 @@
-import { Grid, Paper } from "@material-ui/core";
+import { Grid, Paper, Typography } from "@material-ui/core";
 import Section from "../Section";
 import FactCard from "../../Components/FactCard";
-import AboutMainSection from "../AboutUs/MainComponent/AboutMainSection";
+import AboutMainSection from "../../Sections/MainComponent/AboutMainSection";
 import Banner from "../../assets/ContactUs/banner.png";
 import {
   RequestAQuote,
   RequestAQuoteSub,
   SomeQuickFactsAboutUs,
   AwardSectionTitleContactUs,
-  ContactUsTitle,
 } from "../../Utils/Constants/Language/en/SectionHeaders";
 import { Colors } from "../../Theme/color.constants";
+import { LocationIcon, PhoneIcon } from "../../assets/icons/icon.constants";
 import { FactCardText } from "../../Utils/Constants/Language/en/ContactUsPageText";
 import ContactUsForm from "../../Components/ContactUsForm";
 import {
@@ -23,6 +23,7 @@ import {
 } from "../../assets/icons/icon.constants";
 import { AwardSectionImages } from "../Home";
 import ContactUsStyles from "./style";
+import { footerText } from "../../Utils/Constants/Language";
 
 const ContactUs = () => {
   const {
@@ -34,10 +35,12 @@ const ContactUs = () => {
     Luigi,
   } = Colors;
 
-  const { awardSection, imageContainer, label } = ContactUsStyles();
+  const { awardSection, imageContainer, label, section } = ContactUsStyles();
 
   const { experience, team, customers, served, projects, certification } =
     FactCardText;
+
+  const { addressSection, talkToUsSection } = footerText;
 
   const breadcrumbs = [
     {
@@ -64,18 +67,65 @@ const ContactUs = () => {
             <div style={{ margin: "50px 0" }} className={awardSection}>
               <Section title={AwardSectionTitleContactUs}>
                 <Grid container item xs={12}>
-                  {AwardSectionImages &&
-                    AwardSectionImages.map((image, index) => (
-                      <Grid
-                        item
-                        xs={12}
-                        md={3}
-                        key={index}
-                        className={imageContainer}
-                      >
-                        <img src={image} alt={`client${index}`} />
-                      </Grid>
-                    ))}
+                  <Grid container justify="center" item xs={12}>
+                    {AwardSectionImages &&
+                      AwardSectionImages.map((image, index) => (
+                        <Grid
+                          item
+                          xs={12}
+                          md={3}
+                          key={index}
+                          className={imageContainer}
+                        >
+                          <img src={image} alt={`client${index}`} />
+                        </Grid>
+                      ))}
+                  </Grid>
+                  <Grid
+                    style={{ marginTop: "50px" }}
+                    container
+                    item
+                    xs={12}
+                    justify="center"
+                  >
+                    <Grid item xs={12} md={5}>
+                      <div className={section}>
+                        <img src={LocationIcon} alt="Location Icon" />
+                        <Typography align="left" gutterBottom variant="h5">
+                          {addressSection.title}
+                        </Typography>
+                        {addressSection.address.map((location, index) => (
+                          <Typography
+                            key={index}
+                            align="left"
+                            gutterBottom
+                            variant="body2"
+                          >
+                            {location}
+                          </Typography>
+                        ))}
+                      </div>
+                    </Grid>
+
+                    <Grid item xs={12} md={5}>
+                      <div className={section}>
+                        <img src={PhoneIcon} alt="Phone Icon" />
+                        <Typography align="left" gutterBottom variant="h5">
+                          {talkToUsSection.title}
+                        </Typography>
+                        {talkToUsSection.numbers.map((num, index) => (
+                          <Typography
+                            key={index}
+                            align="left"
+                            gutterBottom
+                            variant="body2"
+                          >
+                            {num}
+                          </Typography>
+                        ))}
+                      </div>
+                    </Grid>
+                  </Grid>
                 </Grid>
               </Section>
             </div>

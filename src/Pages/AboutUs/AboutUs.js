@@ -1,8 +1,8 @@
 import React from "react";
 import { Grid } from "@material-ui/core";
-import Main from "./MainComponent/AboutMainSection";
-import AboutUsNumberContext from "./NumberContext/AboutUsNumberContext";
-import MissionContext from "./Mission&Vision/MissionContext";
+import Main from "../../Sections/MainComponent/AboutMainSection";
+import AboutUsNumberContext from "../../Sections/NumberContext/AboutUsNumberContext";
+import MissionContext from "../../Sections/Mission&Vision/MissionContext";
 import WhyUsContainer from "./WhyUsContainer";
 import { MainData } from "../../Utils/Constants/Language/AboutUsData";
 const AboutUs = () => {
