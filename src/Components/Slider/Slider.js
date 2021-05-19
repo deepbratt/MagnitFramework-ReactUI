@@ -50,9 +50,6 @@ const Slider = ({
       <Hidden smDown>
         <CustomImage alt="sliderImg" src={Vector} className={spiral} />
       </Hidden>
-      {/* <Hidden smDown>
-        <Grid item xs={12} md={1} lg={1}></Grid>
-      </Hidden> */}
       <Grid
         item
         xs={12}

@@ -6,26 +6,20 @@ import SecondarySection from "../../Sections/HomePageSections/PartnerWithUsConte
 import {THEME} from "../../ContainerStructure/Headings/headingStyles"
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import {PrimaryArray,SecondaryArray} from "../../Utils/Constants/Language/en/PartnerWithUsData"
-
+import Section from "../Section";
 
 const WhyUsContainer = () => {
-  const { grid, underlinedText } = useStyles();
   return (
-    <>
+    <Section title={PatrnerWithUsSectionTitle}>
       <Grid container>
-        <Grid item md={12} xs={12}>
-          <Typography variant="h4" color="inherit">
-            <span className={underlinedText}>Why Us?</span>
-          </Typography>
-        </Grid>
-        <Grid className={grid} item lg={5} md={5} xs={12}>
+        <Grid item md={6} xs={12}>
           <PrimarySection data={PrimaryArray} />
         </Grid>
-        <Grid className={grid} item lg={5} md={5} xs={12}>
+        <Grid item md={6} xs={12}>
           <SecondarySection data={SecondaryArray} />
         </Grid>
       </Grid>
-    </>
+    </Section>
   );
 };
 
