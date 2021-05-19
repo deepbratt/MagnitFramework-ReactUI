@@ -80,20 +80,14 @@ export const useStyles = makeStyles((theme) => ({
   list: {
     fontSize: "16px",
     display: "flex",
-    fontWeight: "600",
+    fontWeight: "800",
     fontFamily: "Poppins', sans-serif",
     whiteSpace: "nowrap",
     justifyContent: "center",
     alignItems: "center",
-    color: greyColor,
-    
-    "&:hover": {
-      color: blackColor,
-      cursor: "pointer",
-    },
+    color: blackColor,
   },
   listItem: {
-    color: greyColor,
     marginRight: "20px",
     "&:hover": {
       color: blackColor,

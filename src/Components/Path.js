@@ -42,7 +42,6 @@ const pageRoutes = {
   },
   [pathIds.blogs]: {
     path: pathRouting.blogs,
-    sidebarName: "Blogs",
     component: OurBlogs,
   },
   [pathIds.about]: {
@@ -62,7 +61,6 @@ const pageRoutes = {
   },
   [pathIds.caseStudies]: {
     path: pathRouting.caseStudies,
-    sidebarName: "Case Studies",
   },
   [pathIds.careers]: {
     path: pathRouting.careers,
@@ -76,7 +74,6 @@ const pageRoutes = {
   },
     [pathIds.event]: {
     path: pathRouting.event,
-    sidebarName: "Events",
     component:Event,
   },
   [pathIds.testimonial]: {

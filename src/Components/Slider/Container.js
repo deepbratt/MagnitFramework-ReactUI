@@ -6,12 +6,12 @@ import Slider from "./Slider";
 import { Colors } from "../../Theme/color.constants";
 import { Data, array } from "../../Utils/Constants/Language/en/SliderText";
 const { mainSlide, PalePrim, Chablis } = Colors;
-const { headingLineOne, headingLineTwo, headingLineLast, buttonText } = Data;
+const { headingLineOne, headingLineTwo, headingLineFirstSlide, headingLineSecondSlide,headingLineThirdSlide, buttonText } = Data;
 const slideArr = [
   <Slider
     headingOne={headingLineOne}
     headingTwo={headingLineTwo}
-    headingThree={headingLineLast}
+    headingThree={headingLineFirstSlide}
     text={buttonText}
     data={array}
     color={mainSlide}
@@ -19,7 +19,7 @@ const slideArr = [
   <Slider
     headingOne={headingLineOne}
     headingTwo={headingLineTwo}
-    headingThree={headingLineLast}
+    headingThree={headingLineSecondSlide}
     text={buttonText}
     data={array}
     color={PalePrim}
@@ -27,7 +27,7 @@ const slideArr = [
   <Slider
     headingOne={headingLineOne}
     headingTwo={headingLineTwo}
-    headingThree={headingLineLast}
+    headingThree={headingLineThirdSlide}
     text={buttonText}
     data={array}
     color={Chablis}
