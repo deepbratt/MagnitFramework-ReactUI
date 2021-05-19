@@ -41,18 +41,14 @@ export const footerText = {
   talkToUsSection: {
     title: "TALK TO US",
     numbers: [
-      "USA/Canada: 713-489-0845",
-      "Australia: (02)-9191-2621",
-      "UK: (0)-203-514-2412",
+      "USA: +1 (214) 329-9898",
+      "India: +91 63993 52116",
+      "Pakistan: +92 335 1222515",
     ],
   },
   addressSection: {
     title: "INDIA OFFICE",
-    address: [
-      "Shakti Tower, EN 60,",
-      "5th Floor, Sector V,",
-      "Saltlake, Kolkata 700091",
-    ],
+    address: ["1690 FM 423 Suite 9205,", "Frisco,", "Texas 75033 – USA"],
   },
   copyrights: "© 2021 The Magnit, All Rights Reserved.",
   contactUs: "CONNECT WITH US",
