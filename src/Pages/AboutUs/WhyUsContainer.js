@@ -5,7 +5,7 @@ import PrimarySection from "../../Sections/HomePageSections/PartnerWithUsContext
 import SecondarySection from "../../Sections/HomePageSections/PartnerWithUsContext/SecondarySection";
 import {THEME} from "../../ContainerStructure/Headings/headingStyles"
 import { MuiThemeProvider } from "@material-ui/core/styles";
-import {PrimaryArray,SecondaryArray} from "../../Utils/Constants/Language/en/PartnerWithUsData"
+import {PatrnerWithUsSectionTitle,PrimaryArray,SecondaryArray} from "../../Utils/Constants/Language/en/PartnerWithUsData"
 import Section from "../Section";
 
 const WhyUsContainer = () => {

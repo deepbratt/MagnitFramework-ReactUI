@@ -7,7 +7,7 @@ import { Colors } from "../../Theme/color.constants";
 import Banner from "./Banner";
 import CommentSection from "../../Components/CommentSection";
 import Main from "./WhyUsContainer"
-import CommentSection from "../../Components/CommentSection";
+
 
 const Solutions = () => {
   const { linearBackground } = Colors;
