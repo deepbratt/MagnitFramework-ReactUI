@@ -4,6 +4,7 @@ import useStyles from "./styles";
 import Heading from "../../ContainerStructure/Headings/Heading4";
 import Paragraph from "../../ContainerStructure/Headings/Paragraphs/Paragraph";
 import { Oops, PageNotFound } from './constants';
+import CustomButton from '../../Components/CustomButton';
  const Main = ({ErrorImg}) => {
    const {root,Img,head,paragraph,HomeBtn}= useStyles();
     return (
@@ -18,14 +19,14 @@ import { Oops, PageNotFound } from './constants';
                <section className={paragraph}>
                <Paragraph para={Oops}/>
                </section>
-                <Button type="submit" color="primary" variant="contained">
+                <CustomButton type="submit" color="primary" variant="contained">
           <Typography
             className={HomeBtn}
             variant="button"
           >
             Home
           </Typography>
-        </Button>
+        </CustomButton>
             </Grid>
   
     )

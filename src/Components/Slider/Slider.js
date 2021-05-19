@@ -14,7 +14,7 @@ import { hero, Vector } from "../../Components/Hero/Images";
 import Breakpoints from "../../Theme/theme.breakpoints";
 import { Colors } from "../../Theme/color.constants";
 import CustomImage from "../CustomImage";
-import {NavLink} from "react-router-dom"
+import CustomButton from "../CustomButton";
 
 const Slider = ({
   value,
@@ -35,9 +35,7 @@ const Slider = ({
     spiral,
     gridImage,
     gridText,
-    listItem,
-    link,
-    active
+    listItem
   } = classes;
   return (
     <Grid
@@ -79,23 +77,19 @@ const Slider = ({
             ))}
           </List>
           {/* </section> */}
-          <Button
-            style={{
-              textTransform: "none",
-              backgroundColor: Harlequin,
-            }}
-            variant="contained"
-            size={Breakpoints()}
-            color="secondary"
-          >
-            <NavLink
-            className={link}
-            activeClassName={active}
-             to="/request-a-quote">
-            {text}
-            </NavLink>
-          </Button>
         </MuiThemeProvider>
+        <CustomButton
+            // style={{
+            //   // textTransform: "none",
+            //   backgroundColor: Harlequin,
+            //   // borderRadius:"5px"
+            // }}
+            // variant="contained"
+            size={Breakpoints()}
+            color="primary"
+          >
+            {text}
+          </CustomButton>
       </Grid>
       <Hidden smDown>
         <Grid

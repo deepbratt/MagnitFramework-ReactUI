@@ -91,22 +91,19 @@ function Testimonials() {
           );
         })}
       </Grid>
-
-      <Grid
-        xs={12}
-        container
-        alignItems="center"
-        justify="center"
-        className={flex}
-      >
-        <Button type="submit" color="primary" variant="contained">
-          <Typography className={seeMore} variant="button">
+      
+      <Grid xs={12} container alignItems="center" justify="center" className={flex}>
+      <CustomButton type="submit" color="primary" variant="contained">
+          <Typography
+            className={seeMore}
+            variant="button"
+          >
             See More
           </Typography>
-        </Button>
-      </Grid>
-    </CommentSection>
-  );
+        </CustomButton>
+        </Grid>
+      </CommentSection>
+    )
 }
 
 export default Testimonials;

@@ -12,6 +12,7 @@ import {
 import Paragraph from "../../ContainerStructure/Headings/Paragraphs/Paragraph";
 import { SolutionsStyles } from "../../Pages/AppSolutionsPage/SolutionsStyles";
 import BreadCrumb from "../../Components/BreadCrumb";
+import CustomButton from "../../Components/CustomButton";
 const BannerSection = () => {
   const { linearBackground , Harlequin, whiteColor} = Colors;
   const { breadCrumbStyles } = SolutionsStyles();
@@ -37,13 +38,13 @@ const BannerSection = () => {
           </Typography>
           <Paragraph para={bannerParagraph} />
           <section style={{ marginTop: "15px" }}>
-            <Button
+          <CustomButton
               variant="contained"
               size={Breakpoints()}
               style={{backgroundColor: Harlequin, color: whiteColor}}
               >
                 {bannerButtonText}
-              </Button>
+              </CustomButton>
           </section>
         </section>
       </Banner>
