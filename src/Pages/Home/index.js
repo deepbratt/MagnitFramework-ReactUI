@@ -29,6 +29,8 @@ import {
 // import ReviewSlider from "../../Components/ReviewSlider";
 import { trainingAndCertificationText as TCData } from "../../Utils/Constants/Language";
 import FirstColumn from "../../Components/QuoteCard/FirstColumn";
+import SecondColumn from "../../Components/QuoteCard/SecondColumn";
+import ThirdColumn from "../../Components/QuoteCard/ThirdColumn";
 import CertificationList from "../../Components/certificationList";
 import HomeStyles from "./style";
 import QuoteCard from "../../Components/QuoteCard";
@@ -67,7 +69,7 @@ const Home = (props) => {
 
   const WhyUsSlides = [
     <>
-      <Hidden smDown>
+      <Hidden mdDown>
         {cards &&
           cards.map((data, index) => (
             <Grid key={index} item xs={12} md={6} lg={4}>
@@ -75,14 +77,31 @@ const Home = (props) => {
             </Grid>
           ))}
       </Hidden>
-      <Hidden mdUp>
+      <Hidden lgUp>
         <Grid item>
-          <FirstColumn />
+          <SecondColumn />
         </Grid>
       </Hidden>
+      
     </>,
+     <>
+     <Hidden mdDown>
+       {cards &&
+         cards.map((data, index) => (
+           <Grid key={index} item xs={12} md={6} lg={4}>
+             <QuoteCard cardData={data} />
+           </Grid>
+         ))}
+     </Hidden>
+     <Hidden lgUp>
+       <Grid item>
+         <ThirdColumn />
+       </Grid>
+     </Hidden>
+     
+   </>,
     <>
-      <Hidden smDown>
+      <Hidden mdDown>
         {cards &&
           cards.map((data, index) => (
             <Grid key={index} item xs={12} md={6} lg={4}>
@@ -90,11 +109,13 @@ const Home = (props) => {
             </Grid>
           ))}
       </Hidden>
-      <Hidden mdUp>
+      <Hidden lgUp>
         <Grid item>
           <FirstColumn />
         </Grid>
       </Hidden>
+      
+      
     </>,
   ];
 

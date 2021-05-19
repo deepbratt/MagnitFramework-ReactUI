@@ -24,6 +24,7 @@ export const useStyles = makeStyles((theme) => ({
   card: {
     paddingTop: "20px",
     width: "25%",
+    
     height: "auto",
     display: "flex",
     flexDirection: "column",
@@ -31,7 +32,7 @@ export const useStyles = makeStyles((theme) => ({
     transition: "all .25s linear",
     margin: "20px",
     boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
-    [breakpoints.down("sm")]: {
+    [breakpoints.down("md")]: {
       width: "70%",
   
     },
@@ -47,14 +48,17 @@ export const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    flexDirection: "column"
+    flexDirection: "column",
+    
   },
 cardContent: {
   width: "100%",
-  backgroundColor: Mariner,
-  paddingBottom: "10px",
-  textAlign: "left",
+  // backgroundColor: Mariner,
+  paddingBottom: "12px",
+  textAlign: "center",
   paddingLeft: "20px",
+  // color: whiteColor,
+  padding: "20px"
 
 },
 seeMore:{
