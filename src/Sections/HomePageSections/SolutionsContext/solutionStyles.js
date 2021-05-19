@@ -1,9 +1,9 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
-import { Colors } from "../../Theme/color.constants";
+import { Colors } from "../../../Theme/color.constants";
 
-const { BlueRibbon, whiteColor} = Colors;
+const { BlueRibbon, whiteColor } = Colors;
 const breakpoints = createBreakpoints({});
 
 export const THEME = createMuiTheme({
@@ -11,31 +11,12 @@ export const THEME = createMuiTheme({
     MuiButton: {
       root: {
         borderRadius: 0,
-        color: 'black',
+        color: "black",
         fontFamily: "Poppins",
-        boxShadow: "none"
-      }},
+        boxShadow: "none",
+      },
+    },
     MuiTypography: {
-      h4: {
-        fontFamily: "Poppins",
-        fontStyle: "normal",
-        fontSize: "35px",
-        lineHeight: 1.6,
-        color: whiteColor,
-        fontWeight: "bolder",
-        textAlign: "center",
-        [breakpoints.only("sm")]: {
-          fontSize: "28px",
-          marginTop: "40px",
-          textAlign: "center",
-        },
-        [breakpoints.down("xs")]: {
-          fontSize: "20px",
-        },
-      },
-      paragraph:{
-        color: whiteColor,
-      },
       h5: {
         fontFamily: "Poppins",
         fontWeight: "bolder",
@@ -61,7 +42,7 @@ export const useStyles = makeStyles((theme) => ({
     width: "100%",
     flexFlow: "wrap",
     justifyContent: "center",
-    paddingBottom: "20px"
+    paddingBottom: "20px",
   },
   card: {
     backgroundColor: whiteColor,
@@ -79,13 +60,10 @@ export const useStyles = makeStyles((theme) => ({
     },
     margin: "10px",
     cursor: "pointer",
-    [breakpoints.only("md")]: {
+    [breakpoints.down("md")]: {
       width: "40%",
     },
-    [breakpoints.only("sm")]: {
-      width: "40%",
-    },
-    [breakpoints.down("xs")]: {
+    [breakpoints.down("sm")]: {
       width: "60%",
     },
   },
@@ -98,6 +76,5 @@ export const useStyles = makeStyles((theme) => ({
   },
   profileIcon: {
     width: "65px",
-    // height: "50px",
   },
 }));
