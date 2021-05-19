@@ -38,7 +38,11 @@ const BannerStyles = makeStyles((theme) => ({
       top: "3%",
     },
   },
-  breadCrumbStyle: { margin: "20px 50px" },
+  breadCrumbStyle: {
+    position: "absolute",
+    margin: "20px 50px",
+    zIndex: "1",
+  },
   content: {
     display: "flex",
     flexDirection: "column",
