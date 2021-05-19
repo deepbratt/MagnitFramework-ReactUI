@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
   flexDirection:"column",
   justifyContent:"space-evenly",
   height:"90%",
-    position:"relative",
+    // position:"relative",
     padding:"1.3rem 1.6rem",
     borderRadius:".5rem",
     boxShadow:"0px 4px 60px rgba(0, 0, 0, 0.1)",
@@ -90,22 +90,22 @@ carddate:{
 },
 playBtn:{
     position:"absolute",
-    top: "33%",
-    left: "53%",
-    transform: "translate(-3rem, 0.5rem)",
+    top: "30%",
+    left: "40%",
+    transform: "translate(0rem, 0rem)",
     "& > img ":{
       width:"70px"
     },
     [breakpoints.only("sm")]: {
       margin:".5rem 1.2rem",
-      transform: "translate(-3rem, -0rem)",
+      transform: "translate(-1rem, -1rem)",
       "& > img ":{
         width:"3.7rem"
       },
     },
     [breakpoints.only("xs")]: {
       margin:".5rem 1.2rem",
-      transform: "translate(-3rem, -0rem)",
+      transform: "translate(-1rem, -1rem)",
       "& > img ":{
         width:"3.5rem"
       },
