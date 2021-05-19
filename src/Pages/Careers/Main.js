@@ -1,6 +1,6 @@
 import React from "react";
-import { useStyles } from "../AboutUs/MainComponent/mainStyles";
-import { Card, CardContent, Grid } from "@material-ui/core";
+import { useStyles } from "../../Sections/MainComponent/mainStyles";
+import { Card, CardContent, Paper,Button } from "@material-ui/core";
 import Heading4 from "../../ContainerStructure/Headings/Heading4";
 import Paragraph from "../../ContainerStructure/Headings/Paragraphs/Paragraph";
 import Heading5 from "../../ContainerStructure/Headings/Heading5";
@@ -28,9 +28,9 @@ const Main = (props) => {
   const {Harlequin,whiteColor} = Colors
   return (
     <>
-      <Grid style={{marginBottom: "80px"}} className={root} elevation={0}>
+      <Paper style={{marginBottom: "80px"}} className={root} elevation={0}>
         <section >
-          <Card className={card} >
+          <Card className={card}>
             <CardContent className={cardSec}>
                 <CustomImage className={hero} alt="hero" src={props.hero} />
             </CardContent>
@@ -58,7 +58,7 @@ const Main = (props) => {
             {buttonText}
           </CustomButton>
         </section>
-      </Grid>
+      </Paper>
     </>
   );
 };
