@@ -1,6 +1,6 @@
 import React from "react";
 import { useStyles } from "../../Sections/MainComponent/mainStyles";
-import { Card, CardContent, Paper,Button } from "@material-ui/core";
+import { Card, CardContent, Grid, Typography } from "@material-ui/core";
 import Heading4 from "../../ContainerStructure/Headings/Heading4";
 import Paragraph from "../../ContainerStructure/Headings/Paragraphs/Paragraph";
 import Heading5 from "../../ContainerStructure/Headings/Heading5";
@@ -28,7 +28,7 @@ const Main = (props) => {
   const {Harlequin,whiteColor} = Colors
   return (
     <>
-      <Paper style={{marginBottom: "80px"}} className={root} elevation={0}>
+      <Grid xs={12} style={{marginBottom: "80px"}} className={root} elevation={0}>
         <section >
           <Card className={card}>
             <CardContent className={cardSec}>
@@ -37,15 +37,17 @@ const Main = (props) => {
           </Card>
           <Card>
             <CardContent className={cardSec}>
-              <section className={textUnderlined}>
+              <Grid xs={12} className={textUnderlined}>
                 <Heading4 title={heading} />
-              </section>
-              <section style={{marginTop: "20px"}}>
+              </Grid>
+              <Grid xs={12} style={{margin: "20px"}}>
               <Heading5 subTitle={subHeading} />
-              </section>
-              <section className={paragraph}>
-                <Paragraph className={paragraph} para={para} />
-              </section>
+              </Grid>
+              <Grid xs={12} md={6} className={paragraph}>
+                <Typography variant="h6" className={paragraph}>
+                {para}
+                </Typography>
+              </Grid>
             </CardContent>
           </Card>
         </section>
@@ -58,7 +60,7 @@ const Main = (props) => {
             {buttonText}
           </CustomButton>
         </section>
-      </Paper>
+      </Grid>
     </>
   );
 };

@@ -20,7 +20,6 @@ import BreadCrumb from "../../Components/BreadCrumb";
 import CommentSection from "../../Components/CommentSection";
 import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
-import Heading4 from "../../ContainerStructure/Headings/Heading4";
 import Heading5 from "../../ContainerStructure/Headings/Heading5";
 
 const Services = () => {
@@ -53,7 +52,7 @@ const Services = () => {
         <Typography variant="h1" gutterBottom className={textColor}>
         We hire the most<br />industry-specific-skilled developers that fit your budget
         </Typography>
-        <Typography variant="subtitle1" gutterBottom  className={textColor}>
+        <Typography variant="h5" gutterBottom  className={textColor}>
         We provide exceptional professional services in research, strategy, user experience, design, and full stack engineering to digitally transform ideas into reality.
         </Typography>
         <CustomButton

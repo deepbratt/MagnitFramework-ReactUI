@@ -27,7 +27,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   card: {
     width: "27%",
-    height: "340px",
+    height: "auto",
     display: "flex",
     zIndex: 1,
     flexDirection: "column",
