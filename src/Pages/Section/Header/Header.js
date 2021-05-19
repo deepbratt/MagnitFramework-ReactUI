@@ -129,7 +129,7 @@ const Header = (props) => {
                     size={Breakpoints()}
                     onClick={navigated}
                   >
-                    Contact Us
+                    Request A Quote
                   </CustomButton>
                 </NavLink>
               </ListItem>
