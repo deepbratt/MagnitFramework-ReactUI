@@ -1,5 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
-import { Colors } from "../../../Theme/color.constants";
+import { Colors } from "../../Theme/color.constants";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 const { darkSilver, Harlequin, mainSlide,Mirage } = Colors;
 const breakpoints = createBreakpoints({});

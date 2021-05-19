@@ -1,16 +1,16 @@
 import React from "react";
-import { useStyles } from "../../AboutUs/NumberContext/numberStyles";
+import { useStyles } from "../../../Sections/NumberContext/numberStyles";
 import { missionStyles } from "./useStyles";
-import { Card, CardContent, Paper, Grid ,Typography} from "@material-ui/core";
+import { Card, CardContent, Paper, Grid, Typography } from "@material-ui/core";
 import Paragraph from "../../../ContainerStructure/Headings/Paragraphs/Paragraph";
 import Heading5 from "../../../ContainerStructure/Headings/Heading5";
-import {THEME} from "../../../ContainerStructure/Headings/headingStyles";
+import { THEME } from "../../../ContainerStructure/Headings/headingStyles";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import {
   StairCaseData,
   stairCaseHeading,
 } from "../../../Utils/Constants/Language/en/AppSolutionsData";
-import CustomImage from "../../../Components/CustomImage"
+import CustomImage from "../../../Components/CustomImage";
 const HowItWorksContext = () => {
   const { cardSec } = useStyles();
   const { card2, root, devSec, image, underlined } = missionStyles();
@@ -19,12 +19,11 @@ const HowItWorksContext = () => {
       <Paper className={root} elevation={0}>
         <Grid container>
           <Grid item lg={12} xs={12}>
-          <MuiThemeProvider theme={THEME}>
+            <MuiThemeProvider theme={THEME}>
               <Typography variant="h4" color="inherit">
                 <span className={underlined}>{stairCaseHeading}</span>
               </Typography>
             </MuiThemeProvider>
-         
           </Grid>
         </Grid>
         <section style={{ paddingBottom: "20px" }} className={cardSec}>

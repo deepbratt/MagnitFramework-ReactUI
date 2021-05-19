@@ -48,8 +48,11 @@ export const footerText = {
   },
   addressSection: {
     title: "INDIA OFFICE",
-    address:
-      "Shakti Tower, EN 60, 5th Floor, Sector V, Saltlake, Kolkata 700091",
+    address: [
+      "Shakti Tower, EN 60,",
+      "5th Floor, Sector V,",
+      "Saltlake, Kolkata 700091",
+    ],
   },
   copyrights: "© 2021 The Magnit, All Rights Reserved.",
   contactUs: "CONNECT WITH US",
@@ -68,12 +71,15 @@ export const contactUsLabelsText = {
   name: "Name",
   email: "Email",
   phoneNum: "Phone Number",
-  message: "Message",
+  companyName: "Company Name",
+  message: "Project Details",
   submit: "Submit",
+  privacy:
+    "We respect your privacy and we guarantee that your contact details will never be shared with any third parties under any circumstances.",
 };
 
 export const errorBoundaryText = {
-  heading: 'OOPS! Something went wrong.',
-  error: 'Error',
-  errorInformationHeading: "Error Information"
-}
+  heading: "OOPS! Something went wrong.",
+  error: "Error",
+  errorInformationHeading: "Error Information",
+};
