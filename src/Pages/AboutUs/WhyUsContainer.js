@@ -1,12 +1,11 @@
 import React from "react";
-import { Grid } from "@material-ui/core";
-import PrimarySection from "../PartnerWithUsContext/PrimarySection";
-import SecondarySection from "../PartnerWithUsContext/SecondarySection";
-import {
-  PrimaryArray,
-  SecondaryArray,
-  PatrnerWithUsSectionTitle,
-} from "../../Utils/Constants/Language/en/PartnerWithUsData";
+import { useStyles } from "../../Sections/HomePageSections/PartnerWithUsContext/containerStyles";
+import { Paper, Grid , Typography} from "@material-ui/core";
+import PrimarySection from "../../Sections/HomePageSections/PartnerWithUsContext/PrimarySection";
+import SecondarySection from "../../Sections/HomePageSections/PartnerWithUsContext/SecondarySection";
+import {THEME} from "../../ContainerStructure/Headings/headingStyles"
+import { MuiThemeProvider } from "@material-ui/core/styles";
+import {PrimaryArray,SecondaryArray} from "../../Utils/Constants/Language/en/PartnerWithUsData"
 import Section from "../Section";
 
 const WhyUsContainer = () => {

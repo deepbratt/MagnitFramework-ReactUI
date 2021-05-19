@@ -12,7 +12,7 @@ const FactsContainer = () => {
   const { card, root, para, cardContent, Avatar } = useStyles();
   return (
     <>
-      <Paper className={root} elevation={0}>
+      <Grid container className={root} elevation={0}>
         <Grid justify="center" direction="row" container>
           <Grid className={card} item lg={12} xs={12}>
             <Heading4 title={factsHeading} />
@@ -34,16 +34,16 @@ const FactsContainer = () => {
                       src={data.avatar}
                       alt="Icon"
                     />
-                    <section className={para}>
+                    <Grid item className={para}>
                       <Paragraph para={data.desc} />
-                    </section>
+                    </Grid>
                   </CardContent>
                 </Card>
               </Grid>
             );
           })}
         </Grid>
-      </Paper>
+      </Grid>
     </>
   );
 };

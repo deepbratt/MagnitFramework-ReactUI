@@ -10,7 +10,7 @@ import {
   bannerButtonText,
 } from "../../Utils/Constants/Language/en/AppSolutionsData";
 import Paragraph from "../../ContainerStructure/Headings/Paragraphs/Paragraph";
-import { SolutionsStyles } from "./SolutionsStyles";
+import { SolutionsStyles } from "../../Pages/AppSolutionsPage/SolutionsStyles";
 import BreadCrumb from "../../Components/BreadCrumb";
 const BannerSection = () => {
   const { linearBackground , Harlequin, whiteColor} = Colors;

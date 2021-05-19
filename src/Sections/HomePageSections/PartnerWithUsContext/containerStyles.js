@@ -1,31 +1,10 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
-import { Colors } from "../../Theme/color.constants";
+import { Colors } from "../../../Theme/color.constants";
 
 const breakpoints = createBreakpoints({});
 const { Harlequin } = Colors;
-export const THEME = createMuiTheme({
-  overrides: {
-    MuiTypography: {
-      h4: {
-        fontFamily: "Poppins",
-        fontStyle: "normal",
-        fontSize: "35px",
-        lineHeight: 1.6,
-        fontWeight: "bolder",
-        textAlign: "center",
-        [breakpoints.only("sm")]: {
-          fontSize: "28px",
-          marginTop: "40px",
-        },
-        [breakpoints.down("xs")]: {
-          fontSize: "20px",
-        },
-      },
-    },
-  },
-});
 
 export const useStyles = makeStyles((theme) => ({
   root: {
@@ -37,9 +16,6 @@ export const useStyles = makeStyles((theme) => ({
   },
   grid: {
     margin: "0 4%",
-    [breakpoints.up("lg")]: {
-      margin: "0px 4px 0px 80px",
-    },
   },
   underlined: {
     position: "relative",
