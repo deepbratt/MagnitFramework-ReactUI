@@ -115,7 +115,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   sec: {
     position: "relative",
-    width: "100vw",
+    width: "100%",
     padding:"24px"
   },
   gridImage:{ 
