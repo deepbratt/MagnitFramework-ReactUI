@@ -5,6 +5,7 @@ const PointBadgeStyles = makeStyles((theme) => ({
   vertical: {
     margin: "15px",
     zIndex:1,
+    padding:"10px",
     boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)",
     transition: "all .25s linear",
     border:`solid 1px ${whiteColor}`,
@@ -69,7 +70,6 @@ const PointBadgeStyles = makeStyles((theme) => ({
     justifyContent: "center",
     "& > p": {
       color:darkSilver,
-      margin:"0rem .1rem",
       [theme.breakpoints.down("sm")]: {
         fontSize: "10px",
       },
