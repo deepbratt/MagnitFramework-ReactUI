@@ -10,15 +10,8 @@ import { footerText } from "../../Utils/Constants/Language";
 import CustomImage from "../../Components/CustomImage";
 
 const Footer = () => {
-  const {
-    root,
-    logo,
-    list,
-    section,
-    policy,
-    contact,
-    sectionBorder,
-  } = FooterStyle();
+  const { root, logo, list, section, policy, contact, sectionBorder } =
+    FooterStyle();
   const {
     contactUs,
     navigation,
@@ -81,9 +74,11 @@ const Footer = () => {
             <Typography align="left" gutterBottom variant="h5">
               {addressSection.title}
             </Typography>
-            <Typography align="left" gutterBottom variant="body2">
-              {addressSection.address}
-            </Typography>
+            {addressSection.address.map((location, index) => (
+              <Typography key={index} align="left" gutterBottom variant="body2">
+                {location}
+              </Typography>
+            ))}
           </div>
         </Grid>
       </Grid>
