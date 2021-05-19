@@ -2,7 +2,7 @@ import {
   VettedResourceIcon,
   LanguageIcon,
   RiskFreeIcon,
-  QualityAssuranceIcon,
+  Quality,
   LifeTimeSupportIcon,
   DataSecuityIcon,
   FlexibleBillingIcon,
@@ -49,7 +49,7 @@ export const whyHireData = [
   },
   {
     color: pictonBlue,
-    icon: QualityAssuranceIcon,
+    icon: Quality,
     title: "Assurance of Quality",
     desc:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",

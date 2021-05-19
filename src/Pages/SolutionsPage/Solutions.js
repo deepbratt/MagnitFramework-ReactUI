@@ -9,6 +9,7 @@ import { Colors } from "../../Theme/color.constants";
 import Banner from "./Banner";
 import Slider from "./ReviewSlider";
 import Main from "./WhyUsContainer"
+import CommentSection from "../../Components/CommentSection";
 
 const Solutions = () => {
   const { linearBackground } = Colors;
@@ -16,7 +17,7 @@ const Solutions = () => {
   const { underlined } = useStyles();
   return (
     <>
-      <Grid container>
+    <CommentSection>
         <Grid
           className={root}
           style={{ paddingBottom: "50px", background: linearBackground }}
@@ -33,10 +34,8 @@ const Solutions = () => {
         <Grid item lg={12} md={12} xs={12}>
           <Main />
         </Grid>
-        <Grid item lg={12} md={12} xs={12}>
-          <Slider />
-        </Grid>
-      </Grid>
+        </CommentSection>
+      
     </>
   );
 };

@@ -67,7 +67,7 @@ const Services = () => {
       <CustomImage className={leftPattern} src={PatternLeft} alt="" srcset="" />
       <CustomImage className={rightPattern} src={StarFishPattern} alt="" srcset="" />
       <Section title={ServicesSectionTitle} highlightWords={1}>
-        <PointList data={servicesData} />
+        <PointList data={servicesData}  horizontal={false}/>
       </Section>
       </div>
       <Section title={HiringSectionTitle} highlightWords={2}>
