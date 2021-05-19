@@ -1,31 +1,26 @@
 import React from "react";
-import { useStyles } from "../PartnerWithUsContext/containerStyles";
-import { Grid, Typography } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import PrimarySection from "../PartnerWithUsContext/PrimarySection";
 import SecondarySection from "../PartnerWithUsContext/SecondarySection";
 import {
   PrimaryArray,
   SecondaryArray,
+  PatrnerWithUsSectionTitle,
 } from "../../Utils/Constants/Language/en/PartnerWithUsData";
+import Section from "../Section";
 
 const WhyUsContainer = () => {
-  const { grid, underlinedText } = useStyles();
   return (
-    <>
+    <Section title={PatrnerWithUsSectionTitle}>
       <Grid container>
-        <Grid item md={12} xs={12}>
-          <Typography variant="h4" color="inherit">
-            <span className={underlinedText}>Why Us?</span>
-          </Typography>
-        </Grid>
-        <Grid className={grid} item lg={5} md={5} xs={12}>
+        <Grid item md={6} xs={12}>
           <PrimarySection data={PrimaryArray} />
         </Grid>
-        <Grid className={grid} item lg={5} md={5} xs={12}>
+        <Grid item md={6} xs={12}>
           <SecondarySection data={SecondaryArray} />
         </Grid>
       </Grid>
-    </>
+    </Section>
   );
 };
 

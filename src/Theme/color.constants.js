@@ -80,6 +80,8 @@ export const Colors = {
   brunswickGreen: "#1A584F",
   spaceCadet: "#1F3259",
   chineseWhite: "#E1E1E1",
+  kellyGreen: "#46BB28",
+  brandeisBlue: "#006FED",
   cetaceanBlue: "#000E4D",
   // MOSTLY BACKGROUND
   aliceBlue: "#E8F2FE",
