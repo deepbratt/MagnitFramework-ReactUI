@@ -4,7 +4,6 @@ import { Colors } from "../../Theme/color.constants";
 const {  Harlequin,Mirage,DoveGray } = Colors;
 const breakpoints = createBreakpoints({});
 const useStyles = makeStyles((theme) => ({
-
     root: {
         marginTop: "0",
         backgroundColor: "transparent",
@@ -69,6 +68,7 @@ const useStyles = makeStyles((theme) => ({
       },
       paragraph: {
         width: "80%",
+        textAlign:"center",
         marginTop: "10px",
         color: DoveGray,
         [breakpoints.only("md")]: {
