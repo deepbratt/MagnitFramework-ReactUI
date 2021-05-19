@@ -1,16 +1,16 @@
 import React from "react";
 import { useStyles } from "../NumberContext/numberStyles";
 import { missionStyles } from "./missionStyles";
-import { Card, CardContent, Paper } from "@material-ui/core";
-import Heading6 from "../../../ContainerStructure/Headings/Heading6";
-import Paragraph from "../../../ContainerStructure/Headings/Paragraphs/Paragraph";
+import { Card, CardContent, Grid } from "@material-ui/core";
+import Heading6 from "../../ContainerStructure/Headings/Heading6";
+import Paragraph from "../../ContainerStructure/Headings/Paragraphs/Paragraph";
 import {
   MidSection,
   MainData,
-} from "../../../Utils/Constants/Language/AboutUsData";
-import Patten1 from "../../../assets/AboutUs/vision1.png";
-import Patten2 from "../../../assets/AboutUs/vision2.png";
-import CustomImage from "../../../Components/CustomImage";
+} from "../../Utils/Constants/Language/AboutUsData";
+import Patten1 from "../../assets/AboutUs/vision1.png";
+import Patten2 from "../../assets/AboutUs/vision2.png";
+import CustomImage from "../../Components/CustomImage";
 
 const MissionContext = () => {
   const { cardSec, devSec, dev } = useStyles();
@@ -20,10 +20,17 @@ const MissionContext = () => {
   const { mission, vision } = MainData;
   return (
     <>
-      <Paper className={root} elevation={0}>
+      <Grid container className={root} justify="center" alignContent="center">
         <CustomImage className={leftPattern} src={Patten1} alt="" />
         <CustomImage className={rightPattern} src={Patten2} alt="" />
-        <section style={{ paddingBottom: "20px" }} className={cardSec}>
+        <Grid
+          item
+          xs={12}
+          md={5}
+          lg={4}
+          style={{ paddingBottom: "20px" }}
+          className={cardSec}
+        >
           <Card className={card2}>
             <CardContent>
               <section className={devSec}>
@@ -36,6 +43,15 @@ const MissionContext = () => {
               </section>
             </CardContent>
           </Card>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          md={5}
+          lg={4}
+          style={{ paddingBottom: "20px" }}
+          className={cardSec}
+        >
           <Card className={card}>
             <CardContent>
               <section className={devSec}>
@@ -48,8 +64,8 @@ const MissionContext = () => {
               </section>
             </CardContent>
           </Card>
-        </section>
-      </Paper>
+        </Grid>
+      </Grid>
     </>
   );
 };

@@ -43,9 +43,7 @@ const Services = () => {
   } = ServicesSectionStyles();
   return (
     <CommentSection >
- 
-
- <Banner
+       <Banner
         image={BannerImage}
         backColor={linearBackground}
         breadCrumb={<BreadCrumb links={breadCrumData} />}
@@ -64,11 +62,10 @@ const Services = () => {
         >
           <Typography variant="buttom">Get Started</Typography>
         </CustomButton>
-      </Banner>
-
-
+        </Banner>
       <div style={{position:"relative"}}>
       <CustomImage className={leftPattern} src={PatternLeft} alt="" srcset="" />
+      <CustomImage className={rightPattern} src={StarFishPattern} alt="" srcset="" />
       <Section title={ServicesSectionTitle} highlightWords={1}>
         <PointList data={servicesData} />
       </Section>
@@ -76,11 +73,9 @@ const Services = () => {
       <Section title={HiringSectionTitle} highlightWords={2}>
         <OptionsTab />
       </Section>
-      <CustomImage className={rightPattern} src={StarFishPattern} alt="" srcset="" />
       <Section title={WhyHireSectionTitle} highlightWords={3}>
         <PointList data={hireUsData} horizontal={true} />
       </Section>
-      
       <Section backColor={skyBlue}>
         <GlanceSection backColor={skyBlue} />
       </Section>

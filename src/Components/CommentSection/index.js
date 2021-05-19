@@ -15,7 +15,7 @@ import smallDot from "../../assets/patterns/smalldot.png";
 import SquareDottedPattern from "../../assets/patterns/dotsPattern.png";
 import ReviewSlider from "../ReviewSlider";
 import SectionStyles from "./style";
-
+import {Grid } from "@material-ui/core";
 import Avatar1 from "../../assets/services/Avatar1.png";
 import Avatar2 from "../../assets/services/Avatar2.png";
 import Avatar3 from "../../assets/services/Avatar3.png";
@@ -50,7 +50,7 @@ const CommentSection = ({children}) => {
     yellowCommaPattern
   } = SectionStyles();
   return (
-    <div className={root} >
+    <Grid xs={12} className={root}  >
     {children}
       <Section backColor={aliceBlue}>
         <div className={reviewSlider}>
@@ -130,7 +130,7 @@ const CommentSection = ({children}) => {
           <ReviewSlider />
         </div>
       </Section>
-    </div>
+    </Grid>
   );
 };
 

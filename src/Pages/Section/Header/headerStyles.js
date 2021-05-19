@@ -2,22 +2,16 @@ import { makeStyles } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import { Colors } from "../../../Theme/color.constants";
 
-const {
-  transparentWildSand,
-  WildSand,
-  mainSlide,
-  blackColor,
-  greyColor,
-  Ash
-} = Colors;
+const { WildSand, harlequinDark, blackColor, greyColor, Ash } =
+  Colors;
 
 export const THEME = createMuiTheme({
   overrides: {
     MuiButton: {
-      root:{
+      root: {
         borderRadius: "none",
         fontFamily: "Poppins",
-      }
+      },
     },
     MuiTypography: {
       h5: {
@@ -52,9 +46,9 @@ export const useStyles = makeStyles((theme) => ({
   //   borderBottom: `solid 1px ${transparentWildSand}`,
 
   // },
-  root:{
+  root: {
     boxShadow: "none",
-    width:"100%",
+    width: "100%",
     backgroundColor: WildSand,
   },
   appbarsolid: {
@@ -63,12 +57,12 @@ export const useStyles = makeStyles((theme) => ({
     width: "100%",
     fontSize: "16px",
     display: "flex",
-    alignItems:"center",
+    alignItems: "center",
     zIndex: 1,
     justifyContent: "space-between",
     transition: "all .5s linear",
     // borderBottom: `solid 3px ${Ash}`,
-    padding:"0 !important",
+    padding: "0 !important",
   },
   menuButton: {
     paddingRight: theme.spacing(2),
@@ -89,37 +83,47 @@ export const useStyles = makeStyles((theme) => ({
     fontWeight: "600",
     fontFamily: "Poppins', sans-serif",
     whiteSpace: "nowrap",
-    justifyContent:"center",
-    alignItems: 'center'
-  },
-  listItem: {
+    justifyContent: "center",
+    alignItems: "center",
+    color: greyColor,
+    
     "&:hover": {
       color: blackColor,
       cursor: "pointer",
     },
   },
+  listItem: {
+    color: greyColor,
+    marginRight: "20px",
+    "&:hover": {
+      color: blackColor,
+      cursor: "pointer",
+    },
+  
+  },
 
   link: {
     // marginTop: "5px",
     textDecoration: "none",
-    color: greyColor,
+    color: "black",
   },
   active: {
     color: blackColor,
   },
   logo: {
-    width:"7rem",
-    paddingLeft:"24px"
-    // [theme.breakpoints.up("lg")]: {
-    //   width: "150px",
-    //   marginRight: "15px",
-    //   marginTop: "15px"
-    // },
-    // [theme.breakpoints.down("md")]: {
-    //   width: "110px",
-    // },
-    // [theme.breakpoints.down("xs")]: {
-    //   width: "100px",
-    // },
+    width: "7rem",
+    paddingLeft: "24px",
+  },
+  menu: {
+    width: "250px",
+    border: `1px solid ${Ash}`,
+    display: "flex",
+    justifyContent: "center",
+    transition: "all .5s linear",
+    backgroundColor: WildSand,
+    
+
+   
+  
   },
 }));

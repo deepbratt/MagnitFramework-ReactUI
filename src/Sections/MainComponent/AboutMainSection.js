@@ -1,24 +1,22 @@
 import React from "react";
 import { useStyles } from "./mainStyles";
-import { Card, CardContent, Paper } from "@material-ui/core";
-import Heading from "../../../ContainerStructure/Headings/Heading4";
-import Paragraph from "../../../ContainerStructure/Headings/Paragraphs/Paragraph";
-import { MainData } from "../../../Utils/Constants/Language/AboutUsData";
-import BreadCrumb from "../../../Components/BreadCrumb";
-import { Colors } from "../../../Theme/color.constants";
-import CustomImage from "../../../Components/CustomImage";
-const {Mirage}=Colors;
+import { Card, CardContent, Grid } from "@material-ui/core";
+import Heading from "../../ContainerStructure/Headings/Heading4";
+import Paragraph from "../../ContainerStructure/Headings/Paragraphs/Paragraph";
+import { MainData } from "../../Utils/Constants/Language/AboutUsData";
+import BreadCrumb from "../../Components/BreadCrumb";
+import CustomImage from "../../Components/CustomImage";
+
 const AboutMainSection = (props) => {
- 
   const { title, paragraphPrimary, paragraphSecondary } = MainData;
-  
+
   const classes = useStyles();
   const { root, cardSec, breadCrumbStyles, paragraph, hero, card, underlined } =
     classes;
   return (
     <>
-      <Paper className={root} elevation={0}>
-        <section>
+      <Grid container className={root}>
+        <Grid item xs={12}>
           <Card className={card}>
             <div className={breadCrumbStyles}>
               <BreadCrumb links={props.breadcrumbData} />
@@ -40,8 +38,8 @@ const AboutMainSection = (props) => {
               </CardContent>
             </Card>
           ) : null}
-        </section>
-      </Paper>
+        </Grid>
+      </Grid>
     </>
   );
 };
