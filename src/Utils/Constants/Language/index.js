@@ -43,7 +43,7 @@ export const footerText = {
   addressSection: {
     title: "HEAD OFFICE",
     address:
-      "1690 FM 423 Suite 9205,  Frisco, Texas 75033 – USA",
+      ["1690 FM 423 Suite 9205,  Frisco, Texas 75033 – USA"],
 
   },
   copyrights: "© 2021 The Magnit, All Rights Reserved.",
