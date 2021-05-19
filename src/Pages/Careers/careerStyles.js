@@ -75,7 +75,7 @@ justifyContent:"center"
 },
   bottomStyle:{ 
     display:"flex",
-  alignItems:"center" ,
+  alignItems:"flex-end" ,
   justifyContent:"center"
  }
 
