@@ -52,7 +52,7 @@ const MissionContext = () => {
           style={{ paddingBottom: "20px" }}
           className={cardSec}
         >
-          <Card className={card}>
+            <Card className={card}>
             <CardContent>
               <section className={devSec}>
                 <section className={dev}></section>

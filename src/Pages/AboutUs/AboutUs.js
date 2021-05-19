@@ -28,9 +28,6 @@ const AboutUs = () => {
         <Grid item lg={12} md={12} xs={12}>
           <MissionContext />
         </Grid>
-        <Grid item lg={12} md={12} xs={12}>
-          <AboutUsNumberContext />
-        </Grid>
         <Grid item md={12} xs={12}>
           <WhyUsContainer />
         </Grid>

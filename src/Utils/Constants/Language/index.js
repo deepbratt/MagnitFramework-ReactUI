@@ -31,29 +31,23 @@ export const reviewSliderText = [{
 
 export const trainingAndCertificationText = [
   {
-    title: "Web Design",
+    title: "Web Development",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip",
+      "We provide training in web development in various programming languages followed by Internships to put your knowledge to work.",
     animationData: WebDesignAnimationData,
   },
   {
     title: "Graphic Design",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip",
+      "Challenge your creative limits and think outside the box with our Graphic design training program.",
     animationData: GraphicDesignAnimationData,
   },
   {
-    title: "Social Media Marketing",
+    title: "Digital Marketing",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip",
+      "Learn to create professional first-impression with eye-catching material through a Digital Marketing campaign in our training programs.",
     animationData: MarketingAnimationData,
-  },
-  {
-    title: "Culturally Aligned",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip",
-    animationData: CulturallyAlignedAnimationData,
-  },
+  }
 ];
 
 export const footerText = {
@@ -66,14 +60,16 @@ export const footerText = {
     ],
   },
   addressSection: {
-    title: "INDIA OFFICE",
-    address: ["1690 FM 423 Suite 9205,", "Frisco,", "Texas 75033 – USA"],
+    title: "HEAD OFFICE",
+    address:
+      ["1690 FM 423 Suite 9205,  Frisco, Texas 75033 – USA"],
+
   },
   copyrights: "© 2021 The Magnit, All Rights Reserved.",
   contactUs: "CONNECT WITH US",
   navigation: {
     title: "Company",
-    links: ["Service", "Solutions", "FAQ'S", "Case Study", "Blog", "Career"],
+    links: ["Service", "Solutions", "FAQ'S", "Career"],
   },
   lifeTimeSupport: "Life-Time Support",
   terms: "Terms of Service",

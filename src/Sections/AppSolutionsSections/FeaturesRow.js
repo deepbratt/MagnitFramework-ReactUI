@@ -22,7 +22,7 @@ const FeaturesRow = (props) => {
                 style={{
                   display: "flex",
                   justifyContent: "center",
-                  paddingBottom: "40px",
+                  paddingBottom: "20px",
                 }}
                 item
                 xs={12}

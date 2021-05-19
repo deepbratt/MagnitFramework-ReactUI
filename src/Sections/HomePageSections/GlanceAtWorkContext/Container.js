@@ -14,10 +14,11 @@ import {Data} from "../../../Utils/Constants/Language/en/GlanceAtWorkData"
 import CustomButton from "../../../Components/CustomButton";
 import CustomImage from "../../../Components/CustomImage";
 import {THEME} from '../../../ContainerStructure/Headings/headingStyles'
+import Paragraph from "../../../ContainerStructure/Headings/Paragraphs/Paragraph"
 const Container = ({backColor}) => {
   const classes = useStyles();
   const {image1,image2,image3} = Images
-  const {title,subtitle,buttonText} = Data
+  const {title,subtitleOne,subtitleTwo,subtitleThree,buttonText,paragraphOne,paragraphTwo,paragraphThree} = Data
   const {whiteColor} = Colors
   const {
     root,
@@ -47,8 +48,8 @@ const Container = ({backColor}) => {
                   <CustomImage width="250px" src={image1} alt=""/>
                   <Grid item className={cardContent}>
                 <MuiThemeProvider theme={THEME}>
-                  <Typography variant="h5" >
-                   {subtitle}
+                  <Typography variant="h5" gutterBottom>
+                   {subtitleOne}
                   </Typography>
                 </MuiThemeProvider>
               </Grid>
@@ -58,12 +59,12 @@ const Container = ({backColor}) => {
           </Card>
           <Card className={card}>
             <CardContent>
-                <Grid className={devSec}>
+                <Grid  className={devSec}>
                   <CustomImage width="300px" src={image2} alt=""/>
                   <Grid item className={cardContent}>
                 <MuiThemeProvider theme={THEME}>
-                  <Typography variant="h5" >
-                  {subtitle}
+                  <Typography variant="h5" gutterBottom>
+                  {subtitleTwo}
                   </Typography>
                 </MuiThemeProvider>
               </Grid>
@@ -77,8 +78,8 @@ const Container = ({backColor}) => {
                   <CustomImage width="317px"  src={image3} alt=""/>
                   <Grid item className={cardContent}>
                 <MuiThemeProvider theme={THEME}>
-                  <Typography variant="h5">
-                  {subtitle}
+                  <Typography variant="h5"gutterBottom>
+                  {subtitleThree}
                   </Typography>
                 </MuiThemeProvider>
               </Grid>

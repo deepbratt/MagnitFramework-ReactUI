@@ -7,6 +7,7 @@ import Testimonials from "../Pages/Testimonials";
 import Career from "../Pages/Careers/Container"
 import AppSolutions from "../Pages/AppSolutionsPage/Container"
 import OurBlogs from "../Pages/OurBlogs";
+import Quote from "../Pages/ContactUs/index"
 
 const pathIds = {
   home: "home",
@@ -18,7 +19,8 @@ const pathIds = {
   careers: "careers",
   event: "event",
   testimonial: "/testimonial",
-  appSolutions: "appSolutions"
+  appSolutions: "appSolutions",
+  requestAQuote: "requestAQuote"
 };
 
  const pathRouting = {
@@ -27,11 +29,12 @@ const pathIds = {
   about: "/about",
   services: "/services",
   solutions: "/solutions",
-  caseStudies: "/caseStudies",
+  caseStudies: "/case-studies",
   careers: "/careers",
   event: "/event",
   testimonial: "/testimonial",
-  appSolutions: "/appSolutions"
+  appSolutions: "/app-solutions",
+  requestAQuote: "/request-a-quote",
 };
 
 const pageRoutes = {
@@ -42,7 +45,6 @@ const pageRoutes = {
   },
   [pathIds.blogs]: {
     path: pathRouting.blogs,
-    sidebarName: "Blogs",
     component: OurBlogs,
   },
   [pathIds.about]: {
@@ -62,7 +64,6 @@ const pageRoutes = {
   },
   [pathIds.caseStudies]: {
     path: pathRouting.caseStudies,
-    sidebarName: "Case Studies",
   },
   [pathIds.careers]: {
     path: pathRouting.careers,
@@ -76,13 +77,17 @@ const pageRoutes = {
   },
     [pathIds.event]: {
     path: pathRouting.event,
-    sidebarName: "Events",
     component:Event,
   },
   [pathIds.testimonial]: {
     path: pathRouting.testimonial,
     sidebarName: "Testimonials",
     component:Testimonials,
+  },
+  [pathIds.requestAQuote]: {
+    path: pathRouting.requestAQuote,
+    sidebarName: "Request a quote",
+    component: Quote,
   },
 };
 

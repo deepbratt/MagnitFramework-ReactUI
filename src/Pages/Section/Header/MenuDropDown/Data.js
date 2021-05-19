@@ -7,7 +7,7 @@ export const menuItems = {
     },
     {
       title: "App Solutions",
-      path: "/appSolutions",
+      path: "/app-solutions",
     },
   ],
   Company: [

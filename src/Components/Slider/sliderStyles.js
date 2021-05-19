@@ -71,6 +71,10 @@ export const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
   },
+  link: {
+    textDecoration: "none",
+    color: whiteColor
+  },
   vector: {
    zIndex: 1,
     height: "auto",
@@ -131,6 +135,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   slide: {
     position: "relative",
+    width: "100%",
     "& .carousel .slide img": {
       width: "100%",
     },
@@ -139,7 +144,8 @@ export const useStyles = makeStyles((theme) => ({
     position: "absolute",
     zIndex: 0,
     width:"100%",
-    height:"auto"
+    height:"auto",
+    left:0,
   },
   listItem:{
 

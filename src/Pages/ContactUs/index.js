@@ -38,7 +38,7 @@ const ContactUs = () => {
   const { awardSection, imageContainer, label, section, factCard } =
     ContactUsStyles();
 
-  const { experience, team, customers, served, projects, certification } =
+  const { experience, team, customers, served, projects, customerRentention } =
     FactCardText;
 
   const { addressSection, talkToUsSection } = footerText;
@@ -49,8 +49,8 @@ const ContactUs = () => {
       text: "Home",
     },
     {
-      path: "/contactUs",
-      text: "Contact Us",
+      path: "/request/quote",
+      text: "Request A Quote",
     },
   ];
   return (
@@ -191,8 +191,8 @@ const ContactUs = () => {
             <FactCard
               backColor={Luigi}
               icon={CertificationIcon}
-              title={certification.title}
-              subtitle={certification.subTitle}
+              title={customerRentention.title}
+              subtitle={customerRentention.subTitle}
             />
           </Grid>
         </Grid>
