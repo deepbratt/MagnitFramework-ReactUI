@@ -5,7 +5,7 @@ import Avatar2 from "../../../../assets/Testimonials/profile1.png"
 const VideosData=[
     {
         id:1,
-        name:"Maria Ann (SwiftDelaz)",
+        name:"Maria Ann (SwiftDealz)",
         para:"They provide efficient, time-bound prototypes keeping all KPIs in mind. We recommend them to anyone looking to make an online footprint.  "
         ,Img:Img1,
         Avatar:Avatar2,
