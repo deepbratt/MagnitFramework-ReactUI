@@ -1,11 +1,11 @@
 import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
 // import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 import { Colors } from "./color.constants";
-import GlobalFontSize from "./GlobalFontSizes";
+// import GlobalFontSize from "./GlobalFontSizes";
 // const breakpoints = createBreakpoints({});
 // Object of our themes
 const { Harlequin } = Colors;
-const { H2 } = GlobalFontSize;
+// const { H2 } = GlobalFontSize;
 
 export default function createTheme(options) {
   return createMuiTheme({
@@ -92,7 +92,11 @@ export default function createTheme(options) {
         fontWeight: 600,
         lineHeight: "71.77px",
       },
-      h2: H2,
+      h2: {
+        fontSize: "2.1875rem",
+        fontWeight: 600,
+        lineHeight: "57.05px",
+      },
       h3: {
         fontSize: "1.5rem",
         fontWeight: 600,
