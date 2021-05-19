@@ -51,6 +51,9 @@ export const ContactUsStyles = makeStyles((theme) => ({
       margin: "10px 0",
     },
   },
+  factCard: {
+    display: "flex",
+  },
 }));
 
 export default ContactUsStyles;
