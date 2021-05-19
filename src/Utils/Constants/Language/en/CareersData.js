@@ -57,7 +57,7 @@ export const DataArray = [
   {
 
     title: "Full Stack Developer",
-    span: "Chicago, USA",
+    span: "Remote",
     icon: mapIcon,
     desc: "We are looking for a Full Stack JavaScript Developer who is motivated to combine the art of design with the art of programming. Responsibilities will include creating back-end services, as well as implementing visual elements and their behaviors with user interactions. You will work with a talented team of both front-end and back-end web developers.",
     buttonText: "Apply now"
@@ -65,7 +65,7 @@ export const DataArray = [
   {
 
     title: "UI/UX Designer",
-    span: "Chicago, USA",
+    span: "Remote",
     icon: mapIcon,
     desc: "Magnit is looking for a skillful and experienced UX / UI Designer to work with multiple projects to enhance the user experience. As a key UX Designer, you will be working in collaboration with worldwide industry experts. Join our bright engineering team with open communication, empowerment, innovation, and customer-centric culture.",
     buttonText: "Apply now"
@@ -73,7 +73,7 @@ export const DataArray = [
   {
 
     title: "Front-End Developer",
-    span: "Chicago, USA",
+    span: "Remote",
     icon: mapIcon,
     desc: "We are looking for a Front End Developer to join our growing Connected Business team. The hire will be responsible for building web applications and maintaining our Front end infrastructure. The ideal candidate is an experienced web developer who enjoys developing applications and building them from the ground up. The Front End Developer will collaborate with our software engineers and data scientists to ensure optimal delivery of our software products.",
     buttonText: "Apply now"
@@ -81,7 +81,7 @@ export const DataArray = [
   {
 
     title: "React.js Developer",
-    span: "Chicago, USA",
+    span: "Remote",
     icon: mapIcon,
     desc: "We are looking for React Developers who are responsible for development, programming, coding of Information Technology solutions using ReactJS, Redux, D3 and NodeJS to enable Customer Experience applications",
     buttonText: "Apply now"
@@ -89,7 +89,7 @@ export const DataArray = [
   {
 
     title: "React Native Developer",
-    span: "Chicago, USA",
+    span: "Remote",
     icon: mapIcon,
     desc: " We are looking for an experienced React Native Developer to join our team who can develop React Native applications for both IOS and Android.",
     buttonText: "Apply now"
@@ -97,7 +97,7 @@ export const DataArray = [
   {
 
     title: "Node.js Developer",
-    span: "Chicago, USA",
+    span: "Remote",
     icon: mapIcon,
     desc: "We are looking for a Node.js Developer who is responsible for development, programming, coding of Information Technology solutions using NodeJS to enable Customer Experience applications.",
     buttonText: "Apply now"

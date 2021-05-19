@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 import { Colors } from "../../Theme/color.constants";
 
-const { whiteColor, Harlequin, blackColor, paletteBlue,skyBlue } = Colors;
+const { whiteColor, Harlequin, blackColor, paletteBlue,skyBlue, DoveGray } = Colors;
 
 const breakpoints = createBreakpoints({});
 
@@ -31,11 +31,13 @@ export const useStyles = makeStyles((theme) => ({
     display: "flex",
     zIndex: 1,
     flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: "flex-start",
+    // justifyContent:"center", 
     transition: "all .25s linear",
     boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)",
     margin: "20px",
+    padding:"20px",
+    textAlign:"left"
  
   },
   button: {
@@ -64,6 +66,15 @@ export const useStyles = makeStyles((theme) => ({
     zIndex: 0,
     width: "300px"
   },
-  
+  remoteArea:
+  { color: DoveGray, 
+    paddingTop: "10px",
+  display:"flex",
+  alignItems:"baseline" },
+  bottomStyle:{ 
+    display:"flex",
+  alignItems:"center" ,
+  justifyContent:"center"
+ }
 
 }));

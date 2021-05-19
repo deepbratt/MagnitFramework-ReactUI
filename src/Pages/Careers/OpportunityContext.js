@@ -26,6 +26,8 @@ const OpportunityContext = () => {
     RightPattern,
     LeftPattern,
     btn,
+    remoteArea,
+    bottomStyle
   } = classes;
   const { DoveGray, whiteColor, Harlequin } = Colors;
   return (
@@ -39,16 +41,24 @@ const OpportunityContext = () => {
         <section className={cardSec}>
           {DataArray.map((data, index) => {
             return (
-              <Grid xs={12} md={3}  className={card}>
-                <CardContent key={index}>
-                  <section className={devSec}>
-                    <section>
+              <Grid xs={12} md={3}  className={card} key={index}>
+                  <Grid className={devSec}>
+                    <Grid xs={12} >
                       <Heading5 subTitle={data.title} />
-                      <section style={{ color: DoveGray, paddingTop: "10px" }}>
+                      </Grid>
+                      <Grid className={remoteArea} >
+                        <div style={{ marginRight:".5rem"}}>
                         <img alt="image" width="10px" src={data.icon} />
+                        </div>
+                        <div>
                         <Paragraph para={data.span} />
+                        </div>
+                        </Grid>
+                        <Grid xs={12} >
                         <Paragraph para={data.desc} />
-                      </section>
+                      </Grid>
+                  </Grid>
+                  <Grid xs={12} className={bottomStyle }>
                       <CustomButton
                         style={{
                           textTransform: "none",
@@ -59,9 +69,7 @@ const OpportunityContext = () => {
                       >
                         {data.buttonText}
                       </CustomButton>
-                    </section>
-                  </section>
-                </CardContent>
+                      </Grid>
               </Grid>
             );
           })}
