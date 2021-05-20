@@ -30,9 +30,9 @@ const VideoCard = ({ Img, detail, avatar, name, date }) => {
     <Grid>
       <CardHeader
         avatar={<img src={avatar} alt="s" className={avatarImg} />}
-        title={<Typography className={cardTitle}>{name}</Typography>}
+        title={<Typography variant="subtitle1" className={cardTitle}>{name}</Typography>}
         action={
-          <Typography component="p" className={carddate}>
+          <Typography variant="body2" className={carddate}>
             {date}
           </Typography>
         }
@@ -57,7 +57,7 @@ const VideoCard = ({ Img, detail, avatar, name, date }) => {
       </Grid>
       <Grid>
       <CardContent>
-        <Typography component="p" className={cardpara}>
+        <Typography variant="h5" className={cardpara}>
           {detail}
         </Typography>
       </CardContent>
