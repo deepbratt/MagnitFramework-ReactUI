@@ -106,14 +106,13 @@ theme.typography.body1 = {
 };
 
 theme.typography.body2 = {
-  fontSize: "1.125rem",
-  fontWeight: 500,
-  lineHeight: "29.34px",
+  fontSize: "1rem", // 16px
+  fontWeight: 300,
+  lineHeight: "29.36px",
+
   [theme.breakpoints.down("md")]: {
-    fontSize: "1.75rem",
-  },
-  [theme.breakpoints.down("sm")]: {
     fontSize: "0.75rem",
+    lineHeight: "25px",
   },
 };
 
