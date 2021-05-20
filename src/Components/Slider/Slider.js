@@ -71,7 +71,7 @@ const Slider = ({
           <List>
             {data.map((text, index) => (
               <ListItem className={listItem} >
-                <Typography  key={index} variant="h5">
+                <Typography  key={index} variant="h4">
                   <CheckIcon className={value === "LIGHT" ? tick : tickSub} />
                   {text}
                 </Typography>
