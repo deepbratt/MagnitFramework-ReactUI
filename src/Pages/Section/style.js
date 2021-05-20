@@ -18,6 +18,9 @@ const LayoutStyle = makeStyles((theme) => ({
       margin: "0 2%",
     },
   },
+  sectionHeader: {
+    marginBottom: "60px",
+  },
   subHeader: {
     color: "grey",
   },

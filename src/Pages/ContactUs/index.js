@@ -100,7 +100,7 @@ const ContactUs = () => {
                             key={index}
                             align="left"
                             gutterBottom
-                            variant="body2"
+                            variant="caption"
                           >
                             {location}
                           </Typography>
@@ -119,7 +119,7 @@ const ContactUs = () => {
                             key={index}
                             align="left"
                             gutterBottom
-                            variant="body2"
+                            variant="caption"
                           >
                             {num}
                           </Typography>

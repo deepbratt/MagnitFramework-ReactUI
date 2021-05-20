@@ -1,6 +1,6 @@
 import { Grid } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import FooterStyle from "./style";
 import IconFB from "../../assets/images/icon-fb.png";
 import IconTwitter from "../../assets/images/icon-twitter.png";
