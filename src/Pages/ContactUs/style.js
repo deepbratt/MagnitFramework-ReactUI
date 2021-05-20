@@ -9,6 +9,11 @@ export const ContactUsStyles = makeStyles((theme) => ({
     backgroundBlendMode: "multiply, normal",
     borderTopLeftRadius: "5px",
     borderBottomLeftRadius: "5px",
+    [theme.breakpoints.down("md")]: {
+      borderTopLeftRadius: "5px",
+      borderTopRightRadius: "5px",
+      borderBottomLeftRadius: "0px",
+    }
   },
   imageContainer: {
     backgroundColor: "white",
