@@ -53,11 +53,6 @@ const pageRoutes = {
     sidebarName: "Services",
     component: Services,
   },
-  [pathIds.solutions]: {
-    path: pathRouting.solutions,
-    sidebarName: "Solutions",
-    component: Solutions,
-  },
   [pathIds.careers]: {
     path: pathRouting.careers,
     sidebarName: "Careers",
