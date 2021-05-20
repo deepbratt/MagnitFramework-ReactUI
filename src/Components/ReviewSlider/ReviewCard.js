@@ -9,7 +9,7 @@ const ReviewCard = ({ cardData }) => {
   const { text, authName, authImg } = cardData;
   const { grid, root, avatar, content, large } = ReviewSliderStyles();
   return (
-    <Grid className={grid} container justify="center" alignContent="center">
+    <Grid className={grid} container xs={12} justify="center" alignContent="center">
       <Grid item sm={12} lg={6}>
         <div className={avatar}>
           <div>

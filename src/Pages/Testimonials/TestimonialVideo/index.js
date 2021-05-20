@@ -26,7 +26,7 @@ const VideoCard = ({ Img, detail, avatar, name, date }) => {
   } = useStyles();
 
   return (
-    <Grid className={cardRoot}>
+    <Grid  className={cardRoot}>
     <Grid>
       <CardHeader
         avatar={<img src={avatar} alt="s" className={avatarImg} />}
