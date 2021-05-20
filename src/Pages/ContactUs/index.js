@@ -89,7 +89,7 @@ const ContactUs = () => {
                     xs={12}
                     justify="center"
                   >
-                    <Grid item xs={12} md={5}>
+                    <Grid item xs={10} md={5}>
                       <div className={section}>
                         <img src={LocationIcon} alt="Location Icon" />
                         <Typography align="left" gutterBottom variant="h5">
@@ -108,7 +108,7 @@ const ContactUs = () => {
                       </div>
                     </Grid>
 
-                    <Grid item xs={12} md={5}>
+                    <Grid item xs={10} md={5}>
                       <div className={section}>
                         <img src={PhoneIcon} alt="Phone Icon" />
                         <Typography align="left" gutterBottom variant="h5">
