@@ -53,7 +53,7 @@ const Main = (props) => {
                 <Heading5 subTitle={subHeading} />
               </Grid>
               <Grid xs={12} md={6} className={paragraph}>
-                <Typography  className={paragraph}>
+                <Typography variant="h6" className={paragraph}>
                   {para}
                 </Typography>
               </Grid>

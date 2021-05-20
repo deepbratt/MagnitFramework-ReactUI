@@ -51,10 +51,10 @@ function Testimonials() {
         backColor={linearBackground}
         breadCrumb={<BreadCrumb links={breadCrumData} />}
       >
-        <Typography  gutterBottom>
+        <Typography variant="h2"  gutterBottom>
           Our Testimonials
         </Typography>
-        <Typography  gutterBottom>
+        <Typography variant="h6" gutterBottom>
           We let our work speak for us. With a trust of 200+ clients and 96%
           user contentment, we strive to be synonymous with satisfaction.
         </Typography>

@@ -45,12 +45,12 @@ const Services = () => {
         backColor={linearBackground}
         breadCrumb={<BreadCrumb links={breadCrumData} />}
       >
-        <Typography  gutterBottom className={textColor}>
+        <Typography variant="h2" gutterBottom className={textColor}>
           We hire the most
           <br />
           industry-specific-skilled developers that fit your budget
         </Typography>
-        <Typography gutterBottom className={textColor}>
+        <Typography variant="h5" gutterBottom className={textColor}>
           We provide exceptional professional services in research, strategy,
           user experience, design, and full stack engineering to digitally
           transform ideas into reality.

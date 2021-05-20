@@ -17,7 +17,7 @@ const Services = () => {
       <Grid className={root} elevation={0}>
         <section className={serviceHeading}>
           <MuiThemeProvider theme={THEME}>
-            <Typography  color="inherit">
+            <Typography variant="h4" color="inherit">
               <Hidden smDown>
                 {title}
                 <span className={underlined}>{subTitle}</span>
