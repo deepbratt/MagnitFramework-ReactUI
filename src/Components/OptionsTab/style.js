@@ -40,7 +40,6 @@ const OptionTabStyles = makeStyles((theme) => ({
     margin: "10px",
     border: `solid 1px ${Harlequin}`,
     color: "black",
-    fontSize: "14px",
     borderRadius: "5px",
     "& > .MuiTab-textColorInherit": {
       opacity:1
@@ -65,7 +64,7 @@ const OptionTabStyles = makeStyles((theme) => ({
   },
   detail: {
     fontWeight: 400,
-    fontSize: h5.lg,
+
     color: chineseWhite,
     lineHeight: 1.5,
     margin: ".5rem 0rem 1rem 0rem",
@@ -73,7 +72,7 @@ const OptionTabStyles = makeStyles((theme) => ({
   },
   bulletText: {
     fontWeight: 400,
-    fontSize: p.lg,
+    
     color: whiteColor,
     lineHeight: "20.34px",
   },

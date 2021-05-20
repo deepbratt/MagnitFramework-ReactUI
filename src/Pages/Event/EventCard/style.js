@@ -11,6 +11,10 @@ const ActivityStyles = makeStyles((theme) => ({
     boxShadow:"0px 4px 60px rgba(0, 0, 0, 0.1)",
     margin:"1rem .5rem",
     textAlign:"left",
+    height:"90%",
+    display:"flex",
+    flexDirection:"column",
+    justifyContent:"space-evenly",
     "& .MuiCardContent-root": {
          padding: "1rem 0rem" 
     },

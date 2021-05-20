@@ -11,6 +11,7 @@ import {
   LinearProgress,
   Menu,
   MenuItem,
+  Typography,
 } from "@material-ui/core";
 import { NavLink } from "react-router-dom";
 import { MuiThemeProvider } from "@material-ui/core/styles";
@@ -26,12 +27,11 @@ import { menuItems } from "./MenuDropDown/Data";
 
 const Header = (props) => {
   const classes = useStyles();
-  const { Harlequin, whiteColor, Ash, WildSand } = Colors;
+  const { WildSand } = Colors;
   const {
     logo,
     list,
     listItem,
-    button,
     appbarsolid,
     link,
     root,
@@ -80,7 +80,7 @@ const Header = (props) => {
               {Object.keys(menuItems).map((item, index) => (
                 <div key={index}>
                   <MuiThemeProvider theme={THEME}>
-                    <ListItem style={{padding:"0"}}>
+                    <ListItem style={{ padding: "0" }}>
                       <Button
                         className={list}
                         onClick={(e) => handleClick(index, e)}
@@ -112,7 +112,9 @@ const Header = (props) => {
                           activeClassName={active}
                           className={link}
                         >
-                          <ListItemText primary={menuitems.title} />
+                         <Typography variant="h6">
+                           {menuitems.title}
+                         </Typography>
                         </NavLink>
                       </MenuItem>
                     ))}
@@ -129,7 +131,6 @@ const Header = (props) => {
                     variant="contained"
                     size={Breakpoints()}
                     onClick={navigated}
-
                   >
                     Request A Quote
                   </CustomButton>

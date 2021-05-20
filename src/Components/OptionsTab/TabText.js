@@ -9,7 +9,7 @@ export const TabText = ({data}) => {
     const { detail,bulletText,textDiv,trialBtn, } = OptionTabStyles();
     return (
        <Grid style={{textAlign:"left"}}>
-            <Typography variant="h6"  >{title}</Typography>
+            <Typography   >{title}</Typography>
         <Typography className={detail} color="initial">
         {desc}
 </Typography>

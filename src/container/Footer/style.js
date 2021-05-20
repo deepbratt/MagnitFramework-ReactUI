@@ -12,25 +12,21 @@ const FooterStyle = makeStyles((theme) => ({
     [theme.breakpoints.down("md")]: {
       padding: "40px 70px",
     },
-    [theme.breakpoints.down("xs")]: {
-      padding: "30px 40px",
+    [theme.breakpoints.down("sm")]: {
+      padding: "30px 20px",
     },
     "& > *": {
       color: "white",
+      textDecoration: "none",
     },
   },
   logo: {
     marginBottom: "30px",
   },
-  list: {
-    "& > a, h5": {
-      textDecoration: "none",
-      color: Citrine,
-    },
-   
-  },
   section: {
-    "& > p": {
+    "& > *": {
+      display: "block",
+      textDecoration: "none",
       color: Citrine,
     },
   },
