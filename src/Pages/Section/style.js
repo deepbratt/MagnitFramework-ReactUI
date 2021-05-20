@@ -14,13 +14,12 @@ const LayoutStyle = makeStyles((theme) => ({
       position: "absolute",
       height: "146px",
     },
+    [theme.breakpoints.down("sm")]: {
+      margin: "0 2%",
+    },
   },
   sectionHeader: {
     marginBottom: "60px",
-    color: "rgba(21, 27, 39, 1)",
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "1.5rem",
-    },
   },
   subHeader: {
     color: "grey",

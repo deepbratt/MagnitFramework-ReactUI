@@ -1,4 +1,4 @@
-import { Button } from "@material-ui/core";
+import { Button, Typography } from "@material-ui/core";
 import CustomButtonStyles from "./style";
 
 const CustomButton = (props) => {
@@ -14,7 +14,7 @@ const CustomButton = (props) => {
       fullWidth={props.fullWidth}
       {...props}
     >
-      {props.children}
+      <Typography variant="button">{props.children}</Typography>
     </Button>
   );
 };
