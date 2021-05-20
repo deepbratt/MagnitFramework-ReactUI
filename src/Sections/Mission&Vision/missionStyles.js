@@ -33,6 +33,9 @@ export const missionStyles = makeStyles((theme) => ({
       height: "450px",
       marginLeft: "0px",
     },
+    [breakpoints.down("xs")]: {
+      height: "500px",
+    },
   },
   card2: {
     zIndex: 1,
@@ -49,6 +52,9 @@ export const missionStyles = makeStyles((theme) => ({
       width: "70%",
       height: "450px",
       marginRight: "0px",
+    },
+    [breakpoints.down("xs")]: {
+      height: "550px",
     },
   },
   Icon: {
@@ -67,26 +73,7 @@ export const missionStyles = makeStyles((theme) => ({
     bottom: "0px",
   },
   underlined: {
-    position: "relative",
-    zIndex: 1,
-    "&:after": {
-      position: "absolute",
-      height: "3px",
-      content: '""',
-      width: "100px",
-      zIndex: -1,
-      right: "38%",
-      color: "#000",
-      backgroundColor: Harlequin,
-      [breakpoints.down("md")]: {
-        right: "35%",
-      },
-      [breakpoints.down("sm")]: {
-        right: "200px",
-      },
-      [breakpoints.down("xs")]: {
-        right: "70px",
-      },
-    },
+    borderBottom: `3px solid ${Harlequin}`,
+  
   },
 }));

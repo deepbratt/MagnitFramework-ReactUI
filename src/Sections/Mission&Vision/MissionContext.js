@@ -35,11 +35,12 @@ const MissionContext = () => {
             <CardContent>
               <section className={devSec}>
                 <section className={dev}></section>
-                <section className={underlined}>
+               
                   <CustomImage className={Icon} src={mission} alt="Icon" />
                   <Heading6 title={firstTitle} />
-                  <Paragraph para={missionText} />
-                </section>
+                  <section className={underlined}>
+                  <Paragraph  para={missionText} />
+                  </section>
               </section>
             </CardContent>
           </Card>
@@ -56,9 +57,10 @@ const MissionContext = () => {
             <CardContent>
               <section className={devSec}>
                 <section className={dev}></section>
-                <section className={underlined}>
+             
                   <CustomImage className={Icon} src={vision} alt="Icon" />
                   <Heading6 title={secondTitle} />
+                  <section className={underlined}>
                   <Paragraph para={visionText} />
                 </section>
               </section>

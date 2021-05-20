@@ -17,11 +17,9 @@ const FeaturesSection = () => {
     <>
       <Grid justify="center" container>
         <Grid style={{ margin: "5% 0%" }} item lg={12} md={12} xs={12}>
-          <MuiThemeProvider theme={THEME}>
             <Typography variant="h4" color="inherit">
               <span className={underlined}>{heading}</span>
             </Typography>
-          </MuiThemeProvider>
         </Grid>
         <Grid  item lg={3} md={5} xs={8}>
           {featuresDataOne.map((data, index) => {
