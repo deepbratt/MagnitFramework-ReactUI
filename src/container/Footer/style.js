@@ -1,7 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { Colors } from "../../Theme/color.constants";
-import {fontSizes} from "../../Utils/Constants/Font/index"
-const {h3} = fontSizes
 const { Citrine, darkJungleGreen } = Colors;
 
 const FooterStyle = makeStyles((theme) => ({
@@ -19,27 +17,17 @@ const FooterStyle = makeStyles((theme) => ({
     },
     "& > *": {
       color: "white",
+      textDecoration: "none",
     },
   },
   logo: {
     marginBottom: "30px",
   },
-  list: {
-    "& > a, h5": {
-      textDecoration: "none",
-      color: Citrine,
-    },
-    "& > h6": {
-      fontSize: h3.lg,
-      fontWeight: 400,
-    },
-  },
+
   section: {
-    "& > h6": {
-      fontSize: h3.lg,
-      fontWeight: 400,
-    },
-    "& > p": {
+    "& > *": {
+      display: "block",
+      textDecoration: "none",
       color: Citrine,
     },
   },
