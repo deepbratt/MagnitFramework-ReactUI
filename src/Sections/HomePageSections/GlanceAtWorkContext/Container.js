@@ -33,12 +33,10 @@ const Container = ({backColor}) => {
       <Grid container style={{backgroundColor: backColor}} className={root} elevation={0}>
         
       <Grid style={{color: whiteColor}} item lg={12} md={12} xs={12}>
-
-          <MuiThemeProvider theme={THEME}>
-            <Typography  variant="h4">
+            <Typography variant="h4" >
             {title}
             </Typography>
-          </MuiThemeProvider>
+
           </Grid>
         <Grid item className={cardSec}>
           <Card className={card}>
@@ -47,11 +45,10 @@ const Container = ({backColor}) => {
                 <Grid item className={devSec}>
                   <CustomImage width="250px" src={image1} alt=""/>
                   <Grid item className={cardContent}>
-                <MuiThemeProvider theme={THEME}>
                   <Typography variant="h5" gutterBottom>
                    {subtitleOne}
                   </Typography>
-                </MuiThemeProvider>
+
               </Grid>
                 </Grid>
             
@@ -62,11 +59,9 @@ const Container = ({backColor}) => {
                 <Grid  className={devSec}>
                   <CustomImage width="300px" src={image2} alt=""/>
                   <Grid item className={cardContent}>
-                <MuiThemeProvider theme={THEME}>
                   <Typography variant="h5" gutterBottom>
                   {subtitleTwo}
                   </Typography>
-                </MuiThemeProvider>
               </Grid>
                 </Grid>
 
@@ -77,18 +72,15 @@ const Container = ({backColor}) => {
                 <Grid className={devSec}>
                   <CustomImage width="317px"  src={image3} alt=""/>
                   <Grid item className={cardContent}>
-                <MuiThemeProvider theme={THEME}>
                   <Typography variant="h5" gutterBottom>
                   {subtitleThree}
                   </Typography>
-                </MuiThemeProvider>
               </Grid>
                 </Grid>
             </CardContent>
           </Card>
         </Grid>
         <Grid item lg={12} md={12} xs={12}>
-        <MuiThemeProvider theme={THEME}>
           <CustomButton
             variant="contained"
             size={Breakpoints()}
@@ -98,7 +90,6 @@ const Container = ({backColor}) => {
           >
             {buttonText}
           </CustomButton>
-          </MuiThemeProvider>
         </Grid>
       </Grid>
     </>

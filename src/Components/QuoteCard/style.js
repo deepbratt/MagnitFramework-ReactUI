@@ -17,14 +17,6 @@ const CardStyle = makeStyles((theme) => ({
     flexWrap: "wrap",
     "& > p": {
       margin: "10px",
-      fontSize: "1rem",
-      [theme.breakpoints.down("md")]: {
-        fontSize: "1rem",
-      },
-      [theme.breakpoints.down("sm")]: {
-        fontSize: "0.75rem",
-        lineHeight: "16px",
-      },
     },
   },
   startQuote: {
@@ -50,14 +42,9 @@ const CardStyle = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     textAlign: "left",
-    "& > div > h6": {
-      [theme.breakpoints.down("md")]: {
-        fontSize: "1.5rem",
-      },
-      [theme.breakpoints.down("sm")]: {
-        fontSize: "1rem",
-      },
-    },
+    // "& > div > h6": {
+    
+    // },
   },
   avatar: {},
 }));

@@ -25,11 +25,9 @@ const SolutionsSecondarySection = () => {
             />
           </Grid>
           <Grid item>
-            <MuiThemeProvider theme={THEME}>
               <Typography variant="h5" style={{ color: Tundora }}>
                 {foodTitle}
               </Typography>
-            </MuiThemeProvider>
           </Grid>
         </Grid>
         <Card className={card}>
@@ -42,11 +40,9 @@ const SolutionsSecondarySection = () => {
               />
             </Grid>
             <Grid item>
-              <MuiThemeProvider theme={THEME}>
                 <Typography variant="h5" style={{ color: Tundora }}>
                   {portalTitle}
                 </Typography>
-              </MuiThemeProvider>
             </Grid>
           </CardContent>
         </Card>
@@ -61,11 +57,9 @@ const SolutionsSecondarySection = () => {
               />
             </Grid>
             <Grid item>
-              <MuiThemeProvider theme={THEME}>
                 <Typography variant="h5" style={{ color: Tundora }}>
                   {datingTitle}
                 </Typography>
-              </MuiThemeProvider>
             </Grid>
           </CardContent>
         </Card>
@@ -79,11 +73,9 @@ const SolutionsSecondarySection = () => {
               />
             </Grid>
             <Grid item>
-              <MuiThemeProvider theme={THEME}>
                 <Typography variant="h5" style={{ color: Tundora }}>
                   {fitnessTitle}
                 </Typography>
-              </MuiThemeProvider>
             </Grid>
           </CardContent>
         </Card>

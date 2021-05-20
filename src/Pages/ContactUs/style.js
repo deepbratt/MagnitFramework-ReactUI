@@ -9,6 +9,11 @@ export const ContactUsStyles = makeStyles((theme) => ({
     backgroundBlendMode: "multiply, normal",
     borderTopLeftRadius: "5px",
     borderBottomLeftRadius: "5px",
+    [theme.breakpoints.down("md")]: {
+      borderTopLeftRadius: "5px",
+      borderTopRightRadius: "5px",
+      borderBottomLeftRadius: "0px",
+    },
   },
   imageContainer: {
     backgroundColor: "white",
@@ -50,9 +55,17 @@ export const ContactUsStyles = makeStyles((theme) => ({
       maxWidth: "36px",
       margin: "10px 0",
     },
+    [theme.breakpoints.down("sm")]: {
+      alignItems: "center",
+      alignContent: "center",
+    },
   },
   factCard: {
     display: "flex",
+  },
+  location: {
+    marginTop: "50px",
+    justifyContent: "space-around",
   },
 }));
 
