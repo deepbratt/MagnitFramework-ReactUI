@@ -15,14 +15,14 @@ theme.typography.h1 = {
 };
 
 theme.typography.h2 = {
-  fontSize: "2.1875rem",
+  fontSize: "2.1875rem", // 35px
   fontWeight: 600,
   lineHeight: "57.05px",
   [theme.breakpoints.down("md")]: {
-    fontSize: "1.75rem",
+    fontSize: "1.875rem", // 30px
   },
   [theme.breakpoints.down("sm")]: {
-    fontSize: "1.25rem",
+    fontSize: "1.625rem", // 26px
     lineHeight: "30px",
   },
 };
@@ -136,14 +136,11 @@ theme.typography.caption = {
 };
 
 theme.typography.button = {
-  fontSize: "1.125rem",
+  fontSize: "1.25rem", // 20px
   fontWeight: 500,
   lineHeight: "29.34px",
   [theme.breakpoints.down("md")]: {
-    fontSize: "1.75rem",
-  },
-  [theme.breakpoints.down("sm")]: {
-    fontSize: "0.75rem",
+    fontSize: "1rem", // 16px
   },
 };
 
