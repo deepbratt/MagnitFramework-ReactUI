@@ -17,10 +17,10 @@ export const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   card: {
-    width: "24%",
-    height: "360px",
+    // width: "24%",
+    // height: "360px",
     display: "flex",
-    margin: "4px",
+    margin: "21px",
     flexDirection: "column",
     border: `solid 1px ${whiteColor}`,
     alignItems: "center",
@@ -32,14 +32,14 @@ export const useStyles = makeStyles((theme) => ({
       transition: "all .25s linear",
     },
     cursor: "pointer",
-    [breakpoints.down("md")]: {
-      width: "40%",
-      height: "fit-content",
-    },
-    [breakpoints.down("sm")]: {
-      width: "70%",
-      height: "fit-content",
-    },
+    // [breakpoints.down("md")]: {
+    //   width: "40%",
+    //   height: "fit-content",
+    // },
+    // [breakpoints.down("sm")]: {
+    //   width: "70%",
+    //   height: "fit-content",
+    // },
   },
   devSub: {
     height: "120px",

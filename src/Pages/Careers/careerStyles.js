@@ -11,7 +11,8 @@ export const useStyles = makeStyles((theme) => ({
     margin: "0px",
     backgroundColor: skyBlue,
     padding: "50px 0px",
-    position: "relative"
+    position: "relative",
+    
   },
   cardSec: {
     display: "flex",
@@ -37,7 +38,8 @@ export const useStyles = makeStyles((theme) => ({
     boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)",
     margin: "20px",
     padding:"20px",
-    textAlign:"center"
+    textAlign:"center",
+    borderRadius:"5px"
  
   },
   button: {

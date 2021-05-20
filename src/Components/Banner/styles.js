@@ -49,14 +49,16 @@ const BannerStyles = makeStyles((theme) => ({
     textAlign: "left",
     margin: "50px",
     color: "black",
-    [theme.breakpoints.down("sm")]: {
-      alignItems:"center",
-      textAlign: "center",
-    },
+  
     "& > h1": {
       [theme.breakpoints.down("sm")]: {
         fontSize: lg,
       },
+      
+    },
+    [theme.breakpoints.down("sm")]: {
+      alignItems:"center",
+      textAlign: "center",
     },
   },
 }));
