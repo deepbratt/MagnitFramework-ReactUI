@@ -13,7 +13,7 @@ export const ContactUsStyles = makeStyles((theme) => ({
       borderTopLeftRadius: "5px",
       borderTopRightRadius: "5px",
       borderBottomLeftRadius: "0px",
-    }
+    },
   },
   imageContainer: {
     backgroundColor: "white",
@@ -55,9 +55,17 @@ export const ContactUsStyles = makeStyles((theme) => ({
       maxWidth: "36px",
       margin: "10px 0",
     },
+    [theme.breakpoints.down("sm")]: {
+      alignItems: "center",
+      alignContent: "center",
+    },
   },
   factCard: {
     display: "flex",
+  },
+  location: {
+    marginTop: "50px",
+    justifyContent: "space-around",
   },
 }));
 
