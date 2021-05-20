@@ -71,15 +71,15 @@ const Header = (props) => {
           <Hidden smDown>
             <List className={list}>
               <NavLink activeClassName={active} className={link} to="/home">
-                <MuiThemeProvider theme={THEME}>
+              
                   <ListItem>
-                    <ListItemText primary="Home" className={list} />
+                    <ListItemText primary="HOME" className={list} />
                   </ListItem>
-                </MuiThemeProvider>
+    
               </NavLink>
               {Object.keys(menuItems).map((item, index) => (
                 <div key={index}>
-                  <MuiThemeProvider theme={THEME}>
+           
                     <ListItem style={{ padding: "0" }}>
                       <Button
                         className={list}
@@ -88,7 +88,7 @@ const Header = (props) => {
                         {item} <ExpandMoreIcon />
                       </Button>
                     </ListItem>
-                  </MuiThemeProvider>
+          
                   <StyledMenuItem
                     anchorEl={anchorEl && anchorEl[index]}
                     keepMounted

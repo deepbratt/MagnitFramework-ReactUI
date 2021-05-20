@@ -3,6 +3,7 @@ import { createMuiTheme } from "@material-ui/core/styles";
 const theme = createMuiTheme();
 
 theme.typography.h1 = {
+  fontFamily: "Poppins",
   fontSize: "3.4375rem",
   fontWeight: 600,
   lineHeight: "71.77px",
@@ -15,6 +16,7 @@ theme.typography.h1 = {
 };
 
 theme.typography.h2 = {
+  fontFamily: "Poppins",
   fontSize: "2.1875rem", // 35px
   fontWeight: 600,
   lineHeight: "57.05px",
@@ -28,6 +30,7 @@ theme.typography.h2 = {
 };
 
 theme.typography.h3 = {
+  fontFamily: "Poppins",
   fontSize: "1.5rem",
   fontWeight: 600,
   lineHeight: "39.12px",
@@ -40,6 +43,7 @@ theme.typography.h3 = {
 };
 
 theme.typography.h4 = {
+  fontFamily: "Poppins",
   fontSize: "1.5rem",
   fontWeight: 600,
   lineHeight: "39.12px",
@@ -52,6 +56,7 @@ theme.typography.h4 = {
 };
 
 theme.typography.h5 = {
+  fontFamily: "Poppins",
   fontSize: "1.25rem", // 20px
   fontWeight: 500,
   lineHeight: "30px",
@@ -64,6 +69,7 @@ theme.typography.h5 = {
 };
 
 theme.typography.h6 = {
+  fontFamily: "Poppins",
   fontSize: "1rem",
   fontWeight: 500,
   lineHeight: "29.34px",
@@ -73,6 +79,7 @@ theme.typography.h6 = {
 };
 
 theme.typography.subtitle1 = {
+  fontFamily: "Poppins",
   fontSize: "1.375rem", // 22px
   fontWeight: 500,
   lineHeight: "29.34px",
@@ -85,6 +92,7 @@ theme.typography.subtitle1 = {
 };
 
 theme.typography.subtitle2 = {
+  fontFamily: "Poppins",
   fontSize: "1.25rem", // 20px
   fontWeight: 500,
   lineHeight: "29.34px",
@@ -94,6 +102,7 @@ theme.typography.subtitle2 = {
 };
 
 theme.typography.body1 = {
+  fontFamily: "Poppins",
   fontSize: "1.125rem",
   fontWeight: 500,
   lineHeight: "29.34px",
@@ -106,6 +115,7 @@ theme.typography.body1 = {
 };
 
 theme.typography.body2 = {
+  fontFamily: "Poppins",
   fontSize: "1rem", // 16px
   fontWeight: 300,
   lineHeight: "29.36px",
@@ -117,6 +127,7 @@ theme.typography.body2 = {
 };
 
 theme.typography.caption = {
+  fontFamily: "Poppins",
   fontSize: "1rem", // 16px
   fontWeight: 500,
   lineHeight: "29.34px",
@@ -127,6 +138,7 @@ theme.typography.caption = {
 };
 
 theme.typography.button = {
+  fontFamily: "Poppins",
   fontSize: "1.125rem", // 18px
   fontWeight: 500,
   lineHeight: "32.34px",

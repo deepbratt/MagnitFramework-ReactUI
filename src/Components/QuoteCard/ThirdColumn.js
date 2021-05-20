@@ -19,7 +19,7 @@ const ThirdColumn = ({ cardData }) => {
           <Avatar alt="Remy Sharp" src={col3authImg} className={large} />
         </div>
         <div>
-          <Typography variant="h6">By {col3authName}</Typography>
+          <Typography variant="h5">By {col3authName}</Typography>
           <Rating name="read-only" value={4} readOnly />
         </div>
       </div>

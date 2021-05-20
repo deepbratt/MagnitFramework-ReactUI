@@ -40,7 +40,7 @@ const FeaturesRow = (props) => {
               </Grid>
                 <Grid className={para} item xs={12} md={6} lg={9}>
                   <Typography variant="h5">{text.title}</Typography>
-                  <Typography paragraph={true}>{text.desc}</Typography>
+                  <Typography variant="body2">{text.desc}</Typography>
                 </Grid>
 
             </Grid>
