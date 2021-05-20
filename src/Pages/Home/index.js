@@ -72,7 +72,7 @@ const Home = (props) => {
       <Hidden mdDown>
         {cards &&
           cards.map((data, index) => (
-            <Grid key={index} item xs={12} md={6} lg={4}>
+            <Grid key={index} item xs={12} md={6} lg={4} style={{display:"flex"}}>
               <QuoteCard cardData={data} />
             </Grid>
           ))}
@@ -88,7 +88,7 @@ const Home = (props) => {
      <Hidden mdDown>
        {cards &&
          cards.map((data, index) => (
-           <Grid key={index} item xs={12} md={6} lg={4}>
+           <Grid key={index} item xs={12} md={6} lg={4} style={{display:"flex"}}>
              <QuoteCard cardData={data} />
            </Grid>
          ))}
@@ -104,7 +104,7 @@ const Home = (props) => {
       <Hidden mdDown>
         {cards &&
           cards.map((data, index) => (
-            <Grid key={index} item xs={12} md={6} lg={4}>
+            <Grid key={index} item xs={12} md={6} lg={4} style={{display:"flex"}}>
               <QuoteCard cardData={data} />
             </Grid>
           ))}
