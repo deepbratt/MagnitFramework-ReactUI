@@ -54,18 +54,18 @@ const MyAccordion = () => {
           <AccordionSummary
             expandIcon={
               expanded === "accordion-" + index ? (
-                <img src={Minus} />
+                <img src={Minus} alt="" />
               ) : (
-                <img src={Plus} />
+                <img src={Plus} alt="" />
               )
             }
             aria-controls={item.ariaControl}
             id={item.ariaId}
           >
-            <Typography>{item.summary}</Typography>
+            <Typography variant="caption">{item.summary}</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography>{item.detail}</Typography>
+            <Typography variant="body2">{item.detail}</Typography>
           </AccordionDetails>
         </Accordion>
       ))}

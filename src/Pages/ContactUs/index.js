@@ -35,7 +35,7 @@ const ContactUs = () => {
     Luigi,
   } = Colors;
 
-  const { awardSection, imageContainer, label, section, factCard } =
+  const { awardSection, imageContainer, label, section, factCard, location } =
     ContactUsStyles();
 
   const { experience, team, customers, served, projects, customerRentention } =
@@ -83,13 +83,14 @@ const ContactUs = () => {
                       ))}
                   </Grid>
                   <Grid
-                    style={{ marginTop: "50px" }}
+                   
+                    className={location}
                     container
                     item
                     xs={12}
-                    justify="center"
+                    
                   >
-                    <Grid item xs={12} md={5}>
+                    <Grid item xs={10} md={5}>
                       <div className={section}>
                         <img src={LocationIcon} alt="Location Icon" />
                         <Typography align="left" gutterBottom variant="h5">
@@ -100,7 +101,7 @@ const ContactUs = () => {
                             key={index}
                             align="left"
                             gutterBottom
-                            variant="body2"
+                            variant="caption"
                           >
                             {location}
                           </Typography>
@@ -108,7 +109,7 @@ const ContactUs = () => {
                       </div>
                     </Grid>
 
-                    <Grid item xs={12} md={5}>
+                    <Grid item xs={10} md={5}>
                       <div className={section}>
                         <img src={PhoneIcon} alt="Phone Icon" />
                         <Typography align="left" gutterBottom variant="h5">
@@ -119,7 +120,7 @@ const ContactUs = () => {
                             key={index}
                             align="left"
                             gutterBottom
-                            variant="body2"
+                            variant="caption"
                           >
                             {num}
                           </Typography>
