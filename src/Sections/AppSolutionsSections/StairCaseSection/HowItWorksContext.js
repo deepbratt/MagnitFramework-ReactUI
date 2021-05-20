@@ -19,7 +19,7 @@ const HowItWorksContext = () => {
 
       <Grid container className={root}>
         <Grid item lg={12} xs={12}>
-            <Typography variant="h4" color="inherit">
+            <Typography variant="h2" color="inherit">
               <span className={underlined}>{stairCaseHeading}</span>
             </Typography>
 

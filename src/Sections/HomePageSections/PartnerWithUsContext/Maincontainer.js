@@ -14,7 +14,7 @@ const Container = () => {
       <Grid container>
         <Grid item md={12} xs={12}>
           <Grid className={root} elevation={0}>
-                <Typography variant="h4" color="inherit">
+                <Typography variant="h2" color="inherit">
                   Why Partner <span className={underlined}>with Us?</span>
                 </Typography>
           </Grid>
