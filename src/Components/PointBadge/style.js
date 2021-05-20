@@ -55,16 +55,12 @@ const PointBadgeStyles = makeStyles((theme) => ({
     justifyContent: "center",
     textAlign: "left",
     "& > p": {
-      color: darkSilver,
-      [theme.breakpoints.down("sm")]: {
-        fontSize: "10px",
-      },
+      color:darkSilver,
+  
     },
     "& > h3": {
-      color: Mirage,
-      [theme.breakpoints.down("sm")]: {
-        fontSize: "12px",
-      },
+    color:Mirage,
+ 
     },
   },
   contentRight: {
@@ -73,16 +69,13 @@ const PointBadgeStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     "& > p": {
-      color: darkSilver,
-      [theme.breakpoints.down("sm")]: {
-        fontSize: "10px",
-      },
+
+      color:darkSilver,
+    
     },
     "& > h3": {
-      color: Mirage,
-      [theme.breakpoints.down("sm")]: {
-        fontSize: "12px",
-      },
+      color:Mirage,
+
     },
   },
 }));

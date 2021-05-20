@@ -36,9 +36,9 @@ const useStyles = makeStyles((theme) => ({
         // color: "black",
         "& > h1": {
             marginBottom:".1rem",
-          [theme.breakpoints.down("sm")]: {
-            fontSize: "1.5rem",
-          },
+          // [theme.breakpoints.down("sm")]: {
+          //   // fontSize: "1.5rem",
+          // },
         },
         [breakpoints.down("sm")]: {
             marginTop:"5rem",
@@ -46,13 +46,13 @@ const useStyles = makeStyles((theme) => ({
           },
       },
       cardRoot:{
-        padding:" 0rem 3rem",
+        // padding:" 0rem 3rem",
         [breakpoints.down("sm")]: {
-          padding:'.4rem .8rem',
+          // padding:'.4rem .8rem',
        },
       },
       cardSec: {
-        padding: "0px",
+        // padding: "0px",
         marginTop: "6rem",
         margin: "0px",
         display: "flex",

@@ -10,7 +10,7 @@ export const useStyles = makeStyles((theme) => ({
   root: {
     margin: "0px",
     backgroundColor: skyBlue,
-    padding: "50px 0px 50px 0px",
+    // padding: "50px 0px 50px 0px",
     position: "relative"
   },
   cardSec: {

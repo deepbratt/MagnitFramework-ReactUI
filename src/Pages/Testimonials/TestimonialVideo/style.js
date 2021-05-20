@@ -61,30 +61,22 @@ avatarImg:{
   cardTitle:{
     color:Mirage,
     textAlign:"left",
-    fontSize:"20px",
-    fontWeight:600,
-    [breakpoints.down("sm")]: {
-      fontSize:"16px",
-      
-    },
+    
 },
   cardpara:{
     color:darkSilver,
     textAlign:"left",
-    fontSize:"18px",
-    fontWeight:400,
     lineHeight:"29.34px",
     letterSpacing:".2"
 },
 carddate:{
-    fontSize:"1rem",
+  
     color:darkSilver,
     textAlign:"right",
-    fontWeight:400,
     lineHeight:"24px",
     letterSpacing:".2",
     [breakpoints.down("sm")]: {
-      fontSize:".8rem",
+   
       marginBottom:".5rem"
     },
 },

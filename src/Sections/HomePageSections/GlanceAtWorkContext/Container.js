@@ -33,8 +33,6 @@ const Container = ({backColor}) => {
       <Grid container style={{backgroundColor: backColor}} className={root} elevation={0}>
         
       <Grid style={{color: whiteColor}} item lg={12} md={12} xs={12}>
-
-
             <Typography variant="h4" >
             {title}
             </Typography>
@@ -74,7 +72,7 @@ const Container = ({backColor}) => {
                 <Grid className={devSec}>
                   <CustomImage width="317px"  src={image3} alt=""/>
                   <Grid item className={cardContent}>
-                  <Typography variant="h5"gutterBottom>
+                  <Typography variant="h5" gutterBottom>
                   {subtitleThree}
                   </Typography>
               </Grid>
