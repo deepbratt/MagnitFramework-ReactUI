@@ -18,7 +18,7 @@ export const missionStyles = makeStyles((theme) => ({
   },
   card: {
     zIndex: 1,
-    height: "300px",
+    height: "350px",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -26,20 +26,30 @@ export const missionStyles = makeStyles((theme) => ({
     transition: "all .25s linear",
     borderRadius: "5px",
     boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
-    margin: "20px",
+    marginLeft: "20px",
     cursor: "pointer",
+    [breakpoints.down("md")]: {
+      width: "70%",
+      height: "450px",
+      marginLeft: "0px",
+    },
   },
   card2: {
     zIndex: 1,
-    height: "300px",
+    height: "350px",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
     transition: "all .25s linear",
     borderRadius: "5px",
     boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
-    margin: "20px",
+    marginRight: "20px",
     cursor: "pointer",
+    [breakpoints.down("md")]: {
+      width: "70%",
+      height: "450px",
+      marginRight: "0px",
+    },
   },
   Icon: {
     width: "70px",
@@ -72,10 +82,10 @@ export const missionStyles = makeStyles((theme) => ({
         right: "35%",
       },
       [breakpoints.down("sm")]: {
-        right: "36%",
+        right: "200px",
       },
-      [breakpoints.down("sm")]: {
-        right: "32%",
+      [breakpoints.down("xs")]: {
+        right: "70px",
       },
     },
   },

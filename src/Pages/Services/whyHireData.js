@@ -2,7 +2,7 @@ import {
   VettedResourceIcon,
   LanguageIcon,
   RiskFreeIcon,
-  QualityAssuranceIcon,
+  Quality,
   LifeTimeSupportIcon,
   DataSecuityIcon,
   FlexibleBillingIcon,
@@ -31,42 +31,28 @@ export const whyHireData = [
     icon: VettedResourceIcon,
     title: "Vetted Resource",
     desc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+     "Our developers harbor industry-specific skills and have been added to our talent pool after a series of security checks and verification",
   },
   {
     color: orangeRed,
     icon: LanguageIcon,
     title: "Speaks your Language",
     desc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-  },
-  {
-    color: lightblue,
-    icon: RiskFreeIcon,
-    title: "Risk-Free Trial",
-    desc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-  },
-  {
-    color: pictonBlue,
-    icon: QualityAssuranceIcon,
-    title: "Assurance of Quality",
-    desc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-  },
-  {
-    color: yellowOrange,
-    icon: LifeTimeSupportIcon,
-    title: "Life-Time Support",
-    desc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      "We create a deep understanding of your market and target audience before creating a solution that echoes your business",
   },
   {
     color: heliotrope,
     icon: DataSecuityIcon,
     title: "Data Security",
     desc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      "Our client’s security is our top priority. Any confidential information shared with us is protected with latest security measures, tools and regulations.",
+  },
+  {
+    color: lightblue,
+    icon: RiskFreeIcon,
+    title: "Risk-Free Trial",
+    desc:
+      "We open doors for you to have a trial of the service we offer. You can opt of the service with us based on your experience.",
   },
   {
     color: blueGreen,
@@ -74,27 +60,43 @@ export const whyHireData = [
     
     title: "Flexible Billing Models",
     desc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-  },
-  {
-    color: skyblue,
-    icon: AlwaysOnTimeIcon,
-    title: "Always On Time",
-    desc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-  },
-  {
-    color: pastelOrange,
-    icon: TransparencyIcon,
-    title: "Transparency",
-    desc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      "We keep your needs in mind. Our services are cost-effective, quoting you for only the services you requested as you go along the process with complete transparency.",
   },
   {
     color: hanBlue,
     icon: ConsultationIcon,
     title: "Consultative Approach",
     desc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      "We dedicate ourselves to understanding your needs and problems before we provide solutions unique to your business that work flawlessly every time, for every user, in myriad situations.",
   },
+  {
+    color: pictonBlue,
+    icon: Quality,
+    title: "Quality",
+    desc:
+      "Strict Quality control is the pillar of our customized solutions. An independent team makes sure that there is no compromise on Quality solutions. Our aim is to be the best through requirement to delivery.",
+  },
+  {
+    color: yellowOrange,
+    icon: LifeTimeSupportIcon,
+    title: "Life-Time Support",
+    desc:
+      "We do not limit ourselves to just the project. Our team goes beyond the call to fix bugs and issues in the code to ensure customer satisfaction.",
+  },
+  
+  {
+    color: pastelOrange,
+    icon: TransparencyIcon,
+    title: "Transparency",
+    desc:
+      "Our customers value fair and transparent pricing, so that's what we offer. We promise we do not have any commercial incentive while choosing a technology or approach, merely the customer’s need at heart of our projects.",
+  },
+  // {
+  //   color: skyblue,
+  //   icon: AlwaysOnTimeIcon,
+  //   title: "Always On Time",
+  //   desc:
+  //     "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+  // },
+ 
 ];

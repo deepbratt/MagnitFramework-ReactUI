@@ -8,6 +8,7 @@ import Box from "@material-ui/core/Box";
 import OptionTabStyles from "./style";
 import { TabText } from "./TabText";
 import Breakpoints from "../../Theme/theme.breakpoints";
+import {FixedCostHiring, FullTimeHiring, PayAsYou} from "../../Utils/Constants/Language/en/tabText";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -65,13 +66,13 @@ export default function OptionsTab() {
         <Tab className={tab} label="Fixed Cost Hiring" {...a11yProps(2)} />
       </Tabs>
       <TabPanel className={tabPanel} value={value} index={0}>
-        <TabText />
+        <TabText data={FullTimeHiring} />
       </TabPanel>
       <TabPanel className={tabPanel} value={value} index={1}>
-      Pay as you Go Hiring
+      <TabText data={PayAsYou} />
       </TabPanel>
       <TabPanel value={value} index={2}>
-      Fixed Cost Hiring
+      <TabText data={FixedCostHiring} />
       </TabPanel>
     </div>
   );

@@ -80,7 +80,7 @@ const Header = (props) => {
               {Object.keys(menuItems).map((item, index) => (
                 <div key={index}>
                   <MuiThemeProvider theme={THEME}>
-                    <ListItem>
+                    <ListItem style={{padding:"0"}}>
                       <Button
                         className={list}
                         onClick={(e) => handleClick(index, e)}
@@ -98,6 +98,7 @@ const Header = (props) => {
                     className={listItem}
                     anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
                     transformOrigin={{ vertical: "top", horizontal: "center" }}
+                    disableScrollLock
                   >
                     {menuItems[item].map((menuitems, menuindex) => (
                       <MenuItem
@@ -120,7 +121,7 @@ const Header = (props) => {
               ))}
               <ListItem>
                 <NavLink
-                  to="contactUS"
+                  to="request-a-quote"
                   activeClassName={active}
                   className={link}
                 >
@@ -128,8 +129,9 @@ const Header = (props) => {
                     variant="contained"
                     size={Breakpoints()}
                     onClick={navigated}
+
                   >
-                    Contact Us
+                    Request A Quote
                   </CustomButton>
                 </NavLink>
               </ListItem>

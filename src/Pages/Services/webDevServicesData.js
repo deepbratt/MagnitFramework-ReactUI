@@ -23,41 +23,41 @@ export const webDevServicesData = [
     icon: CMSIcon,
     title: "CMS Development",
     desc:
-      "We offer you a comprehensive range of Content Management System (CMS) development services best suited to your specific business needs.",
+      "We tailor a unique, user-friendly, intuitive front-end content Management system framework that ‘looks’ and ‘feels’ right to your audience while suiting your business needs.",
   },
   {
     color: lightblue,
     icon: EcommerceIcon,
     title: "Ecommerce Development",
     desc:
-      "We offer customized, easy to integrate, and dynamic online shopping store solution to help you get the best out of your online business.",
+      "Boom your retail store with end-to-end e-commerce service that is designed specifically for your target audience and increases traffic in your store. ",
   },
   {
     color: Orchid,
     icon: WebAppIcon,
     title: "Custom Web App Development",
     desc:
-      "We offer customized, easy to integrate, and dynamic online shopping store solution to help you get the best out of your online business.",
+      "Create a dynamic online presence for your business with personalized robust, agile and user-centric web applications that are as easy to integrate as they are to use.",
   },
   {
     color: pastelOrange,
     icon: APIDevIcon,
     title: "API Development",
     desc:
-      "We offer customized, easy to integrate, and dynamic online shopping store solution to help you get the best out of your online business.",
+      "Be it client side or server side, our experienced team of engineers develop bleeding edge API designs that not only make it simpler to navigate through the server or the hosting website but also make application user friendly.",
   },
   {
     color: persianGreen,
     icon: MigrationIcon,
     title: "Migration & Upgradation",
     desc:
-      "We offer customized, easy to integrate, and dynamic online shopping store solution to help you get the best out of your online business.",
+      " We help to upgrade existing websites and applications to advanced versions without downtime or delay so that your business can run smoothly without loosing any traffic.",
   },
   {
     color: yellowOrange,
     icon: IssuesIcon,
     title: "Issues & Bug Fixes",
     desc:
-      "We offer customized, easy to integrate, and dynamic online shopping store solution to help you get the best out of your online business.",
+      "To optimize performance of your web application we resolve issues and bugs in your source code in a cost-effective way.",
   },
 ];

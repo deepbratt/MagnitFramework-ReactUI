@@ -2,39 +2,52 @@ import * as WebDesignAnimationData from "../../../Components/certificationList/w
 import * as GraphicDesignAnimationData from "../../../Components/certificationList/graphicDesignAnimation.json";
 import * as MarketingAnimationData from "../../../Components/certificationList/marketingAnimation.json";
 import * as CulturallyAlignedAnimationData from "../../../Components/certificationList/culturallyAlignedAnimation.json";
-
-export const reviewSliderText = {
+import Avatar7 from "../../../assets/services/Avatar7.png";
+export const reviewSliderText = [{
+  id:1,
   title: "Web Design",
-  text: `This is the third project I have done with it the company, with many more to come in the and years ahead. Thank you for all you did.” \n
-    This is the third project I have done with it the company, with many more to come in the and years ahead. Thank you for all you did.”`,
-  author: "Aaron Doe",
-};
+  text: `They provide efficient, time-bound prototypes keeping all KPIs in mind. We recommend them to anyone looking to make an online footprint.
+  ”`,
+  authName: "Maria Ann (SwiftDealz)",
+  authImg: Avatar7,
+},
+{
+  id:2,
+  title: "Web Design",
+  text: `They offer 24/7 support with a smile.They gel up easily with our current team, working for a collaborative solution rather than a compromise.
+  ”`,
+  authName: " Akriti Mehra (Nailit)",
+  authImg: Avatar7,
+},
+{
+  id:3,
+  title: "Web Design",
+  text: `This is an amazing company. They did great CMS customization for us.They are very accommodating with changes and receptive to newer ideas. 
+  ”`,
+  authName: "Adam Smith (MyNews)",
+  authImg: Avatar7,
+}
+];
 
 export const trainingAndCertificationText = [
   {
-    title: "Web Design",
+    title: "Web Development",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip",
+      "We provide training in web development in various programming languages followed by Internships to put your knowledge to work.",
     animationData: WebDesignAnimationData,
   },
   {
     title: "Graphic Design",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip",
+      "Challenge your creative limits and think outside the box with our Graphic design training program.",
     animationData: GraphicDesignAnimationData,
   },
   {
-    title: "Social Media Marketing",
+    title: "Digital Marketing",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip",
+      "Learn to create professional first-impression with eye-catching material through a Digital Marketing campaign in our training programs.",
     animationData: MarketingAnimationData,
-  },
-  {
-    title: "Culturally Aligned",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip",
-    animationData: CulturallyAlignedAnimationData,
-  },
+  }
 ];
 
 export const footerText = {
@@ -47,14 +60,16 @@ export const footerText = {
     ],
   },
   addressSection: {
-    title: "INDIA OFFICE",
-    address: ["1690 FM 423 Suite 9205,", "Frisco,", "Texas 75033 – USA"],
+    title: "HEAD OFFICE",
+    address:
+      ["1690 FM 423 Suite 9205,  Frisco, Texas 75033 – USA"],
+
   },
   copyrights: "© 2021 The Magnit, All Rights Reserved.",
   contactUs: "CONNECT WITH US",
   navigation: {
     title: "Company",
-    links: ["Service", "Solutions", "FAQ'S", "Case Study", "Blog", "Career"],
+    links: ["Service", "Solutions", "FAQ'S", "Career"],
   },
   lifeTimeSupport: "Life-Time Support",
   terms: "Terms of Service",

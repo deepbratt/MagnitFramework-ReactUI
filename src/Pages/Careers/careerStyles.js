@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 import { Colors } from "../../Theme/color.constants";
 
-const { whiteColor, Harlequin, blackColor, paletteBlue,skyBlue } = Colors;
+const { whiteColor, Harlequin, blackColor, paletteBlue,skyBlue, DoveGray } = Colors;
 
 const breakpoints = createBreakpoints({});
 
@@ -26,25 +26,19 @@ export const useStyles = makeStyles((theme) => ({
     paddingTop: "20px",
   },
   card: {
-    width: "27%",
-    height: "340px",
+    background:"white",
+    height: "auto",
     display: "flex",
     zIndex: 1,
     flexDirection: "column",
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent:"center", 
     transition: "all .25s linear",
     boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)",
     margin: "20px",
-    [breakpoints.only("md")]: {
-      width: "30%",
-    },
-    [breakpoints.only("sm")]: {
-      width: "40%",
-    },
-    [breakpoints.down("xs")]: {
-      width: "70%",
-    },
+    padding:"20px",
+    textAlign:"center"
+ 
   },
   button: {
     borderRadius: "none",
@@ -72,6 +66,17 @@ export const useStyles = makeStyles((theme) => ({
     zIndex: 0,
     width: "300px"
   },
-  
+  remoteArea:
+  { color: DoveGray, 
+    paddingTop: "10px",
+  display:"flex",
+  alignItems:"baseline",
+justifyContent:"center"
+},
+  bottomStyle:{ 
+    display:"flex",
+  alignItems:"flex-end" ,
+  justifyContent:"center"
+ }
 
 }));
