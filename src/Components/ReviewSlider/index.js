@@ -3,25 +3,16 @@ import ReviewCard from "./ReviewCard";
 import ReviewSliderStyles from "./style";
 import prev from "../../assets/services/prev.png";
 import next from "../../assets/services/next.png";
-import Avatar7 from "../../assets/services/Avatar7.png";
-import { Paper } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import { reviewSliderText } from "../../Utils/Constants/Language";
 import CustomImage from "../CustomImage";
-const { title, text, author } = reviewSliderText;
-const card = {
-  title: title,
-  text: text,
-  authName: author,
-  authImg: Avatar7,
-};
 
-const slideArr = [
-  <ReviewCard cardData={card} />,
-  <ReviewCard cardData={card} />,
-  <ReviewCard cardData={card} />,
-];
+const slideArr = reviewSliderText.map((a) => {
+  return <ReviewCard cardData={a} />;
+});
 
-const ReviewSlider = ({ slides, showArrows }) => {
+const ReviewSlider = ({ slides, showArrows, showDots }) => {
+  const visible = !showDots ? "hidden" : "visible";
   const indicatorStyles = {
     background: "rgba(98, 173, 244, 1)",
     width: 16,
@@ -29,6 +20,7 @@ const ReviewSlider = ({ slides, showArrows }) => {
     borderRadius: 25,
     display: "inline-block",
     margin: "0px 8px",
+    visibility: visible,
   };
   const { nextBtn, prevBtn } = ReviewSliderStyles();
   const customDots = (onClickHandler, isSelected, index, label) => {
@@ -46,6 +38,7 @@ const ReviewSlider = ({ slides, showArrows }) => {
         />
       );
     }
+
     return (
       <li
         style={indicatorStyles}
@@ -105,7 +98,9 @@ const ReviewSlider = ({ slides, showArrows }) => {
     >
       {slides.map((slide, i) => {
         return (
-          <Paper
+          <Grid
+            container
+            justify="center"
             key={i}
             elevation={0}
             style={{
@@ -116,7 +111,7 @@ const ReviewSlider = ({ slides, showArrows }) => {
             }}
           >
             {slide}
-          </Paper>
+          </Grid>
         );
       })}
     </Carousel>
@@ -126,6 +121,7 @@ const ReviewSlider = ({ slides, showArrows }) => {
 ReviewSlider.defaultProps = {
   slides: slideArr,
   showArrows: true,
+  showDots: true,
 };
 
 export default ReviewSlider;

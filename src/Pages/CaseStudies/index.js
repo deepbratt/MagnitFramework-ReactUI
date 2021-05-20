@@ -1,15 +1,11 @@
 import { Grid, Hidden, Typography } from "@material-ui/core";
 import React, { createRef, useEffect, useRef } from "react";
 import { withRouter } from "react-router";
-import Banner from "../../Components/Banner";
+// import Banner from "../../Components/Banner";
 import Section from "../Section";
-import InterActiveSection from "./InterActiveSection/InterActiveSection";
-import useStyles from "./InterActiveSection/useStyles";
+// import useStyles from "./InterActiveSection/useStyles";
 import businessPeople from "../../assets/CaseStudies/businessPeople.png";
-import AboutMainSection from "../AboutUs/MainComponent/AboutMainSection";
 import { caseStudies } from "../../Utils/Constants/Language";
-import ResponsiveInterActiveSection from "./ResponsiveInterActiveSection/ResponsiveInterActiveSection";
-import FaqNonInteractive from "./FaqNonInteractive/FaqNonInteractive";
 import Image1 from "../../assets/images/awardAccredationSection/image 2.png";
 import Image2 from "../../assets/images/awardAccredationSection/image 3.png";
 import Image3 from "../../assets/images/awardAccredationSection/image 4.png";
@@ -17,10 +13,14 @@ import Image4 from "../../assets/images/awardAccredationSection/image 5.png";
 import Image5 from "../../assets/images/awardAccredationSection/image 6.png";
 import CustomImage from "../../Components/CustomImage";
 import {Colors} from '../../Theme/color.constants'
+import AboutMainSection from "../../Sections/MainComponent/AboutMainSection";
+import ResponsiveInterActiveSection from '../../Sections/ResponsiveInterActiveSection/ResponsiveInterActiveSection'
+import InterActiveSection from '../../Sections/InterActiveSection/InterActiveSection'
+import FaqNonInteractive from '../../Sections/FaqNonInteractive/FaqNonInteractive'
 
 
 const CaseStudies = () => {
-  const classes = useStyles();
+  // const classes = useStyles();
   const AwardSectionImages = [Image1, Image2, Image3, Image4, Image5];
   const colors =Colors
   const caseStudiesText = caseStudies

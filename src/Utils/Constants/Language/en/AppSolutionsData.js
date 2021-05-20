@@ -33,6 +33,7 @@ const {
   registrationIcon,
   Time,
   tutorialIcon,
+  dataIcon,
   browsingIcon,
   womanIcon,
   videoIcon,
@@ -43,7 +44,7 @@ const {
 
 export const bannerHeading = "App Solution";
 export const bannerParagraph =
-  "Fitness apps lets instructors reach their clients over apps and instruct them, set regimes or routines and target, track progress and provide various tips. Additionally with social media implemented in it,users can post their activities and achievements.";
+  "We create functional modern and agile mobile apps catering to your needs be it to improve business efficiency, revenue or customer loyalty. Combining technical expertise with a passion for great user experience sets us apart from everyone else.";
 export const bannerButtonText = "Get Started";
 export const bannerImage = image;
 export const bannerPattern = BannerPattern;
@@ -56,25 +57,25 @@ export const featuresDataOne = [
     icon: registrationIcon,
     color: lightOrange,
     title: "Easy user registration and login",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+    desc: "We make registration and login easy for your audience so they are tempted to uninstall your app even before they start. ",
   },
   {
     color: Orchid,
-    icon: Time,
-    title: "Set routines or regimes",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+    icon: womanIcon,
+    title: "Profile and settings",
+    desc: "We make it easy for your audience to customize the app the way they want it. Giving them a sense of ownership reduces their willingness to shift to your competitors.",
   },
   {
     color: darkBlue,
     icon: tutorialIcon,
-    title: "Tutorials",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+    title: "Flexibility",
+    desc: "We make sure that your app is flexible enough to adapt with different screen sizes, resolutions and operating systems.",
   },
   {
     color: pastelBlue,
     icon: browsingIcon,
     title: "Guest browsing",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+    desc: "Users don’t like to give numbers and emails to apps for the fear of spam. We easily create panels for guest browsing that increase traffic to your app. ",
   },
 ];
 
@@ -83,26 +84,26 @@ export const featuresDataTwo = [
     image: image2,
     icon: womanIcon,
     color: seaGreen,
-    title: "Profiles and settings",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+    title: "User friendly admin",
+    desc: "We create out of the box admin panel which increases productivity, gives insight into data, and help us catch bugs.",
   },
   {
     color: peacockGreen,
     icon: Time,
-    title: "Date view or challenges view",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+    title: "Push Notifications",
+    desc: "We set up push notifications in your app. They are relevant, personalized and aimed solely at the particular user and likely to be of interest to them",
   },
   {
     color: darkBlue,
     icon: tutorialIcon,
     title: "Update progresses",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+    desc: "We keep track of the user feedback and create updates accordingly. This helps to keep your app fresh and give the user more of what they want.",
   },
   {
     color: lightOrange,
     icon: browsingIcon,
-    title: "Track users and progress",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+    title: "Track users",
+    desc: " We map the journey of the users through your app to understand the key checkpoints and make improvements wherever necessary. ",
   },
 ];
 
@@ -112,25 +113,25 @@ export const featuresDataThree = [
     icon: videoIcon,
     color: yellowOrange,
     title: "Realtime video instructions",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+    desc: "If required we create panels to give a walkthrough of your services in your app to your audience",
   },
   {
     color: pastelBlue,
     icon: counterIcon,
-    title: "Step counter",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+    title: "Simplicity",
+    desc: "We provide Clear, uncluttered screens with obvious leads to the next step which enhance user experience.",
   },
   {
     color: seaGreen,
     icon: calculatorIcon,
-    title: "BMI Calculator",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+    title: "Speed",
+    desc: "People have short attention span. We make sure that your customers access their information quickly and easily.",
   },
   {
     color: darkBlue,
-    icon: caloriesIcon,
-    title: "Calorie information and history",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+    icon: dataIcon,
+    title: "Security",
+    desc: "With many applications storing personal and sensitive information or credit and debit card details, we make it a priority to provide absolute security to user data.",
   },
 ];
 export const factsHeading = "Facts and Prospects of Fitness or Training Industry"
@@ -156,42 +157,42 @@ export const StairCaseData = [{
   img: vector1,
   color: lochmara,
   margin: "130px",
-  title: "Step 1",
-  desc: "Send us your business requirements"
+  title: "Ideate",
+  desc: "We understand your business and goals"
 },
 {
   img: vector2,
   color: cerulean,
   margin: "100px",
-  title: "Step 2",
-  desc: "We will analyse your requirement and get back to you with cost &time line of implementation"
+  title: "Journey Mapping",
+  desc: "We do a deep analysis of your industry and target market"
 },
 {
   img: vector3,
   color: robbinEggBlue,
   margin: "70px",
-  title: "Step 3",
-  desc: "Once project is confirmed, we will start working on customising our solution to meet your requirments"
+  title: "Preparing Solutions",
+  desc: "Based on the goals and research, we tailor solutions that cater to your needs"
 },
 {
   img: vector4,
   color: caribbeanGreen,
   margin: "50px",
-  title: "Step 4",
-  desc: "You test application and confirm and we are ready for deployment"
+  title: "Wireframing",
+  desc: " We secure front and back end, full stack development, delivering working software in relevant intervals."
 },
 { img: vector1,
   margin: "5px",
   color: pastelGreen,
-  title: "Step 5",
-  desc: "We sign off the project and your Life Time Support starts!"
+  title: "Launch",
+  desc: " Once all tests are done, your app goes live with a life-time support from our end."
 }
 ]
 
 // Admin Section
 
-export const adminHeading = "User Friendly Admin"
-export const paragraph = "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+export const adminHeading = "User free admin panel"
+export const paragraph = "The most important aspect of app development is usually not taken seriously by app developers. Making a user free admin panel is what sets us apart from our competitors.We make a state-of-art admin panel that increases productivity, gives insight into data, and helps us catch bugs. On the basis of your needs, we can turn the admin panel into a dashboard that allows manipulation of data within the user interface of the site."
 export const adminImg = Admin
 
 export default { featuresDataOne };

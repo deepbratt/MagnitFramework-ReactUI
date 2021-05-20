@@ -5,21 +5,16 @@ const FormStyles = makeStyles((theme) => ({
     textAlign: "left",
     margin: "30px",
   },
-  label: {
-    fontSize: "1.125rem",
-    color: "white",
-    [theme.breakpoints.down("md")]: {
-      fontSize: "1rem",
-    },
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "0.75rem",
-    },
-  },
   button: {
+    borderRadius: "5px",
+  },
+  privacyPolicy: {
     display: "flex",
-    justifyContent: "center",
-    alignContent: "center",
-    width: "100%",
+    marginBottom: "15px",
+    "& > *": {
+      color: "grey",
+      marginRight: "5px",
+    },
   },
 }));
 

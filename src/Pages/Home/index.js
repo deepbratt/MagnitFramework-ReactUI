@@ -1,12 +1,12 @@
 import Grid from "@material-ui/core/Grid";
 import { connect } from "react-redux";
-import Services from "../Section/Header/ServicesContext/Services";
+import Services from "../../Sections/HomePageSections/ServicesContext/Services";
 import Slide from "../../Components/Slider/Container";
-import Solutions from "../SolutionsContext/Solutions";
-import PartnerContext from "../PartnerWithUsContext/Maincontainer";
-import GlanceSection from "../GlanceAtWorkContext/Container";
+import Solutions from "../../Sections/HomePageSections/SolutionsContext/Solutions";
+import PartnerContext from "../../Sections/HomePageSections/PartnerWithUsContext/Maincontainer";
+import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
 import React, { useState } from "react";
-import ContactUsAndFQA from "../ContactUsAndFQA";
+import ContactUsAndFQA from "../../Sections/HomePageSections/ContactUsAndFQA";
 import { Typography, Hidden } from "@material-ui/core";
 import Section from "../Section";
 import Image1 from "../../assets/images/awardAccredationSection/image 2.png";
@@ -29,11 +29,14 @@ import {
 // import ReviewSlider from "../../Components/ReviewSlider";
 import { trainingAndCertificationText as TCData } from "../../Utils/Constants/Language";
 import FirstColumn from "../../Components/QuoteCard/FirstColumn";
+import SecondColumn from "../../Components/QuoteCard/SecondColumn";
+import ThirdColumn from "../../Components/QuoteCard/ThirdColumn";
 import CertificationList from "../../Components/certificationList";
 import HomeStyles from "./style";
 import QuoteCard from "../../Components/QuoteCard";
 import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
+import ReviewSlider from "../../Components/ReviewSlider";
 
 export const AwardSectionImages = [Image1, Image2, Image3, Image4, Image5];
 
@@ -63,6 +66,75 @@ const Home = (props) => {
   //   <CardSlyder cardData={cards} />,
   //   <CardSlyder cardData={cards} />,
   // ];
+
+  const WhyUsSlides = [
+    <>
+      <Hidden mdDown>
+        {cards &&
+          cards.map((data, index) => (
+            <Grid
+              key={index}
+              item
+              xs={12}
+              md={6}
+              lg={4}
+              style={{ display: "flex" }}
+            >
+              <QuoteCard cardData={data} />
+            </Grid>
+          ))}
+      </Hidden>
+      <Hidden lgUp>
+        <Grid item>
+          <SecondColumn />
+        </Grid>
+      </Hidden>
+    </>,
+    <>
+      <Hidden mdDown>
+        {cards &&
+          cards.map((data, index) => (
+            <Grid
+              key={index}
+              item
+              xs={12}
+              md={6}
+              lg={4}
+              style={{ display: "flex" }}
+            >
+              <QuoteCard cardData={data} />
+            </Grid>
+          ))}
+      </Hidden>
+      <Hidden lgUp>
+        <Grid item>
+          <ThirdColumn />
+        </Grid>
+      </Hidden>
+    </>,
+    <>
+      <Hidden mdDown>
+        {cards &&
+          cards.map((data, index) => (
+            <Grid
+              key={index}
+              item
+              xs={12}
+              md={6}
+              lg={4}
+              style={{ display: "flex" }}
+            >
+              <QuoteCard cardData={data} />
+            </Grid>
+          ))}
+      </Hidden>
+      <Hidden lgUp>
+        <Grid item>
+          <FirstColumn />
+        </Grid>
+      </Hidden>
+    </>,
+  ];
 
   function submitForm() {
     setIsSubmitted(true);
@@ -121,21 +193,11 @@ const Home = (props) => {
         startQuote={startQuote}
         endQuote={endQuote}
       >
-        <Grid style={{ position: "sticky" }} container direction="row">
-          <Hidden smDown>
-            {cards &&
-              cards.map((data, index) => (
-                <Grid key={index} item xs={12} md={6} lg={4}>
-                  <QuoteCard cardData={data} />
-                </Grid>
-              ))}
-          </Hidden>
-          <Hidden mdUp>
-            <Grid item>
-              <FirstColumn />
-            </Grid>
-          </Hidden>
-        </Grid>
+        <ReviewSlider
+          showArrows={false}
+          showDots={false}
+          slides={WhyUsSlides}
+        />
 
         <CustomButton>See More</CustomButton>
         {/* <ReviewSlider slides={cardArr} /> */}

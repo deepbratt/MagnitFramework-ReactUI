@@ -2,14 +2,16 @@ import React from "react";
 import { Grid, Typography,Button } from "@material-ui/core";
 import vector from "../../assets/services/vector.png";
 import OptionTabStyles  from "./style";
-import dataText, { FullTimeHiring, HiringOption } from './constant';
-export const TabText = () => {
+import CustomButton from "../CustomButton";
+// import dataText, { FullTimeHiring, HiringOption } from './constant';
+export const TabText = ({data}) => {
+    const { title, desc,dataText } = data
     const { detail,bulletText,textDiv,trialBtn, } = OptionTabStyles();
     return (
        <Grid style={{textAlign:"left"}}>
-            <Typography variant="h6"  >{FullTimeHiring}</Typography>
+            <Typography   >{title}</Typography>
         <Typography className={detail} color="initial">
-        {HiringOption}
+        {desc}
 </Typography>
    
     {dataText.map(a=>{
@@ -19,10 +21,10 @@ export const TabText = () => {
          <Grid xs={11}>
          <Typography className={bulletText} >{a.text}</Typography></Grid></Grid>);
     })}
-   <Button color="primary" variant="contained" className={trialBtn} >
+   <CustomButton color="primary" variant="contained" className={trialBtn} >
         <Typography>Get a Risk Free Trial
 (Start your trial in 24 hours!)</Typography>
-    </Button>
+    </CustomButton>
         </Grid>
     )
 }

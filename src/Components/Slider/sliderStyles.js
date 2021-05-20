@@ -71,6 +71,10 @@ export const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
   },
+  link: {
+    textDecoration: "none",
+    color: whiteColor
+  },
   vector: {
    zIndex: 1,
     height: "auto",
@@ -115,7 +119,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   sec: {
     position: "relative",
-    width: "100vw",
+    width: "100%",
     padding:"24px"
   },
   gridImage:{ 
@@ -124,11 +128,14 @@ export const useStyles = makeStyles((theme) => ({
   },
   gridText:{
     textAlign: "left",
-    // padding: "16px",
     zIndex: 1,
+    [breakpoints.down("sm")]: {
+      textAlign: "center",
+    },
   },
   slide: {
     position: "relative",
+    width: "100%",
     "& .carousel .slide img": {
       width: "100%",
     },
@@ -137,7 +144,15 @@ export const useStyles = makeStyles((theme) => ({
     position: "absolute",
     zIndex: 0,
     width:"100%",
-    height:"auto"
+    height:"auto",
+    left:0,
   },
+  listItem:{
+
+    [breakpoints.down("sm")]: {
+      textAlign: "center",
+      display: "block"
+    },
+  }
 
 }));

@@ -1,6 +1,6 @@
 import { Grid } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import FooterStyle from "./style";
 import IconFB from "../../assets/images/icon-fb.png";
 import IconTwitter from "../../assets/images/icon-twitter.png";
@@ -10,15 +10,7 @@ import { footerText } from "../../Utils/Constants/Language";
 import CustomImage from "../../Components/CustomImage";
 
 const Footer = () => {
-  const {
-    root,
-    logo,
-    list,
-    section,
-    policy,
-    contact,
-    sectionBorder,
-  } = FooterStyle();
+  const { root, logo, section, policy, contact, sectionBorder } = FooterStyle();
   const {
     contactUs,
     navigation,
@@ -49,13 +41,13 @@ const Footer = () => {
           </div>
         </Grid>
         <Grid item xs={12} md={4} lg={2}>
-          <div className={list}>
+          <div className={section}>
             <Typography align="left" gutterBottom variant="h5" component="h5">
               {navigation.title}
             </Typography>
             {navigation.links.map((item, idx) => (
               <Link key={idx} to={`\${item}`}>
-                <Typography align="left" gutterBottom variant="body2">
+                <Typography align="left" gutterBottom variant="caption">
                   {item}
                 </Typography>
               </Link>
@@ -69,7 +61,12 @@ const Footer = () => {
               {talkToUsSection.title}
             </Typography>
             {talkToUsSection.numbers.map((num, index) => (
-              <Typography key={index} align="left" gutterBottom variant="body2">
+              <Typography
+                key={index}
+                align="left"
+                gutterBottom
+                variant="caption"
+              >
                 {num}
               </Typography>
             ))}
@@ -81,9 +78,16 @@ const Footer = () => {
             <Typography align="left" gutterBottom variant="h5">
               {addressSection.title}
             </Typography>
-            <Typography align="left" gutterBottom variant="body2">
-              {addressSection.address}
-            </Typography>
+            {addressSection.address.map((location, index) => (
+              <Typography
+                key={index}
+                align="left"
+                gutterBottom
+                variant="caption"
+              >
+                {location}
+              </Typography>
+            ))}
           </div>
         </Grid>
       </Grid>
@@ -93,7 +97,7 @@ const Footer = () => {
             className="copyrights"
             align="left"
             gutterBottom
-            variant="body2"
+            variant="caption"
             component="p"
           >
             {copyrights}
@@ -101,13 +105,13 @@ const Footer = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <div className={policy}>
-            <Typography gutterBottom variant="body2">
+            <Typography gutterBottom variant="caption">
               {lifeTimeSupport}
             </Typography>
-            <Typography align="right" gutterBottom variant="body2">
+            <Typography align="right" gutterBottom variant="caption">
               {terms}
             </Typography>
-            <Typography align="right" gutterBottom variant="body2">
+            <Typography align="right" gutterBottom variant="caption">
               {disclaimer}
             </Typography>
           </div>

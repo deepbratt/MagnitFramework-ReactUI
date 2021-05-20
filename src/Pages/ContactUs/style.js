@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core";
 import { Colors } from "../../Theme/color.constants";
-const { Harlequin } = Colors;
+const { Harlequin, cetaceanBlue } = Colors;
 export const ContactUsStyles = makeStyles((theme) => ({
   root: {},
   awardSection: {
@@ -9,12 +9,19 @@ export const ContactUsStyles = makeStyles((theme) => ({
     backgroundBlendMode: "multiply, normal",
     borderTopLeftRadius: "5px",
     borderBottomLeftRadius: "5px",
+    [theme.breakpoints.down("md")]: {
+      borderTopLeftRadius: "5px",
+      borderTopRightRadius: "5px",
+      borderBottomLeftRadius: "0px",
+    },
   },
   imageContainer: {
     backgroundColor: "white",
     width: "100px",
     height: "50px",
     margin: "20px",
+    borderRadius: "5px",
+    boxShadow: "0px 4px 50px 5px rgba(0, 0, 0, 0.06)",
     "& > img": {
       maxHeight: "100px",
       margin: "-25px 0",
@@ -34,7 +41,31 @@ export const ContactUsStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignContent: "center",
     width: "100%",
-    marginTop:"7rem"
+    marginTop: "7rem",
+  },
+  section: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "flex-Start",
+    "& > *": {
+      color: cetaceanBlue,
+      textAlign: "left",
+    },
+    "& > img": {
+      maxWidth: "36px",
+      margin: "10px 0",
+    },
+    [theme.breakpoints.down("sm")]: {
+      alignItems: "center",
+      alignContent: "center",
+    },
+  },
+  factCard: {
+    display: "flex",
+  },
+  location: {
+    marginTop: "50px",
+    justifyContent: "space-around",
   },
 }));
 

@@ -1,5 +1,6 @@
 import { InputLabel } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
+import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
 import InputField from "../../Components/FormInputs/InputField";
 import SectionHeading from "../../Pages/Section/SectionHeading";
 import { contactUsLabelsText } from "../../Utils/Constants/Language";
@@ -7,10 +8,18 @@ import CustomButton from "../CustomButton";
 import FormStyles from "./style";
 
 const ContactUsForm = (props) => {
-  const { form, label, button } = FormStyles();
+  const { form, label, button, privacyPolicy } = FormStyles();
 
-  const { subHeading, name, email, phoneNum, message, submit } =
-    contactUsLabelsText;
+  const {
+    subHeading,
+    name,
+    email,
+    phoneNum,
+    companyName,
+    message,
+    submit,
+    privacy,
+  } = contactUsLabelsText;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,7 +29,7 @@ const ContactUsForm = (props) => {
   return (
     <>
       <SectionHeading header={props.heading} />
-      <Typography variant="subtitle1" color="textSecondary" component="h5">
+      <Typography variant="subtitle2" color="textSecondary" component="h5">
         {subHeading}
       </Typography>
 
@@ -33,7 +42,7 @@ const ContactUsForm = (props) => {
           id="input-name"
           name="name"
           fullWidth
-          placeholder="e.g Jamshed Ahmed"
+          placeholder="e.g John Martin"
         />
 
         <InputLabel
@@ -46,7 +55,20 @@ const ContactUsForm = (props) => {
         <InputField
           id="input-email"
           fullWidth
-          placeholder="e.g abc@gmail.com"
+          placeholder="e.g johnmartin@mail.com"
+        />
+
+        <InputLabel
+          className={`${label} ${props.styles}`}
+          htmlFor="input-companyName"
+        >
+          {companyName}
+        </InputLabel>
+
+        <InputField
+          id="input-companyName"
+          fullWidth
+          placeholder="XYZ Company"
         />
 
         <InputLabel
@@ -71,11 +93,22 @@ const ContactUsForm = (props) => {
           placeholder="Type your message here..."
           multiline
         />
-        <div className={button}>
-          <CustomButton type="submit" size="medium" variant="contained">
-            {submit}
-          </CustomButton>
+        <div className={privacyPolicy}>
+          <InfoOutlinedIcon fontSize="medium" />
+          <Typography color="textSecondary" variant="caption">
+            {privacy}
+          </Typography>
         </div>
+
+        <CustomButton
+          className={button}
+          fullWidth
+          type="submit"
+          size="medium"
+          variant="contained"
+        >
+          {submit}
+        </CustomButton>
       </form>
     </>
   );

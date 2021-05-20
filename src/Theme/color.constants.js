@@ -27,10 +27,10 @@ export const Colors = {
   Mariner: "#234EDB",
   Luigi: "#46BB28",
   MoonWhite: "#E8F2FE",
-  BlackSqueeze:"#F6F9FC",
-  Tundora:"#4D4D4D",
-  Mirage:"#151B27",
-  DoveGray:"#737373",
+  BlackSqueeze: "#F6F9FC",
+  Tundora: "#4D4D4D",
+  Mirage: "#151B27",
+  DoveGray: "#737373",
   sectionBackgroundColors: {
     header: "#F3FDFE",
     solutions: "#F5EFE5",
@@ -80,6 +80,9 @@ export const Colors = {
   brunswickGreen: "#1A584F",
   spaceCadet: "#1F3259",
   chineseWhite: "#E1E1E1",
+  kellyGreen: "#46BB28",
+  brandeisBlue: "#006FED",
+  cetaceanBlue: "#000E4D",
   // MOSTLY BACKGROUND
   aliceBlue: "#E8F2FE",
   fillColor:
@@ -88,10 +91,12 @@ export const Colors = {
   shineBlue: '#006FED',
   coldBlue: '#CEE4FF',
   // App Solutions page
-  lochmara : "#0082D2",
-  cerulean : "#00AAE1",
+  lochmara: "#0082D2",
+  cerulean: "#00AAE1",
   robbinEggBlue: "#00D7E1",
   caribbeanGreen: "#00D2AA",
-  pastelGreen: "#8CD26E"
+  pastelGreen: "#8CD26E",
 
+  // Menu
+  harlequinDark: "#28A300",
 };

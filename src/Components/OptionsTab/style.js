@@ -22,6 +22,7 @@ const OptionTabStyles = makeStyles((theme) => ({
     width: "35%",
     [theme.breakpoints.down("sm")]: {
       width: "100%",
+      margin: "10px 5px 10px 0px"
     },
     "& .MuiTabs-flexContainerVertical": {
       [theme.breakpoints.down("sm")]: {
@@ -39,7 +40,6 @@ const OptionTabStyles = makeStyles((theme) => ({
     margin: "10px",
     border: `solid 1px ${Harlequin}`,
     color: "black",
-    fontSize: "14px",
     borderRadius: "5px",
     "& > .MuiTab-textColorInherit": {
       opacity:1
@@ -64,7 +64,7 @@ const OptionTabStyles = makeStyles((theme) => ({
   },
   detail: {
     fontWeight: 400,
-    fontSize: h5.lg,
+
     color: chineseWhite,
     lineHeight: 1.5,
     margin: ".5rem 0rem 1rem 0rem",
@@ -72,7 +72,7 @@ const OptionTabStyles = makeStyles((theme) => ({
   },
   bulletText: {
     fontWeight: 400,
-    fontSize: p.lg,
+    
     color: whiteColor,
     lineHeight: "20.34px",
   },

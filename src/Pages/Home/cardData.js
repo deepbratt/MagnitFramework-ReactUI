@@ -7,10 +7,10 @@ import AuthImage3 from "../../assets/images/cards/author3.png";
 
 export const cards = [
   {
-    title: "Web Design",
+    title: "Web Development",
     text:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip",
-    authName: "Charls dolo",
+      "Magnit offers the best combination of cost and capabilities to assist us with the project. They are quick with milestone deliveries and very adaptable to changing needs and improvements.",
+    authName: "Cara Loft,YourDeli",
     lesson: "13",
     coverImg: CardImage1,
     authImg: AuthImage1,
@@ -18,17 +18,17 @@ export const cards = [
   {
     title: "Graphic Design",
     text:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip",
-    authName: "Jenny Tailor",
+      "We are very happy with the constant quality check of the product, the time-bound deliveries and the quick responsiveness of Magnit Team. We recommend them to anyone looking for a class-apart technology solution.",
+    authName: "Dev Singh,HomeDesign",
     lesson: "19",
     coverImg: CardImage2,
     authImg: AuthImage2,
   },
   {
-    title: "Social Media Marketing",
+    title: "Digital Marketing",
     text:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip",
-    authName: "Catrina Doe",
+      "It is a fantastic experience to work with Magnit. They take time to research your industry and really understand your market before they offer their solutions. They are very attentive to detail and go beyond the call to help you reach your goals",
+    authName: "Mellinda Burns,Timecheck",
     lesson: "15",
     coverImg: CardImage3,
     authImg: AuthImage3,

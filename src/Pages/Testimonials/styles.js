@@ -4,7 +4,6 @@ import { Colors } from "../../Theme/color.constants";
 const {  Harlequin,Mirage,DoveGray } = Colors;
 const breakpoints = createBreakpoints({});
 const useStyles = makeStyles((theme) => ({
-
     root: {
         marginTop: "0",
         backgroundColor: "transparent",
@@ -37,9 +36,9 @@ const useStyles = makeStyles((theme) => ({
         // color: "black",
         "& > h1": {
             marginBottom:".1rem",
-          [theme.breakpoints.down("sm")]: {
-            fontSize: "1.5rem",
-          },
+          // [theme.breakpoints.down("sm")]: {
+          //   // fontSize: "1.5rem",
+          // },
         },
         [breakpoints.down("sm")]: {
             marginTop:"5rem",
@@ -47,13 +46,13 @@ const useStyles = makeStyles((theme) => ({
           },
       },
       cardRoot:{
-        padding:" 0rem 3rem",
+        // padding:" 0rem 3rem",
         [breakpoints.down("sm")]: {
-          padding:'.4rem .8rem',
+          // padding:'.4rem .8rem',
        },
       },
       cardSec: {
-        padding: "0px",
+        // padding: "0px",
         marginTop: "6rem",
         margin: "0px",
         display: "flex",
@@ -69,6 +68,7 @@ const useStyles = makeStyles((theme) => ({
       },
       paragraph: {
         width: "80%",
+        textAlign:"center",
         marginTop: "10px",
         color: DoveGray,
         [breakpoints.only("md")]: {
