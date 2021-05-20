@@ -34,9 +34,11 @@ export const useStyles = makeStyles((theme) => ({
     cursor: "pointer",
     [breakpoints.down("md")]: {
       width: "40%",
+      height: "fit-content",
     },
     [breakpoints.down("sm")]: {
       width: "70%",
+      height: "fit-content",
     },
   },
   devSub: {
