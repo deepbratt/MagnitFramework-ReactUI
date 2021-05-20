@@ -72,7 +72,14 @@ const Home = (props) => {
       <Hidden mdDown>
         {cards &&
           cards.map((data, index) => (
-            <Grid key={index} item xs={12} md={6} lg={4} style={{display:"flex"}}>
+            <Grid
+              key={index}
+              item
+              xs={12}
+              md={6}
+              lg={4}
+              style={{ display: "flex" }}
+            >
               <QuoteCard cardData={data} />
             </Grid>
           ))}
@@ -82,29 +89,41 @@ const Home = (props) => {
           <SecondColumn />
         </Grid>
       </Hidden>
-      
     </>,
-     <>
-     <Hidden mdDown>
-       {cards &&
-         cards.map((data, index) => (
-           <Grid key={index} item xs={12} md={6} lg={4} style={{display:"flex"}}>
-             <QuoteCard cardData={data} />
-           </Grid>
-         ))}
-     </Hidden>
-     <Hidden lgUp>
-       <Grid item>
-         <ThirdColumn />
-       </Grid>
-     </Hidden>
-     
-   </>,
     <>
       <Hidden mdDown>
         {cards &&
           cards.map((data, index) => (
-            <Grid key={index} item xs={12} md={6} lg={4} style={{display:"flex"}}>
+            <Grid
+              key={index}
+              item
+              xs={12}
+              md={6}
+              lg={4}
+              style={{ display: "flex" }}
+            >
+              <QuoteCard cardData={data} />
+            </Grid>
+          ))}
+      </Hidden>
+      <Hidden lgUp>
+        <Grid item>
+          <ThirdColumn />
+        </Grid>
+      </Hidden>
+    </>,
+    <>
+      <Hidden mdDown>
+        {cards &&
+          cards.map((data, index) => (
+            <Grid
+              key={index}
+              item
+              xs={12}
+              md={6}
+              lg={4}
+              style={{ display: "flex" }}
+            >
               <QuoteCard cardData={data} />
             </Grid>
           ))}
@@ -114,8 +133,6 @@ const Home = (props) => {
           <FirstColumn />
         </Grid>
       </Hidden>
-      
-      
     </>,
   ];
 
