@@ -81,7 +81,7 @@ function Testimonials() {
       >
         {VideosData.map((a) => {
           return (
-            <Grid xs={12} sm={6} md={4} key={a.id}>
+            <Grid  xs={12} md={4} lg={3} key={a.id}>
               <VideoCard
                 Img={a.Img}
                 avatar={a.Avatar}
