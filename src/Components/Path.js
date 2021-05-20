@@ -43,10 +43,6 @@ const pageRoutes = {
     sidebarName: "Home",
     component: Home,
   },
-  [pathIds.blogs]: {
-    path: pathRouting.blogs,
-    component: OurBlogs,
-  },
   [pathIds.about]: {
     path: pathRouting.about,
     sidebarName: "About Us",
@@ -62,9 +58,6 @@ const pageRoutes = {
     sidebarName: "Solutions",
     component: Solutions,
   },
-  [pathIds.caseStudies]: {
-    path: pathRouting.caseStudies,
-  },
   [pathIds.careers]: {
     path: pathRouting.careers,
     sidebarName: "Careers",
@@ -74,10 +67,6 @@ const pageRoutes = {
     path: pathRouting.appSolutions,
     sidebarName: "App Solutions",
     component: AppSolutions
-  },
-    [pathIds.event]: {
-    path: pathRouting.event,
-    component:Event,
   },
   [pathIds.testimonial]: {
     path: pathRouting.testimonial,
