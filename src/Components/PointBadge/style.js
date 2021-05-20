@@ -52,15 +52,11 @@ const PointBadgeStyles = makeStyles((theme) => ({
     textAlign: "left",
     "& > p": {
       color:darkSilver,
-      [theme.breakpoints.down("sm")]: {
-        fontSize: "10px",
-      },
+  
     },
     "& > h3": {
     color:Mirage,
-      [theme.breakpoints.down("sm")]: {
-        fontSize: "12px",
-      },
+   
     },
   },
   contentRight: {
@@ -70,15 +66,11 @@ const PointBadgeStyles = makeStyles((theme) => ({
     justifyContent: "center",
     "& > p": {
       color:darkSilver,
-      [theme.breakpoints.down("sm")]: {
-        fontSize: "10px",
-      },
+    
     },
     "& > h3": {
       color:Mirage,
-      [theme.breakpoints.down("sm")]: {
-        fontSize: "12px",
-      },
+   
     },
   },
 }));

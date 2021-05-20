@@ -35,7 +35,7 @@ const Container = ({backColor}) => {
       <Grid style={{color: whiteColor}} item lg={12} md={12} xs={12}>
 
           <MuiThemeProvider theme={THEME}>
-            <Typography variant="h4" >
+            <Typography  >
             {title}
             </Typography>
           </MuiThemeProvider>
@@ -48,7 +48,7 @@ const Container = ({backColor}) => {
                   <CustomImage width="250px" src={image1} alt=""/>
                   <Grid item className={cardContent}>
                 <MuiThemeProvider theme={THEME}>
-                  <Typography variant="h5" gutterBottom>
+                  <Typography gutterBottom>
                    {subtitleOne}
                   </Typography>
                 </MuiThemeProvider>
@@ -63,7 +63,7 @@ const Container = ({backColor}) => {
                   <CustomImage width="300px" src={image2} alt=""/>
                   <Grid item className={cardContent}>
                 <MuiThemeProvider theme={THEME}>
-                  <Typography variant="h5" gutterBottom>
+                  <Typography gutterBottom>
                   {subtitleTwo}
                   </Typography>
                 </MuiThemeProvider>
@@ -78,7 +78,7 @@ const Container = ({backColor}) => {
                   <CustomImage width="317px"  src={image3} alt=""/>
                   <Grid item className={cardContent}>
                 <MuiThemeProvider theme={THEME}>
-                  <Typography variant="h5"gutterBottom>
+                  <Typography gutterBottom>
                   {subtitleThree}
                   </Typography>
                 </MuiThemeProvider>

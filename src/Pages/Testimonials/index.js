@@ -17,6 +17,7 @@ import VideosData, {
   Testmonial,
 } from "../../Utils/Constants/Language/en/TestimonialVideos";
 import CustomButton from "../../Components/CustomButton";
+import Section from "../Section";
 
 // import Section from '../Section';
 function Testimonials() {
@@ -50,10 +51,10 @@ function Testimonials() {
         backColor={linearBackground}
         breadCrumb={<BreadCrumb links={breadCrumData} />}
       >
-        <Typography variant="h2" gutterBottom>
+        <Typography  gutterBottom>
           Our Testimonials
         </Typography>
-        <Typography variant="h6" gutterBottom>
+        <Typography  gutterBottom>
           We let our work speak for us. With a trust of 200+ clients and 96%
           user contentment, we strive to be synonymous with satisfaction.
         </Typography>
@@ -70,6 +71,7 @@ function Testimonials() {
           </CardContent>
         </Card>
       </Grid>
+      <Section>
       <Grid
         xs={12}
         container
@@ -91,7 +93,7 @@ function Testimonials() {
           );
         })}
       </Grid>
-      
+      </Section>
       <Grid xs={12} container alignItems="center" justify="center" className={flex}>
       <CustomButton type="submit" color="primary" variant="contained">
           <Typography

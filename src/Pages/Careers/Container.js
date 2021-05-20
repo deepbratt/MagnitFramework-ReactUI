@@ -12,7 +12,7 @@ const CareerContainer = () => {
         <Grid item lg={12} md={12} xs={12}>
           <Main hero={banner}/>
         </Grid>
-        <Grid style={{margin: "0 5%"}} item lg={12} md={12} xs={12}>
+        <Grid  item lg={12} md={12} xs={12}>
           <WorkWithUs />
         </Grid>
         <Grid item lg={12} md={12} xs={12}>

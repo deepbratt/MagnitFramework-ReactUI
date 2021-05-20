@@ -32,7 +32,7 @@ import CustomButton from '../../Components/CustomButton';
               </section>
             </CardContent>
           </Card>
-         
+        <Section>
      <Grid xs={12} container justify="center" className={cardRoot} >
            {
                activities.map((a=>{
@@ -44,7 +44,7 @@ import CustomButton from '../../Components/CustomButton';
                }))
            }
             </Grid>
-           
+            </Section> 
     <Grid xs={12} container alignItems="center" justify="center">
     <CustomButton type="submit" color="primary" variant="contained">
           <Typography
