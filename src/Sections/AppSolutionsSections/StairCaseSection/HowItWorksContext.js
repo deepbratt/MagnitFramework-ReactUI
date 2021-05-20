@@ -27,7 +27,7 @@ const HowItWorksContext = () => {
         <Grid item style={{ paddingBottom: "20px" }} className={cardSec}>
           {StairCaseData.map((data, index) => {
             return (
-              <Card style={{ marginTop: data.margin }} className={card2}>
+              <Card style={{ marginTop: data.margin ,}} className={card2}>
                 <CardContent style={{ padding: "0px" }}>
                   <Grid item className={image}>
                     <CustomImage src={data.img} alt="image" />
