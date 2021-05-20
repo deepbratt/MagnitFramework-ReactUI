@@ -22,22 +22,10 @@ const LayoutStyle = makeStyles((theme) => ({
     "& > h2": {
       textAlign: "center",
       marginTop: "30px",
-      [theme.breakpoints.down("md")]: {
-        fontSize: "1.75rem",
-      },
-      [theme.breakpoints.down("sm")]: {
-        fontSize: "1.5rem",
-      },
     },
     "& > h5": {
       textAlign: "center",
       color: "white",
-      [theme.breakpoints.down("md")]: {
-        fontSize: "1.5rem",
-      },
-      [theme.breakpoints.down("sm")]: {
-        fontSize: "1rem",
-      },
     },
   },
   cover: {
@@ -52,17 +40,7 @@ const LayoutStyle = makeStyles((theme) => ({
     maxHeight: "100%",
   },
   label: {
-    fontSize: "1.125rem",
     color: "white",
-    [theme.breakpoints.down("md")]: {
-      fontSize: "1rem",
-    },
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "0.75rem",
-    },
-  },
-  error: {
-    fontSize: "0.75rem",
   },
   button: {
     display: "flex",

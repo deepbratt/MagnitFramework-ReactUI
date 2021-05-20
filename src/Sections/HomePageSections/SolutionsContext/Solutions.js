@@ -19,15 +19,12 @@ const Solutions = () => {
     <>
       <Grid container className={root} elevation={0}>
         <Grid style={{color: whiteColor}} item lg={12} md={12} xs={12}>
-        <MuiThemeProvider theme={THEME}>
             <Typography variant="h4">{heading}</Typography>
             <Typography paragraph={true}>{subHeading}</Typography>
-          </MuiThemeProvider>
         </Grid>
         <PrimarySection />
         <MidSection />
         <Grid item lg={12} md={12} xs={12}>
-        <MuiThemeProvider theme={THEME}>
           <CustomButton
             style={{
               backgroundColor: whiteColor,
@@ -40,7 +37,6 @@ const Solutions = () => {
           >
             See More
           </CustomButton>
-        </MuiThemeProvider>
         </Grid>
       </Grid>
     </>

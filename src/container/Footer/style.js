@@ -23,7 +23,6 @@ const FooterStyle = makeStyles((theme) => ({
   logo: {
     marginBottom: "30px",
   },
-
   section: {
     "& > *": {
       display: "block",

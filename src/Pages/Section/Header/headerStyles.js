@@ -20,13 +20,10 @@ export const THEME = createMuiTheme({
     },
   },
   typography: {
-    fontSize: 15,
     // lineHeight: 1.5,
     letterSpacing: 0.32,
     fontFamily: "Poppins",
-    h5: {
-      fontWeight: 600,
-    },
+
     button: {
       textTransform: "none",
     },

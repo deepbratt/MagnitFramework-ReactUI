@@ -20,11 +20,10 @@ const SolutionsPrimarySection = () => {
             <CustomImage alt="icon" className={profileIcon} src={chatIcon} />
           </Grid>
           <Grid item>
-            <MuiThemeProvider theme={THEME}>
               <Typography variant="h5" style={{ color: Tundora }}>
                 {chatTitle}
               </Typography>
-            </MuiThemeProvider>
+
           </Grid>
         </Grid>
         <Grid item className={card}>
@@ -36,11 +35,9 @@ const SolutionsPrimarySection = () => {
             />
           </Grid>
           <Grid item>
-            <MuiThemeProvider theme={THEME}>
               <Typography variant="h5" style={{ color: Tundora }}>
                 {classifiedTitle}
               </Typography>
-            </MuiThemeProvider>
           </Grid>
         </Grid>
         <Grid item className={card}>
@@ -48,11 +45,9 @@ const SolutionsPrimarySection = () => {
             <CustomImage alt="icon" className={profileIcon} src={fundIcon} />
           </Grid>
           <Grid item>
-            <MuiThemeProvider theme={THEME}>
               <Typography variant="h5" style={{ color: Tundora }}>
                 {fundingTitle}
               </Typography>
-            </MuiThemeProvider>
           </Grid>
         </Grid>
         <Grid item className={card}>
@@ -60,11 +55,9 @@ const SolutionsPrimarySection = () => {
             <CustomImage alt="icon" className={profileIcon} src={designIcon} />
           </Grid>
           <Grid item>
-            <MuiThemeProvider theme={THEME}>
               <Typography variant="h5" style={{ color: Tundora }}>
                 {designTitle}
               </Typography>
-            </MuiThemeProvider>
           </Grid>
         </Grid>
       </Grid>

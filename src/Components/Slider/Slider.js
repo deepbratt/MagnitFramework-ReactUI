@@ -59,8 +59,8 @@ const Slider = ({
         lg={9}
         className={gridText}
       >
-        <MuiThemeProvider theme={heading}>
-          <Typography variant="h1" >
+
+          <Typography variant="h2" >
             {headingOne} <br />
             {headingTwo} <br />
             {headingThree} <br />
@@ -77,7 +77,7 @@ const Slider = ({
             ))}
           </List>
           {/* </section> */}
-        </MuiThemeProvider>
+
         <CustomButton
             // style={{
             //   // textTransform: "none",

@@ -1,17 +1,15 @@
 import { makeStyles } from "@material-ui/core/styles";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
-import {Colors} from "../../../Theme/color.constants"
+import { Colors } from "../../../Theme/color.constants";
 
 const breakpoints = createBreakpoints({});
-const {Harlequin} = Colors
+const { Harlequin } = Colors;
 export const missionStyles = makeStyles((theme) => ({
   grid: {
     overflow: "hidden",
   },
   root: {
-    padding: "10px 0px 20px 0px",
     width: "100%",
-    marginTop: "60px",
   },
   card2: {
     width: "17%",

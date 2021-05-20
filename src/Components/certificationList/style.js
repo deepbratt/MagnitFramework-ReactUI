@@ -13,26 +13,11 @@ const CertificationListStyles = makeStyles((theme) => ({
   },
   text: {
     textAlign: "left",
-    "& > h3": {
-      color:Mirage,
-      [theme.breakpoints.down("sm")]: {
-        fontSize: lg,
-      },
-      [theme.breakpoints.down("sm")]: {
-        fontSize: sm,
-      },
+   
     },
     "& > p": {
       color: darkSilver,
-      [theme.breakpoints.down("md")]: {
-        fontSize: p.lg,
-        lineHeight: "32px",
-      },
-      [theme.breakpoints.down("sm")]: {
-        fontSize: p.sm,
-        lineHeight: "24px",
-      },
-    },
+    
   },
   imageWrapper: {
     "& > img": {

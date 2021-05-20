@@ -14,11 +14,9 @@ const Container = () => {
       <Grid container>
         <Grid item md={12} xs={12}>
           <Grid className={root} elevation={0}>
-              <MuiThemeProvider theme={THEME}>
                 <Typography variant="h4" color="inherit">
                   Why Partner <span className={underlined}>with Us?</span>
                 </Typography>
-              </MuiThemeProvider>
           </Grid>
         </Grid>
         <Grid item md={6} xs={12}>
@@ -29,7 +27,6 @@ const Container = () => {
         <Grid item md={6} xs={12}>
           <SecondarySection
             data={SecondaryArray}
-
           />
         </Grid>
       </Grid>
