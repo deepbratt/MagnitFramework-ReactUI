@@ -14,7 +14,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import { NavLink } from "react-router-dom";
-import { MuiThemeProvider } from "@material-ui/core/styles";
+
 import SideBar from "./Sidebar/SideBar";
 import Breakpoints from "../../../Theme/theme.breakpoints";
 import { Hidden } from "@material-ui/core";
