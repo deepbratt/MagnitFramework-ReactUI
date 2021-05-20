@@ -29,7 +29,7 @@ const ContactUsForm = (props) => {
   return (
     <>
       <SectionHeading header={props.heading} />
-      <Typography variant="subtitle1" color="textSecondary" component="h5">
+      <Typography variant="subtitle2" color="textSecondary" component="h5">
         {subHeading}
       </Typography>
 
@@ -95,7 +95,7 @@ const ContactUsForm = (props) => {
         />
         <div className={privacyPolicy}>
           <InfoOutlinedIcon fontSize="medium" />
-          <Typography color="textSecondary" variant="subtitle2">
+          <Typography color="textSecondary" variant="caption">
             {privacy}
           </Typography>
         </div>
