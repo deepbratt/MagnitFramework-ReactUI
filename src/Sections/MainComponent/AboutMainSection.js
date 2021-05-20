@@ -17,7 +17,7 @@ const AboutMainSection = (props) => {
     <>
       <Grid container className={root}>
         <Grid item xs={12}>
-          <Card className={card}>
+          <Card style={{padding: "0px"}} className={card}>
             <div className={breadCrumbStyles}>
               <BreadCrumb links={props.breadcrumbData} />
             </div>

@@ -38,12 +38,11 @@ const FeaturesRow = (props) => {
                   <CustomImage alt="icon" src={text.icon} />
                 </Grid>
               </Grid>
-              <MuiThemeProvider theme={THEME}>
                 <Grid className={para} item xs={12} md={6} lg={9}>
                   <Typography variant="h5">{text.title}</Typography>
                   <Typography paragraph={true}>{text.desc}</Typography>
                 </Grid>
-              </MuiThemeProvider>
+
             </Grid>
           </Grid>
         );

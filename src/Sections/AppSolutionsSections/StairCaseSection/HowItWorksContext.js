@@ -19,11 +19,9 @@ const HowItWorksContext = () => {
 
       <Grid container className={root}>
         <Grid item lg={12} xs={12}>
-          <MuiThemeProvider theme={THEME}>
             <Typography variant="h4" color="inherit">
               <span className={underlined}>{stairCaseHeading}</span>
             </Typography>
-          </MuiThemeProvider>
 
         </Grid>
         <Grid item style={{ paddingBottom: "20px" }} className={cardSec}>

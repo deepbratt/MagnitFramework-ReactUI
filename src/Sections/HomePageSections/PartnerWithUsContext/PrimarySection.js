@@ -36,14 +36,12 @@ const PrimarySection = (props) => {
                   <CustomImage alt="icon" src={text.icon} />
                 </Grid>
               </Grid>
-              <MuiThemeProvider theme={THEME}>
                 <Grid className={para} item xs={12} lg={9}>
                   <Typography variant="h5">{text.title}</Typography>
                   <Typography paragraph={true} style={{ color: Mirage }}>
                     {text.desc}
                   </Typography>
                 </Grid>
-              </MuiThemeProvider>
             </Grid>
           </Grid>
         );

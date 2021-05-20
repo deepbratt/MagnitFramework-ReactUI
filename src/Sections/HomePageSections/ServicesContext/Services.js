@@ -18,7 +18,6 @@ const Services = () => {
     <>
       <Grid container className={root} elevation={0}>
         <Grid item lg={12} md={12} xs={12}>
-          <MuiThemeProvider theme={THEME}>
             <Typography variant="h4">
               <Hidden smDown>
                 {title}
@@ -32,7 +31,6 @@ const Services = () => {
             <Typography paragraph={true} color="inherit">
               {subheading}
             </Typography>
-          </MuiThemeProvider>
         </Grid>
         <Grid item className={cardSec}>
           <Content data={ServicesData} />
