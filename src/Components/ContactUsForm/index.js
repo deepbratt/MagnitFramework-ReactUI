@@ -100,7 +100,6 @@ const ContactUsForm = (props) => {
           />
           <Typography
             style={{ color: props.captionColor }}
-            color="textSecondary"
             variant="caption"
             component="p"
           >
