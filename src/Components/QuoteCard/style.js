@@ -4,7 +4,7 @@ const CardStyle = makeStyles((theme) => ({
   root: {
     margin: "20px 10px",
     padding: "40px",
-
+    maxWidth: "500px",
     [theme.breakpoints.down("sm")]: {
       margin: "10px 5px",
       padding: "20px",
@@ -43,7 +43,7 @@ const CardStyle = makeStyles((theme) => ({
     alignItems: "center",
     textAlign: "left",
     // "& > div > h6": {
-    
+
     // },
   },
   avatar: {},
