@@ -1,7 +1,7 @@
 import { createMuiTheme } from "@material-ui/core/styles";
 
 const theme = createMuiTheme();
-
+// banner heading
 theme.typography.h1 = {
   fontSize: "3.4375rem",
   fontWeight: 600,
@@ -14,6 +14,7 @@ theme.typography.h1 = {
   },
 };
 
+// section heading
 theme.typography.h2 = {
   fontSize: "2.1875rem", // 35px
   fontWeight: 600,
@@ -27,6 +28,7 @@ theme.typography.h2 = {
   },
 };
 
+// special headings
 theme.typography.h3 = {
   fontSize: "1.5rem", // 24px
   fontWeight: 600,
@@ -39,6 +41,7 @@ theme.typography.h3 = {
   },
 };
 
+// cards small headings/title
 theme.typography.h4 = {
   fontSize: "1.5rem",
   fontWeight: 600,
@@ -72,6 +75,7 @@ theme.typography.h6 = {
   },
 };
 
+// 18px
 theme.typography.subtitle1 = {
   fontSize: "1.375rem", // 22px
   fontWeight: 500,
@@ -95,6 +99,7 @@ theme.typography.subtitle2 = {
   },
 };
 
+// 18px text
 theme.typography.body1 = {
   fontSize: "1.125rem",
   fontWeight: 500,
@@ -107,6 +112,8 @@ theme.typography.body1 = {
   },
 };
 
+
+// 16px
 theme.typography.body2 = {
   fontSize: "1rem", // 16px
   fontWeight: 300,

@@ -18,7 +18,7 @@ const BannerStyles = makeStyles((theme) => ({
     "& > img": {
       width: "350px",
       [theme.breakpoints.down("sm")]: {
-        width: "250px",
+      display:"none"
       },
     },
   },
@@ -29,8 +29,8 @@ const BannerStyles = makeStyles((theme) => ({
     height: "700px",
     [theme.breakpoints.down("md")]: {
       height: "500px",
-      right: "0%",
-      top: "-5%",
+      right: "-29%",
+      top: "-45%",
     },
     [theme.breakpoints.down("sm")]: {
       height: "350px",
@@ -49,10 +49,16 @@ const BannerStyles = makeStyles((theme) => ({
     textAlign: "left",
     margin: "50px",
     color: "black",
+  
     "& > h1": {
       [theme.breakpoints.down("sm")]: {
         fontSize: lg,
       },
+      
+    },
+    [theme.breakpoints.down("sm")]: {
+      alignItems:"center",
+      textAlign: "center",
     },
   },
 }));

@@ -18,8 +18,13 @@ export const missionStyles = makeStyles((theme) => ({
     transition: "all .25s linear",
     [breakpoints.only("md")]: {
       width: "30%",
+      marginTop: "0px"
     },
     [breakpoints.down("sm")]: {
+      width: "40%",
+      marginRight: "0px",
+    },
+    [breakpoints.down("xs")]: {
       width: "70%",
       marginRight: "0px",
     },

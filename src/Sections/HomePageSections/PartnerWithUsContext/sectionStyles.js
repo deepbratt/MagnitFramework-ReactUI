@@ -36,8 +36,11 @@ export const useStyles = makeStyles((theme) => ({
   },
   para:{
     textAlign: "left",
-    [breakpoints.down("md")]: {
+    [breakpoints.down("sm")]: {
+      marginBottom: "20px",
       textAlign: "center",
     },
   }
 }));
+
+

@@ -60,7 +60,7 @@ function Testimonials() {
         </Typography>
       </Banner>
       <Grid xs={12}>
-        <Card>
+       
           <CardContent className={cardSec}>
             <section className={underlined}>
               <Heading title={Testmonial} />
@@ -69,9 +69,7 @@ function Testimonials() {
               <Paragraph para={ClientsHaveToSay} />
             </section>
           </CardContent>
-        </Card>
       </Grid>
-      <Section>
       <Grid
         xs={12}
         container
@@ -81,7 +79,7 @@ function Testimonials() {
       >
         {VideosData.map((a) => {
           return (
-            <Grid  xs={12} md={4} lg={3} key={a.id}>
+            <Grid  xs={12}  md={6} lg={4} key={a.id}>
               <VideoCard
                 Img={a.Img}
                 avatar={a.Avatar}
@@ -93,7 +91,7 @@ function Testimonials() {
           );
         })}
       </Grid>
-      </Section>
+     
       <Grid xs={12} container alignItems="center" justify="center" className={flex}>
       <CustomButton type="submit" color="primary" variant="contained">
           <Typography
