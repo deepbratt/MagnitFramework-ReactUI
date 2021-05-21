@@ -50,10 +50,12 @@ const Main = (props) => {
                 <Heading4 title={heading} />
               </Grid>
               <Grid xs={12} style={{ margin: "20px" }}>
-                <Heading5 subTitle={subHeading} />
+              <Typography variant="subtitle1" color="inherit">
+              {subHeading}
+              </Typography>
               </Grid>
-              <Grid xs={12} md={6} className={paragraph}>
-                <Typography variant="h6" className={paragraph}>
+              <Grid xs={12} md={8} className={paragraph}>
+                <Typography variant="body1" className={paragraph}>
                   {para}
                 </Typography>
               </Grid>
