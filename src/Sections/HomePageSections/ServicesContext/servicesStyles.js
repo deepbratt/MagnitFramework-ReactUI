@@ -20,7 +20,7 @@ export const useStyles = makeStyles((theme) => ({
     // width: "24%",
     // height: "360px",
     display: "flex",
-    margin: "21px",
+    // margin: "21px",
     flexDirection: "column",
     border: `solid 1px ${whiteColor}`,
     alignItems: "center",

@@ -11,11 +11,10 @@ const CardData = ({ data }) => {
   const { card, devSec, devSub } = classes;
 //   Use this Card for Services Section pass data from its Parent Contanier to here
   return (
-    <>
-    
+    <Grid container justify={"space-between"}>
       {data.map((text, index) => {
         return (
-          <Grid xs={12} sm={6} md={4} lg={2}  key={index} className={card}>
+          <Grid item xs={12} sm={12} md={6} lg={3} key={index} className={card}>
             <CardContent>
               <section className={devSec}>
                 <section
@@ -43,7 +42,7 @@ const CardData = ({ data }) => {
         );
       })}
      
-    </>
+    </Grid>
   );
 };
 
