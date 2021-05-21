@@ -64,7 +64,7 @@ avatarImg:{
 },
   cardpara:{
     color:darkSilver,
-    textAlign:"justify",
+    textAlign:"left",
     lineHeight:"29.34px",
     letterSpacing:".2",
     fontWeight:300

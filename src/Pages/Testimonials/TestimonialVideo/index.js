@@ -30,7 +30,7 @@ const VideoCard = ({ Img, detail, avatar, name, date }) => {
     <>
     {VideosData.map((a)=>{
       return(
-        <Grid  xs={12} sm={4} md={4} lg={3} className={cardRoot} key={a.id}>
+        <Grid item xs={12} sm={4} md={4} lg={3} className={cardRoot} key={a.id}>
     <Grid>
       <CardHeader
         avatar={<img src={a.Avatar} alt="s" className={avatarImg} />}
