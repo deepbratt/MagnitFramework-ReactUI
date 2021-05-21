@@ -67,7 +67,8 @@ avatarImg:{
     color:darkSilver,
     textAlign:"left",
     lineHeight:"29.34px",
-    letterSpacing:".2"
+    letterSpacing:".2",
+    fontWeight:300
 },
 carddate:{
   
