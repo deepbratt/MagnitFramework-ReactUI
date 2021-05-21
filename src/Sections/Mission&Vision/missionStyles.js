@@ -1,9 +1,7 @@
 import { makeStyles } from "@material-ui/core/styles";
-import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 import { Colors } from "../../Theme/color.constants";
 
-const { BlueRibbon, HarlequinRgb, Harlequin } = Colors;
-const breakpoints = createBreakpoints({});
+const { BlueRibbon, Harlequin } = Colors;
 
 export const missionStyles = makeStyles((theme) => ({
   grid: {
@@ -12,54 +10,59 @@ export const missionStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: BlueRibbon,
     paddingTop: "20px",
-    width: "100%",
+    paddingBottom: "20px",
     position: "relative",
-    display: "flex",
   },
+  // card: {
+  //   zIndex: 1,
+  //   height: "350px",
+  //   display: "flex",
+  //   flexDirection: "column",
+  //   alignItems: "center",
+  //   justifyContent: "center",
+  //   transition: "all .25s linear",
+  //   borderRadius: "5px",
+  //   boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
+  //   marginLeft: "20px",
+  //   cursor: "pointer",
+  //   [breakpoints.down("md")]: {
+  //     width: "70%",
+  //     height: "450px",
+  //     marginLeft: "0px",
+  //   },
+  //   [breakpoints.down("xs")]: {
+  //     height: "500px",
+  //   },
+  // },
+  // card2: {
+  //   zIndex: 1,
+  //   height: "350px",
+  //   display: "flex",
+  //   alignItems: "center",
+  //   justifyContent: "center",
+  //   transition: "all .25s linear",
+  //   borderRadius: "5px",
+  //   boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
+  //   marginRight: "20px",
+  //   cursor: "pointer",
+  //   [breakpoints.down("md")]: {
+  //     width: "70%",
+  //     height: "450px",
+  //     marginRight: "0px",
+  //   },
+  //   [breakpoints.down("xs")]: {
+  //     height: "550px",
+  //   },
+  // },
   card: {
-    zIndex: 1,
-    height: "350px",
     display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    transition: "all .25s linear",
-    borderRadius: "5px",
+    margin: "10px 0",
     boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
-    marginLeft: "20px",
-    cursor: "pointer",
-    [breakpoints.down("md")]: {
-      width: "70%",
-      height: "450px",
-      marginLeft: "0px",
-    },
-    [breakpoints.down("xs")]: {
-      height: "500px",
-    },
-  },
-  card2: {
-    zIndex: 1,
-    height: "350px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    transition: "all .25s linear",
     borderRadius: "5px",
-    boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
-    marginRight: "20px",
-    cursor: "pointer",
-    [breakpoints.down("md")]: {
-      width: "70%",
-      height: "450px",
-      marginRight: "0px",
-    },
-    [breakpoints.down("xs")]: {
-      height: "550px",
-    },
+    backgroundColor: "white",
   },
   Icon: {
-    width: "70px",
-    filter: HarlequinRgb,
+    maxWidth: "60px",
   },
   leftPattern: {
     position: "absolute",
@@ -74,6 +77,5 @@ export const missionStyles = makeStyles((theme) => ({
   },
   underlined: {
     borderBottom: `3px solid ${Harlequin}`,
-  
   },
 }));
