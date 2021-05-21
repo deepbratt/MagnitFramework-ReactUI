@@ -1,5 +1,5 @@
 import React from "react";
-import { useStyles } from "./sectionStyles";
+import { useStyles } from "./useStyles";
 import { Typography, Grid } from "@material-ui/core";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import { Colors } from "../../../Theme/color.constants";
@@ -10,7 +10,7 @@ const SecondarySection = (props) => {
   const data = props.data;
 
   const classes = useStyles();
-  const { cardSec, supportSub, para } = classes;
+  const { cardSec, supportSub, para ,grid} = classes;
 
   return (
     <>
@@ -22,8 +22,8 @@ const SecondarySection = (props) => {
                 style={{
                   display: "flex",
                   justifyContent: "center",
-                  paddingBottom: "40px",
                 }}
+                className={grid}
                 item
                 xs={12}
                 lg={3}

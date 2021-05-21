@@ -1,5 +1,5 @@
-import missionIcon from "../../../assets/AboutUs/rocket.svg";
-import visionIcon from "../../../assets/AboutUs/vision.svg";
+import missionIcon from "../../../assets/AboutUs/mission.png";
+import visionIcon from "../../../assets/AboutUs/vision.png";
 import founded from "../../../assets/AboutUs/founded.png";
 import employee from "../../../assets/AboutUs/employee.png";
 import projects from "../../../assets/AboutUs/projects.png";

@@ -1,9 +1,8 @@
 import React from "react";
-import { useStyles } from "../NumberContext/numberStyles";
+
 import { missionStyles } from "./missionStyles";
-import { Card, CardContent, Grid } from "@material-ui/core";
-import Heading6 from "../../ContainerStructure/Headings/Heading6";
-import Paragraph from "../../ContainerStructure/Headings/Paragraphs/Paragraph";
+import { Card, CardContent, Grid, Typography } from "@material-ui/core";
+
 import {
   MidSection,
   MainData,
@@ -13,58 +12,71 @@ import Patten2 from "../../assets/AboutUs/vision2.png";
 import CustomImage from "../../Components/CustomImage";
 
 const MissionContext = () => {
-  const { cardSec, devSec, dev } = useStyles();
-  const { card, card2, root, Icon, underlined, leftPattern, rightPattern } =
+  const { card, root, Icon, underlined, leftPattern, rightPattern } =
     missionStyles();
   const { firstTitle, secondTitle, missionText, visionText } = MidSection;
   const { mission, vision } = MainData;
   return (
     <>
-      <Grid container className={root} justify="center" alignContent="center">
+      <Grid
+        container
+        className={root}
+        spacing={2}
+        justify="center"
+        alignItems="center"
+      >
         <CustomImage className={leftPattern} src={Patten1} alt="" />
         <CustomImage className={rightPattern} src={Patten2} alt="" />
-        <Grid
-          item
-          xs={12}
-          md={5}
-          lg={4}
-          style={{ paddingBottom: "20px" }}
-          className={cardSec}
-        >
-          <Card className={card2}>
-            <CardContent>
-              <section className={devSec}>
-                <section className={dev}></section>
-               
+        <Grid style={{ zIndex: 1 }} item xs={11} md={5} lg={4}>
+          <Card className={card}>
+            <Grid item xs={12}>
+              <CardContent>
+                <Grid item xs={12}>
                   <CustomImage className={Icon} src={mission} alt="Icon" />
-                  <Heading6 title={firstTitle} />
-                  <section className={underlined}>
-                  <Paragraph  para={missionText} />
-                  </section>
-              </section>
-            </CardContent>
+                </Grid>
+                <Grid item xs={12}>
+                  <Typography variant="h3">{firstTitle}</Typography>
+                </Grid>
+                <Grid item xs={12}>
+                  <Typography
+                    color="textSecondary"
+                    variant="subtitle2"
+                    gutterBottom
+                  >
+                    {missionText}
+                  </Typography>
+                </Grid>
+                <Grid container justify="center">
+                  <Grid className={underlined} item xs={3} />
+                </Grid>
+              </CardContent>
+            </Grid>
           </Card>
         </Grid>
-        <Grid
-          item
-          xs={12}
-          md={5}
-          lg={4}
-          style={{ paddingBottom: "20px" }}
-          className={cardSec}
-        >
-            <Card className={card}>
-            <CardContent>
-              <section className={devSec}>
-                <section className={dev}></section>
-             
+        <Grid style={{ zIndex: 1 }} item xs={11} md={5} lg={4}>
+          <Card className={card}>
+            <Grid item xs={12}>
+              <CardContent>
+                <Grid item xs={12}>
                   <CustomImage className={Icon} src={vision} alt="Icon" />
-                  <Heading6 title={secondTitle} />
-                  <section className={underlined}>
-                  <Paragraph para={visionText} />
-                </section>
-              </section>
-            </CardContent>
+                </Grid>
+                <Grid item xs={12}>
+                  <Typography variant="h3">{secondTitle}</Typography>
+                </Grid>
+                <Grid item xs={12}>
+                  <Typography
+                    color="textSecondary"
+                    variant="subtitle2"
+                    gutterBottom
+                  >
+                    {visionText}
+                  </Typography>
+                </Grid>
+                <Grid container justify="center">
+                  <Grid className={underlined} item xs={3} />
+                </Grid>
+              </CardContent>
+            </Grid>
           </Card>
         </Grid>
       </Grid>
