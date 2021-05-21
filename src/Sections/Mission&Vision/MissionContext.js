@@ -46,6 +46,9 @@ const MissionContext = () => {
                     {missionText}
                   </Typography>
                 </Grid>
+                <Grid container justify="center">
+                  <Grid className={underlined} item xs={3} />
+                </Grid>
               </CardContent>
             </Grid>
           </Card>
@@ -68,6 +71,9 @@ const MissionContext = () => {
                   >
                     {visionText}
                   </Typography>
+                </Grid>
+                <Grid container justify="center">
+                  <Grid className={underlined} item xs={3} />
                 </Grid>
               </CardContent>
             </Grid>

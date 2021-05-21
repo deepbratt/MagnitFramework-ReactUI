@@ -60,6 +60,9 @@ export const missionStyles = makeStyles((theme) => ({
     boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
     borderRadius: "5px",
     backgroundColor: "white",
+    alignContent: "center",
+    justifyContent: "center",
+    alignItems: "center",
   },
   Icon: {
     maxWidth: "60px",
@@ -76,6 +79,7 @@ export const missionStyles = makeStyles((theme) => ({
     bottom: "0px",
   },
   underlined: {
+    width: "50%",
     borderBottom: `3px solid ${Harlequin}`,
   },
 }));
