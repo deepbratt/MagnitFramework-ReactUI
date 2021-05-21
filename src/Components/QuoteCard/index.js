@@ -19,7 +19,7 @@ const QuoteCard = ({ cardData }) => {
           <Avatar alt="Remy Sharp" src={authImg} className={large} />
         </div>
         <div>
-          <Typography variant="h6">By {authName}</Typography>
+          <Typography variant="h5">By {authName}</Typography>
           <Rating name="read-only" value={4} readOnly />
         </div>
       </div>

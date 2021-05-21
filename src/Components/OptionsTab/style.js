@@ -41,6 +41,7 @@ const OptionTabStyles = makeStyles((theme) => ({
     border: `solid 1px ${Harlequin}`,
     color: "black",
     borderRadius: "5px",
+    textTransform: "initial",
     "& > .MuiTab-textColorInherit": {
       opacity:1
     },
@@ -63,26 +64,29 @@ const OptionTabStyles = makeStyles((theme) => ({
     },
   },
   detail: {
-    fontWeight: 400,
-
     color: chineseWhite,
     lineHeight: 1.5,
     margin: ".5rem 0rem 1rem 0rem",
     letterSpacing: ".4",
+    fontWeight:"normal",
+    textTransform: "inherit",
+    
   },
   bulletText: {
-    fontWeight: 400,
-    
+    fontWeight: "normal",
+    textTransform: "inherit",
     color: whiteColor,
     lineHeight: "20.34px",
   },
   textDiv:{
     display:"flex",
-    marginBottom:".4rem"
+    marginBottom:".4rem",
+    alignItems: "baseline"
   }
   ,
   trialBtn:{
-    marginTop:".5rem"
+    marginTop:".5rem",
+    textTransform: "initial",
   }
 }));
 

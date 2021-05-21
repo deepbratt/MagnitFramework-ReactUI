@@ -28,9 +28,6 @@ const Services = () => {
                 <span className={underlined}>{subTitle}</span>
               </Hidden>
             </Typography>
-            <Typography paragraph={true} color="inherit">
-              {subheading}
-            </Typography>
         </Grid>
         <Grid item className={cardSec}>
           <Content data={ServicesData} />
