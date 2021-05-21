@@ -9,8 +9,8 @@ export const TabText = ({data}) => {
     const { detail,bulletText,textDiv,trialBtn, } = OptionTabStyles();
     return (
        <Grid style={{textAlign:"left"}}>
-            <Typography   >{title}</Typography>
-        <Typography className={detail} color="initial">
+            <Typography variant="h2"  >{title}</Typography>
+        <Typography variant="button" className={detail} color="initial">
         {desc}
 </Typography>
    
@@ -19,12 +19,15 @@ export const TabText = ({data}) => {
         <Grid xs={12} className={textDiv}  key={a.id}>
          <Grid  ><img src={vector} alt={vector} style={{marginRight:".4rem",width:"19px",height:"19px",}}/></Grid>
          <Grid xs={11}>
-         <Typography className={bulletText} >{a.text}</Typography></Grid></Grid>);
+         <Typography variant="button" className={bulletText} >{a.text}</Typography></Grid></Grid>);
     })}
-   <CustomButton color="primary" variant="contained" className={trialBtn} >
-        <Typography>Get a Risk Free Trial
-(Start your trial in 24 hours!)</Typography>
+    <span style={{textTransform:"initial"}}>
+    <CustomButton color="primary" variant="contained" className={trialBtn} >
+        Get a Risk Free Trial
+(Start your trial in 24 hours!)
     </CustomButton>
+    </span>
+   
         </Grid>
     )
 }

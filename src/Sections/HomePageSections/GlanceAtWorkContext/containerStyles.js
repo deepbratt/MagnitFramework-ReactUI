@@ -57,7 +57,8 @@ cardContent: {
   textAlign: "center",
   paddingLeft: "20px",
   color: whiteColor,
-  padding: "20px"
+  padding: "20px",
+  justifyContent:"flex-end"
 
 },
 seeMore:{
