@@ -72,11 +72,15 @@ const Header = (props) => {
           <Hidden smDown>
             <List className={list}>
               <NavLink activeClassName={active} className={link} to="/home">
-              
-                  <ListItem>
-                    <ListItemText primary="HOME" className={list} />
-                  </ListItem>
+              <MuiThemeProvider theme={theme}>
 
+            
+                  <ListItem>
+                    <Typography variant="h5">
+                      HOME
+                    </Typography>
+                  </ListItem>
+                  </MuiThemeProvider>
               </NavLink>
               {Object.keys(menuItems).map((item, index) => (
                 <div key={index}>
