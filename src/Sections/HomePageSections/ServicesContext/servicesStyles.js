@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 import { Colors } from "../../../Theme/color.constants";
 
-const { Harlequin, whiteColor } = Colors;
+const { Harlequin, whiteColor,Mirage,darkSilver } = Colors;
 const breakpoints = createBreakpoints({});
 
 export const useStyles = makeStyles((theme) => ({
@@ -17,10 +17,8 @@ export const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   card: {
-    // width: "24%",
-    // height: "360px",
     display: "flex",
-    margin: "21px",
+    margin: "4px",
     flexDirection: "column",
     border: `solid 1px ${whiteColor}`,
     alignItems: "center",
@@ -32,14 +30,6 @@ export const useStyles = makeStyles((theme) => ({
       transition: "all .25s linear",
     },
     cursor: "pointer",
-    // [breakpoints.down("md")]: {
-    //   width: "40%",
-    //   height: "fit-content",
-    // },
-    // [breakpoints.down("sm")]: {
-    //   width: "70%",
-    //   height: "fit-content",
-    // },
   },
   devSub: {
     height: "120px",
@@ -54,6 +44,11 @@ export const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "center",
     marginBottom: "30px",
+  },
+  serviceHeading:{
+    "& > h4":{
+      color:Mirage
+    } 
   },
 
   underlined: {
@@ -73,6 +68,21 @@ export const useStyles = makeStyles((theme) => ({
       [breakpoints.down("xs")]: {
         height: "8px",
       },
+    },
+  },
+  contentRight: {
+    minWidth: "100%",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    "& > subtitle1" : {
+      color:Mirage,
+      fontWeight:600,
+    },
+   
+    "& > subtitle2" : {
+      color:darkSilver,
+fontWeight:"normal"
     },
   },
 }));

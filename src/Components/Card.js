@@ -8,14 +8,14 @@ import CustomImage from "./CustomImage";
 import {THEME} from "../ContainerStructure/Headings/headingStyles"
 const CardData = ({ data }) => {
   const classes = useStyles();
-  const { card, devSec, devSub } = classes;
+  const { card, devSec, devSub ,contentRight} = classes;
 //   Use this Card for Services Section pass data from its Parent Contanier to here
   return (
     <>
     
       {data.map((text, index) => {
         return (
-          <Grid xs={12} sm={6} md={4} lg={2}  key={index} className={card}>
+          <Grid xs={12} sm={6} md={4} lg={3}  key={index} className={card}>
             <CardContent>
               <section className={devSec}>
                 <section
@@ -28,16 +28,14 @@ const CardData = ({ data }) => {
                     />
                 </section>
               </section>
-              <section>
-                <MuiThemeProvider theme={THEME}>
-                  <Typography variant="h5" >
-                    {text.title}
-                  </Typography>
-                  <Typography paragraph={true} >
-                    {text.desc}
-                  </Typography>
-                </MuiThemeProvider>
-              </section>
+              <Grid className={contentRight}>
+        <Typography variant="subtitle1" component="subtitle1" gutterBottom>
+        {text.title}
+        </Typography>
+        <Typography variant="subtitle2" component="subtitle2" paragraph={true}>
+        {text.desc}
+        </Typography>
+      </Grid>
             </CardContent>
           </Grid>
         );

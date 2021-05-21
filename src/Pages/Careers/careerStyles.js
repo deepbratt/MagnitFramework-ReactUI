@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 import { Colors } from "../../Theme/color.constants";
 
-const { whiteColor, Harlequin, blackColor, paletteBlue,skyBlue, DoveGray } = Colors;
+const { whiteColor, Harlequin, blackColor, paletteBlue,skyBlue, DoveGray,Mirage,darkSilver } = Colors;
 
 const breakpoints = createBreakpoints({});
 
@@ -25,6 +25,25 @@ export const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     paddingTop: "20px",
+   
+  },
+  HeadSec:{
+    "& > subtitle1" : {
+      color:Mirage,
+      fontWeight:600,
+    },
+   
+    "& > subtitle2" : {
+      color:darkSilver,
+fontWeight:"normal"
+    },
+  },
+  para:{
+    marginTop:".5rem",
+    "& > body1" : {
+      color:darkSilver,
+fontWeight:"normal"
+    },
   },
   card: {
     background:"white",
