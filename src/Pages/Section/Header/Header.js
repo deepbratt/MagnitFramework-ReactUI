@@ -14,7 +14,8 @@ import {
   Typography,
 } from "@material-ui/core";
 import { NavLink } from "react-router-dom";
-
+import theme from "../../../Theme/GlobalFontSizes"
+import { MuiThemeProvider } from "@material-ui/core/styles";
 import SideBar from "./Sidebar/SideBar";
 import Breakpoints from "../../../Theme/theme.breakpoints";
 import { Hidden } from "@material-ui/core";
@@ -75,7 +76,7 @@ const Header = (props) => {
                   <ListItem>
                     <ListItemText primary="HOME" className={list} />
                   </ListItem>
-    
+
               </NavLink>
               {Object.keys(menuItems).map((item, index) => (
                 <div key={index}>
@@ -107,15 +108,17 @@ const Header = (props) => {
                         onClick={handleClose}
                         className={menu}
                       >
+                          <MuiThemeProvider theme={theme}>
                         <NavLink
                           to={menuitems.path}
                           activeClassName={active}
                           className={link}
                         >
-                         <Typography variant="h6">
+                         <Typography variant="h5">
                            {menuitems.title}
                          </Typography>
                         </NavLink>
+                        </MuiThemeProvider>
                       </MenuItem>
                     ))}
                   </StyledMenuItem>

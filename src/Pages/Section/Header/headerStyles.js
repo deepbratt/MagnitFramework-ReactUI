@@ -97,7 +97,7 @@ export const useStyles = makeStyles((theme) => ({
     paddingLeft: "24px",
   },
   menu: {
-    width: "250px",
+    width: "300px",
     border: `1px solid ${Ash}`,
     display: "flex",
     justifyContent: "center",
