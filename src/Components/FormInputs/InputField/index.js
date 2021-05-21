@@ -12,7 +12,7 @@ const InputField = ({
   rowsMax,
   error,
 }) => {
-  const { root } = LayoutStyle();
+  const { root, input } = LayoutStyle();
   return (
     <TextField
       className={root}
@@ -25,6 +25,9 @@ const InputField = ({
       rows={rows}
       size={size}
       rowsMax={rowsMax}
+      InputProps={{
+        classes: { input: input },
+      }}
     />
   );
 };

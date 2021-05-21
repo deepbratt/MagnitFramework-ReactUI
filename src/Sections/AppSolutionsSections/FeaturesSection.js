@@ -23,7 +23,7 @@ const FeaturesSection = () => {
               <span className={underlined}>{heading}</span>
             </Typography>
         </Grid>
-        <Grid  item lg={3} md={5} xs={8}>
+        <Grid style={{ zIndex: "2",margin: "5% 0" }} item lg={3} md={5} xs={8}>
           {featuresDataOne.map((data, index) => {
             return (
               <section className={Images}>
@@ -32,10 +32,10 @@ const FeaturesSection = () => {
             );
           })}
         </Grid>
-        <Grid style={{ zIndex: "2" }} item lg={7} md={7} xs={8}>
+        <Grid style={{ zIndex: "2",margin: "5% 0" }} item lg={7} md={7} xs={8}>
           <FeaturesRow data={featuresDataOne} />
         </Grid>
-          <Grid   item lg={7} md={7} xs={8}>
+          <Grid  item lg={7} md={7} xs={8}>
           <FeaturesRow data={featuresDataTwo} />
         </Grid>
            <Grid item lg={3} md={4} xs={12}>
@@ -48,7 +48,7 @@ const FeaturesSection = () => {
           })}
         </Grid>
       
-        <Grid item lg={3} md={5} xs={8}>
+        <Grid style={{ zIndex: "2",margin: "5% 0" }} item lg={3} md={5} xs={8}>
           {featuresDataThree.map((data, index) => {
             return (
               <section className={Images}>
@@ -57,7 +57,7 @@ const FeaturesSection = () => {
             );
           })}
         </Grid>
-        <Grid item lg={7} md={7} xs={8}>
+        <Grid style={{ zIndex: "2",margin: "5% 0" }} item lg={7} md={7} xs={8}>
           <FeaturesRow data={featuresDataThree} />
         </Grid>
       </Grid>

@@ -10,6 +10,11 @@ export const useStyles = makeStyles((theme) => ({
     backgroundColor: MoonWhite,
     paddingTop: "30px"
   },
+  cardSec:{
+    display: "flex",
+    width: "100%",
+    flexDirection: "wrap"
+  },
   content:{
     marginTop: "40px",
     textAlign: "left",
@@ -18,6 +23,7 @@ export const useStyles = makeStyles((theme) => ({
       marginTop: "0px",
     },
   },
+  
   image:{
     [breakpoints.down("sm")]: {
       width: "250px",

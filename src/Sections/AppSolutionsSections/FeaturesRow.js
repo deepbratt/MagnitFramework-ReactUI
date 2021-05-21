@@ -9,7 +9,7 @@ import CustomImage from "../../Components/CustomImage";
 const FeaturesRow = (props) => {
   const data = props.data;
 
-  const { cardSec, para } = useStyles();
+  const { cardSec ,para} = useStyles();
   const { supportSub } = SolutionsStyles();
 
   return (
@@ -22,7 +22,7 @@ const FeaturesRow = (props) => {
                 style={{
                   display: "flex",
                   justifyContent: "center",
-                  paddingBottom: "20px",
+                  paddingBottom: "40px",
                 }}
                 item
                 xs={12}

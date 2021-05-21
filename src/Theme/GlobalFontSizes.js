@@ -1,7 +1,7 @@
 import { createMuiTheme } from "@material-ui/core/styles";
 
 const theme = createMuiTheme();
-
+// banner heading
 theme.typography.h1 = {
   fontFamily: "Poppins",
   fontSize: "3.4375rem",
@@ -15,6 +15,7 @@ theme.typography.h1 = {
   },
 };
 
+// section heading
 theme.typography.h2 = {
   fontFamily: "Poppins",
   fontSize: "2.1875rem", // 35px
@@ -29,19 +30,21 @@ theme.typography.h2 = {
   },
 };
 
+// special headings
 theme.typography.h3 = {
   fontFamily: "Poppins",
   fontSize: "1.5rem",
   fontWeight: 600,
   lineHeight: "39.12px",
   [theme.breakpoints.down("md")]: {
-    fontSize: "1.75rem",
+    fontSize: "1.255rem",
   },
   [theme.breakpoints.down("sm")]: {
-    fontSize: "1.75rem",
+    fontSize: "1.125rem",
   },
 };
 
+// cards small headings/title
 theme.typography.h4 = {
   fontFamily: "Poppins",
   fontSize: "1.5rem",
@@ -78,6 +81,7 @@ theme.typography.h6 = {
   },
 };
 
+// 18px
 theme.typography.subtitle1 = {
   fontFamily: "Poppins",
   fontSize: "1.375rem", // 22px
@@ -97,10 +101,13 @@ theme.typography.subtitle2 = {
   fontWeight: 500,
   lineHeight: "29.34px",
   [theme.breakpoints.down("sm")]: {
-    fontSize: "1rem", //16px
+    fontSize: "0.875rem", //14px
+    lineHeight: "20px", 
+
   },
 };
 
+// 18px text
 theme.typography.body1 = {
   fontFamily: "Poppins",
   fontSize: "1.125rem",
@@ -114,6 +121,8 @@ theme.typography.body1 = {
   },
 };
 
+
+// 16px
 theme.typography.body2 = {
   fontFamily: "Poppins",
   fontSize: "1rem", // 16px

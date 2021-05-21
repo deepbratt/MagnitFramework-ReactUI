@@ -30,7 +30,8 @@ const Solutions = () => {
               backgroundColor: whiteColor,
               padding: ".3rem 1.9rem",
               color: blackColor,
-              // borderRadius: "0px"
+              borderRadius: "5px",
+              marginTop: "20px"
             }}
             variant="contained"
             size={Breakpoints()}
