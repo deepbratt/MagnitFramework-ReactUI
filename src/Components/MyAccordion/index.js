@@ -62,7 +62,7 @@ const MyAccordion = () => {
             aria-controls={item.ariaControl}
             id={item.ariaId}
           >
-            <Typography variant="caption">{item.summary}</Typography>
+            <Typography variant="h6">{item.summary}</Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography variant="body2">{item.detail}</Typography>

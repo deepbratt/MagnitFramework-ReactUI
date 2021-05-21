@@ -75,7 +75,7 @@ const Footer = () => {
 
         <Grid item xs={12} md={4} lg={2}>
           <div className={section}>
-            <Typography align="left" gutterBottom variant="h5">
+            <Typography align="left" gutterBottom variant="h6">
               {addressSection.title}
             </Typography>
             {addressSection.address.map((location, index) => (

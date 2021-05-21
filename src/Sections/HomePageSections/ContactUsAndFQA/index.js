@@ -22,7 +22,7 @@ const ContactUsAndFQA = () => {
               <CardContent className={content}>
                 <ContactUsForm
                   className={form}
-                  captionColor="#376AED"
+                  captionColor="navy"
                   styles={label}
                   color="white"
                   heading="Contact Us"
