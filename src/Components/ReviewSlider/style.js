@@ -20,6 +20,7 @@ const ReviewSliderStyles = makeStyles((theme) => ({
       padding: "10px",
       margin: "5px",
     },
+  
   },
   avatar: {
     display: "flex",
@@ -36,14 +37,9 @@ const ReviewSliderStyles = makeStyles((theme) => ({
     },
   },
   content: {
-    "& > p": {
+    "& > body1": {
       color:Mirage,
-      [theme.breakpoints.down("md")]: {
-        fontSize: p.lg,
-      },
-      [theme.breakpoints.down("sm")]: {
-        fontSize: p.sm,
-      },
+      fontWeight:"normal",
     },
   },
 

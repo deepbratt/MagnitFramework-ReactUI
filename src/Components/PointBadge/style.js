@@ -54,12 +54,13 @@ const PointBadgeStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     textAlign: "left",
-    "& > p": {
-      color:darkSilver,
+    "& > subtitle1": {
+      color:Mirage,
+      fontWeight:600,
     },
-    "& > h3": {
-    color:Mirage,
- 
+    "& > subtitle2" : {
+      color:darkSilver,
+fontWeight:300
     },
   },
   contentRight: {
@@ -67,14 +68,14 @@ const PointBadgeStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    "& > p": {
-
-      color:darkSilver,
-    
-    },
-    "& > h3": {
+    "& > subtitle1" : {
       color:Mirage,
-
+      fontWeight:600,
+    },
+   
+    "& > subtitle2" : {
+      color:darkSilver,
+fontWeight:"normal"
     },
   },
 }));
