@@ -5,7 +5,7 @@ const PointBadgeStyles = makeStyles((theme) => ({
   vertical: {
     display: "flex",
     flexDirection: "column",
-    justifyContent: "center",
+    justifyContent: "end",
     height: "100%",
     margin: "15px",
     zIndex: 1,
@@ -56,7 +56,6 @@ const PointBadgeStyles = makeStyles((theme) => ({
     textAlign: "left",
     "& > p": {
       color:darkSilver,
-  
     },
     "& > h3": {
     color:Mirage,
