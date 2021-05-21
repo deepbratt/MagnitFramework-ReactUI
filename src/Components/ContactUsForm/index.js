@@ -28,7 +28,7 @@ const ContactUsForm = (props) => {
 
   return (
     <>
-      <SectionHeading header={props.heading} />
+      <SectionHeading color={`${props.color}`} header={props.heading} />
       <Typography variant="subtitle2" color="textSecondary" component="h5">
         {subHeading}
       </Typography>
@@ -94,8 +94,15 @@ const ContactUsForm = (props) => {
           multiline
         />
         <div className={privacyPolicy}>
-          <InfoOutlinedIcon fontSize="medium" />
-          <Typography color="textSecondary" variant="caption">
+          <InfoOutlinedIcon
+            fontSize="medium"
+            style={{ color: props.captionColor }}
+          />
+          <Typography
+            style={{ color: props.captionColor }}
+            variant="caption"
+            component="p"
+          >
             {privacy}
           </Typography>
         </div>

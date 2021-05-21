@@ -2,7 +2,7 @@ import PointList from "../../Components/PointBadge/PointList";
 import Section from "../Section";
 import { Typography } from "@material-ui/core";
 import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
-import { webDevServicesData as servicesData } from "./webDevServicesData";
+import { OurExpertEngineers, webDevServicesData as servicesData } from "./webDevServicesData";
 import { whyHireData as hireUsData } from "./whyHireData";
 import { Colors } from "../../Theme/color.constants";
 import Banner from "../../Components/Banner";
@@ -79,7 +79,7 @@ const Services = () => {
         />
         <Section title={ServicesSectionTitle} highlightWords={1}>
           <section style={{ marginBottom: "10px" }}>
-            <Heading5 subTitle="Our expert engineers directly translate ideas and designs into responsive front-end interfaces that pioneer accessibility, ease-of-use, and performance towards your audiences." />
+            <Heading5 subTitle={OurExpertEngineers}/>
           </section>
           <PointList data={servicesData} horizontal={false} />
         </Section>

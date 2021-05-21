@@ -17,7 +17,7 @@ const FeaturesSection = () => {
     <>
       <Grid justify="center" container>
         <Grid style={{ margin: "5% 0%" }} item lg={12} md={12} xs={12}>
-            <Typography variant="h4" color="inherit">
+            <Typography variant="h2" color="inherit">
               <span className={underlined}>{heading}</span>
             </Typography>
         </Grid>
