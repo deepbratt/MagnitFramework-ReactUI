@@ -12,6 +12,7 @@ import {
 import useStyles from "./style";
 import Rating from "@material-ui/lab/Rating";
 import play from "../../../assets/Testimonials/play.png";
+import VideosData from "../../../Utils/Constants/Language/en/TestimonialVideos";
 const VideoCard = ({ Img, detail, avatar, name, date }) => {
   const {
     cardRoot,
@@ -26,14 +27,17 @@ const VideoCard = ({ Img, detail, avatar, name, date }) => {
   } = useStyles();
 
   return (
-    <Grid  className={cardRoot}>
+    <>
+    {VideosData.map((a)=>{
+      return(
+        <Grid  xs={12} sm={4} md={4} lg={3} className={cardRoot} key={a.id}>
     <Grid>
       <CardHeader
-        avatar={<img src={avatar} alt="s" className={avatarImg} />}
-        title={<Typography variant="subtitle1" className={cardTitle}>{name}</Typography>}
+        avatar={<img src={a.Avatar} alt="s" className={avatarImg} />}
+        title={<Typography variant="h5"  className={cardTitle}>{a.name}</Typography>}
         action={
           <Typography variant="body2" className={carddate}>
-            {date}
+            {a.date}
           </Typography>
         }
         subheader={
@@ -48,7 +52,7 @@ const VideoCard = ({ Img, detail, avatar, name, date }) => {
         alt="Contemplative Reptile"
         height="140"
         className={cardImage}
-        image={Img}
+        image={a.Img}
         title="Contemplative Reptile"
       />
       <div className={playBtn}>
@@ -57,13 +61,17 @@ const VideoCard = ({ Img, detail, avatar, name, date }) => {
       </Grid>
       <Grid>
       <CardContent>
-        <Typography variant="h5" className={cardpara}>
-          {detail}
+        <Typography variant="body1"  className={cardpara}>
+          {a.para}
         </Typography>
       </CardContent>
       </Grid>
       
     </Grid>
+      );
+    })};
+  </>
+    
   );
 };
 export default VideoCard;
