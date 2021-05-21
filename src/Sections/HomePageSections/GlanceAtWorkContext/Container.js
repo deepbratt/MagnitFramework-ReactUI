@@ -45,7 +45,7 @@ const Container = ({backColor}) => {
                 <Grid item className={devSec}>
                   <CustomImage width="250px" src={image1} alt=""/>
                   <Grid item className={cardContent}>
-                  <Typography variant="h4" gutterBottom>
+                  <Typography variant="h5" gutterBottom>
                    {subtitleOne}
                   </Typography>
 
