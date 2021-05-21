@@ -19,7 +19,7 @@ const HowItWorksContext = () => {
 
       <Grid container className={root}>
         <Grid item lg={12} xs={12}>
-            <Typography variant="h4" color="inherit">
+            <Typography variant="h2" color="inherit">
               <span className={underlined}>{stairCaseHeading}</span>
             </Typography>
 
@@ -27,7 +27,7 @@ const HowItWorksContext = () => {
         <Grid item style={{ paddingBottom: "20px" }} className={cardSec}>
           {StairCaseData.map((data, index) => {
             return (
-              <Card style={{ marginTop: data.margin }} className={card2}>
+              <Card style={{ marginTop: data.margin ,}} className={card2}>
                 <CardContent style={{ padding: "0px" }}>
                   <Grid item className={image}>
                     <CustomImage src={data.img} alt="image" />

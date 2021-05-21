@@ -1,8 +1,7 @@
 import React from "react";
 import { useStyles } from "./mainStyles";
-import { Card, CardContent, Grid } from "@material-ui/core";
+import { Card, CardContent, Grid, Typography } from "@material-ui/core";
 import Heading from "../../ContainerStructure/Headings/Heading4";
-import Paragraph from "../../ContainerStructure/Headings/Paragraphs/Paragraph";
 import { MainData } from "../../Utils/Constants/Language/AboutUsData";
 import BreadCrumb from "../../Components/BreadCrumb";
 import CustomImage from "../../Components/CustomImage";
@@ -34,7 +33,9 @@ const AboutMainSection = (props) => {
                 <section className={paragraphStyle}>
                   {paragraph &&
                     paragraph.map((text, index) => (
-                      <Paragraph key={index} para={text} />
+                      <Typography key={index} color="textSecondary" variant="subtitle2">
+                        {text}
+                      </Typography>
                     ))}
                 </section>
               </CardContent>

@@ -41,7 +41,6 @@ export const useStyles = makeStyles((theme) => ({
     width: "100%",
     flexFlow: "wrap",
     justifyContent: "center",
-    paddingBottom: "20px",
   },
   card: {
     backgroundColor: whiteColor,

@@ -31,7 +31,7 @@ export const useStyles = makeStyles((theme) => ({
     transition: "all .25s linear",
     margin: "20px",
     boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
-    [breakpoints.down("sm")]: {
+    [breakpoints.down("md")]: {
       width: "70%",
   
     },
