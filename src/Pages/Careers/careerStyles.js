@@ -39,7 +39,7 @@ fontWeight:"normal"
     },
   },
   para:{
-    marginTop:".5rem",
+    margin:".5rem 0rem",
     "& > body1" : {
       color:darkSilver,
 fontWeight:"normal"
