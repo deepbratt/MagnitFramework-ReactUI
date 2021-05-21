@@ -18,7 +18,7 @@ export const MainData = {
 };
 
 export const Data = {
-  title: "Why Work ",
+  title: "Why Work /with us?",
   subTitle: "with us?",
 };
 
