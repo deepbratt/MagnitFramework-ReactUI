@@ -34,7 +34,7 @@ const Solutions = () => {
         </Section>
         <Section title={benefitsHeading}>
         <Grid item lg={12} md={12} xs={12}>
-          <PointList data={benefitsData} horizontal={true} />
+          <PointList data={benefitsData} horizontal={true} lgBreakpoint={6}/>
         </Grid>
         </Section>
         <Grid item lg={12} md={12} xs={12}>

@@ -36,7 +36,7 @@ const Container = () => {
         </Grid>
       </Grid> */}
       <Section title={"Why Partner /with Us?"}>
-        <PointList data={PrimaryArray} horizontal={true} />
+        <PointList data={PrimaryArray} horizontal={true} lgBreakpoint={6}/>
       </Section>
     </>
   );
