@@ -3,6 +3,7 @@ import { createMuiTheme } from "@material-ui/core/styles";
 const theme = createMuiTheme();
 // banner heading
 theme.typography.h1 = {
+  fontFamily: "Poppins",
   fontSize: "3.4375rem",
   fontWeight: 600,
   lineHeight: "71.77px",
@@ -16,6 +17,7 @@ theme.typography.h1 = {
 
 // section heading
 theme.typography.h2 = {
+  fontFamily: "Poppins",
   fontSize: "2.1875rem", // 35px
   fontWeight: 600,
   lineHeight: "57.05px",
@@ -30,7 +32,8 @@ theme.typography.h2 = {
 
 // special headings
 theme.typography.h3 = {
-  fontSize: "1.5rem", // 24px
+  fontFamily: "Poppins",
+  fontSize: "1.5rem",
   fontWeight: 600,
   lineHeight: "39.12px",
   [theme.breakpoints.down("md")]: {
@@ -43,6 +46,7 @@ theme.typography.h3 = {
 
 // cards small headings/title
 theme.typography.h4 = {
+  fontFamily: "Poppins",
   fontSize: "1.5rem",
   fontWeight: 600,
   lineHeight: "39.12px",
@@ -55,6 +59,7 @@ theme.typography.h4 = {
 };
 
 theme.typography.h5 = {
+  fontFamily: "Poppins",
   fontSize: "1.25rem", // 20px
   fontWeight: 500,
   lineHeight: "30px",
@@ -67,6 +72,7 @@ theme.typography.h5 = {
 };
 
 theme.typography.h6 = {
+  fontFamily: "Poppins",
   fontSize: "1rem",
   fontWeight: 500,
   lineHeight: "29.34px",
@@ -77,6 +83,7 @@ theme.typography.h6 = {
 
 // 18px
 theme.typography.subtitle1 = {
+  fontFamily: "Poppins",
   fontSize: "1.375rem", // 22px
   fontWeight: 500,
   lineHeight: "29.34px",
@@ -89,8 +96,9 @@ theme.typography.subtitle1 = {
 };
 
 theme.typography.subtitle2 = {
-  fontSize: "1rem", // 16px
-  fontWeight: 400,
+  fontFamily: "Poppins",
+  fontSize: "1.25rem", // 20px
+  fontWeight: 500,
   lineHeight: "29.34px",
   [theme.breakpoints.down("sm")]: {
     fontSize: "0.875rem", //14px
@@ -101,6 +109,7 @@ theme.typography.subtitle2 = {
 
 // 18px text
 theme.typography.body1 = {
+  fontFamily: "Poppins",
   fontSize: "1.125rem",
   fontWeight: 500,
   lineHeight: "29.34px",
@@ -115,6 +124,7 @@ theme.typography.body1 = {
 
 // 16px
 theme.typography.body2 = {
+  fontFamily: "Poppins",
   fontSize: "1rem", // 16px
   fontWeight: 300,
   lineHeight: "29.36px",
@@ -126,6 +136,7 @@ theme.typography.body2 = {
 };
 
 theme.typography.caption = {
+  fontFamily: "Poppins",
   fontSize: "1rem", // 16px
   fontWeight: 500,
   lineHeight: "29.34px",
@@ -136,6 +147,7 @@ theme.typography.caption = {
 };
 
 theme.typography.button = {
+  fontFamily: "Poppins",
   fontSize: "1.125rem", // 18px
   fontWeight: 500,
   lineHeight: "32.34px",

@@ -12,7 +12,7 @@ export const menuItems = {
   ],
   Company: [
     {
-      title: "About us",
+      title: "About Us",
       path: "/about",
     },
     {

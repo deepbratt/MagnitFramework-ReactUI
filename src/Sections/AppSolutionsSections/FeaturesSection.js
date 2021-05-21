@@ -1,5 +1,6 @@
 import React from "react";
 import { Grid, Typography } from "@material-ui/core";
+import {useStyles} from "./useStyles"
 import {
   heading,
   featuresDataOne,
@@ -12,7 +13,8 @@ import { SolutionsStyles } from "../../Pages/AppSolutionsPage/SolutionsStyles";
 import { THEME } from "../../ContainerStructure/Headings/headingStyles";
 
 const FeaturesSection = () => {
-  const { Images, img, underlined } = SolutionsStyles();
+  const { Images, img } = SolutionsStyles();
+  const {underlined} = useStyles()
   return (
     <>
       <Grid justify="center" container>
