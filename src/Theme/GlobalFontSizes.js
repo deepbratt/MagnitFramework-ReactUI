@@ -30,14 +30,14 @@ theme.typography.h2 = {
 
 // special headings
 theme.typography.h3 = {
-  fontSize: "1.5rem",
+  fontSize: "1.5rem", // 24px
   fontWeight: 600,
   lineHeight: "39.12px",
   [theme.breakpoints.down("md")]: {
-    fontSize: "1.75rem",
+    fontSize: "1.255rem",
   },
   [theme.breakpoints.down("sm")]: {
-    fontSize: "1.75rem",
+    fontSize: "1.125rem",
   },
 };
 
@@ -89,11 +89,13 @@ theme.typography.subtitle1 = {
 };
 
 theme.typography.subtitle2 = {
-  fontSize: "1.25rem", // 20px
-  fontWeight: 500,
+  fontSize: "1rem", // 16px
+  fontWeight: 400,
   lineHeight: "29.34px",
   [theme.breakpoints.down("sm")]: {
-    fontSize: "1rem", //16px
+    fontSize: "0.875rem", //14px
+    lineHeight: "20px", 
+
   },
 };
 
