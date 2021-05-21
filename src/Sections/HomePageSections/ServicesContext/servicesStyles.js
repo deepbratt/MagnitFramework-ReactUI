@@ -18,7 +18,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   card: {
     display: "flex",
-    margin: "4px",
+    margin: "0px",
     flexDirection: "column",
     border: `solid 1px ${whiteColor}`,
     alignItems: "center",

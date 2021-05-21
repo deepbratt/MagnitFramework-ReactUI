@@ -30,11 +30,10 @@ const Services = () => {
             </Typography>
           </MuiThemeProvider>
         </section>
-        
-        <Grid container className={cardSec}>
+        <section className={cardSec}>
           <Content data={Array} />
-        </Grid>
-       
+        </section>
+        
        
       </Grid>
     </>

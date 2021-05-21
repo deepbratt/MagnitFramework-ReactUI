@@ -24,7 +24,7 @@ export const useStyles = makeStyles((theme) => ({
   card: {
     paddingTop: "20px",
     width: "25%",
-    height: "auto",
+    height: "fit-content",
     display: "flex",
     flexDirection: "column",
     alignItems: "left",
@@ -58,7 +58,6 @@ cardContent: {
   paddingLeft: "20px",
   color: whiteColor,
   padding: "20px",
-  justifyContent:"flex-end"
 
 },
 seeMore:{
