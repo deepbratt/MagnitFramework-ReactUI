@@ -4,6 +4,7 @@ import Img3 from "../../../../assets/Pricing/Img3.png"
 import Img4 from "../../../../assets/Pricing/Img4.png"
 import checked from "../../../../assets/Pricing/checked.png"
 import icon from "../../../../assets/Pricing/Path.png"
+import pattern from "../../../../assets/Pricing/Pattern.png"
 import {Colors} from "../../../../Theme/color.constants"
 
 
@@ -48,6 +49,7 @@ export const PricingArray = [{
 {
     color1: mint,
     color2: darkMint,
+    Pattern: pattern,
     Img: Img3,
     price: "$100",
     span: "/month",

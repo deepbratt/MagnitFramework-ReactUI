@@ -3,9 +3,9 @@ import useStyles from "./useStyles";
 import { Grid, Typography, List, ListItem } from "@material-ui/core";
 import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
-
 const PricingContext = ({ data }) => {
   const { wrapper, box, price, list, button , Img,span} = useStyles();
+
   return (
     <> 
  
@@ -49,7 +49,9 @@ const PricingContext = ({ data }) => {
                   alt="img"
                   src={content.Img}
                 />
-
+                <Grid item>
+               {content.Icon ? <img alt="img" style={{position: "absolute",right: "0px",top: "0px"}} src={content.Pattern} /> : null}
+                  </Grid>
                 <Grid item className={price}>
                   <Typography  variant="h2">{content.price}</Typography>
                   <Typography className={span} variant="h5">{content.span}</Typography>

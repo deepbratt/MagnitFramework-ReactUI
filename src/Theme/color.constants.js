@@ -109,7 +109,7 @@ export const Colors = {
   scooter: "#3DCAD4",
   geraldine: "#FD8882",
   sunsetOrange: "#FF554C",
-  boxShadowColor: "rgba(82, 67, 194, 0.08)",
+  boxShadowColor: "rgba(82, 67, 194, 0.40)",
   mint: "#6BDFFF",
   darkMint: "#3DACFC",
   cockTail: "#63D6FE",
