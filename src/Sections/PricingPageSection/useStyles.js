@@ -11,17 +11,19 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexFlow: "wrap",
     padding: "0% 9% 9% 9%",
-   
   },
   box: {
     boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)",
     color: whiteColor,
-    padding: "0 25px 15px 25px",
+    padding: "0 25px 18px 25px",
     transition: "transform .2s ease-out",
     "&:hover": {
       transform: "scale(1.1, 1.1) translate3d(0, 0, 0)",
       zIndex: 2,
       boxShadow: `0px 4px 100px 5px ${boxShadowColor}`,
+      [breakpoints.down("sm")]: {
+        transform: "none",
+      },
     },
     [breakpoints.down("md")]: {
       margin: "4% 4%",

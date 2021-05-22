@@ -13,7 +13,8 @@ const PricingContext = ({ data }) => {
         <Grid item className={wrapper}>
           {data.map((content, index) => {
             return (
-              <Grid
+              <Grid 
+                key={index}
                 style={{
                   background: `linear-gradient(-181.96deg ,
                      ${content.color1} -98.18%, 
