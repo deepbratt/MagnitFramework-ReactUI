@@ -14,7 +14,7 @@ const PricingContainer = () => {
   return (
     <>
 
-      <MuiThemeProvider theme={theme}>
+ 
         <Grid container>
           <Grid className={wrapper} item lg={12} md={12} xs={12}>
             <Typography variant="h2">{Heading}</Typography>
@@ -22,7 +22,7 @@ const PricingContainer = () => {
           </Grid>
         </Grid>
       <Pricing data={PricingArray} />
-      </MuiThemeProvider>
+
     </>
   );
 };
