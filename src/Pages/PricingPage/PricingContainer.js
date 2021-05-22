@@ -10,7 +10,7 @@ import {
   paragraph,
 } from "../../Utils/Constants/Language/en/PricingPageData";
 const PricingContainer = () => {
-  const { wrapper } = useStyles();
+  const { wrapper , text} = useStyles();
   return (
     <>
 
@@ -18,7 +18,7 @@ const PricingContainer = () => {
         <Grid container>
           <Grid className={wrapper} item lg={12} md={12} xs={12}>
             <Typography variant="h2">{Heading}</Typography>
-            <Typography variant="body1">{paragraph}</Typography>
+            <Typography className={text} variant="body1">{paragraph}</Typography>
           </Grid>
         </Grid>
       <Pricing data={PricingArray} />
