@@ -8,7 +8,7 @@ import Career from "../Pages/Careers/Container"
 import AppSolutions from "../Pages/AppSolutionsPage/Container"
 import OurBlogs from "../Pages/OurBlogs";
 import Quote from "../Pages/ContactUs/index"
-
+import Pricing from "../Pages/PricingPage/PricingContainer"
 const pathIds = {
   home: "home",
   blogs: "blogs",
@@ -20,7 +20,8 @@ const pathIds = {
   event: "event",
   testimonial: "/testimonial",
   appSolutions: "appSolutions",
-  requestAQuote: "requestAQuote"
+  requestAQuote: "requestAQuote",
+  pricing: "pricing"
 };
 
  const pathRouting = {
@@ -35,6 +36,7 @@ const pathIds = {
   testimonial: "/testimonial",
   appSolutions: "/app-solutions",
   requestAQuote: "/request-a-quote",
+  pricing : "/pricing"
 };
 
 const pageRoutes = {
@@ -52,11 +54,6 @@ const pageRoutes = {
     path: pathRouting.services,
     sidebarName: "Services",
     component: Services,
-  },
-  [pathIds.solutions]: {
-    path: pathRouting.solutions,
-    sidebarName: "Solutions",
-    component: Solutions,
   },
   [pathIds.careers]: {
     path: pathRouting.careers,
@@ -77,6 +74,11 @@ const pageRoutes = {
     path: pathRouting.requestAQuote,
     sidebarName: "Request a quote",
     component: Quote,
+  },
+  [pathIds.pricing]: {
+    path: pathRouting.pricing,
+    sidebarName: "Pricing",
+    component: Pricing,
   },
 };
 

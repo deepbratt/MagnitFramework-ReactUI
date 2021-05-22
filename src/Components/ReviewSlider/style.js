@@ -14,12 +14,13 @@ const ReviewSliderStyles = makeStyles((theme) => ({
   },
   root: {
     borderRadius: "10px",
-    padding: "20px",
-    margin: "20px",
+    padding: "20px 30px",
+    margin: "20px ",
     [theme.breakpoints.down("md")]: {
       padding: "10px",
       margin: "5px",
     },
+  
   },
   avatar: {
     display: "flex",
@@ -36,14 +37,9 @@ const ReviewSliderStyles = makeStyles((theme) => ({
     },
   },
   content: {
-    "& > p": {
+    "& > body1": {
       color:Mirage,
-      [theme.breakpoints.down("md")]: {
-        fontSize: p.lg,
-      },
-      [theme.breakpoints.down("sm")]: {
-        fontSize: p.sm,
-      },
+      fontWeight:"normal",
     },
   },
 

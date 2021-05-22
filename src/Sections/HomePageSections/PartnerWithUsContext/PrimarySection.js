@@ -1,5 +1,5 @@
 import React from "react";
-import { useStyles } from "./sectionStyles";
+import { useStyles } from "./useStyles";
 import { Typography, Grid } from "@material-ui/core";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import CustomImage from "../../../Components/CustomImage";
@@ -9,7 +9,7 @@ const { Mirage } = Colors;
 const PrimarySection = (props) => {
   const data = props.data;
   const classes = useStyles();
-  const { cardSec, supportSub, para } = classes;
+  const { cardSec, supportSub, para ,grid} = classes;
 
   return (
     <>
@@ -21,8 +21,8 @@ const PrimarySection = (props) => {
                 style={{
                   display: "flex",
                   justifyContent: "center",
-                  paddingBottom: "40px",
                 }}
+                className={grid}
                 item
                 xs={12}
                 lg={3}
@@ -36,14 +36,12 @@ const PrimarySection = (props) => {
                   <CustomImage alt="icon" src={text.icon} />
                 </Grid>
               </Grid>
-              <MuiThemeProvider theme={THEME}>
                 <Grid className={para} item xs={12} lg={9}>
                   <Typography variant="h5">{text.title}</Typography>
                   <Typography paragraph={true} style={{ color: Mirage }}>
                     {text.desc}
                   </Typography>
                 </Grid>
-              </MuiThemeProvider>
             </Grid>
           </Grid>
         );

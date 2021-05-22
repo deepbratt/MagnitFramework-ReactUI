@@ -5,7 +5,7 @@ const PointBadgeStyles = makeStyles((theme) => ({
   vertical: {
     display: "flex",
     flexDirection: "column",
-    justifyContent: "center",
+    justifyContent: "end",
     height: "100%",
     margin: "15px",
     zIndex: 1,
@@ -54,17 +54,13 @@ const PointBadgeStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     textAlign: "left",
-    "& > p": {
-      color: darkSilver,
-      [theme.breakpoints.down("sm")]: {
-        fontSize: "10px",
-      },
+    "& > subtitle1": {
+      color:Mirage,
+      fontWeight:600,
     },
-    "& > h3": {
-      color: Mirage,
-      [theme.breakpoints.down("sm")]: {
-        fontSize: "12px",
-      },
+    "& > subtitle2" : {
+      color:darkSilver,
+fontWeight:300
     },
   },
   contentRight: {
@@ -72,17 +68,14 @@ const PointBadgeStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    "& > p": {
-      color: darkSilver,
-      [theme.breakpoints.down("sm")]: {
-        fontSize: "10px",
-      },
+    "& > subtitle1" : {
+      color:Mirage,
+      fontWeight:600,
     },
-    "& > h3": {
-      color: Mirage,
-      [theme.breakpoints.down("sm")]: {
-        fontSize: "12px",
-      },
+   
+    "& > subtitle2" : {
+      color:darkSilver,
+fontWeight:"normal"
     },
   },
 }));

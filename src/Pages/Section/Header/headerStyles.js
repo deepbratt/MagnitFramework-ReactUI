@@ -20,13 +20,10 @@ export const THEME = createMuiTheme({
     },
   },
   typography: {
-    fontSize: 15,
     // lineHeight: 1.5,
     letterSpacing: 0.32,
     fontFamily: "Poppins",
-    h5: {
-      fontWeight: 600,
-    },
+
     button: {
       textTransform: "none",
     },
@@ -68,20 +65,11 @@ export const useStyles = makeStyles((theme) => ({
     paddingRight: theme.spacing(2),
   },
   toolbar: {
-    fontSize: "16px",
-    display: "flex",
-    // justifyContent: "space-around",
-  },
-  toolbarSub: {
-    fontSize: "16px",
     display: "flex",
     // justifyContent: "space-around",
   },
   list: {
-    fontSize: "16px",
     display: "flex",
-    fontWeight: "800",
-    fontFamily: "Poppins', sans-serif",
     whiteSpace: "nowrap",
     justifyContent: "center",
     alignItems: "center",
@@ -105,11 +93,11 @@ export const useStyles = makeStyles((theme) => ({
     color: blackColor,
   },
   logo: {
-    width: "7rem",
+    width: "9rem",
     paddingLeft: "24px",
   },
   menu: {
-    width: "250px",
+    width: "300px",
     border: `1px solid ${Ash}`,
     display: "flex",
     justifyContent: "center",

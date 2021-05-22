@@ -17,6 +17,7 @@ import VideosData, {
   Testmonial,
 } from "../../Utils/Constants/Language/en/TestimonialVideos";
 import CustomButton from "../../Components/CustomButton";
+import Section from "../Section";
 
 // import Section from '../Section';
 function Testimonials() {
@@ -25,6 +26,7 @@ function Testimonials() {
     root,
     imageWrapper,
     content,
+    textColor,
     cardSec,
     underlined,
     paragraph,
@@ -50,16 +52,15 @@ function Testimonials() {
         backColor={linearBackground}
         breadCrumb={<BreadCrumb links={breadCrumData} />}
       >
-        <Typography variant="h2" gutterBottom>
-          Our Testimonials
+        <Typography variant="h1"  gutterBottom className={textColor}>
+         {Testmonial}
         </Typography>
-        <Typography variant="h6" gutterBottom>
-          We let our work speak for us. With a trust of 200+ clients and 96%
-          user contentment, we strive to be synonymous with satisfaction.
+        <Typography variant="body1" gutterBottom className={textColor}>
+         {subTitle}
         </Typography>
       </Banner>
       <Grid xs={12}>
-        <Card>
+       
           <CardContent className={cardSec}>
             <section className={underlined}>
               <Heading title={Testmonial} />
@@ -68,30 +69,16 @@ function Testimonials() {
               <Paragraph para={ClientsHaveToSay} />
             </section>
           </CardContent>
-        </Card>
       </Grid>
       <Grid
-        xs={12}
         container
         direction="row"
         justify="center"
-        className={cardRoot}
       >
-        {VideosData.map((a) => {
-          return (
-            <Grid xs={12} sm={6} md={4} key={a.id}>
-              <VideoCard
-                Img={a.Img}
-                avatar={a.Avatar}
-                name={a.name}
-                detail={a.para}
-                date={a.date}
-              />
-            </Grid>
-          );
-        })}
+              <VideoCard/>
+               
       </Grid>
-      
+    
       <Grid xs={12} container alignItems="center" justify="center" className={flex}>
       <CustomButton type="submit" color="primary" variant="contained">
           <Typography

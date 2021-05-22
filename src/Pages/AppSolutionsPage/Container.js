@@ -8,6 +8,8 @@ import StairCaseContext from "../../Sections/AppSolutionsSections/StairCaseSecti
 import AdminContext from "../../Sections/AppSolutionsSections/AdminContext"
 import CommentSection from "../../Components/CommentSection";
 import Section from "../../Pages/Section"
+import PointList from "../../Components/PointBadge/PointList";
+import { benefitsHeading, benefitsData } from "../../Utils/Constants/Language/en/SolutionsPageData";
 const Solutions = () => {
  const {root} = ServicesSectionStyles()
   return (
@@ -30,9 +32,9 @@ const Solutions = () => {
         <StairCaseContext/>
         </Grid>
         </Section>
-        <Section>
+        <Section title={benefitsHeading}>
         <Grid item lg={12} md={12} xs={12}>
-        <WhyUsContainer/>
+          <PointList data={benefitsData} horizontal={true} lgBreakpoint={6}/>
         </Grid>
         </Section>
         <Grid item lg={12} md={12} xs={12}>

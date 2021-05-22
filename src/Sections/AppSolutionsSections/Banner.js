@@ -3,6 +3,8 @@ import { Typography , Button} from "@material-ui/core";
 import Breakpoints from "../../Theme/theme.breakpoints";
 import Banner from "../../Components/Banner/index";
 import { Colors } from "../../Theme/color.constants";
+import theme from "../../Theme/GlobalFontSizes"
+import { MuiThemeProvider } from "@material-ui/core/styles";
 import {
   bannerHeading,
   bannerParagraph,
@@ -28,15 +30,18 @@ const BannerSection = () => {
   ];
   return (
     <>
+    <MuiThemeProvider theme={theme}>
       <Banner image={bannerImage} backColor={linearBackground}>
         <div className={breadCrumbStyles}>
           <BreadCrumb links={breadcrumbData} />
         </div>
         <section style={{ marginTop: "30px" }}>
-          <Typography variant="h2" gutterBottom>
+          <Typography variant="h1" gutterBottom>
             {bannerHeading}
           </Typography>
-          <Paragraph para={bannerParagraph} />
+          <Typography variant="h5" gutterBottom>
+          {bannerParagraph}
+          </Typography>
           <section style={{ marginTop: "15px" }}>
           <CustomButton
               variant="contained"
@@ -48,6 +53,7 @@ const BannerSection = () => {
           </section>
         </section>
       </Banner>
+      </MuiThemeProvider>
     </>
   );
 };

@@ -7,25 +7,24 @@ const { BlueRibbon, whiteColor } = Colors;
 const breakpoints = createBreakpoints({});
 
 export const THEME = createMuiTheme({
-  overrides: {
-    MuiButton: {
-      root: {
-        borderRadius: 0,
-        color: "black",
-        fontFamily: "Poppins",
-        boxShadow: "none",
-      },
-    },
-    MuiTypography: {
-      h5: {
-        fontFamily: "Poppins",
-        fontWeight: "bolder",
-        fontSize: "16px",
-        textAlign: "center",
-        whiteSpace: "nowrap",
-      },
-    },
-  },
+  // overrides: {
+  //   MuiButton: {
+  //     root: {
+  //       borderRadius: 0,
+  //       color: "black",
+  //       fontFamily: "Poppins",
+  //       boxShadow: "none",
+  //     },
+  //   },
+  //   MuiTypography: {
+  //     h5: {
+  //       fontFamily: "Poppins",
+  //       fontWeight: "bolder",
+  //       textAlign: "center",
+  //       whiteSpace: "nowrap",
+  //     },
+  //   },
+  // },
 });
 
 export const useStyles = makeStyles((theme) => ({
@@ -42,7 +41,6 @@ export const useStyles = makeStyles((theme) => ({
     width: "100%",
     flexFlow: "wrap",
     justifyContent: "center",
-    paddingBottom: "20px",
   },
   card: {
     backgroundColor: whiteColor,

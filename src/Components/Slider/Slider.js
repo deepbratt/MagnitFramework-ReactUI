@@ -15,6 +15,7 @@ import Breakpoints from "../../Theme/theme.breakpoints";
 import { Colors } from "../../Theme/color.constants";
 import CustomImage from "../CustomImage";
 import CustomButton from "../CustomButton";
+import theme from "../../Theme/GlobalFontSizes"
 
 const Slider = ({
   value,
@@ -38,6 +39,7 @@ const Slider = ({
     listItem
   } = classes;
   return (
+    <MuiThemeProvider theme={theme}>
     <Grid
       container
       className={sec}
@@ -59,7 +61,7 @@ const Slider = ({
         lg={9}
         className={gridText}
       >
-        <MuiThemeProvider theme={heading}>
+        
           <Typography variant="h1" >
             {headingOne} <br />
             {headingTwo} <br />
@@ -69,7 +71,7 @@ const Slider = ({
           <List>
             {data.map((text, index) => (
               <ListItem className={listItem} >
-                <Typography  key={index} variant="h5">
+                <Typography  key={index} variant="h4">
                   <CheckIcon className={value === "LIGHT" ? tick : tickSub} />
                   {text}
                 </Typography>
@@ -77,16 +79,16 @@ const Slider = ({
             ))}
           </List>
           {/* </section> */}
-        </MuiThemeProvider>
+
         <CustomButton
-            // style={{
-            //   // textTransform: "none",
-            //   backgroundColor: Harlequin,
-            //   // borderRadius:"5px"
-            // }}
-            // variant="contained"
+            style={{
+              // textTransform: "none",
+              backgroundColor: Harlequin,
+              // borderRadius:"5px"
+            }}
+            variant="contained"
             size={Breakpoints()}
-            color="primary"
+         
           >
             {text}
           </CustomButton>
@@ -107,6 +109,7 @@ const Slider = ({
         <Grid item xs={12} md={4} lg={1}></Grid>
       </Hidden> */}
     </Grid>
+    </MuiThemeProvider>
   );
 };
 

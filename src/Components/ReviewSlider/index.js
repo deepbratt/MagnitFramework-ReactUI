@@ -3,17 +3,13 @@ import ReviewCard from "./ReviewCard";
 import ReviewSliderStyles from "./style";
 import prev from "../../assets/services/prev.png";
 import next from "../../assets/services/next.png";
-import Avatar7 from "../../assets/services/Avatar7.png";
-import { Paper } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import { reviewSliderText } from "../../Utils/Constants/Language";
 import CustomImage from "../CustomImage";
 
-const slideArr = 
-    reviewSliderText.map((a)=>{
-      return  <ReviewCard cardData={a} />
-    })
-  
-;
+const slideArr = reviewSliderText.map((a) => {
+  return <ReviewCard cardData={a} />;
+});
 
 const ReviewSlider = ({ slides, showArrows, showDots }) => {
   const visible = !showDots ? "hidden" : "visible";
@@ -102,7 +98,9 @@ const ReviewSlider = ({ slides, showArrows, showDots }) => {
     >
       {slides.map((slide, i) => {
         return (
-          <Paper
+          <Grid
+            container
+            justify="center"
             key={i}
             elevation={0}
             style={{
@@ -113,7 +111,7 @@ const ReviewSlider = ({ slides, showArrows, showDots }) => {
             }}
           >
             {slide}
-          </Paper>
+          </Grid>
         );
       })}
     </Carousel>

@@ -16,7 +16,7 @@ const {
   persianGreen,
   yellowOrange,
 } = Colors;
-
+export const OurExpertEngineers="Our expert engineers directly translate ideas and designs into responsive front-end interfaces that pioneer accessibility, ease-of-use, and performance towards your audiences."
 export const webDevServicesData = [
   {
     color: skyblue,
@@ -61,3 +61,5 @@ export const webDevServicesData = [
       "To optimize performance of your web application we resolve issues and bugs in your source code in a cost-effective way.",
   },
 ];
+export const WeHireTheMost="We hire the most industry-specific-skilled developers that fit your budget";
+export const  WeProvideExceptional=`We provide exceptional professional services in research, strategy, user experience, design, and full stack engineering to digitally transform ideas into reality.`;

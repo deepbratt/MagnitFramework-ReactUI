@@ -27,10 +27,10 @@ const Banner = ({
         style={{ background: linearBackground }}
         alignItems="center"
       >
-        <Grid item xs={12} lg={6} md={12} className={content}>
+        <Grid item xs={12} md={6} lg={6}  className={content}>
           {children}
         </Grid>
-        <Grid style={{ position: "relative" }} item lg={5} xs={12}>
+        <Grid style={{ position: "relative" }} item   xs={12} lg={5} md={4}>
           <CustomImage
             className={patternPosition}
             src={StarFishPinkPattern}

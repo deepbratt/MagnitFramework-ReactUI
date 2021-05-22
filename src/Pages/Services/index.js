@@ -2,7 +2,7 @@ import PointList from "../../Components/PointBadge/PointList";
 import Section from "../Section";
 import { Typography } from "@material-ui/core";
 import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
-import { webDevServicesData as servicesData } from "./webDevServicesData";
+import { OurExpertEngineers, webDevServicesData as servicesData, WeHireTheMost, WeProvideExceptional } from "./webDevServicesData";
 import { whyHireData as hireUsData } from "./whyHireData";
 import { Colors } from "../../Theme/color.constants";
 import Banner from "../../Components/Banner";
@@ -21,7 +21,7 @@ import CommentSection from "../../Components/CommentSection";
 import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
 import Heading5 from "../../ContainerStructure/Headings/Heading5";
-
+import Breakpoints from "../../Theme/theme.breakpoints";
 const Services = () => {
   const { skyBlue, linearBackground } = Colors;
 
@@ -45,24 +45,22 @@ const Services = () => {
         backColor={linearBackground}
         breadCrumb={<BreadCrumb links={breadCrumData} />}
       >
-        <Typography variant="h2" gutterBottom className={textColor}>
-          We hire the most
-          <br />
-          industry-specific-skilled developers that fit your budget
+        <Typography variant="h1" gutterBottom className={textColor}>
+         {WeHireTheMost}
         </Typography>
         <Typography variant="h5" gutterBottom className={textColor}>
-          We provide exceptional professional services in research, strategy,
-          user experience, design, and full stack engineering to digitally
-          transform ideas into reality.
+         {WeProvideExceptional}
         </Typography>
+        <span >
         <CustomButton
-          className={bannerBtn}
           variant="contained"
-          size="small"
+          size={Breakpoints()}
           color="secondary"
         >
-          <Typography variant="buttom">Get Started</Typography>
+         Get Started
         </CustomButton>
+        </span>
+        
       </Banner>
       <div style={{ position: "relative" }}>
         <CustomImage
@@ -79,7 +77,7 @@ const Services = () => {
         />
         <Section title={ServicesSectionTitle} highlightWords={1}>
           <section style={{ marginBottom: "10px" }}>
-            <Heading5 subTitle="Our expert engineers directly translate ideas and designs into responsive front-end interfaces that pioneer accessibility, ease-of-use, and performance towards your audiences." />
+            <Heading5 subTitle={OurExpertEngineers}/>
           </section>
           <PointList data={servicesData} horizontal={false} />
         </Section>
@@ -88,7 +86,7 @@ const Services = () => {
         <OptionsTab />
       </Section>
       <Section title={WhyHireSectionTitle} highlightWords={3}>
-        <PointList data={hireUsData} horizontal={true} />
+        <PointList data={hireUsData} horizontal={true} lgBreakpoint={6}/>
       </Section>
       <Section backColor={skyBlue}>
         <GlanceSection backColor={skyBlue} />

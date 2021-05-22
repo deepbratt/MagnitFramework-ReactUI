@@ -11,8 +11,10 @@ import {
   LinearProgress,
   Menu,
   MenuItem,
+  Typography,
 } from "@material-ui/core";
 import { NavLink } from "react-router-dom";
+import theme from "../../../Theme/GlobalFontSizes"
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import SideBar from "./Sidebar/SideBar";
 import Breakpoints from "../../../Theme/theme.breakpoints";
@@ -26,12 +28,11 @@ import { menuItems } from "./MenuDropDown/Data";
 
 const Header = (props) => {
   const classes = useStyles();
-  const { Harlequin, whiteColor, Ash, WildSand } = Colors;
+  const { WildSand } = Colors;
   const {
     logo,
     list,
     listItem,
-    button,
     appbarsolid,
     link,
     root,
@@ -71,16 +72,20 @@ const Header = (props) => {
           <Hidden smDown>
             <List className={list}>
               <NavLink activeClassName={active} className={link} to="/home">
-                <MuiThemeProvider theme={THEME}>
+              <MuiThemeProvider theme={theme}>
+
+            
                   <ListItem>
-                    <ListItemText primary="Home" className={list} />
+                    <Typography variant="h5">
+                      HOME
+                    </Typography>
                   </ListItem>
-                </MuiThemeProvider>
+                  </MuiThemeProvider>
               </NavLink>
               {Object.keys(menuItems).map((item, index) => (
                 <div key={index}>
-                  <MuiThemeProvider theme={THEME}>
-                    <ListItem style={{padding:"0"}}>
+           
+                    <ListItem style={{ padding: "0" }}>
                       <Button
                         className={list}
                         onClick={(e) => handleClick(index, e)}
@@ -88,7 +93,7 @@ const Header = (props) => {
                         {item} <ExpandMoreIcon />
                       </Button>
                     </ListItem>
-                  </MuiThemeProvider>
+          
                   <StyledMenuItem
                     anchorEl={anchorEl && anchorEl[index]}
                     keepMounted
@@ -107,13 +112,17 @@ const Header = (props) => {
                         onClick={handleClose}
                         className={menu}
                       >
+                          <MuiThemeProvider theme={theme}>
                         <NavLink
                           to={menuitems.path}
                           activeClassName={active}
                           className={link}
                         >
-                          <ListItemText primary={menuitems.title} />
+                         <Typography variant="h5">
+                           {menuitems.title}
+                         </Typography>
                         </NavLink>
+                        </MuiThemeProvider>
                       </MenuItem>
                     ))}
                   </StyledMenuItem>
@@ -129,7 +138,6 @@ const Header = (props) => {
                     variant="contained"
                     size={Breakpoints()}
                     onClick={navigated}
-
                   >
                     Request A Quote
                   </CustomButton>

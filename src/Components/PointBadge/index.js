@@ -21,14 +21,14 @@ const PointBadge = ({ horizontal, data }) => {
               </section>
             </Grid>
       <Grid className={horizontal ? contentLeft : contentRight}>
-        <Typography variant="h3" gutterBottom>
+        <Typography variant="subtitle1" component="subtitle1" gutterBottom>
           {title}
         </Typography>
-        <Typography variant="subtitle2" component="p">
+        <Typography variant="subtitle2" component="subtitle2" >
           {desc}
         </Typography>
       </Grid>
-    </div>
+    </div> 
   );
 };
 

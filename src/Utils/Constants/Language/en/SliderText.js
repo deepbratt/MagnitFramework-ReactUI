@@ -1,6 +1,6 @@
 const Data = {
-  headingLineOne: "Transforming ideas",
-  headingLineTwo: "through solutions",
+  headingLineOne: "Transforming ideas to ",
+  headingLineTwo: "solutions through",
   headingLineFirstSlide: "Web Development",
   headingLineSecondSlide: "App Development",
   headingLineThirdSlide: "Software Development",
@@ -12,4 +12,3 @@ const subtTitleTwo = "Fair and transparent pricing";
 const subTitleThree = "Adaptable and innovative solutions";
 const array = [subTitle, subtTitleTwo, subTitleThree];
 export { Data, array };
-

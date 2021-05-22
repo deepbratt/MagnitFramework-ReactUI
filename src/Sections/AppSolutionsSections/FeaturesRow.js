@@ -9,7 +9,7 @@ import CustomImage from "../../Components/CustomImage";
 const FeaturesRow = (props) => {
   const data = props.data;
 
-  const { cardSec, para } = useStyles();
+  const { cardSec ,para} = useStyles();
   const { supportSub } = SolutionsStyles();
 
   return (
@@ -22,7 +22,7 @@ const FeaturesRow = (props) => {
                 style={{
                   display: "flex",
                   justifyContent: "center",
-                  paddingBottom: "20px",
+                  paddingBottom: "40px",
                 }}
                 item
                 xs={12}
@@ -38,12 +38,11 @@ const FeaturesRow = (props) => {
                   <CustomImage alt="icon" src={text.icon} />
                 </Grid>
               </Grid>
-              <MuiThemeProvider theme={THEME}>
                 <Grid className={para} item xs={12} md={6} lg={9}>
                   <Typography variant="h5">{text.title}</Typography>
-                  <Typography paragraph={true}>{text.desc}</Typography>
+                  <Typography variant="body2">{text.desc}</Typography>
                 </Grid>
-              </MuiThemeProvider>
+
             </Grid>
           </Grid>
         );

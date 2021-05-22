@@ -1,12 +1,12 @@
 import createTheme from "./theme";
 import createPalette from "@material-ui/core/styles/createPalette";
 import { Colors } from "./color.constants";
-const {Mirage,darkSilver,Harlequin}=Colors;
+const { Mirage, darkSilver, Harlequin } = Colors;
 export default createTheme({
   // Styles for Light Theme
   palette: createPalette({
     type: "light",
-  
+
     primary: {
       main: Harlequin,
       contrastText: "#fff",
@@ -35,8 +35,8 @@ export default createTheme({
     text: {
       primary: "#151b27",
       secondary: "#000000",
-      textPrimary:"#151b27",
-      textSecondary:darkSilver,
-    }
+      textPrimary: "#151b27",
+      textSecondary: "#717171",
+    },
   }),
 });
