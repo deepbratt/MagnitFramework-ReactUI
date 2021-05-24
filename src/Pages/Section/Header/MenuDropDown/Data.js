@@ -30,6 +30,7 @@ export const menuItems = {
     {
       title: "Digital Marketing",
       path: "/digital-marketing",
+      
     },
   ],
 };
