@@ -10,6 +10,10 @@ import CommentSection from "../../Components/CommentSection";
 import Section from "../../Pages/Section"
 import PointList from "../../Components/PointBadge/PointList";
 import { benefitsHeading, benefitsData } from "../../Utils/Constants/Language/en/SolutionsPageData";
+import CustomButton from "../../Components/CustomButton";
+import { Link } from "react-router-dom";
+import { DoYouWant } from "../Services/constants";
+import Breakpoints from "../../Theme/theme.breakpoints";
 const Solutions = () => {
  const {root} = ServicesSectionStyles()
   return (
@@ -37,6 +41,20 @@ const Solutions = () => {
           <PointList data={benefitsData} horizontal={true} />
         </Grid>
         </Section>
+        <Section title={DoYouWant}>
+    <span >
+        <CustomButton
+          variant="contained"
+          size={Breakpoints()}
+          color="secondary"
+          component={Link}
+          to="/request-a-quote"
+          
+        >
+       Request a Quote
+        </CustomButton>
+        </span>
+    </Section>
         <Grid item lg={12} md={12} xs={12}>
         <CommentSection/>
         </Grid>

@@ -9,6 +9,15 @@ export const menuItems = {
       title: "App Solutions",
       path: "/app-solutions",
     },
+    {
+      title: "Hire Developer",
+      path: "/hire-developer",
+    },
+    {
+      title: "Digital Marketing",
+      path: "/digital-marketing",
+      
+    },
   ],
   Company: [
     {
@@ -23,14 +32,6 @@ export const menuItems = {
       title: "Testimonials",
       path: "/testimonial",
     },
-    {
-      title: "Hire Developer",
-      path: "/hire-developer",
-    },
-    {
-      title: "Digital Marketing",
-      path: "/digital-marketing",
-      
-    },
+   
   ],
 };

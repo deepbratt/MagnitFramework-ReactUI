@@ -12,7 +12,7 @@ import {
   HiringSectionTitle,
   ServicesSectionTitle,
   WhyHireSectionTitle,
-} from "../Services/constants";
+} from "./constants";
 import OptionsTab from "../../Components/OptionsTab";
 import StarFishPattern from "../../assets/patterns/starfishBlue.png";
 import ServicesSectionStyles from "../Services/style";
