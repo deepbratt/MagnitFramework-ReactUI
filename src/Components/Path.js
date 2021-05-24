@@ -80,6 +80,10 @@ const pageRoutes = {
     sidebarName: "Pricing",
     component: Pricing,
   },
+  [pathIds.solutions]: {
+    path: pathRouting.solutions,
+    component: Solutions,
+  },
 };
 
 export { pageRoutes, pathIds, pathRouting };

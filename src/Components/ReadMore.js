@@ -8,8 +8,8 @@ const ReadMore = ({ data }) => {
   return (
     <ReadMoreReact
       text={data}
-      min={58}
-      ideal={58}
+      min={57}
+      ideal={57}
       max={100}
       readMoreText={
         <Typography className={readMore} variant="h6">
