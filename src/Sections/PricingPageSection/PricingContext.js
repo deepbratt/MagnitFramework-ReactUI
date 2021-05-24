@@ -3,12 +3,12 @@ import useStyles from "./useStyles";
 import { Grid, Typography, List, ListItem } from "@material-ui/core";
 import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
+
 const PricingContext = ({ data }) => {
   const { wrapper, box, price, list, button , Img,span} = useStyles();
 
   return (
     <> 
- 
       <Grid spacing={0} container>
         <Grid item className={wrapper}>
           {data.map((content, index) => {

@@ -8,7 +8,10 @@ import Career from "../Pages/Careers/Container"
 import AppSolutions from "../Pages/AppSolutionsPage/Container"
 import OurBlogs from "../Pages/OurBlogs";
 import Quote from "../Pages/ContactUs/index"
+import HireDeveloper from "../Pages/HireDeveloper";
+import DigitalMarketing from "../Pages/DigitalMarketing";
 import Pricing from "../Pages/PricingPage/PricingContainer"
+
 const pathIds = {
   home: "home",
   blogs: "blogs",
@@ -21,7 +24,10 @@ const pathIds = {
   testimonial: "/testimonial",
   appSolutions: "appSolutions",
   requestAQuote: "requestAQuote",
+  hireDeveloper:"hire-developer",
+  digitalMarketing:"digital-marketing",
   pricing: "pricing"
+
 };
 
  const pathRouting = {
@@ -36,7 +42,10 @@ const pathIds = {
   testimonial: "/testimonial",
   appSolutions: "/app-solutions",
   requestAQuote: "/request-a-quote",
+  hireDeveloper:"/hire-developer",
+  digitalMarketing:"/digital-marketing",
   pricing : "/pricing"
+
 };
 
 const pageRoutes = {
@@ -75,10 +84,25 @@ const pageRoutes = {
     sidebarName: "Request a quote",
     component: Quote,
   },
+  [pathIds.hireDeveloper]: {
+    path: pathRouting.hireDeveloper,
+    sidebarName: "Hire Developer",
+    component: HireDeveloper,
+  },
+  [pathIds.digitalMarketing]: {
+    path: pathRouting.digitalMarketing,
+    sidebarName: "Digital Marketing",
+    component:DigitalMarketing,
+  },
   [pathIds.pricing]: {
     path: pathRouting.pricing,
     sidebarName: "Pricing",
     component: Pricing,
+  },
+  [pathIds.solutions]: {
+    path: pathRouting.solutions,
+    sidebarName: "Solutions",
+    component: Solutions,
   },
 };
 

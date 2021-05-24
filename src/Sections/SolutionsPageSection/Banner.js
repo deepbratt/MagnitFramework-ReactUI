@@ -24,7 +24,6 @@ const BannerSection = () => {
         </Typography>
         <section style={{ marginTop: "15px" }}>
           <CustomButton
-            style={{ borderRadius: "none" }}
             variant="contained"
             size={Breakpoints()}
             color="secondary"

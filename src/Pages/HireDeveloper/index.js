@@ -3,8 +3,8 @@ import Section from "../Section";
 import { Link } from 'react-router-dom'
 import { Typography } from "@material-ui/core";
 import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
-import { OurExpertEngineers, webDevServicesData as servicesData, WeHireTheMost, WeProvideExceptional } from "./webDevServicesData";
-import { whyHireData as hireUsData } from "./whyHireData";
+import { OurExpertEngineers, webDevServicesData as servicesData, WeHireTheMost, WeProvideExceptional } from "../Services/webDevServicesData";
+import { whyHireData as hireUsData } from "../Services/whyHireData";
 import { Colors } from "../../Theme/color.constants";
 import Banner from "../../Components/Banner";
 import {
@@ -15,7 +15,7 @@ import {
 } from "./constants";
 import OptionsTab from "../../Components/OptionsTab";
 import StarFishPattern from "../../assets/patterns/starfishBlue.png";
-import ServicesSectionStyles from "./style";
+import ServicesSectionStyles from "../Services/style";
 import BannerImage from "../../assets/services/BannerImage.png";
 import PatternLeft from "../../assets/PatternLeft.png";
 import BreadCrumb from "../../Components/BreadCrumb";
@@ -24,7 +24,7 @@ import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
 import Heading5 from "../../ContainerStructure/Headings/Heading5";
 import Breakpoints from "../../Theme/theme.breakpoints";
-const Services = () => {
+const HireDeveloper = () => {
   const { skyBlue, linearBackground } = Colors;
 
   const breadCrumData = [
@@ -33,8 +33,8 @@ const Services = () => {
       text: "Home",
     },
     {
-      path: "/services",
-      text: "Web Development Services",
+      path: "/hire-developer",
+      text: "Hire Developer",
     },
   ];
 
@@ -113,4 +113,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default HireDeveloper;
