@@ -8,6 +8,7 @@ import {
   RequestAQuoteSub,
   SomeQuickFactsAboutUs,
   AwardSectionTitleContactUs,
+  WorkFlow,
 } from "../../Utils/Constants/Language/en/SectionHeaders";
 import { Colors } from "../../Theme/color.constants";
 import { LocationIcon, PhoneIcon } from "../../assets/icons/icon.constants";
@@ -24,6 +25,7 @@ import {
 import { AwardSectionImages } from "../Home";
 import ContactUsStyles from "./style";
 import { footerText } from "../../Utils/Constants/Language";
+import flowchart from "../../assets/ContactUs/flowchart.png"
 
 const ContactUs = () => {
   const {
@@ -62,6 +64,11 @@ const ContactUs = () => {
           breadcrumbData={breadcrumbs}
         />
       </Grid>
+      <Section title={WorkFlow} subTitle={RequestAQuoteSub}>
+<Grid xs={12}>
+<img src={flowchart} alt="d" style={{width:"100%"}}/>
+</Grid>
+      </Section>
       <Section title={RequestAQuote} subTitle={RequestAQuoteSub}>
         <Grid container>
           <Grid item xs={12} md={7}>
