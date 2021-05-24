@@ -34,9 +34,7 @@ export default createTheme({
     },
     text: {
       primary: "#151b27",
-      secondary: "#000000",
-      textPrimary: "#151b27",
-      textSecondary: "#717171",
+      secondary: "#717171",
     },
   }),
 });

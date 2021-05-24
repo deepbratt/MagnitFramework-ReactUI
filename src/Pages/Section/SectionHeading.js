@@ -7,7 +7,7 @@ const SectionHeading = ({ header }, props) => {
   const normalTitle = titleText[0];
   const underlinedTitle = titleText[1];
   return (
-    <Typography style={{ color: props.color }} variant="h2">
+    <Typography color="textPrimary" style={{ color: props.color }} variant="h2">
       {normalTitle}
       <span className={underlinedStyles}>{underlinedTitle}</span>
     </Typography>
