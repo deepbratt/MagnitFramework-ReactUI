@@ -101,6 +101,7 @@ const pageRoutes = {
   },
   [pathIds.solutions]: {
     path: pathRouting.solutions,
+    sidebarName: "Solutions",
     component: Solutions,
   },
 };

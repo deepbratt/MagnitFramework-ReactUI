@@ -14,6 +14,10 @@ export const menuItems = {
       path: "/hire-developer",
     },
     {
+      title: "Solutions",
+      path: "/solutions",
+    },
+    {
       title: "Digital Marketing",
       path: "/digital-marketing",
       
