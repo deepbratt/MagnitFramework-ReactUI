@@ -36,17 +36,22 @@ const FooterStyle = makeStyles((theme) => ({
     justifyContent: "flex-end",
     "& > *": {
       margin: "0 0 0 15px",
+      textDecoration: "none",
+      color: "white",
     },
   },
   contact: {
     display: "flex",
-    "& > img": {
-      maxWidth: "46px",
-      maxHeight: "46px",
-      margin: "10px 10px 0px 0px",
-      padding: "15px 18px",
+    justifyContent: "flex-start",
+    alignItems: "center",
+    alignContent: "center",
+
+    "& > a > img": {
+      height: "100%",
       border: "1px solid white",
+      padding: "15px 18px",
       borderRadius: "5px",
+      marginRight: "10px",
     },
   },
   sectionBorder: {

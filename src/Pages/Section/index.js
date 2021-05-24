@@ -76,7 +76,7 @@ const Section = ({
           {subTitle && (
             <Typography
               className={subHeader}
-              color="textPrimary"
+              color="textSecondary"
               variant="subtitle1"
             >
               {subTitle}

@@ -5,7 +5,7 @@ import PointList from "../../Components/PointBadge/PointList"
 const WhyUsContainer = () => {
   return (
     <Section title={PatrnerWithUsSectionTitle}>
-    <PointList data={PrimaryArray} horizontal={true} />
+    <PointList data={PrimaryArray} horizontal={true} lgBreakpoint={6}/>
   </Section>
   );
 };

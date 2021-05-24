@@ -114,7 +114,7 @@ theme.typography.body1 = {
   fontWeight: 500,
   lineHeight: "29.34px",
   [theme.breakpoints.down("md")]: {
-    fontSize: "1.75rem",
+    fontSize: "1rem",
   },
   [theme.breakpoints.down("sm")]: {
     fontSize: "0.75rem",
