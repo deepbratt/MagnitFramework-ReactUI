@@ -7,11 +7,13 @@ theme.typography.h1 = {
   fontSize: "3.4375rem",
   fontWeight: 600,
   lineHeight: "71.77px",
-  [theme.breakpoints.down("md")]: {
-    fontSize: "1.75rem",
+  [theme.breakpoints.down("lg")]: {
+    fontSize: "2.5rem",
+    lineHeight: "55px",
   },
-  [theme.breakpoints.down("sm")]: {
-    fontSize: "1.75rem",
+  [theme.breakpoints.down("md")]: {
+    fontSize: "2rem",
+    lineHeight: "48px",
   },
 };
 
