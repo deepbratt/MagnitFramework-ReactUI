@@ -22,6 +22,7 @@ const PointBadgeStyles = makeStyles((theme) => ({
   inline: {
     display: "flex",
     margin: "20px 0px",
+    alignItems:"flex-start",
   },
   badge: {
     borderRadius: "5px",
@@ -31,9 +32,12 @@ const PointBadgeStyles = makeStyles((theme) => ({
   devSec: {
     display: "flex",
     justifyContent: "center",
+    alignItems:"flex-start",
     margin: "15px",
+    marginTop:"0px",
     [theme.breakpoints.down("sm")]: {
       margin: "15px 10px",
+      marginTop:"0px"
     },
   },
   supportSub: {
@@ -42,7 +46,7 @@ const PointBadgeStyles = makeStyles((theme) => ({
     width: "100px",
     display: "flex",
     justifyContent: "center",
-    alignItems: "center",
+    alignItems: "flex-start",
     [theme.breakpoints.down("sm")]: {
       height: "80px",
       width: "80px",

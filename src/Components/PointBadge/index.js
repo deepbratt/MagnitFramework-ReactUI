@@ -6,7 +6,7 @@ import Read from "../ReadMore"
 
 const PointBadge = ({ horizontal, data }) => {
   const { color, icon, title, desc } = data;
-  const { vertical, inline, badge,devSec,supportSub, contentLeft, contentRight } =
+  const { vertical, inline, badge,devSec,supportSub, contentLeft, contentRight , Title} =
     PointBadgeStyles();
   return (
     <div className={horizontal ? inline : vertical}>
