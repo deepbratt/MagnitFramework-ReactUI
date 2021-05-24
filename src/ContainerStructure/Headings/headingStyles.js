@@ -18,7 +18,7 @@ export const THEME = createMuiTheme({
         fontStyle: "normal",
         fontSize: "35px",
         lineHeight: 1.6,
-        fontWeight: "bolder",
+        fontWeight: "600",
         [breakpoints.down("sm")]: {
           fontSize: "20px",
         },

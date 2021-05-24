@@ -9,18 +9,17 @@ const useStyles = makeStyles((theme) => ({
   display:"flex",
   flexDirection:"column",
   justifyContent:"space-evenly",
-  height:"90%",
+  height:"auto",
     // position:"relative",
-    padding:"1.3rem 1.6rem",
+    padding:"1.3rem 1.4rem",
     borderRadius:".5rem",
     boxShadow:"0px 4px 60px rgba(0, 0, 0, 0.1)",
     margin:"1rem",
-    textAlign:"left",
     "& .MuiCardContent-root": {
          padding: "1rem 0rem" 
     },
     [breakpoints.down("sm")]: {
-        margin:"1rem 0rem",
+        margin:"1rem ",
        
       },
      
@@ -61,7 +60,7 @@ avatarImg:{
   cardTitle:{
     color:Mirage,
     textAlign:"left",
-    
+    fontWeight:600,    
 },
   cardpara:{
     color:darkSilver,
@@ -76,6 +75,7 @@ carddate:{
     textAlign:"right",
     lineHeight:"24px",
     letterSpacing:".2",
+    fontWeight:500,
     [breakpoints.down("sm")]: {
    
       marginBottom:".5rem"
