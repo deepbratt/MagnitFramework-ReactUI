@@ -10,6 +10,7 @@ import OurBlogs from "../Pages/OurBlogs";
 import Quote from "../Pages/ContactUs/index"
 import HireDeveloper from "../Pages/HireDeveloper";
 import DigitalMarketing from "../Pages/DigitalMarketing";
+import Pricing from "../Pages/PricingPage/PricingContainer"
 
 const pathIds = {
   home: "home",
@@ -25,6 +26,8 @@ const pathIds = {
   requestAQuote: "requestAQuote",
   hireDeveloper:"hire-developer",
   digitalMarketing:"digital-marketing"
+  pricing: "pricing"
+
 };
 
  const pathRouting = {
@@ -41,6 +44,8 @@ const pathIds = {
   requestAQuote: "/request-a-quote",
   hireDeveloper:"/hire-developer",
   digitalMarketing:"/digital-marketing",
+  pricing : "/pricing"
+
 };
 
 const pageRoutes = {
@@ -88,6 +93,10 @@ const pageRoutes = {
     path: pathRouting.digitalMarketing,
     sidebarName: "Digital Marketing",
     component:DigitalMarketing,
+  [pathIds.pricing]: {
+    path: pathRouting.pricing,
+    sidebarName: "Pricing",
+    component: Pricing,
   },
 };
 
