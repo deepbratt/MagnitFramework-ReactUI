@@ -8,7 +8,7 @@ import Banner from "../../Sections/SolutionsPageSection/Banner";
 import CommentSection from "../../Components/CommentSection";
 import Main from "../../Sections/SolutionsPageSection/WhyUsContainer"
 import { Array } from "../../Utils/Constants/Language/en/SolutionsPageData";
-import Main from "./WhyUsContainer"
+// import Main from "./WhyUsContainer"
 import Section from "../Section";
 import CustomButton from "../../Components/CustomButton";
 import Breakpoints from "../../Theme/theme.breakpoints";
