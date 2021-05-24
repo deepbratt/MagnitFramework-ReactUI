@@ -6,7 +6,7 @@ import Read from "../ReadMore"
 
 const PointBadge = ({ horizontal, data }) => {
   const { color, icon, title, desc } = data;
-  const { vertical, inline, badge,devSec,supportSub, contentLeft, contentRight } =
+  const { vertical, inline, badge,devSec,supportSub, contentLeft, contentRight , Title} =
     PointBadgeStyles();
   return (
     <div className={horizontal ? inline : vertical}>
@@ -22,7 +22,7 @@ const PointBadge = ({ horizontal, data }) => {
               </section>
             </Grid>
       <Grid className={horizontal ? contentLeft : contentRight}>
-        <Typography variant="subtitle1" component="subtitle1" gutterBottom>
+        <Typography  className={Title} variant="subtitle1" component="subtitle1" gutterBottom>
           {title}
         </Typography>
         <Typography style={{cursor: "pointer"}} variant="subtitle2" component="subtitle2" >

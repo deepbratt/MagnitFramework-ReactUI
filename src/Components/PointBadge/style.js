@@ -78,6 +78,9 @@ fontWeight:300
 fontWeight:"normal"
     },
   },
+  Title:{
+    marginTop: "10px"
+  }
 }));
 
 export default PointBadgeStyles;
