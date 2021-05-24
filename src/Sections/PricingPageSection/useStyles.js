@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
   box: {
     boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)",
     color: whiteColor,
-    padding: "0 25px 18px 25px",
+    padding: "0 25px 15px 25px",
     transition: "transform .2s ease-out",
     "&:hover": {
       transform: "scale(1.1, 1.1) translate3d(0, 0, 0)",
