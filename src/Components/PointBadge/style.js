@@ -27,7 +27,11 @@ const PointBadgeStyles = makeStyles((theme) => ({
   badge: {
     borderRadius: "5px",
     // padding: "25px",
-    margin: "15px",
+    margin: "25px",
+    [theme.breakpoints.down("sm")]: {
+      margin: "15px",
+    },
+
   },
   devSec: {
     display: "flex",
