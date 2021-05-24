@@ -40,7 +40,9 @@ const Solutions = () => {
         <Grid item lg={12} md={12} xs={12}>
           <PointList data={benefitsData} horizontal={true} lgBreakpoint={6}/>
         </Grid>
+     
         </Section>
+        <Grid item lg={12} md={12} xs={12}>
         <Section title={DoYouWant}>
     <span >
         <CustomButton
@@ -55,6 +57,7 @@ const Solutions = () => {
         </CustomButton>
         </span>
     </Section>
+    </Grid>
         <Grid item lg={12} md={12} xs={12}>
         <CommentSection/>
         </Grid>

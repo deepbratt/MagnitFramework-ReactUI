@@ -25,7 +25,7 @@ const pathIds = {
   appSolutions: "appSolutions",
   requestAQuote: "requestAQuote",
   hireDeveloper:"hire-developer",
-  digitalMarketing:"digital-marketing"
+  digitalMarketing:"digital-marketing",
   pricing: "pricing"
 
 };
@@ -93,6 +93,7 @@ const pageRoutes = {
     path: pathRouting.digitalMarketing,
     sidebarName: "Digital Marketing",
     component:DigitalMarketing,
+  },
   [pathIds.pricing]: {
     path: pathRouting.pricing,
     sidebarName: "Pricing",
