@@ -88,7 +88,7 @@ const DigitalMarketing = () => {
         <OptionsTab />
       </Section>
       <Section title={WhyHireSectionTitle} highlightWords={3}>
-        <PointList data={hireUsData} horizontal={true} />
+        <PointList data={hireUsData} horizontal={true} lgBreakpoint={6}/>
       </Section>
       <Section backColor={skyBlue}>
         <GlanceSection backColor={skyBlue} />
