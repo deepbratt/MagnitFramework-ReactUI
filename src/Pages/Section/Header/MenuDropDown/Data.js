@@ -23,5 +23,13 @@ export const menuItems = {
       title: "Testimonials",
       path: "/testimonial",
     },
+    {
+      title: "Hire Developer",
+      path: "/hire-developer",
+    },
+    {
+      title: "Digital Marketing",
+      path: "/digital-marketing",
+    },
   ],
 };

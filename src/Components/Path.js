@@ -8,6 +8,8 @@ import Career from "../Pages/Careers/Container"
 import AppSolutions from "../Pages/AppSolutionsPage/Container"
 import OurBlogs from "../Pages/OurBlogs";
 import Quote from "../Pages/ContactUs/index"
+import HireDeveloper from "../Pages/HireDeveloper";
+import DigitalMarketing from "../Pages/DigitalMarketing";
 
 const pathIds = {
   home: "home",
@@ -20,7 +22,9 @@ const pathIds = {
   event: "event",
   testimonial: "/testimonial",
   appSolutions: "appSolutions",
-  requestAQuote: "requestAQuote"
+  requestAQuote: "requestAQuote",
+  hireDeveloper:"hire-developer",
+  digitalMarketing:"digital-marketing"
 };
 
  const pathRouting = {
@@ -35,6 +39,8 @@ const pathIds = {
   testimonial: "/testimonial",
   appSolutions: "/app-solutions",
   requestAQuote: "/request-a-quote",
+  hireDeveloper:"/hire-developer",
+  digitalMarketing:"/digital-marketing",
 };
 
 const pageRoutes = {
@@ -72,6 +78,16 @@ const pageRoutes = {
     path: pathRouting.requestAQuote,
     sidebarName: "Request a quote",
     component: Quote,
+  },
+  [pathIds.hireDeveloper]: {
+    path: pathRouting.hireDeveloper,
+    sidebarName: "Hire Developer",
+    component: HireDeveloper,
+  },
+  [pathIds.digitalMarketing]: {
+    path: pathRouting.digitalMarketing,
+    sidebarName: "Digital Marketing",
+    component:DigitalMarketing,
   },
 };
 
