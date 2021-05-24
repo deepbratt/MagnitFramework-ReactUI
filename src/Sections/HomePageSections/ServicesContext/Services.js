@@ -16,18 +16,18 @@ const Services = () => {
 
   return (
     <>
-      <Grid container className={root} elevation={0}>
+      <Grid container className={root}>
         <Grid item lg={12} md={12} xs={12}>
-            <Typography variant="h2">
-              <Hidden smDown>
-                {title}
-                <span className={underlined}>{subTitle}</span>
-              </Hidden>
-              <Hidden mdUp>
-                {title} <br />
-                <span className={underlined}>{subTitle}</span>
-              </Hidden>
-            </Typography>
+          <Typography color="textPrimary" variant="h2">
+            <Hidden smDown>
+              {title}
+              <span className={underlined}>{subTitle}</span>
+            </Hidden>
+            <Hidden mdUp>
+              {title} <br />
+              <span className={underlined}>{subTitle}</span>
+            </Hidden>
+          </Typography>
         </Grid>
         <Grid item className={cardSec}>
           <Content data={ServicesData} />
