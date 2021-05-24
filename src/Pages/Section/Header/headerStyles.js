@@ -103,9 +103,5 @@ export const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     transition: "all .5s linear",
     backgroundColor: WildSand,
-    
-
-   
-  
   },
 }));

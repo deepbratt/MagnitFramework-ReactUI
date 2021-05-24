@@ -14,13 +14,12 @@ import CustomButton from "../../Components/CustomButton";
 const BannerSection = () => {
   const { linearBackground } = Colors;
   return (
-    <> 
-     
+    <>
       <Banner image={BannerImage} backColor={linearBackground}>
-      <Typography variant="h1" gutterBottom>
+        <Typography color="textPrimary" variant="h1" gutterBottom>
           {BannerHeading} <br /> {Bannersubheading}
         </Typography>
-        <Typography variant="h5" gutterBottom>
+        <Typography color="textPrimary" variant="h5" gutterBottom>
           {paragraph}
         </Typography>
         <section style={{ marginTop: "15px" }}>

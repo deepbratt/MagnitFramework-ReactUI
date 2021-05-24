@@ -5,6 +5,7 @@ const { Citrine, darkJungleGreen } = Colors;
 const FooterStyle = makeStyles((theme) => ({
   root: {
     backgroundColor: darkJungleGreen,
+    // REMOVED - FOOTER PADDING
     padding: "40px 150px",
     [theme.breakpoints.down("lg")]: {
       padding: "40px 100px",
