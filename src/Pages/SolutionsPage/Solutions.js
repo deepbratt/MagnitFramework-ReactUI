@@ -7,13 +7,13 @@ import { Colors } from "../../Theme/color.constants";
 import Banner from "../../Sections/SolutionsPageSection/Banner";
 import CommentSection from "../../Components/CommentSection";
 import Main from "../../Sections/SolutionsPageSection/WhyUsContainer"
-import { Array } from "../../Utils/Constants/Language/en/SolutionsPageData";
-// import Main from "./WhyUsContainer"
+import { Array , benefitsData,benefitsHeading} from "../../Utils/Constants/Language/en/SolutionsPageData";
 import Section from "../Section";
 import CustomButton from "../../Components/CustomButton";
 import Breakpoints from "../../Theme/theme.breakpoints";
 import { Link } from 'react-router-dom'
 import { DoYouWant } from "../Services/constants";
+import PointList from "../../Components/PointBadge/PointList"
 
 const Solutions = () => {
   const { linearBackground } = Colors;
@@ -34,9 +34,12 @@ const Solutions = () => {
         <Grid item lg={12} md={12} xs={12}>
           <WeOffer data={Array} />
         </Grid>
+        <Section title={benefitsHeading}>
         <Grid item lg={12} md={12} xs={12}>
-          <Main />
+          <PointList data={benefitsData} horizontal={true} lgBreakpoint={6}/>
         </Grid>
+     
+        </Section>
         <Section title={DoYouWant}>
     <span >
         <CustomButton
