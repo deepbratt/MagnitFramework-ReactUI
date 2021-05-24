@@ -1,5 +1,4 @@
 import { makeStyles } from "@material-ui/core";
-import { fontSizes } from "../../Utils/Constants/Font/index";
 import { Colors } from "../../Theme/color.constants";
 const { Harlequin } = Colors;
 const BannerStyles = makeStyles((theme) => ({

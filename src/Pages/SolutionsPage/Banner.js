@@ -16,10 +16,10 @@ const BannerSection = () => {
   return (
     <>
       <Banner image={BannerImage} backColor={linearBackground}>
-      <Typography variant="h2" gutterBottom>
+        <Typography color="textPrimary" variant="h1" gutterBottom>
           {BannerHeading} <br /> {Bannersubheading}
         </Typography>
-        <Typography variant="h6" gutterBottom>
+        <Typography color="textPrimary" variant="h5" gutterBottom>
           {paragraph}
         </Typography>
         <section style={{ marginTop: "15px" }}>
