@@ -1,10 +1,7 @@
 import { makeStyles } from "@material-ui/core/styles";
-import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
-import { Colors } from "../../../Theme/color.constants";
+import { Colors } from "../../Theme/color.constants";
 
 const { whiteColor, Harlequin, blackColor, Solitude } = Colors;
-
-const breakpoints = createBreakpoints({});
 
 export const useStyles = makeStyles((theme) => ({
   root: {
@@ -18,6 +15,7 @@ export const useStyles = makeStyles((theme) => ({
     width: "100%",
     flexFlow: "wrap",
     justifyContent: "center",
+    marginTop: "50px",
   },
   devSec: {
     color: blackColor,
@@ -26,7 +24,6 @@ export const useStyles = makeStyles((theme) => ({
     paddingTop: "20px",
   },
   card: {
-    width: "27%",
     height: "280px",
     display: "flex",
     flexDirection: "column",
@@ -34,20 +31,12 @@ export const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     transition: "all .25s linear",
     boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)",
-    margin: "20px",
-    [breakpoints.only("md")]: {
-      width: "30%",
-    },
-    [breakpoints.only("sm")]: {
-      width: "40%",
-    },
-    [breakpoints.down("xs")]: {
-      width: "70%",
-    },
+    backgroundColor: whiteColor,
+    margin: "10px",
   },
   button: {
-    borderRadius: "none",
-    fontFamily: "Poppins",
+    marginTop: "10px",
+    marginBottom: "20px",
     backgroundColor: whiteColor,
     transition: "all .3s linear",
     color: blackColor,
@@ -56,26 +45,6 @@ export const useStyles = makeStyles((theme) => ({
       backgroundColor: Harlequin,
       color: whiteColor,
       transition: "all .3s linear",
-    },
-  },
-  underlined: {
-    position: "relative",
-    zIndex: 1,
-    "&:after ": {
-      position: "absolute",
-      height: "17px",
-      content: '""',
-      zIndex: -1,
-      right: 0,
-      backgroundColor: Harlequin,
-      bottom: "5px",
-      [breakpoints.down("sm")]: {
-        width: "120px",
-        height: "10px",
-      },
-      [breakpoints.down("md")]: {
-        height: "10px",
-      },
     },
   },
 }));

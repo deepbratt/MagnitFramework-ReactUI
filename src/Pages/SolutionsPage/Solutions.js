@@ -1,12 +1,14 @@
 import React from "react";
-import WeOffer from "./WeOffer/WeOfferContext";
+import WeOffer from "../../Sections/SolutionsPageSection/WeOfferContext";
 import { Grid } from "@material-ui/core";
 import ServicesSectionStyles from "../../Pages/Services/style";
-import { useStyles } from "./WeOffer/weOfferStyles";
+import { useStyles } from "../../Sections/SolutionsPageSection/weOfferStyles";
 import { Colors } from "../../Theme/color.constants";
-import Banner from "./Banner";
+import Banner from "../../Sections/SolutionsPageSection/Banner";
 import CommentSection from "../../Components/CommentSection";
-import Main from "./WhyUsContainer"
+import Main from "../../Sections/SolutionsPageSection/WhyUsContainer"
+import { Array } from "../../Utils/Constants/Language/en/SolutionsPageData";
+// import Main from "./WhyUsContainer"
 import Section from "../Section";
 import CustomButton from "../../Components/CustomButton";
 import Breakpoints from "../../Theme/theme.breakpoints";
@@ -30,7 +32,7 @@ const Solutions = () => {
           <Banner />
         </Grid>
         <Grid item lg={12} md={12} xs={12}>
-          <WeOffer />
+          <WeOffer data={Array} />
         </Grid>
         <Grid item lg={12} md={12} xs={12}>
           <Main />

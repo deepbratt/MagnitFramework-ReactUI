@@ -85,10 +85,6 @@ export const benefitsData = [
     desc:
       "Our client’s security is our top priority. Any confidential information shared with us is protected with the latest security measures, tools and regulations.",
   },
-  
-];
-
-export const benefitsSecondaryData = [
   {
     color: TexasRose,
     icon: customIcon,
@@ -117,7 +113,9 @@ export const benefitsSecondaryData = [
     desc:
       "Our client’s security is our top priority. Any confidential information shared with us is protected with the latest security measures, tools and regulations.",
   },
-]
+  
+];
+
 
 export const Array = [
   {
@@ -163,7 +161,6 @@ export const subheading =
   "are built with cutting edge technologies & customized as you need";
 export const BannerImage = bannerImage;
 export const benefitsHeading = "Benefits of /Our Solutions";
-export const benefitsSubheading = "Our Solutions"
 export const BannerHeading = "Wide range of Custom Solutions"
 export const Bannersubheading = "for your Business"
 export const paragraph = "We have a talent pool of qualified & well-experienced web developers."
@@ -171,5 +168,4 @@ export const paragraph = "We have a talent pool of qualified & well-experienced 
 export default {
   Array,
   benefitsData,
-  benefitsSecondaryData
 }
