@@ -6,16 +6,16 @@ const FooterStyle = makeStyles((theme) => ({
   root: {
     backgroundColor: darkJungleGreen,
     // REMOVED - FOOTER PADDING
-    // padding: "40px 150px",
-    // [theme.breakpoints.down("lg")]: {
-    //   padding: "40px 100px",
-    // },
-    // [theme.breakpoints.down("md")]: {
-    //   padding: "40px 70px",
-    // },
-    // [theme.breakpoints.down("sm")]: {
-    //   padding: "30px 20px",
-    // },
+    padding: "40px 150px",
+    [theme.breakpoints.down("lg")]: {
+      padding: "40px 100px",
+    },
+    [theme.breakpoints.down("md")]: {
+      padding: "40px 70px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      padding: "30px 20px",
+    },
     "& > *": {
       color: "white",
       textDecoration: "none",

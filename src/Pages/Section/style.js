@@ -5,18 +5,18 @@ const { Harlequin } = Colors;
 const LayoutStyle = makeStyles((theme) => ({
   root: {
     // REMOVED - SECTION PADDING
-    // padding: "60px 0",
+    padding: "60px 0",
     position: "relative",
   },
   content: {
     position: "relative",
-    // margin: "0 8%",
+    margin: "0 8%",
     "& > img": {
       position: "absolute",
       height: "146px",
     },
     [theme.breakpoints.down("sm")]: {
-      // margin: "0 2%",
+      margin: "0 2%",
     },
   },
   sectionHeader: {
