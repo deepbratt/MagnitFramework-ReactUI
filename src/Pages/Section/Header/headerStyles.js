@@ -98,14 +98,9 @@ export const useStyles = makeStyles((theme) => ({
   },
   menu: {
     width: "300px",
-    border: `1px solid ${Ash}`,
     display: "flex",
     justifyContent: "center",
     transition: "all .5s linear",
     backgroundColor: WildSand,
-    
-
-   
-  
   },
 }));

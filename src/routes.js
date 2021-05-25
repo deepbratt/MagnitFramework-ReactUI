@@ -29,7 +29,7 @@ const Routes = () => {
               />
             );
           })}
-          {/* <Route component={Error} /> */}
+          <RequireAuth component={Error} />
         </Layout>
         
       </Switch>

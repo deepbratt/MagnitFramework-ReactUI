@@ -10,7 +10,8 @@ import { footerText } from "../../Utils/Constants/Language";
 import CustomImage from "../../Components/CustomImage";
 
 const Footer = () => {
-  const { root, logo, section, policy, contact, sectionBorder } = FooterStyle();
+  const { root, logo, section, policy, contact, sectionBorder, copyright } =
+    FooterStyle();
   const {
     contactUs,
     navigation,
@@ -81,7 +82,7 @@ const Footer = () => {
 
         <Grid item xs={12} md={4} lg={2}>
           <div className={section}>
-            <Typography align="left" gutterBottom variant="h6">
+            <Typography align="left" gutterBottom variant="h5">
               {addressSection.title}
             </Typography>
             {addressSection.address.map((location, index) => (
@@ -98,18 +99,19 @@ const Footer = () => {
         </Grid>
       </Grid>
       <Grid className={sectionBorder} container>
-        <Grid item xs={12} md={6}>
-          <Typography
-            className="copyrights"
-            align="left"
-            gutterBottom
-            variant="caption"
-            component="p"
-          >
-            {copyrights}
-          </Typography>
+        <Grid item xs={12} md={12} lg={6}>
+          <div className={copyright}>
+            <Typography
+              align="left"
+              gutterBottom
+              variant="caption"
+              component="p"
+            >
+              {copyrights}
+            </Typography>
+          </div>
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={12} lg={6}>
           <div className={policy}>
             <NavLink to="/life-time-support">
               <Typography gutterBottom variant="caption">

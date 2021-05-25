@@ -35,7 +35,6 @@ const OurBlogsStyles = makeStyles((theme) => ({
     fontWeight: "300",
   },
   latestBlogCard: {
-    width: "95%",
     borderBottomLeftRadius: "5px",
     borderBottomRightRadius: "5px",
     boxShadow: "0px 4px 80px 15px rgba(0, 0, 0, 0.06)",
@@ -54,7 +53,7 @@ const OurBlogsStyles = makeStyles((theme) => ({
   latestBlogDetailCategory: {
     borderLeft: `3px solid ${BlueRibbon}`,
     borderRight: `3px solid ${BlueRibbon}`,
-    margin: "0 10px",
+    // margin: "0 10px",
     padding: "0 10px",
   },
   latestBlogDetail: {

@@ -31,7 +31,7 @@ const SolutionsSecondarySection = () => {
           </Grid>
         </Grid>
         <Card className={card}>
-          <CardContent>
+
             <Grid item className={devSec}>
               <CustomImage
                 alt="icon"
@@ -44,11 +44,10 @@ const SolutionsSecondarySection = () => {
                   {portalTitle}
                 </Typography>
             </Grid>
-          </CardContent>
         </Card>
 
         <Card className={card}>
-          <CardContent>
+
             <Grid item className={devSec}>
               <CustomImage
                 alt="icon"
@@ -61,10 +60,8 @@ const SolutionsSecondarySection = () => {
                   {datingTitle}
                 </Typography>
             </Grid>
-          </CardContent>
         </Card>
         <Card className={card}>
-          <CardContent>
             <Grid item className={devSec}>
               <CustomImage
                 alt="icon"
@@ -77,7 +74,6 @@ const SolutionsSecondarySection = () => {
                   {fitnessTitle}
                 </Typography>
             </Grid>
-          </CardContent>
         </Card>
       </Grid>
     </>

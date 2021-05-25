@@ -1,9 +1,9 @@
 import React from "react";
 import { Grid,} from "@material-ui/core";
-import ServicesSectionStyles from "../../Pages/Services/style"
+import ServicesSectionStyles from "../WebServices/style"
 import Banner from "../../Sections/AppSolutionsSections/Banner";
 import FeaturesSection from "../../Sections/AppSolutionsSections/FeaturesSection"
-import WhyUsContainer from "../SolutionsPage/WhyUsContainer"
+import WhyUsContainer from "../../Sections/SolutionsPageSection/WhyUsContainer"
 import StairCaseContext from "../../Sections/AppSolutionsSections/StairCaseSection/HowItWorksContext"
 import AdminContext from "../../Sections/AppSolutionsSections/AdminContext"
 import CommentSection from "../../Components/CommentSection";
@@ -12,7 +12,7 @@ import PointList from "../../Components/PointBadge/PointList";
 import { benefitsHeading, benefitsData } from "../../Utils/Constants/Language/en/SolutionsPageData";
 import CustomButton from "../../Components/CustomButton";
 import { Link } from "react-router-dom";
-import { DoYouWant } from "../Services/constants";
+import { DoYouWant } from "../WebServices/constants";
 import Breakpoints from "../../Theme/theme.breakpoints";
 const Solutions = () => {
  const {root} = ServicesSectionStyles()
