@@ -3,7 +3,7 @@ export const menuItems = {
   
     {
       title: "Web Development Services",
-      path: "/services",
+      path: "/web-dev-services",
     },
     {
       title: "App Solutions",
