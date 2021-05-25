@@ -61,11 +61,11 @@ const CaseStudies = () => {
       <Grid
         item
         xs={12}
-        style={{ display: "flex", marginBottom:"50px" }}
+        style={{ display: "flex", marginBottom:"150px", marginTop:"50px" }}
         justify="center"
       >
         <Hidden lgUp>
-          <span style={{marginTop:"-120px"}}>
+          <span style={{marginTop:"-120px", marginBottom:"-250px"}}>
             <ResponsiveInterActiveSection scrollRef={elRefs} textData={faqData}/>
           </span>
         </Hidden>
@@ -75,7 +75,7 @@ const CaseStudies = () => {
           </Section>
         </Hidden>
       </Grid>
-      <Grid item xs={12} style={{marginTop:"100px"}}>
+      <Grid item xs={12}>
         <Section>
           {/* <FaqNonInteractive toRight/> */}
           {faqData.map((item, index)=>(

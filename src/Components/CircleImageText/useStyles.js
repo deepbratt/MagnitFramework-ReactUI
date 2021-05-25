@@ -6,34 +6,39 @@ const useStyles = makeStyles((theme) => ({
   svgElementWrapper: {
     position: "relative",
     cursor: "pointer",
-    width:"100%",
+    display:"flex",
+    justifyContent:"flex-start",
+    // width:"100%",
     "&:hover > svg path:nth-of-type(1)": {
       fill: Colors.shineBlue,
     },
   },
   svgElement: {
     position: "absolute",
-    left: "50%",
+    left: "0%",
     top: "50%",
-    transform: "translate(-50%, -50%)",
+    transform: "translate(0%, -50%)",
+    width:"100px"
+  },
+
+  svgElementBg:{
     width:"100px"
   },
 
   textStylesLeft: {
-    // marginRight: "10px",
-    textAlign:"right"
+    marginRight: "10px",
+    textAlign:"right",
   },
   textStylesRight: {
-    // marginLeft: "10px",
-    textAlign:"left"
+    marginLeft: "10px",
+    textAlign:"left",
   },
 
   wrapper:{
       display:"flex",
-    //   justifyContent:"space-around",
+      justifyContent:"flex-start",
       alignItems:"center",
       width:"400px",
-    //   backgroundColor:"red"
   }
 }));
 

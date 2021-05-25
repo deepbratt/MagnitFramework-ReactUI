@@ -7,7 +7,7 @@ const CircleImageComponent = ({ innerImg, props }) => {
   const classes = useStyles();
   return (
     <span className={classes.svgElementWrapper}>
-      <CircleImage {...props} className={classes.svgElement} />
+      <CircleImage {...props} className={classes.svgElementBg} />
       <span className={classes.svgElement}>{innerImg}</span>
     </span>
   );
