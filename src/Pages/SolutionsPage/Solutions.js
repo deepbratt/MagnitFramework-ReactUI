@@ -1,13 +1,19 @@
 import React from "react";
-import WeOffer from "./WeOffer/WeOfferContext";
+import WeOffer from "../../Sections/SolutionsPageSection/WeOfferContext";
 import { Grid } from "@material-ui/core";
 import ServicesSectionStyles from "../../Pages/Services/style";
-import { useStyles } from "./WeOffer/weOfferStyles";
+import { useStyles } from "../../Sections/SolutionsPageSection/weOfferStyles";
 import { Colors } from "../../Theme/color.constants";
-import Banner from "./Banner";
+import Banner from "../../Sections/SolutionsPageSection/Banner";
 import CommentSection from "../../Components/CommentSection";
-import Main from "./WhyUsContainer"
-
+import Main from "../../Sections/SolutionsPageSection/WhyUsContainer"
+import { Array , benefitsData,benefitsHeading} from "../../Utils/Constants/Language/en/SolutionsPageData";
+import Section from "../Section";
+import CustomButton from "../../Components/CustomButton";
+import Breakpoints from "../../Theme/theme.breakpoints";
+import { Link } from 'react-router-dom'
+import { DoYouWant } from "../Services/constants";
+import PointList from "../../Components/PointBadge/PointList"
 
 const Solutions = () => {
   const { linearBackground } = Colors;
@@ -26,12 +32,28 @@ const Solutions = () => {
           <Banner />
         </Grid>
         <Grid item lg={12} md={12} xs={12}>
-          <WeOffer />
+          <WeOffer data={Array} />
         </Grid>
+        <Section title={benefitsHeading}>
         <Grid item lg={12} md={12} xs={12}>
-          <Main />
+          <PointList data={benefitsData} horizontal={true} lgBreakpoint={6}/>
         </Grid>
-
+     
+        </Section>
+        <Section title={DoYouWant}>
+    <span >
+        <CustomButton
+          variant="contained"
+          size={Breakpoints()}
+          color="secondary"
+          component={Link}
+          to="/request-a-quote"
+          
+        >
+       Request a Quote
+        </CustomButton>
+        </span>
+    </Section>
         </CommentSection>
       
 

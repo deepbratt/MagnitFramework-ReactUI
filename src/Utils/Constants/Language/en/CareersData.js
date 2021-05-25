@@ -18,30 +18,34 @@ export const MainData = {
 };
 
 export const Data = {
-  title: "Why Work ",
+  title: "Why Work /with us?",
   subTitle: "with us?",
 };
 
 export const Array = [
   {
+    length: 57,
     color: darkBlueColor,
     icon: Timing,
     title: "Flexible Hours",
     desc: "We pay not for your time but for your brains. We appreciate time-bound work irrespective of the time-zone you live in",
   },
   {
+    length: 36,
     color: rosePinkColor,
     icon: Geo,
     title: "Work from anywhere",
     desc: "With or without pandemic, work from wherever you are comfortable."
   },
   {
+    length: 57,
     color: seaGreen,
     icon: Grow,
     title: "Company growth",
     desc:"We believe that growth is constant and hence welcome feedback and ideas."
   },
   {
+    length: 57,
     color: mustardColor,
     icon: Health,
     title: "Health First",

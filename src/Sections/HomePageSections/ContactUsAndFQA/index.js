@@ -10,7 +10,7 @@ import QuestionData from "./questions.json";
 import LayoutStyle from "./style";
 
 const ContactUsAndFQA = () => {
-  const { root, wrap, content, cover, form } = LayoutStyle();
+  const { root, wrap, content, cover, form, label } = LayoutStyle();
 
   return (
     <>
@@ -20,7 +20,13 @@ const ContactUsAndFQA = () => {
             <Grid item className={wrap}>
               <img className={cover} src={image} alt="A lady with laptop" />
               <CardContent className={content}>
-                <ContactUsForm className={form} />
+                <ContactUsForm
+                  className={form}
+                  captionColor="navy"
+                  styles={label}
+                  color="white"
+                  heading="Contact Us"
+                />
               </CardContent>
             </Grid>
           </Grid>

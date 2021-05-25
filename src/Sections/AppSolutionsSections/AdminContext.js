@@ -1,6 +1,8 @@
 import React from "react";
-import { Grid } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import Heading4 from "../../ContainerStructure/Headings/Heading4";
+import theme from "../../Theme/GlobalFontSizes"
+import { MuiThemeProvider } from "@material-ui/core/styles";
 import Paragraph from "../../ContainerStructure/Headings/Paragraphs/Paragraph";
 import {
   adminHeading,
@@ -14,19 +16,25 @@ const AdminContext = () => {
   const { root, content, image } = useStyles();
   return (
     <>
+    <MuiThemeProvider theme={theme}>
       <Grid container className={root}>
         <Grid justify="center" container>
           <Grid item md={12} lg={12} xs={12}>
-            <Heading4 title={adminHeading} />
+            <Typography color="textPrimary" variant="h2">
+              {adminHeading}
+            </Typography>
           </Grid>
           <Grid item  md={12} lg={4} xs={12}>
-            <img className={image} width="400px" src={adminImg} alt="image" />
+            <CustomImage className={image} width="400px" src={adminImg} alt="image" />
           </Grid>
           <Grid className={content} xs={10} item lg={6}>
-            <Paragraph para={paragraph} />
+            <Typography variant="body2">
+            {paragraph}
+            </Typography>
           </Grid>
         </Grid>
       </Grid>
+      </MuiThemeProvider>
     </>
   );
 };

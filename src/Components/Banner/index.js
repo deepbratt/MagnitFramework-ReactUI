@@ -12,25 +12,24 @@ const Banner = ({
   backgroundPattern,
 }) => {
   const { linearBackground } = Colors;
-  const { root, imageWrapper, breadCrumbStyle, content, patternPosition } =
-    BannerStyles();
+  const { root, imageWrapper, content, patternPosition } = BannerStyles();
   return (
     <>
-      {breadCrumb && (
-        <Grid item xs={12} className={breadCrumbStyle}>
-          {breadCrumb}
-        </Grid>
-      )}
       <Grid
         className={root}
         container
         style={{ background: linearBackground }}
         alignItems="center"
       >
-        <Grid item xs={12} lg={6} md={12} className={content}>
+        {breadCrumb && (
+          <Grid item xs={12}>
+            {breadCrumb}
+          </Grid>
+        )}
+        <Grid item xs={12} md={6} lg={7}className={content}>
           {children}
         </Grid>
-        <Grid style={{ position: "relative" }} item lg={5} xs={12}>
+        <Grid style={{ position: "relative" }} item xs={12} md={6} lg={5}>
           <CustomImage
             className={patternPosition}
             src={StarFishPinkPattern}

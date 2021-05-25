@@ -1,13 +1,13 @@
 import { Typography } from "@material-ui/core";
 import LayoutStyle from "./style";
 
-const SectionHeading = ({ header }) => {
+const SectionHeading = ({ header }, props) => {
   const { underlinedStyles } = LayoutStyle();
   const titleText = header.split("/");
   const normalTitle = titleText[0];
   const underlinedTitle = titleText[1];
   return (
-    <Typography color="textPrimary" variant="h2">
+    <Typography color="textPrimary" style={{ color: props.color }} variant="h2">
       {normalTitle}
       <span className={underlinedStyles}>{underlinedTitle}</span>
     </Typography>

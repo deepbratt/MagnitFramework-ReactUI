@@ -19,8 +19,8 @@ const Solutions = () => {
     <>
       <Grid container className={root} elevation={0}>
         <Grid style={{color: whiteColor}} item lg={12} md={12} xs={12}>
-            <Typography variant="h4">{heading}</Typography>
-            <Typography paragraph={true}>{subHeading}</Typography>
+            <Typography variant="h2">{heading}</Typography>
+            <Typography variant="h5">{subHeading}</Typography>
         </Grid>
         <PrimarySection />
         <MidSection />
@@ -30,7 +30,8 @@ const Solutions = () => {
               backgroundColor: whiteColor,
               padding: ".3rem 1.9rem",
               color: blackColor,
-              // borderRadius: "0px"
+              borderRadius: "5px",
+              marginTop: "20px"
             }}
             variant="contained"
             size={Breakpoints()}

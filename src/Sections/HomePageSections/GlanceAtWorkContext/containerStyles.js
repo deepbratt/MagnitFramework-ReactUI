@@ -9,33 +9,36 @@ const breakpoints = createBreakpoints({});
 
 export const useStyles = makeStyles((theme) => ({
   root: {
-    // paddingTop: "25px",
+    paddingTop: "25px",
     margin: "0px",
-    // paddingBottom: "40px",
+    paddingBottom: "40px",
+    justifyContent:"space-evenly"
   },
   cardSec: {
     display: "flex",
     width: "100%",
     marginTop: "40px",
     marginBottom: "40px",
-    justifyContent: "center",
+    justifyContent:"space-evenly",
     flexFlow: "wrap",
+
   },
   card: {
     paddingTop: "20px",
-    width: "25%",
-    
-    height: "auto",
+    // width: "25%",
+    background:whiteColor,
+    height: "fit-content",
     display: "flex",
     flexDirection: "column",
     alignItems: "left",
     transition: "all .25s linear",
-    margin: "20px",
+    margin: "20px ",
     boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
-    [breakpoints.down("sm")]: {
-      width: "70%",
+    
+    // [breakpoints.down("md")]: {
+    //   width: "70%",
   
-    },
+    // },
   
     "& .MuiCardContent-root": {
       padding: "0px",
@@ -49,6 +52,7 @@ export const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "center",
     flexDirection: "column",
+    padding:"0px 6px"
     
   },
 cardContent: {
@@ -58,7 +62,7 @@ cardContent: {
   textAlign: "center",
   paddingLeft: "20px",
   color: whiteColor,
-  padding: "20px"
+  padding: "20px",
 
 },
 seeMore:{

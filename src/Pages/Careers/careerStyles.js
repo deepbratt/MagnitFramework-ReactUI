@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 import { Colors } from "../../Theme/color.constants";
 
-const { whiteColor, Harlequin, blackColor, paletteBlue,skyBlue, DoveGray } = Colors;
+const { whiteColor, Harlequin, blackColor, paletteBlue,skyBlue, DoveGray,Mirage,darkSilver } = Colors;
 
 const breakpoints = createBreakpoints({});
 
@@ -10,8 +10,9 @@ export const useStyles = makeStyles((theme) => ({
   root: {
     margin: "0px",
     backgroundColor: skyBlue,
-    // padding: "50px 0px 50px 0px",
-    position: "relative"
+    padding: "50px 0px",
+    position: "relative",
+    
   },
   cardSec: {
     display: "flex",
@@ -24,6 +25,25 @@ export const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     paddingTop: "20px",
+   
+  },
+  HeadSec:{
+    "& > subtitle1" : {
+      color:Mirage,
+      fontWeight:600,
+    },
+   
+    "& > subtitle2" : {
+      color:darkSilver,
+fontWeight:"normal"
+    },
+  },
+  para:{
+    margin:".5rem 0rem",
+    "& > body1" : {
+      color:darkSilver,
+fontWeight:"normal"
+    },
   },
   card: {
     background:"white",
@@ -37,7 +57,8 @@ export const useStyles = makeStyles((theme) => ({
     boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)",
     margin: "20px",
     padding:"20px",
-    textAlign:"center"
+    textAlign:"center",
+    borderRadius:"5px"
  
   },
   button: {

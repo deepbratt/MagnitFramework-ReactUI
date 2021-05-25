@@ -33,54 +33,51 @@ const Container = ({backColor}) => {
       <Grid container style={{backgroundColor: backColor}} className={root} elevation={0}>
         
       <Grid style={{color: whiteColor}} item lg={12} md={12} xs={12}>
-
-
             <Typography variant="h2" >
             {title}
             </Typography>
 
           </Grid>
-        <Grid item className={cardSec}>
-          <Card className={card}>
-
+        <Grid className={cardSec}>
+          <Grid item  xs={12} sm={5} md={4} lg={3}  className={card}>
             <CardContent>
                 <Grid item className={devSec}>
-                  <CustomImage width="250px" src={image1} alt=""/>
-                  <Grid item className={cardContent}>
+                  <CustomImage width="220px" src={image1} alt=""/>
+                 
+                </Grid>
+              <Grid item className={cardContent}>
                   <Typography variant="h5" gutterBottom>
                    {subtitleOne}
                   </Typography>
-
-              </Grid>
-                </Grid>
-            
+                  </Grid>
             </CardContent>
-          </Card>
-          <Card className={card}>
+          </Grid>
+          <Grid item  xs={12} sm={5} md={4} lg={3}  className={card}>
             <CardContent>
                 <Grid  className={devSec}>
-                  <CustomImage width="300px" src={image2} alt=""/>
-                  <Grid item className={cardContent}>
+                  <CustomImage width="270px" src={image2} alt=""/>
+                 
+                </Grid>
+                <Grid item className={cardContent}>
                   <Typography variant="h5" gutterBottom>
                   {subtitleTwo}
                   </Typography>
               </Grid>
-                </Grid>
-
             </CardContent>
-          </Card>
-          <Card className={card}>
+          </Grid>
+          <Grid item  xs={12} sm={5} md={4} lg={3}  className={card}>
             <CardContent>
                 <Grid className={devSec}>
-                  <CustomImage width="317px"  src={image3} alt=""/>
-                  <Grid item className={cardContent}>
+                  <CustomImage width="275px"  src={image3} alt=""/>
+                 
+                </Grid>
+                <Grid item className={cardContent}>
                   <Typography variant="h5" gutterBottom>
                   {subtitleThree}
                   </Typography>
               </Grid>
-                </Grid>
             </CardContent>
-          </Card>
+          </Grid>
         </Grid>
         <Grid item lg={12} md={12} xs={12}>
           <CustomButton

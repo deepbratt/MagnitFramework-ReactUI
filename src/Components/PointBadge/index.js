@@ -2,10 +2,11 @@ import { Grid, Typography } from "@material-ui/core";
 import PropTypes from "prop-types";
 import CustomImage from "../CustomImage";
 import PointBadgeStyles from "./style";
+import Read from "../ReadMore"
 
 const PointBadge = ({ horizontal, data }) => {
-  const { color, icon, title, desc } = data;
-  const { vertical, inline, badge,devSec,supportSub, contentLeft, contentRight } =
+  const { color, icon, title, desc, length } = data;
+  const { vertical, inline, badge,devSec,supportSub, contentLeft, contentRight , Title} =
     PointBadgeStyles();
   return (
     <div className={horizontal ? inline : vertical}>
@@ -21,14 +22,14 @@ const PointBadge = ({ horizontal, data }) => {
               </section>
             </Grid>
       <Grid className={horizontal ? contentLeft : contentRight}>
-        <Typography variant="h3" gutterBottom>
+        <Typography variant="subtitle1" component="subtitle1" gutterBottom>
           {title}
         </Typography>
-        <Typography variant="subtitle2" component="p">
-          {desc}
+        <Typography style={{cursor: "pointer"}} variant="subtitle2" component="subtitle2" >
+        <Read data={desc} width={length}/>
         </Typography>
       </Grid>
-    </div>
+    </div> 
   );
 };
 

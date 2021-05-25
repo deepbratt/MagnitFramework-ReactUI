@@ -43,6 +43,11 @@ export default function createTheme(options) {
           padding: "5px 40px",
         },
       },
+      MuiInputLabel: {
+        root: {
+          fontSize: 16,
+        },
+      },
       MuiInputBase: {
         root: {
           backgroundColor: "#FFFFFF",

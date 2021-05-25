@@ -18,7 +18,7 @@ const SecondColumn = ({ cardData }) => {
           <Avatar alt="Remy Sharp" src={col2authImg} className={large} />
         </div>
         <div>
-          <Typography variant="h6">By {col2authName}</Typography>
+          <Typography variant="h5">By {col2authName}</Typography>
           <Rating name="read-only" value={4} readOnly />
         </div>
       </div>

@@ -1,46 +1,61 @@
 import React from "react";
-import {
-  useStyles,
-} from "../Sections/HomePageSections/ServicesContext/servicesStyles";
-import { Typography, Card, CardContent } from "@material-ui/core";
-import { MuiThemeProvider } from "@material-ui/core/styles";
+import { useStyles } from "../Sections/HomePageSections/ServicesContext/servicesStyles";
+import { Typography, Card, CardContent, Grid, Box } from "@material-ui/core";
 import CustomImage from "./CustomImage";
-import {THEME} from "../ContainerStructure/Headings/headingStyles"
+import { NavLink } from "react-router-dom";
+
 const CardData = ({ data }) => {
   const classes = useStyles();
-  const { card, devSec, devSub } = classes;
-//   Use this Card for Services Section pass data from its Parent Contanier to here
+  const { card, devSec, devSub, contentRight } = classes;
+  //   Use this Card for Services Section pass data from its Parent Contanier to here
   return (
     <>
-      {data.map((text, index) => {
-        return (
-          <Card key={index} className={card}>
-            <CardContent>
-              <section className={devSec}>
-                <section
-                  style={{ backgroundColor: text.color }}
-                  className={devSub} >
-                  <CustomImage
-                    alt="icon"
-                    src={text.icon}
-                    style={{ filter: text.fill }}
+      <Grid container justify={"space-between"}>
+        {data.map((text, index) => {
+          return (
+            <Grid
+              item
+              xs={12}
+              sm={12}
+              md={6}
+              lg={3}
+              key={index}
+              className={card}
+            >
+              <CardContent>
+                <section className={devSec}>
+                  <section
+                    style={{ backgroundColor: text.color }}
+                    className={devSub}
+                  >
+                    <CustomImage
+                      alt="icon"
+                      src={text.icon}
+                      style={{ filter: text.fill }}
                     />
+                  </section>
                 </section>
-              </section>
-              <section>
-                <MuiThemeProvider theme={THEME}>
-                  <Typography variant="h5" >
+                <Grid className={contentRight}>
+                  <Typography
+                    color="textPrimary"
+                    variant="subtitle1"
+                    gutterBottom
+                  >
                     {text.title}
                   </Typography>
-                  <Typography paragraph={true} >
-                    {text.desc}
+
+                  <Typography variant="subtitle2" paragraph={true}>
+                    {text.desc.substr(0, 80)}...
+                    <NavLink to="/" style={{ marginLeft: "10px", textDecoration: "none" }}>
+                      See More 
+                    </NavLink>
                   </Typography>
-                </MuiThemeProvider>
-              </section>
-            </CardContent>
-          </Card>
-        );
-      })}
+                </Grid>
+              </CardContent>
+            </Grid>
+          );
+        })}
+      </Grid>
     </>
   );
 };

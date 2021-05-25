@@ -16,6 +16,9 @@ const useStyles = makeStyles((theme) => ({
           position: "absolute",
         },
       },
+      textColor:{
+color:Mirage,
+      },
       imageWrapper: {
         position: "relative",
         margin: "10px 30px 30px 30px",
@@ -47,8 +50,10 @@ const useStyles = makeStyles((theme) => ({
       },
       cardRoot:{
         // padding:" 0rem 3rem",
+        display: "flex",
+        flexWrap:"wrap",
         [breakpoints.down("sm")]: {
-          // padding:'.4rem .8rem',
+          padding:'.4rem 0rem',
        },
       },
       cardSec: {
@@ -71,11 +76,7 @@ const useStyles = makeStyles((theme) => ({
         textAlign:"center",
         marginTop: "10px",
         color: DoveGray,
-        [breakpoints.only("md")]: {
-          width: "500px",
-        },
         [breakpoints.down("xs")]: {
-          width: "300px",
           marginTop: "5px",
         },
       },

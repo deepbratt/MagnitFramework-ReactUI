@@ -99,4 +99,21 @@ export const Colors = {
 
   // Menu
   harlequinDark: "#28A300",
+
+
+
+  //  Pricing Page Colors
+  mercury: "#E5E5E5",
+  lightningYellow: "#FDC624",
+  tulipTree: "#E6C434",
+  turquioseBlue: "#55DCE7",
+  scooter: "#3DCAD4",
+  geraldine: "#FD8882",
+  sunsetOrange: "#FF554C",
+  boxShadowColor: "rgba(82, 67, 194, 0.40)",
+  mint: "#6BDFFF",
+  darkMint: "#3DACFC",
+  cockTail: "#63D6FE",
+  darkCockTail: "#5DD4F8"
+
 };

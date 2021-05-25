@@ -15,6 +15,7 @@ import Breakpoints from "../../Theme/theme.breakpoints";
 import { Colors } from "../../Theme/color.constants";
 import CustomImage from "../CustomImage";
 import CustomButton from "../CustomButton";
+import theme from "../../Theme/GlobalFontSizes";
 
 const Slider = ({
   value,
@@ -27,40 +28,25 @@ const Slider = ({
 }) => {
   const { Harlequin, whiteColor } = Colors;
   const classes = useStyles();
-  const {
-    tick,
-    tickSub,
-    sec,
-    vector,
-    spiral,
-    gridImage,
-    gridText,
-    listItem
-  } = classes;
+  const { tick, tickSub, sec, vector, spiral, gridImage, gridText, listItem } =
+    classes;
   return (
-    <Grid
-      container
-      className={sec}
-      direction="row"
-      // justify="center"
-      // alignItems="center"
-      style={{
-        background: `linear-gradient(${color} 5%, ${whiteColor} 95% `,
-      }}
-    >
-      <Hidden smDown>
-        <CustomImage alt="sliderImg" src={Vector} className={spiral} />
-      </Hidden>
+    <MuiThemeProvider theme={theme}>
       <Grid
-        item
-        xs={12}
-        sm={12}
-        md={9}
-        lg={9}
-        className={gridText}
+        container
+        className={sec}
+        direction="row"
+        // justify="center"
+        // alignItems="center"
+        style={{
+          background: `linear-gradient(${color} 5%, ${whiteColor} 95% `,
+        }}
       >
-
-          <Typography variant="h2" >
+        <Hidden smDown>
+          <CustomImage alt="sliderImg" src={Vector} className={spiral} />
+        </Hidden>
+        <Grid item xs={12} sm={12} md={9} lg={9} className={gridText}>
+          <Typography color="textPrimary" variant="h1">
             {headingOne} <br />
             {headingTwo} <br />
             {headingThree} <br />
@@ -68,8 +54,8 @@ const Slider = ({
           {/* <section className={listSec}> */}
           <List>
             {data.map((text, index) => (
-              <ListItem className={listItem} >
-                <Typography  key={index} variant="h5">
+              <ListItem className={listItem}>
+                <Typography color="textPrimary" key={index} variant="h4">
                   <CheckIcon className={value === "LIGHT" ? tick : tickSub} />
                   {text}
                 </Typography>
@@ -78,35 +64,35 @@ const Slider = ({
           </List>
           {/* </section> */}
 
-        <CustomButton
-            // style={{
-            //   // textTransform: "none",
-            //   backgroundColor: Harlequin,
-            //   // borderRadius:"5px"
-            // }}
-            // variant="contained"
+          <CustomButton
+            style={{
+              // textTransform: "none",
+              backgroundColor: Harlequin,
+              // borderRadius:"5px"
+            }}
+            variant="contained"
             size={Breakpoints()}
-            color="primary"
           >
             {text}
           </CustomButton>
-      </Grid>
-      <Hidden smDown>
-        <Grid
-          item
-          xs={12}
-          md={3}
-          lg={3}
-          className={gridImage}
-          justify="flex-start"
-        >
-          <CustomImage alt="sliderImg" src={hero} className={vector} />
         </Grid>
-      </Hidden>
-      {/* <Hidden smDown>
+        <Hidden smDown>
+          <Grid
+            item
+            xs={12}
+            md={3}
+            lg={3}
+            className={gridImage}
+            justify="flex-start"
+          >
+            <CustomImage alt="sliderImg" src={hero} className={vector} />
+          </Grid>
+        </Hidden>
+        {/* <Hidden smDown>
         <Grid item xs={12} md={4} lg={1}></Grid>
       </Hidden> */}
-    </Grid>
+      </Grid>
+    </MuiThemeProvider>
   );
 };
 
