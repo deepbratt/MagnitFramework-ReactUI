@@ -8,6 +8,7 @@ const PointBadgeStyles = makeStyles((theme) => ({
     justifyContent: "end",
     height: "100%",
     margin: "15px",
+    cursor:"pointer",
     zIndex: 1,
     padding: "10px",
     boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)",
@@ -27,7 +28,11 @@ const PointBadgeStyles = makeStyles((theme) => ({
   badge: {
     borderRadius: "5px",
     // padding: "25px",
-    margin: "15px",
+    margin: "25px",
+    [theme.breakpoints.down("sm")]: {
+      margin: "15px",
+    },
+
   },
   devSec: {
     display: "flex",
