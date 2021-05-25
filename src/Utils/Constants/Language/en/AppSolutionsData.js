@@ -191,7 +191,7 @@ export const StairCaseData = [{
 
 // Admin Section
 
-export const adminHeading = "User free admin panel"
+export const adminHeading = "User friendly admin panel"
 export const paragraph = "The most important aspect of app development is usually not taken seriously by app developers. Making a user free admin panel is what sets us apart from our competitors.We make a state-of-art admin panel that increases productivity, gives insight into data, and helps us catch bugs. On the basis of your needs, we can turn the admin panel into a dashboard that allows manipulation of data within the user interface of the site."
 export const adminImg = Admin
 

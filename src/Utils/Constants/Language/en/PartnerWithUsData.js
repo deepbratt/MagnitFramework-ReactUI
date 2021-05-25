@@ -68,7 +68,7 @@ const {
   desc:   " Our customers value fair and transparent pricing, so that's what we offer. We promise we do not have any commercial incentive while choosing a technology or approach, merely the customer’s need at heart of our projects.",
 },
 { 
-  length: 40,
+  length: 45,
   color: persianGreen,
   icon: moneyIcon,
   title: "Value For Money",
@@ -76,7 +76,7 @@ const {
 },
 {
   
-  length: 57,
+  length: 40,
   color: orangeRed,
   icon: qualityIcon,
   title: "High Quality",
