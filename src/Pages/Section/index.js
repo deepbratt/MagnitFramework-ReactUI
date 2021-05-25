@@ -71,7 +71,7 @@ const Section = ({
           </>
         )}
         <div className={sectionHeader}>
-          {title && <SectionHeading header={title} />}
+          {title && <SectionHeading header={title} color={titleColor} />}
 
           {subTitle && (
             <Typography

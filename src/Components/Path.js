@@ -1,18 +1,18 @@
 import AboutUs from "./../Pages/AboutUs/AboutUs";
+import Services from "./../Pages/Services";
 import WebServices from "../Pages/WebServices";
 import Home from "../Pages/Home/index";
 import Solutions from "../Pages/SolutionsPage/Solutions";
-import Event from "../Pages/Event/Index";
+// import Event from "../Pages/Event/Index";
 import Testimonials from "../Pages/Testimonials";
 import Career from "../Pages/Careers/Container";
 import AppSolutions from "../Pages/AppSolutionsPage/Container";
 import OurBlogs from "../Pages/OurBlogs";
-import CaseStudies from "../Pages/CaseStudies";
-import Quote from "../Pages/ContactUs/index"
+import Quote from "../Pages/ContactUs/index";
 import HireDeveloper from "../Pages/HireDeveloper";
 import DigitalMarketing from "../Pages/DigitalMarketing";
 import Pricing from "../Pages/PricingPage/PricingContainer";
-import Services from "../Pages/Services";
+import CaseStudies from "../Pages/CaseStudies";
 
 const pathIds = {
   home: "home",
@@ -74,7 +74,7 @@ const pageRoutes = {
   [pathIds.caseStudies]: {
     path: pathRouting.caseStudies,
     sidebarName: "Case Studies",
-    component: CaseStudies
+    component: CaseStudies,
   },
   [pathIds.webServices]: {
     path: pathRouting.webServices,
@@ -121,10 +121,20 @@ const pageRoutes = {
     sidebarName: "Digital Marketing",
     component: DigitalMarketing,
   },
+  [pathIds.pricing]: {
+    path: pathRouting.pricing,
+    sidebarName: "Pricing",
+    component: Pricing,
+  },
   [pathIds.solutions]: {
     path: pathRouting.solutions,
     sidebarName: "Solutions",
     component: Solutions,
+  },
+  [pathIds.solutions]: {
+    path: pathRouting.blogs,
+    sidebarName: "Our Blogs",
+    component: OurBlogs,
   },
 };
 

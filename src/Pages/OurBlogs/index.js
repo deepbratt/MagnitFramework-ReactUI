@@ -62,10 +62,10 @@ const OurBlogs = () => {
         image={BannerImage}
         backColor={linearBackground}
       >
-        <Typography variant="h2" gutterBottom>
+        <Typography color="textPrimary" variant="h2" gutterBottom>
           {title}
         </Typography>
-        <Typography variant="h6" gutterBottom>
+        <Typography color="textPrimary" variant="h6" gutterBottom>
           {subtitle}
         </Typography>
       </Banner>
@@ -83,16 +83,11 @@ const OurBlogs = () => {
           justify="center"
           alignItems="center"
           alignContent="center"
+          spacing={2}
         >
           {LatestBlogsSectionText.cards &&
             LatestBlogsSectionText.cards.map((card, index) => (
-              <Grid
-                style={{ margin: "20px 0" }}
-                key={index}
-                item
-                xs={12}
-                md={4}
-              >
+              <Grid key={index} item xs={12} md={4}>
                 <LatestBlogs cardData={card} />
               </Grid>
             ))}
