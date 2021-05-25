@@ -66,16 +66,6 @@ const pageRoutes = {
     sidebarName: "Services",
     component: Services,
   },
-  [pathIds.solutions]: {
-    path: pathRouting.solutions,
-    sidebarName: "Solutions",
-    component: Solutions,
-  },
-  [pathIds.caseStudies]: {
-    path: pathRouting.caseStudies,
-    sidebarName: "Case Studies",
-    component: CaseStudies,
-  },
   [pathIds.webServices]: {
     path: pathRouting.webServices,
     sidebarName: "Web Development Services",
@@ -99,7 +89,7 @@ const pageRoutes = {
   [pathIds.caseStudies]: {
     path: pathRouting.caseStudies,
     sidebarName: "Case Studies",
-    // component: Solutions,
+    component: CaseStudies,
   },
   [pathIds.blogs]: {
     path: pathRouting.blogs,
