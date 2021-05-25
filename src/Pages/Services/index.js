@@ -33,54 +33,54 @@ const Services = () => {
   ];
   return (
     <>
-    <CommentSection>
-      <Banner
-        image={BannerImage}
-        backColor={linearBackground}
-        breadCrumb={<BreadCrumb links={breadCrumData} />}
-      >
-        <Typography color="textPrimary" variant="h2" gutterBottom>
-          {ServicesPageBanner.title}
-        </Typography>
-        <Typography color="textPrimary" variant="h6" gutterBottom>
-          {ServicesPageBanner.subtitle}
-        </Typography>
-        <span>
-          <CustomButton
-            variant="contained"
-            size={Breakpoints()}
-            color="secondary"
-          >
-            {ServicesPageBanner.buttonText}
-          </CustomButton>
-        </span>
-      </Banner>
+      <CommentSection>
+        <Banner
+          image={BannerImage}
+          backColor={linearBackground}
+          breadCrumb={<BreadCrumb links={breadCrumData} />}
+        >
+          <Typography color="textPrimary" variant="h2" gutterBottom>
+            {ServicesPageBanner.title}
+          </Typography>
+          <Typography color="textPrimary" variant="h6" gutterBottom>
+            {ServicesPageBanner.subtitle}
+          </Typography>
+          <span>
+            <CustomButton
+              variant="contained"
+              size={Breakpoints()}
+              color="secondary"
+            >
+              {ServicesPageBanner.buttonText}
+            </CustomButton>
+          </span>
+        </Banner>
 
-      <Grid item lg={12} md={12} xs={12}>
-        <WeOffer data={ServicesOfferedSection} />
-      </Grid>
-      <Section title={BenifitsSection.title}>
         <Grid item lg={12} md={12} xs={12}>
-          <PointList
-            data={BenifitsSection.data}
-            horizontal={true}
-            lgBreakpoint={6}
-          />
+          <WeOffer data={ServicesOfferedSection} />
         </Grid>
-      </Section>
-      <Section title={DoYouWant}>
-        <span>
-          <CustomButton
-            variant="contained"
-            size={Breakpoints()}
-            color="secondary"
-            component={Link}
-            to="/request-a-quote"
-          >
-            Request a Quote
-          </CustomButton>
-        </span>
-      </Section>
+        <Section title={BenifitsSection.title}>
+          <Grid item lg={12} md={12} xs={12}>
+            <PointList
+              data={BenifitsSection.data}
+              horizontal={true}
+              lgBreakpoint={6}
+            />
+          </Grid>
+        </Section>
+        <Section title={DoYouWant}>
+          <span>
+            <CustomButton
+              variant="contained"
+              size={Breakpoints()}
+              color="secondary"
+              component={Link}
+              to="/request-a-quote"
+            >
+              Request a Quote
+            </CustomButton>
+          </span>
+        </Section>
       </CommentSection>
     </>
   );
