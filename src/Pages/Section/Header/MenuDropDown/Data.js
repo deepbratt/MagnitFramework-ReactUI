@@ -5,7 +5,7 @@ export const subMenu = "Hire Developer";
 export const servicesData = [
   {
     title: "Web Development Services",
-    path: "/web-dev-services",
+    path: "/web-development-services",
   },
   {
     title: "App Solution Services",

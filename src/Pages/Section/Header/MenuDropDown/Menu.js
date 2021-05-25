@@ -13,7 +13,7 @@ import {
 } from "material-ui-popup-state/hooks";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { NavLink } from "react-router-dom";
-import Submenu from "./SubMenu";;
+import Submenu from "./SubMenu";
 const ParentPopupState = React.createContext(null);
 const { WildSand } = Colors;
 const CascadingHoverMenus = ({ data, name, route, sub }) => {
@@ -71,12 +71,23 @@ const CascadingHoverMenus = ({ data, name, route, sub }) => {
             </MenuItem>
           ))}
           {sub ? (
-            <NavLink to="/hire-developer" activeClassName={active} className={link}>
+            <NavLink
+              to="/hire-developer"
+              activeClassName={active}
+              className={link}
+            >
               <Submenu className={list} popupId="moreChoicesMenu" title={sub}>
-              <NavLink to="/home"activeClassName={active} className={link}>
-                <MenuItem  onClick={popupState.close}>null</MenuItem>
-                <MenuItem  onClick={popupState.close}>null</MenuItem>
-                <MenuItem  onClick={popupState.close}>null</MenuItem>
+                <NavLink to="/home" activeClassName={active} className={link}>
+                  <MenuItem onClick={popupState.close}>
+                    <Typography variant="h5">Full Stack Engineer</Typography>
+                  </MenuItem>
+                  <MenuItem onClick={popupState.close}>
+                    <Typography variant="h5">Frontend Engineer </Typography>
+                  </MenuItem>
+
+                  <MenuItem onClick={popupState.close}>
+                    <Typography variant="h5">Backend Engineer</Typography>
+                  </MenuItem>
                 </NavLink>
               </Submenu>
             </NavLink>
