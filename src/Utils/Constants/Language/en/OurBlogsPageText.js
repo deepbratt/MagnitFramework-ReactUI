@@ -8,7 +8,7 @@ export const BannerText = {
 };
 
 export const TrendingBlogsSectionText = {
-  header: "Trending /Blog",
+  header: "Trending /Blogs",
   card: {
     title:
       "What it’s like to work remotly in big size production development ?",
@@ -28,7 +28,7 @@ export const TrendingBlogsSectionText = {
 };
 
 export const LatestBlogsSectionText = {
-  header: "Latest Blog",
+  header: "Latest Blogs",
   cards: [
     {
       coverImage: UIUXInspiration,
