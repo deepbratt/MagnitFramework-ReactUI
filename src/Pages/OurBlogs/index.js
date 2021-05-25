@@ -83,16 +83,11 @@ const OurBlogs = () => {
           justify="center"
           alignItems="center"
           alignContent="center"
+          spacing={2}
         >
           {LatestBlogsSectionText.cards &&
             LatestBlogsSectionText.cards.map((card, index) => (
-              <Grid
-                style={{ margin: "20px 0" }}
-                key={index}
-                item
-                xs={12}
-                md={4}
-              >
+              <Grid key={index} item xs={12} md={4}>
                 <LatestBlogs cardData={card} />
               </Grid>
             ))}
