@@ -3,8 +3,8 @@ import Section from "../Section";
 import { Link } from 'react-router-dom'
 import { Typography } from "@material-ui/core";
 import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
-import { OurExpertEngineers, webDevServicesData as servicesData, WeHireTheMost, WeProvideExceptional } from "../Services/webDevServicesData";
-import { whyHireData as hireUsData } from "../Services/whyHireData";
+import { OurExpertEngineers, webDevServicesData as servicesData, WeHireTheMost, WeProvideExceptional } from "../WebServices/webDevServicesData";
+import { whyHireData as hireUsData } from "../WebServices/whyHireData";
 import { Colors } from "../../Theme/color.constants";
 import Banner from "../../Components/Banner";
 import {
@@ -15,7 +15,7 @@ import {
 } from "./constants";
 import OptionsTab from "../../Components/OptionsTab";
 import StarFishPattern from "../../assets/patterns/starfishBlue.png";
-import ServicesSectionStyles from "../Services/style";
+import ServicesSectionStyles from "../WebServices/style";
 import BannerImage from "../../assets/services/BannerImage.png";
 import PatternLeft from "../../assets/PatternLeft.png";
 import BreadCrumb from "../../Components/BreadCrumb";

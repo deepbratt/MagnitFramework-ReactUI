@@ -20,7 +20,7 @@ const AdminContext = () => {
       <Grid container className={root}>
         <Grid justify="center" container>
           <Grid item md={12} lg={12} xs={12}>
-            <Typography variant="h2">
+            <Typography color="textPrimary" variant="h2">
               {adminHeading}
             </Typography>
           </Grid>

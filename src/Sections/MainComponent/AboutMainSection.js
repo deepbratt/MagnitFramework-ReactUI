@@ -33,7 +33,7 @@ const AboutMainSection = (props) => {
                 <section className={paragraphStyle}>
                   {paragraph &&
                     paragraph.map((text, index) => (
-                      <Typography key={index} color="textSecondary" variant="subtitle2">
+                      <Typography key={index} color="textSecondary" variant="body1">
                         {text}
                       </Typography>
                     ))}

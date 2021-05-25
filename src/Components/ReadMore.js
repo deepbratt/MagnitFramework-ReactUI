@@ -1,19 +1,19 @@
 import React from "react";
 import ReadMoreReact from "read-more-react";
 import { Typography } from "@material-ui/core";
-import useStyles from "../Pages/Home/style";
 
-const ReadMore = ({ data }) => {
-  const { readMore } = useStyles();
+
+const ReadMore = ({ data , width}) => {
+
   return (
     <ReadMoreReact
       text={data}
-      min={57}
-      ideal={57}
-      max={100}
+      min={width}
+      ideal={width}
+      max={70}
       readMoreText={
-        <Typography className={readMore} variant="h6">
-          read more
+        <Typography color="textSecondary" variant="subtitle2">
+          ...Read More
         </Typography>
       }
     />
