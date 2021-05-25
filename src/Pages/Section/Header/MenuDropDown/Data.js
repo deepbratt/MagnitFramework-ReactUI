@@ -1,3 +1,4 @@
+
 export const service = "Services";
 export const serviceRoute = "/services";
 export const subMenu = "Solutions";
@@ -44,4 +45,5 @@ export const CompanyData = [
     path: "/testimonial",
   },
 ];
+
 
