@@ -83,6 +83,10 @@ export const footerText = {
         value: "Careers",
       },
       {
+        route: "/blogs",
+        value: "Our Blogs",
+      },
+      {
         route: "/testimonial",
         value: "Testimonials",
       },

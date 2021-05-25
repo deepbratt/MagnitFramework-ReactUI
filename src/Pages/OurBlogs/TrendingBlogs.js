@@ -30,7 +30,7 @@ const TrendingBlogs = ({ featureImage, cardData }) => {
                   <Typography variant="h6">{authName}</Typography>
                   <Typography
                     className={light}
-                    variant="subtitle2"
+                    variant="body2"
                     component="p"
                   >
                     {authDesig}
@@ -38,20 +38,20 @@ const TrendingBlogs = ({ featureImage, cardData }) => {
                 </div>
               </div>
               <div>
-                <Typography align="right" variant="subtitle2" component="p">
+                <Typography align="right" variant="h6" component="p">
                   {tag}
                 </Typography>
                 <Typography
                   className={light}
                   align="right"
-                  variant="subtitle2"
+                  variant="body2"
                   component="p"
                 >
                   {date}
                 </Typography>
               </div>
             </div>
-            <Typography variant="h4" gutterBottom>
+            <Typography variant="h5" gutterBottom>
               {title}
             </Typography>
             {body &&
