@@ -30,13 +30,15 @@ const {
 
 export const benefitsData = [
   {
+    length: 57,
     color: Malibu,
     icon: Time,
     title: "Save Time & Money",
     desc:
       "Our Client’s time is their money is the belief of our every project. To deliver custom solutions on time within the budget of the client is our biggest priority",
   },
-  {
+  {  
+    length: 57,
     color: Heliotrope,
     icon: techIcon,
     title: "Latest Technology",
@@ -44,6 +46,7 @@ export const benefitsData = [
       "We are armed with knowledge and experience of the latest technology. We keep an eye out for the newest tools in software technology and the trends in your industry.",
   },
   {
+    length: 57,
     color: AquamarineBlue,
     icon: Money,
     title: "One Time Cost",
@@ -51,6 +54,7 @@ export const benefitsData = [
       "You don’t need to pay on every step of the solution development process. You can request a quote to see what fits your budget.",
   },
   {
+    length: 57,
     color: HavelockBlue,
     icon: Quality,
     title: "Assurance of Quality",
@@ -58,6 +62,7 @@ export const benefitsData = [
       "Strict Quality control is the pillar of our customized solutions. An independent team makes sure that there is no compromise on Quality solutions.",
   },
   {
+    length: 57,
     color: TexasRose,
     icon: customIcon,
     title: "Customize as you Need",
@@ -65,6 +70,7 @@ export const benefitsData = [
       "We create a deep understanding of your market and target audience before tailoring a solution specific to your needs.",
   },
   {
+    length: 57,
     color: Niagara,
     icon: ideaIcon,
     title: "You own the Code",
@@ -72,6 +78,7 @@ export const benefitsData = [
       " After the completion of the project, the source code would be handed over to you.",
   },
   {
+    length: 57,
     color: yellowOrange,
     icon: Support,
     title: "Lifetime",
@@ -79,6 +86,7 @@ export const benefitsData = [
       " We do not limit ourselves to just the project. Our team goes beyond the call to fix bugs and issues in the code to ensure customer satisfaction.",
   },
   {
+    length: 57,
     color: DodgerBlue,
     icon: Data,
     title: "Data Security",
@@ -86,6 +94,7 @@ export const benefitsData = [
       "Our client’s security is our top priority. Any confidential information shared with us is protected with the latest security measures, tools and regulations.",
   },
   {
+    length: 57,
     color: TexasRose,
     icon: customIcon,
     title: "Customize as you Need",
@@ -93,6 +102,7 @@ export const benefitsData = [
       "We create a deep understanding of your market and target audience before tailoring a solution specific to your needs.",
   },
   {
+    length: 57,
     color: Niagara,
     icon: ideaIcon,
     title: "You own the Code",
@@ -100,6 +110,7 @@ export const benefitsData = [
       " After the completion of the project, the source code would be handed over to you.",
   },
   {
+    length: 57,
     color: yellowOrange,
     icon: Support,
     title: "Lifetime",
@@ -107,6 +118,7 @@ export const benefitsData = [
       " We do not limit ourselves to just the project. Our team goes beyond the call to fix bugs and issues in the code to ensure customer satisfaction.",
   },
   {
+    length: 57,
     color: DodgerBlue,
     icon: Data,
     title: "Data Security",

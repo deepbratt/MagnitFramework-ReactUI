@@ -18,7 +18,7 @@ const WeOfferContext = ({data}) => {
     <>
       <Grid container className={root}>
         <Grid item lg={12} md={12} xs={12}>
-          <Typography variant="h2">{heading}</Typography>
+          <Typography color="textPrimary" variant="h2">{heading}</Typography>
           <Typography variant="h6">{subheading}</Typography>
         </Grid>
         <Grid item className={cardSec}>
