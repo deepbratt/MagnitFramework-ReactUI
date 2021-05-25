@@ -1,7 +1,7 @@
 import React from "react";
 import WeOffer from "../../Sections/SolutionsPageSection/WeOfferContext";
 import { Grid } from "@material-ui/core";
-import ServicesSectionStyles from "../../Pages/Services/style";
+import ServicesSectionStyles from "../WebServices/style";
 import { useStyles } from "../../Sections/SolutionsPageSection/weOfferStyles";
 import { Colors } from "../../Theme/color.constants";
 import Banner from "../../Sections/SolutionsPageSection/Banner";
@@ -12,7 +12,7 @@ import Section from "../Section";
 import CustomButton from "../../Components/CustomButton";
 import Breakpoints from "../../Theme/theme.breakpoints";
 import { Link } from 'react-router-dom'
-import { DoYouWant } from "../Services/constants";
+import { DoYouWant } from "../WebServices/constants";
 import PointList from "../../Components/PointBadge/PointList"
 
 const Solutions = () => {
