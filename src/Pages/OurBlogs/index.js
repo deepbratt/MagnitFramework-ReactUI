@@ -62,10 +62,10 @@ const OurBlogs = () => {
         image={BannerImage}
         backColor={linearBackground}
       >
-        <Typography variant="h2" gutterBottom>
+        <Typography color="textPrimary" variant="h2" gutterBottom>
           {title}
         </Typography>
-        <Typography variant="h6" gutterBottom>
+        <Typography color="textPrimary" variant="h6" gutterBottom>
           {subtitle}
         </Typography>
       </Banner>
