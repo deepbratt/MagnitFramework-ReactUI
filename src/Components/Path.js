@@ -98,7 +98,7 @@ const pageRoutes = {
   },
   [pathIds.caseStudies]: {
     path: pathRouting.caseStudies,
-    sidebarName: "Case Stdies",
+    sidebarName: "Case Studies",
     // component: Solutions,
   },
   [pathIds.blogs]: {
