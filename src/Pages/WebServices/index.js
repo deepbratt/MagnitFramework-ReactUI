@@ -1,10 +1,15 @@
 import PointList from "../../Components/PointBadge/PointList";
 import Section from "../Section";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import { Typography } from "@material-ui/core";
 import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
-import { OurExpertEngineers, webDevServicesData as servicesData, WeHireTheMost, WeProvideExceptional } from "../WebServices/webDevServicesData";
-import { whyHireData as hireUsData } from "../WebServices/whyHireData";
+import {
+  OurExpertEngineers,
+  webDevServicesData as servicesData,
+  WeHireTheMost,
+  WeProvideExceptional,
+} from "./webDevServicesData";
+import { whyHireData as hireUsData } from "./whyHireData";
 import { Colors } from "../../Theme/color.constants";
 import Banner from "../../Components/Banner";
 import {
@@ -15,7 +20,7 @@ import {
 } from "./constants";
 import OptionsTab from "../../Components/OptionsTab";
 import StarFishPattern from "../../assets/patterns/starfishBlue.png";
-import ServicesSectionStyles from "../WebServices/style";
+import ServicesSectionStyles from "./style";
 import BannerImage from "../../assets/services/BannerImage.png";
 import PatternLeft from "../../assets/PatternLeft.png";
 import BreadCrumb from "../../Components/BreadCrumb";
@@ -24,7 +29,7 @@ import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
 import Heading5 from "../../ContainerStructure/Headings/Heading5";
 import Breakpoints from "../../Theme/theme.breakpoints";
-const DigitalMarketing = () => {
+const Services = () => {
   const { skyBlue, linearBackground } = Colors;
 
   const breadCrumData = [
@@ -33,13 +38,12 @@ const DigitalMarketing = () => {
       text: "Home",
     },
     {
-      path: "/digital-marketing",
-      text: "Digital Marketing",
+      path: "/web-dev-services",
+      text: "Web Development Services",
     },
   ];
 
-  const { textColor, bannerBtn, leftPattern, rightPattern } =
-    ServicesSectionStyles();
+  const { textColor, leftPattern, rightPattern } = ServicesSectionStyles();
   return (
     <CommentSection>
       <Banner
@@ -48,21 +52,20 @@ const DigitalMarketing = () => {
         breadCrumb={<BreadCrumb links={breadCrumData} />}
       >
         <Typography variant="h1" gutterBottom className={textColor}>
-         {WeHireTheMost}
+          {WeHireTheMost}
         </Typography>
         <Typography variant="h5" gutterBottom className={textColor}>
-         {WeProvideExceptional}
+          {WeProvideExceptional}
         </Typography>
-        <span >
-        <CustomButton
-          variant="contained"
-          size={Breakpoints()}
-          color="secondary"
-        >
-         Get Started
-        </CustomButton>
+        <span>
+          <CustomButton
+            variant="contained"
+            size={Breakpoints()}
+            color="secondary"
+          >
+            Get Started
+          </CustomButton>
         </span>
-        
       </Banner>
       <div style={{ position: "relative" }}>
         <CustomImage
@@ -79,7 +82,7 @@ const DigitalMarketing = () => {
         />
         <Section title={ServicesSectionTitle} highlightWords={1}>
           <section style={{ marginBottom: "10px" }}>
-            <Heading5 subTitle={OurExpertEngineers}/>
+            <Heading5 subTitle={OurExpertEngineers} />
           </section>
           <PointList data={servicesData} horizontal={false} />
         </Section>
@@ -88,29 +91,26 @@ const DigitalMarketing = () => {
         <OptionsTab />
       </Section>
       <Section title={WhyHireSectionTitle} highlightWords={3}>
-        <PointList data={hireUsData} horizontal={true} lgBreakpoint={6}/>
+        <PointList data={hireUsData} horizontal={true} lgBreakpoint={6} />
       </Section>
       <Section backColor={skyBlue}>
         <GlanceSection backColor={skyBlue} />
       </Section>
       <Section title={DoYouWant}>
-    <span >
-    
-        <CustomButton
-          variant="contained"
-          size={Breakpoints()}
-          color="secondary"
-          component={Link}
-          to="/request-a-quote"
-          
-        >
-       Request a Quote
-        </CustomButton>
+        <span>
+          <CustomButton
+            variant="contained"
+            size={Breakpoints()}
+            color="secondary"
+            component={Link}
+            to="/request-a-quote"
+          >
+            Request a Quote
+          </CustomButton>
         </span>
-    </Section>
+      </Section>
     </CommentSection>
-    
   );
 };
 
-export default DigitalMarketing;
+export default Services;
