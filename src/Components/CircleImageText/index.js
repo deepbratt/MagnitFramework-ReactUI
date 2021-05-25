@@ -11,7 +11,7 @@ const CircleImageText = ({ text, textRight=false, innerImg, clickHandler,props }
       {textRight && <CircleImageComponent innerImg={innerImg} {...props} />}
       <Typography
         variant="subtitle1"
-        component="p"
+        color="textPrimary"
         className={textRight ? classes.textStylesRight : classes.textStylesLeft}
         paragraph
       >

@@ -1,4 +1,3 @@
-import { Grid, Typography } from "@material-ui/core";
 import React from "react";
 import { useHistory, withRouter } from "react-router";
 import useStyles from "./useStyles";
@@ -17,59 +16,54 @@ import { caseStudies } from "../../Utils/Constants/Language";
 const InterActiveSection = (props) => {
   const classes = useStyles();
   const text = caseStudies.demoText;
-  const history = useHistory()
+  const history = useHistory();
+  let dataText = props.textData;
+  const iconsArray = [
+    { icon: <Touch style={{ width: "40px" }} />, nameClass: classes.leftTop },
+    { icon: <People style={{ width: "40px" }} />, nameClass: classes.leftMid },
+    {
+      icon: <img src={Google} style={{ width: "40px" }} />,
+      nameClass: classes.leftBottom,
+    },
+    {
+      icon: <img src={MobileChat} style={{ width: "40px" }} />,
+      nameClass: classes.rightTop,
+    },
+    {
+      icon: <img src={MobileApp} style={{ width: "40px" }} />,
+      nameClass: classes.rightMid,
+    },
+    {
+      icon: <img src={LoveBirds} style={{ width: "40px" }} />,
+      nameClass: classes.rightBottom,
+    },
+  ];
   return (
     // <span className={classes.root}>
-      <span className={classes.wrapper}>
-        <MiddleImgBtn className={classes.middleImage} onClick={()=>{history.push('/')}}/>
-        <span className={classes.leftTop}>
-          <CircleImageText
-            innerImg={<Touch style={{ width: "40px" }} />}
-            text={text}
-            clickHandler={()=>{(props.scrollRef.current[0].current.scrollIntoView())}}
-          />
-        </span>
-        <span className={classes.leftMid}>
-          <CircleImageText
-            innerImg={<People style={{ width: "40px" }} />}
-            text={text}
-            clickHandler={()=>{(props.scrollRef.current[1].current.scrollIntoView())}}
-          />
-        </span>
-        <span className={classes.leftBottom}>
-          <CircleImageText
-            innerImg={<img src={Google} style={{ width: "40px" }} />}
-            text={text}
-          clickHandler={()=>{(props.scrollRef.current[2].current.scrollIntoView())}}
-          />
-        </span>
-        <span className={classes.rightTop}>
-          <CircleImageText
-            innerImg={<img src={LoveBirds} style={{ width: "40px" }} />}
-            textRight={true}
-            text={text}
-          clickHandler={()=>{(props.scrollRef.current[3].current.scrollIntoView())}}
-          />
-        </span>
-        <span className={classes.rightMid}>
-          <CircleImageText
-            innerImg={<img src={MobileApp} style={{ width: "40px" }} />}
-            textRight={true}
-            text={text}
-          clickHandler={()=>{(props.scrollRef.current[4].current.scrollIntoView())}}
-          />
-        </span>
-        <span className={classes.rightBottom}>
-          <CircleImageText
-            innerImg={<img src={MobileChat} style={{ width: "40px" }} />}
-            textRight={true}
-            text={text}
-          clickHandler={()=>{(props.scrollRef.current[5].current.scrollIntoView())}}
-          />
-        </span>
-        <LeftLinksPath className={classes.leftPath} />
-        <RightLinksPath className={classes.rightPath} />
+    <span className={classes.wrapper}>
+      <MiddleImgBtn
+        className={classes.middleImage}
+        onClick={() => {
+          history.push("/");
+        }}
+      />
+
+      {dataText.map((item,index)=>(
+        <span className={iconsArray[index].nameClass}>
+        <CircleImageText
+          textRight={index > 2 ? true : false}
+          key={"interactive-casestudies-"+index}
+          innerImg={iconsArray[index].icon}
+          text={item.faqQuestion}
+          clickHandler={() => {
+            props.scrollRef.current[index].current.scrollIntoView();
+          }}
+        />
       </span>
+      ))}
+      <LeftLinksPath className={classes.leftPath} />
+      <RightLinksPath className={classes.rightPath} />
+    </span>
     // </span>
   );
 };

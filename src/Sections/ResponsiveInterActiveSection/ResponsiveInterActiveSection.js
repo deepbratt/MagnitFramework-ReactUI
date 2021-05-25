@@ -1,5 +1,5 @@
 import { Grid, Link } from "@material-ui/core";
-import React from "react";
+import React, { useEffect } from "react";
 import useStyles from "./useStyles";
 import { ReactComponent as MiddleImgBtn } from "../../assets/CaseStudies/middle.svg";
 import { ReactComponent as People } from "../../assets/CaseStudies/people.svg";
@@ -14,55 +14,43 @@ import { useHistory } from "react-router";
 
 const ResponsiveInterActiveSection = (props) => {
   const classes = useStyles();
-  const text = caseStudies.demoText;
-  const history = useHistory()
+  const history = useHistory();
+  const dataText = props.textData
+  const iconsArray = [
+    <People style={{ width: "40px" }} />,
+    <Touch style={{ width: "40px" }} />,
+    <img src={Google} style={{ width: "40px" }} />,
+    <img src={MobileChat} style={{ width: "40px" }} />,
+    <img src={MobileApp} style={{ width: "40px" }} />,
+    <img src={LoveBirds} style={{ width: "40px" }} />,
+  ];
   return (
     <Grid
       container
-      style={{ display: "flex"}}
+      style={{ display: "flex", background:"red" }}
       justify="space-evenly"
       wrap="wrap"
       spacing={0}
     >
       <Grid item xs={12}>
-        <MiddleImgBtn className={classes.middleImage} onClick={()=>{history.push('/')}}/>
+        <MiddleImgBtn
+          className={classes.middleImage}
+          onClick={() => {
+            history.push("/");
+          }}
+        />
       </Grid>
-      <CircleImageText
-        innerImg={<Touch style={{ width: "40px"}} />}
-        text={text}
+      {dataText.map((item,index)=>(
+        <CircleImageText
+        key={"responsiveInteractive-"+index}
+        innerImg={iconsArray[index]}
+        text={item.faqQuestion}
         textRight
-        clickHandler={()=>{(props.scrollRef.current[0].current.scrollIntoView())}}
+        clickHandler={() => {
+          props.scrollRef.current[index].current.scrollIntoView();
+        }}
       />
-      <CircleImageText
-        innerImg={<People style={{ width: "40px" }} />}
-        text={text}
-        textRight
-        clickHandler={()=>{(props.scrollRef.current[1].current.scrollIntoView())}}
-      />
-      <CircleImageText
-        innerImg={<img src={Google} style={{ width: "40px" }} />}
-        text={text}
-        textRight
-        clickHandler={()=>{(props.scrollRef.current[2].current.scrollIntoView())}}
-      />
-      <CircleImageText
-        innerImg={<img src={LoveBirds} style={{ width: "40px" }} />}
-        textRight
-        text={text}
-        clickHandler={()=>{(props.scrollRef.current[3].current.scrollIntoView())}}
-      />
-      <CircleImageText
-        innerImg={<img src={MobileApp} style={{ width: "40px" }} />}
-        textRight
-        text={text}
-        clickHandler={()=>{(props.scrollRef.current[4].current.scrollIntoView())}}
-      />
-      <CircleImageText
-        innerImg={<img src={MobileChat} style={{ width: "40px" }} />}
-        textRight
-        text={text}
-        clickHandler={()=>{(props.scrollRef.current[5].current.scrollIntoView())}}
-      />
+      ))}
     </Grid>
   );
 };

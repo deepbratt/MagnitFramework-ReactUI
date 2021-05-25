@@ -1,5 +1,5 @@
-import { Grid, Hidden, Typography } from "@material-ui/core";
-import React, { createRef, useEffect, useRef } from "react";
+import { Grid, Hidden } from "@material-ui/core";
+import React, { createRef, useRef } from "react";
 import { withRouter } from "react-router";
 // import Banner from "../../Components/Banner";
 import Section from "../Section";
@@ -23,15 +23,7 @@ const CaseStudies = () => {
   // const classes = useStyles();
   const AwardSectionImages = [Image1, Image2, Image3, Image4, Image5];
   const colors =Colors
-  const caseStudiesText = caseStudies
-  const faqData = [
-    {que: caseStudiesText.faqQuestions, ans: caseStudiesText.faqAns},
-    {que: caseStudiesText.faqQuestions, ans: caseStudiesText.faqAns},
-    {que: caseStudiesText.faqQuestions, ans: caseStudiesText.faqAns},
-    {que: caseStudiesText.faqQuestions, ans: caseStudiesText.faqAns},
-    {que: caseStudiesText.faqQuestions, ans: caseStudiesText.faqAns},
-    {que: caseStudiesText.faqQuestions, ans: caseStudiesText.faqAns},
-  ]
+  const faqData = caseStudies.faqs
   const arrLength = faqData.length;
   const elRefs = useRef([]);
 
@@ -74,21 +66,21 @@ const CaseStudies = () => {
       >
         <Hidden lgUp>
           <span style={{marginTop:"-120px"}}>
-            <ResponsiveInterActiveSection scrollRef={elRefs}/>
+            <ResponsiveInterActiveSection scrollRef={elRefs} textData={faqData}/>
           </span>
         </Hidden>
         <Hidden mdDown>
           <Section>
-            <InterActiveSection scrollRef={elRefs}/>
+            <InterActiveSection scrollRef={elRefs} textData={faqData}/>
           </Section>
         </Hidden>
       </Grid>
-      <Grid item xs={12}>
+      <Grid item xs={12} style={{marginTop:"100px"}}>
         <Section>
           {/* <FaqNonInteractive toRight/> */}
           {faqData.map((item, index)=>(
-            <div key={'faq-'+index} style={{paddingTop:"50px"}} ref={elRefs.current[index]}>
-              <FaqNonInteractive toRight={index%2===0 ? false : true} question={item.que} answer={item.ans}/>
+            <div key={'faq-'+index} style={{paddingTop:"70px"}} ref={elRefs.current[index]}>
+              <FaqNonInteractive toRight={index%2===0 ? false : true} question={item.faqQuestion} answer={item.faqAns}/>
             </div>
           ))}
         </Section>
