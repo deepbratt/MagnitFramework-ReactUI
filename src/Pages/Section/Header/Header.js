@@ -1,20 +1,15 @@
-import React, { useState } from "react";
-import { useStyles, THEME } from "./headerStyles";
-import { withStyles } from "@material-ui/core/styles";
+import React from "react";
+import { useStyles } from "./headerStyles";
 import {
   ListItem,
   List,
-  ListItemText,
   Toolbar,
-  Button,
   AppBar,
   LinearProgress,
-  Menu,
-  MenuItem,
   Typography,
 } from "@material-ui/core";
 import { NavLink } from "react-router-dom";
-import theme from "../../../Theme/GlobalFontSizes"
+import theme from "../../../Theme/GlobalFontSizes";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import SideBar from "./Sidebar/SideBar";
 import Breakpoints from "../../../Theme/theme.breakpoints";
@@ -23,39 +18,23 @@ import { Logo } from "../../../Components/Hero/Images";
 import { Colors } from "../../../Theme/color.constants";
 import CustomButton from "../../../Components/CustomButton";
 import CustomImage from "../../../Components/CustomImage";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import { menuItems } from "./MenuDropDown/Data";
+import Menus from "./MenuDropDown/Menu";
+import {
+  servicesData,
+  service,
+  serviceRoute,
+  company,
+  companyRoute,
+  CompanyData,
+  subMenu,
+} from "./MenuDropDown/Data";
 
 const Header = (props) => {
   const classes = useStyles();
   const { WildSand } = Colors;
-  const {
-    logo,
-    list,
-    listItem,
-    appbarsolid,
-    link,
-    root,
-    active,
-    menu,
-  } = classes;
-  const StyledMenuItem = withStyles((theme) => ({
-    paper: {
-      backgroundColor: WildSand,
-    },
-  }))(Menu);
+  const { logo, list, appbarsolid, link, root, active } = classes;
   const navigated = () => {
     props.resetLoader();
-  };
-
-  const [anchorEl, setAnchorEl] = useState(null);
-
-  const handleClick = (index, event) => {
-    setAnchorEl({ [index]: event.currentTarget });
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
   };
 
   return (
@@ -65,69 +44,26 @@ const Header = (props) => {
           <section>
             <CustomImage className={logo} alt="logo" src={Logo} />
           </section>
-          {/* Header Menu */}
+          {/* Header SideBar */}
           <Hidden mdUp>
             <SideBar />
           </Hidden>
           <Hidden smDown>
             <List className={list}>
               <NavLink activeClassName={active} className={link} to="/home">
-              <MuiThemeProvider theme={theme}>
-
-            
+                <MuiThemeProvider theme={theme}>
                   <ListItem>
-                    <Typography variant="h5">
-                      HOME
-                    </Typography>
+                    <Typography variant="h5">HOME</Typography>
                   </ListItem>
-                  </MuiThemeProvider>
+                </MuiThemeProvider>
               </NavLink>
-              {Object.keys(menuItems).map((item, index) => (
-                <div key={index}>
-           
-                    <ListItem style={{ padding: "0" }}>
-                      <Button
-                        className={list}
-                        onClick={(e) => handleClick(index, e)}
-                      >
-                        {item} <ExpandMoreIcon />
-                      </Button>
-                    </ListItem>
-          
-                  <StyledMenuItem
-                    anchorEl={anchorEl && anchorEl[index]}
-                    keepMounted
-                    open={anchorEl && Boolean(anchorEl[index])}
-                    onClose={handleClose}
-                    getContentAnchorEl={null}
-                    className={listItem}
-                    anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
-                    transformOrigin={{ vertical: "top", horizontal: "center" }}
-                    disableScrollLock
-                  >
-                    {menuItems[item].map((menuitems, menuindex) => (
-                      <MenuItem
-                        key={menuindex}
-                        selected={menuitems === item}
-                        onClick={handleClose}
-                        className={menu}
-                      >
-                          <MuiThemeProvider theme={theme}>
-                        <NavLink
-                          to={menuitems.path}
-                          activeClassName={active}
-                          className={link}
-                        >
-                         <Typography variant="h5">
-                           {menuitems.title}
-                         </Typography>
-                        </NavLink>
-                        </MuiThemeProvider>
-                      </MenuItem>
-                    ))}
-                  </StyledMenuItem>
-                </div>
-              ))}
+              <Menus
+                route={serviceRoute}
+                name={service}
+                data={servicesData}
+                sub={subMenu}
+              />
+              <Menus route={companyRoute} name={company} data={CompanyData} />
               <ListItem>
                 <NavLink
                   to="request-a-quote"
