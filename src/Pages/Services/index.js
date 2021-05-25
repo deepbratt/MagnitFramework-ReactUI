@@ -16,6 +16,7 @@ import PointList from "../../Components/PointBadge/PointList";
 import BreadCrumb from "../../Components/BreadCrumb";
 import { BannerImage } from "../../Utils/Constants/Language/en/SolutionsPageData";
 import Banner from "../../Components/Banner";
+import CommentSection from "../../Components/CommentSection";
 
 const Services = () => {
   const { linearBackground } = Colors;
@@ -32,6 +33,7 @@ const Services = () => {
   ];
   return (
     <>
+    <CommentSection>
       <Banner
         image={BannerImage}
         backColor={linearBackground}
@@ -79,6 +81,7 @@ const Services = () => {
           </CustomButton>
         </span>
       </Section>
+      </CommentSection>
     </>
   );
 };
