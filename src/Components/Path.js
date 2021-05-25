@@ -13,6 +13,7 @@ import HireDeveloper from "../Pages/HireDeveloper";
 import DigitalMarketing from "../Pages/DigitalMarketing";
 import Pricing from "../Pages/PricingPage/PricingContainer";
 import CaseStudies from "../Pages/CaseStudies";
+import Error from '../Pages/Error/Index'
 
 const pathIds = {
   home: "home",
@@ -30,6 +31,7 @@ const pathIds = {
   hireDeveloper: "hire-developer",
   digitalMarketing: "digital-marketing",
   pricing: "pricing",
+  notFound: "404"
 };
 
 const pathRouting = {
@@ -48,6 +50,7 @@ const pathRouting = {
   hireDeveloper: "/hire-developer",
   digitalMarketing: "/digital-marketing",
   pricing: "/pricing",
+  notFound:""
 };
 
 const pageRoutes = {
@@ -125,6 +128,11 @@ const pageRoutes = {
     path: pathRouting.blogs,
     sidebarName: "Our Blogs",
     component: OurBlogs,
+  },
+  [pathIds.notFound]: {
+    path: pathRouting.notFound,
+    sidebarName: "",
+    component: Error,
   },
 };
 

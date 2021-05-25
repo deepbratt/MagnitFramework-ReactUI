@@ -6,7 +6,6 @@ import RequireAuth from "./container/RequireAuth";
 import { pageRoutes } from "./Components/Path";
 import Home from "./Pages/Home";
 import ContactUs from "./Pages/ContactUs";
-import Error from "./Pages/Error/Index";
 
 const Routes = () => {
   const routeArray = Object.values(pageRoutes);
@@ -29,7 +28,7 @@ const Routes = () => {
               />
             );
           })}
-          {/* <RequireAuth component={Error} /> */}
+          {/* <RequireAuth path="" component={Error} /> */}
         </Layout>
         
       </Switch>
