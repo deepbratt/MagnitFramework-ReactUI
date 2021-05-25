@@ -1,36 +1,25 @@
-import PointList from "../../Components/PointBadge/PointList";
-import Section from "../Section";
-import { Link } from "react-router-dom";
-import { Typography } from "@material-ui/core";
-import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
-import {
-  OurExpertEngineers,
-  webDevServicesData as servicesData,
-  WeHireTheMost,
-  WeProvideExceptional,
-} from "./webDevServicesData";
-import { whyHireData as hireUsData } from "./whyHireData";
+import React from "react";
+import WeOffer from "../../Sections/SolutionsPageSection/WeOfferContext";
+import { Grid, Typography } from "@material-ui/core";
 import { Colors } from "../../Theme/color.constants";
-import Banner from "../../Components/Banner";
 import {
-  DoYouWant,
-  HiringSectionTitle,
-  ServicesSectionTitle,
-  WhyHireSectionTitle,
-} from "./constants";
-import OptionsTab from "../../Components/OptionsTab";
-import StarFishPattern from "../../assets/patterns/starfishBlue.png";
-import ServicesSectionStyles from "./style";
-import BannerImage from "../../assets/services/BannerImage.png";
-import PatternLeft from "../../assets/PatternLeft.png";
-import BreadCrumb from "../../Components/BreadCrumb";
-import CommentSection from "../../Components/CommentSection";
+  ServicesPageBanner,
+  ServicesOfferedSection,
+  BenifitsSection,
+} from "../../Utils/Constants/Language/en/ServicesPageText";
+import Section from "../Section";
 import CustomButton from "../../Components/CustomButton";
-import CustomImage from "../../Components/CustomImage";
-import Heading5 from "../../ContainerStructure/Headings/Heading5";
 import Breakpoints from "../../Theme/theme.breakpoints";
+import { Link } from "react-router-dom";
+import { DoYouWant } from "../WebServices/constants";
+import PointList from "../../Components/PointBadge/PointList";
+import BreadCrumb from "../../Components/BreadCrumb";
+import { BannerImage } from "../../Utils/Constants/Language/en/SolutionsPageData";
+import Banner from "../../Components/Banner";
+import CommentSection from "../../Components/CommentSection";
+
 const Services = () => {
-  const { skyBlue, linearBackground } = Colors;
+  const { linearBackground } = Colors;
 
   const breadCrumData = [
     {
@@ -39,78 +28,61 @@ const Services = () => {
     },
     {
       path: "/services",
-      text: "Web Development Services",
+      text: "Services",
     },
   ];
-
-  const { textColor, bannerBtn, leftPattern, rightPattern } =
-    ServicesSectionStyles();
   return (
-    <CommentSection>
-      <Banner
-        image={BannerImage}
-        backColor={linearBackground}
-        breadCrumb={<BreadCrumb links={breadCrumData} />}
-      >
-        <Typography variant="h1" gutterBottom className={textColor}>
-          {WeHireTheMost}
-        </Typography>
-        <Typography variant="h5" gutterBottom className={textColor}>
-          {WeProvideExceptional}
-        </Typography>
-        <span>
-          <CustomButton
-            variant="contained"
-            size={Breakpoints()}
-            color="secondary"
-          >
-            Get Started
-          </CustomButton>
-        </span>
-      </Banner>
-      <div style={{ position: "relative" }}>
-        <CustomImage
-          className={leftPattern}
-          src={PatternLeft}
-          alt=""
-          srcset=""
-        />
-        <CustomImage
-          className={rightPattern}
-          src={StarFishPattern}
-          alt=""
-          srcset=""
-        />
-        <Section title={ServicesSectionTitle} highlightWords={1}>
-          <section style={{ marginBottom: "10px" }}>
-            <Heading5 subTitle={OurExpertEngineers} />
-          </section>
-          <PointList data={servicesData} horizontal={false} />
+    <>
+      <CommentSection>
+        <Banner
+          image={BannerImage}
+          backColor={linearBackground}
+          breadCrumb={<BreadCrumb links={breadCrumData} />}
+        >
+          <Typography color="textPrimary" variant="h2" gutterBottom>
+            {ServicesPageBanner.title}
+          </Typography>
+          <Typography color="textPrimary" variant="h6" gutterBottom>
+            {ServicesPageBanner.subtitle}
+          </Typography>
+          <span>
+            <CustomButton
+              variant="contained"
+              size={Breakpoints()}
+              color="secondary"
+            >
+              {ServicesPageBanner.buttonText}
+            </CustomButton>
+          </span>
+        </Banner>
+
+        <Grid item lg={12} md={12} xs={12}>
+          <WeOffer data={ServicesOfferedSection} />
+        </Grid>
+        <Section title={BenifitsSection.title}>
+          <Grid item lg={12} md={12} xs={12}>
+            <PointList
+              data={BenifitsSection.data}
+              horizontal={true}
+              lgBreakpoint={6}
+            />
+          </Grid>
         </Section>
-      </div>
-      <Section title={HiringSectionTitle} highlightWords={2}>
-        <OptionsTab />
-      </Section>
-      <Section title={WhyHireSectionTitle} highlightWords={3}>
-        <PointList data={hireUsData} horizontal={true} lgBreakpoint={6} />
-      </Section>
-      <Section backColor={skyBlue}>
-        <GlanceSection backColor={skyBlue} />
-      </Section>
-      <Section title={DoYouWant}>
-        <span>
-          <CustomButton
-            variant="contained"
-            size={Breakpoints()}
-            color="secondary"
-            component={Link}
-            to="/request-a-quote"
-          >
-            Request a Quote
-          </CustomButton>
-        </span>
-      </Section>
-    </CommentSection>
+        <Section title={DoYouWant}>
+          <span>
+            <CustomButton
+              variant="contained"
+              size={Breakpoints()}
+              color="secondary"
+              component={Link}
+              to="/request-a-quote"
+            >
+              Request a Quote
+            </CustomButton>
+          </span>
+        </Section>
+      </CommentSection>
+    </>
   );
 };
 
