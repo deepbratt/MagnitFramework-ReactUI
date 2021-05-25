@@ -24,8 +24,9 @@ import {
   service,
   serviceRoute,
   company,
-  companyRoute,
   CompanyData,
+  insight,
+  InsightsData,
   subMenu,
 } from "./MenuDropDown/Data";
 
@@ -63,7 +64,8 @@ const Header = (props) => {
                 data={servicesData}
                 sub={subMenu}
               />
-              <Menus route={companyRoute} name={company} data={CompanyData} />
+              <Menus name={insight} data={InsightsData} />
+              <Menus name={company} data={CompanyData} />
               <ListItem>
                 <NavLink
                   to="request-a-quote"

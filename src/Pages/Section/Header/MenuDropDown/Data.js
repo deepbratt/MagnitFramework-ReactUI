@@ -7,10 +7,6 @@ export const servicesData = [
     path: "/services",
   },
   {
-    title: "App Solutions",
-    path: "/app-solutions",
-  },
-  {
     title: "Hire Developer",
     path: "/hire-developer",
   },
@@ -20,8 +16,20 @@ export const servicesData = [
   },
 ];
 
+export const insight = "Insights";
+export const InsightsData = [
+  {
+    title: "Case Studies",
+    path: "/case-studies",
+  },
+  {
+    title: "Blogs",
+    path: "/blogs",
+  },
+];
+
+
 export const company = "Company";
-export const companyRoute = "/home";
 export const CompanyData = [
   {
     title: "About Us",
@@ -36,3 +44,4 @@ export const CompanyData = [
     path: "/testimonial",
   },
 ];
+
