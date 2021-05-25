@@ -31,13 +31,27 @@ const FooterStyle = makeStyles((theme) => ({
       color: Citrine,
     },
   },
+  copyright: {
+    display: "flex",
+    [theme.breakpoints.down("md")]: {
+      justifyContent: "center",
+    },
+  },
+
   policy: {
     display: "flex",
     justifyContent: "flex-end",
+    [theme.breakpoints.down("md")]: {
+      justifyContent: "center",
+    },
     "& > *": {
-      margin: "0 0 0 15px",
       textDecoration: "none",
       color: "white",
+      marginLeft: "18px",
+      [theme.breakpoints.down("md")]: {
+        textAlign: "center",
+        marginRight: "0px",
+      },
     },
   },
   contact: {
@@ -48,10 +62,7 @@ const FooterStyle = makeStyles((theme) => ({
 
     "& > a > img": {
       height: "100%",
-      border: "1px solid white",
-      padding: "15px 18px",
-      borderRadius: "5px",
-      marginRight: "10px",
+      padding: "0 15px 18px 0",
     },
   },
   sectionBorder: {
