@@ -35,12 +35,12 @@ const MissionContext = () => {
                   <CustomImage className={Icon} src={mission} alt="Icon" />
                 </Grid>
                 <Grid item xs={12}>
-                  <Typography variant="h3">{firstTitle}</Typography>
+                  <Typography variant="h4">{firstTitle}</Typography>
                 </Grid>
                 <Grid item xs={12}>
                   <Typography
                     color="textSecondary"
-                    variant="subtitle2"
+                    variant="body2"
                     gutterBottom
                   >
                     {missionText}
@@ -61,12 +61,12 @@ const MissionContext = () => {
                   <CustomImage className={Icon} src={vision} alt="Icon" />
                 </Grid>
                 <Grid item xs={12}>
-                  <Typography variant="h3">{secondTitle}</Typography>
+                  <Typography variant="h4">{secondTitle}</Typography>
                 </Grid>
                 <Grid item xs={12}>
                   <Typography
                     color="textSecondary"
-                    variant="subtitle2"
+                    variant="body2"
                     gutterBottom
                   >
                     {visionText}
