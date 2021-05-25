@@ -7,7 +7,8 @@ import Testimonials from "../Pages/Testimonials";
 import Career from "../Pages/Careers/Container";
 import AppSolutions from "../Pages/AppSolutionsPage/Container";
 import OurBlogs from "../Pages/OurBlogs";
-import Quote from "../Pages/ContactUs/index";
+import CaseStudies from "../Pages/CaseStudies";
+import Quote from "../Pages/ContactUs/index"
 import HireDeveloper from "../Pages/HireDeveloper";
 import DigitalMarketing from "../Pages/DigitalMarketing";
 import Pricing from "../Pages/PricingPage/PricingContainer";
@@ -64,6 +65,16 @@ const pageRoutes = {
     path: pathRouting.services,
     sidebarName: "Services",
     component: Services,
+  },
+  [pathIds.solutions]: {
+    path: pathRouting.solutions,
+    sidebarName: "Solutions",
+    component: Solutions,
+  },
+  [pathIds.caseStudies]: {
+    path: pathRouting.caseStudies,
+    sidebarName: "Case Studies",
+    component: CaseStudies
   },
   [pathIds.webServices]: {
     path: pathRouting.webServices,
