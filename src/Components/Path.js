@@ -11,11 +11,13 @@ import Quote from "../Pages/ContactUs/index";
 import HireDeveloper from "../Pages/HireDeveloper";
 import DigitalMarketing from "../Pages/DigitalMarketing";
 import Pricing from "../Pages/PricingPage/PricingContainer";
+import Services from "../Pages/Services";
 
 const pathIds = {
   home: "home",
   blogs: "blogs",
   about: "about",
+  services: "services",
   webServices: "web-dev-services",
   solutions: "solutions",
   caseStudies: "caseStudies",
@@ -33,6 +35,7 @@ const pathRouting = {
   home: "/home",
   blogs: "/blogs",
   about: "/about",
+  services: "/services",
   webServices: "/web-dev-services",
   solutions: "/solutions",
   caseStudies: "/case-studies",
@@ -56,6 +59,11 @@ const pageRoutes = {
     path: pathRouting.about,
     sidebarName: "About Us",
     component: AboutUs,
+  },
+  [pathIds.services]: {
+    path: pathRouting.services,
+    sidebarName: "Services",
+    component: Services,
   },
   [pathIds.webServices]: {
     path: pathRouting.webServices,
