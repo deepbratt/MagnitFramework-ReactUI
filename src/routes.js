@@ -18,7 +18,7 @@ const Routes = () => {
         <Layout>
           <RequireAuth path="/" exact component={Home} />
           <RequireAuth path="/contactUs" exact component={ContactUs} />
-          {/* <RequireAuth path="/error" exact component={Error} /> */}
+          {/* <RequireAuth path="" component={Error} /> */}
           {routeArray.map((prop, key) => {
             return (
               <RequireAuth
