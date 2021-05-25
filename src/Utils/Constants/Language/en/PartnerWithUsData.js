@@ -111,7 +111,7 @@ const {
   desc:   " Armed with the latest data security measures, compliances and regulations, we make it a priority to protect your confidential data.",
 },
 { 
-  length: 10,
+  length: 30,
   color: darkBlue,
   icon: moneyIcon,
   title: "One Time Cost",
