@@ -41,7 +41,7 @@ const VideoCard = ({ Img, detail, avatar, name, date }) => {
           </Typography>
         }
         subheader={
-          <Rating name="read-only" value={4} readOnly className={rating} />
+          <Rating name="read-only" value={5} readOnly className={rating} />
         }
         className={header}
       />
