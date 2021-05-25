@@ -26,7 +26,6 @@ const submenuStyles = (theme) => ({
     marginRight: theme.spacing(-1),
   },
   menu: {
-    width: "300px",
     display: "flex",
     color: blackColor,
     transition: "all .5s linear",
