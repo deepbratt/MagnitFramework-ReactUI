@@ -20,7 +20,6 @@ const submenuStyles = (theme) => ({
     textAlign: "center",
     color: blackColor,
     fontSize: "20px",
-    textAlign: "left"
   },
   moreArrow: {
     marginRight: theme.spacing(-1),
