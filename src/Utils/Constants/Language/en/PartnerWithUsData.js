@@ -68,7 +68,7 @@ const {
   desc:   " Our customers value fair and transparent pricing, so that's what we offer. We promise we do not have any commercial incentive while choosing a technology or approach, merely the customer’s need at heart of our projects.",
 },
 { 
-  length: 40,
+  length: 45,
   color: persianGreen,
   icon: moneyIcon,
   title: "Value For Money",
@@ -76,7 +76,7 @@ const {
 },
 {
   
-  length: 57,
+  length: 40,
   color: orangeRed,
   icon: qualityIcon,
   title: "High Quality",
@@ -111,7 +111,7 @@ const {
   desc:   " Armed with the latest data security measures, compliances and regulations, we make it a priority to protect your confidential data.",
 },
 { 
-  length: 40,
+  length: 10,
   color: darkBlue,
   icon: moneyIcon,
   title: "One Time Cost",

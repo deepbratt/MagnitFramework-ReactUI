@@ -10,7 +10,7 @@ const ReadMore = ({ data , width}) => {
       text={data}
       min={width}
       ideal={width}
-      max={70}
+      max={90}
       readMoreText={
         <Typography color="textSecondary" variant="subtitle2">
           ...Read More

@@ -27,7 +27,7 @@ const {
 
 export const whyHireData = [
   {
-    length: 56,
+    length: 70,
     color: Orchid,
     icon: VettedResourceIcon,
     title: "Vetted Resource",
@@ -43,7 +43,7 @@ export const whyHireData = [
       "We create a deep understanding of your market and target audience before creating a solution that echoes your business",
   },
   {
-    length: 57,
+    length: 71,
     color: heliotrope,
     icon: DataSecuityIcon,
     title: "Data Security",
@@ -84,7 +84,7 @@ export const whyHireData = [
       "Strict Quality control is the pillar of our customized solutions. An independent team makes sure that there is no compromise on Quality solutions. Our aim is to be the best through requirement to delivery.",
   },
   {
-    length: 56,
+    length: 70,
     color: yellowOrange,
     icon: LifeTimeSupportIcon,
     title: "Life-Time Support",
