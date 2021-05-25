@@ -15,18 +15,13 @@ const Banner = ({
   const { root, imageWrapper, content, patternPosition } = BannerStyles();
   return (
     <>
-      <Grid
-        className={root}
-        container
-        style={{ background: linearBackground }}
-        alignItems="center"
-      >
+      <Grid className={root} container style={{ background: linearBackground }}>
         {breadCrumb && (
           <Grid item xs={12}>
             {breadCrumb}
           </Grid>
         )}
-        <Grid item xs={12} md={6} lg={7}className={content}>
+        <Grid item xs={12} md={6} lg={7} className={content}>
           {children}
         </Grid>
         <Grid style={{ position: "relative" }} item xs={12} md={6} lg={5}>
