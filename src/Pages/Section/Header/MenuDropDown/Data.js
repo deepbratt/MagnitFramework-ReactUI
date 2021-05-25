@@ -1,15 +1,15 @@
 
 export const service = "Services";
 export const serviceRoute = "/services";
-export const subMenu = "Solutions";
+export const subMenu = "Hire Developer";
 export const servicesData = [
   {
     title: "Web Development Services",
     path: "/services",
   },
   {
-    title: "Hire Developer",
-    path: "/hire-developer",
+    title: "App Solution Services",
+    path: "/app-solutions",
   },
   {
     title: "Digital Marketing",
