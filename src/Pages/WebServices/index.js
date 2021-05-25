@@ -14,11 +14,10 @@ import { Colors } from "../../Theme/color.constants";
 import Banner from "../../Components/Banner";
 import {
   DoYouWant,
-  HiringSectionTitle,
   ServicesSectionTitle,
   WhyHireSectionTitle,
 } from "./constants";
-import OptionsTab from "../../Components/OptionsTab";
+
 import StarFishPattern from "../../assets/patterns/starfishBlue.png";
 import ServicesSectionStyles from "./style";
 import BannerImage from "../../assets/services/BannerImage.png";
@@ -87,9 +86,6 @@ const Services = () => {
           <PointList data={servicesData} horizontal={false} />
         </Section>
       </div>
-      <Section title={HiringSectionTitle} highlightWords={2}>
-        <OptionsTab />
-      </Section>
       <Section title={WhyHireSectionTitle} highlightWords={3}>
         <PointList data={hireUsData} horizontal={true} lgBreakpoint={6} />
       </Section>
