@@ -66,16 +66,6 @@ const pageRoutes = {
     sidebarName: "Services",
     component: Services,
   },
-  [pathIds.solutions]: {
-    path: pathRouting.solutions,
-    sidebarName: "Solutions",
-    component: Solutions,
-  },
-  [pathIds.caseStudies]: {
-    path: pathRouting.caseStudies,
-    sidebarName: "Case Studies",
-    component: CaseStudies
-  },
   [pathIds.webServices]: {
     path: pathRouting.webServices,
     sidebarName: "Web Development Services",
@@ -96,6 +86,16 @@ const pageRoutes = {
     sidebarName: "Testimonials",
     component: Testimonials,
   },
+  [pathIds.caseStudies]: {
+    path: pathRouting.caseStudies,
+    sidebarName: "Case Stdies",
+    component: CaseStudies,
+  },
+  [pathIds.blogs]: {
+    path: pathRouting.blogs,
+    sidebarName: "Blogs",
+    component: OurBlogs,
+  },
   [pathIds.requestAQuote]: {
     path: pathRouting.requestAQuote,
     sidebarName: "Request a quote",
@@ -110,11 +110,6 @@ const pageRoutes = {
     path: pathRouting.digitalMarketing,
     sidebarName: "Digital Marketing",
     component: DigitalMarketing,
-  },
-  [pathIds.pricing]: {
-    path: pathRouting.pricing,
-    sidebarName: "Pricing",
-    component: Pricing,
   },
   [pathIds.solutions]: {
     path: pathRouting.solutions,
