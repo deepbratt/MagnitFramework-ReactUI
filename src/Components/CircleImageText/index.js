@@ -10,7 +10,7 @@ const CircleImageText = ({ text, textRight=false, innerImg, clickHandler,props }
     <span className={classes.wrapper} onClick={clickHandler}>
       {textRight && <CircleImageComponent innerImg={innerImg} {...props} />}
       <Typography
-        variant="h5"
+        variant="subtitle1"
         component="p"
         className={textRight ? classes.textStylesRight : classes.textStylesLeft}
         paragraph

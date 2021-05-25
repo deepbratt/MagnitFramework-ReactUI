@@ -20,7 +20,7 @@ const ResponsiveInterActiveSection = (props) => {
     <Grid
       container
       style={{ display: "flex"}}
-      justify="center"
+      justify="space-evenly"
       wrap="wrap"
       spacing={0}
     >

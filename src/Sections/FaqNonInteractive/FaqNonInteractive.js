@@ -6,10 +6,10 @@ const FaqNonInteractive = (props) => {
     const classes = useStyles()
   return (
     <Grid container className={props.toRight ? classes.rightAlignment :classes.leftAlignment}>
-      <Typography variant="h4" component="h4">
+      <Typography variant="h4">
         {props.question}
       </Typography>
-      <Typography component="p" variant="body2">
+      <Typography variant="body2">
        {props.answer}
       </Typography>
     </Grid>

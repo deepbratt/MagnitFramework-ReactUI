@@ -69,7 +69,7 @@ const CaseStudies = () => {
       <Grid
         item
         xs={12}
-        style={{ display: "flex", minHeight: "55vh" }}
+        style={{ display: "flex", marginBottom:"50px" }}
         justify="center"
       >
         <Hidden lgUp>
@@ -83,7 +83,7 @@ const CaseStudies = () => {
           </Section>
         </Hidden>
       </Grid>
-      <Grid item xs={12} style={{display:"flex"}}>
+      <Grid item xs={12}>
         <Section>
           {/* <FaqNonInteractive toRight/> */}
           {faqData.map((item, index)=>(
@@ -93,7 +93,7 @@ const CaseStudies = () => {
           ))}
         </Section>
       </Grid>
-      <Grid item xs={12} style={{display:"flex"}}>
+      <Grid item xs={12}>
         {/* AWARD AND ACCREDITATIONS SECTION */}
       <Section title={caseStudies.awardsTitle}>
         <div

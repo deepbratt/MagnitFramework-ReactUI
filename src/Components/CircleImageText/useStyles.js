@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
       display:"flex",
     //   justifyContent:"space-around",
       alignItems:"center",
-      width:"500px",
+      width:"400px",
     //   backgroundColor:"red"
   }
 }));
