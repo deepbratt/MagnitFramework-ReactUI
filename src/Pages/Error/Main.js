@@ -5,6 +5,7 @@ import Heading from "../../ContainerStructure/Headings/Heading4";
 import Paragraph from "../../ContainerStructure/Headings/Paragraphs/Paragraph";
 import { Oops, PageNotFound } from './constants';
 import CustomButton from '../../Components/CustomButton';
+import { Link } from 'react-router-dom'
  const Main = ({ErrorImg}) => {
    const {root,Img,head,paragraph,HomeBtn}= useStyles();
     return (
@@ -19,7 +20,8 @@ import CustomButton from '../../Components/CustomButton';
                <section className={paragraph}>
                <Paragraph para={Oops}/>
                </section>
-                <CustomButton type="submit" color="primary" variant="contained">
+                <CustomButton type="submit" color="primary" variant="contained"  component={Link}
+          to="/home">
           <Typography
             className={HomeBtn}
             variant="button"
