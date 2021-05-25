@@ -50,7 +50,7 @@ const pathRouting = {
   hireDeveloper: "/hire-developer",
   digitalMarketing: "/digital-marketing",
   pricing: "/pricing",
-  notFound:""
+  notFound:"error"
 };
 
 const pageRoutes = {
@@ -129,11 +129,10 @@ const pageRoutes = {
     sidebarName: "Our Blogs",
     component: OurBlogs,
   },
-  [pathIds.notFound]: {
-    path: pathRouting.notFound,
-    sidebarName: "",
-    component: Error,
-  },
+  // [pathIds.notFound]: {
+  //   sidebarName: "",
+  //   component: Error,
+  // },
 };
 
 export { pageRoutes, pathIds, pathRouting };
