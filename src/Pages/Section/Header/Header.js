@@ -7,6 +7,7 @@ import {
   AppBar,
   LinearProgress,
   Typography,
+  Button
 } from "@material-ui/core";
 import { NavLink } from "react-router-dom";
 import theme from "../../../Theme/GlobalFontSizes";
@@ -51,13 +52,16 @@ const Header = (props) => {
           </Hidden>
           <Hidden smDown>
             <List className={list}>
-              <NavLink activeClassName={active} className={link} to="/home">
+             
                 <MuiThemeProvider theme={theme}>
                   <ListItem>
-                    <Typography variant="h5">HOME</Typography>
+                   <Button className={list}>
+                   <NavLink activeClassName={active} className={link} to="/home">
+                   HOME
+                   </NavLink>
+                   </Button>
                   </ListItem>
                 </MuiThemeProvider>
-              </NavLink>
               <Menus
                 route={serviceRoute}
                 name={service}
