@@ -49,7 +49,7 @@ avatarImg:{
   },
 },
   cardImage:{
-      // height:264,
+    
     //   width:460,
     height:"auto",
       [breakpoints.down("sm")]: {
