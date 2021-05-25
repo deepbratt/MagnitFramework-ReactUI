@@ -78,15 +78,15 @@ const CascadingHoverMenus = ({ data, name, route, sub }) => {
             >
               <Submenu className={list} popupId="moreChoicesMenu" title={sub}>
                 <NavLink to="/home" activeClassName={active} className={link}>
-                  <MenuItem onClick={popupState.close}>
-                    <Typography variant="h5">Full Stack Engineer</Typography>
+                  <MenuItem  onClick={popupState.close}>
+                    <Typography variant="h5">Full Stack Developer</Typography>
                   </MenuItem>
                   <MenuItem onClick={popupState.close}>
-                    <Typography variant="h5">Frontend Engineer </Typography>
+                    <Typography variant="h5">Frontend Developer</Typography>
                   </MenuItem>
 
                   <MenuItem onClick={popupState.close}>
-                    <Typography variant="h5">Backend Engineer</Typography>
+                    <Typography variant="h5">Backend Developer</Typography>
                   </MenuItem>
                 </NavLink>
               </Submenu>
