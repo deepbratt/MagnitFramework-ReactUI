@@ -34,9 +34,7 @@ export const LatestBlogsSectionText = {
       coverImage: UIUXInspiration,
       imageText: "",
       title: "Top UI/UX Design Works for Inspiration",
-      body: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip",
-      ],
+      body: "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip",
       buttonText: "Read More",
       detail: {
         authName: "Maria doe",
@@ -49,9 +47,7 @@ export const LatestBlogsSectionText = {
       coverImage: UIUXInspiration,
       imageText: "",
       title: "Top UI/UX Design Works for Inspiration",
-      body: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip",
-      ],
+      body: "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip",
       buttonText: "Read More",
       detail: {
         authName: "Maria doe",
@@ -64,9 +60,7 @@ export const LatestBlogsSectionText = {
       coverImage: UIUXInspiration,
       imageText: "",
       title: "Top UI/UX Design Works for Inspiration",
-      body: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip",
-      ],
+      body: "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip",
       buttonText: "Read More",
       detail: {
         authName: "Maria doe",
@@ -79,9 +73,7 @@ export const LatestBlogsSectionText = {
       coverImage: UIUXInspiration,
       imageText: "",
       title: "Top UI/UX Design Works for Inspiration",
-      body: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip",
-      ],
+      body: "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip",
       buttonText: "Read More",
       detail: {
         authName: "Maria doe",
@@ -94,9 +86,7 @@ export const LatestBlogsSectionText = {
       coverImage: UIUXInspiration,
       imageText: "",
       title: "Top UI/UX Design Works for Inspiration",
-      body: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip",
-      ],
+      body: "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip",
       buttonText: "Read More",
       detail: {
         authName: "Maria doe",
@@ -109,9 +99,7 @@ export const LatestBlogsSectionText = {
       coverImage: UIUXInspiration,
       imageText: "",
       title: "Top UI/UX Design Works for Inspiration",
-      body: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip",
-      ],
+      body: "Lorem ipsum dolor sit amet, consectetur adipiscing elitse do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris nisi ut aliquip",
       buttonText: "Read More",
       detail: {
         authName: "Maria doe",
