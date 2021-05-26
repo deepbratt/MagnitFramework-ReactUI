@@ -23,11 +23,10 @@ const MissionContext = () => {
         className={root}
         spacing={2}
         justify="center"
-        alignItems="center"
       >
         <CustomImage className={leftPattern} src={Patten1} alt="" />
         <CustomImage className={rightPattern} src={Patten2} alt="" />
-        <Grid style={{ zIndex: 1 }} item xs={11} md={5} lg={4}>
+        <Grid style={{ zIndex: 1, display:"flex" }} item xs={11} md={5} lg={4}>
           <Card className={card}>
             <Grid item xs={12}>
               <CardContent>
@@ -53,8 +52,8 @@ const MissionContext = () => {
             </Grid>
           </Card>
         </Grid>
-        <Grid style={{ zIndex: 1 }} item xs={11} md={5} lg={4}>
-          <Card className={card}>
+        <Grid style={{ zIndex: 1, display:"flex" }} item xs={11} md={5} lg={4}>
+          <Card className={card} style={{display:"flex", alignItems:"start"}}>
             <Grid item xs={12}>
               <CardContent>
                 <Grid item xs={12}>
