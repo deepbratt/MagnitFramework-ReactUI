@@ -32,7 +32,7 @@ import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
 import Heading5 from "../../ContainerStructure/Headings/Heading5";
 import Breakpoints from "../../Theme/theme.breakpoints";
-// import { } from "../../assets/icons/icon.constants";
+
 
 const DigitalMarketing = () => {
   const { skyBlue, linearBackground } = Colors;
