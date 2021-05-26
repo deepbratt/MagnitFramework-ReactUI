@@ -20,7 +20,7 @@ import OurBlogsStyles from "./style";
 
 const OurBlogs = () => {
   const { title, subtitle } = BannerText;
-  const { linearBackground, BlueRibbon } = Colors;
+  const { linearBackground, BlueRibbon,whiteColor } = Colors;
   const { leftPattern, rightPattern } = OurBlogsStyles();
 
   const breadCrumData = [
@@ -91,7 +91,7 @@ const OurBlogs = () => {
       <Section
         title={LatestBlogsSectionText.header}
         backColor={BlueRibbon}
-        titleColor="#fff"
+        titleColor={whiteColor}
         patterns={latestBlogsSectionPatterns}
       >
         <Grid
