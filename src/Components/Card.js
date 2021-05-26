@@ -48,7 +48,7 @@ const CardData = ({ data }) => {
                   <Typography variant="subtitle2" paragraph={true}>
                   <ReadMore text={text.desc} maxLines={3} />
                     <NavLink to={text.redirect} style={{ marginLeft: "10px", textDecoration: "none" }}>
-                      See More 
+                      Learn More 
                     </NavLink>
                   </Typography>
                 </Grid>
