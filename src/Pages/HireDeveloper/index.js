@@ -27,7 +27,7 @@ import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
 import Heading5 from "../../ContainerStructure/Headings/Heading5";
 import Breakpoints from "../../Theme/theme.breakpoints";
-
+import {Data} from "../../Utils/Constants/Language/en/GlanceAtWorkData"
 const HireDeveloper = () => {
   const { skyBlue, linearBackground } = Colors;
 
@@ -94,7 +94,7 @@ const HireDeveloper = () => {
       <Section title={WhyHireSectionTitle} highlightWords={3}>
         <PointList data={hireUsData} horizontal={true} lgBreakpoint={6}/>
       </Section>
-        <GlanceSection backColor={skyBlue} />
+        <GlanceSection subtitleOne={Data.subtitleOne} subtitleTwo={Data.subtitleTwo} subtitleThree={Data.subtitleThree}  backColor={skyBlue} />
       <Section title={DoYouWant}>
     <span >
     
