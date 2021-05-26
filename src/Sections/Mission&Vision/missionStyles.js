@@ -12,6 +12,7 @@ export const missionStyles = makeStyles((theme) => ({
     paddingTop: "20px",
     paddingBottom: "20px",
     position: "relative",
+    display:"flex"
   },
   // card: {
   //   zIndex: 1,
