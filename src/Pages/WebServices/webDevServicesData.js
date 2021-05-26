@@ -16,7 +16,7 @@ const {
   persianGreen,
   yellowOrange,
 } = Colors;
-export const OurExpertEngineers="Our expert engineers directly translate ideas and designs into responsive front-end interfaces that pioneer accessibility, ease-of-use, and performance towards your audiences."
+export const OurExpertEngineers="Our expert engineers directly translate ideas and designs into responsive front-end interfaces that pioneer accessibility, ease-of-use, and performance towards your audiences.We have mastered the art of building the right product by combining the right disciplines to give you exactly what you need and beyond."
 export const webDevServicesData = [
   {
     length: 57,
@@ -67,5 +67,5 @@ export const webDevServicesData = [
       "To optimize performance of your web application we resolve issues and bugs in your source code in a cost-effective way.",
   },
 ];
-export const WeHireTheMost="We hire the most industry-specific-skilled developers that fit your budget";
-export const  WeProvideExceptional=`We provide exceptional professional services in research, strategy, user experience, design, and full stack engineering to digitally transform ideas into reality.`;
+export const WeHireTheMost="Combining engineering and design to create the most valuable product for you.";
+export const  WeProvideExceptional=`Combining engineering and design to create the most valuable product for you.`;
