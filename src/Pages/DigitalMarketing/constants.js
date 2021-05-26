@@ -18,10 +18,10 @@ import {
 export const ServicesSectionTitle = "Digital Marketing /Services";
 export const HiringSectionTitle = "Digital Marketer /Hiring Options";
 export const WhyHireSectionTitle = "Why /work with Us?";
-export const ourExpert="Our expert engineers directly translate ideas and designs into responsive front-end interfaces that pioneer accessibility, ease-of-use, and performance towards your audiences.We have mastered the art of building the right product by combining the right disciplines to give you exactly what you need and beyond.";
+export const ourExpert="Don’t miss out on opportunities! Hire us to create and execute optimised, lead-generating, traffic to conversion strategies that fit the best to your needs. Reach your ambitious goals with organic answers and laser-focused services";
 export const DoYouWant = "Do You Want to Discuss Your /Project?";
-export const combiningEngineering="Combining engineering and design to create the most valuable product for you.";
-export const weCutTo="We cut to the core of what your business needs through reliable processes and timed outcomes.";
+export const combiningEngineering="From inception to development to launch to analysis and beyond";
+export const weCutTo="We combine persuasion with precision to reach your goals with a digital-first strategy";
 export const marketingServicesData = [
     {
       length: 57,
