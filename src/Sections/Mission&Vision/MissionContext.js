@@ -12,7 +12,7 @@ import Patten2 from "../../assets/AboutUs/vision2.png";
 import CustomImage from "../../Components/CustomImage";
 
 const MissionContext = () => {
-  const { card,Imgcard, root, Icon, underlined, leftPattern, rightPattern } =
+  const { card, root, Icon, underlined, leftPattern, rightPattern } =
     missionStyles();
   const { firstTitle, secondTitle, missionText, visionText } = MidSection;
   const { mission, vision } = MainData;
@@ -28,16 +28,16 @@ const MissionContext = () => {
         <CustomImage className={leftPattern} src={Patten1} alt="" />
         <CustomImage className={rightPattern} src={Patten2} alt="" />
         <Grid style={{ zIndex: 1 }} item xs={11} md={5} lg={4}>
-          <Grid container xs={12} className={card} >
-          <Grid className={Imgcard}>
+          <Card className={card}>
+            <Grid item xs={12}>
+              <CardContent>
                 <Grid item xs={12}>
                   <CustomImage className={Icon} src={mission} alt="Icon" />
                 </Grid>
                 <Grid item xs={12}>
                   <Typography variant="h4">{firstTitle}</Typography>
                 </Grid>
-                </Grid>
-                <Grid item xs={12} >
+                <Grid item xs={12}>
                   <Typography
                     color="textSecondary"
                     variant="body2"
@@ -49,19 +49,19 @@ const MissionContext = () => {
                 <Grid container justify="center">
                   <Grid className={underlined} item xs={3} />
                 </Grid>
-                </Grid>
-            
+              </CardContent>
+            </Grid>
+          </Card>
         </Grid>
-      
         <Grid style={{ zIndex: 1 }} item xs={11} md={5} lg={4}>
-          <Grid container xs={12} className={card} >
-          <Grid className={Imgcard}>
+          <Card className={card}>
+            <Grid item xs={12}>
+              <CardContent>
                 <Grid item xs={12}>
                   <CustomImage className={Icon} src={vision} alt="Icon" />
                 </Grid>
                 <Grid item xs={12}>
                   <Typography variant="h4">{secondTitle}</Typography>
-                </Grid>
                 </Grid>
                 <Grid item xs={12}>
                   <Typography
@@ -75,11 +75,11 @@ const MissionContext = () => {
                 <Grid container justify="center">
                   <Grid className={underlined} item xs={3} />
                 </Grid>
-             
+              </CardContent>
             </Grid>
-          </Grid>
+          </Card>
         </Grid>
-     
+      </Grid>
     </>
   );
 };
