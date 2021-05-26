@@ -43,8 +43,9 @@ const OurBlogsStyles = makeStyles((theme) => ({
     },
   },
   coverImg: {
-    height: "200px",
-    maxHeight: "200px",
+    width: "100%",
+    height: "100%",
+    
   },
 
   latestBlogCardContent: {

@@ -11,7 +11,7 @@ import OurBlogsStyles from "./style";
 
 const TrendingBlogs = ({ featureImage, cardData }) => {
   const { detail, title, body, buttonText } = cardData;
-  const { avatar, authName, authDesig, tag, date } = detail;
+  const { avatar, authName, authDesig, category, date } = detail;
   const { coverImage, content, blogDetail, light } = OurBlogsStyles();
   return (
     <Grid container>
@@ -39,7 +39,7 @@ const TrendingBlogs = ({ featureImage, cardData }) => {
               </div>
               <div>
                 <Typography align="right" variant="h6" component="p">
-                  {tag}
+                  {category}
                 </Typography>
                 <Typography
                   className={light}
