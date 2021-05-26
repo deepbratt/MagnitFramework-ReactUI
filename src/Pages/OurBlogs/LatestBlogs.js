@@ -55,7 +55,7 @@ const LatestBlogCard = ({ cardData }) => {
             {title}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            {body.substr(0, 100)}...
+            {body[0].substr(0, 100)}...
           </Typography>
         </CardContent>
       </CardActionArea>

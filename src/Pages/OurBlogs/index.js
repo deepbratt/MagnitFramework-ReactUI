@@ -7,7 +7,6 @@ import {
   LatestBlogsSectionText,
 } from "../../Utils/Constants/Language/en/OurBlogsPageText";
 import BannerImage from "../../assets/OurBlogs/BannerImage.png";
-import TrendingBlogCard from "../../assets/OurBlogs/TrendingBlogCard.png";
 import BackGroudnPatternLeft from "../../assets/OurBlogs/LatestBlogPattern.png";
 import BackGroudnPatternRight from "../../assets/OurBlogs/LatestBlogPatternRight.png";
 import BreadCrumb from "../../Components/BreadCrumb";
@@ -33,12 +32,12 @@ const OurBlogs = () => {
       text: "Blog",
     },
   ];
-  const { header, card } = TrendingBlogsSectionText;
+  const { header, cards } = TrendingBlogsSectionText;
 
   const slideArr = [
-    <TrendingBlogs featureImage={TrendingBlogCard} cardData={card} />,
-    <TrendingBlogs featureImage={TrendingBlogCard} cardData={card} />,
-    <TrendingBlogs featureImage={TrendingBlogCard} cardData={card} />,
+    <TrendingBlogs featureImage={cards[0].coverImage} cardData={cards[0]} />,
+    <TrendingBlogs featureImage={cards[0].coverImage} cardData={cards[1]} />,
+    <TrendingBlogs featureImage={cards[0].coverImage} cardData={cards[2]} />,
   ];
 
   const latestBlogsSectionPatterns = [
@@ -97,13 +96,11 @@ const OurBlogs = () => {
         <Grid
           container
           justify="center"
-          alignItems="center"
-          alignContent="center"
           spacing={2}
         >
           {LatestBlogsSectionText.cards &&
             LatestBlogsSectionText.cards.map((card, index) => (
-              <Grid key={index} item xs={12} md={4}>
+              <Grid key={index} item xs={12} sm={6} lg={4} style={{display:"flex"}}>
                 <LatestBlogs cardData={card} />
               </Grid>
             ))}
