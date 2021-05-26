@@ -56,13 +56,24 @@ export const missionStyles = makeStyles((theme) => ({
   // },
   card: {
     display: "flex",
+    flexDirection:"column",
     margin: "10px 0",
     boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
     borderRadius: "5px",
     backgroundColor: "white",
-    alignContent: "center",
     justifyContent: "center",
     alignItems: "center",
+    height:"100%",
+    // padding: "1rem"
+  },
+  Imgcard: {
+    display: "flex",
+    flexDirection:"column",
+   
+   
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "16px"
   },
   Icon: {
     maxWidth: "60px",
@@ -81,5 +92,6 @@ export const missionStyles = makeStyles((theme) => ({
   underlined: {
     width: "50%",
     borderBottom: `3px solid ${Harlequin}`,
+    marginBottom:".4rem"
   },
 }));
