@@ -21,7 +21,7 @@ import OurBlogsStyles from "./style";
 const OurBlogs = () => {
   const { title, subtitle } = BannerText;
   const { linearBackground, BlueRibbon } = Colors;
-  const { leftPattern, rightPattern } = OurBlogsStyles;
+  const { leftPattern, rightPattern } = OurBlogsStyles();
 
   const breadCrumData = [
     {
@@ -44,16 +44,32 @@ const OurBlogs = () => {
   const latestBlogsSectionPatterns = [
     {
       image: (
-        <img width="100%" height="100%" src={BackGroudnPatternLeft} alt="" />
+        <Grid
+          className={leftPattern}
+          style={{ position: "absolute" }}
+          // key={index}
+          item
+          xs={4}
+        >
+          <img width="100%" height="100%" src={BackGroudnPatternLeft} alt="" />
+        </Grid>
       ),
       styles: leftPattern,
     },
-    // {
-    //   image: (
-    //     <img width="100%" height="100%" src={BackGroudnPatternRight} alt="" />
-    //   ),
-    //   styles: rightPattern,
-    // },
+    {
+      image: (
+        <Grid
+          className={`${rightPattern}`}
+          style={{ position: "absolute" }}
+          // key={index}
+          item
+          xs={4}
+        >
+          <img width="100%" height="100%" src={BackGroudnPatternRight} alt="" />
+        </Grid>
+      ),
+      styles: rightPattern,
+    },
   ];
   return (
     <>
@@ -70,12 +86,12 @@ const OurBlogs = () => {
         </Typography>
       </Banner>
       <Section title={header}>
-        <ReviewSlider slides={slideArr} showArrows={false} />
+        <ReviewSlider slides={slideArr} showArrows={false} indicatorsPosition/>
       </Section>
       <Section
         title={LatestBlogsSectionText.header}
         backColor={BlueRibbon}
-        titleColor="white"
+        titleColor="#fff"
         patterns={latestBlogsSectionPatterns}
       >
         <Grid

@@ -7,6 +7,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import CustomButton from "../../Components/CustomButton";
+import CustomImage from "../../Components/CustomImage";
 import OurBlogsStyles from "./style";
 
 const TrendingBlogs = ({ featureImage, cardData }) => {
@@ -16,7 +17,7 @@ const TrendingBlogs = ({ featureImage, cardData }) => {
   return (
     <Grid container>
       <Grid item xs={12} lg={6}>
-        <img className={coverImage} src={featureImage} alt="" />
+        <CustomImage className={coverImage} src={featureImage} alt="" />
       </Grid>
       <Grid item xs={12} lg={6}>
         <Card>

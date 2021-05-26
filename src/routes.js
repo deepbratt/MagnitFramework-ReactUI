@@ -6,7 +6,7 @@ import RequireAuth from "./container/RequireAuth";
 import { pageRoutes } from "./Components/Path";
 import Home from "./Pages/Home";
 import ContactUs from "./Pages/ContactUs";
-// import Error from "./Pages/Error/Index";
+import Error from "./Pages/Error/Index";
 
 const Routes = () => {
   const routeArray = Object.values(pageRoutes);
@@ -14,26 +14,23 @@ const Routes = () => {
 
   return (
     <Router>
-      <Switch>
-        <Layout>
+      <Layout>
+        <Switch>
           <RequireAuth path="/" exact component={Home} />
           <RequireAuth path="/contactUs" exact component={ContactUs} />
-          {/* <RequireAuth path="/services" exact component={Services} /> */}
+          {/* <RequireAuth exact component={Error} /> */}
           {routeArray.map((prop, key) => {
             return (
               <RequireAuth
                 path={prop.path}
                 component={prop.component}
-                exact
                 key={`route-${key}`}
               />
             );
           })}
-          {/* <Route component={Error} /> */}
-        </Layout>
-        
-      </Switch>
-      
+          <RequireAuth path="" component={Error} />
+        </Switch>
+      </Layout>
     </Router>
   );
 };
