@@ -40,6 +40,7 @@ fontWeight:"normal"
   },
   para:{
     margin:".5rem 0rem",
+    cursor: "pointer",
     "& > body1" : {
       color:darkSilver,
 fontWeight:"normal"

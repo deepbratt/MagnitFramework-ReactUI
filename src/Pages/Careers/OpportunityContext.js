@@ -13,6 +13,7 @@ import {
   leftPattern,
 } from "../../Utils/Constants/Language/en/CareersData";
 import CustomButton from "../../Components/CustomButton";
+import ReadMore from "../../Components/ReadMore"
 
 
 const OpportunityContext = () => {
@@ -66,7 +67,8 @@ const OpportunityContext = () => {
                         </Grid>
                         <Grid xs={12} className={para} >
                         <Typography variant="body1" component="body1" >
-                        {data.desc}
+                        
+                        <ReadMore data={data.desc} width={data.length}/>
                     </Typography>
                        
                       </Grid>
