@@ -2,11 +2,10 @@ import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
-import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import OurBlogsStyles from "./style";
 import CustomButton from "../../Components/CustomButton";
+import { NavLink } from "react-router-dom";
 
 const LatestBlogCard = ({ cardData }) => {
   const { coverImage, imageText, title, body, buttonText, detail } = cardData;
@@ -25,10 +24,10 @@ const LatestBlogCard = ({ cardData }) => {
     <Card className={latestBlogCard}>
       <CardActionArea>
         {/* <CardMedia image={coverImage} title={imageText} /> */}
-        <img className={coverImg} src={coverImage} alt="" />
+        <img className={coverImg} src={coverImage} alt={imageText} />
         <CardContent className={latestBlogCardContent}>
           <div className={latestBlogDetail}>
-            <div style={{ marginRight: "10px" }}>
+            <div style={{ marginRight: "8px" }}>
               <Typography className={authorName} variant="h6" component="h3">
                 {authName}
               </Typography>
@@ -56,14 +55,14 @@ const LatestBlogCard = ({ cardData }) => {
             {title}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            {body}
+            {body.substr(0, 100)}...
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions className={latestBlogCardContent}>
-      <CustomButton size="small" color="primary">
-          {buttonText}
-        </CustomButton>
+        <NavLink to="/">
+          <CustomButton color="primary">{buttonText}</CustomButton>
+        </NavLink>
       </CardActions>
     </Card>
   );

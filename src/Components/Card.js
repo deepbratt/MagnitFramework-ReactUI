@@ -46,8 +46,11 @@ const CardData = ({ data }) => {
 
                   <Typography variant="subtitle2" paragraph={true}>
                     {text.desc.substr(0, 80)}...
-                    <NavLink to="/" style={{ marginLeft: "10px", textDecoration: "none" }}>
-                      See More 
+                    <NavLink
+                      to={text.redirect}
+                      style={{ marginLeft: "10px", textDecoration: "none" }}
+                    >
+                      See More
                     </NavLink>
                   </Typography>
                 </Grid>

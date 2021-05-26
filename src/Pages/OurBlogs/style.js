@@ -49,6 +49,9 @@ const OurBlogsStyles = makeStyles((theme) => ({
 
   latestBlogCardContent: {
     padding: "15px",
+    "& > *": {
+      textDecoration: "none",
+    },
   },
   latestBlogDetailCategory: {
     borderLeft: `3px solid ${BlueRibbon}`,
@@ -75,6 +78,7 @@ const OurBlogsStyles = makeStyles((theme) => ({
   dateStyle: {
     fontSize: "0.75rem",
     fontWeight: "400",
+    marginLeft: "5px",
   },
   leftPattern: {
     position: "absolute",

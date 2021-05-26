@@ -1,6 +1,6 @@
 import Grid from "@material-ui/core/Grid";
 import { connect } from "react-redux";
-import Services from "../../Sections/HomePageSections/ServicesContext/Services";
+import ServicesOffered from "../../Sections/HomePageSections/ServicesContext/Services";
 import Slide from "../../Components/Slider/Container";
 import Solutions from "../../Sections/HomePageSections/SolutionsContext/Solutions";
 import PartnerContext from "../../Sections/HomePageSections/PartnerWithUsContext/Maincontainer";
@@ -21,6 +21,7 @@ import startQuote from "../../assets/images/cards/startQuote.png";
 import endQuote from "../../assets/images/cards/EndingQuoteBlue.png";
 import { Colors } from "../../Theme/color.constants";
 import {
+  ServicesSectionTitle,
   AwardSectionTitle,
   ContactUsTitle,
   TrainingAndCertificationSectionTitle,
@@ -37,6 +38,9 @@ import QuoteCard from "../../Components/QuoteCard";
 import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
 import ReviewSlider from "../../Components/ReviewSlider";
+import {
+  ServicesData,
+} from "../../Utils/Constants/Language/en/ServicesText";
 
 export const AwardSectionImages = [Image1, Image2, Image3, Image4, Image5];
 
@@ -146,8 +150,8 @@ const Home = (props) => {
         <Slide />
       </Grid>
       <Grid item md={12} xs={12}>
-        <Section>
-          <Services {...props} />
+        <Section title={ServicesSectionTitle}>
+          <ServicesOffered servicesData={ServicesData} />
         </Section>
       </Grid>
       <Grid item md={12} xs={12}>

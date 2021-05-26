@@ -20,6 +20,7 @@ const submenuStyles = (theme) => ({
     textAlign: "center",
     color: blackColor,
     fontSize: "20px",
+    textAlign: "left"
   },
   moreArrow: {
     marginRight: theme.spacing(-1),
@@ -28,7 +29,6 @@ const submenuStyles = (theme) => ({
     width: "300px",
     display: "flex",
     color: blackColor,
-    justifyContent: "center",
     transition: "all .5s linear",
     backgroundColor: WildSand,
   },
@@ -50,7 +50,7 @@ const Submenu = withStyles(submenuStyles)(
           ref={ref}
           className={classes.menu}
         >
-          <span className={classes.title}>{title}</span>
+          <span style={{  textAlign: "left"}}  className={classes.title}>{title}</span>
           <ChevronRight className={classes.moreArrow} />
         </MenuItem>
         <Menu
