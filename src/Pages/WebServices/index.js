@@ -81,7 +81,7 @@ const Services = () => {
           srcset=""
         />
         <Section title={ServicesSectionTitle} highlightWords={1}>
-          <section style={{ marginBottom: "10px" }}>
+          <section style={{ marginBottom: "10px",marginTop:'-40px' }}>
             <Heading5 subTitle={OurExpertEngineers} />
           </section>
           <PointList data={servicesData} horizontal={false} />

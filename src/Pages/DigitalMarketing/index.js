@@ -3,12 +3,6 @@ import Section from "../Section";
 import { Link } from "react-router-dom";
 import { Typography } from "@material-ui/core";
 import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
-import {
-  OurExpertEngineers,
-  webDevServicesData as servicesData,
-  WeHireTheMost,
-  WeProvideExceptional,
-} from "../WebServices/webDevServicesData";
 import {  hireUsData } from "./whyWorkwithUs";
 import { Colors } from "../../Theme/color.constants";
 import Banner from "../../Components/Banner";

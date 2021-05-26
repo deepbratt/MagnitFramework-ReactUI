@@ -158,9 +158,7 @@ const Home = (props) => {
         <Solutions />
       </Grid>
       <Grid item md={12} xs={12}>
-        <Section>
-          <PartnerContext />
-        </Section>
+        <PartnerContext />
       </Grid>
       <Grid item md={12} xs={12}>
         <GlanceSection subtitleOne={Data.subtitleOne} subtitleTwo={Data.subtitleTwo} subtitleThree={Data.subtitleThree} backColor={BlueRibbon} />
