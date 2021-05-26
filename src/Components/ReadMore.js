@@ -1,22 +1,24 @@
-import React from "react";
-import ReadMoreReact from "read-more-react";
-import { Typography } from "@material-ui/core";
+import React, { useState } from "react";
+import LinesEllipsis from "react-lines-ellipsis";
 
-
-const ReadMore = ({ data , width}) => {
-
+const ReadMore = ({ text, maxLines, ellipses }) => {
+  const [isExpand, setExpand] = useState(false);
   return (
-    <ReadMoreReact
-      text={data}
-      min={width}
-      ideal={width}
-      max={90}
-      readMoreText={
-        <Typography color="textSecondary" variant="body1">
-          ...Read More
-        </Typography>
-      }
-    />
+    <>
+      {isExpand ? (
+        <div>{text}</div>
+      ) : (
+        <div onClick={() => setExpand(!isExpand)}>
+          <LinesEllipsis
+            text={text}
+            maxLine={maxLines}
+            ellipsis={ellipses}
+            trimRight
+            basedOn="letters"
+          />
+        </div>
+      )}
+    </>
   );
 };
 

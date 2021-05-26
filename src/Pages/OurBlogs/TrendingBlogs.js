@@ -12,7 +12,7 @@ import OurBlogsStyles from "./style";
 
 const TrendingBlogs = ({ featureImage, cardData }) => {
   const { detail, title, body, buttonText } = cardData;
-  const { avatar, authName, authDesig, tag, date } = detail;
+  const { avatar, authName, authDesig, category, date } = detail;
   const { coverImage, content, blogDetail, light } = OurBlogsStyles();
   return (
     <Grid container>
@@ -24,24 +24,24 @@ const TrendingBlogs = ({ featureImage, cardData }) => {
           <CardContent className={content}>
             <div className={blogDetail}>
               <div className="left">
-                <div>
+                {/* <div>
                   <Avatar src={avatar} />
-                </div>
+                </div> */}
                 <div>
                   <Typography variant="h6">{authName}</Typography>
-                  <Typography
+                  {/* <Typography
                     className={light}
                     variant="body2"
                     component="p"
                   >
                     {authDesig}
-                  </Typography>
+                  </Typography> */}
                 </div>
               </div>
               <div>
-                <Typography align="right" variant="h6" component="p">
-                  {tag}
-                </Typography>
+                {/* <Typography align="right" variant="h6" component="p">
+                  {category}
+                </Typography> */}
                 <Typography
                   className={light}
                   align="right"

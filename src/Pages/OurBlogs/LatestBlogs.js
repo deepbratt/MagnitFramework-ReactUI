@@ -31,20 +31,20 @@ const LatestBlogCard = ({ cardData }) => {
               <Typography className={authorName} variant="h6" component="h3">
                 {authName}
               </Typography>
-              <Typography
+              {/* <Typography
                 className={authorDesig}
                 variant="subtitle2"
                 color="textSecondary"
                 component="p"
               >
                 {authDesig}
-              </Typography>
+              </Typography> */}
             </div>
-            <div className={latestBlogDetailCategory}>
+            {/* <div className={latestBlogDetailCategory}>
               <Typography variant="h6" component="h3">
                 {category}
               </Typography>
-            </div>
+            </div> */}
             <div>
               <Typography className={dateStyle} variant="h6" component="h3">
                 {date}
@@ -55,7 +55,7 @@ const LatestBlogCard = ({ cardData }) => {
             {title}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            {body.substr(0, 100)}...
+            {body[0].substr(0, 100)}...
           </Typography>
         </CardContent>
       </CardActionArea>

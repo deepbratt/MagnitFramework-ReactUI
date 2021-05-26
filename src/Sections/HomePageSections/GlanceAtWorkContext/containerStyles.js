@@ -9,9 +9,9 @@ const breakpoints = createBreakpoints({});
 
 export const useStyles = makeStyles((theme) => ({
   root: {
-    paddingTop: "25px",
+    paddingTop: "10px",
     margin: "0px",
-    paddingBottom: "40px",
+    paddingBottom: "20px",
     justifyContent:"space-evenly"
   },
   cardSec: {
