@@ -55,7 +55,7 @@ const ContactUsForm = (props) => {
         <InputField
           id="input-email"
           fullWidth
-          placeholder="e.g johnmartin@mail.com"
+          placeholder="e.g johnmartin@gmail.com"
         />
 
         <InputLabel
