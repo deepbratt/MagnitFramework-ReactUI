@@ -3,7 +3,7 @@ import Section from "../Section";
 import { Link } from 'react-router-dom'
 import { Typography } from "@material-ui/core";
 import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
-import { OurExpertEngineers, webDevServicesData as servicesData, WeHireTheMost, WeProvideExceptional } from "../WebServices/webDevServicesData";
+import { OurExpertEngineers, webDevServicesData as servicesData, } from "../WebServices/webDevServicesData";
 import { whyHireData as hireUsData } from "../WebServices/whyHireData";
 import { Colors } from "../../Theme/color.constants";
 import Banner from "../../Components/Banner";
@@ -12,6 +12,9 @@ import {
   HiringSectionTitle,
   ServicesSectionTitle,
   WhyHireSectionTitle,
+  Combining,
+  WeProvideExceptional,
+  hireDeveloper
 } from "./constants";
 import OptionsTab from "../../Components/OptionsTab";
 import StarFishPattern from "../../assets/patterns/starfishBlue.png";
@@ -24,6 +27,7 @@ import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
 import Heading5 from "../../ContainerStructure/Headings/Heading5";
 import Breakpoints from "../../Theme/theme.breakpoints";
+
 const HireDeveloper = () => {
   const { skyBlue, linearBackground } = Colors;
 
@@ -48,7 +52,7 @@ const HireDeveloper = () => {
         breadCrumb={<BreadCrumb links={breadCrumData} />}
       >
         <Typography variant="h1" gutterBottom className={textColor}>
-         {WeHireTheMost}
+         {Combining}
         </Typography>
         <Typography variant="h5" gutterBottom className={textColor}>
          {WeProvideExceptional}
@@ -79,7 +83,7 @@ const HireDeveloper = () => {
         />
         <Section title={ServicesSectionTitle} highlightWords={1}>
           <section style={{ marginBottom: "10px" }}>
-            <Heading5 subTitle={OurExpertEngineers}/>
+            <Heading5 subTitle={hireDeveloper}/>
           </section>
           <PointList data={servicesData} horizontal={false} />
         </Section>

@@ -20,7 +20,7 @@ const FirstColumn = () => {
         </div>
         <div>
           <Typography variant="h5">By {authName}</Typography>
-          <Rating name="read-only" value={4} readOnly />
+          <Rating name="read-only" value={5} readOnly />
         </div>
       </div>
 

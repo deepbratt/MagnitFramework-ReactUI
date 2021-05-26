@@ -19,7 +19,7 @@ const SecondColumn = ({ cardData }) => {
         </div>
         <div>
           <Typography variant="h5">By {col2authName}</Typography>
-          <Rating name="read-only" value={4} readOnly />
+          <Rating name="read-only" value={5} readOnly />
         </div>
       </div>
 
