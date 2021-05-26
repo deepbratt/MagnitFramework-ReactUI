@@ -124,11 +124,11 @@ const pageRoutes = {
     sidebarName: "Solutions",
     component: Solutions,
   },
-  [pathIds.solutions]: {
-    path: pathRouting.blogs,
-    sidebarName: "Our Blogs",
-    component: OurBlogs,
-  },
+  // [pathIds.solutions]: {
+  //   path: pathRouting.blogs,
+  //   sidebarName: "Our Blogs",
+  //   component: OurBlogs,
+  // },
   // [pathIds.notFound]: {
   //   sidebarName: "",
   //   component: Error,
