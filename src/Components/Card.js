@@ -2,6 +2,7 @@ import React from "react";
 import { useStyles } from "../Sections/HomePageSections/ServicesContext/servicesStyles";
 import { Typography, Card, CardContent, Grid, Box } from "@material-ui/core";
 import CustomImage from "./CustomImage";
+import ReadMore from "./ReadMore"
 import { NavLink } from "react-router-dom";
 
 const CardData = ({ data }) => {
@@ -45,12 +46,9 @@ const CardData = ({ data }) => {
                   </Typography>
 
                   <Typography variant="subtitle2" paragraph={true}>
-                    {text.desc.substr(0, 80)}...
-                    <NavLink
-                      to={text.redirect}
-                      style={{ marginLeft: "10px", textDecoration: "none" }}
-                    >
-                      See More
+                  <ReadMore text={text.desc} maxLines={3} />
+                    <NavLink to={text.redirect} style={{ marginLeft: "10px", textDecoration: "none" }}>
+                      See More 
                     </NavLink>
                   </Typography>
                 </Grid>
