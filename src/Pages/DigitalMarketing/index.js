@@ -9,12 +9,16 @@ import {
   WeHireTheMost,
   WeProvideExceptional,
 } from "../WebServices/webDevServicesData";
-import { whyHireData as hireUsData } from "../WebServices/whyHireData";
+import {  hireUsData } from "./whyWorkwithUs";
 import { Colors } from "../../Theme/color.constants";
 import Banner from "../../Components/Banner";
 import {
+  combiningEngineering,
   DoYouWant,
+  marketingServicesData,
+  ourExpert,
   ServicesSectionTitle,
+  weCutTo,
   WhyHireSectionTitle,
 } from "./constants";
 import StarFishPattern from "../../assets/patterns/starfishBlue.png";
@@ -50,10 +54,10 @@ const DigitalMarketing = () => {
         breadCrumb={<BreadCrumb links={breadCrumData} />}
       >
         <Typography variant="h1" gutterBottom className={textColor}>
-          {WeHireTheMost}
+         {combiningEngineering}
         </Typography>
         <Typography variant="h5" gutterBottom className={textColor}>
-          {WeProvideExceptional}
+          {weCutTo}
         </Typography>
         <span>
           <CustomButton
@@ -80,9 +84,9 @@ const DigitalMarketing = () => {
         />
         <Section title={ServicesSectionTitle} highlightWords={1}>
           <section style={{ marginBottom: "10px" }}>
-            <Heading5 subTitle={OurExpertEngineers} />
+            <Heading5 subTitle={ourExpert} />
           </section>
-          <PointList data={servicesData} horizontal={false} />
+          <PointList data={marketingServicesData} horizontal={false} />
         </Section>
       </div>
 

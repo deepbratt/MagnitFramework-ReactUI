@@ -88,7 +88,15 @@ const ReviewSliderStyles = makeStyles((theme) => ({
          
   },
  
-  
+  carouselRoot:{
+    '& > .carousel':{
+      display:"flex",
+      flexDirection:"column-reverse"
+    },
+    '& > .carousel .control-dots':{
+      position:"relative"
+    },
+  },
 
 }));
 

@@ -17,6 +17,7 @@ import BreadCrumb from "../../Components/BreadCrumb";
 import { BannerImage } from "../../Utils/Constants/Language/en/SolutionsPageData";
 import Banner from "../../Components/Banner";
 import CommentSection from "../../Components/CommentSection";
+import ServicesOffered from "../../Sections/HomePageSections/ServicesContext/Services";
 
 const Services = () => {
   const { linearBackground } = Colors;
@@ -56,11 +57,14 @@ const Services = () => {
           </span>
         </Banner>
 
-        <Grid item lg={12} md={12} xs={12}>
-          <WeOffer data={ServicesOfferedSection} />
+        <Grid item xs={12}>
+          <Section title={ServicesOfferedSection.title}>
+
+          <ServicesOffered servicesData={ServicesOfferedSection.values}/>
+          </Section>
         </Grid>
         <Section title={BenifitsSection.title}>
-          <Grid item lg={12} md={12} xs={12}>
+          <Grid item xs={12}>
             <PointList
               data={BenifitsSection.data}
               horizontal={true}
