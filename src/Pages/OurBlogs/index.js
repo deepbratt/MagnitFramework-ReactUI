@@ -96,13 +96,11 @@ const OurBlogs = () => {
         <Grid
           container
           justify="center"
-          alignItems="center"
-          alignContent="center"
           spacing={2}
         >
           {LatestBlogsSectionText.cards &&
             LatestBlogsSectionText.cards.map((card, index) => (
-              <Grid key={index} item xs={12} sm={6} lg={4}>
+              <Grid key={index} item xs={12} sm={6} lg={4} style={{display:"flex"}}>
                 <LatestBlogs cardData={card} />
               </Grid>
             ))}

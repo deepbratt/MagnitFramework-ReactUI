@@ -35,6 +35,9 @@ const OurBlogsStyles = makeStyles((theme) => ({
     fontWeight: "300",
   },
   latestBlogCard: {
+    display:"flex",
+    flexDirection:"column",
+    justifyContent:"space-between",
     borderBottomLeftRadius: "5px",
     borderBottomRightRadius: "5px",
     boxShadow: "0px 4px 80px 15px rgba(0, 0, 0, 0.06)",
@@ -44,7 +47,7 @@ const OurBlogsStyles = makeStyles((theme) => ({
   },
   coverImg: {
     width: "100%",
-    height: "100%",
+    // height: "100%",
     
   },
 
