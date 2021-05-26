@@ -70,7 +70,7 @@ const OurBlogs = () => {
         </Typography>
       </Banner>
       <Section title={header}>
-        <ReviewSlider slides={slideArr} showArrows={false} />
+        <ReviewSlider slides={slideArr} showArrows={false} indicatorsPosition/>
       </Section>
       <Section
         title={LatestBlogsSectionText.header}

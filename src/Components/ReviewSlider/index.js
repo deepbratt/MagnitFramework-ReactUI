@@ -11,7 +11,7 @@ const slideArr = reviewSliderText.map((a) => {
   return <ReviewCard cardData={a} />;
 });
 
-const ReviewSlider = ({ slides, showArrows, showDots }) => {
+const ReviewSlider = ({ slides, showArrows, showDots, indicatorsPosition }) => {
   const visible = !showDots ? "hidden" : "visible";
   const indicatorStyles = {
     background: "rgba(98, 173, 244, 1)",
@@ -22,7 +22,7 @@ const ReviewSlider = ({ slides, showArrows, showDots }) => {
     margin: "0px 8px",
     visibility: visible,
   };
-  const { nextBtn, prevBtn } = ReviewSliderStyles();
+  const { nextBtn, prevBtn, carouselRoot } = ReviewSliderStyles();
   const customDots = (onClickHandler, isSelected, index, label) => {
     if (isSelected) {
       return (
@@ -88,13 +88,14 @@ const ReviewSlider = ({ slides, showArrows, showDots }) => {
           </button>
         )
       }
-      autoPlay
+      
       showStatus={false}
       interval={5500}
       showArrows={showArrows}
       infiniteLoop={true}
       transitionTime={500}
       renderIndicator={customDots}
+      className={indicatorsPosition ? carouselRoot : null}
     >
       {slides.map((slide, i) => {
         return (
