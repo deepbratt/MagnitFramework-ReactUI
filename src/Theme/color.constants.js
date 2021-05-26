@@ -114,6 +114,12 @@ export const Colors = {
   mint: "#6BDFFF",
   darkMint: "#3DACFC",
   cockTail: "#63D6FE",
-  darkCockTail: "#5DD4F8"
+  darkCockTail: "#5DD4F8",
 
+  // Slider color
+  democrat: "#00B3F4",
+  vividCerlean: "#00ABEF",
+  atomsphere: "#0095E1",
+  carmine: "#0071CA",
+  peaFowl: "#0044AE"
 };

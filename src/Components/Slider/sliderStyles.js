@@ -3,9 +3,9 @@ import { createMuiTheme } from "@material-ui/core/styles";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 
 import { Colors } from "../../Theme/color.constants";
-import { hero,Vector } from "../../Components/Hero/Images";
+import { hero, Vector } from "../../Components/Hero/Images";
 
-const { whiteColor, Harlequin, blackColor,Mirage } = Colors;
+const { whiteColor, Harlequin, blackColor, Mirage } = Colors;
 
 const breakpoints = createBreakpoints({});
 
@@ -25,7 +25,7 @@ export const heading = createMuiTheme({
         fontSize: "40px",
         lineHeight: 1.6,
         fontWeight: "bolder",
-        color:Mirage,
+        color: Mirage,
         [breakpoints.down("md")]: {
           fontSize: "37px",
         },
@@ -73,14 +73,14 @@ export const useStyles = makeStyles((theme) => ({
   },
   link: {
     textDecoration: "none",
-    color: whiteColor
+    color: whiteColor,
   },
   vector: {
-   zIndex: 1,
-    height: "auto",
+    zIndex: 1,
     margin: 0,
     padding: 0,
-    width: "100%",
+    // height: "500px",
+    width: "100%"
   },
 
   tick: {
@@ -100,6 +100,8 @@ export const useStyles = makeStyles((theme) => ({
   },
   tickSub: {
     borderRadius: "15px",
+    backgroundColor: whiteColor,
+    color: blackColor,
     border: `solid 1px ${Harlequin}`,
     marginRight: "10px",
     fontSize: "23px",
@@ -120,14 +122,15 @@ export const useStyles = makeStyles((theme) => ({
   sec: {
     position: "relative",
     width: "100%",
-    padding:"24px"
+    padding: "24px",
   },
-  gridImage:{ 
-    zIndex: 1, 
-    // padding: "16px" 
+  gridImage: {
+    zIndex: 1,
+    // padding: "16px"
   },
-  gridText:{
+  gridText: {
     textAlign: "left",
+    color: whiteColor,
     zIndex: 1,
     [breakpoints.down("sm")]: {
       textAlign: "center",
@@ -143,16 +146,15 @@ export const useStyles = makeStyles((theme) => ({
   spiral: {
     position: "absolute",
     zIndex: 0,
-    width:"100%",
-    height:"auto",
-    left:0,
+    width: "100%",
+    height: "auto",
+    left: 0,
   },
-  listItem:{
-
+  listItem: {
+    color: whiteColor,
     [breakpoints.down("sm")]: {
       textAlign: "center",
-      display: "block"
+      display: "block",
     },
-  }
-
+  },
 }));
