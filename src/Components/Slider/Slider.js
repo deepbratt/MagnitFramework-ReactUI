@@ -24,9 +24,10 @@ const Slider = ({
   headingThree,
   text,
   data,
-  color,
+  Img
 }) => {
-  const { Harlequin, whiteColor } = Colors;
+  const { Harlequin, democrat, vividCerlean, atomsphere, carmine, peaFowl } =
+    Colors;
   const classes = useStyles();
   const { tick, tickSub, sec, vector, spiral, gridImage, gridText, listItem } =
     classes;
@@ -39,14 +40,11 @@ const Slider = ({
         // justify="center"
         // alignItems="center"
         style={{
-          background: `linear-gradient(${color} 5%, ${whiteColor} 95% `,
+          background: `linear-gradient(to right,${democrat} 0%,${vividCerlean} 15%, ${atomsphere} 39%, ${carmine} 69%,${peaFowl} 99%)`,
         }}
       >
-        <Hidden smDown>
-          <CustomImage alt="sliderImg" src={Vector} className={spiral} />
-        </Hidden>
-        <Grid item xs={12} sm={12} md={9} lg={9} className={gridText}>
-          <Typography color="textPrimary" variant="h1">
+        <Grid item xs={12} sm={12} md={7} lg={7} className={gridText}>
+          <Typography variant="h1">
             {headingOne} <br />
             {headingTwo} <br />
             {headingThree} <br />
@@ -54,8 +52,8 @@ const Slider = ({
           {/* <section className={listSec}> */}
           <List>
             {data.map((text, index) => (
-              <ListItem className={listItem}>
-                <Typography color="textPrimary" key={index} variant="h4">
+              <ListItem style={{paddingLeft: "0px"}} className={listItem}>
+                <Typography key={index} variant="h4">
                   <CheckIcon className={value === "LIGHT" ? tick : tickSub} />
                   {text}
                 </Typography>
@@ -80,12 +78,12 @@ const Slider = ({
           <Grid
             item
             xs={12}
-            md={3}
-            lg={3}
+            md={5}
+            lg={5}
             className={gridImage}
             justify="flex-start"
           >
-            <CustomImage alt="sliderImg" src={hero} className={vector} />
+            <CustomImage alt="sliderImg" height="400px" src={Img} className={vector} />
           </Grid>
         </Hidden>
         {/* <Hidden smDown>

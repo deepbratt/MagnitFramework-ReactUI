@@ -59,7 +59,7 @@ export const Array = [
 export const heading = "Current Opportunities"
 export const DataArray = [
   {
-
+    length: 70,
     title: "Full Stack Developer",
     span: "Remote",
     icon: mapIcon,
@@ -67,7 +67,7 @@ export const DataArray = [
     buttonText: "Apply now"
   },
   {
-
+    length: 73,
     title: "UI/UX Designer",
     span: "Remote",
     icon: mapIcon,
@@ -75,7 +75,7 @@ export const DataArray = [
     buttonText: "Apply now"
   },
   {
-
+    length: 60,
     title: "Front-End Developer",
     span: "Remote",
     icon: mapIcon,
@@ -83,7 +83,7 @@ export const DataArray = [
     buttonText: "Apply now"
   },
   {
-
+    length: 60,
     title: "React.js Developer",
     span: "Remote",
     icon: mapIcon,
@@ -91,7 +91,7 @@ export const DataArray = [
     buttonText: "Apply now"
   },
   {
-
+    length: 60,
     title: "React Native Developer",
     span: "Remote",
     icon: mapIcon,
@@ -99,7 +99,7 @@ export const DataArray = [
     buttonText: "Apply now"
   },
   {
-
+    length: 60,
     title: "Node.js Developer",
     span: "Remote",
     icon: mapIcon,
