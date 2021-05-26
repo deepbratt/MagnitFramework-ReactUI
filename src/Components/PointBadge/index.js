@@ -37,7 +37,7 @@ const PointBadge = ({ horizontal, data }) => {
           variant="subtitle2"
           component="subtitle2"
         >
-          <Read data={desc} width={length} />
+          <Read text={desc} ellipses="... Read More" maxLines={2} />
         </Typography>
       </Grid>
     </div>
