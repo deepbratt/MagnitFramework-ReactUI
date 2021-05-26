@@ -14,8 +14,8 @@ const Routes = () => {
 
   return (
     <Router>
-      <Switch>
-        <Layout>
+      <Layout>
+        <Switch>
           <RequireAuth path="/" exact component={Home} />
           <RequireAuth path="/contactUs" exact component={ContactUs} />
           {/* <RequireAuth exact component={Error} /> */}
@@ -28,11 +28,9 @@ const Routes = () => {
               />
             );
           })}
-          {/* <RequireAuth path="" component={Error} /> */}
-        </Layout>
-        
-      </Switch>
-      
+          <RequireAuth path="" component={Error} />
+        </Switch>
+      </Layout>
     </Router>
   );
 };
