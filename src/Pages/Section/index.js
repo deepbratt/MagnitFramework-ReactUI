@@ -29,18 +29,7 @@ const Section = ({
 
   return (
     <div className={root} style={{ backgroundColor: backColor }}>
-      {patterns &&
-        patterns.map((pattern, index) => (
-          <Grid
-            className={pattern.styles}
-            style={{ position: "absolute" }}
-            key={index}
-            item
-            xs={4}
-          >
-            {pattern.image}
-          </Grid>
-        ))}
+      {patterns && patterns.map((pattern, index) => pattern.image)}
       <div className={content}>
         {startQuote && (
           <>
