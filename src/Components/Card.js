@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 
 const CardData = ({ data }) => {
   const classes = useStyles();
-  const { card, devSec, devSub, contentRight,font } = classes;
+  const { card, devSec, devSub, contentRight } = classes;
   //   Use this Card for Services Section pass data from its Parent Contanier to here
   return (
     <>
@@ -41,7 +41,6 @@ const CardData = ({ data }) => {
                     color="textPrimary"
                     variant="subtitle1"
                     gutterBottom
-                    className={font}
                   >
                     {text.title}
                   </Typography>

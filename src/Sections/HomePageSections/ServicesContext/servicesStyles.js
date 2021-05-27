@@ -38,9 +38,6 @@ export const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
   },
-  font:{
-    fontWeight:"600"
-  },
   devSec: {
     height: "120px",
     display: "flex",
