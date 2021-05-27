@@ -2,7 +2,6 @@ import React from "react";
 import { useStyles } from "../../Sections/MainComponent/mainStyles";
 import { Card, CardContent, Grid, Typography } from "@material-ui/core";
 import Heading4 from "../../ContainerStructure/Headings/Heading4";
-import Heading5 from "../../ContainerStructure/Headings/Heading5";
 import { MainData } from "../../Utils/Constants/Language/en/CareersData";
 import Breakpoints from "../../Theme/theme.breakpoints";
 import { Colors } from "../../Theme/color.constants";

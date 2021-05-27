@@ -1,11 +1,8 @@
 import { makeStyles } from "@material-ui/core/styles";
-import { createMuiTheme } from "@material-ui/core/styles";
-import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 import {Colors} from "../../../Theme/color.constants"
 
 
-const {Mariner,whiteColor,blackColor} = Colors
-const breakpoints = createBreakpoints({});
+const {Mariner,whiteColor} = Colors
 
 export const useStyles = makeStyles((theme) => ({
   root: {
@@ -70,6 +67,7 @@ seeMore:{
   marginLeft: "10px",
   borderRadius: "0px",
   padding: "6px 40px",
-   backgroundColor: whiteColor
+   backgroundColor: whiteColor,
+   color:"black"
 }
 }));

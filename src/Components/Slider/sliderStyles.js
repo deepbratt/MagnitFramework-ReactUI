@@ -3,7 +3,6 @@ import { createMuiTheme } from "@material-ui/core/styles";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 
 import { Colors } from "../../Theme/color.constants";
-import { hero, Vector } from "../../Components/Hero/Images";
 
 const { whiteColor, Harlequin, blackColor, Mirage } = Colors;
 

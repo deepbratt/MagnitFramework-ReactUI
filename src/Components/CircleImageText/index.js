@@ -1,6 +1,5 @@
 import { Typography } from "@material-ui/core";
 import React from "react";
-import { ReactComponent as CircleImage } from "../../assets/CaseStudies/circleImg.svg";
 import CircleImageComponent from "./CircleImage";
 import useStyles from "./useStyles";
 

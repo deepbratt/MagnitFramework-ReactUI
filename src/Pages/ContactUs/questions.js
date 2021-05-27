@@ -1,4 +1,4 @@
-export default [{
+const questions = [{
     id: 1,
     summary:
       "Can the software be upgraded in the future as new technology becomes available?",
@@ -31,4 +31,6 @@ export default [{
     x: "+",
   },
 ]
+
+export default questions
 

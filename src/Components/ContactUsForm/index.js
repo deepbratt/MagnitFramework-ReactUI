@@ -95,7 +95,6 @@ const ContactUsForm = (props) => {
         />
         <div className={privacyPolicy}>
           <InfoOutlinedIcon
-            fontSize="medium"
             style={{ color: props.captionColor }}
           />
           <Typography

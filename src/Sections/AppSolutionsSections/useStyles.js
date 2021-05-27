@@ -10,11 +10,6 @@ export const useStyles = makeStyles((theme) => ({
     backgroundColor: MoonWhite,
     paddingTop: "30px"
   },
-  cardSec:{
-    display: "flex",
-    width: "100%",
-    flexDirection: "wrap"
-  },
   content:{
     marginTop: "40px",
     textAlign: "left",
@@ -53,5 +48,6 @@ export const useStyles = makeStyles((theme) => ({
     width: "100%",
     flexFlow: "wrap",
     justifyContent: "center",
+    // flexDirection: "wrap"
   },
 }));

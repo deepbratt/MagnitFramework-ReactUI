@@ -9,7 +9,7 @@ const CardSlyder = ({ cardData }) => {
           cardData
             .filter((card, idx) => idx < 3)
             .map((card, index) => (
-              <Grid item xs={12} md={4} lg={4}>
+              <Grid item xs={12} md={4} lg={4} key={`card-slider-${index}`}>
                 <QuoteCard key={index} cardData={card} />
               </Grid>
             ))}

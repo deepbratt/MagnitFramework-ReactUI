@@ -12,12 +12,9 @@ import { Colors } from "../../../../Theme/color.constants";
 const ParentPopupState = React.createContext(null);
 const { WildSand,blackColor } = Colors;
 const submenuStyles = (theme) => ({
-  menu: {
-    marginTop: theme.spacing(-1),
-  },
+
   title: {
     flexGrow: 1,
-    textAlign: "center",
     color: blackColor,
     fontSize: "20px",
     textAlign: "left"
@@ -26,6 +23,7 @@ const submenuStyles = (theme) => ({
     marginRight: theme.spacing(-1),
   },
   menu: {
+    marginTop: theme.spacing(-1),
     display: "flex",
     color: blackColor,
     transition: "all .5s linear",

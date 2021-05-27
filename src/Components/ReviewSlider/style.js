@@ -1,8 +1,6 @@
 import { makeStyles } from "@material-ui/core";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 import { Colors } from "../../Theme/color.constants";
-import {fontSizes} from "../../Utils/Constants/Font/index"
-const {p} = fontSizes
 const breakpoints = createBreakpoints({});
 const {Mirage}=Colors;
 const ReviewSliderStyles = makeStyles((theme) => ({

@@ -2,7 +2,6 @@ import AboutUs from "./../Pages/AboutUs/AboutUs";
 import Services from "./../Pages/Services";
 import WebServices from "../Pages/WebServices";
 import Home from "../Pages/Home/index";
-import Solutions from "../Pages/SolutionsPage/Solutions";
 // import Event from "../Pages/Event/Index";
 import Testimonials from "../Pages/Testimonials";
 import Career from "../Pages/Careers/Container";
@@ -12,7 +11,6 @@ import Quote from "../Pages/ContactUs/index";
 import HireDeveloper from "../Pages/HireDeveloper";
 import DigitalMarketing from "../Pages/DigitalMarketing";
 import CaseStudies from "../Pages/CaseStudies";
-import Error from '../Pages/Error/Index'
 
 const pathIds = {
   home: "home",

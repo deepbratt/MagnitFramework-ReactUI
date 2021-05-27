@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core";
 import {Colors} from "../../Theme/color.constants"
 
 const {blackColor} = Colors
-const HomeStyles = makeStyles((theme) => ({
+const HomeStyles = makeStyles(() => ({
   leftRoot: {
     display: "flex",
     justifyContent: "center",

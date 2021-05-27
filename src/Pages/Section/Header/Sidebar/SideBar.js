@@ -8,7 +8,6 @@ import { useStyles, THEME } from "./sidebarStyles";
 import { Logo } from "../../../../Components/Hero/Images";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import CustomImage from "../../../../Components/CustomImage";
-import CustomButton from "../../../../Components/CustomButton";
 
 const SideBar = () => {
   const classes = useStyles();
