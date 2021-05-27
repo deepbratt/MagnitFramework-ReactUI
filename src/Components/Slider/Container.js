@@ -49,6 +49,7 @@ const Container = ( props) => {
       infiniteLoop={true}
       transitionTime={500}
       showIndicators={show}
+      showThumbs={false}
     >
       {slides.map((slide, i) => {
         return <section key={i}>{slide}</section>;

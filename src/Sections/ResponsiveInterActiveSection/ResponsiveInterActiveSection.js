@@ -1,5 +1,5 @@
-import { Grid, Link } from "@material-ui/core";
-import React, { useEffect } from "react";
+import { Grid } from "@material-ui/core";
+import React from "react";
 import useStyles from "./useStyles";
 import { ReactComponent as MiddleImgBtn } from "../../assets/CaseStudies/middle.svg";
 import { ReactComponent as People } from "../../assets/CaseStudies/people.svg";
@@ -9,7 +9,6 @@ import MobileChat from "../../assets/CaseStudies/mobile-chat.svg";
 import MobileApp from "../../assets/CaseStudies/mobile-app.svg";
 import LoveBirds from "../../assets/CaseStudies/love-birds.svg";
 import CircleImageText from "../../Components/CircleImageText";
-import { caseStudies } from "../../Utils/Constants/Language";
 import { useHistory } from "react-router";
 
 const ResponsiveInterActiveSection = (props) => {
@@ -19,10 +18,10 @@ const ResponsiveInterActiveSection = (props) => {
   const iconsArray = [
     <People style={{ width: "40px" }} />,
     <Touch style={{ width: "40px" }} />,
-    <img src={Google} style={{ width: "40px" }} />,
-    <img src={MobileChat} style={{ width: "40px" }} />,
-    <img src={MobileApp} style={{ width: "40px" }} />,
-    <img src={LoveBirds} style={{ width: "40px" }} />,
+    <img src={Google} style={{ width: "40px" }} alt="google" />,
+    <img src={MobileChat} style={{ width: "40px" }} alt="chat"/>,
+    <img src={MobileApp} style={{ width: "40px" }} alt="app"/>,
+    <img src={LoveBirds} style={{ width: "40px" }} alt="dating"/>,
   ];
   return (
     <Grid

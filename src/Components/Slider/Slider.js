@@ -1,16 +1,14 @@
 import React from "react";
-import { useStyles, heading } from "./sliderStyles";
+import { useStyles } from "./sliderStyles";
 import {
   Typography,
   ListItem,
-  Button,
   Hidden,
   Grid,
   List,
 } from "@material-ui/core";
 import CheckIcon from "@material-ui/icons/Check";
 import { MuiThemeProvider } from "@material-ui/core/styles";
-import { hero, Vector } from "../../Components/Hero/Images";
 import Breakpoints from "../../Theme/theme.breakpoints";
 import { Colors } from "../../Theme/color.constants";
 import CustomImage from "../CustomImage";
@@ -30,7 +28,7 @@ const Slider = ({
   const { Harlequin, democrat, vividCerlean, atomsphere, carmine, peaFowl, whiteColor } =
     Colors;
   const classes = useStyles();
-  const { tick, tickSub, sec, vector, spiral, gridImage, gridText, listItem } =
+  const { tick, tickSub, sec, vector, gridImage, gridText, listItem } =
     classes;
   return (
     <MuiThemeProvider theme={theme}>
@@ -53,7 +51,7 @@ const Slider = ({
           {/* <section className={listSec}> */}
           <List>
             {data.map((text, index) => (
-              <ListItem style={{paddingLeft: "0px"}} className={listItem}>
+              <ListItem style={{paddingLeft: "0px"}} key={'slider-listitem-'+index} className={listItem}>
                 <Typography key={index} variant="h4">
                   <CheckIcon className={value === "LIGHT" ? tick : tickSub} />
                   {text}
@@ -87,7 +85,7 @@ const Slider = ({
             md={5}
             lg={5}
             className={gridImage}
-            justify="flex-start"
+            // justify="flex-start"
           >
             <CustomImage alt="sliderImg" height="400px" src={Img} className={vector} />
           </Grid>

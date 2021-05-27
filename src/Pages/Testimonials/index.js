@@ -1,4 +1,4 @@
-import { Button, Card, CardContent, Grid, Typography } from "@material-ui/core";
+import { CardContent, Grid, Typography } from "@material-ui/core";
 import React from "react";
 import Banner from "../../Components/Banner";
 import { Colors } from "../../Theme/color.constants";
@@ -9,30 +9,23 @@ import Paragraph from "../../ContainerStructure/Headings/Paragraphs/Paragraph";
 import BreadCrumb from "../../Components/BreadCrumb";
 import CommentSection from "../../Components/CommentSection";
 import VideoCard from "./TestimonialVideo";
-import linked from "../../assets/Testimonials/linked.png";
-import prof from "../../assets/Testimonials/prof.png";
-import VideosData, {
+import  {
   ClientsHaveToSay,
   subTitle,
   Testmonial,
 } from "../../Utils/Constants/Language/en/TestimonialVideos";
 import CustomButton from "../../Components/CustomButton";
-import Section from "../Section";
 
 // import Section from '../Section';
 function Testimonials() {
-  const { skyBlue, aliceBlue, linearBackground } = Colors;
+  const { linearBackground } = Colors;
   const {
-    root,
-    imageWrapper,
-    content,
     textColor,
     cardSec,
     underlined,
     paragraph,
     flex,
     seeMore,
-    cardRoot,
   } = useStyles();
 
   const breadCrumData = [

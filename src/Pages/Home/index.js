@@ -223,10 +223,10 @@ const Home = (props) => {
           {AwardSectionImages &&
             AwardSectionImages.map((image, index) => (
               <CustomImage
-                key={index}
                 style={{ margin: "10px 40px", width: "130px", color: Mirage }}
                 src={image}
                 alt={`client${index}`}
+                key={`awards-accred-${index}`}
               />
             ))}
         </div>

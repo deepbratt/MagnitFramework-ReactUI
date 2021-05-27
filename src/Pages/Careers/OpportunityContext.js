@@ -1,16 +1,10 @@
 import React from "react";
 import { useStyles } from "./careerStyles";
 import {
-  Card,
-  CardContent,
-  Paper,
-  Button,
   Grid,
   Typography,
 } from "@material-ui/core";
-import Heading6 from "../../ContainerStructure/Headings/Heading6";
 import Heading4 from "../../ContainerStructure/Headings/Heading4";
-import Paragraph from "../../ContainerStructure/Headings/Paragraphs/Paragraph";
 import Breakpoints from "../../Theme/theme.breakpoints";
 import { Colors } from "../../Theme/color.constants";
 import {
@@ -26,7 +20,6 @@ const OpportunityContext = () => {
   const classes = useStyles();
   const {
     root,
-    cardSec,
     card,
     devSec,
     HeadSec,
@@ -34,11 +27,10 @@ const OpportunityContext = () => {
     button,
     RightPattern,
     LeftPattern,
-    btn,
     remoteArea,
     bottomStyle,
   } = classes;
-  const { DoveGray, whiteColor, Harlequin } = Colors;
+  const { whiteColor, Harlequin } = Colors;
   return (
     <>
       <Grid container className={root} spacing={0} justify="center">
@@ -63,7 +55,7 @@ const OpportunityContext = () => {
             >
               <Grid className={devSec}>
                 <Grid xs={12} className={HeadSec}>
-                  <Typography variant="subtitle1" component="subtitle1">
+                  <Typography variant="subtitle1">
                     {data.title}
                   </Typography>
                 </Grid>
@@ -72,7 +64,7 @@ const OpportunityContext = () => {
                     <img alt="" width="10px" src={data.icon} />
                   </div>
                   <div>
-                    <Typography variant="subtitle2" component="subtitle2">
+                    <Typography variant="subtitle2">
                       {data.span}
                     </Typography>
                   </div>

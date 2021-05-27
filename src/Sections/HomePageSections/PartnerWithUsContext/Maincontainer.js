@@ -1,19 +1,10 @@
 import React from "react";
-import { useStyles } from "./containerStyles";
-import { Typography, Paper, Grid } from "@material-ui/core";
-import { MuiThemeProvider } from "@material-ui/core/styles";
-import PrimarySection from "./PrimarySection";
-import SecondarySection from "./SecondarySection";
-import {
-  PrimaryArray,
-  SecondaryArray,
-} from "../../../Utils/Constants/Language/en/PartnerWithUsData";
-import { THEME } from "../../../ContainerStructure/Headings/headingStyles";
-import Section from "../../../Pages/Section";
 import PointList from "../../../Components/PointBadge/PointList";
+import Section from "../../../Pages/Section";
+import {
+  PrimaryArray
+} from "../../../Utils/Constants/Language/en/PartnerWithUsData";
 const Container = () => {
-  const classes = useStyles();
-  const { root, underlined } = classes;
   return (
     <>
       {/* <Grid container>

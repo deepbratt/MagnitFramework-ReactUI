@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Button } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import Breakpoints from "../../Theme/theme.breakpoints";
 import Banner from "../../Components/Banner/index";
 import { Colors } from "../../Theme/color.constants";

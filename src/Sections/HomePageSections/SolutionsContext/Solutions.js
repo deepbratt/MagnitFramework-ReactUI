@@ -1,14 +1,12 @@
 import React from "react";
 import { useStyles } from "./solutionStyles";
 import { Typography, Grid } from "@material-ui/core";
-import { MuiThemeProvider } from "@material-ui/core/styles";
 import PrimarySection from "./SolutionsPrimarySection";
 import MidSection from "./SolutionsMidSection";
 import Breakpoints from "../../../Theme/theme.breakpoints";
 import { Colors } from "../../../Theme/color.constants";
 import { Data } from "../../../Utils/Constants/Language/en/SolutionsText";
 import CustomButton from "../../../Components/CustomButton";
-import {THEME} from "../../../ContainerStructure/Headings/headingStyles"
 
 const Solutions = () => {
   const classes = useStyles();

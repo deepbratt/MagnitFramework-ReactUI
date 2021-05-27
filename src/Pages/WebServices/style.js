@@ -1,5 +1,4 @@
 import { makeStyles } from "@material-ui/core";
-import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 import { Colors } from "../../Theme/color.constants";
 const {Mirage}=Colors;
 const ServicesSectionStyles = makeStyles((theme) => ({

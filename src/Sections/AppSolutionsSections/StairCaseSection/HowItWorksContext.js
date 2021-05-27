@@ -3,7 +3,6 @@ import { useStyles } from "../useStyles";
 import { missionStyles } from "./useStyles";
 import { Card, CardContent, Grid, Typography } from "@material-ui/core";
 import Paragraph from "../../../ContainerStructure/Headings/Paragraphs/Paragraph";
-import Heading5 from "../../../ContainerStructure/Headings/Heading5";
 import {
   StairCaseData,
   stairCaseHeading,

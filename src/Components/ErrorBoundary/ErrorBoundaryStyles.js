@@ -1,5 +1,4 @@
 import { Colors } from "../../Theme/color.constants"
-import { makeStyles } from "@material-ui/core/styles";
 
 const { darkJungleGreen } = Colors;
 const ErrorBoundaryStyles = {
