@@ -7,13 +7,18 @@ import { contactUsLabelsText } from "../../Utils/Constants/Language";
 import CustomButton from "../CustomButton";
 import FormStyles from "./style";
 import { useForm } from "./useForm";
+import {
+  messages,
+  fieldNames,
+  regex,
+} from "../../Utils/Constants/ContactUsForm.js";
 
 const initialFValues = {
   fullName: "",
   email: "",
   mobile: "",
   companyName: "",
-  message: ""
+  message: "",
 };
 
 const ContactUsForm = (props) => {
@@ -21,27 +26,26 @@ const ContactUsForm = (props) => {
 
   const validate = (fieldValues = values) => {
     let temp = { ...errors };
-    if ("fullName" in fieldValues)
-      temp.fullName = fieldValues.fullName ? "" : "This field is required.";
-    if ("email" in fieldValues)
+    if (fieldNames.fullName in fieldValues)
+      temp.fullName = fieldValues.fullName ? "" : messages.isRequired;
+    if (fieldNames.email in fieldValues)
       temp.email =
         fieldValues.email.length === 0
-          ? "Email is Required"
-          : /$^|.+@.+..+/.test(fieldValues.email)
+          ? messages.isRequired
+          : regex.email.test(fieldValues.email)
           ? ""
-          : "Email is not valid.";
+          : messages.notValid.email;
 
-    if ("mobile" in fieldValues)
-      temp.mobile =
-        fieldValues.mobile.length > 9 ? "" : "Minimum 10 numbers required.";
+    if (fieldNames.mobile in fieldValues)
+      temp.mobile = fieldValues.mobile.length > 9 ? "" : messages.isRequired;
 
-    if ("companyName" in fieldValues)
+    if (fieldNames.companyName in fieldValues)
       temp.companyName =
-        fieldValues.companyName.length !== 0 ? "" : "Company Name is required.";
+        fieldValues.companyName.length !== 0 ? "" : messages.isRequired;
 
-    if ("message" in fieldValues)
+    if (fieldNames.message in fieldValues)
       temp.message =
-        fieldValues.message.length !== 0 ? "" : "Project Details are required.";
+        fieldValues.message.length !== 0 ? "" : messages.isRequired;
 
     setErrors({
       ...temp,
@@ -51,8 +55,11 @@ const ContactUsForm = (props) => {
       return Object.values(temp).every((x) => x === "");
   };
 
-  const { values, errors, setErrors, handleInputChange, resetForm } =
-    useForm(initialFValues, true, validate);
+  const { values, errors, setErrors, handleInputChange, resetForm } = useForm(
+    initialFValues,
+    true,
+    validate
+  );
 
   const {
     subHeading,
@@ -87,7 +94,7 @@ const ContactUsForm = (props) => {
 
         <InputField
           id="input-name"
-          name="fullName"
+          name={fieldNames.fullName}
           fullWidth
           placeholder="e.g John Martin"
           value={values.fullName}
@@ -104,7 +111,7 @@ const ContactUsForm = (props) => {
 
         <InputField
           id="input-email"
-          name="email"
+          name={fieldNames.email}
           fullWidth
           placeholder="e.g johnmartin@gmail.com"
           value={values.email}
@@ -121,7 +128,7 @@ const ContactUsForm = (props) => {
 
         <InputField
           id="input-companyName"
-          name="companyName"
+          name={fieldNames.companyName}
           fullWidth
           placeholder="XYZ Company"
           value={values.companyName}
@@ -138,7 +145,7 @@ const ContactUsForm = (props) => {
 
         <InputField
           id="input-phone"
-          name="mobile"
+          name={fieldNames.mobile}
           fullWidth
           placeholder="+1 225 8777 461"
           value={values.mobile}
@@ -155,7 +162,7 @@ const ContactUsForm = (props) => {
 
         <InputField
           id="input-message"
-          name="message"
+          name={fieldNames.message}
           fullWidth
           placeholder="Type your message here..."
           value={values.message}
