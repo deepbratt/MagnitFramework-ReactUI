@@ -1,7 +1,5 @@
 import axios from 'axios'
-const DOMAIN_NAME = 'http://3.14.6.42/'
-const DOMAIN_POSTFIX = 'api/v1/'
-const BASE_URL = DOMAIN_NAME+DOMAIN_POSTFIX
+const BASE_URL = "http://3.14.6.42/api/v1/"
 const axiosInstance = axios.create({
     baseURL:BASE_URL,
     headers:{
