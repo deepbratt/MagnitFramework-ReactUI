@@ -16,6 +16,7 @@ import { Colors } from "../../Theme/color.constants";
 import CustomImage from "../CustomImage";
 import CustomButton from "../CustomButton";
 import theme from "../../Theme/GlobalFontSizes";
+import {NavLink} from "react-router-dom"
 
 const Slider = ({
   value,
@@ -26,7 +27,7 @@ const Slider = ({
   data,
   Img
 }) => {
-  const { Harlequin, democrat, vividCerlean, atomsphere, carmine, peaFowl } =
+  const { Harlequin, democrat, vividCerlean, atomsphere, carmine, peaFowl, whiteColor } =
     Colors;
   const classes = useStyles();
   const { tick, tickSub, sec, vector, spiral, gridImage, gridText, listItem } =
@@ -71,7 +72,12 @@ const Slider = ({
             variant="contained"
             size={Breakpoints()}
           >
-            {text}
+           <NavLink  style={{
+              color: whiteColor,
+              textDecoration: "none"
+            }} to="/request-a-quote">
+           {text}
+             </NavLink> 
           </CustomButton>
         </Grid>
         <Hidden smDown>
