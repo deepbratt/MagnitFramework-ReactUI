@@ -80,8 +80,6 @@ const Container = ({subtitleOne,subtitleTwo,subtitleThree,backColor}) => {
             variant="contained"
             size={Breakpoints()}
             className={seeMore}
-            style={{color:"white"}}
-       
           >
             {buttonText}
           </CustomButton>
