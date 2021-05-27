@@ -34,6 +34,9 @@ const PointBadgeStyles = makeStyles((theme) => ({
     },
 
   },
+  font:{
+    fontWeight:"600"
+  },
   devSec: {
     display: "flex",
     justifyContent: "center",

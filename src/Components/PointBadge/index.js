@@ -10,6 +10,7 @@ const PointBadge = ({ horizontal, data }) => {
     vertical,
     inline,
     badge,
+    font,
     devSec,
     supportSub,
     contentLeft,
@@ -29,11 +30,11 @@ const PointBadge = ({ horizontal, data }) => {
         </section>
       </Grid>
       <Grid className={horizontal ? contentLeft : contentRight}>
-        <Typography variant="subtitle1" component="subtitle1" color="textPrimary" gutterBottom>
+        <Typography variant="subtitle1" color="textPrimary" gutterBottom className={font}>
           {title}
         </Typography>
         <Typography
-          style={{ cursor: "pointer" }}
+          style={{ cursor: "pointer",fontWeight:"normal" }}
           variant="subtitle2"
           color="textSecondary"
         >
