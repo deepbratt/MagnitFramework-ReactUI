@@ -1,6 +1,8 @@
 import { makeStyles } from "@material-ui/core";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
+import { Colors } from "../../Theme/color.constants";
 const breakpoints = createBreakpoints({});
+const {Mirage}=Colors;
 const ReviewSliderStyles = makeStyles((theme) => ({
   grid: {
     margin: "80px 0",
@@ -10,12 +12,13 @@ const ReviewSliderStyles = makeStyles((theme) => ({
   },
   root: {
     borderRadius: "10px",
-    padding: "20px",
-    margin: "20px",
+    padding: "20px 30px",
+    margin: "20px ",
     [theme.breakpoints.down("md")]: {
       padding: "10px",
       margin: "5px",
     },
+  
   },
   avatar: {
     display: "flex",
@@ -32,20 +35,17 @@ const ReviewSliderStyles = makeStyles((theme) => ({
     },
   },
   content: {
-    "& > p": {
-      [theme.breakpoints.down("md")]: {
-        fontSize: "16px",
-      },
-      [theme.breakpoints.down("sm")]: {
-        fontSize: "10px",
-      },
+    "& > body1": {
+      color:Mirage,
+      fontWeight:"normal",
     },
   },
 
   nextBtn:{
     position: "absolute",
-    top: "31.7em",
-    right:"16.3em",
+    top:"60%",
+    right:"50%",
+    transform: "translate(27rem, 0rem)",
     bottom: "auto",
     padding: ".4em",
     zIndex: 1,
@@ -65,7 +65,9 @@ const ReviewSliderStyles = makeStyles((theme) => ({
   },
   prevBtn:{
     position: "absolute",
-    inset:"31.7em 16.3em auto 13.5rem",
+    top:"60%",
+    left:"50%",
+    transform: "translate(-27rem, 0rem)",
     padding: ".4em",
     zIndex: 1,
     color:"white",
@@ -84,7 +86,15 @@ const ReviewSliderStyles = makeStyles((theme) => ({
          
   },
  
-  
+  carouselRoot:{
+    '& > .carousel':{
+      display:"flex",
+      flexDirection:"column-reverse"
+    },
+    '& > .carousel .control-dots':{
+      position:"relative"
+    },
+  },
 
 }));
 

@@ -4,7 +4,9 @@ import { Colors } from "../../Theme/color.constants";
 const { Harlequin } = Colors;
 const LayoutStyle = makeStyles((theme) => ({
   root: {
+    // REMOVED - SECTION PADDING
     padding: "60px 0",
+    position: "relative",
   },
   content: {
     position: "relative",
@@ -13,15 +15,15 @@ const LayoutStyle = makeStyles((theme) => ({
       position: "absolute",
       height: "146px",
     },
+    [theme.breakpoints.down("sm")]: {
+      margin: "0 2%",
+    },
   },
-  header: {
+  sectionHeader: {
     marginBottom: "60px",
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "1.75rem",
-    },
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "1.5rem",
-    },
+  },
+  subHeader: {
+    color: "grey",
   },
   underlinedStyles: {
     position: "relative",

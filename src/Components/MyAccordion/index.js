@@ -4,43 +4,72 @@ import Accordion from "@material-ui/core/Accordion";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import LayoutStyle from "./style";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import ExpandIcon from "../../assets/icons/expandIcon.png";
-import CloseIcon from "../../assets/icons/closeIcon.png";
 import { useState } from "react";
 import CustomButton from "../CustomButton";
+import Plus from "../../assets/icons/expandIcon.png";
+import Minus from "../../assets/icons/closeIcon.png";
+import Data from "../../Pages/ContactUs/questions";
 
-const MyAccordion = ({ questions }) => {
-  const { root, title, details } = LayoutStyle();
-
+const MyAccordion = () => {
   const [expanded, setExpanded] = useState(false);
+  const handleChange = (panel) => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
+  };
+  const { root } = LayoutStyle();
+  const accordionDataController = [
+    {
+      ariaControl: "panel1a-content",
+      ariaId: "panel1a-header",
+      summary: Data[0].summary,
+      detail: Data[0].detail,
+    },
+    {
+      ariaControl: "panel2a-content",
+      ariaId: "panel2a-header",
+      summary: Data[1].summary,
+      detail: Data[1].detail,
+    },
+    {
+      ariaControl: "panel3a-content",
+      ariaId: "panel3a-header",
+      summary: Data[2].summary,
+      detail: Data[2].detail,
+    },
+    {
+      ariaControl: "panel4a-content",
+      ariaId: "panel4a-header",
+      summary: Data[3].summary,
+      detail: Data[3].detail,
+    },
+  ];
+
   return (
     <div className={root}>
-      {questions
-        .filter((question, idx) => idx < 3)
-        .map((question, index) => (
-          <Accordion
-            onChange={() => setExpanded(expanded ? false : true)}
-            square
-            key={index}
+      {accordionDataController.map((item, index) => (
+        <Accordion
+          key={"accordion-" + index}
+          expanded={expanded === "accordion-" + index}
+          onChange={handleChange("accordion-" + index)}
+        >
+          <AccordionSummary
+            expandIcon={
+              expanded === "accordion-" + index ? (
+                <img src={Minus} alt="" />
+              ) : (
+                <img src={Plus} alt="" />
+              )
+            }
+            aria-controls={item.ariaControl}
+            id={item.ariaId}
           >
-            <AccordionSummary
-              expandIcon={
-                <img src={expanded === true ? CloseIcon : ExpandIcon} alt="" />
-              }
-            >
-              <Typography className={title} variant="h6">
-                {question.summary}
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography className={details} variant="body2">
-                {question.detail}
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-        ))}
-      <CustomButton text="See More" />
+            <Typography variant="h6">{item.summary}</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography variant="body2">{item.detail}</Typography>
+          </AccordionDetails>
+        </Accordion>
+      ))}
+      <CustomButton>See More</CustomButton>
     </div>
   );
 };

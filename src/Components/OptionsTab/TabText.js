@@ -1,28 +1,34 @@
-
-import React from 'react'
-import { Button, Grid,Typography } from "@material-ui/core";
+import React from "react";
+import { Grid, Typography } from "@material-ui/core";
 import vector from "../../assets/services/vector.png";
-import OptionTabStyles from "./style";
-import dataText from './data';
-export const TabText = () => {
-    const { detail,bulletText,textDiv } = OptionTabStyles();
+import OptionTabStyles  from "./style";
+import CustomButton from "../CustomButton";
+// import dataText, { FullTimeHiring, HiringOption } from './constant';
+export const TabText = ({data}) => {
+    const { title, desc,dataText } = data
+    const { detail,bulletText,textDiv,trialBtn, } = OptionTabStyles();
     return (
        <Grid style={{textAlign:"left"}}>
-            <Typography variant="h6" color="initial">Full Time Hiring</Typography>
-        <Typography className={detail} color="initial">
-        Under this hiring option, the Web Developer will become a part of your team on a full-time basis. He/She will be working as a virtual employee for you from the development center in India. The developer will be exclusively working for you. Here is how it works:</Typography>
+            <Typography variant="h2"  >{title}</Typography>
+        <Typography variant="button" className={detail} color="initial">
+        {desc}
+</Typography>
    
     {dataText.map(a=>{
       return(
         <Grid xs={12} className={textDiv}  key={a.id}>
-         <Grid  ><img src={vector} alt={vector} style={{marginRight:".4rem",width:"19px",height:"19px"}}/></Grid>
+         <Grid  ><img src={vector} alt={vector} style={{marginRight:".4rem",width:"19px",height:"19px",}}/></Grid>
          <Grid xs={11}>
-         <Typography className={bulletText} >{a.text}</Typography></Grid></Grid>);
+         <Typography variant="button" className={bulletText} >{a.text}</Typography></Grid></Grid>);
     })}
-    <Button varient="button" style={{background: "#2CD400",margin:".8rem 0rem .1rem 0rem", }}>
-        <Typography >Get a Risk Free Trial
-(Start your trial in 24 hours!)</Typography>
-    </Button>
-       </Grid>
+    <span style={{textTransform:"initial"}}>
+    <CustomButton color="primary" variant="contained" className={trialBtn} >
+        Get a Risk Free Trial
+(Start your trial in 24 hours!)
+    </CustomButton>
+    </span>
+   
+        </Grid>
     )
 }
+

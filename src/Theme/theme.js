@@ -1,7 +1,12 @@
 import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
-import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
-const breakpoints = createBreakpoints({});
+// import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
+import { Colors } from "./color.constants";
+import theme from "./GlobalFontSizes";
+// const breakpoints = createBreakpoints({});
 // Object of our themes
+const { Harlequin } = Colors;
+// const { H2 } = GlobalFontSize;
+
 export default function createTheme(options) {
   return createMuiTheme({
     ...options,
@@ -22,7 +27,7 @@ export default function createTheme(options) {
       MuiTab: {
         root: {
           "&$selected": {
-            backgroundColor: "#2cd400",
+            backgroundColor: Harlequin,
             color: "#fff",
           },
         },
@@ -35,6 +40,12 @@ export default function createTheme(options) {
         contained: {
           boxShadow: "0px 0px 0px rgba(0, 0, 0, 0);",
           borderRadius: "0px",
+          padding: "5px 40px",
+        },
+      },
+      MuiInputLabel: {
+        root: {
+          fontSize: 16,
         },
       },
       MuiInputBase: {
@@ -80,61 +91,19 @@ export default function createTheme(options) {
     },
     typography: {
       fontFamily: "'Poppins', 'Arial', sans-serif",
-      // htmlFontSize: "10px",
       fontSize: 14,
-      h1: {
-        fontSize: "3.4375rem",
-        fontWeight: 600,
-        lineHeight: "71.77px",
-      },
-      h2: {
-        fontSize: "2.1875rem",
-        fontWeight: 600,
-        lineHeight: "57.05px",
-      },
-      h3: {
-        fontSize: "1.5rem",
-        fontWeight: 600,
-        lineHeight: "39.12px",
-      },
-      h4: {
-        fontSize: "1.5rem",
-        fontWeight: 600,
-        lineHeight: "39.12px",
-      },
-      h5: {
-        fontSize: "1.25rem",
-        fontWeight: 500,
-        lineHeight: "30px",
-      },
-      h6: {
-        fontSize: "1.125rem",
-        fontWeight: 500,
-        lineHeight: "29.34px",
-      },
-      subtitle1: {
-        fontSize: "1.5rem",
-        fontWeight: 300,
-        lineHeight: "43.2px",
-      },
-      button: {
-        fontSize: "1.25rem",
-        textTransform: "none",
-      },
-      caption: {
-        fontWeight: 400,
-        fontSize: "1rem",
-      },
-      body1: {
-        fontWeight: 400,
-        size: "1.125rem",
-        lineHeight: "29.34px",
-      },
-      body2: {
-        fontWeight: 300,
-        size: "1rem",
-        lineHeight: "29.36px",
-      },
+      h1: theme.typography.h1,
+      h2: theme.typography.h2,
+      h3: theme.typography.h3,
+      h4: theme.typography.h4,
+      h5: theme.typography.h5,
+      h6: theme.typography.h6,
+      subtitle1: theme.typography.subtitle1,
+      subtitle2: theme.typography.subtitle2,
+      button: theme.typography.button,
+      caption: theme.typography.caption,
+      body1: theme.typography.body1,
+      body2: theme.typography.body2,
     },
     shape: {
       borderRadius: "5px",

@@ -1,77 +1,100 @@
 import React from "react";
-import { useStyles, heading } from "./sliderStyles";
-import { Typography, ListItem, Button, Hidden,Paper} from "@material-ui/core";
+import { useStyles } from "./sliderStyles";
+import {
+  Typography,
+  ListItem,
+  Hidden,
+  Grid,
+  List,
+} from "@material-ui/core";
 import CheckIcon from "@material-ui/icons/Check";
 import { MuiThemeProvider } from "@material-ui/core/styles";
-import { hero,Vector } from "../../Components/Hero/Images";
 import Breakpoints from "../../Theme/theme.breakpoints";
 import { Colors } from "../../Theme/color.constants";
+import CustomImage from "../CustomImage";
+import CustomButton from "../CustomButton";
+import theme from "../../Theme/GlobalFontSizes";
+import {NavLink} from "react-router-dom"
 
-const Slider = ({value, headingOne,headingTwo,headingThree,text,data,color}) => {
-  
-const {Harlequin ,whiteColor} = Colors;
+const Slider = ({
+  value,
+  headingOne,
+  headingTwo,
+  headingThree,
+  text,
+  data,
+  Img
+}) => {
+  const { Harlequin, democrat, vividCerlean, atomsphere, carmine, peaFowl, whiteColor } =
+    Colors;
   const classes = useStyles();
-  const {
-    headingSec,
-    listSec,
-    list,
-    tick,
-    tickSub,
-    sec,
-    vector,
-    spiral,
-    root
-  } = classes;
+  const { tick, tickSub, sec, vector, gridImage, gridText, listItem } =
+    classes;
   return (
-    <div className={sec}>
-       <Paper
-            style={{
-              background: `linear-gradient(${color} 5%, ${whiteColor} 95% `,
-            }}
-            className={root}
-            elevation={0}
-          >
-     <section className={headingSec}>
-        <MuiThemeProvider theme={heading}>
-          <Typography variant="h1" color="inherit">
+    <MuiThemeProvider theme={theme}>
+      <Grid
+        container
+        className={sec}
+        direction="row"
+        // justify="center"
+        // alignItems="center"
+        style={{
+          background: `linear-gradient(to right,${democrat} 0%,${vividCerlean} 15%, ${atomsphere} 39%, ${carmine} 69%,${peaFowl} 99%)`,
+        }}
+      >
+        <Grid item xs={12} sm={12} md={7} lg={7} className={gridText}>
+          <Typography variant="h1">
             {headingOne} <br />
-           {headingTwo} <br/>
-           {headingThree} <br/>
+            {headingTwo} <br />
+            {headingThree} <br />
           </Typography>
-        </MuiThemeProvider>
-        <MuiThemeProvider theme={heading}>
-          <section className={listSec}>
-            <ListItem className={list}>
-              <section>
-                {data.map((text, index) => (
-                  <Typography key={index} variant="h5" color="inherit">
-                    <CheckIcon className={value === "LIGHT" ? tick : tickSub} />
-                    {text}
-                  </Typography>
-                ))}
-              </section>
-            </ListItem>
-          </section>
-     
-        <section>
-          <Button
-            style={{ textTransform: "none", marginLeft: "10px", backgroundColor: Harlequin }}
+          {/* <section className={listSec}> */}
+          <List>
+            {data.map((text, index) => (
+              <ListItem style={{paddingLeft: "0px"}} key={'slider-listitem-'+index} className={listItem}>
+                <Typography key={index} variant="h4">
+                  <CheckIcon className={value === "LIGHT" ? tick : tickSub} />
+                  {text}
+                </Typography>
+              </ListItem>
+            ))}
+          </List>
+          {/* </section> */}
+
+          <CustomButton
+            style={{
+              // textTransform: "none",
+              backgroundColor: Harlequin,
+              // borderRadius:"5px"
+            }}
             variant="contained"
             size={Breakpoints()}
-            color="secondary"
           >
-            {text}
-          </Button>
-        </section>
-        </MuiThemeProvider>
-      </section>
-      
-      <img  alt="sliderImg" src={hero} className={vector} />
+           <NavLink  style={{
+              color: whiteColor,
+              textDecoration: "none"
+            }} to="/request-a-quote">
+           {text}
+             </NavLink> 
+          </CustomButton>
+        </Grid>
         <Hidden smDown>
-        <img  alt="sliderImg" src={Vector} className={spiral}  />
+          <Grid
+            item
+            xs={12}
+            md={5}
+            lg={5}
+            className={gridImage}
+            // justify="flex-start"
+          >
+            <CustomImage alt="sliderImg" height="400px" src={Img} className={vector} />
+          </Grid>
         </Hidden>
-      </Paper>
-    </div>
+        {/* <Hidden smDown>
+        <Grid item xs={12} md={4} lg={1}></Grid>
+      </Hidden> */}
+      </Grid>
+    </MuiThemeProvider>
   );
 };
 

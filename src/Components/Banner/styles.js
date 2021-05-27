@@ -1,32 +1,34 @@
 import { makeStyles } from "@material-ui/core";
-
+import { Colors } from "../../Theme/color.constants";
+const { Harlequin } = Colors;
 const BannerStyles = makeStyles((theme) => ({
   root: {
-    marginTop: "0",
+    position: "relative",
+    padding: "2rem",
     backgroundColor: "transparent",
-    
-    background: " linear-gradient(-181.96deg , #2CD400 -98.18%, rgba(255, 255, 255, 0) 85.96%)",
-backgroundBlendMode: "multiply"
+    background: `linear-gradient(-181.96deg , ${Harlequin} -98.18%, rgba(255, 255, 255, 0) 85.96%)`,
+    backgroundBlendMode: "multiply",
   },
   imageWrapper: {
     position: "relative",
-    margin: "30px",
+    display: "flex",
+    justifyContent: "flex-end",
     "& > img": {
       width: "350px",
       [theme.breakpoints.down("sm")]: {
-        width: "250px"
+        display: "none",
       },
     },
   },
   patternPosition: {
     position: "absolute",
     right: "-8%",
-    top: "-8%",
+    top: "-80%",
     height: "700px",
     [theme.breakpoints.down("md")]: {
       height: "500px",
-      right: "0%",
-      top: "-5%",
+      right: "-29%",
+      top: "-45%",
     },
     [theme.breakpoints.down("sm")]: {
       height: "350px",
@@ -38,12 +40,9 @@ backgroundBlendMode: "multiply"
     display: "flex",
     flexDirection: "column",
     textAlign: "left",
-    margin: "50px",
-    color: "black",
-    "& > h1": {
-      [theme.breakpoints.down("sm")]: {
-        fontSize: "1.5rem",
-      },
+    [theme.breakpoints.down("sm")]: {
+      alignItems: "center",
+      textAlign: "center",
     },
   },
 }));

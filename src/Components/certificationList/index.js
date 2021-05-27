@@ -17,13 +17,13 @@ const CertificationList = ({ root, data }) => {
     <Grid container className={root}>
       <Grid item xs={12} md={6}>
         <div className={text}>
-          <Typography variant="h3">{title}</Typography>
-          <Typography variant="subtitle1" component="p">
+          <Typography color="textPrimary" variant="h3" >{title}</Typography>
+          <Typography variant="subtitle2" component="p">
             {content}
           </Typography>
         </div>
       </Grid>
-      <Grid xs={12} md={6} className={imageWrapper}>
+      <Grid item xs={12} md={6} className={imageWrapper}>
         <Lottie options={defaultOptions} />
       </Grid>
     </Grid>

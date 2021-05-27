@@ -6,10 +6,10 @@ import dating from "../solutions/dating.png";
 import barbell from "../solutions/barbell.png";
 import delivery from "../solutions/food.png";
 import jobPortal from "../solutions/portal.png";
-import Appicon from "../services/app.svg";
-import Profileicon from "../services/profile.svg";
-import Webicon from "../services/web.svg";
-import Digitalicon from "../services/digital.svg";
+import Appicon from "../icons/App.png";
+import Profileicon from "../icons/Dev.png";
+import Webicon from "../icons/Web.png";
+import Digitalicon from "../icons/Digital.png";
 
 import app from "../PartnerWithUsImg/house.png";
 import reliable from "../PartnerWithUsImg/handshake.png";
@@ -52,6 +52,39 @@ import FlexibleBilling from "../icons/flexibleBilling.png";
 import AlwaysOnTime from "../icons/alwaysOnTime.png";
 import Transparency from "../icons/transparency.png";
 import Consultation from "../icons/consultation.png";
+
+// Contact Us Page Icon
+import experienceIcon from "../ContactUs/experience.png";
+import teamIcon from "../ContactUs/team.png";
+import customerIcon from "../ContactUs/customer.png";
+import servedIcon from "../ContactUs/served.png";
+import projectsIcon from "../ContactUs/projects.png";
+import certificationIcon from "../ContactUs/certification.png";
+import locationIcon from "../ContactUs/locationIcon.png";
+import phoneIcon from "../ContactUs/phoneIcon.png";
+
+// Career Page Icon
+// App Solutions Icons
+import registration from "../solutions/registration.png";
+import tutorial from "../solutions/tutorial.png";
+import browsing from "../solutions/browsing.png";
+import woman from "../solutions/woman.png";
+import video from "../solutions/video.png";
+import counter from "../solutions/step.png";
+import calculator from "../solutions/calculator.png";
+import calories from "../solutions/calories.png";
+
+// Career Page Icon
+import timing from "../career/time.png";
+import geo from "../career/geography.png";
+import grow from "../career/grow.png";
+import health from "../career/health.png";
+import map from "../icons/mapIcon.png";
+export const Timing = timing;
+export const Geo = geo;
+export const Grow = grow;
+export const Health = health;
+export const mapIcon = map;
 
 // Services section icons
 export const App = Appicon;
@@ -110,3 +143,23 @@ export const FlexibleBillingIcon = FlexibleBilling;
 export const AlwaysOnTimeIcon = AlwaysOnTime;
 export const TransparencyIcon = Transparency;
 export const ConsultationIcon = Consultation;
+
+// Contact Us Page Icons
+export const ExperienceIcon = experienceIcon;
+export const TeamIcon = teamIcon;
+export const CustomerIcon = customerIcon;
+export const ServedIcon = servedIcon;
+export const ProjectIcon = projectsIcon;
+export const CertificationIcon = certificationIcon;
+export const LocationIcon = locationIcon;
+export const PhoneIcon = phoneIcon;
+
+// App Solutions Icons
+export const registrationIcon = registration;
+export const tutorialIcon = tutorial;
+export const browsingIcon = browsing;
+export const womanIcon = woman;
+export const videoIcon = video;
+export const counterIcon = counter;
+export const calculatorIcon = calculator;
+export const caloriesIcon = calories;

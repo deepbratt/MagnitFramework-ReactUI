@@ -1,33 +1,26 @@
 import { makeStyles } from "@material-ui/core/styles";
-
+import { Colors } from "../../Theme/color.constants";
+const {Mirage,darkSilver}= Colors
 const LayoutStyle = makeStyles((theme) => ({
   root: {
     margin: "0px",
-    "& > h6": {
-      [theme.breakpoints.down("md")]: {
-        fontSize: "0.75rem",
-      },
-    },
+    // "& > h6": {
+    //   [theme.breakpoints.down("md")]: {
+    //     fontSize: "0.625rem"
+    //   },
+    // },
   },
   title: {
     margin: "5px",
     textAlign: "left",
-    fontSize: "1rem",
-    [theme.breakpoints.down("md")]: {
-      fontSize: "0.75rem",
-    },
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "0.55rem",
-    },
+    color:Mirage,
   },
   details: {
-    [theme.breakpoints.down("md")]: {
-      fontSize: "0.75rem",
-    },
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "0.60rem",
-    },
+    color:darkSilver,
   },
+  customBtn:{
+    marginTop:"4rem"
+  }
 }));
 
 export default LayoutStyle;

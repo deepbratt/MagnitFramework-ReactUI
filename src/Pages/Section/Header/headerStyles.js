@@ -2,22 +2,16 @@ import { makeStyles } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import { Colors } from "../../../Theme/color.constants";
 
-const {
-  // transparentWildSand,
-  WildSand,
-  // mainSlide,
-  blackColor,
-  greyColor,
-  Ash
-} = Colors;
+const { WildSand, blackColor } =
+  Colors;
 
 export const THEME = createMuiTheme({
   overrides: {
     MuiButton: {
-      root:{
+      root: {
         borderRadius: "none",
         fontFamily: "Poppins",
-      }
+      },
     },
     MuiTypography: {
       h5: {
@@ -26,13 +20,10 @@ export const THEME = createMuiTheme({
     },
   },
   typography: {
-    fontSize: 15,
-    lineHeight: 1.5,
+    // lineHeight: 1.5,
     letterSpacing: 0.32,
     fontFamily: "Poppins",
-    h5: {
-      fontWeight: 600,
-    },
+
     button: {
       textTransform: "none",
     },
@@ -52,8 +43,10 @@ export const useStyles = makeStyles((theme) => ({
   //   borderBottom: `solid 1px ${transparentWildSand}`,
 
   // },
-  root:{
-    boxShadow: "none"
+  root: {
+    boxShadow: "none",
+    width: "100%",
+    backgroundColor: WildSand,
   },
   appbarsolid: {
     boxShadow: "none",
@@ -61,58 +54,53 @@ export const useStyles = makeStyles((theme) => ({
     width: "100%",
     fontSize: "16px",
     display: "flex",
- 
+    alignItems: "center",
     zIndex: 1,
-    justifyContent: "space-around",
+    justifyContent: "space-between",
     transition: "all .5s linear",
-    borderBottom: `solid 3px ${Ash}`
+    // borderBottom: `solid 3px ${Ash}`,
+    padding: "0 !important",
   },
   menuButton: {
-    marginRight: theme.spacing(2),
+    paddingRight: theme.spacing(2),
   },
   toolbar: {
-    fontSize: "16px",
     display: "flex",
-    justifyContent: "space-around",
-  },
-  toolbarSub: {
-    fontSize: "16px",
-    display: "flex",
-    justifyContent: "space-around",
+    // justifyContent: "space-around",
   },
   list: {
-    fontSize: "16px",
     display: "flex",
-    fontWeight: "600",
-    fontFamily: "Poppins', sans-serif",
     whiteSpace: "nowrap",
+    justifyContent: "center",
+    alignItems: "center",
+    color: blackColor,
   },
   listItem: {
+    marginRight: "20px",
     "&:hover": {
       color: blackColor,
       cursor: "pointer",
     },
+  
   },
 
   link: {
-    marginTop: "5px",
+    // marginTop: "5px",
     textDecoration: "none",
-    color: greyColor,
+    color: "black",
   },
   active: {
     color: blackColor,
   },
   logo: {
-    [theme.breakpoints.up("lg")]: {
-      width: "150px",
-      marginRight: "15px",
-      marginTop: "15px"
-    },
-    [theme.breakpoints.down("md")]: {
-      width: "110px",
-    },
-    [theme.breakpoints.down("xs")]: {
-      width: "100px",
-    },
+    width: "9rem",
+    paddingLeft: "24px",
+  },
+  menu: {
+    width: "300px",
+    display: "flex",
+    justifyContent: "center",
+    transition: "all .5s linear",
+    backgroundColor: WildSand,
   },
 }));

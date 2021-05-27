@@ -3,41 +3,42 @@ import { useStyles } from "./sliderStyles";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Slider from "./Slider";
-import { Colors } from "../../Theme/color.constants";
-import { Data, array } from "../../Utils/Constants/Language/en/SliderText";
-const { mainSlide, PalePrim, Chablis } = Colors;
-const { headingLineOne, headingLineTwo, headingLineLast, buttonText } = Data;
+import { Data, array, Img1,Img2,Img3} from "../../Utils/Constants/Language/en/SliderText";
+const { headingLineOne, headingLineTwo, headingLineFirstSlide, headingLineSecondSlide,headingLineThirdSlide, buttonText } = Data;
 const slideArr = [
   <Slider
+  headingOne={headingLineOne}
+  headingTwo={headingLineTwo}
+  headingThree={headingLineFirstSlide}
+  text={buttonText}
+  data={array}
+  Img={Img1}
+/>,
+  
+  <Slider
     headingOne={headingLineOne}
     headingTwo={headingLineTwo}
-    headingThree={headingLineLast}
+    headingThree={headingLineSecondSlide}
     text={buttonText}
     data={array}
-    color={mainSlide}
+    Img={Img2}
   />,
   <Slider
     headingOne={headingLineOne}
     headingTwo={headingLineTwo}
-    headingThree={headingLineLast}
+    headingThree={headingLineThirdSlide}
     text={buttonText}
     data={array}
-    color={PalePrim}
-  />,
-  <Slider
-    headingOne={headingLineOne}
-    headingTwo={headingLineTwo}
-    headingThree={headingLineLast}
-    text={buttonText}
-    data={array}
-    color={Chablis}
+    Img={Img3}
+ 
   />,
 ];
-const Container = ({ slides }) => {
+const Container = ( props) => {
   const classes = useStyles();
-
-  const { slide } = classes;
-
+  const { slide } = classes
+  const show = props.indicator
+  const slides = props.slides
+  console.log(show)
   return (
     <Carousel
       className={slide}
@@ -47,10 +48,11 @@ const Container = ({ slides }) => {
       showArrows={false}
       infiniteLoop={true}
       transitionTime={500}
+      showIndicators={show}
       showThumbs={false}
     >
       {slides.map((slide, i) => {
-        return <section key={`slide-${i}`}>{slide}</section>;
+        return <section key={i}>{slide}</section>;
       })}
     </Carousel>
   );

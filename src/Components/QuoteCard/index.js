@@ -7,6 +7,7 @@ import { Avatar } from "@material-ui/core";
 import StartQuote from "../../assets/images/cards/startQuote.png";
 import EndQuote from "../../assets/images/cards/EndingQuote.png";
 import CardStyle from "./style";
+import CustomImage from "../CustomImage";
 
 const QuoteCard = ({ cardData }) => {
   const { text, authName, authImg } = cardData;
@@ -18,22 +19,22 @@ const QuoteCard = ({ cardData }) => {
           <Avatar alt="Remy Sharp" src={authImg} className={large} />
         </div>
         <div>
-          <Typography variant="h6">By {authName}</Typography>
-          <Rating name="read-only" value={4} readOnly />
+          <Typography variant="h5">By {authName}</Typography>
+          <Rating name="read-only" value={5} readOnly />
         </div>
       </div>
 
       <CardActionArea>
         <CardContent className={content}>
-          <img className={startQuote} src={StartQuote} alt="Start Quote Icon" />
-          <img className={startQuote} src={StartQuote} alt="Start Quote Icon" />
+          <CustomImage className={startQuote} src={StartQuote} alt="Start Quote Icon" />
+          <CustomImage className={startQuote} src={StartQuote} alt="Start Quote Icon" />
           <Typography align="left" variant="body2" component="p" paragraph>
             {text}
           </Typography>
         </CardContent>
         <div style={{ display: "flex", justifyContent: "flex-end" }}>
-          <img className={endQuote} src={EndQuote} alt="End Quote Icon" />
-          <img className={endQuote} src={EndQuote} alt="End Quote Icon" />
+          <CustomImage className={endQuote} src={EndQuote} alt="End Quote Icon" />
+          <CustomImage className={endQuote} src={EndQuote} alt="End Quote Icon" />
         </div>
       </CardActionArea>
     </Card>

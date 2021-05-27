@@ -1,13 +1,13 @@
 import { makeStyles } from "@material-ui/core";
 import { Colors } from "../../Theme/color.constants";
-// import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
-// const breakpoints = createBreakpoints({});
-const { skyBlue } = Colors;
+const { skyBlue, whiteColor,Harlequin,chineseWhite, BlackSqueeze } = Colors;
+
 
 const OptionTabStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     display: "flex",
+    backgroundColor: BlackSqueeze,
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
     },
@@ -18,55 +18,73 @@ const OptionTabStyles = makeStyles((theme) => ({
     width: "35%",
     [theme.breakpoints.down("sm")]: {
       width: "100%",
-     },
-      "& .MuiTabs-flexContainerVertical":{
-        [theme.breakpoints.down("sm")]: {
-          width: "100%",
-          justifyContent: "space-around",
-          flexDirection:" row",},
-    
+      margin: "10px 5px 10px 0px"
     },
-    "& > .PrivateTabIndicator-colorSecondary-79, .PrivateTabIndicator-colorSecondary-81": {
-      width: "0px",
+    "& .MuiTabs-flexContainerVertical": {
+      [theme.breakpoints.down("sm")]: {
+        width: "100%",
+        justifyContent: "space-around",
+        flexDirection: " column",
+      },
     },
+    "& > .PrivateTabIndicator-colorSecondary-79, .PrivateTabIndicator-colorSecondary-81":
+      {
+        width: "0px",
+      },
   },
   tab: {
     margin: "10px",
-    border: "1px solid rgba(44, 212, 0, 1)",
-    color: "rgba(44, 212, 0, 1)",
-    fontSize: "14px",
+    border: `solid 1px ${Harlequin}`,
+    color: "black",
     borderRadius: "5px",
-    "& > .MuiTab-textColorInherit .Mui-selected": {
-      backgroundColor: "#2cd400",
-      color: "white",
+    textTransform: "initial",
+    "& > .MuiTab-textColorInherit": {
+      opacity:1
+    },
+    "& .MuiTab-textColorInherit .Mui-selected": {
+      backgroundColor: Harlequin,
+      color: whiteColor,
+    },
+    [theme.breakpoints.down("sm")]: {
+      maxWidth: "100%",
     },
   },
   tabPanel: {
     backgroundColor: skyBlue,
+    color: whiteColor,
     height: "100%",
     width: "100%",
     borderRadius: "5px",
-    textAlign: "left",
+    "& > *": {
+      color: whiteColor,
+    },
   },
-  detail:{
-    fontWeight: 400,
-      fontSize: ".8rem",
-      color: "#E1E1E1",
-      lineHeight: "1.5",
-      margin:".5rem 0rem 1rem 0rem",
-      letterSpacing:".4"
+  detail: {
+    color: chineseWhite,
+    lineHeight: 1.5,
+    margin: ".5rem 0rem 1rem 0rem",
+    letterSpacing: ".4",
+    fontWeight:"normal",
+    textTransform: "inherit",
+    
   },
-  bulletText:{
-    fontWeight: 400,
-    fontSize: ".7rem",
-    color: "#FFFFFF",
-    lineHeight: "17.34px"
+  bulletText: {
+    fontWeight: "normal",
+    textTransform: "inherit",
+    color: whiteColor,
+    lineHeight: "20.34px",
   },
   textDiv:{
     display:"flex",
-  flexDirection:"row"
-},
-
+    marginBottom:".4rem",
+    alignItems: "baseline"
+  }
+  ,
+  trialBtn:{
+    marginTop:".5rem",
+    textTransform: "initial",
+  }
 }));
+
 
 export default OptionTabStyles;

@@ -1,64 +1,36 @@
-import { makeStyles } from "@material-ui/core/styles";
-
-const LayoutStyle = makeStyles((theme) => ({
-  root: {
-    width: "100%",
-    boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
-  },
-  form: {
-    textAlign: "left",
-    margin: "30px",
-  },
-  wrap: {
-    height: "100%",
-    width: "100%",
-    position: "relative",
-  },
-  content: {
-    background:
-      "linear-gradient(223.7deg, rgba(11, 102, 35, 0.56) 0%, rgba(0, 104, 250, 0.56) 133.78%)",
-    color: "white",
-    minHeight: "100%",
-    "& > h2": {
-      textAlign: "center",
-      marginTop: "30px",
-      [theme.breakpoints.down("md")]: {
-        fontSize: "1.75rem",
-      },
-      [theme.breakpoints.down("sm")]: {
-        fontSize: "1.5rem",
-      },
-    },
-    "& > h5": {
-      textAlign: "center",
-      color: "white",
-      [theme.breakpoints.down("md")]: {
-        fontSize: "1.5rem",
-      },
-      [theme.breakpoints.down("sm")]: {
-        fontSize: "1rem",
-      },
+import { makeStyles } from "@material-ui/core";
+import { Colors } from "../../Theme/color.constants";
+const { Harlequin, cetaceanBlue } = Colors;
+export const ContactUsStyles = makeStyles((theme) => ({
+  root: {},
+  awardSection: {
+    margin: "50px 0",
+    background: `linear-gradient(180.04deg, ${Harlequin} -46.18%, rgba(255, 255, 255, 0) 99.96%), white`,
+    backgroundBlendMode: "multiply, normal",
+    borderTopLeftRadius: "5px",
+    borderBottomLeftRadius: "5px",
+    [theme.breakpoints.down("md")]: {
+      borderTopLeftRadius: "5px",
+      borderTopRightRadius: "5px",
+      borderBottomLeftRadius: "0px",
     },
   },
-  cover: {
-    position: "absolute",
-    objectFit: "cover",
-    minWidth: "100%",
-    minHeight: "100%",
-    maxWidth: "100%",
-    left: "0%",
-    top: "0%",
-    opacity: 0.2,
-    maxHeight: "100%",
+  imageContainer: {
+    backgroundColor: "white",
+    width: "100px",
+    height: "50px",
+    margin: "20px",
+    borderRadius: "5px",
+    boxShadow: "0px 4px 50px 5px rgba(0, 0, 0, 0.06)",
+    "& > img": {
+      maxHeight: "100px",
+      margin: "-25px 0",
+    },
   },
   label: {
-    fontSize: "1.125rem",
-    color: "white",
-    [theme.breakpoints.down("md")]: {
-      fontSize: "1rem",
-    },
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "0.75rem",
+    color: "black",
+    "& > *": {
+      color: "black",
     },
   },
   error: {
@@ -69,7 +41,32 @@ const LayoutStyle = makeStyles((theme) => ({
     justifyContent: "center",
     alignContent: "center",
     width: "100%",
+    marginTop: "7rem",
+  },
+  section: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "flex-Start",
+    "& > *": {
+      color: cetaceanBlue,
+      textAlign: "left",
+    },
+    "& > img": {
+      maxWidth: "36px",
+      margin: "10px 0",
+    },
+    [theme.breakpoints.down("sm")]: {
+      alignItems: "center",
+      alignContent: "center",
+    },
+  },
+  factCard: {
+    display: "flex",
+  },
+  location: {
+    marginTop: "50px",
+    justifyContent: "space-around",
   },
 }));
 
-export default LayoutStyle;
+export default ContactUsStyles;

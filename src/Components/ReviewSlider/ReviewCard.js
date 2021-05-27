@@ -9,7 +9,7 @@ const ReviewCard = ({ cardData }) => {
   const { text, authName, authImg } = cardData;
   const { grid, root, avatar, content, large } = ReviewSliderStyles();
   return (
-    <Grid className={grid} container justify="center" alignContent="center">
+    <Grid className={grid} container xs={12} justify="center" alignContent="center">
       <Grid item sm={12} lg={6}>
         <div className={avatar}>
           <div>
@@ -18,12 +18,12 @@ const ReviewCard = ({ cardData }) => {
         </div>
         <Card className={root}>
           <div>
-            <Typography variant="h6">By {authName}</Typography>
-            <Rating name="read-only" size="small" value={4} readOnly />
+            <Typography variant="subtitle1" style={{fontWeight:"600"}}>{authName}</Typography>
+            <Rating name="read-only" size="small" value={5} readOnly />
           </div>
 
           <CardContent className={content}>
-            <Typography align="left" variant="body2" component="p" paragraph>
+            <Typography align="left" variant="body1" component="body1" paragraph>
               {text}
             </Typography>
           </CardContent>

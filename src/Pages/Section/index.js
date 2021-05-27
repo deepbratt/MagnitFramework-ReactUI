@@ -1,42 +1,44 @@
 import { Grid } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import PropTypes from "prop-types";
+import SectionHeading from "./SectionHeading";
+import CustomImage from "../../Components/CustomImage";
 import LayoutStyle from "./style";
 
 const Section = ({
   title,
+  subTitle,
   children,
   backColor,
   startQuote,
   endQuote,
   highlightWords,
+  titleColor,
+  patterns,
 }) => {
   const {
     root,
     content,
-    header,
-    underlinedStyles,
+    subHeader,
+    sectionHeader,
     startQuote1,
     startQuote2,
     endQuote1,
     endQuote2,
   } = LayoutStyle();
 
-  const titleText = title.split("/");
-  const normalTitle = titleText[0];
-  const underlinedTitle = titleText[1];
-
   return (
     <div className={root} style={{ backgroundColor: backColor }}>
+      {patterns && patterns.map((pattern, index) => pattern.image)}
       <div className={content}>
         {startQuote && (
           <>
-            <img
+            <CustomImage
               className={startQuote1}
               src={startQuote}
               alt="Start Quote Icon"
             />
-            <img
+            <CustomImage
               className={startQuote2}
               src={startQuote}
               alt="Start Quote Icon"
@@ -45,17 +47,31 @@ const Section = ({
         )}
         {endQuote && (
           <>
-            <img className={endQuote1} src={endQuote} alt="End Quote Icon" />
-            <img className={endQuote2} src={endQuote} alt="End Quote Icon" />
+            <CustomImage
+              className={endQuote1}
+              src={endQuote}
+              alt="End Quote Icon"
+            />
+            <CustomImage
+              className={endQuote2}
+              src={endQuote}
+              alt="End Quote Icon"
+            />
           </>
         )}
-        {title && (
-          <Typography className={header} color="textPrimary" variant="h2">
-            {normalTitle}
-            <span className={underlinedStyles}>{underlinedTitle}</span>
-          </Typography>
-        )}
+        <div className={sectionHeader}>
+          {title && <SectionHeading header={title} color={titleColor} />}
 
+          {subTitle && (
+            <Typography
+              className={subHeader}
+              color="textSecondary"
+              variant="subtitle1"
+            >
+              {subTitle}
+            </Typography>
+          )}
+        </div>
         <Grid item xs={12}>
           {children}
         </Grid>
@@ -65,14 +81,17 @@ const Section = ({
 };
 
 Section.defaultProps = {
-  backColor: "#FFFFFF",
+  backColor: "transparent",
   title: "",
+  subTitle: "",
 };
 
 Section.propTypes = {
   title: PropTypes.string,
+  subTitle: PropTypes.string,
   children: PropTypes.node.isRequired,
   backColor: PropTypes.string,
+  patterns: PropTypes.array,
 };
 
 export default Section;

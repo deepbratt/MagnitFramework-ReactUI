@@ -3,6 +3,7 @@ import NewsletterStyle from "./style";
 import QuarterCircle from "../../assets/images/QuarterCircle.png";
 import HalfCircle from "../../assets/images/HalfCircle.png";
 import Triangle from "../../assets/images/Triangle.png";
+import CustomButton from "../CustomButton";
 
 const NewsletterForm = () => {
   const {
@@ -19,9 +20,15 @@ const NewsletterForm = () => {
       <Typography className={title} variant="h2" gutterBottom>
         Ready to Discuss Your Project?
       </Typography>
+<<<<<<< HEAD
       <img className={quarterCircle} src={QuarterCircle} alt="quarterCircle"/>
       <img className={halfCircle} src={HalfCircle} alt="HalfCircle"/>
       <img className={triangle} src={Triangle} alt="triangle"/>
+=======
+      <CustomImage className={quarterCircle} src={QuarterCircle} />
+      <CustomImage className={halfCircle} src={HalfCircle} />
+      <CustomImage className={triangle} src={Triangle} />
+>>>>>>> dev
       <form className={form}>
         <TextField
           variant="outlined"
@@ -31,14 +38,14 @@ const NewsletterForm = () => {
           id="input-email"
           placeholder="Your Email Address"
         />
-        <Button type="submit" color="primary" variant="contained">
+        <CustomButton type="submit" color="primary" variant="contained">
           <Typography
             style={{ textAlign: "center", color: "#fff" }}
             variant="button"
           >
             Get Started
           </Typography>
-        </Button>
+        </CustomButton>
       </form>
     </Card>
   );
