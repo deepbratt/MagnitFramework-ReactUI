@@ -23,7 +23,7 @@ const TrendingBlogs = ({ featureImage, cardData }) => {
         <Card>
           <CardContent className={content}>
             <div className={blogDetail}>
-              <div className="left">
+              {/* <div className="left">
                 <div>
                   <Avatar src={avatar} />
                 </div>
@@ -37,11 +37,11 @@ const TrendingBlogs = ({ featureImage, cardData }) => {
                     {authDesig}
                   </Typography>
                 </div>
-              </div>
+              </div> */}
               <div>
-                <Typography align="right" variant="h6" component="p">
+                {/* <Typography align="right" variant="h6" component="p">
                   {category}
-                </Typography>
+                </Typography> */}
                 <Typography
                   className={light}
                   align="right"

@@ -27,7 +27,7 @@ const LatestBlogCard = ({ cardData }) => {
         <img className={coverImg} src={coverImage} alt={imageText} />
         <CardContent className={latestBlogCardContent}>
           <div className={latestBlogDetail}>
-            <div style={{ marginRight: "8px" }}>
+            {/* <div style={{ marginRight: "8px" }}>
               <Typography className={authorName} variant="h6" component="h3">
                 {authName}
               </Typography>
@@ -44,7 +44,7 @@ const LatestBlogCard = ({ cardData }) => {
               <Typography variant="h6" component="h3">
                 {category}
               </Typography>
-            </div>
+            </div> */}
             <div>
               <Typography className={dateStyle} variant="h6" component="h3">
                 {date}
