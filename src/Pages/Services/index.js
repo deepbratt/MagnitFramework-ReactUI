@@ -43,7 +43,7 @@ const Services = () => {
           <Typography color="textPrimary" variant="h2" gutterBottom>
             {ServicesPageBanner.title}
           </Typography>
-          <Typography color="textPrimary" variant="h6" gutterBottom>
+          <Typography color="textPrimary" variant="h5" gutterBottom>
             {ServicesPageBanner.subtitle}
           </Typography>
           <span>

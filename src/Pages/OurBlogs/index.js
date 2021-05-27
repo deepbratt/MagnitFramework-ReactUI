@@ -80,7 +80,7 @@ const OurBlogs = () => {
         <Typography color="textPrimary" variant="h2" gutterBottom>
           {title}
         </Typography>
-        <Typography color="textPrimary" variant="h6" gutterBottom>
+        <Typography color="textPrimary" variant="h5" gutterBottom>
           {subtitle}
         </Typography>
       </Banner>
