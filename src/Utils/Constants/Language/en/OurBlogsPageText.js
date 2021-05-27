@@ -3,9 +3,10 @@ import UIUXInspiration from "../../../../assets/OurBlogs/latestBlogUIUXInspirati
 import TrendingBlogCard from "../../../../assets/OurBlogs/TrendingBlogCard.png";
 
 export const BannerText = {
-  title: "Our Blogs",
+  title: "Blogs",
+  subHeading: "This is where ideas are born!",
   subtitle:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "Brush up your knowledge about the IT industry, its trends, and how we guide you through it in detail.",
 };
 
 export const TrendingBlogsSectionText = {

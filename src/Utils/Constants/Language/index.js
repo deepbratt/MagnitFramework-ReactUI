@@ -127,28 +127,28 @@ export const caseStudies = {
   awardsTitle:"Awards & /Accreditations",
   faqs:[
     {
-      faqQuestion:"How we helped our client build a unique Social Application?",
-      faqAns:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      faqQuestion:"Chat app TaskWare",
+      faqAns:"Have questions about day-to-day tasks? Or do you need a chatbot for your website? TaskWare needed both so that’s the solution we provided. We created a chatbot that worked well with the customers coming to their website. Analysing the FAQs and the questions that their support team got, we created a database and embedded it in chat apps for Taskware."
     },
     {
-      faqQuestion:"From 30 to 30 Thousand Facebook Fans: How and What we did?",
-      faqAns:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      faqQuestion:"30k followers",
+      faqAns:"Baker’s delight in Alabama hired us to optimize their social media channels to bring and bring the global consumers to their virtual doorstep before walking into their shop. With regular post on facebook and Instagram of delicious cakes, cookies, customized deserts, we achieved 136% increase in non-branded traffic over 8 months, and over 30 thousand followers. Shareable recipes and testimonials kept Baker’s Delight up on Page 1 of search results for months"
     },
     {
-      faqQuestion:"How we drove our client to Page 1 on Google?",
-      faqAns:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      faqQuestion:"Rank 1",
+      faqAns:"BrandmyBrand is a cutting-edge tool manufacturer. They needed a digital edge above their competition. A complete online experience for the user to browse, customize and buy the tools was what we provided. We created a “Find what I need” section on their website that allowed user to add input data about the type of job, down to the material and setup, and instantly receive expertly recommended tool. Embedding the tool in their social media posts brought massive traction to their website. Updating advice columns and use of each tool brought BrandmyBrand to Rank #1."
     },
     {
-      faqQuestion:"A unique Web Application for people wanting to get married?",
-      faqAns:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      faqQuestion:"Best Deals marketplace (Delta Dental)",
+      faqAns:"Providing the best deals for dents. We created a special marketplace from the ground up for dentists and dental healthcare providers to list themselves up on the platform. Dental products—hygienic and surgical—were available in one place for customer to choose the right fit for themselves at the best price."
     },
     {
-      faqQuestion:"What we did to create a Web App that offers Best Deals??",
-      faqAns:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      faqQuestion:"Unique Social Media (Ohh App)",
+      faqAns:"We created a unique social Media platform for just college students. Students from a college studying certain subjects could talk to those studying same subjects at other colleges. Sharing notes, experiences and clearing doubts over chats and video calls enabled them to bond as well as help others in need. With user-friendly and adaptable experience, Ohh app soon became a hit for LA college fraternity."
     },
     {
-      faqQuestion:"We made a Chat Application that is Fast, Reliable and Affordable",
-      faqAns:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      faqQuestion:"Marriage App",
+      faqAns:"Tinder for people serious about their love lives. With fine tuned Elite Singles matchmaking algorithms to create a service perfect for people looking for a long-term partner. The app now creates on average 2000 new couples each month in more than 20 countries worldwide, earning the trust of over 13 million singles."
     },
   ],
   faqQuestions:"hello, world FaqNonInteractive FaqNonInteractive FaqNonInteractive FaqNonInteractive FaqNonInteractive",
