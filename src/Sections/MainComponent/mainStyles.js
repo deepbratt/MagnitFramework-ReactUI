@@ -54,9 +54,6 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   hero: {
-    [breakpoints.up("lg")]: {
-      width: "550px",
-    },
     [breakpoints.only("md")]: {
       width: "480px",
     },
