@@ -88,7 +88,7 @@ const ReviewSlider = ({ slides, showArrows, showDots, indicatorsPosition }) => {
           </button>
         )
       }
-      
+      autoPlay
       showStatus={false}
       interval={5500}
       showArrows={showArrows}
