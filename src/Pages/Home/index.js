@@ -161,7 +161,7 @@ const Home = (props) => {
         <PartnerContext />
       </Grid>
       <Grid item md={12} xs={12}>
-        <GlanceSection subtitleOne={Data.subtitleOne} subtitleTwo={Data.subtitleTwo} subtitleThree={Data.subtitleThree} backColor={BlueRibbon} />
+        <GlanceSection image1={Data.image1} image2={Data.image2} image3={Data.image3} subtitleOne={Data.subtitleOne} subtitleTwo={Data.subtitleTwo} subtitleThree={Data.subtitleThree}  backColor={BlueRibbon} />
       </Grid>
       {/* TRAINING AND CERTIFICATION */}
       <Section title={TrainingAndCertificationSectionTitle}>
@@ -216,10 +216,10 @@ const Home = (props) => {
           {AwardSectionImages &&
             AwardSectionImages.map((image, index) => (
               <CustomImage
-                key={index}
                 style={{ margin: "10px 40px", width: "130px", color: Mirage }}
                 src={image}
                 alt={`client${index}`}
+                key={`awards-accred-${index}`}
               />
             ))}
         </div>

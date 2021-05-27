@@ -1,10 +1,8 @@
 import React from "react";
 import { useStyles } from "./useStyles";
 import { Typography, Grid } from "@material-ui/core";
-import { MuiThemeProvider } from "@material-ui/core/styles";
 import { Colors } from "../../../Theme/color.constants";
 import CustomImage from "../../../Components/CustomImage";
-import { THEME } from "../../../ContainerStructure/Headings/headingStyles";
 const { Mirage } = Colors;
 const SecondarySection = (props) => {
   const data = props.data;

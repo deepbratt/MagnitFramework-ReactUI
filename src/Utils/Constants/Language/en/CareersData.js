@@ -108,4 +108,3 @@ export const DataArray = [
   },
 ]
 
-export default { Array,DataArray,heading };

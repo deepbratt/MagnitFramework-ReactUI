@@ -22,7 +22,7 @@ const AboutUs = () => {
     <>
       <Grid container>
         <Grid item lg={12} md={12} xs={12}>
-          <Main hero={heroImgsrc} card={true} breadcrumbData={breadcrumbs} />
+          <Main width="650px" hero={heroImgsrc} card={true} breadcrumbData={breadcrumbs} />
         </Grid>
         <Grid item lg={12} md={12} xs={12}>
           <MissionContext />

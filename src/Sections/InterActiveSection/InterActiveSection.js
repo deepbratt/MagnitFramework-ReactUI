@@ -11,30 +11,28 @@ import MobileChat from "../../assets/CaseStudies/mobile-chat.svg";
 import MobileApp from "../../assets/CaseStudies/mobile-app.svg";
 import LoveBirds from "../../assets/CaseStudies/love-birds.svg";
 import CircleImageText from "../../Components/CircleImageText";
-import { caseStudies } from "../../Utils/Constants/Language";
 
 const InterActiveSection = (props) => {
   const classes = useStyles();
-  const text = caseStudies.demoText;
   const history = useHistory();
   let dataText = props.textData;
   const iconsArray = [
     { icon: <Touch style={{ width: "40px" }} />, nameClass: classes.leftTop },
     { icon: <People style={{ width: "40px" }} />, nameClass: classes.leftMid },
     {
-      icon: <img src={Google} style={{ width: "40px" }} />,
+      icon: <img src={Google} style={{ width: "40px" }} alt="google"/>,
       nameClass: classes.leftBottom,
     },
     {
-      icon: <img src={MobileChat} style={{ width: "40px" }} />,
+      icon: <img src={MobileChat} style={{ width: "40px" }}  alt="mobilechat"/>,
       nameClass: classes.rightTop,
     },
     {
-      icon: <img src={MobileApp} style={{ width: "40px" }} />,
+      icon: <img src={MobileApp} style={{ width: "40px" }} alt="mobileApp"/>,
       nameClass: classes.rightMid,
     },
     {
-      icon: <img src={LoveBirds} style={{ width: "40px" }} />,
+      icon: <img src={LoveBirds} style={{ width: "40px" }} alt="loveBirds"/>,
       nameClass: classes.rightBottom,
     },
   ];

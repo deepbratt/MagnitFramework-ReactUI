@@ -6,7 +6,6 @@ import {
   LifeTimeSupportIcon,
   DataSecuityIcon,
   FlexibleBillingIcon,
-  AlwaysOnTimeIcon,
   TransparencyIcon,
   ConsultationIcon,
 } from "../../assets/icons/icon.constants";
@@ -20,7 +19,6 @@ const {
   yellowOrange,
   heliotrope,
   blueGreen,
-  skyblue,
   pastelOrange,
   hanBlue,
 } = Colors;

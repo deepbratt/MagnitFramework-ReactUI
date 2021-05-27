@@ -80,6 +80,28 @@ import geo from "../career/geography.png";
 import grow from "../career/grow.png";
 import health from "../career/health.png";
 import map from "../icons/mapIcon.png";
+
+// Digital Media Icon
+import seo from "../DigitalMarketing/seo.png";
+import analytics from "../DigitalMarketing/analytics.png";
+import ppc from "../DigitalMarketing/ppc.png";
+import socialMedia from "../DigitalMarketing/socialMedia.png";
+import contentMedia from "../DigitalMarketing/contentMedia.png";
+import reputation from "../DigitalMarketing/reputation.png";
+
+
+import management from "../DigitalMarketing/management.png";
+import lang from "../DigitalMarketing/lang.png";
+import analysis from "../DigitalMarketing/analysis.png";
+import latestTool from "../DigitalMarketing/latestTool.png";
+import report from "../DigitalMarketing/report.png";
+import QA from "../DigitalMarketing/QA.png";
+import CRM from "../DigitalMarketing/CRM.png";
+import review from "../DigitalMarketing/review.png";
+import reassessment from "../DigitalMarketing/reassessment.png";
+import dataDriven from "../DigitalMarketing/dataDriven.png";
+
+// Career Page Icon
 export const Timing = timing;
 export const Geo = geo;
 export const Grow = grow;
@@ -163,3 +185,24 @@ export const videoIcon = video;
 export const counterIcon = counter;
 export const calculatorIcon = calculator;
 export const caloriesIcon = calories;
+// Digital Marketing Icons
+export const SeoIcon = seo;
+export const AnalyticsIcon = analytics;
+export const PpcIcon = ppc;
+export const SocialMediaIcon = socialMedia;
+export const contentMediaIcon = contentMedia;
+export const ReputatuionIcon = reputation;
+
+export const ManagementIcon = management;
+export const LangIcon = lang;
+export const AnalysisIcon = analysis;
+export const ReAssessmentIcon = reassessment;
+export const ReportIcon = report;
+export const ReviewIcon = review;
+export const dataDrivenIcon = dataDriven;
+export const LatestToolIcon = latestTool;
+export const QAIcon = QA;
+export const CRMIcon = CRM;
+
+
+

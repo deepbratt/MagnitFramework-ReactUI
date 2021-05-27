@@ -24,7 +24,7 @@ CustomButton.defaultProps = {
   size: "medium",
   variant: "contained",
   radius: "5px",
-  handleClick: () => console.log("buttonClicked"),
+  onClick: () => console.log("buttonClicked"),
 };
 
 export default CustomButton;

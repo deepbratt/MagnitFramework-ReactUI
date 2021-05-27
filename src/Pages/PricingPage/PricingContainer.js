@@ -1,8 +1,6 @@
 import React from "react";
 import { Grid, Typography } from "@material-ui/core";
 import useStyles from "./useStyles";
-import theme from "../../Theme/GlobalFontSizes";
-import { MuiThemeProvider } from "@material-ui/core/styles";
 import Pricing from "../../Sections/PricingPageSection/PricingContext";
 import {
   PricingArray,

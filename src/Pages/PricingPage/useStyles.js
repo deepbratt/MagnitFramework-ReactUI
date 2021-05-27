@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core";
 import { Colors } from "../../Theme/color.constants";
 const { mercury , DoveGray} = Colors;
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     wrapper: {
         backgroundColor: mercury,
         padding: "6% 0"

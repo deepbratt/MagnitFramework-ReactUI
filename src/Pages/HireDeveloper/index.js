@@ -3,7 +3,7 @@ import Section from "../Section";
 import { Link } from 'react-router-dom'
 import { Typography } from "@material-ui/core";
 import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
-import { OurExpertEngineers, webDevServicesData as servicesData, } from "../WebServices/webDevServicesData";
+import {  webDevServicesData as servicesData, } from "../WebServices/webDevServicesData";
 import { whyHireData as hireUsData } from "../WebServices/whyHireData";
 import { Colors } from "../../Theme/color.constants";
 import Banner from "../../Components/Banner";
@@ -42,7 +42,7 @@ const HireDeveloper = () => {
     },
   ];
 
-  const { textColor, bannerBtn, leftPattern, rightPattern } =
+  const { textColor, leftPattern, rightPattern } =
     ServicesSectionStyles();
   return (
     <CommentSection>
@@ -94,7 +94,7 @@ const HireDeveloper = () => {
       <Section title={WhyHireSectionTitle} highlightWords={3}>
         <PointList data={hireUsData} horizontal={true} lgBreakpoint={6}/>
       </Section>
-        <GlanceSection subtitleOne={Data.subtitleOne} subtitleTwo={Data.subtitleTwo} subtitleThree={Data.subtitleThree}  backColor={skyBlue} />
+      <GlanceSection backColor={skyBlue} />
       <Section title={DoYouWant}>
     <span >
     

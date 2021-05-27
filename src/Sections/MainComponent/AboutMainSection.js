@@ -21,7 +21,7 @@ const AboutMainSection = (props) => {
               <BreadCrumb links={props.breadcrumbData} />
             </div>
             <CardContent className={cardSec}>
-              <CustomImage className={hero} alt="hero" src={props.hero} />
+              <CustomImage width={props.width} className={hero} alt="hero" src={props.hero} />
             </CardContent>
           </Card>
           {props.card === true ? (

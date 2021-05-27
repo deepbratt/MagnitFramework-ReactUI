@@ -1,9 +1,5 @@
 import { makeStyles } from "@material-ui/core";
 import { Colors } from "../../Theme/color.constants";
-import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
-import { fontSizes } from "../../Utils/Constants/Font/index";
-const { h5, p } = fontSizes;
-const breakpoints = createBreakpoints({});
 const { skyBlue, whiteColor,Harlequin,chineseWhite, BlackSqueeze } = Colors;
 
 

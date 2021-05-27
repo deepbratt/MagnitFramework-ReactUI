@@ -2,7 +2,7 @@ import PointList from "../../Components/PointBadge/PointList";
 import Section from "../Section";
 import { Link } from "react-router-dom";
 import { Typography } from "@material-ui/core";
-import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
+import GlanceSection from "./OurWork";
 import {  hireUsData } from "./whyWorkwithUs";
 import { Colors } from "../../Theme/color.constants";
 import Banner from "../../Components/Banner";
@@ -90,7 +90,7 @@ const DigitalMarketing = () => {
       <Section title={WhyHireSectionTitle} highlightWords={3}>
         <PointList data={hireUsData} horizontal={true} lgBreakpoint={6} />
       </Section>
-        <GlanceSection subtitleOne={Data.subtitleOne} subtitleTwo={Data.subtitleTwo} subtitleThree={Data.subtitleThree}  backColor={skyBlue} />
+        <GlanceSection image1={Data.image1} image2={Data.image2} image3={Data.image3} subtitleOne={Data.subtitleOne} subtitleTwo={Data.subtitleTwo} subtitleThree={Data.subtitleThree}  backColor={skyBlue} />
       <Section title={DoYouWant}>
         <span>
           <CustomButton
