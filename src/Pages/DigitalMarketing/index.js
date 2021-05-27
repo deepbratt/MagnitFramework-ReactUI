@@ -3,12 +3,6 @@ import Section from "../Section";
 import { Link } from "react-router-dom";
 import { Typography } from "@material-ui/core";
 import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
-import {
-  OurExpertEngineers,
-  webDevServicesData as servicesData,
-  WeHireTheMost,
-  WeProvideExceptional,
-} from "../WebServices/webDevServicesData";
 import {  hireUsData } from "./whyWorkwithUs";
 import { Colors } from "../../Theme/color.constants";
 import Banner from "../../Components/Banner";
@@ -20,6 +14,7 @@ import {
   ServicesSectionTitle,
   weCutTo,
   WhyHireSectionTitle,
+  Data
 } from "./constants";
 import StarFishPattern from "../../assets/patterns/starfishBlue.png";
 import ServicesSectionStyles from "../WebServices/style";
@@ -31,6 +26,8 @@ import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
 import Heading5 from "../../ContainerStructure/Headings/Heading5";
 import Breakpoints from "../../Theme/theme.breakpoints";
+
+
 const DigitalMarketing = () => {
   const { skyBlue, linearBackground } = Colors;
 
@@ -93,9 +90,7 @@ const DigitalMarketing = () => {
       <Section title={WhyHireSectionTitle} highlightWords={3}>
         <PointList data={hireUsData} horizontal={true} lgBreakpoint={6} />
       </Section>
-      <Section backColor={skyBlue}>
-        <GlanceSection backColor={skyBlue} />
-      </Section>
+        <GlanceSection subtitleOne={Data.subtitleOne} subtitleTwo={Data.subtitleTwo} subtitleThree={Data.subtitleThree}  backColor={skyBlue} />
       <Section title={DoYouWant}>
         <span>
           <CustomButton

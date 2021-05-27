@@ -15,10 +15,10 @@ import CustomButton from "../../../Components/CustomButton";
 import CustomImage from "../../../Components/CustomImage";
 import {THEME} from '../../../ContainerStructure/Headings/headingStyles'
 import Paragraph from "../../../ContainerStructure/Headings/Paragraphs/Paragraph"
-const Container = ({backColor}) => {
+const Container = ({subtitleOne,subtitleTwo,subtitleThree,backColor}) => {
   const classes = useStyles();
   const {image1,image2,image3} = Images
-  const {title,subtitleOne,subtitleTwo,subtitleThree,buttonText,paragraphOne,paragraphTwo,paragraphThree} = Data
+  const {title,buttonText} = Data
   const {whiteColor} = Colors
   const {
     root,

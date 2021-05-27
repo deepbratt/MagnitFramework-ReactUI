@@ -38,7 +38,7 @@ export const webDevServicesData = [
     length: 50,
     color: Orchid,
     icon: WebAppIcon,
-    title: "Custom Web App Development",
+    title: "Custom App Development",
     desc:
       "Create a dynamic online presence for your business with personalized robust, agile and user-centric web applications that are as easy to integrate as they are to use.",
   },

@@ -139,19 +139,7 @@ export const BenifitsSection = {
       title: "You own the Code",
       desc: " After the completion of the project, the source code would be handed over to you.",
     },
-    {
-      length: 57,
-      color: yellowOrange,
-      icon: Support,
-      title: "Lifetime",
-      desc: " We do not limit ourselves to just the project. Our team goes beyond the call to fix bugs and issues in the code to ensure customer satisfaction.",
-    },
-    {
-      length: 57,
-      color: DodgerBlue,
-      icon: Data,
-      title: "Data Security",
-      desc: "Our client’s security is our top priority. Any confidential information shared with us is protected with the latest security measures, tools and regulations.",
-    },
+
+
   ],
 };

@@ -38,8 +38,10 @@ import QuoteCard from "../../Components/QuoteCard";
 import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
 import ReviewSlider from "../../Components/ReviewSlider";
-import { ServicesData } from "../../Utils/Constants/Language/en/ServicesText";
-
+import {
+  ServicesData,
+} from "../../Utils/Constants/Language/en/ServicesText";
+import {Data} from "../../Utils/Constants/Language/en/GlanceAtWorkData"
 export const AwardSectionImages = [Image1, Image2, Image3, Image4, Image5];
 
 const Home = (props) => {
@@ -159,7 +161,7 @@ const Home = (props) => {
         <PartnerContext />
       </Grid>
       <Grid item md={12} xs={12}>
-        <GlanceSection backColor={BlueRibbon} />
+        <GlanceSection subtitleOne={Data.subtitleOne} subtitleTwo={Data.subtitleTwo} subtitleThree={Data.subtitleThree} backColor={BlueRibbon} />
       </Grid>
       {/* TRAINING AND CERTIFICATION */}
       <Section title={TrainingAndCertificationSectionTitle}>

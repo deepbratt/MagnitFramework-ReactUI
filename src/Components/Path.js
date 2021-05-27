@@ -11,7 +11,6 @@ import OurBlogs from "../Pages/OurBlogs";
 import Quote from "../Pages/ContactUs/index";
 import HireDeveloper from "../Pages/HireDeveloper";
 import DigitalMarketing from "../Pages/DigitalMarketing";
-import Pricing from "../Pages/PricingPage/PricingContainer";
 import CaseStudies from "../Pages/CaseStudies";
 import Error from '../Pages/Error/Index'
 
@@ -114,16 +113,11 @@ const pageRoutes = {
     sidebarName: "Digital Marketing",
     component: DigitalMarketing,
   },
-  [pathIds.pricing]: {
-    path: pathRouting.pricing,
-    sidebarName: "Pricing",
-    component: Pricing,
-  },
-  [pathIds.solutions]: {
-    path: pathRouting.solutions,
-    sidebarName: "Solutions",
-    component: Solutions,
-  },
+  // [pathIds.solutions]: {
+  //   path: pathRouting.solutions,
+  //   sidebarName: "Solutions",
+  //   component: Solutions,
+  // },
   // [pathIds.solutions]: {
   //   path: pathRouting.blogs,
   //   sidebarName: "Our Blogs",

@@ -37,7 +37,7 @@ const TrendingBlogs = ({ featureImage, cardData }) => {
                     {authDesig}
                   </Typography>
                 </div>
-              </div> */}
+              </div>  */}
               <div>
                 {/* <Typography align="right" variant="h6" component="p">
                   {category}

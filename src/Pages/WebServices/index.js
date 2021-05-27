@@ -28,6 +28,7 @@ import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
 import Heading5 from "../../ContainerStructure/Headings/Heading5";
 import Breakpoints from "../../Theme/theme.breakpoints";
+import {Data} from "../../Utils/Constants/Language/en/GlanceAtWorkData"
 const Services = () => {
   const { skyBlue, linearBackground } = Colors;
 
@@ -80,7 +81,7 @@ const Services = () => {
           srcset=""
         />
         <Section title={ServicesSectionTitle} highlightWords={1}>
-          <section style={{ marginBottom: "10px" }}>
+          <section style={{ marginBottom: "10px",marginTop:'-40px' }}>
             <Heading5 subTitle={OurExpertEngineers} />
           </section>
           <PointList data={servicesData} horizontal={false} />
@@ -89,9 +90,8 @@ const Services = () => {
       <Section title={WhyHireSectionTitle} highlightWords={3}>
         <PointList data={hireUsData} horizontal={true} lgBreakpoint={6} />
       </Section>
-      <Section backColor={skyBlue}>
-        <GlanceSection backColor={skyBlue} />
-      </Section>
+     
+        <GlanceSection subtitleOne={Data.subtitleOne} subtitleTwo={Data.subtitleTwo} subtitleThree={Data.subtitleThree} backColor={skyBlue} />
       <Section title={DoYouWant}>
         <span>
           <CustomButton
