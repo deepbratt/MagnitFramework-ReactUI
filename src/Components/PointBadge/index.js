@@ -5,7 +5,7 @@ import PointBadgeStyles from "./style";
 import Read from "../ReadMore";
 
 const PointBadge = ({ horizontal, data }) => {
-  const { color, icon, title, desc } = data;
+  const { color, icon, title, desc, length } = data;
   const {
     vertical,
     inline,
@@ -31,12 +31,14 @@ const PointBadge = ({ horizontal, data }) => {
       </Grid>
       <Grid className={horizontal ? contentLeft : contentRight}>
         <Typography variant="subtitle1" color="textPrimary" gutterBottom className={font}>
+
           {title}
         </Typography>
         <Typography
           style={{ cursor: "pointer",fontWeight:"normal" }}
           variant="subtitle2"
           color="textSecondary"
+
         >
           <Read text={desc} ellipses="... Read More" maxLines={2} />
         </Typography>

@@ -40,7 +40,7 @@ const Main = (props) => {
               <BreadCrumb links={breadcrumbs} />
             </div>
             <CardContent className={cardSec}>
-              <CustomImage className={hero} alt="hero" src={props.hero} />
+              <CustomImage width={props.width} className={hero} alt="hero" src={props.hero} />
             </CardContent>
           </Card>
           <Card>
