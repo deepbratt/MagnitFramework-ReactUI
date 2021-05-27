@@ -22,9 +22,10 @@ const Layout = ({ children }) => {
   }, [location.pathname]);
 
   useEffect(() => {
-    if (loaded < 101) {
-      setLoaded(loaded + 25); //simulating loading
-    }
+    // if (loaded < 101) {
+    //   setLoaded(loaded + 25); //simulating loading
+    // }
+    setLoaded(101)
   }, [loaded]);
 
   useEffect(() => {

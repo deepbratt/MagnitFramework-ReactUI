@@ -8,9 +8,10 @@ const CustomImage = (props) => {
 
   const onLoad = useCallback(() => {
     // setSrc(src);
-    setTimeout(()=>{
-      setIsLoaded(true)
-    }, 2000) //simulating image load
+    setIsLoaded(true)
+    // setTimeout(()=>{
+    //   setIsLoaded(true)
+    // }, 2000) //simulating image load
   }, []);
 
   // const onError = useCallback(() => {
