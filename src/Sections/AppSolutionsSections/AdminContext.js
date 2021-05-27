@@ -1,9 +1,7 @@
 import React from "react";
 import { Grid, Typography } from "@material-ui/core";
-import Heading4 from "../../ContainerStructure/Headings/Heading4";
 import theme from "../../Theme/GlobalFontSizes"
 import { MuiThemeProvider } from "@material-ui/core/styles";
-import Paragraph from "../../ContainerStructure/Headings/Paragraphs/Paragraph";
 import {
   adminHeading,
   paragraph,

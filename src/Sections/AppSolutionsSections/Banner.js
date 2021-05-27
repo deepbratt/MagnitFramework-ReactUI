@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Button } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import Breakpoints from "../../Theme/theme.breakpoints";
 import Banner from "../../Components/Banner/index";
 import { Colors } from "../../Theme/color.constants";
@@ -11,13 +11,10 @@ import {
   bannerImage,
   bannerButtonText,
 } from "../../Utils/Constants/Language/en/AppSolutionsData";
-import Paragraph from "../../ContainerStructure/Headings/Paragraphs/Paragraph";
-import { SolutionsStyles } from "../../Pages/AppSolutionsPage/SolutionsStyles";
 import BreadCrumb from "../../Components/BreadCrumb";
 import CustomButton from "../../Components/CustomButton";
 const BannerSection = () => {
   const { linearBackground, Harlequin, whiteColor } = Colors;
-  const { breadCrumbStyles } = SolutionsStyles();
   const breadcrumbData = [
     {
       path: "/",

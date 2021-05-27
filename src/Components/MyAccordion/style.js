@@ -1,7 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { Colors } from "../../Theme/color.constants";
-import {fontSizes} from "../../Utils/Constants/Font/index"
-const {h5,p} = fontSizes
 const {Mirage,darkSilver}= Colors
 const LayoutStyle = makeStyles((theme) => ({
   root: {

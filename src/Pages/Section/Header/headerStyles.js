@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import { Colors } from "../../../Theme/color.constants";
 
-const { WildSand, harlequinDark, blackColor, greyColor, Ash } =
+const { WildSand, blackColor } =
   Colors;
 
 export const THEME = createMuiTheme({

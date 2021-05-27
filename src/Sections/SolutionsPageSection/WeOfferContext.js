@@ -27,7 +27,7 @@ const WeOfferContext = ({ data }) => {
                   <Grid item key={index}>
                     <Grid item className={devSec}>
                       <Grid item>
-                        <CustomImage alt="image" width="50px" src={data.Icon} />
+                        <CustomImage alt="imageIcon" width="50px" src={data.Icon} />
                         <Typography variant="h5">{data.title}</Typography>
 
                         <Grid

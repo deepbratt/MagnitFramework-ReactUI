@@ -1,5 +1,4 @@
 import React from "react";
-import WeOffer from "../../Sections/SolutionsPageSection/WeOfferContext";
 import { Grid, Typography } from "@material-ui/core";
 import { Colors } from "../../Theme/color.constants";
 import {

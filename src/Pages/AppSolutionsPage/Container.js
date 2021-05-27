@@ -3,7 +3,6 @@ import { Grid,} from "@material-ui/core";
 import ServicesSectionStyles from "../WebServices/style"
 import Banner from "../../Sections/AppSolutionsSections/Banner";
 import FeaturesSection from "../../Sections/AppSolutionsSections/FeaturesSection"
-import WhyUsContainer from "../../Sections/SolutionsPageSection/WhyUsContainer"
 import StairCaseContext from "../../Sections/AppSolutionsSections/StairCaseSection/HowItWorksContext"
 import AdminContext from "../../Sections/AppSolutionsSections/AdminContext"
 import CommentSection from "../../Components/CommentSection";

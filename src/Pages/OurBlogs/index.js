@@ -18,7 +18,7 @@ import { Pagination } from "@material-ui/lab";
 import OurBlogsStyles from "./style";
 
 const OurBlogs = () => {
-  const { title, subtitle } = BannerText;
+  const { title, subtitle , subHeading} = BannerText;
   const { linearBackground, BlueRibbon,whiteColor } = Colors;
   const { leftPattern, rightPattern } = OurBlogsStyles();
 
@@ -77,10 +77,13 @@ const OurBlogs = () => {
         image={BannerImage}
         backColor={linearBackground}
       >
-        <Typography color="textPrimary" variant="h2" gutterBottom>
+        <Typography color="textPrimary" variant="h1" gutterBottom>
           {title}
         </Typography>
-        <Typography color="textPrimary" variant="h6" gutterBottom>
+        <Typography color="textPrimary" variant="h3" gutterBottom>
+          {subHeading}
+        </Typography>
+        <Typography color="textPrimary" variant="h5" gutterBottom>
           {subtitle}
         </Typography>
       </Banner>

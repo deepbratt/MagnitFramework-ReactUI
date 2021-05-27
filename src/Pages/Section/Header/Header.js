@@ -6,7 +6,6 @@ import {
   Toolbar,
   AppBar,
   LinearProgress,
-  Typography,
   Button
 } from "@material-ui/core";
 import { NavLink } from "react-router-dom";
@@ -16,7 +15,6 @@ import SideBar from "./Sidebar/SideBar";
 import Breakpoints from "../../../Theme/theme.breakpoints";
 import { Hidden } from "@material-ui/core";
 import { Logo } from "../../../Components/Hero/Images";
-import { Colors } from "../../../Theme/color.constants";
 import CustomButton from "../../../Components/CustomButton";
 import CustomImage from "../../../Components/CustomImage";
 import Menus from "./MenuDropDown/Menu";
@@ -33,7 +31,6 @@ import {
 
 const Header = (props) => {
   const classes = useStyles();
-  const { WildSand } = Colors;
   const { logo, list, appbarsolid, link, root, active } = classes;
   const navigated = () => {
     props.resetLoader();

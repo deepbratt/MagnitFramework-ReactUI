@@ -7,10 +7,8 @@ import {
   featuresDataTwo,
   featuresDataThree,
 } from "../../Utils/Constants/Language/en/AppSolutionsData";
-import { MuiThemeProvider } from "@material-ui/core/styles";
 import FeaturesRow from "./FeaturesRow";
 import { SolutionsStyles } from "../../Pages/AppSolutionsPage/SolutionsStyles";
-import { THEME } from "../../ContainerStructure/Headings/headingStyles";
 
 const FeaturesSection = () => {
   const { Images, img } = SolutionsStyles();
@@ -26,8 +24,8 @@ const FeaturesSection = () => {
         <Grid style={{ zIndex: "2",margin: "5% 0" }} item lg={3} md={5} xs={8}>
           {featuresDataOne.map((data, index) => {
             return (
-              <section className={Images}>
-                <img index={index} className={img} src={data.image} />
+              <section key={'fs1-'+index}  className={Images}>
+                <img index={index} className={img} src={data.image} alt={'fs1-'+index}/>
               </section>
             );
           })}
@@ -41,8 +39,8 @@ const FeaturesSection = () => {
            <Grid item lg={3} md={4} xs={12}>
           {featuresDataTwo.map((data, index) => {
             return (
-              <section className={Images}>
-                <img index={index} className={img} src={data.image} />
+              <section key={'fs2-'+index}  className={Images}>
+                <img index={index} className={img} src={data.image} alt={"fs2-"+index}/>
               </section>
             );
           })}
@@ -51,8 +49,8 @@ const FeaturesSection = () => {
         <Grid style={{ zIndex: "2",margin: "5% 0" }} item lg={3} md={5} xs={8}>
           {featuresDataThree.map((data, index) => {
             return (
-              <section className={Images}>
-                <img index={index} className={img} src={data.image} />
+              <section key={'fs3-'+index} className={Images}>
+                <img index={index} className={img} src={data.image} alt={"fs3-"+index}/>
               </section>
             );
           })}

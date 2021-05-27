@@ -1,7 +1,7 @@
 import createTheme from "./theme";
 import createPalette from "@material-ui/core/styles/createPalette";
 import { Colors } from "./color.constants";
-const { Mirage, darkSilver, Harlequin } = Colors;
+const { Harlequin } = Colors;
 export default createTheme({
   // Styles for Light Theme
   palette: createPalette({
