@@ -9,13 +9,12 @@ import { NavLink } from "react-router-dom";
 
 const LatestBlogCard = ({ cardData }) => {
   const { coverImage, imageText, title, body, buttonText, detail } = cardData;
-  const { authName, date } = detail;
+  const { date } = detail;
   const {
     latestBlogCard,
     latestBlogCardContent,
     latestBlogDetail,
     coverImg,
-    authorName,
     dateStyle,
   } = OurBlogsStyles();
   return (
