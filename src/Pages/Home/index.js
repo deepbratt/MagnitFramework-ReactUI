@@ -5,7 +5,7 @@ import Slide from "../../Components/Slider/Container";
 import Solutions from "../../Sections/HomePageSections/SolutionsContext/Solutions";
 import PartnerContext from "../../Sections/HomePageSections/PartnerWithUsContext/Maincontainer";
 import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ContactUsAndFQA from "../../Sections/HomePageSections/ContactUsAndFQA";
 import { Typography, Hidden } from "@material-ui/core";
 import Section from "../Section";
@@ -42,6 +42,7 @@ import {
   ServicesData,
 } from "../../Utils/Constants/Language/en/ServicesText";
 import {Data} from "../../Utils/Constants/Language/en/GlanceAtWorkData"
+import api from "../../Utils/Constants/api";
 export const AwardSectionImages = [Image1, Image2, Image3, Image4, Image5];
 
 const Home = (props) => {
@@ -143,6 +144,12 @@ const Home = (props) => {
   function submitForm() {
     setIsSubmitted(true);
   }
+
+  useEffect(()=>{
+    api.requestQuote({hello:"world"}).then((response)=>{
+      console.log(response)
+    })
+  },[])
 
   return (
     <div className="App">
