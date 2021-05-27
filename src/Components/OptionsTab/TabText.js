@@ -3,6 +3,7 @@ import { Grid, Typography } from "@material-ui/core";
 import vector from "../../assets/services/vector.png";
 import OptionTabStyles  from "./style";
 import CustomButton from "../CustomButton";
+import { Link } from "react-router-dom";
 // import dataText, { FullTimeHiring, HiringOption } from './constant';
 export const TabText = ({data}) => {
     const { title, desc,dataText } = data
@@ -22,7 +23,7 @@ export const TabText = ({data}) => {
          <Typography variant="button" className={bulletText} >{a.text}</Typography></Grid></Grid>);
     })}
     <span style={{textTransform:"initial"}}>
-    <CustomButton color="primary" variant="contained" className={trialBtn} >
+    <CustomButton color="primary" variant="contained"  component={Link} to="/request-a-quote" className={trialBtn} >
         Get a Risk Free Trial
 (Start your trial in 24 hours!)
     </CustomButton>
