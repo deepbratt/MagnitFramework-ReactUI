@@ -6,9 +6,9 @@ const {Mariner,whiteColor} = Colors
 
 export const useStyles = makeStyles((theme) => ({
   root: {
-    paddingTop: "10px",
+    paddingTop: "25px",
     margin: "0px",
-    paddingBottom: "20px",
+    paddingBottom: "40px",
     justifyContent:"space-evenly"
   },
   cardSec: {

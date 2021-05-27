@@ -77,6 +77,7 @@ export const marketingServicesData = [
     },
   ];
   export const Data = {
+    title:"Our Work",
     subtitleOne: "Bakers Delight",
     image1 : Img1,
     image2 :Img2,

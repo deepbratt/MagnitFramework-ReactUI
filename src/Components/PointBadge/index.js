@@ -29,12 +29,13 @@ const PointBadge = ({ horizontal, data }) => {
         </section>
       </Grid>
       <Grid className={horizontal ? contentLeft : contentRight}>
-        <Typography variant="subtitle1" gutterBottom>
+        <Typography variant="subtitle1" component="subtitle1" color="textPrimary" gutterBottom>
           {title}
         </Typography>
         <Typography
           style={{ cursor: "pointer" }}
           variant="subtitle2"
+          color="textSecondary"
         >
           <Read text={desc} ellipses="... Read More" maxLines={2} />
         </Typography>
