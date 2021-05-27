@@ -11,8 +11,8 @@ const PointList = ({ horizontal, data, lgBreakpoint=4 }) => {
     <Grid container>
       {data &&
         data.map((item, index) => (
-          <Grid style={{ marginBottom: "20px" }} item xs={12} md={breakpoint} lg={lgBreakpoint}>
-            <PointBadge key={index} horizontal={horizontal} data={item} />
+          <Grid style={{ marginBottom: "20px" }} key={index} item xs={12} md={breakpoint} lg={lgBreakpoint}>
+            <PointBadge horizontal={horizontal} data={item} />
           </Grid>
         ))}
     </Grid>

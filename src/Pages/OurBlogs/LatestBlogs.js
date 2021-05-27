@@ -9,15 +9,12 @@ import { NavLink } from "react-router-dom";
 
 const LatestBlogCard = ({ cardData }) => {
   const { coverImage, imageText, title, body, buttonText, detail } = cardData;
-  const { authName, authDesig, category, date } = detail;
+  const { date } = detail;
   const {
     latestBlogCard,
     latestBlogCardContent,
-    latestBlogDetailCategory,
     latestBlogDetail,
     coverImg,
-    authorName,
-    authorDesig,
     dateStyle,
   } = OurBlogsStyles();
   return (

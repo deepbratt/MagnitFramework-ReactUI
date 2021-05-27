@@ -14,7 +14,6 @@ const {
   geekyIcon,
   timeIcon,
   dataIcon,
-  isoIcon,
 } = icons;
 
 export const PatrnerWithUsSectionTitle = "Why /Us?";
@@ -152,8 +151,3 @@ export const SecondaryArray = [{
   desc:  "You don’t need to pay on every step of the solution development process. You can request a quote to see what fits your budget.",
 },
 ]
-
-
-
-
-export default { PrimaryArray, SecondaryArray };

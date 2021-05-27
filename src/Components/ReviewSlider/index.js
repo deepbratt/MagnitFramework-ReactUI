@@ -96,6 +96,7 @@ const ReviewSlider = ({ slides, showArrows, showDots, indicatorsPosition }) => {
       transitionTime={500}
       renderIndicator={customDots}
       className={indicatorsPosition ? carouselRoot : null}
+      showThumbs={false}
     >
       {slides.map((slide, i) => {
         return (

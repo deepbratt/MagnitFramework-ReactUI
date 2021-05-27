@@ -5,7 +5,7 @@ const LayoutStyle = makeStyles((theme) => ({
     flexGrow: 1,
   },
   paper: {
-    padding: theme.spacing(0),
+    // padding: theme.spacing(0),
     textAlign: "center",
     color: theme.palette.text.secondary,
     margin: "0px",

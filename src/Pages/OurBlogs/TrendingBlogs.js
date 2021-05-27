@@ -1,5 +1,4 @@
 import {
-  Avatar,
   Card,
   CardActions,
   CardContent,
@@ -12,7 +11,7 @@ import OurBlogsStyles from "./style";
 
 const TrendingBlogs = ({ featureImage, cardData }) => {
   const { detail, title, body, buttonText } = cardData;
-  const { avatar, authName, authDesig, category, date } = detail;
+  const {  date } = detail;
   const { coverImage, content, blogDetail, light } = OurBlogsStyles();
   return (
     <Grid container>

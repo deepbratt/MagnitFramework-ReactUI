@@ -1,6 +1,6 @@
 import React from "react";
 // import { useSelector } from "react-redux";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Switch } from "react-router-dom";
 import Layout from "./Layout";
 import RequireAuth from "./container/RequireAuth";
 import { pageRoutes } from "./Components/Path";

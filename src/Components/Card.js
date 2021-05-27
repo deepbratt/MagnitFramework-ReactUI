@@ -1,6 +1,6 @@
 import React from "react";
 import { useStyles } from "../Sections/HomePageSections/ServicesContext/servicesStyles";
-import { Typography, Card, CardContent, Grid, Box } from "@material-ui/core";
+import { Typography, CardContent, Grid } from "@material-ui/core";
 import CustomImage from "./CustomImage";
 import ReadMore from "./ReadMore"
 import { NavLink } from "react-router-dom";
