@@ -50,6 +50,7 @@ const CaseStudies = () => {
           hero={businessPeople}
           card={false}
           breadcrumbData={breadcrumbData}
+          width="850px"
         />
       </Grid>
       <Grid item xs={12}>
