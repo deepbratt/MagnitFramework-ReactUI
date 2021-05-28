@@ -62,6 +62,7 @@ const ContactUs = () => {
           hero={Banner}
           card={false}
           breadcrumbData={breadcrumbs}
+          width="600px"
         />
       </Grid>
       <Section title={WorkFlow} subTitle={RequestAQuoteSub}>
