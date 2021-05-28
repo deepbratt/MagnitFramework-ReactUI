@@ -79,7 +79,7 @@ export const useStyles = makeStyles((theme) => ({
     margin: 0,
     padding: 0,
     // height: "500px",
-    width: "100%"
+    width: "auto !important"
   },
 
   tick: {

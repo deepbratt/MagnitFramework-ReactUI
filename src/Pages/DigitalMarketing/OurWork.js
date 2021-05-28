@@ -1,20 +1,19 @@
 import React from "react";
-import { useStyles} from "./containerStyles";
+import { useStyles} from "../../Sections/HomePageSections/GlanceAtWorkContext/containerStyles";
 import {
   Typography,
+  Card,
   CardContent,
   Grid
 } from "@material-ui/core";
-import Breakpoints from "../../../Theme/theme.breakpoints";
-import {Colors} from "../../../Theme/color.constants"
-import {Data} from "../../../Utils/Constants/Language/en/GlanceAtWorkData"
-import CustomButton from "../../../Components/CustomButton";
-import CustomImage from "../../../Components/CustomImage";
+import Breakpoints from "../../Theme/theme.breakpoints";
+import {Colors} from "../../Theme/color.constants"
+import {Data} from "./constants"
+import CustomButton from "../../Components/CustomButton/index";
+import CustomImage from "../../Components/CustomImage";
 
-import {THEME} from '../../../ContainerStructure/Headings/headingStyles'
-import Paragraph from "../../../ContainerStructure/Headings/Paragraphs/Paragraph"
+
 const Container = ({backColor}) => {
-
   const classes = useStyles();
   const {title,subtitleOne,subtitleTwo,subtitleThree,image1,image2,image3,buttonText} = Data
   const {whiteColor} = Colors
@@ -40,7 +39,7 @@ const Container = ({backColor}) => {
           <Grid item  xs={12} sm={5} md={4} lg={3}  className={card}>
             <CardContent>
                 <Grid item className={devSec}>
-                  <CustomImage width="220px" src={image1} alt=""/>
+                  <CustomImage width="290px" src={image1} alt=""/>
                  
                 </Grid>
               <Grid item className={cardContent}>
@@ -53,7 +52,7 @@ const Container = ({backColor}) => {
           <Grid item  xs={12} sm={5} md={4} lg={3}  className={card}>
             <CardContent>
                 <Grid  className={devSec}>
-                  <CustomImage width="270px" src={image2} alt=""/>
+                  <CustomImage width="290px" src={image2} alt=""/>
                  
                 </Grid>
                 <Grid item className={cardContent}>
@@ -66,7 +65,7 @@ const Container = ({backColor}) => {
           <Grid item  xs={12} sm={5} md={4} lg={3}  className={card}>
             <CardContent>
                 <Grid className={devSec}>
-                  <CustomImage width="275px"  src={image3} alt=""/>
+                  <CustomImage width="290px"  src={image3} alt=""/>
                  
                 </Grid>
                 <Grid item className={cardContent}>
@@ -78,10 +77,12 @@ const Container = ({backColor}) => {
           </Grid>
         </Grid>
         <Grid item lg={12} md={12} xs={12}>
-          <CustomButton
+        <CustomButton
             variant="contained"
             size={Breakpoints()}
             className={seeMore}
+            color="white"
+       
           >
             {buttonText}
           </CustomButton>

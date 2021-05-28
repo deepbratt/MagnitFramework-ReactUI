@@ -48,7 +48,7 @@ function Testimonials() {
         <Typography variant="h1"  gutterBottom className={textColor}>
          {Testmonial}
         </Typography>
-        <Typography variant="body1" gutterBottom className={textColor}>
+        <Typography variant="h5" gutterBottom className={textColor}>
          {subTitle}
         </Typography>
       </Banner>

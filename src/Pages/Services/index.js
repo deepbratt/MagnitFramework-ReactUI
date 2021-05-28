@@ -17,9 +17,10 @@ import { BannerImage } from "../../Utils/Constants/Language/en/SolutionsPageData
 import Banner from "../../Components/Banner";
 import CommentSection from "../../Components/CommentSection";
 import ServicesOffered from "../../Sections/HomePageSections/ServicesContext/Services";
-
+import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
+import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
 const Services = () => {
-  const { linearBackground } = Colors;
+  const { linearBackground,skyBlue } = Colors;
 
   const breadCrumData = [
     {
@@ -42,7 +43,7 @@ const Services = () => {
           <Typography color="textPrimary" variant="h2" gutterBottom>
             {ServicesPageBanner.title}
           </Typography>
-          <Typography color="textPrimary" variant="h6" gutterBottom>
+          <Typography color="textPrimary" variant="h5" gutterBottom>
             {ServicesPageBanner.subtitle}
           </Typography>
           <span>
@@ -71,6 +72,7 @@ const Services = () => {
             />
           </Grid>
         </Section>
+        <GlanceSection backColor={skyBlue} />
         <Section title={DoYouWant}>
           <span>
             <CustomButton

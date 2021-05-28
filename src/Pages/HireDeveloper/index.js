@@ -94,7 +94,7 @@ const HireDeveloper = () => {
       <Section title={WhyHireSectionTitle} highlightWords={3}>
         <PointList data={hireUsData} horizontal={true} lgBreakpoint={6}/>
       </Section>
-        <GlanceSection subtitleOne={Data.subtitleOne} subtitleTwo={Data.subtitleTwo} subtitleThree={Data.subtitleThree}  backColor={skyBlue} />
+      <GlanceSection backColor={skyBlue} />
       <Section title={DoYouWant}>
     <span >
     
