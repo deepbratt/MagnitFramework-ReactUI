@@ -36,8 +36,8 @@ const Slider = ({
         container
         className={sec}
         direction="row"
-        // justify="center"
-        // alignItems="center"
+        justify="center"
+        alignItems="center"
         style={{
           background: `linear-gradient(to right,${democrat} 0%,${vividCerlean} 15%, ${atomsphere} 39%, ${carmine} 69%,${peaFowl} 99%)`,
         }}
@@ -87,7 +87,7 @@ const Slider = ({
             className={gridImage}
             // justify="flex-start"
           >
-            <CustomImage alt="sliderImg" height="400px" src={Img} className={vector} />
+            <CustomImage alt="sliderImg" src={Img} className={vector} />
           </Grid>
         </Hidden>
         {/* <Hidden smDown>

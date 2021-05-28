@@ -78,8 +78,11 @@ export const useStyles = makeStyles((theme) => ({
     zIndex: 1,
     margin: 0,
     padding: 0,
-    // height: "500px",
-    width: "auto !important"
+    height: "450px",
+    [breakpoints.only("md")]: {
+      height: "350px",
+    },
+    width: "auto !important",
   },
 
   tick: {
@@ -137,7 +140,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   slide: {
     position: "relative",
-    width: "100%",
+    width: "auto",
     "& .carousel .slide img": {
       width: "100%",
     },

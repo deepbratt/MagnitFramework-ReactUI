@@ -44,7 +44,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   card: {
     backgroundColor: whiteColor,
-    width: "13%",
+    width: "18%",
     height: "150px",
     display: "flex",
     flexDirection: "column",
