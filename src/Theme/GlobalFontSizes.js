@@ -40,15 +40,15 @@ const theme = createMuiTheme();
 // banner heading
 theme.typography.h1 = {
   fontFamily: "Poppins",
-  fontSize: "3.4375rem",
+  fontSize: "3.3375rem",
   fontWeight: 600,
   lineHeight: "71.77px",
   [theme.breakpoints.down("lg")]: {
-    fontSize: "2.5rem",
+    fontSize: "2.2rem",
     lineHeight: "55px",
   },
   [theme.breakpoints.down("md")]: {
-    fontSize: "2rem",
+    fontSize: "1.9rem",
     lineHeight: "48px",
   },
 };
@@ -56,15 +56,18 @@ theme.typography.h1 = {
 // section heading
 theme.typography.h2 = {
   fontFamily: "Poppins",
-  fontSize: "2.1875rem", // 35px
+  fontSize: "2.1875rem",
   fontWeight: 600,
   lineHeight: "57.05px",
+  [theme.breakpoints.down("lg")]: {
+    fontSize: "1.9rem",
+  },
   [theme.breakpoints.down("md")]: {
-    fontSize: "1.875rem", // 30px
+    fontSize: "1.875rem",
     lineHeight: "35px",
   },
   [theme.breakpoints.down("sm")]: {
-    fontSize: "1.625rem", // 26px
+    fontSize: "1.625rem",
     lineHeight: "30px",
   },
 };
@@ -75,6 +78,9 @@ theme.typography.h3 = {
   fontSize: "2rem",
   fontWeight: 600,
   lineHeight: "39.12px",
+  [theme.breakpoints.down("lg")]: {
+    fontSize: "1.5rem",
+  },
   [theme.breakpoints.down("md")]: {
     fontSize: "1.255rem",
   },
@@ -89,6 +95,9 @@ theme.typography.h4 = {
   fontSize: "1.375rem",
   fontWeight: 600,
   lineHeight: "39.12px",
+  [theme.breakpoints.down("lg")]: {
+    fontSize: "1.3rem",
+  },
   [theme.breakpoints.down("md")]: {
     fontSize: "1.25rem",
   },
@@ -103,7 +112,7 @@ theme.typography.h5 = {
   fontSize: "1.25rem", // 20px
   fontWeight: 500,
   lineHeight: "30px",
-  [theme.breakpoints.down("md")]: {
+  [theme.breakpoints.down("lg")]: {
     fontSize: "1.125rem", // 18px
   },
   [theme.breakpoints.down("sm")]: {
@@ -127,7 +136,7 @@ theme.typography.subtitle1 = {
   fontSize: "1.375rem", // 22px
   fontWeight: 500,
   lineHeight: "29.34px",
-  [theme.breakpoints.down("md")]: {
+  [theme.breakpoints.down("lg")]: {
     fontSize: "1.125rem",
   },
   [theme.breakpoints.down("sm")]: {
@@ -140,6 +149,10 @@ theme.typography.subtitle2 = {
   fontSize: "1.25rem", // 20px
   fontWeight: 500,
   lineHeight: "29.34px",
+  [theme.breakpoints.down("lg")]: {
+    fontSize: "1rem", //14px
+    lineHeight: "20px",
+  },
   [theme.breakpoints.down("sm")]: {
     fontSize: "0.875rem", //14px
     lineHeight: "20px",
@@ -152,7 +165,7 @@ theme.typography.body1 = {
   fontSize: "1.125rem",
   fontWeight: 500,
   lineHeight: "29.34px",
-  [theme.breakpoints.down("md")]: {
+  [theme.breakpoints.down("lg")]: {
     fontSize: "1rem",
   },
 };
@@ -163,7 +176,7 @@ theme.typography.body2 = {
   fontSize: "1rem", // 16px
   fontWeight: 300,
   lineHeight: "29.36px",
-  [theme.breakpoints.down("md")]: {
+  [theme.breakpoints.down("lg")]: {
     fontSize: "0.85rem",
     lineHeight: "25px",
   },
@@ -174,7 +187,7 @@ theme.typography.caption = {
   fontSize: "1rem", // 16px
   fontWeight: 500,
   lineHeight: "29.34px",
-  [theme.breakpoints.down("md")]: {
+  [theme.breakpoints.down("lg")]: {
     fontSize: "0.75rem",
     lineHeight: "25px",
   },
@@ -185,8 +198,11 @@ theme.typography.button = {
   fontSize: "1.125rem", // 18px
   fontWeight: 500,
   lineHeight: "32.34px",
+  [theme.breakpoints.down("lg")]: {
+    fontSize: "0.9rem", // 16px
+  },
   [theme.breakpoints.down("md")]: {
-    fontSize: "1rem", // 16px
+    fontSize: "0.75rem", // 16px
   },
 };
 
