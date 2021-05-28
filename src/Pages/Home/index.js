@@ -44,11 +44,13 @@ import {
 import {Data} from "../../Utils/Constants/Language/en/GlanceAtWorkData"
 import api from "../../Utils/Constants/api";
 import axios from 'axios'
+import { useCancelToken } from "../../Utils/CustomHooks/useCancelToken";
 export const AwardSectionImages = [Image1, Image2, Image3, Image4, Image5];
 
 const Home = (props) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { leftRoot, rightRoot } = HomeStyles();
+  const { createNewToken, isCancel } = useCancelToken();
   // const {
   //   // sectionBackgroundColors,
   //   // factCards,
@@ -147,15 +149,9 @@ const Home = (props) => {
   }
 
   useEffect(()=>{
-    const cancelToken = axios.CancelToken;
-    const source = cancelToken.source();
-    api.requestQuote({hello:"world"}, source).then((response)=>{
+    api.getAllQuote(createNewToken, isCancel).then((response)=>{
       console.log(response)
     })
-
-    return () => {
-      source.cancel("axios request cancelled");
-     };
   },[])
 
   return (

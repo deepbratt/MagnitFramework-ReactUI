@@ -10,13 +10,26 @@ const axiosInstance = axios.create({
 })
 
 const api = {
-    requestQuote: async function(body, source){
+    requestQuote: async function(requestBody, createNewToken, isCancel){
         try{
-            const response = await axiosInstance.get("quote/allquote", {cancelToken:source.token})
+            const response = await axiosInstance.get("quote/createQuote", requestBody, {cancelToken:createNewToken})
             console.log(response)
             return response
         }catch(error){
-            if (axios.isCancel(error)) {
+            if (isCancel(error)) {
+                console.log(`request cancelled:${error.message}`);
+            }
+            console.log('error: ',error)
+            return error
+        }
+    },
+    getAllQuote: async function(createNewToken, isCancel){
+        try{
+            const response = await axiosInstance.get("quote/allquote", {cancelToken:createNewToken})
+            console.log(response)
+            return response
+        }catch(error){
+            if (isCancel(error)) {
                 console.log(`request cancelled:${error.message}`);
             }
             console.log('error: ',error)
