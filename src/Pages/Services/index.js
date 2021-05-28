@@ -40,7 +40,7 @@ const Services = () => {
           backColor={linearBackground}
           breadCrumb={<BreadCrumb links={breadCrumData} />}
         >
-          <Typography color="textPrimary" variant="h2" gutterBottom>
+          <Typography color="textPrimary" variant="h1" gutterBottom>
             {ServicesPageBanner.title}
           </Typography>
           <Typography color="textPrimary" variant="h5" gutterBottom>

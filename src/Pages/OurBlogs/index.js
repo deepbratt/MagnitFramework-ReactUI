@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@material-ui/core";
+import { Grid, Hidden, Typography } from "@material-ui/core";
 import Banner from "../../Components/Banner";
 import { Colors } from "../../Theme/color.constants";
 import {
@@ -18,8 +18,8 @@ import { Pagination } from "@material-ui/lab";
 import OurBlogsStyles from "./style";
 
 const OurBlogs = () => {
-  const { title, subtitle , subHeading} = BannerText;
-  const { linearBackground, BlueRibbon,whiteColor } = Colors;
+  const { title, subtitle, subHeading } = BannerText;
+  const { linearBackground, BlueRibbon, whiteColor } = Colors;
   const { leftPattern, rightPattern } = OurBlogsStyles();
 
   const breadCrumData = [
@@ -43,29 +43,41 @@ const OurBlogs = () => {
   const latestBlogsSectionPatterns = [
     {
       image: (
-        <Grid
-          className={leftPattern}
-          style={{ position: "absolute" }}
-          // key={index}
-          item
-          xs={4}
-        >
-          <img width="100%" height="100%" src={BackGroudnPatternLeft} alt="" />
-        </Grid>
+        <Hidden smDown>
+          <Grid
+            className={leftPattern}
+            style={{ position: "absolute" }}
+            item
+            xs={4}
+          >
+            <img
+              width="100%"
+              height="100%"
+              src={BackGroudnPatternLeft}
+              alt=""
+            />
+          </Grid>
+        </Hidden>
       ),
       styles: leftPattern,
     },
     {
       image: (
-        <Grid
-          className={`${rightPattern}`}
-          style={{ position: "absolute" }}
-          // key={index}
-          item
-          xs={4}
-        >
-          <img width="100%" height="100%" src={BackGroudnPatternRight} alt="" />
-        </Grid>
+        <Hidden smDown>
+          <Grid
+            className={`${rightPattern}`}
+            style={{ position: "absolute" }}
+            item
+            xs={4}
+          >
+            <img
+              width="100%"
+              height="100%"
+              src={BackGroudnPatternRight}
+              alt=""
+            />
+          </Grid>
+        </Hidden>
       ),
       styles: rightPattern,
     },
@@ -88,7 +100,7 @@ const OurBlogs = () => {
         </Typography>
       </Banner>
       <Section title={header}>
-        <ReviewSlider slides={slideArr} showArrows={false} indicatorsPosition/>
+        <ReviewSlider slides={slideArr} showArrows={false} indicatorsPosition />
       </Section>
       <Section
         title={LatestBlogsSectionText.header}
@@ -96,14 +108,17 @@ const OurBlogs = () => {
         titleColor={whiteColor}
         patterns={latestBlogsSectionPatterns}
       >
-        <Grid
-          container
-          justify="center"
-          spacing={2}
-        >
+        <Grid container justify="center" spacing={2}>
           {LatestBlogsSectionText.cards &&
             LatestBlogsSectionText.cards.map((card, index) => (
-              <Grid key={index} item xs={12} sm={6} lg={4} style={{display:"flex"}}>
+              <Grid
+                key={index}
+                item
+                xs={12}
+                sm={6}
+                lg={4}
+                style={{ display: "flex" }}
+              >
                 <LatestBlogs cardData={card} />
               </Grid>
             ))}
