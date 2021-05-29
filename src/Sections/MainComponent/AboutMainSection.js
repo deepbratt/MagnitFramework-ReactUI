@@ -39,7 +39,7 @@ const AboutMainSection = (props) => {
                       </Typography>
                     ))}
                 </section>
-                </Section>
+                
               </CardContent>
             </Card>
           ) : null}
