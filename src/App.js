@@ -8,7 +8,8 @@ import Route from "./routes"
 import { Loader } from "./Components/loader";
 import { CircularProgress, Grid, Typography } from "@material-ui/core";
 
-
+import { Colors } from "../src/Theme/color.constants";
+const { Harlequin } = Colors;
 const App = (props) => {
   useStyles()
   const { value } = props;
@@ -18,7 +19,7 @@ const App = (props) => {
   React.useEffect(() => {
    setTimeout(() => {
     setloading(false)
-   }, 2000);
+   }, 1000);
   
    
   }, []);
@@ -28,10 +29,10 @@ const App = (props) => {
        <Grid container justify="center" style={{ position: "absolute",
       left:"50%",
         top: "50%",
-        transform: "translate(0%, -50%)",
+        transform: "translate(0%, -44%)",
         width:"100px",
         }}>
-             <CircularProgress style={{color:"green"}}></CircularProgress>
+             <CircularProgress style={{color:Harlequin}}></CircularProgress>
              <Typography variant="h5" color="textPrimary">Loading...</Typography>
         </Grid>
     );
