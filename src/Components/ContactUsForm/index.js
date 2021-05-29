@@ -2,7 +2,6 @@ import {
   CircularProgress,
   Grid,
   InputLabel,
-  Snackbar,
 } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
@@ -13,6 +12,7 @@ import CustomButton from "../CustomButton";
 import FormStyles from "./style";
 import { useForm } from "./useForm";
 import { fieldNames } from "../../Utils/Constants/ContactUsForm.js";
+import CustomToast from "../CustomToast/CustomToast";
 
 const ContactUsForm = (props) => {
   const { form, label, button, privacyPolicy } = FormStyles();
@@ -24,7 +24,8 @@ const ContactUsForm = (props) => {
     isLoading,
     toastOpen,
     setToastOpen,
-    requestMessage
+    requestMessage,
+    toastType,
   } = useForm(true);
 
   const {
@@ -149,19 +150,17 @@ const ContactUsForm = (props) => {
           disabled={isLoading}
         >
           {isLoading ? (
-          <Grid container justify="center">
-            <CircularProgress />
-          </Grid>
-        ): submit}
+            <Grid container justify="center">
+              <CircularProgress />
+            </Grid>
+          ) : (
+            submit
+          )}
         </CustomButton>
-        <Snackbar
-          anchorOrigin={{
-            vertical: "bottom",
-            horizontal: "left",
-          }}
+        <CustomToast
           open={toastOpen}
           onClose={() => setToastOpen(false)}
-          autoHideDuration={5000}
+          severity={toastType}
           message={requestMessage}
         />
       </form>
