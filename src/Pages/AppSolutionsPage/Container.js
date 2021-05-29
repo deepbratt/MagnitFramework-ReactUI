@@ -15,9 +15,12 @@ import {
 import CustomButton from "../../Components/CustomButton";
 import { Link } from "react-router-dom";
 import { DoYouWant } from "../WebServices/constants";
-
+import Breakpoints from "../../Theme/theme.breakpoints";
+import CustomTitle from "../../Pages/Section/CustomTitle"
+import {Colors} from "../../Theme/color.constants"
 const Solutions = () => {
-  const { root } = ServicesSectionStyles();
+ const {root} = ServicesSectionStyles()
+ const {MoonWhite} = Colors
   return (
     <>
       <Grid container>
@@ -29,27 +32,37 @@ const Solutions = () => {
             <FeaturesSection />
           </Grid>
         </Section>
-        <Grid item lg={12} md={12} xs={12}>
-          <AdminContext />
-        </Grid>
+        <Section backColor={MoonWhite}>
+        <AdminContext/>
+        </Section>
         <Section>
           <Grid item lg={12} md={12} xs={12}>
             <StairCaseContext />
           </Grid>
         </Section>
-        <Section title={benefitsHeading}>
-          <Grid item lg={12} md={12} xs={12}>
-            <PointList data={benefitsData} horizontal={true} lgBreakpoint={6} />
-          </Grid>
+        <Section>
+        <CustomTitle underlined={true} text={benefitsHeading} />
+          <PointList data={benefitsData} horizontal={true} lgBreakpoint={6}/>
         </Section>
         <Grid item lg={12} md={12} xs={12}>
-          <Section title={DoYouWant}>
-            <span>
-              <CustomButton component={Link} to="/request-a-quote">
-                Request a Quote
-              </CustomButton>
-            </span>
-          </Section>
+        <Section>
+        <CustomTitle underlined={true} text={DoYouWant} />
+        <span >
+        <CustomButton
+          variant="contained"
+          size={Breakpoints()}
+          color="primary"
+          component={Link}
+          to="/request-a-quote"
+          
+        >
+       Request a Quote
+        </CustomButton>
+        </span>
+    </Section>
+    </Grid>
+        <Grid item lg={12} md={12} xs={12}>
+        <CommentSection/>
         </Grid>
         <Grid item lg={12} md={12} xs={12}>
           <CommentSection />

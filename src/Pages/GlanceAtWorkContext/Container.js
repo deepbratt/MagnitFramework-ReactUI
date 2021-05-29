@@ -92,7 +92,6 @@ const Container = ({backColor}) => {
         <section>
         <MuiThemeProvider theme={THEME}>
           <Button
-           
             variant="contained"
             size={Breakpoints()}
             className={seeMore}

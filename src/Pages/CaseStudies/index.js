@@ -17,7 +17,7 @@ import AboutMainSection from "../../Sections/MainComponent/AboutMainSection";
 import ResponsiveInterActiveSection from '../../Sections/ResponsiveInterActiveSection/ResponsiveInterActiveSection'
 import InterActiveSection from '../../Sections/InterActiveSection/InterActiveSection'
 import FaqNonInteractive from '../../Sections/FaqNonInteractive/FaqNonInteractive'
-
+import CustomTitle from "../Section/CustomTitle"
 
 const CaseStudies = () => {
   // const classes = useStyles();
@@ -54,10 +54,10 @@ const CaseStudies = () => {
         />
       </Grid>
       <Grid item xs={12}>
-        <Section
-          title={caseStudies.heading}
-          subTitle={caseStudies.subHeading}
-        ></Section>
+        <Section>
+           <CustomTitle style={{marginBottom: "20px"}} text={caseStudies.heading} underlined={true}/>
+           <CustomTitle subTitle={caseStudies.subHeading}/>
+        </Section>
       </Grid>
       <Grid
         item
@@ -92,7 +92,8 @@ const CaseStudies = () => {
       </Grid>
       <Grid item xs={12}>
         {/* AWARD AND ACCREDITATIONS SECTION */}
-      <Section title={caseStudies.awardsTitle}>
+      <Section>
+      <CustomTitle text={caseStudies.awardsTitle} underlined={true}/>
         <div
           style={{
             display: "flex",

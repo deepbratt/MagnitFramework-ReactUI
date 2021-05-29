@@ -25,6 +25,8 @@ import CommentSection from "../../Components/CommentSection";
 import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
 import Heading5 from "../../ContainerStructure/Headings/Heading5";
+import Breakpoints from "../../Theme/theme.breakpoints";
+import CustomTitle from "../../Pages/Section/CustomTitle"
 
 const DigitalMarketing = () => {
   const { skyBlue, linearBackground } = Colors;
@@ -71,27 +73,20 @@ const DigitalMarketing = () => {
           alt=""
           srcset=""
         />
-        <Section title={ServicesSectionTitle} highlightWords={1}>
-          <section style={{ marginBottom: "10px" }}>
-            <Heading5 subTitle={ourExpert} />
-          </section>
+        <Section >
+        <CustomTitle style={{marginBottom: "20px"}} text={ServicesSectionTitle} underlined={true}/>
+          <CustomTitle subTitle={ourExpert}/>
           <PointList data={marketingServicesData} horizontal={false} />
         </Section>
       </div>
 
-      <Section title={WhyHireSectionTitle} highlightWords={3}>
+      <Section highlightWords={3}>
+      <CustomTitle text={WhyHireSectionTitle} underlined={true}/>
         <PointList data={hireUsData} horizontal={true} lgBreakpoint={6} />
       </Section>
-      <GlanceSection
-        image1={Data.image1}
-        image2={Data.image2}
-        image3={Data.image3}
-        subtitleOne={Data.subtitleOne}
-        subtitleTwo={Data.subtitleTwo}
-        subtitleThree={Data.subtitleThree}
-        backColor={skyBlue}
-      />
-      <Section title={DoYouWant}>
+        <GlanceSection image1={Data.image1} image2={Data.image2} image3={Data.image3} subtitleOne={Data.subtitleOne} subtitleTwo={Data.subtitleTwo} subtitleThree={Data.subtitleThree}  backColor={skyBlue} />
+      <Section>
+      <CustomTitle text={DoYouWant} underlined={true}/>
         <span>
           <CustomButton component={Link} to="/request-a-quote">
             Request a Quote

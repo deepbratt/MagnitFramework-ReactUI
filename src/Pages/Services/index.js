@@ -19,6 +19,7 @@ import CommentSection from "../../Components/CommentSection";
 import ServicesOffered from "../../Sections/HomePageSections/ServicesContext/Services";
 import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
 import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
+import CustomTitle from "../Section/CustomTitle"
 const Services = () => {
   const { linearBackground, skyBlue } = Colors;
 
@@ -52,12 +53,13 @@ const Services = () => {
         </Banner>
 
         <Grid item xs={12}>
-          <Section title={ServicesOfferedSection.title}>
-            <ServicesOffered servicesData={ServicesOfferedSection.values} />
+          <Section>
+          <ServicesOffered title={ServicesOfferedSection.title} servicesData={ServicesOfferedSection.values}/>
           </Section>
         </Grid>
-        <Section title={BenifitsSection.title}>
+        <Section>
           <Grid item xs={12}>
+            <CustomTitle text={BenifitsSection.title} underlined={true}/>
             <PointList
               data={BenifitsSection.data}
               horizontal={true}
@@ -66,7 +68,8 @@ const Services = () => {
           </Grid>
         </Section>
         <GlanceSection backColor={skyBlue} />
-        <Section title={DoYouWant}>
+        <Section>
+        <CustomTitle text={DoYouWant} underlined={true}/>
           <span>
             <CustomButton component={Link} to="/request-a-quote">
               Request a Quote

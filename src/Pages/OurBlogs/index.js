@@ -16,6 +16,7 @@ import LatestBlogs from "./LatestBlogs";
 import ReviewSlider from "../../Components/ReviewSlider";
 import { Pagination } from "@material-ui/lab";
 import OurBlogsStyles from "./style";
+import CustomTitle from "../Section/CustomTitle"
 
 const OurBlogs = () => {
   const { title, subtitle, subHeading } = BannerText;
@@ -99,15 +100,15 @@ const OurBlogs = () => {
           {subtitle}
         </Typography>
       </Banner>
-      <Section title={header}>
+      <Section>
+      <CustomTitle text={header} underlined={true}/>
         <ReviewSlider slides={slideArr} showArrows={false} indicatorsPosition />
       </Section>
       <Section
-        title={LatestBlogsSectionText.header}
         backColor={BlueRibbon}
-        titleColor={whiteColor}
         patterns={latestBlogsSectionPatterns}
       >
+          <CustomTitle color={whiteColor} text={LatestBlogsSectionText.header} underlined={false}/>
         <Grid container justify="center" spacing={2}>
           {LatestBlogsSectionText.cards &&
             LatestBlogsSectionText.cards.map((card, index) => (

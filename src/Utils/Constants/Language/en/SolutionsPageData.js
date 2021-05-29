@@ -150,7 +150,7 @@ export const heading = "Solutions we offer";
 export const subheading =
   "are built with cutting edge technologies & customized as you need";
 export const BannerImage = bannerImage;
-export const benefitsHeading = "Benefits of /Our Solutions";
+export const benefitsHeading = "Benefits of Our Solutions";
 export const BannerHeading = "Wide range of Custom Solutions";
 export const Bannersubheading = "for your Business";
 export const paragraph =

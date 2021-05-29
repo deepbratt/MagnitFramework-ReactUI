@@ -15,6 +15,7 @@ import {
   Testmonial,
 } from "../../Utils/Constants/Language/en/TestimonialVideos";
 import CustomButton from "../../Components/CustomButton";
+import CustomTitle from "../../Pages/Section/CustomTitle"
 import Section from "../Section";
 
 // import Section from '../Section';
@@ -49,8 +50,14 @@ function Testimonials() {
       </Banner>
    
       <Grid xs={12}>
+          <CardContent className={cardSec}>
+          <CustomTitle style={{marginBottom: "20px"}} text={Testmonial} underlined={true}/>
+          <CustomTitle subTitle={ClientsHaveToSay}/>
+          </CardContent>
+      </Grid>
      <Section  title={Testmonial} subTitle={ClientsHaveToSay}>
      </Section>
+
       <Grid container direction="row" justify="center">
         <VideoCard />
         <Grid
@@ -61,7 +68,6 @@ function Testimonials() {
       </Grid>
     
       </Grid>
- </Grid>
     </CommentSection>
   );
 }

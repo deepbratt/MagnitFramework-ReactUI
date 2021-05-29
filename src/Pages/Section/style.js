@@ -20,29 +20,30 @@ const LayoutStyle = makeStyles((theme) => ({
     },
   },
   sectionHeader: {
-    marginBottom: "30px",
+    marginBottom: "80px",
   },
   subHeader: {
     color: "grey",
   },
   underlinedStyles: {
-    position: "relative",
-    zIndex: 1,
-    marginLeft: "10px",
-    "&:after ": {
-      position: "absolute",
-      height: "17px",
-      content: '""',
-      left: 0,
-      zIndex: -1,
-      right: 0,
-      color: "#000",
-      backgroundColor: Harlequin,
-      bottom: "5px",
-      [theme.breakpoints.down("xs")]: {
-        height: "11px",
-      },
-    },
+    // position: "relative",
+    // zIndex: 1,
+    // marginLeft: "10px",
+    // "&:after ": {
+    //   position: "absolute",
+    //   height: "17px",
+    //   content: '""',
+    //   left: 0,
+    //   zIndex: -1,
+    //   right: 0,
+    //   color: "#000",
+    //   backgroundColor: Harlequin,
+    //   bottom: "5px",
+    //   [theme.breakpoints.down("xs")]: {
+    //     height: "11px",
+    //   },
+    // },
+    borderBottom: `solid 5px ${Harlequin}`,
   },
   startQuote1: {
     left: "-8%",
