@@ -23,13 +23,7 @@ const BannerSection = () => {
           {paragraph}
         </Typography>
         <section style={{ marginTop: "15px" }}>
-          <CustomButton
-            variant="contained"
-            size={Breakpoints()}
-            color="secondary"
-          >
-            <Typography variant="buttom">Get Started</Typography>
-          </CustomButton>
+          <CustomButton>Get Started</CustomButton>
         </section>
       </Banner>
     </>

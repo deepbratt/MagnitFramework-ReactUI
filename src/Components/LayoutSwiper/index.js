@@ -1,5 +1,4 @@
 import { useDispatch } from "react-redux";
-import { Button } from "@material-ui/core";
 import PropTypes from "prop-types";
 import { BoxedWidth, FullWidth } from "../Layout/constants";
 import { ToggleType } from "../../Redux/Actions/layoutActions";
@@ -11,8 +10,6 @@ const LayoutSwiper = ({ layoutType }) => {
   return (
     <CustomButton
       data-test="layoutSwiperComponent"
-      variant="contained"
-      color="primary"
       onClick={() =>
         layoutType === BoxedWidth
           ? dispatch(ToggleType(FullWidth))

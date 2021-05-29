@@ -40,34 +40,34 @@ const theme = createMuiTheme();
 // banner heading
 theme.typography.h1 = {
   fontFamily: "Poppins",
-  fontSize: "3.3375rem",
+  fontSize: "3.2375rem",
   fontWeight: 600,
   lineHeight: "71.77px",
   [theme.breakpoints.down("lg")]: {
-    fontSize: "2.2rem",
+    fontSize: "2rem",
     lineHeight: "55px",
   },
   [theme.breakpoints.down("md")]: {
-    fontSize: "1.9rem",
-    lineHeight: "48px",
+    fontSize: "1.75rem",
+    lineHeight: "42px",
   },
 };
 
 // section heading
 theme.typography.h2 = {
   fontFamily: "Poppins",
-  fontSize: "2.1875rem",
+  fontSize: "2.0875rem",
   fontWeight: 600,
   lineHeight: "57.05px",
   [theme.breakpoints.down("lg")]: {
-    fontSize: "1.9rem",
+    fontSize: "1.8rem",
   },
   [theme.breakpoints.down("md")]: {
-    fontSize: "1.875rem",
+    fontSize: "1.775rem",
     lineHeight: "35px",
   },
   [theme.breakpoints.down("sm")]: {
-    fontSize: "1.625rem",
+    fontSize: "1.525rem",
     lineHeight: "30px",
   },
 };
@@ -75,34 +75,34 @@ theme.typography.h2 = {
 // special headings
 theme.typography.h3 = {
   fontFamily: "Poppins",
-  fontSize: "2rem",
-  fontWeight: 600,
-  lineHeight: "39.12px",
-  [theme.breakpoints.down("lg")]: {
-    fontSize: "1.5rem",
-  },
-  [theme.breakpoints.down("md")]: {
-    fontSize: "1.255rem",
-  },
-  [theme.breakpoints.down("sm")]: {
-    fontSize: "1.125rem",
-  },
-};
-
-// cards small headings/title
-theme.typography.h4 = {
-  fontFamily: "Poppins",
-  fontSize: "1.375rem",
+  fontSize: "1.8rem",
   fontWeight: 600,
   lineHeight: "39.12px",
   [theme.breakpoints.down("lg")]: {
     fontSize: "1.3rem",
   },
   [theme.breakpoints.down("md")]: {
-    fontSize: "1.25rem",
+    fontSize: "1.055rem",
   },
   [theme.breakpoints.down("sm")]: {
-    fontSize: "1.125rem",
+    fontSize: "1.025rem",
+  },
+};
+
+// cards small headings/title
+theme.typography.h4 = {
+  fontFamily: "Poppins",
+  fontSize: "1.275rem",
+  fontWeight: 600,
+  lineHeight: "39.12px",
+  [theme.breakpoints.down("lg")]: {
+    fontSize: "1.2rem",
+  },
+  [theme.breakpoints.down("md")]: {
+    fontSize: "1.05rem",
+  },
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "0.825rem",
     lineHeight: "34px",
   },
 };
@@ -133,11 +133,11 @@ theme.typography.h6 = {
 // 18px
 theme.typography.subtitle1 = {
   fontFamily: "Poppins",
-  fontSize: "1.375rem", // 22px
+  fontSize: "1.275rem", // 22px
   fontWeight: 500,
   lineHeight: "29.34px",
   [theme.breakpoints.down("lg")]: {
-    fontSize: "1.125rem",
+    fontSize: "1.025rem",
   },
   [theme.breakpoints.down("sm")]: {
     fontSize: "1rem",
@@ -146,7 +146,7 @@ theme.typography.subtitle1 = {
 
 theme.typography.subtitle2 = {
   fontFamily: "Poppins",
-  fontSize: "1.25rem", // 20px
+  fontSize: "1.125rem", // 20px
   fontWeight: 500,
   lineHeight: "29.34px",
   [theme.breakpoints.down("lg")]: {
@@ -168,6 +168,9 @@ theme.typography.body1 = {
   [theme.breakpoints.down("lg")]: {
     fontSize: "1rem",
   },
+  [theme.breakpoints.down("md")]: {
+    fontSize: "0.9rem",
+  },
 };
 
 // 16px
@@ -177,8 +180,8 @@ theme.typography.body2 = {
   fontWeight: 300,
   lineHeight: "29.36px",
   [theme.breakpoints.down("lg")]: {
-    fontSize: "0.85rem",
-    lineHeight: "25px",
+    fontSize: "0.75rem",
+    lineHeight: "22px",
   },
 };
 
@@ -195,14 +198,14 @@ theme.typography.caption = {
 
 theme.typography.button = {
   fontFamily: "Poppins",
-  fontSize: "1.125rem", // 18px
+  fontSize: "1.025rem", // 18px
   fontWeight: 500,
   lineHeight: "32.34px",
   [theme.breakpoints.down("lg")]: {
-    fontSize: "0.9rem", // 16px
+    fontSize: "0.8rem", // 16px
   },
   [theme.breakpoints.down("md")]: {
-    fontSize: "0.75rem", // 16px
+    fontSize: "0.65rem", // 16px
   },
 };
 

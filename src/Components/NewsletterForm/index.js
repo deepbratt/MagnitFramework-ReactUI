@@ -6,15 +6,8 @@ import Triangle from "../../assets/images/Triangle.png";
 import CustomButton from "../CustomButton";
 
 const NewsletterForm = () => {
-  const {
-    root,
-    title,
-    form,
-    input,
-    quarterCircle,
-    halfCircle,
-    triangle,
-  } = NewsletterStyle();
+  const { root, title, form, input, quarterCircle, halfCircle, triangle } =
+    NewsletterStyle();
   return (
     <Card className={root}>
       <Typography className={title} variant="h2" gutterBottom>
@@ -32,14 +25,7 @@ const NewsletterForm = () => {
           id="input-email"
           placeholder="Your Email Address"
         />
-        <CustomButton type="submit" color="primary" variant="contained">
-          <Typography
-            style={{ textAlign: "center", color: "#fff" }}
-            variant="button"
-          >
-            Get Started
-          </Typography>
-        </CustomButton>
+        <CustomButton type="submit">Get Started</CustomButton>
       </form>
     </Card>
   );
