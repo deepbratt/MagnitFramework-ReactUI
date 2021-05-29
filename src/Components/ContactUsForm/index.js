@@ -145,8 +145,6 @@ const ContactUsForm = (props) => {
           className={button}
           fullWidth
           type="submit"
-          size="medium"
-          variant="contained"
           disabled={isLoading}
         >
           {isLoading ? (

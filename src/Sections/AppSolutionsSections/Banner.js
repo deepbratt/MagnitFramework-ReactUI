@@ -27,29 +27,21 @@ const BannerSection = () => {
   ];
   return (
     <>
-      <MuiThemeProvider theme={theme}>
-        <Banner
-          image={bannerImage}
-          backColor={linearBackground}
-          breadCrumb={<BreadCrumb links={breadcrumbData} />}
-        >
-          <Typography color="textPrimary" variant="h1" gutterBottom>
-            {bannerHeading}
-          </Typography>
-          <Typography color="textPrimary" variant="h5" gutterBottom>
-            {bannerParagraph}
-          </Typography>
-          <section style={{ marginTop: "15px" }}>
-            <CustomButton
-              variant="contained"
-              size={Breakpoints()}
-              style={{ backgroundColor: Harlequin, color: whiteColor }}
-            >
-              {bannerButtonText}
-            </CustomButton>
-          </section>
-        </Banner>
-      </MuiThemeProvider>
+      <Banner
+        image={bannerImage}
+        backColor={linearBackground}
+        breadCrumb={<BreadCrumb links={breadcrumbData} />}
+      >
+        <Typography color="textPrimary" variant="h1" gutterBottom>
+          {bannerHeading}
+        </Typography>
+        <Typography color="textPrimary" variant="h5" gutterBottom>
+          {bannerParagraph}
+        </Typography>
+        <section style={{ marginTop: "15px" }}>
+          <CustomButton>{bannerButtonText}</CustomButton>
+        </section>
+      </Banner>
     </>
   );
 };

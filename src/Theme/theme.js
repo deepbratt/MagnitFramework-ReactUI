@@ -42,6 +42,12 @@ export default function createTheme(options) {
           borderRadius: "0px",
           padding: "5px 40px",
         },
+        sizeLarge: {
+          padding: "5px 40px",
+        },
+        sizeSmall: {
+          padding: "5px 20px",
+        }
       },
       MuiInputLabel: {
         root: {
