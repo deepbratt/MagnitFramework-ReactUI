@@ -217,12 +217,15 @@ const Home = (props) => {
       <Grid item md={12} xs={12}>
         <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
           <GlanceSection
-            image1={Data.image1}
-            image2={Data.image2}
-            image3={Data.image3}
-            subtitleOne={Data.subtitleOne}
-            subtitleTwo={Data.subtitleTwo}
-            subtitleThree={Data.subtitleThree}
+          title={Data.title}
+          data={Data.arr}
+          buttonText={Data.buttonText}
+            // image1={Data.image1}
+            // image2={Data.image2}
+            // image3={Data.image3}
+            // subtitleOne={Data.subtitleOne}
+            // subtitleTwo={Data.subtitleTwo}
+            // subtitleThree={Data.subtitleThree}
           />
         </Section>
       </Grid>
