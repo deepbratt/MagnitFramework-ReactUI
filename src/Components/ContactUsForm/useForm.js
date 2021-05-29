@@ -27,6 +27,7 @@ export function useForm(validateOnChange = false) {
   const [toastOpen, setToastOpen] = useState(false)
   const [requestMessage, setRequestMessage] = useState('')
   const { createNewToken, isCancel } = useCancelToken();
+  const [toastType, setToastType] = useState('success')
 
   const validate = (fieldValues = values) => {
     let temp = { ...errors };
@@ -61,7 +62,7 @@ export function useForm(validateOnChange = false) {
 
     if (fieldNames.message in fieldValues)
       temp.message =
-        fieldValues.message.length !== 0 ? "" : messages.isRequired;
+        fieldValues.message.length === 0 ? messages.isRequired : fieldValues.message.length < 30 ? messages.projectDetailValidationMessage : "";
 
     setErrors({
       ...temp,
@@ -94,7 +95,6 @@ export function useForm(validateOnChange = false) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
-      console.log(values);
       let requestBody = {
         name: values.fullName,
         email: values.email,
@@ -105,12 +105,15 @@ export function useForm(validateOnChange = false) {
       setIsLoading(true)
       api.requestQuote(requestBody, createNewToken, isCancel).then((response)=>{
         setIsLoading(false)
-        console.log(response.response)
         setToastOpen(true)
-        setRequestMessage(response.response.data.status.toUpperCase()+": "+response.response.statusText)
-        if(response.response.statusText==="OK" || response.response.status==="success")
+        if(response && response.data && response.data.status==="success")
         {
+          setRequestMessage(response.data.status.toUpperCase()+": "+response.data.message)
           resetForm();
+          setToastType('success')
+        }else{
+          setToastType('error')
+          setRequestMessage(response.response.data.status.toUpperCase()+": "+response.response.data.error.errors[0].msg)
         }
       });
     }
@@ -128,6 +131,7 @@ export function useForm(validateOnChange = false) {
     isLoading,
     toastOpen,
     setToastOpen,
-    requestMessage
+    requestMessage,
+    toastType
   };
 }

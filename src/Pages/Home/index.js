@@ -5,7 +5,7 @@ import Slide from "../../Components/Slider/Container";
 import Solutions from "../../Sections/HomePageSections/SolutionsContext/Solutions";
 import PartnerContext from "../../Sections/HomePageSections/PartnerWithUsContext/Maincontainer";
 import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import ContactUsAndFQA from "../../Sections/HomePageSections/ContactUsAndFQA";
 import { Typography, Hidden } from "@material-ui/core";
 import Section from "../Section";
@@ -17,6 +17,7 @@ import Image5 from "../../assets/images/awardAccredationSection/image 6.png";
 // import CardComponent from "../../Components/CardComponent";
 import { cards } from "./cardData";
 // import CardSlyder from "../../Components/CardSlider";
+import CustomTitle from "../../Pages/Section/CustomTitle";
 import startQuote from "../../assets/images/cards/startQuote.png";
 import endQuote from "../../assets/images/cards/EndingQuoteBlue.png";
 import BackGroudnPatternLeft from "../../assets/OurBlogs/LatestBlogPattern.png";
@@ -50,7 +51,8 @@ export const AwardSectionImages = [Image1, Image2, Image3, Image4, Image5];
 const Home = (props) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { leftRoot, rightRoot, leftPattern, rightPattern } = HomeStyles();
-  const { createNewToken, isCancel } = useCancelToken();
+  // const { createNewToken, isCancel } = useCancelToken();
+
   // const {
   //   // sectionBackgroundColors,
   //   // factCards,
@@ -191,24 +193,21 @@ const Home = (props) => {
     setIsSubmitted(true);
   }
 
-  useEffect(() => {
-    api.getAllQuote(createNewToken, isCancel).then((response) => {
-      console.log(response);
-    });
-  }, []);
-
   return (
     <div className="App">
       <Grid item md={12} xs={12}>
         <Slide />
       </Grid>
       <Grid item md={12} xs={12}>
-        <Section title={ServicesSectionTitle}>
-          <ServicesOffered servicesData={ServicesData} />
+        <Section>
+          <ServicesOffered
+            title={ServicesSectionTitle}
+            servicesData={ServicesData}
+          />
         </Section>
       </Grid>
       <Grid item md={12} xs={12}>
-        <Section backColor={BlueRibbon}>
+        <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
           <Solutions />
         </Section>
       </Grid>
@@ -216,7 +215,7 @@ const Home = (props) => {
         <PartnerContext />
       </Grid>
       <Grid item md={12} xs={12}>
-        <Section backColor={BlueRibbon}>
+        <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
           <GlanceSection
             image1={Data.image1}
             image2={Data.image2}
@@ -228,8 +227,14 @@ const Home = (props) => {
         </Section>
       </Grid>
       {/* TRAINING AND CERTIFICATION */}
-      <Section title={TrainingAndCertificationSectionTitle}>
+      <Section>
         <Grid container direction="row">
+          <Grid item lg={12} md={12} xs={12}>
+            <CustomTitle
+              underlined={true}
+              text={TrainingAndCertificationSectionTitle}
+            />
+          </Grid>
           {TCData &&
             TCData.filter((card, idx) => idx < 4).map((card, index) => (
               <Grid key={index} item xs={12}>
@@ -258,11 +263,10 @@ const Home = (props) => {
         )}
       </Section>
       {/* What do our Client Say */}
-      <Section
-        title={WhatDoClientSaySectionTitle}
-        startQuote={startQuote}
-        endQuote={endQuote}
-      >
+      <Section startQuote={startQuote} endQuote={endQuote}>
+        <Grid item lg={12} md={12} xs={12}>
+          <CustomTitle underlined={true} text={WhatDoClientSaySectionTitle} />
+        </Grid>
         <ReviewSlider
           showArrows={false}
           showDots={false}
@@ -273,7 +277,8 @@ const Home = (props) => {
         {/* <ReviewSlider slides={cardArr} /> */}
       </Section>
       {/* AWARD AND ACCREDITATIONS SECTION */}
-      <Section title={AwardSectionTitle}>
+      <Section>
+        <CustomTitle underlined={true} text={AwardSectionTitle} />
         <div
           style={{
             display: "flex",

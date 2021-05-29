@@ -17,7 +17,15 @@ const CertificationListStyles = makeStyles((theme) => ({
   imageWrapper: {
     "& > img": {
       maxwidth: "458px",
-      maxHeight: "458px",
+      maxHeight: "258px",
+      [theme.breakpoints.down("sm")]: {
+        maxwidth: "300px",
+        maxHeight: "300px",
+      },
+    },
+    "& > svg": {
+      // maxwidth: "200px",
+      maxHeight: "258px",
       [theme.breakpoints.down("sm")]: {
         maxwidth: "300px",
         maxHeight: "300px",

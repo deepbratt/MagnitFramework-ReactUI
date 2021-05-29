@@ -7,7 +7,7 @@ import Breakpoints from "../../../Theme/theme.breakpoints";
 import { Colors } from "../../../Theme/color.constants";
 import { Data } from "../../../Utils/Constants/Language/en/SolutionsText";
 import CustomButton from "../../../Components/CustomButton";
-
+import CustomTitle from "../../../Pages/Section/CustomTitle";
 const Solutions = () => {
   const classes = useStyles();
   const { root } = classes;
@@ -17,10 +17,16 @@ const Solutions = () => {
     <>
       <Grid container>
         <Grid style={{ color: whiteColor }} item lg={12} md={12} xs={12}>
-          <Typography variant="h2">{heading}</Typography>
-          <Typography variant="h5">{subHeading}</Typography>
+          <CustomTitle
+            style={{ marginBottom: "20px" }}
+            underlined={false}
+            subTitle={subHeading}
+            color={whiteColor}
+            text={heading}
+            subTitleColor={whiteColor}
+          />
         </Grid>
-        <Grid style={{ margin: "20px 0" }} container spacing={2}>
+        <Grid style={{ marginBottom: "20px" }} container spacing={2}>
           <Grid item xs={12}>
             <PrimarySection />
           </Grid>

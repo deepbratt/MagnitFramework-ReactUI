@@ -18,9 +18,9 @@ import Img2 from "../../assets/DigitalMarketing/Brown.png";
     persianGreen,
     yellowOrange,
   } = Colors;
-export const ServicesSectionTitle = "Digital Marketing /Services";
-export const HiringSectionTitle = "Digital Marketer /Hiring Options";
-export const WhyHireSectionTitle = "Why /work with Us?";
+export const ServicesSectionTitle = "Digital Marketing Services";
+export const HiringSectionTitle = "Digital Marketer Hiring Options";
+export const WhyHireSectionTitle = "Why work with Us?";
 export const ourExpert="Don’t miss out on opportunities! Hire us to create and execute optimised, lead-generating, traffic to conversion strategies that fit the best to your needs. Reach your ambitious goals with organic answers and laser-focused services";
 export const DoYouWant = "Do You Want to Discuss Your /Project?";
 export const combiningEngineering="From inception to development to launch to analysis and beyond";
@@ -77,6 +77,7 @@ export const marketingServicesData = [
     },
   ];
   export const Data = {
+    title: "Our Work",
     subtitleOne: "Bakers Delight",
     image1 : Img1,
     image2 :Img2,

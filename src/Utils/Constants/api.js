@@ -1,5 +1,5 @@
 import axios from 'axios'
-const BASE_URL = "http://3.14.6.42/api/v1/"
+const BASE_URL = "http://3.14.6.42/v1/"
 const axiosInstance = axios.create({
     baseURL:BASE_URL,
     headers:{
@@ -12,8 +12,7 @@ const axiosInstance = axios.create({
 const api = {
     requestQuote: async function(requestBody, createNewToken, isCancel){
         try{
-            const response = await axiosInstance.get("quote/createQuote", requestBody, {cancelToken:createNewToken})
-            console.log(response)
+            const response = await axiosInstance.post("Quote/createQuote", requestBody, {cancelToken:createNewToken})
             return response
         }catch(error){
             if (isCancel(error)) {

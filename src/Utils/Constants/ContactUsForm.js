@@ -1,6 +1,7 @@
 export const messages = {
   isRequired: "This field is required.",
   notValid: "Input value is not Valid",
+  projectDetailValidationMessage: "Project details should be greater than 30 characters"
 };
 
 export const fieldNames = {

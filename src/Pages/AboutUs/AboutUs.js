@@ -4,6 +4,7 @@ import Main from "../../Sections/MainComponent/AboutMainSection";
 import MissionContext from "../../Sections/Mission&Vision/MissionContext";
 import WhyUsContainer from "./WhyUsContainer";
 import { MainData } from "../../Utils/Constants/Language/AboutUsData";
+import Section from "../Section";
 const AboutUs = () => {
   const { heroImgsrc } = MainData;
   // const { underlined, root, button } = FoundersyStyles();

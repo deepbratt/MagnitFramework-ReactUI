@@ -1,5 +1,6 @@
 import PointList from "../../Components/PointBadge/PointList";
 import Section from "../Section";
+import CustomTitle from "../Section/CustomTitle";
 import { Link } from "react-router-dom";
 import { Typography } from "@material-ui/core";
 import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
@@ -74,24 +75,19 @@ const Services = () => {
           alt=""
           srcset=""
         />
-        <Section title={ServicesSectionTitle} highlightWords={1}>
-          <section style={{ marginBottom: "10px", marginTop: "-40px" }}>
-            <Heading5 subTitle={OurExpertEngineers} />
-          </section>
+        <Section>
+          <CustomTitle style={{marginBottom: "20px"}} text={ServicesSectionTitle} underlined={true}/>
+          <CustomTitle subTitle={OurExpertEngineers}/>
           <PointList data={servicesData} horizontal={false} />
         </Section>
       </div>
-      <Section title={WhyHireSectionTitle} highlightWords={3}>
+      <Section>
+      <CustomTitle underlined={true} text={WhyHireSectionTitle} />
         <PointList data={hireUsData} horizontal={true} lgBreakpoint={6} />
       </Section>
-
-      <GlanceSection
-        subtitleOne={Data.subtitleOne}
-        subtitleTwo={Data.subtitleTwo}
-        subtitleThree={Data.subtitleThree}
-        backColor={skyBlue}
-      />
-      <Section title={DoYouWant}>
+        <GlanceSection subtitleOne={Data.subtitleOne} subtitleTwo={Data.subtitleTwo} subtitleThree={Data.subtitleThree} backColor={skyBlue} />
+      <Section>
+      <CustomTitle underlined={true} text={DoYouWant} />
         <span>
           <CustomButton component={Link} to="/request-a-quote">
             Request a Quote

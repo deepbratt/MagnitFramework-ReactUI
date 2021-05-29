@@ -27,7 +27,8 @@ import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
 import Heading5 from "../../ContainerStructure/Headings/Heading5";
 import Breakpoints from "../../Theme/theme.breakpoints";
-import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
+import {Data} from "../../Utils/Constants/Language/en/GlanceAtWorkData"
+import CustomTitle from "../../Pages/Section/CustomTitle"
 const HireDeveloper = () => {
   const { skyBlue, linearBackground } = Colors;
 
@@ -73,25 +74,35 @@ const HireDeveloper = () => {
           alt=""
           srcset=""
         />
-        <Section title={ServicesSectionTitle} highlightWords={1}>
-          <section style={{ marginBottom: "10px" }}>
-            <Heading5 subTitle={hireDeveloper} />
-          </section>
+        <Section highlightWords={1}>
+          <CustomTitle style={{marginBottom: "20px"}} text={ServicesSectionTitle} underlined={true}/>
+          <CustomTitle subTitle={hireDeveloper}/>
           <PointList data={servicesData} horizontal={false} />
         </Section>
       </div>
-      <Section title={HiringSectionTitle} highlightWords={2}>
+      <Section>
+      <CustomTitle text={HiringSectionTitle} underlined={true}/>
         <OptionsTab />
       </Section>
-      <Section title={WhyHireSectionTitle} highlightWords={3}>
-        <PointList data={hireUsData} horizontal={true} lgBreakpoint={6} />
+      <Section>
+      <CustomTitle text={WhyHireSectionTitle} underlined={true}/>
+        <PointList data={hireUsData} horizontal={true} lgBreakpoint={6}/>
       </Section>
       <GlanceSection backColor={skyBlue} />
-      <Section title={DoYouWant}>
-        <span>
-          <CustomButton component={Link} to="/request-a-quote">
-            Request a Quote
-          </CustomButton>
+      <Section>
+      <CustomTitle text={DoYouWant} underlined={true}/>
+    <span >
+    
+        <CustomButton
+          variant="contained"
+          size={Breakpoints()}
+          color="primary"
+          component={Link}
+          to="/request-a-quote"
+          
+        >
+       Request a Quote
+        </CustomButton>
         </span>
       </Section>
     </CommentSection>

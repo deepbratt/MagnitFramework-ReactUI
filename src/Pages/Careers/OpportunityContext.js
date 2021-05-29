@@ -12,7 +12,7 @@ import {
 } from "../../Utils/Constants/Language/en/CareersData";
 import CustomButton from "../../Components/CustomButton";
 import ReadMore from "../../Components/ReadMore";
-
+import CustomTitle from "../Section/CustomTitle";
 const OpportunityContext = () => {
   const classes = useStyles();
   const {
@@ -34,13 +34,15 @@ const OpportunityContext = () => {
         <Grid item xs={12}>
           <img className={RightPattern} alt="" src={rightPattern} />
           <img className={LeftPattern} alt="" src={leftPattern} />
-          <section style={{ color: whiteColor }}>
-            <Heading4 title={heading} />
+          <section>
+          <CustomTitle color={whiteColor} text={heading} underlined={false}/>
           </section>
         </Grid>
+       
         {/* <section className={cardSec}> */}
         {DataArray.map((data, index) => {
           return (
+           
             <Grid
               xs={12}
               sm={4}
@@ -50,6 +52,7 @@ const OpportunityContext = () => {
               className={card}
               key={index}
             >
+           
               <Grid className={devSec}>
                 <Grid xs={12} className={HeadSec}>
                   <Typography variant="subtitle1">{data.title}</Typography>
@@ -72,12 +75,14 @@ const OpportunityContext = () => {
                   </Typography>
                 </Grid>
               </Grid>
+            
               <Grid xs={12} className={bottomStyle}>
                 <CustomButton>{data.buttonText}</CustomButton>
               </Grid>
             </Grid>
           );
         })}
+       
         {/* </section> */}
         <Grid item xs={12}>
           <CustomButton color="secondary">Learn More</CustomButton>

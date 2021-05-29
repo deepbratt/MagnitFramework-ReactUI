@@ -6,6 +6,7 @@ import Banner from "../../assets/ContactUs/banner.png";
 import {
   RequestAQuote,
   RequestAQuoteSub,
+  ContactUsTitle,
   SomeQuickFactsAboutUs,
   AwardSectionTitleContactUs,
   WorkFlow,
@@ -26,6 +27,7 @@ import { AwardSectionImages } from "../Home";
 import ContactUsStyles from "./style";
 import { footerText } from "../../Utils/Constants/Language";
 import flowchart from "../../assets/ContactUs/flowchart.png"
+import CustomTitle from "../Section/CustomTitle"
 
 const ContactUs = () => {
   const {
@@ -65,12 +67,16 @@ const ContactUs = () => {
           width="600px"
         />
       </Grid>
-      <Section title={WorkFlow} subTitle={RequestAQuoteSub}>
+      <Section>
+      <CustomTitle style={{marginBottom: "20px"}} text={WorkFlow} underlined={true}/>
+          <CustomTitle subTitle={RequestAQuoteSub}/>
 <Grid xs={12}>
 <img src={flowchart} alt="d" style={{width:"100%"}}/>
 </Grid>
       </Section>
-      <Section title={RequestAQuote} subTitle={RequestAQuoteSub}>
+      <Section>
+      <CustomTitle style={{marginBottom: "20px"}} text={RequestAQuote} underlined={true}/>
+          <CustomTitle subTitle={RequestAQuoteSub}/>
         <Grid container>
           <Grid item xs={12} md={7}>
             <div style={{ margin: "50px 0" }} className={awardSection}>
@@ -148,13 +154,14 @@ const ContactUs = () => {
                 padding: "50px 0",
               }}
             >
-              <ContactUsForm styles={label} heading="Contact /Us" />
+              <ContactUsForm styles={label} bool={true} heading="Contact Us" />
             </Paper>
           </Grid>
         </Grid>
       </Section>
       {/* SOME FACTS ABOUT US SECTION */}
-      <Section title={SomeQuickFactsAboutUs}>
+      <Section>
+      <CustomTitle  text={SomeQuickFactsAboutUs} underlined={true}/>
         <Grid container>
           <Grid className={factCard} item xs={12} md={6} lg={4}>
             <FactCard

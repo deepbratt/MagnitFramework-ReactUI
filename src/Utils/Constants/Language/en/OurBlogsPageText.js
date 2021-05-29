@@ -10,7 +10,7 @@ export const BannerText = {
 };
 
 export const TrendingBlogsSectionText = {
-  header: "Trending /Blogs",
+  header: "Trending Blogs",
   cards: [
     {
       coverImage: TrendingBlogCard,
