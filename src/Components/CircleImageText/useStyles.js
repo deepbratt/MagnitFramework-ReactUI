@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
       alignItems:"center",
       width:"400px",
       [theme.breakpoints.down("sm")]: {
-        margin:"0 5%",
+        margin:"0 3%",
       }
      
   }

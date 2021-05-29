@@ -62,7 +62,7 @@ const CaseStudies = () => {
       <Grid
         item
         xs={12}
-        style={{ display: "flex", marginBottom:"150px", marginTop:"50px" }}
+        style={{ display: "flex", marginBottom:"150px", marginTop:"100px" }}
         justify="center"
       >
         <Hidden lgUp>
