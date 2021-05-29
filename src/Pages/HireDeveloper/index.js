@@ -96,7 +96,7 @@ const HireDeveloper = () => {
         <CustomButton
           variant="contained"
           size={Breakpoints()}
-          color="secondary"
+          color="primary"
           component={Link}
           to="/request-a-quote"
           
