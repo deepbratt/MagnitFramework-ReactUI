@@ -179,7 +179,7 @@ const Home = (props) => {
           {TCData &&
             TCData.filter((card, idx) => idx < 4).map((card, index) => (
               <Grid key={index} item xs={12}>
-                <CertificationList root={rootClasses[index]} data={card} />
+                <CertificationList toRight={index%2===0 ? false : true}root={rootClasses[index]} data={card} />
               </Grid>
             ))}
         </Grid>
