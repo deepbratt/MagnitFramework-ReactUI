@@ -16,26 +16,14 @@ const Solutions = () => {
   return (
     <>
       <Grid container className={root} elevation={0}>
-        <Grid style={{color: whiteColor}} item lg={12} md={12} xs={12}>
-            <Typography variant="h2">{heading}</Typography>
-            <Typography variant="h5">{subHeading}</Typography>
+        <Grid style={{ color: whiteColor }} item lg={12} md={12} xs={12}>
+          <Typography variant="h2">{heading}</Typography>
+          <Typography variant="h5">{subHeading}</Typography>
         </Grid>
         <PrimarySection />
         <MidSection />
         <Grid item lg={12} md={12} xs={12}>
-          <CustomButton
-            style={{
-              backgroundColor: whiteColor,
-              padding: ".3rem 1.9rem",
-              color: blackColor,
-              borderRadius: "5px",
-              marginTop: "20px"
-            }}
-            variant="contained"
-            size={Breakpoints()}
-          >
-            See More
-          </CustomButton>
+          <CustomButton color="secondary">See More</CustomButton>
         </Grid>
       </Grid>
     </>

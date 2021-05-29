@@ -24,7 +24,7 @@ const ContactUsForm = (props) => {
     isLoading,
     toastOpen,
     setToastOpen,
-    requestMessage
+    requestMessage,
   } = useForm(true);
 
   const {
@@ -144,15 +144,15 @@ const ContactUsForm = (props) => {
           className={button}
           fullWidth
           type="submit"
-          size="medium"
-          variant="contained"
           disabled={isLoading}
         >
           {isLoading ? (
-          <Grid container justify="center">
-            <CircularProgress />
-          </Grid>
-        ): submit}
+            <Grid container justify="center">
+              <CircularProgress />
+            </Grid>
+          ) : (
+            submit
+          )}
         </CustomButton>
         <Snackbar
           anchorOrigin={{

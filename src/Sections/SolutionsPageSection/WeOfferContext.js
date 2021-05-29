@@ -1,7 +1,6 @@
 import React from "react";
 import { useStyles } from "./weOfferStyles";
 import { Grid, Typography } from "@material-ui/core";
-import Breakpoints from "../../Theme/theme.breakpoints";
 import { Colors } from "../../Theme/color.constants";
 import CustomButton from "../../Components/CustomButton/index";
 import CustomImage from "../../Components/CustomImage";
@@ -27,7 +26,11 @@ const WeOfferContext = ({ data }) => {
                   <Grid item key={index}>
                     <Grid item className={devSec}>
                       <Grid item>
-                        <CustomImage alt="imageIcon" width="50px" src={data.Icon} />
+                        <CustomImage
+                          alt="imageIcon"
+                          width="50px"
+                          src={data.Icon}
+                        />
                         <Typography variant="h5">{data.title}</Typography>
 
                         <Grid
@@ -38,13 +41,7 @@ const WeOfferContext = ({ data }) => {
                             {data.paragraph}
                           </Typography>
                         </Grid>
-                        <CustomButton
-                          variant="contained"
-                          className={button}
-                          size={Breakpoints()}
-                        >
-                          Learn More
-                        </CustomButton>
+                        <CustomButton>Learn More</CustomButton>
                       </Grid>
                     </Grid>
                   </Grid>
