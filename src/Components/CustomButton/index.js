@@ -1,5 +1,6 @@
 import { Button, Typography } from "@material-ui/core";
 import CustomButtonStyles from "./style";
+import Breakpoints from "../../Theme/theme.breakpoints";
 
 const CustomButton = (props) => {
   const { root } = CustomButtonStyles;
@@ -8,8 +9,8 @@ const CustomButton = (props) => {
       variant={props.variant}
       style={{ borderRadius: props.radius }}
       className={`${root} ${props.styles}`}
-      color="primary"
-      size={props.size}
+      color={props.primary}
+      size={props.size ? props.size : Breakpoints()}
       onClick={() => props.handleClick()}
       fullWidth={props.fullWidth}
       {...props}
@@ -21,7 +22,7 @@ const CustomButton = (props) => {
 
 CustomButton.defaultProps = {
   fullWidth: false,
-  size: "medium",
+  color: "primary",
   variant: "contained",
   radius: "5px",
   onClick: () => console.log("buttonClicked"),

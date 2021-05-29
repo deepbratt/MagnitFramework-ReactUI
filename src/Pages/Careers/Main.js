@@ -40,7 +40,12 @@ const Main = (props) => {
               <BreadCrumb links={breadcrumbs} />
             </div>
             <CardContent className={cardSec}>
-              <CustomImage width={props.width} className={hero} alt="hero" src={props.hero} />
+              <CustomImage
+                width={props.width}
+                className={hero}
+                alt="hero"
+                src={props.hero}
+              />
             </CardContent>
           </Card>
           <Card>
@@ -49,9 +54,9 @@ const Main = (props) => {
                 <Heading4 title={heading} />
               </Grid>
               <Grid xs={12} style={{ margin: "20px" }}>
-              <Typography variant="subtitle1" color="inherit">
-              {subHeading}
-              </Typography>
+                <Typography variant="subtitle1" color="inherit">
+                  {subHeading}
+                </Typography>
               </Grid>
               <Grid xs={12} md={8} className={paragraph}>
                 <Typography variant="body1" className={paragraph}>
@@ -62,17 +67,7 @@ const Main = (props) => {
           </Card>
 
           <Grid>
-            <CustomButton
-              style={{
-                textTransform: "none",
-                backgroundColor: Harlequin,
-                color: whiteColor,
-              }}
-              variant="contained"
-              size={Breakpoints()}
-            >
-              {buttonText}
-            </CustomButton>
+            <CustomButton>{buttonText}</CustomButton>
           </Grid>
         </Grid>
       </Grid>
