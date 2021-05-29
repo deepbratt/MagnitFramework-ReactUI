@@ -51,7 +51,7 @@ const Submenu = withStyles(submenuStyles)(
           className={classes.menu}
         >
           {/* <span style={{  textAlign: "left"}}  className={classes.title}>{title}</span> */}
-          <Typography style={{  textAlign: "left"}}  className={classes.title} variant="h5">
+          <Typography style={{  textAlign: "left"}}  className={classes.title} variant="h6">
           {title}
           </Typography>
           <ChevronRight className={classes.moreArrow} />
