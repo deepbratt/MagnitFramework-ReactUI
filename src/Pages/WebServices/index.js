@@ -29,7 +29,7 @@ import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
 import Heading5 from "../../ContainerStructure/Headings/Heading5";
 import Breakpoints from "../../Theme/theme.breakpoints";
-import {Data} from "../../Utils/Constants/Language/en/GlanceAtWorkData"
+import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
 const Services = () => {
   const { skyBlue, linearBackground } = Colors;
 
@@ -59,13 +59,7 @@ const Services = () => {
           {WeProvideExceptional}
         </Typography>
         <span>
-          <CustomButton
-            variant="contained"
-            size={Breakpoints()}
-            color="secondary"
-          >
-            Get Started
-          </CustomButton>
+          <CustomButton>Get Started</CustomButton>
         </span>
       </Banner>
       <div style={{ position: "relative" }}>
@@ -91,18 +85,11 @@ const Services = () => {
       <CustomTitle underlined={true} text={WhyHireSectionTitle} />
         <PointList data={hireUsData} horizontal={true} lgBreakpoint={6} />
       </Section>
-     
         <GlanceSection subtitleOne={Data.subtitleOne} subtitleTwo={Data.subtitleTwo} subtitleThree={Data.subtitleThree} backColor={skyBlue} />
       <Section>
       <CustomTitle underlined={true} text={DoYouWant} />
         <span>
-          <CustomButton
-            variant="contained"
-            size={Breakpoints()}
-            color="secondary"
-            component={Link}
-            to="/request-a-quote"
-          >
+          <CustomButton component={Link} to="/request-a-quote">
             Request a Quote
           </CustomButton>
         </span>

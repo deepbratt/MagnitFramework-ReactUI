@@ -3,7 +3,7 @@ import Section from "../Section";
 import { Link } from "react-router-dom";
 import { Typography } from "@material-ui/core";
 import GlanceSection from "./OurWork";
-import {  hireUsData } from "./whyWorkwithUs";
+import { hireUsData } from "./whyWorkwithUs";
 import { Colors } from "../../Theme/color.constants";
 import Banner from "../../Components/Banner";
 import {
@@ -14,7 +14,7 @@ import {
   ServicesSectionTitle,
   weCutTo,
   WhyHireSectionTitle,
-  Data
+  Data,
 } from "./constants";
 import StarFishPattern from "../../assets/patterns/starfishBlue.png";
 import ServicesSectionStyles from "../WebServices/style";
@@ -51,19 +51,13 @@ const DigitalMarketing = () => {
         breadCrumb={<BreadCrumb links={breadCrumData} />}
       >
         <Typography variant="h1" gutterBottom className={textColor}>
-         {combiningEngineering}
+          {combiningEngineering}
         </Typography>
         <Typography variant="h5" gutterBottom className={textColor}>
           {weCutTo}
         </Typography>
         <span>
-          <CustomButton
-            variant="contained"
-            size={Breakpoints()}
-            color="secondary"
-          >
-            Get Started
-          </CustomButton>
+          <CustomButton>Get Started</CustomButton>
         </span>
       </Banner>
       <div style={{ position: "relative" }}>
@@ -94,13 +88,7 @@ const DigitalMarketing = () => {
       <Section>
       <CustomTitle text={DoYouWant} underlined={true}/>
         <span>
-          <CustomButton
-            variant="contained"
-            size={Breakpoints()}
-            color="secondary"
-            component={Link}
-            to="/request-a-quote"
-          >
+          <CustomButton component={Link} to="/request-a-quote">
             Request a Quote
           </CustomButton>
         </span>

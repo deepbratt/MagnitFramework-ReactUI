@@ -9,7 +9,7 @@ import Paragraph from "../../ContainerStructure/Headings/Paragraphs/Paragraph";
 import BreadCrumb from "../../Components/BreadCrumb";
 import CommentSection from "../../Components/CommentSection";
 import VideoCard from "./TestimonialVideo";
-import  {
+import {
   ClientsHaveToSay,
   subTitle,
   Testmonial,
@@ -20,14 +20,8 @@ import CustomTitle from "../../Pages/Section/CustomTitle"
 // import Section from '../Section';
 function Testimonials() {
   const { linearBackground } = Colors;
-  const {
-    textColor,
-    cardSec,
-    underlined,
-    paragraph,
-    flex,
-    seeMore,
-  } = useStyles();
+  const { textColor, cardSec, underlined, paragraph, flex, seeMore } =
+    useStyles();
 
   const breadCrumData = [
     {
@@ -46,41 +40,34 @@ function Testimonials() {
         backColor={linearBackground}
         breadCrumb={<BreadCrumb links={breadCrumData} />}
       >
-        <Typography variant="h1"  gutterBottom className={textColor}>
-         {Testmonial}
+        <Typography variant="h1" gutterBottom className={textColor}>
+          {Testmonial}
         </Typography>
         <Typography variant="h5" gutterBottom className={textColor}>
-         {subTitle}
+          {subTitle}
         </Typography>
       </Banner>
       <Grid xs={12}>
-       
           <CardContent className={cardSec}>
           <CustomTitle style={{marginBottom: "20px"}} text={Testmonial} underlined={true}/>
           <CustomTitle subTitle={ClientsHaveToSay}/>
           </CardContent>
       </Grid>
-      <Grid
-        container
-        direction="row"
-        justify="center"
-      >
-              <VideoCard/>
-               
+      <Grid container direction="row" justify="center">
+        <VideoCard />
       </Grid>
-    
-      <Grid xs={12} container alignItems="center" justify="center" className={flex}>
-      <CustomButton type="submit" color="primary" variant="contained">
-          <Typography
-            className={seeMore}
-            variant="button"
-          >
-            See More
-          </Typography>
-        </CustomButton>
-        </Grid>
-      </CommentSection>
-    )
+
+      <Grid
+        xs={12}
+        container
+        alignItems="center"
+        justify="center"
+        className={flex}
+      >
+        <CustomButton type="submit">See More</CustomButton>
+      </Grid>
+    </CommentSection>
+  );
 }
 
 export default Testimonials;

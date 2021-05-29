@@ -1,14 +1,11 @@
 import React from "react";
 import { useStyles } from "./containerStyles";
 import { Typography, CardContent, Grid } from "@material-ui/core";
-import Breakpoints from "../../../Theme/theme.breakpoints";
 import { Colors } from "../../../Theme/color.constants";
 import { Data } from "../../../Utils/Constants/Language/en/GlanceAtWorkData";
 import CustomButton from "../../../Components/CustomButton";
 import CustomImage from "../../../Components/CustomImage";
 import CustomTitle from "../../../Pages/Section/CustomTitle";
-import { THEME } from "../../../ContainerStructure/Headings/headingStyles";
-import Paragraph from "../../../ContainerStructure/Headings/Paragraphs/Paragraph";
 const Container = ({ backColor }) => {
   const classes = useStyles();
   const {
@@ -22,7 +19,7 @@ const Container = ({ backColor }) => {
     buttonText,
   } = Data;
   const { whiteColor } = Colors;
-  const { root, card, devSec, cardSec, cardContent, seeMore } = classes;
+  const { root, card, devSec, cardSec, cardContent } = classes;
   return (
     <>
       <Grid
@@ -71,13 +68,7 @@ const Container = ({ backColor }) => {
           </Grid>
         </Grid>
         <Grid item lg={12} md={12} xs={12}>
-          <CustomButton
-            variant="contained"
-            size={Breakpoints()}
-            className={seeMore}
-          >
-            {buttonText}
-          </CustomButton>
+          <CustomButton color="secondary">{buttonText}</CustomButton>
         </Grid>
       </Grid>
     </>

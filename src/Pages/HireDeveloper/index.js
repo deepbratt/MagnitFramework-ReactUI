@@ -1,9 +1,9 @@
 import PointList from "../../Components/PointBadge/PointList";
 import Section from "../Section";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import { Typography } from "@material-ui/core";
 import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
-import {  webDevServicesData as servicesData, } from "../WebServices/webDevServicesData";
+import { webDevServicesData as servicesData } from "../WebServices/webDevServicesData";
 import { whyHireData as hireUsData } from "../WebServices/whyHireData";
 import { Colors } from "../../Theme/color.constants";
 import Banner from "../../Components/Banner";
@@ -14,7 +14,7 @@ import {
   WhyHireSectionTitle,
   Combining,
   WeProvideExceptional,
-  hireDeveloper
+  hireDeveloper,
 } from "./constants";
 import OptionsTab from "../../Components/OptionsTab";
 import StarFishPattern from "../../assets/patterns/starfishBlue.png";
@@ -43,8 +43,7 @@ const HireDeveloper = () => {
     },
   ];
 
-  const { textColor, leftPattern, rightPattern } =
-    ServicesSectionStyles();
+  const { textColor, leftPattern, rightPattern } = ServicesSectionStyles();
   return (
     <CommentSection>
       <Banner
@@ -53,21 +52,14 @@ const HireDeveloper = () => {
         breadCrumb={<BreadCrumb links={breadCrumData} />}
       >
         <Typography variant="h1" gutterBottom className={textColor}>
-         {Combining}
+          {Combining}
         </Typography>
         <Typography variant="h5" gutterBottom className={textColor}>
-         {WeProvideExceptional}
+          {WeProvideExceptional}
         </Typography>
-        <span >
-        <CustomButton
-          variant="contained"
-          size={Breakpoints()}
-          color="secondary"
-        >
-         Get Started
-        </CustomButton>
+        <span>
+          <CustomButton>Get Started</CustomButton>
         </span>
-        
       </Banner>
       <div style={{ position: "relative" }}>
         <CustomImage
@@ -112,9 +104,8 @@ const HireDeveloper = () => {
        Request a Quote
         </CustomButton>
         </span>
-    </Section>
+      </Section>
     </CommentSection>
-    
   );
 };
 

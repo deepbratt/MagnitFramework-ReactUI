@@ -28,19 +28,7 @@ const Solutions = () => {
         <PrimarySection />
         <MidSection />
         <Grid item lg={12} md={12} xs={12}>
-          <CustomButton
-            style={{
-              backgroundColor: whiteColor,
-              padding: ".3rem 1.9rem",
-              color: blackColor,
-              borderRadius: "5px",
-              marginTop: "20px",
-            }}
-            variant="contained"
-            size={Breakpoints()}
-          >
-            See More
-          </CustomButton>
+          <CustomButton color="secondary">See More</CustomButton>
         </Grid>
       </Grid>
     </>

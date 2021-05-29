@@ -21,7 +21,7 @@ import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
 import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
 import CustomTitle from "../Section/CustomTitle"
 const Services = () => {
-  const { linearBackground,skyBlue } = Colors;
+  const { linearBackground, skyBlue } = Colors;
 
   const breadCrumData = [
     {
@@ -48,13 +48,7 @@ const Services = () => {
             {ServicesPageBanner.subtitle}
           </Typography>
           <span>
-            <CustomButton
-              variant="contained"
-              size={Breakpoints()}
-              color="secondary"
-            >
-              {ServicesPageBanner.buttonText}
-            </CustomButton>
+            <CustomButton>{ServicesPageBanner.buttonText}</CustomButton>
           </span>
         </Banner>
 
@@ -77,13 +71,7 @@ const Services = () => {
         <Section>
         <CustomTitle text={DoYouWant} underlined={true}/>
           <span>
-            <CustomButton
-              variant="contained"
-              size={Breakpoints()}
-              color="secondary"
-              component={Link}
-              to="/request-a-quote"
-            >
+            <CustomButton component={Link} to="/request-a-quote">
               Request a Quote
             </CustomButton>
           </span>
