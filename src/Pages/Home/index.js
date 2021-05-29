@@ -5,7 +5,7 @@ import Slide from "../../Components/Slider/Container";
 import Solutions from "../../Sections/HomePageSections/SolutionsContext/Solutions";
 import PartnerContext from "../../Sections/HomePageSections/PartnerWithUsContext/Maincontainer";
 import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import ContactUsAndFQA from "../../Sections/HomePageSections/ContactUsAndFQA";
 import { Typography, Hidden } from "@material-ui/core";
 import Section from "../Section";
@@ -43,15 +43,11 @@ import {
   ServicesData,
 } from "../../Utils/Constants/Language/en/ServicesText";
 import {Data} from "../../Utils/Constants/Language/en/GlanceAtWorkData"
-import api from "../../Utils/Constants/api";
-import axios from 'axios'
-import { useCancelToken } from "../../Utils/CustomHooks/useCancelToken";
 export const AwardSectionImages = [Image1, Image2, Image3, Image4, Image5];
 
 const Home = (props) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { leftRoot, rightRoot } = HomeStyles();
-  const { createNewToken, isCancel } = useCancelToken();
   // const {
   //   // sectionBackgroundColors,
   //   // factCards,
@@ -149,12 +145,6 @@ const Home = (props) => {
     setIsSubmitted(true);
   }
 
-  useEffect(()=>{
-    api.getAllQuote(createNewToken, isCancel).then((response)=>{
-      console.log(response)
-    })
-  },[])
-
   return (
     <div className="App">
       <Grid item md={12} xs={12}>
@@ -184,7 +174,7 @@ const Home = (props) => {
           {TCData &&
             TCData.filter((card, idx) => idx < 4).map((card, index) => (
               <Grid key={index} item xs={12}>
-                <CertificationList root={rootClasses[index]} data={card} />
+                <CertificationList toRight={index%2===0 ? false : true}root={rootClasses[index]} data={card} />
               </Grid>
             ))}
         </Grid>

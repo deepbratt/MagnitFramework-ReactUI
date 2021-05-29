@@ -102,7 +102,7 @@ color:Mirage,
         },
       },
       flex:{
-          margin:"3rem 0rem 5rem 0rem"
+          margin:"2rem 0rem 1rem"
       },
       seeMore:{
         padding: ".3rem 1rem",

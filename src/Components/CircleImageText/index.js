@@ -7,7 +7,7 @@ const CircleImageText = ({ text, textRight=false, innerImg, clickHandler,props }
   const classes = useStyles();
   return (
     <span className={classes.wrapper} onClick={clickHandler}>
-      {textRight && <CircleImageComponent innerImg={innerImg} {...props} />}
+      {textRight && <CircleImageComponent innerImg={innerImg} {...props}  />}
       <Typography
         variant="subtitle1"
         color="textPrimary"
@@ -16,7 +16,7 @@ const CircleImageText = ({ text, textRight=false, innerImg, clickHandler,props }
       >
         {text}
       </Typography>
-      {!textRight && <CircleImageComponent innerImg={innerImg} {...props} />}
+      {!textRight && <span ><CircleImageComponent innerImg={innerImg} {...props} /> </span>}
     </span>
   );
 };
