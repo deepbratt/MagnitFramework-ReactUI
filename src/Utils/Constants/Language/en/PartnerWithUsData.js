@@ -16,7 +16,7 @@ const {
   dataIcon,
 } = icons;
 
-export const PatrnerWithUsSectionTitle = "Why /Us?";
+export const PatrnerWithUsSectionTitle = "Why Us?";
 
 const {
   yellowOrange,

@@ -8,6 +8,7 @@ import {
   adminImg,
 } from "../../Utils/Constants/Language/en/AppSolutionsData";
 import CustomImage from "../../Components/CustomImage"
+import CustomTitle from "../../Pages/Section/CustomTitle"
 import { useStyles } from "./useStyles";
 
 const AdminContext = () => {
@@ -18,9 +19,7 @@ const AdminContext = () => {
       <Grid container className={root}>
         <Grid justify="center" container>
           <Grid item md={12} lg={12} xs={12}>
-            <Typography color="textPrimary" variant="h2">
-              {adminHeading}
-            </Typography>
+          <CustomTitle style={{marginBottom: "20px"}} underlined={false} text={adminHeading} />
           </Grid>
           <Grid item  md={12} lg={4} xs={12}>
             <CustomImage className={image} width="400px" src={adminImg} alt="image" />

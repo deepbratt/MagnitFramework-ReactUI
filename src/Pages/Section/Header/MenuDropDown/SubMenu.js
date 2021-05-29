@@ -3,6 +3,7 @@ import ChevronRight from "@material-ui/icons/ChevronRight";
 import Menu from "material-ui-popup-state/HoverMenu";
 import withStyles from "@material-ui/core/styles/withStyles";
 import MenuItem from "@material-ui/core/MenuItem";
+import Typography from "@material-ui/core/Typography";
 import {
   usePopupState,
   bindHover,
@@ -16,8 +17,9 @@ const submenuStyles = (theme) => ({
   title: {
     flexGrow: 1,
     color: blackColor,
-    fontSize: "20px",
-    textAlign: "left"
+    textAlign: "left",
+
+
   },
   moreArrow: {
     marginRight: theme.spacing(-1),
@@ -28,6 +30,7 @@ const submenuStyles = (theme) => ({
     color: blackColor,
     transition: "all .5s linear",
     backgroundColor: WildSand,
+    marginTop: "10px"
   },
 });
 const Submenu = withStyles(submenuStyles)(
@@ -47,7 +50,10 @@ const Submenu = withStyles(submenuStyles)(
           ref={ref}
           className={classes.menu}
         >
-          <span style={{  textAlign: "left"}}  className={classes.title}>{title}</span>
+          {/* <span style={{  textAlign: "left"}}  className={classes.title}>{title}</span> */}
+          <Typography style={{  textAlign: "left"}}  className={classes.title} variant="h5">
+          {title}
+          </Typography>
           <ChevronRight className={classes.moreArrow} />
         </MenuItem>
         <Menu

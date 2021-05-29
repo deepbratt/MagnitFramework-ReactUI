@@ -8,6 +8,7 @@ import { FQASectionTitle } from "../../../Pages/Home/constants";
 import Section from "../../../Pages/Section/index";
 import QuestionData from "./questions.json";
 import LayoutStyle from "./style";
+import CustomTitle from "../../../Pages/Section/CustomTitle"
 
 const ContactUsAndFQA = () => {
   const { root, wrap, content, cover, form, label } = LayoutStyle();
@@ -31,7 +32,8 @@ const ContactUsAndFQA = () => {
             </Grid>
           </Grid>
           <Grid item xs={12} md={6}>
-            <Section title={FQASectionTitle}>
+            <Section>
+              <CustomTitle style={{marginBottom: "0px"}} text={FQASectionTitle} underlined={true}/>
               <MyAccordion questions={QuestionData} />
             </Section>
           </Grid>

@@ -8,6 +8,7 @@ import { Colors } from "../../Theme/color.constants";
 import CustomImage from "../../Components/CustomImage";
 import CustomButton from "../../Components/CustomButton";
 import BreadCrumb from "../../Components/BreadCrumb";
+import CustomTitle from "../../Pages/Section/CustomTitle"
 const Main = (props) => {
   const { heading, subHeading, para, buttonText } = MainData;
   const classes = useStyles();
@@ -45,8 +46,8 @@ const Main = (props) => {
           </Card>
           <Card>
             <CardContent className={cardSec}>
-              <Grid xs={12} className={textUnderlined}>
-                <Heading4 title={heading} />
+              <Grid xs={12}>
+              <CustomTitle style={{marginBottom: "10px"}} text={heading} underlined={true}/>
               </Grid>
               <Grid xs={12} style={{ margin: "20px" }}>
               <Typography variant="subtitle1" color="inherit">

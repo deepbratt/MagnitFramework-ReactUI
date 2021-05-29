@@ -14,7 +14,6 @@ export const useStyles = makeStyles((theme) => ({
   cardSec: {
     display: "flex",
     width: "100%",
-    marginTop: "40px",
     marginBottom: "40px",
     justifyContent:"space-evenly",
     flexFlow: "wrap",
@@ -63,7 +62,11 @@ cardContent: {
 
 },
 seeMore:{
-  textTransform: "none", 
+  textTransform: "none",
+  "&:hover":{
+    backgroundColor: whiteColor,
+    color:"black"
+  },
   marginLeft: "10px",
   borderRadius: "0px",
   padding: "6px 40px",

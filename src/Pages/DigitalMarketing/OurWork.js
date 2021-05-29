@@ -11,7 +11,7 @@ import {Colors} from "../../Theme/color.constants"
 import {Data} from "./constants"
 import CustomButton from "../../Components/CustomButton/index";
 import CustomImage from "../../Components/CustomImage";
-
+import CustomTitle from "../../Pages/Section/CustomTitle"
 
 const Container = ({backColor}) => {
   const classes = useStyles();
@@ -29,11 +29,8 @@ const Container = ({backColor}) => {
     <>
       <Grid container style={{backgroundColor: backColor}} className={root} elevation={0}>
         
-      <Grid style={{color: whiteColor}} item lg={12} md={12} xs={12}>
-            <Typography variant="h2" >
-            {title}
-            </Typography>
-
+      <Grid item lg={12} md={12} xs={12}>
+      <CustomTitle color={whiteColor} text={title} underlined={false}/>
           </Grid>
         <Grid className={cardSec}>
           <Grid item  xs={12} sm={5} md={4} lg={3}  className={card}>

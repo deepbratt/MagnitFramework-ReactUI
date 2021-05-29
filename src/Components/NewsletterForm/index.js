@@ -20,15 +20,9 @@ const NewsletterForm = () => {
       <Typography className={title} variant="h2" gutterBottom>
         Ready to Discuss Your Project?
       </Typography>
-<<<<<<< HEAD
-      <img className={quarterCircle} src={QuarterCircle} alt="quarterCircle"/>
-      <img className={halfCircle} src={HalfCircle} alt="HalfCircle"/>
-      <img className={triangle} src={Triangle} alt="triangle"/>
-=======
       <CustomImage className={quarterCircle} src={QuarterCircle} />
       <CustomImage className={halfCircle} src={HalfCircle} />
       <CustomImage className={triangle} src={Triangle} />
->>>>>>> dev
       <form className={form}>
         <TextField
           variant="outlined"

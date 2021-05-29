@@ -8,7 +8,8 @@ const breakpoints = createBreakpoints({});
 export const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: MoonWhite,
-    paddingTop: "30px"
+    paddingTop: "60px",
+    paddingBottom: "60px"
   },
   content:{
     marginTop: "40px",

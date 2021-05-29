@@ -15,7 +15,7 @@ import {
 } from "../../Utils/Constants/Language/en/CareersData";
 import CustomButton from "../../Components/CustomButton";
 import ReadMore from "../../Components/ReadMore";
-
+import CustomTitle from "../Section/CustomTitle";
 const OpportunityContext = () => {
   const classes = useStyles();
   const {
@@ -37,8 +37,8 @@ const OpportunityContext = () => {
         <Grid item xs={12}>
           <img className={RightPattern} alt="" src={rightPattern} />
           <img className={LeftPattern} alt="" src={leftPattern} />
-          <section style={{ color: whiteColor }}>
-            <Heading4 title={heading} />
+          <section>
+          <CustomTitle color={whiteColor} text={heading} underlined={false}/>
           </section>
         </Grid>
         {/* <section className={cardSec}> */}
