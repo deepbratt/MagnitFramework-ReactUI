@@ -14,8 +14,10 @@ import { Link } from "react-router-dom";
 import { DoYouWant } from "../WebServices/constants";
 import Breakpoints from "../../Theme/theme.breakpoints";
 import CustomTitle from "../../Pages/Section/CustomTitle"
+import {Colors} from "../../Theme/color.constants"
 const Solutions = () => {
  const {root} = ServicesSectionStyles()
+ const {MoonWhite} = Colors
   return (
     <>
 
@@ -28,9 +30,9 @@ const Solutions = () => {
         <FeaturesSection/>
         </Grid>
         </Section>
-        <Grid item lg={12} md={12} xs={12}>
+        <Section backColor={MoonWhite}>
         <AdminContext/>
-        </Grid>
+        </Section>
         <Section>
         <Grid item lg={12} md={12} xs={12}>
         <StairCaseContext/>

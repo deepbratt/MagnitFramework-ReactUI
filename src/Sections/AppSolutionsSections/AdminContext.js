@@ -12,16 +12,16 @@ import CustomTitle from "../../Pages/Section/CustomTitle"
 import { useStyles } from "./useStyles";
 
 const AdminContext = () => {
-  const { root, content, image } = useStyles();
+  const {content, image } = useStyles();
   return (
     <>
     <MuiThemeProvider theme={theme}>
-      <Grid container className={root}>
+      <Grid container >
         <Grid justify="center" container>
           <Grid item md={12} lg={12} xs={12}>
           <CustomTitle style={{marginBottom: "20px"}} underlined={false} text={adminHeading} />
           </Grid>
-          <Grid item  md={12} lg={4} xs={12}>
+          <Grid item  md={12} lg={5} xs={12}>
             <CustomImage className={image} width="400px" src={adminImg} alt="image" />
           </Grid>
           <Grid className={content} xs={10} item lg={6}>

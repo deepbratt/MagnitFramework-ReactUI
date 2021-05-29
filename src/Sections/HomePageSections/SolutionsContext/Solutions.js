@@ -22,6 +22,7 @@ const Solutions = () => {
             subTitle={subHeading}
             color={whiteColor}
             text={heading}
+            subTitleColor={whiteColor}
           />
         </Grid>
         <PrimarySection />

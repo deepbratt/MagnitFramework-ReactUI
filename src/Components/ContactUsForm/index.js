@@ -43,7 +43,7 @@ const ContactUsForm = (props) => {
     <>
      
      <Section>
-      <CustomTitle style={{marginBottom: "0px"}} underlined={props.bool} color={`${props.color}`} subTitle={subHeading} text={props.heading} />
+      <CustomTitle style={{marginBottom: "0px"}} underlined={props.bool} subTitle={subHeading} subTitleColor={`${props.color}`} color={`${props.color}`} text={props.heading} />
       <form className={form} onSubmit={handleSubmit}>
         <InputLabel className={`${label} ${props.styles}`} htmlFor="input-name">
           {name}
