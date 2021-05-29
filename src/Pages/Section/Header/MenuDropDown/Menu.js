@@ -75,6 +75,7 @@ const CascadingHoverMenus = ({ data, name, route, sub }) => {
               to="/hire-developer"
               activeClassName={active}
               className={link}
+              onClick={popupState.close}
             >
               <Submenu  popupId="moreChoicesMenu" title={sub}>
                 <NavLink to="/home" activeClassName={active} className={link}>
