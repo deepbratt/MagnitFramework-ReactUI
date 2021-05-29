@@ -68,7 +68,6 @@ function Testimonials() {
       </Grid>
     
       </Grid>
- </Grid>
     </CommentSection>
   );
 }
