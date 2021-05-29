@@ -11,7 +11,9 @@ const CareerContainer = () => {
     <>
       <Grid container>
         <Grid item lg={12} md={12} xs={12}>
+        <Section>
           <Main width="550px" hero={banner} />
+          </Section>
         </Grid>
         <Grid item lg={12} md={12} xs={12}>
           <Section title={Data.title}>

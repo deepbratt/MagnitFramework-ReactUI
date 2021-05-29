@@ -37,6 +37,10 @@ const useStyles = makeStyles((theme) => ({
       justifyContent:"flex-start",
       alignItems:"center",
       width:"400px",
+      [theme.breakpoints.down("sm")]: {
+        margin:"0 5%",
+      }
+     
   }
 }));
 

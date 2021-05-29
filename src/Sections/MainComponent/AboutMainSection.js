@@ -5,6 +5,7 @@ import Heading from "../../ContainerStructure/Headings/Heading4";
 import { MainData } from "../../Utils/Constants/Language/AboutUsData";
 import BreadCrumb from "../../Components/BreadCrumb";
 import CustomImage from "../../Components/CustomImage";
+import Section from "../../Pages/Section";
 
 const AboutMainSection = (props) => {
   const { title, paragraph } = MainData;
@@ -26,10 +27,8 @@ const AboutMainSection = (props) => {
           </Card>
           {props.card === true ? (
             <Card>
-              <CardContent className={cardSec}>
-                <section className={underlined}>
-                  <Heading title={title} />
-                </section>
+              <CardContent >
+              <Section title={title}>
                 <section className={paragraphStyle}>
                   {paragraph &&
                     paragraph.map((text, index) => (
@@ -38,6 +37,7 @@ const AboutMainSection = (props) => {
                       </Typography>
                     ))}
                 </section>
+                </Section>
               </CardContent>
             </Card>
           ) : null}
