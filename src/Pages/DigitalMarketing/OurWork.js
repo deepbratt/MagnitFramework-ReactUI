@@ -71,7 +71,7 @@ const Container = ({ backColor }) => {
           </Grid>
         </Grid>
         <Grid item lg={12} md={12} xs={12}>
-          <CustomButton>{buttonText}</CustomButton>
+          <CustomButton color="secondary">{buttonText}</CustomButton>
         </Grid>
       </Grid>
     </>

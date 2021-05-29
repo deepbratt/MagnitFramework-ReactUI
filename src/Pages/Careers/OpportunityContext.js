@@ -80,7 +80,7 @@ const OpportunityContext = () => {
         })}
         {/* </section> */}
         <Grid item xs={12}>
-          <CustomButton>Learn More</CustomButton>
+          <CustomButton color="secondary">Learn More</CustomButton>
         </Grid>
       </Grid>
     </>
