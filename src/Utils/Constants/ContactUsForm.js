@@ -1,7 +1,8 @@
 export const messages = {
   isRequired: "This field is required.",
   notValid: "Input value is not Valid",
-  projectDetailValidationMessage: "Project details should be greater than 30 characters"
+  projectDetailValidationMessage: "Project details should be greater than 30 characters",
+  companyNameLength: "Company Name should be greater than 3 characters"
 };
 
 export const fieldNames = {
@@ -19,7 +20,7 @@ export const regex = {
 const regName = /^(?=.{1,40}$)[a-zA-Z]+(?:[-'. ][a-zA-Z]+)*$/;
 const regTypeName = /^(?=.{0,40}$)[a-zA-Z '.-]*$/;
 // const regPhone = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
-const regPhone = /^[\+]?[0-9]{1}[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4}[-\s\.]?[0-9]{3}$/;
+const regPhone = /^[\+]?[0-9]{1}[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4}[-\s\.]?[0-9]{3,6}$/;
 const regTypePhone = /^[+0-9 ]*$/;
 const regEmail =
   /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
