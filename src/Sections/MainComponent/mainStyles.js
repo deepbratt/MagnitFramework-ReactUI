@@ -45,6 +45,7 @@ export const useStyles = makeStyles((theme) => ({
     // marginBottom: "50px",
     textAlign: "center",
     marginTop: "20px",
+    marginBottom: "20px",
     color: darkSilver,
   
   },

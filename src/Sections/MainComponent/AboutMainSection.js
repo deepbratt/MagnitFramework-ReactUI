@@ -31,14 +31,14 @@ const AboutMainSection = (props) => {
               <CardContent className={cardSec}>
               <CustomTitle style={{marginBottom: "20px"}} text={title} underlined={true}/>
 
-                <section className={paragraphStyle}>
+              <Grid item lg={7} md={7} sm={10} xs={10} className={paragraphStyle}>
                   {paragraph &&
                     paragraph.map((text, index) => (
                       <Typography key={index} color="textSecondary" variant="h5">
                         {text}
                       </Typography>
                     ))}
-                </section>
+                </Grid>
                 
               </CardContent>
             </Card>

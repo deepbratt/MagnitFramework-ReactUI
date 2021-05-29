@@ -58,7 +58,7 @@ export function useForm(validateOnChange = false) {
 
     if (fieldNames.companyName in fieldValues)
       temp.companyName =
-        fieldValues.companyName.length !== 0 ? "" : messages.isRequired;
+        fieldValues.companyName.length === 0 ? messages.isRequired : fieldValues.companyName.length < 3 ? messages.companyNameLength : "";
 
     if (fieldNames.message in fieldValues)
       temp.message =
