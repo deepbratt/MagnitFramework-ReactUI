@@ -62,13 +62,17 @@ const CaseStudies = () => {
       <Grid
         item
         xs={12}
-        style={{ display: "flex", marginBottom:"150px", marginTop:"50px" }}
+        style={{ display: "flex", marginBottom:"150px", marginTop:"100px" }}
         justify="center"
       >
         <Hidden lgUp>
-          <span style={{marginTop:"-120px", marginBottom:"-250px"}}>
+       
+          <span style={{marginTop:"-280px", marginBottom:"-250px"}}>
+          <Section>
             <ResponsiveInterActiveSection scrollRef={elRefs} textData={faqData}/>
+            </Section>
           </span>
+         
         </Hidden>
         <Hidden mdDown>
           <Section>

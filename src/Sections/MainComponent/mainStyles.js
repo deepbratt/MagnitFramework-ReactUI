@@ -30,7 +30,7 @@ export const useStyles = makeStyles((theme) => ({
       flexDirection: "column",
       textAlign: "center",
     },
-    textAlign: "left",
+    textAlign: "center",
     width: "100%",
     justifyContent: "space-around",
     alignItems: "center",
@@ -41,17 +41,12 @@ export const useStyles = makeStyles((theme) => ({
     fontWeight:300
   },
     paragraphStyle: {
-    width: "80%",
+    width: "100%",
     // marginBottom: "50px",
     textAlign: "center",
     marginTop: "20px",
     color: darkSilver,
-    [breakpoints.only("md")]: {
-      width: "500px",
-    },
-    [breakpoints.down("xs")]: {
-      width: "300px",
-    },
+  
   },
   hero: {
     [breakpoints.only("md")]: {
