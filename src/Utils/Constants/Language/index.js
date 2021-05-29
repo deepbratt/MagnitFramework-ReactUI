@@ -121,12 +121,11 @@ export const errorBoundaryText = {
 };
 
 export const caseStudies = {
-  heading: "Case /Studies",
-  subHeading: "On How We Innovate, Implement, and Deliver",
-  demoText:
-    "hello worldhello worldhdhello worldhello imaa baby girld worldhello world",
-  awardsTitle: "Awards & /Accreditations",
-  faqs: [
+  heading:"Case Studies",
+  subHeading:'On How We Innovate, Implement, and Deliver',
+  demoText:"hello worldhello worldhdhello worldhello imaa baby girld worldhello world",
+  awardsTitle:"Awards & /Accreditations",
+  faqs:[
     {
       faqQuestion: "Chat app TaskWare",
       faqAns:

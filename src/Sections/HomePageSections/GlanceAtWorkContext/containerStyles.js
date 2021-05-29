@@ -5,7 +5,6 @@ const { Mariner, whiteColor } = Colors;
 
 export const useStyles = makeStyles((theme) => ({
   root: {
-    paddingTop: "10px",
     margin: "0px",
     paddingBottom: "20px",
     justifyContent: "space-evenly",
@@ -13,7 +12,6 @@ export const useStyles = makeStyles((theme) => ({
   cardSec: {
     display: "flex",
     width: "100%",
-    marginTop: "40px",
     marginBottom: "40px",
     justifyContent: "space-evenly",
     flexFlow: "wrap",
@@ -58,4 +56,5 @@ export const useStyles = makeStyles((theme) => ({
     color: whiteColor,
     padding: "20px",
   },
+
 }));

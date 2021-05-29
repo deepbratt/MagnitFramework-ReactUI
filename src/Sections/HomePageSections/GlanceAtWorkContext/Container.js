@@ -5,6 +5,7 @@ import { Colors } from "../../../Theme/color.constants";
 import { Data } from "../../../Utils/Constants/Language/en/GlanceAtWorkData";
 import CustomButton from "../../../Components/CustomButton";
 import CustomImage from "../../../Components/CustomImage";
+import CustomTitle from "../../../Pages/Section/CustomTitle";
 const Container = ({ backColor }) => {
   const classes = useStyles();
   const {
@@ -27,9 +28,7 @@ const Container = ({ backColor }) => {
         className={root}
         elevation={0}
       >
-        <Grid style={{ color: whiteColor }} item lg={12} md={12} xs={12}>
-          <Typography variant="h2">{title}</Typography>
-        </Grid>
+        <CustomTitle underlined={false} color={whiteColor} text={title} />
         <Grid className={cardSec}>
           <Grid item xs={12} sm={5} md={4} lg={3} className={card}>
             <CardContent>

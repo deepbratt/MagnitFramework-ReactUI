@@ -6,12 +6,13 @@ import {
 import Typography from "@material-ui/core/Typography";
 import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
 import InputField from "../../Components/FormInputs/InputField";
-import SectionHeading from "../../Pages/Section/SectionHeading";
+import CustomTitle from "../../Pages/Section/CustomTitle";
 import { contactUsLabelsText } from "../../Utils/Constants/Language";
 import CustomButton from "../CustomButton";
 import FormStyles from "./style";
 import { useForm } from "./useForm";
 import { fieldNames } from "../../Utils/Constants/ContactUsForm.js";
+import Section from "../../Pages/Section"
 import CustomToast from "../CustomToast/CustomToast";
 
 const ContactUsForm = (props) => {
@@ -41,11 +42,9 @@ const ContactUsForm = (props) => {
 
   return (
     <>
-      <SectionHeading color={`${props.color}`} header={props.heading} />
-      <Typography variant="subtitle2" color="textSecondary" component="h5">
-        {subHeading}
-      </Typography>
-
+     
+     <Section>
+      <CustomTitle style={{marginBottom: "0px"}} underlined={props.bool} subTitle={subHeading} subTitleColor={`${props.color}`} color={`${props.color}`} text={props.heading} />
       <form className={form} onSubmit={handleSubmit}>
         <InputLabel className={`${label} ${props.styles}`} htmlFor="input-name">
           {name}
@@ -162,6 +161,7 @@ const ContactUsForm = (props) => {
           message={requestMessage}
         />
       </form>
+      </Section>
     </>
   );
 };

@@ -32,7 +32,7 @@ export const ServicesPageBanner = {
 };
 
 export const ServicesOfferedSection = {
-  title: "Services /We Offer",
+  title: "Services We Offer",
   subtitle: "are built with cutting edge technologies & customized as you need",
   values: [
     {
@@ -67,7 +67,7 @@ export const ServicesOfferedSection = {
 };
 
 export const BenifitsSection = {
-  title: "Benefits of /Our Sevices",
+  title: "Benefits of Our Sevices",
   data: [
     {
       length: 57,
