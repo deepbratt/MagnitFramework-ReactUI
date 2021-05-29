@@ -20,7 +20,7 @@ import ServicesOffered from "../../Sections/HomePageSections/ServicesContext/Ser
 import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
 import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
 const Services = () => {
-  const { linearBackground,skyBlue } = Colors;
+  const { linearBackground, skyBlue } = Colors;
 
   const breadCrumData = [
     {
@@ -47,20 +47,13 @@ const Services = () => {
             {ServicesPageBanner.subtitle}
           </Typography>
           <span>
-            <CustomButton
-              variant="contained"
-              size={Breakpoints()}
-              color="secondary"
-            >
-              {ServicesPageBanner.buttonText}
-            </CustomButton>
+            <CustomButton>{ServicesPageBanner.buttonText}</CustomButton>
           </span>
         </Banner>
 
         <Grid item xs={12}>
           <Section title={ServicesOfferedSection.title}>
-
-          <ServicesOffered servicesData={ServicesOfferedSection.values}/>
+            <ServicesOffered servicesData={ServicesOfferedSection.values} />
           </Section>
         </Grid>
         <Section title={BenifitsSection.title}>
@@ -75,13 +68,7 @@ const Services = () => {
         <GlanceSection backColor={skyBlue} />
         <Section title={DoYouWant}>
           <span>
-            <CustomButton
-              variant="contained"
-              size={Breakpoints()}
-              color="secondary"
-              component={Link}
-              to="/request-a-quote"
-            >
+            <CustomButton component={Link} to="/request-a-quote">
               Request a Quote
             </CustomButton>
           </span>

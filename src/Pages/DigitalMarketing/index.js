@@ -3,7 +3,7 @@ import Section from "../Section";
 import { Link } from "react-router-dom";
 import { Typography } from "@material-ui/core";
 import GlanceSection from "./OurWork";
-import {  hireUsData } from "./whyWorkwithUs";
+import { hireUsData } from "./whyWorkwithUs";
 import { Colors } from "../../Theme/color.constants";
 import Banner from "../../Components/Banner";
 import {
@@ -14,7 +14,7 @@ import {
   ServicesSectionTitle,
   weCutTo,
   WhyHireSectionTitle,
-  Data
+  Data,
 } from "./constants";
 import StarFishPattern from "../../assets/patterns/starfishBlue.png";
 import ServicesSectionStyles from "../WebServices/style";
@@ -25,8 +25,6 @@ import CommentSection from "../../Components/CommentSection";
 import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
 import Heading5 from "../../ContainerStructure/Headings/Heading5";
-import Breakpoints from "../../Theme/theme.breakpoints";
-
 
 const DigitalMarketing = () => {
   const { skyBlue, linearBackground } = Colors;
@@ -51,19 +49,13 @@ const DigitalMarketing = () => {
         breadCrumb={<BreadCrumb links={breadCrumData} />}
       >
         <Typography variant="h1" gutterBottom className={textColor}>
-         {combiningEngineering}
+          {combiningEngineering}
         </Typography>
         <Typography variant="h5" gutterBottom className={textColor}>
           {weCutTo}
         </Typography>
         <span>
-          <CustomButton
-            variant="contained"
-            size={Breakpoints()}
-            color="secondary"
-          >
-            Get Started
-          </CustomButton>
+          <CustomButton>Get Started</CustomButton>
         </span>
       </Banner>
       <div style={{ position: "relative" }}>
@@ -90,16 +82,18 @@ const DigitalMarketing = () => {
       <Section title={WhyHireSectionTitle} highlightWords={3}>
         <PointList data={hireUsData} horizontal={true} lgBreakpoint={6} />
       </Section>
-        <GlanceSection image1={Data.image1} image2={Data.image2} image3={Data.image3} subtitleOne={Data.subtitleOne} subtitleTwo={Data.subtitleTwo} subtitleThree={Data.subtitleThree}  backColor={skyBlue} />
+      <GlanceSection
+        image1={Data.image1}
+        image2={Data.image2}
+        image3={Data.image3}
+        subtitleOne={Data.subtitleOne}
+        subtitleTwo={Data.subtitleTwo}
+        subtitleThree={Data.subtitleThree}
+        backColor={skyBlue}
+      />
       <Section title={DoYouWant}>
         <span>
-          <CustomButton
-            variant="contained"
-            size={Breakpoints()}
-            color="secondary"
-            component={Link}
-            to="/request-a-quote"
-          >
+          <CustomButton component={Link} to="/request-a-quote">
             Request a Quote
           </CustomButton>
         </span>

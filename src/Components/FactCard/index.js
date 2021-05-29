@@ -11,7 +11,7 @@ const FactCard = ({ backColor, icon, title, subtitle }) => {
       }}
     >
       {icon && <img height="60px" src={icon} alt="" />}
-      <Typography className={header} variant="h2">
+      <Typography className={header} variant="h4">
         {title}
       </Typography>
       <Typography className={subText} variant="subtitle2" gutterBottom>

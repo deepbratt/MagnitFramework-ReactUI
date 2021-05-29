@@ -1,4 +1,9 @@
-import { InputLabel } from "@material-ui/core";
+import {
+  CircularProgress,
+  Grid,
+  InputLabel,
+  Snackbar,
+} from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
 import InputField from "../../Components/FormInputs/InputField";
@@ -7,59 +12,20 @@ import { contactUsLabelsText } from "../../Utils/Constants/Language";
 import CustomButton from "../CustomButton";
 import FormStyles from "./style";
 import { useForm } from "./useForm";
-import {
-  messages,
-  fieldNames,
-  regex,
-} from "../../Utils/Constants/ContactUsForm.js";
-
-const initialFValues = {
-  fullName: "",
-  email: "",
-  mobile: "",
-  companyName: "",
-  message: "",
-};
+import { fieldNames } from "../../Utils/Constants/ContactUsForm.js";
 
 const ContactUsForm = (props) => {
   const { form, label, button, privacyPolicy } = FormStyles();
-
-  const validate = (fieldValues = values) => {
-    let temp = { ...errors };
-    if (fieldNames.fullName in fieldValues)
-      temp.fullName = fieldValues.fullName ? "" : messages.isRequired;
-    if (fieldNames.email in fieldValues)
-      temp.email =
-        fieldValues.email.length === 0
-          ? messages.isRequired
-          : regex.email.test(fieldValues.email)
-          ? ""
-          : messages.notValid.email;
-
-    if (fieldNames.mobile in fieldValues)
-      temp.mobile = fieldValues.mobile.length > 9 ? "" : messages.isRequired;
-
-    if (fieldNames.companyName in fieldValues)
-      temp.companyName =
-        fieldValues.companyName.length !== 0 ? "" : messages.isRequired;
-
-    if (fieldNames.message in fieldValues)
-      temp.message =
-        fieldValues.message.length !== 0 ? "" : messages.isRequired;
-
-    setErrors({
-      ...temp,
-    });
-
-    if (fieldValues === values)
-      return Object.values(temp).every((x) => x === "");
-  };
-
-  const { values, errors, setErrors, handleInputChange, resetForm } = useForm(
-    initialFValues,
-    true,
-    validate
-  );
+  const {
+    values,
+    errors,
+    handleInputChange,
+    handleSubmit,
+    isLoading,
+    toastOpen,
+    setToastOpen,
+    requestMessage,
+  } = useForm(true);
 
   const {
     subHeading,
@@ -71,14 +37,6 @@ const ContactUsForm = (props) => {
     submit,
     privacy,
   } = contactUsLabelsText;
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (validate()) {
-      console.log(values);
-      resetForm();
-    }
-  };
 
   return (
     <>
@@ -172,9 +130,7 @@ const ContactUsForm = (props) => {
         />
 
         <div className={privacyPolicy}>
-          <InfoOutlinedIcon
-            style={{ color: props.captionColor }}
-          />
+          <InfoOutlinedIcon style={{ color: props.captionColor }} />
           <Typography
             style={{ color: props.captionColor }}
             variant="caption"
@@ -188,11 +144,26 @@ const ContactUsForm = (props) => {
           className={button}
           fullWidth
           type="submit"
-          size="medium"
-          variant="contained"
+          disabled={isLoading}
         >
-          {submit}
+          {isLoading ? (
+            <Grid container justify="center">
+              <CircularProgress />
+            </Grid>
+          ) : (
+            submit
+          )}
         </CustomButton>
+        <Snackbar
+          anchorOrigin={{
+            vertical: "bottom",
+            horizontal: "left",
+          }}
+          open={toastOpen}
+          onClose={() => setToastOpen(false)}
+          autoHideDuration={5000}
+          message={requestMessage}
+        />
       </form>
     </>
   );

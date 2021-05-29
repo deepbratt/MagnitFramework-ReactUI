@@ -1,9 +1,6 @@
 import React from "react";
 import { useStyles } from "./careerStyles";
-import {
-  Grid,
-  Typography,
-} from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import Heading4 from "../../ContainerStructure/Headings/Heading4";
 import Breakpoints from "../../Theme/theme.breakpoints";
 import { Colors } from "../../Theme/color.constants";
@@ -55,18 +52,14 @@ const OpportunityContext = () => {
             >
               <Grid className={devSec}>
                 <Grid xs={12} className={HeadSec}>
-                  <Typography variant="subtitle1">
-                    {data.title}
-                  </Typography>
+                  <Typography variant="subtitle1">{data.title}</Typography>
                 </Grid>
                 <Grid className={remoteArea}>
                   <div style={{ marginRight: ".5rem" }}>
                     <img alt="" width="10px" src={data.icon} />
                   </div>
                   <div>
-                    <Typography variant="subtitle2">
-                      {data.span}
-                    </Typography>
+                    <Typography variant="subtitle2">{data.span}</Typography>
                   </div>
                 </Grid>
                 <Grid xs={12} className={para}>
@@ -80,33 +73,14 @@ const OpportunityContext = () => {
                 </Grid>
               </Grid>
               <Grid xs={12} className={bottomStyle}>
-                <CustomButton
-                  style={{
-                    textTransform: "none",
-                  }}
-                  variant="contained"
-                  className={button}
-                  size={Breakpoints()}
-                >
-                  {data.buttonText}
-                </CustomButton>
+                <CustomButton>{data.buttonText}</CustomButton>
               </Grid>
             </Grid>
           );
         })}
         {/* </section> */}
         <Grid item xs={12}>
-          <CustomButton
-            style={{
-              textTransform: "none",
-              backgroundColor: Harlequin,
-              color: whiteColor,
-            }}
-            variant="contained"
-            size={Breakpoints()}
-          >
-            Learn More
-          </CustomButton>
+          <CustomButton>Learn More</CustomButton>
         </Grid>
       </Grid>
     </>
