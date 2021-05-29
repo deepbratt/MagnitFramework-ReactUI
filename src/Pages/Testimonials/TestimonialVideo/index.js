@@ -1,11 +1,8 @@
 import React from "react";
 import {
-  Card,
   Grid,
   CardContent,
   CardMedia,
-  CardActionArea,
-  CardActions,
   Typography,
   CardHeader,
 } from "@material-ui/core";
@@ -41,7 +38,7 @@ const VideoCard = ({ Img, detail, avatar, name, date }) => {
           </Typography>
         }
         subheader={
-          <Rating name="read-only" value={4} readOnly className={rating} />
+          <Rating name="read-only" value={5} readOnly className={rating} />
         }
         className={header}
       />

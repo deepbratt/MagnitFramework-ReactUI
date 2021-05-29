@@ -1,7 +1,6 @@
 import React from "react";
-import { useStyles, THEME } from "./solutionStyles";
-import { Typography, Card, CardContent, Grid } from "@material-ui/core";
-import { MuiThemeProvider } from "@material-ui/core/styles";
+import { useStyles } from "./solutionStyles";
+import { Typography, Card, Grid } from "@material-ui/core";
 import * as icons from "../../../assets/icons/icon.constants";
 import { Data } from "../../../Utils/Constants/Language/en/SolutionsText";
 import { Colors } from "../../../Theme/color.constants";
@@ -31,7 +30,7 @@ const SolutionsSecondarySection = () => {
           </Grid>
         </Grid>
         <Card className={card}>
-          <CardContent>
+
             <Grid item className={devSec}>
               <CustomImage
                 alt="icon"
@@ -44,11 +43,10 @@ const SolutionsSecondarySection = () => {
                   {portalTitle}
                 </Typography>
             </Grid>
-          </CardContent>
         </Card>
 
         <Card className={card}>
-          <CardContent>
+
             <Grid item className={devSec}>
               <CustomImage
                 alt="icon"
@@ -61,10 +59,8 @@ const SolutionsSecondarySection = () => {
                   {datingTitle}
                 </Typography>
             </Grid>
-          </CardContent>
         </Card>
         <Card className={card}>
-          <CardContent>
             <Grid item className={devSec}>
               <CustomImage
                 alt="icon"
@@ -77,7 +73,6 @@ const SolutionsSecondarySection = () => {
                   {fitnessTitle}
                 </Typography>
             </Grid>
-          </CardContent>
         </Card>
       </Grid>
     </>

@@ -1,5 +1,4 @@
 import {
-  Avatar,
   Card,
   CardActions,
   CardContent,
@@ -7,22 +6,23 @@ import {
   Typography,
 } from "@material-ui/core";
 import CustomButton from "../../Components/CustomButton";
+import CustomImage from "../../Components/CustomImage";
 import OurBlogsStyles from "./style";
 
 const TrendingBlogs = ({ featureImage, cardData }) => {
   const { detail, title, body, buttonText } = cardData;
-  const { avatar, authName, authDesig, tag, date } = detail;
+  const { date } = detail;
   const { coverImage, content, blogDetail, light } = OurBlogsStyles();
   return (
     <Grid container>
       <Grid item xs={12} lg={6}>
-        <img className={coverImage} src={featureImage} alt="" />
+        <CustomImage className={coverImage} src={featureImage} alt="" />
       </Grid>
       <Grid item xs={12} lg={6}>
         <Card>
           <CardContent className={content}>
             <div className={blogDetail}>
-              <div className="left">
+              {/* <div className="left">
                 <div>
                   <Avatar src={avatar} />
                 </div>
@@ -30,28 +30,28 @@ const TrendingBlogs = ({ featureImage, cardData }) => {
                   <Typography variant="h6">{authName}</Typography>
                   <Typography
                     className={light}
-                    variant="subtitle2"
+                    variant="body2"
                     component="p"
                   >
                     {authDesig}
                   </Typography>
                 </div>
-              </div>
+              </div>  */}
               <div>
-                <Typography align="right" variant="subtitle2" component="p">
-                  {tag}
-                </Typography>
+                {/* <Typography align="right" variant="h6" component="p">
+                  {category}
+                </Typography> */}
                 <Typography
                   className={light}
                   align="right"
-                  variant="subtitle2"
+                  variant="body2"
                   component="p"
                 >
                   {date}
                 </Typography>
               </div>
             </div>
-            <Typography variant="h4" gutterBottom>
+            <Typography variant="h5" gutterBottom>
               {title}
             </Typography>
             {body &&

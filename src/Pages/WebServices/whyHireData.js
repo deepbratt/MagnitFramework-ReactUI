@@ -6,7 +6,6 @@ import {
   LifeTimeSupportIcon,
   DataSecuityIcon,
   FlexibleBillingIcon,
-  AlwaysOnTimeIcon,
   TransparencyIcon,
   ConsultationIcon,
 } from "../../assets/icons/icon.constants";
@@ -20,13 +19,13 @@ const {
   yellowOrange,
   heliotrope,
   blueGreen,
-  skyblue,
   pastelOrange,
   hanBlue,
 } = Colors;
 
 export const whyHireData = [
   {
+    length: 70,
     color: Orchid,
     icon: VettedResourceIcon,
     title: "Vetted Resource",
@@ -34,6 +33,7 @@ export const whyHireData = [
      "Our developers harbor industry-specific skills and have been added to our talent pool after a series of security checks and verification",
   },
   {
+    length: 57,
     color: orangeRed,
     icon: LanguageIcon,
     title: "Speaks your Language",
@@ -41,6 +41,7 @@ export const whyHireData = [
       "We create a deep understanding of your market and target audience before creating a solution that echoes your business",
   },
   {
+    length: 71,
     color: heliotrope,
     icon: DataSecuityIcon,
     title: "Data Security",
@@ -48,6 +49,7 @@ export const whyHireData = [
       "Our client’s security is our top priority. Any confidential information shared with us is protected with latest security measures, tools and regulations.",
   },
   {
+    length: 57,
     color: lightblue,
     icon: RiskFreeIcon,
     title: "Risk-Free Trial",
@@ -55,6 +57,7 @@ export const whyHireData = [
       "We open doors for you to have a trial of the service we offer. You can opt of the service with us based on your experience.",
   },
   {
+    length: 57,
     color: blueGreen,
     icon:   FlexibleBillingIcon,
     
@@ -63,6 +66,7 @@ export const whyHireData = [
       "We keep your needs in mind. Our services are cost-effective, quoting you for only the services you requested as you go along the process with complete transparency.",
   },
   {
+    length: 60,
     color: hanBlue,
     icon: ConsultationIcon,
     title: "Consultative Approach",
@@ -70,6 +74,7 @@ export const whyHireData = [
       "We dedicate ourselves to understanding your needs and problems before we provide solutions unique to your business that work flawlessly every time, for every user, in myriad situations.",
   },
   {
+    length: 57,
     color: pictonBlue,
     icon: Quality,
     title: "Quality",
@@ -77,6 +82,7 @@ export const whyHireData = [
       "Strict Quality control is the pillar of our customized solutions. An independent team makes sure that there is no compromise on Quality solutions. Our aim is to be the best through requirement to delivery.",
   },
   {
+    length: 70,
     color: yellowOrange,
     icon: LifeTimeSupportIcon,
     title: "Life-Time Support",
@@ -85,6 +91,7 @@ export const whyHireData = [
   },
   
   {
+    length: 57,
     color: pastelOrange,
     icon: TransparencyIcon,
     title: "Transparency",

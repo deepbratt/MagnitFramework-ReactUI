@@ -1,6 +1,6 @@
 import Grid from "@material-ui/core/Grid";
 import { connect } from "react-redux";
-import Services from "../../Sections/HomePageSections/ServicesContext/Services";
+import ServicesOffered from "../../Sections/HomePageSections/ServicesContext/Services";
 import Slide from "../../Components/Slider/Container";
 import Solutions from "../../Sections/HomePageSections/SolutionsContext/Solutions";
 import PartnerContext from "../../Sections/HomePageSections/PartnerWithUsContext/Maincontainer";
@@ -17,10 +17,12 @@ import Image5 from "../../assets/images/awardAccredationSection/image 6.png";
 // import CardComponent from "../../Components/CardComponent";
 import { cards } from "./cardData";
 // import CardSlyder from "../../Components/CardSlider";
+import CustomTitle from "../../Pages/Section/CustomTitle"
 import startQuote from "../../assets/images/cards/startQuote.png";
 import endQuote from "../../assets/images/cards/EndingQuoteBlue.png";
 import { Colors } from "../../Theme/color.constants";
 import {
+  ServicesSectionTitle,
   AwardSectionTitle,
   ContactUsTitle,
   TrainingAndCertificationSectionTitle,
@@ -37,7 +39,10 @@ import QuoteCard from "../../Components/QuoteCard";
 import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
 import ReviewSlider from "../../Components/ReviewSlider";
-
+import {
+  ServicesData,
+} from "../../Utils/Constants/Language/en/ServicesText";
+import {Data} from "../../Utils/Constants/Language/en/GlanceAtWorkData"
 export const AwardSectionImages = [Image1, Image2, Image3, Image4, Image5];
 
 const Home = (props) => {
@@ -147,27 +152,29 @@ const Home = (props) => {
       </Grid>
       <Grid item md={12} xs={12}>
         <Section>
-          <Services {...props} />
+          <ServicesOffered title={ServicesSectionTitle} servicesData={ServicesData} />
         </Section>
       </Grid>
       <Grid item md={12} xs={12}>
         <Solutions />
       </Grid>
       <Grid item md={12} xs={12}>
-        <Section>
-          <PartnerContext />
-        </Section>
+        <PartnerContext />
       </Grid>
       <Grid item md={12} xs={12}>
-        <GlanceSection backColor={BlueRibbon} />
+      <Section backColor={BlueRibbon}>
+        <GlanceSection image1={Data.image1} image2={Data.image2} image3={Data.image3} subtitleOne={Data.subtitleOne} subtitleTwo={Data.subtitleTwo} subtitleThree={Data.subtitleThree}  backColor={BlueRibbon} />    </Section>
       </Grid>
       {/* TRAINING AND CERTIFICATION */}
-      <Section title={TrainingAndCertificationSectionTitle}>
+      <Section>
         <Grid container direction="row">
+        <Grid item lg={12} md={12} xs={12}>
+        <CustomTitle underlined={true} text={TrainingAndCertificationSectionTitle} />
+        </Grid>
           {TCData &&
             TCData.filter((card, idx) => idx < 4).map((card, index) => (
               <Grid key={index} item xs={12}>
-                <CertificationList root={rootClasses[index]} data={card} />
+                <CertificationList toRight={index%2===0 ? false : true}root={rootClasses[index]} data={card} />
               </Grid>
             ))}
         </Grid>
@@ -189,10 +196,12 @@ const Home = (props) => {
       </Section>
       {/* What do our Client Say */}
       <Section
-        title={WhatDoClientSaySectionTitle}
         startQuote={startQuote}
         endQuote={endQuote}
       >
+         <Grid item lg={12} md={12} xs={12}>
+        <CustomTitle underlined={true} text={WhatDoClientSaySectionTitle} />
+        </Grid>
         <ReviewSlider
           showArrows={false}
           showDots={false}
@@ -203,7 +212,8 @@ const Home = (props) => {
         {/* <ReviewSlider slides={cardArr} /> */}
       </Section>
       {/* AWARD AND ACCREDITATIONS SECTION */}
-      <Section title={AwardSectionTitle}>
+      <Section>
+      <CustomTitle underlined={true} text={AwardSectionTitle} />
         <div
           style={{
             display: "flex",
@@ -214,10 +224,10 @@ const Home = (props) => {
           {AwardSectionImages &&
             AwardSectionImages.map((image, index) => (
               <CustomImage
-                key={index}
                 style={{ margin: "10px 40px", width: "130px", color: Mirage }}
                 src={image}
                 alt={`client${index}`}
+                key={`awards-accred-${index}`}
               />
             ))}
         </div>

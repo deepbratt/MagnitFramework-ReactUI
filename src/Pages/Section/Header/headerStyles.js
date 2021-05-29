@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import { Colors } from "../../../Theme/color.constants";
 
-const { WildSand, harlequinDark, blackColor, greyColor, Ash } =
+const { WildSand, blackColor } =
   Colors;
 
 export const THEME = createMuiTheme({
@@ -98,14 +98,9 @@ export const useStyles = makeStyles((theme) => ({
   },
   menu: {
     width: "300px",
-    border: `1px solid ${Ash}`,
     display: "flex",
     justifyContent: "center",
     transition: "all .5s linear",
     backgroundColor: WildSand,
-    
-
-   
-  
   },
 }));

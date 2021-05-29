@@ -4,7 +4,9 @@ const { Citrine, darkJungleGreen } = Colors;
 
 const FooterStyle = makeStyles((theme) => ({
   root: {
+    position: "relative",
     backgroundColor: darkJungleGreen,
+    // REMOVED - FOOTER PADDING
     padding: "40px 150px",
     [theme.breakpoints.down("lg")]: {
       padding: "40px 100px",
@@ -30,22 +32,38 @@ const FooterStyle = makeStyles((theme) => ({
       color: Citrine,
     },
   },
+  copyright: {
+    display: "flex",
+    [theme.breakpoints.down("md")]: {
+      justifyContent: "center",
+    },
+  },
+
   policy: {
     display: "flex",
     justifyContent: "flex-end",
+    [theme.breakpoints.down("md")]: {
+      justifyContent: "center",
+    },
     "& > *": {
-      margin: "0 0 0 15px",
+      textDecoration: "none",
+      color: "white",
+      marginLeft: "18px",
+      [theme.breakpoints.down("md")]: {
+        textAlign: "center",
+        marginRight: "0px",
+      },
     },
   },
   contact: {
     display: "flex",
-    "& > img": {
-      maxWidth: "46px",
-      maxHeight: "46px",
-      margin: "10px 10px 0px 0px",
-      padding: "15px 18px",
-      border: "1px solid white",
-      borderRadius: "5px",
+    justifyContent: "flex-start",
+    alignItems: "center",
+    alignContent: "center",
+
+    "& > a > img": {
+      height: "100%",
+      padding: "0 15px 18px 0",
     },
   },
   sectionBorder: {

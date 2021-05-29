@@ -37,24 +37,23 @@ class ErrorBoundary extends React.Component {
       errorImage,
       textWrapper,
       errorDetails,
-      footerWrapper
+      footerWrapper,
     } = ErrorBoundaryStyles;
     if (this.state.hasError) {
       // You can render any custom fallback UI
       return (
         <div style={root}>
           <div style={header}>
-            <CustomButton
-              href={window.location.origin}
-              size={"Large"}
-              variant={"none"}
-              color="transparent"
-            >
+            <CustomButton href={window.location.origin}>
               {<img src={MagnitLogo} alt="magnit_logo" style={logo} />}
             </CustomButton>
             <CustomButton href={window.location.origin}>Home</CustomButton>
           </div>
-          <CustomImage src={ErrorBoundaryImage} alt="error-image" style={errorImage} />
+          <CustomImage
+            src={ErrorBoundaryImage}
+            alt="error-image"
+            style={errorImage}
+          />
           <div style={textWrapper}>
             <h1>{errorBoundaryText.heading}</h1>
             <h3>{errorBoundaryText.error}</h3>
@@ -65,13 +64,14 @@ class ErrorBoundary extends React.Component {
             </details>
           </div>
           <div style={footerWrapper}>
-            <CustomButton
-              variant={"outlined"} 
-              href={window.location.origin}
-              color="primary"
-              size={"Large"}
-            >
-              {<img src={MagnitLogoWhite} alt="magnit_logo_white" style={logo}/>}
+            <CustomButton variant={"outlined"} href={window.location.origin}>
+              {
+                <img
+                  src={MagnitLogoWhite}
+                  alt="magnit_logo_white"
+                  style={logo}
+                />
+              }
             </CustomButton>
           </div>
         </div>

@@ -35,7 +35,9 @@ const OurBlogsStyles = makeStyles((theme) => ({
     fontWeight: "300",
   },
   latestBlogCard: {
-    width: "95%",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
     borderBottomLeftRadius: "5px",
     borderBottomRightRadius: "5px",
     boxShadow: "0px 4px 80px 15px rgba(0, 0, 0, 0.06)",
@@ -44,17 +46,20 @@ const OurBlogsStyles = makeStyles((theme) => ({
     },
   },
   coverImg: {
-    height: "200px",
-    maxHeight: "200px",
+    width: "100%",
+    // height: "100%",
   },
 
   latestBlogCardContent: {
     padding: "15px",
+    "& > *": {
+      textDecoration: "none",
+    },
   },
   latestBlogDetailCategory: {
     borderLeft: `3px solid ${BlueRibbon}`,
     borderRight: `3px solid ${BlueRibbon}`,
-    margin: "0 10px",
+    // margin: "0 10px",
     padding: "0 10px",
   },
   latestBlogDetail: {
@@ -76,16 +81,18 @@ const OurBlogsStyles = makeStyles((theme) => ({
   dateStyle: {
     fontSize: "0.75rem",
     fontWeight: "400",
+    marginLeft: "5px",
   },
   leftPattern: {
     position: "absolute",
     left: "0%",
     bottom: "-1%",
+    zIndex: 0,
   },
   rightPattern: {
     position: "absolute",
     right: "0%",
-    top: "-20%",
+    top: "-10%",
   },
 }));
 

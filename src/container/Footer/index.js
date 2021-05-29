@@ -1,6 +1,6 @@
 import { Grid } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import FooterStyle from "./style";
 import IconFB from "../../assets/images/icon-fb.png";
 import IconTwitter from "../../assets/images/icon-twitter.png";
@@ -10,7 +10,8 @@ import { footerText } from "../../Utils/Constants/Language";
 import CustomImage from "../../Components/CustomImage";
 
 const Footer = () => {
-  const { root, logo, section, policy, contact, sectionBorder } = FooterStyle();
+  const { root, logo, section, policy, contact, sectionBorder, copyright } =
+    FooterStyle();
   const {
     contactUs,
     navigation,
@@ -34,9 +35,15 @@ const Footer = () => {
             </Typography>
 
             <div className={contact}>
-              <CustomImage src={IconFB} alt="Facebook Icon" />
-              <CustomImage src={IconTwitter} alt="Twitter Icon" />
-              <CustomImage src={IconLI} alt="Linked Icon" />
+              <NavLink to="/fb-link">
+                <CustomImage src={IconFB} alt="Facebook Icon" />
+              </NavLink>
+              <NavLink to="/twitter-link">
+                <CustomImage src={IconTwitter} alt="Twitter Icon" />
+              </NavLink>
+              <NavLink to="/li-link">
+                <CustomImage src={IconLI} alt="Linked Icon" />
+              </NavLink>
             </div>
           </div>
         </Grid>
@@ -45,12 +52,12 @@ const Footer = () => {
             <Typography align="left" gutterBottom variant="h5" component="h5">
               {navigation.title}
             </Typography>
-            {navigation.links.map((item, idx) => (
-              <Link key={idx} to={`\${item}`}>
+            {navigation.links.map((link, idx) => (
+              <NavLink key={idx} to={link.route}>
                 <Typography align="left" gutterBottom variant="caption">
-                  {item}
+                  {link.value}
                 </Typography>
-              </Link>
+              </NavLink>
             ))}
           </div>
         </Grid>
@@ -75,7 +82,7 @@ const Footer = () => {
 
         <Grid item xs={12} md={4} lg={2}>
           <div className={section}>
-            <Typography align="left" gutterBottom variant="h6">
+            <Typography align="left" gutterBottom variant="h5">
               {addressSection.title}
             </Typography>
             {addressSection.address.map((location, index) => (
@@ -92,28 +99,35 @@ const Footer = () => {
         </Grid>
       </Grid>
       <Grid className={sectionBorder} container>
-        <Grid item xs={12} md={6}>
-          <Typography
-            className="copyrights"
-            align="left"
-            gutterBottom
-            variant="caption"
-            component="p"
-          >
-            {copyrights}
-          </Typography>
+        <Grid item xs={12} md={12} lg={6}>
+          <div className={copyright}>
+            <Typography
+              align="left"
+              gutterBottom
+              variant="caption"
+              component="p"
+            >
+              {copyrights}
+            </Typography>
+          </div>
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={12} lg={6}>
           <div className={policy}>
-            <Typography gutterBottom variant="caption">
-              {lifeTimeSupport}
-            </Typography>
-            <Typography align="right" gutterBottom variant="caption">
-              {terms}
-            </Typography>
-            <Typography align="right" gutterBottom variant="caption">
-              {disclaimer}
-            </Typography>
+            <NavLink to="/life-time-support">
+              <Typography gutterBottom variant="caption">
+                {lifeTimeSupport}
+              </Typography>
+            </NavLink>
+            <NavLink to="/terms-of-service">
+              <Typography align="right" gutterBottom variant="caption">
+                {terms}
+              </Typography>
+            </NavLink>
+            <NavLink to="/privacy-policy">
+              <Typography align="right" gutterBottom variant="caption">
+                {disclaimer}
+              </Typography>
+            </NavLink>
           </div>
         </Grid>
       </Grid>

@@ -3,12 +3,12 @@ import { useStyles } from "../useStyles";
 import { missionStyles } from "./useStyles";
 import { Card, CardContent, Grid, Typography } from "@material-ui/core";
 import Paragraph from "../../../ContainerStructure/Headings/Paragraphs/Paragraph";
-import Heading5 from "../../../ContainerStructure/Headings/Heading5";
 import {
   StairCaseData,
   stairCaseHeading,
 } from "../../../Utils/Constants/Language/en/AppSolutionsData";
 import CustomImage from "../../../Components/CustomImage";
+import CustomTitle from "../../../Pages/Section/CustomTitle"
 const HowItWorksContext = () => {
   const { cardSec , underlined} = useStyles();
   const { card2, root, devSec, image,  } = missionStyles();
@@ -17,9 +17,7 @@ const HowItWorksContext = () => {
 
       <Grid container className={root}>
     <Grid lg={12} md={12} xs={12}>
-      <Typography variant="h2">
-       <span className={underlined} >{stairCaseHeading}</span> 
-      </Typography>
+    <CustomTitle underlined={true} text={stairCaseHeading} />
     </Grid>
         <Grid item style={{ paddingBottom: "20px" }} className={cardSec}>
           {StairCaseData.map((data, index) => {

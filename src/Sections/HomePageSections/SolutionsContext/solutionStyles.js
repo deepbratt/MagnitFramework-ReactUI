@@ -29,12 +29,12 @@ export const THEME = createMuiTheme({
 
 export const useStyles = makeStyles((theme) => ({
   root: {
-    paddingTop: "25px",
+    paddingTop: "60px",
     margin: "0px",
     padding: "0px",
     backgroundColor: BlueRibbon,
     width: "100%",
-    paddingBottom: "50px",
+    paddingBottom: "90px",
   },
   cardSec: {
     display: "flex",
@@ -44,7 +44,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   card: {
     backgroundColor: whiteColor,
-    width: "13%",
+    width: "18%",
     height: "150px",
     display: "flex",
     flexDirection: "column",

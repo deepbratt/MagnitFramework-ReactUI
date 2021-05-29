@@ -88,7 +88,8 @@ export const Colors = {
   fillColor:
     "invert(100%) sepia(6%) saturate(7462%) hue-rotate(267deg) brightness(114%) contrast(97%)",
   Solitude: "#E8F2FE",
-
+  shineBlue: '#006FED',
+  coldBlue: '#CEE4FF',
   // App Solutions page
   lochmara: "#0082D2",
   cerulean: "#00AAE1",
@@ -113,6 +114,12 @@ export const Colors = {
   mint: "#6BDFFF",
   darkMint: "#3DACFC",
   cockTail: "#63D6FE",
-  darkCockTail: "#5DD4F8"
+  darkCockTail: "#5DD4F8",
 
+  // Slider color
+  democrat: "#00B3F4",
+  vividCerlean: "#00ABEF",
+  atomsphere: "#0095E1",
+  carmine: "#0071CA",
+  peaFowl: "#0044AE"
 };

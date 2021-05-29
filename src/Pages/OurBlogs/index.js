@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@material-ui/core";
+import { Grid, Hidden, Typography } from "@material-ui/core";
 import Banner from "../../Components/Banner";
 import { Colors } from "../../Theme/color.constants";
 import {
@@ -7,7 +7,6 @@ import {
   LatestBlogsSectionText,
 } from "../../Utils/Constants/Language/en/OurBlogsPageText";
 import BannerImage from "../../assets/OurBlogs/BannerImage.png";
-import TrendingBlogCard from "../../assets/OurBlogs/TrendingBlogCard.png";
 import BackGroudnPatternLeft from "../../assets/OurBlogs/LatestBlogPattern.png";
 import BackGroudnPatternRight from "../../assets/OurBlogs/LatestBlogPatternRight.png";
 import BreadCrumb from "../../Components/BreadCrumb";
@@ -17,11 +16,12 @@ import LatestBlogs from "./LatestBlogs";
 import ReviewSlider from "../../Components/ReviewSlider";
 import { Pagination } from "@material-ui/lab";
 import OurBlogsStyles from "./style";
+import CustomTitle from "../Section/CustomTitle"
 
 const OurBlogs = () => {
-  const { title, subtitle } = BannerText;
-  const { linearBackground, BlueRibbon } = Colors;
-  const { leftPattern, rightPattern } = OurBlogsStyles;
+  const { title, subtitle, subHeading } = BannerText;
+  const { linearBackground, BlueRibbon, whiteColor } = Colors;
+  const { leftPattern, rightPattern } = OurBlogsStyles();
 
   const breadCrumData = [
     {
@@ -33,27 +33,55 @@ const OurBlogs = () => {
       text: "Blog",
     },
   ];
-  const { header, card } = TrendingBlogsSectionText;
+  const { header, cards } = TrendingBlogsSectionText;
 
   const slideArr = [
-    <TrendingBlogs featureImage={TrendingBlogCard} cardData={card} />,
-    <TrendingBlogs featureImage={TrendingBlogCard} cardData={card} />,
-    <TrendingBlogs featureImage={TrendingBlogCard} cardData={card} />,
+    <TrendingBlogs featureImage={cards[0].coverImage} cardData={cards[0]} />,
+    <TrendingBlogs featureImage={cards[0].coverImage} cardData={cards[1]} />,
+    <TrendingBlogs featureImage={cards[0].coverImage} cardData={cards[2]} />,
   ];
 
   const latestBlogsSectionPatterns = [
     {
       image: (
-        <img width="100%" height="100%" src={BackGroudnPatternLeft} alt="" />
+        <Hidden smDown>
+          <Grid
+            className={leftPattern}
+            style={{ position: "absolute" }}
+            item
+            xs={4}
+          >
+            <img
+              width="100%"
+              height="100%"
+              src={BackGroudnPatternLeft}
+              alt=""
+            />
+          </Grid>
+        </Hidden>
       ),
       styles: leftPattern,
     },
-    // {
-    //   image: (
-    //     <img width="100%" height="100%" src={BackGroudnPatternRight} alt="" />
-    //   ),
-    //   styles: rightPattern,
-    // },
+    {
+      image: (
+        <Hidden smDown>
+          <Grid
+            className={`${rightPattern}`}
+            style={{ position: "absolute" }}
+            item
+            xs={4}
+          >
+            <img
+              width="100%"
+              height="100%"
+              src={BackGroudnPatternRight}
+              alt=""
+            />
+          </Grid>
+        </Hidden>
+      ),
+      styles: rightPattern,
+    },
   ];
   return (
     <>
@@ -62,36 +90,35 @@ const OurBlogs = () => {
         image={BannerImage}
         backColor={linearBackground}
       >
-        <Typography variant="h2" gutterBottom>
+        <Typography color="textPrimary" variant="h1" gutterBottom>
           {title}
         </Typography>
-        <Typography variant="h6" gutterBottom>
+        <Typography color="textPrimary" variant="h3" gutterBottom>
+          {subHeading}
+        </Typography>
+        <Typography color="textPrimary" variant="h5" gutterBottom>
           {subtitle}
         </Typography>
       </Banner>
-      <Section title={header}>
-        <ReviewSlider slides={slideArr} showArrows={false} />
+      <Section>
+      <CustomTitle text={header} underlined={true}/>
+        <ReviewSlider slides={slideArr} showArrows={false} indicatorsPosition />
       </Section>
       <Section
-        title={LatestBlogsSectionText.header}
         backColor={BlueRibbon}
-        titleColor="white"
         patterns={latestBlogsSectionPatterns}
       >
-        <Grid
-          container
-          justify="center"
-          alignItems="center"
-          alignContent="center"
-        >
+          <CustomTitle color={whiteColor} text={LatestBlogsSectionText.header} underlined={false}/>
+        <Grid container justify="center" spacing={2}>
           {LatestBlogsSectionText.cards &&
             LatestBlogsSectionText.cards.map((card, index) => (
               <Grid
-                style={{ margin: "20px 0" }}
                 key={index}
                 item
                 xs={12}
-                md={4}
+                sm={6}
+                lg={4}
+                style={{ display: "flex" }}
               >
                 <LatestBlogs cardData={card} />
               </Grid>

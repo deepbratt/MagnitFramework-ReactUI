@@ -12,7 +12,7 @@ const BreadCrumb = ({ links }) => {
       >
         {links.map((link, index) => (
           <Link key={index} color="inherit" href={link.path}>
-            <Typography variant="h6">{link.text}</Typography>
+            <Typography color="textPrimary" variant="h6">{link.text}</Typography>
           </Link>
         ))}
       </Breadcrumbs>

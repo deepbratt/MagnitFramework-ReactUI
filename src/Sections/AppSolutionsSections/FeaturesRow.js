@@ -2,8 +2,6 @@ import React from "react";
 import { useStyles } from "../HomePageSections/PartnerWithUsContext/sectionStyles";
 import { SolutionsStyles } from "../../Pages/AppSolutionsPage/SolutionsStyles";
 import { Typography, Grid } from "@material-ui/core";
-import { MuiThemeProvider } from "@material-ui/core/styles";
-import { THEME } from "../../ContainerStructure/Headings/headingStyles";
 import CustomImage from "../../Components/CustomImage";
 
 const FeaturesRow = (props) => {
@@ -35,11 +33,11 @@ const FeaturesRow = (props) => {
                   style={{ backgroundColor: text.color }}
                   className={supportSub}
                 >
-                  <CustomImage alt="icon" src={text.icon} />
+                  <CustomImage alt="icon-data" src={text.icon} />
                 </Grid>
               </Grid>
                 <Grid className={para} item xs={12} md={6} lg={9}>
-                  <Typography variant="h5">{text.title}</Typography>
+                  <Typography color="textPrimary" variant="h5">{text.title}</Typography>
                   <Typography variant="body2">{text.desc}</Typography>
                 </Grid>
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Button } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import Breakpoints from "../../Theme/theme.breakpoints";
 import Banner from "../../Components/Banner/index";
 import { Colors } from "../../Theme/color.constants";
@@ -16,21 +16,14 @@ const BannerSection = () => {
   return (
     <>
       <Banner image={BannerImage} backColor={linearBackground}>
-      <Typography variant="h2" gutterBottom>
+        <Typography color="textPrimary" variant="h1" gutterBottom>
           {BannerHeading} <br /> {Bannersubheading}
         </Typography>
-        <Typography variant="h6" gutterBottom>
+        <Typography color="textPrimary" variant="h5" gutterBottom>
           {paragraph}
         </Typography>
         <section style={{ marginTop: "15px" }}>
-          <CustomButton
-            style={{ borderRadius: "none" }}
-            variant="contained"
-            size={Breakpoints()}
-            color="secondary"
-          >
-            <Typography variant="buttom">Get Started</Typography>
-          </CustomButton>
+          <CustomButton>Get Started</CustomButton>
         </section>
       </Banner>
     </>

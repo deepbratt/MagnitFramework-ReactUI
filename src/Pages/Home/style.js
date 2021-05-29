@@ -1,6 +1,8 @@
 import { makeStyles } from "@material-ui/core";
+import {Colors} from "../../Theme/color.constants"
 
-const HomeStyles = makeStyles((theme) => ({
+const {blackColor} = Colors
+const HomeStyles = makeStyles(() => ({
   leftRoot: {
     display: "flex",
     justifyContent: "center",
@@ -14,6 +16,11 @@ const HomeStyles = makeStyles((theme) => ({
     alignContent: "center",
     alignItems: "center",
   },
+  readMore:{
+    cursor: "pointer",
+    color: blackColor
+
+  }
 }));
 
 export default HomeStyles;

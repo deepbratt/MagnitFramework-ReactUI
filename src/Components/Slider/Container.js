@@ -3,26 +3,25 @@ import { useStyles } from "./sliderStyles";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Slider from "./Slider";
-import { Colors } from "../../Theme/color.constants";
-import { Data, array } from "../../Utils/Constants/Language/en/SliderText";
-const { mainSlide, PalePrim, Chablis } = Colors;
+import { Data, array, Img1,Img2,Img3} from "../../Utils/Constants/Language/en/SliderText";
 const { headingLineOne, headingLineTwo, headingLineFirstSlide, headingLineSecondSlide,headingLineThirdSlide, buttonText } = Data;
 const slideArr = [
   <Slider
-    headingOne={headingLineOne}
-    headingTwo={headingLineTwo}
-    headingThree={headingLineFirstSlide}
-    text={buttonText}
-    data={array}
-    color={mainSlide}
-  />,
+  headingOne={headingLineOne}
+  headingTwo={headingLineTwo}
+  headingThree={headingLineFirstSlide}
+  text={buttonText}
+  data={array}
+  Img={Img1}
+/>,
+  
   <Slider
     headingOne={headingLineOne}
     headingTwo={headingLineTwo}
     headingThree={headingLineSecondSlide}
     text={buttonText}
     data={array}
-    color={PalePrim}
+    Img={Img2}
   />,
   <Slider
     headingOne={headingLineOne}
@@ -30,7 +29,7 @@ const slideArr = [
     headingThree={headingLineThirdSlide}
     text={buttonText}
     data={array}
-    color={Chablis}
+    Img={Img3}
  
   />,
 ];
@@ -50,6 +49,7 @@ const Container = ( props) => {
       infiniteLoop={true}
       transitionTime={500}
       showIndicators={show}
+      showThumbs={false}
     >
       {slides.map((slide, i) => {
         return <section key={i}>{slide}</section>;

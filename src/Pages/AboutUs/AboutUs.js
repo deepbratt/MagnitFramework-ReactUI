@@ -4,6 +4,7 @@ import Main from "../../Sections/MainComponent/AboutMainSection";
 import MissionContext from "../../Sections/Mission&Vision/MissionContext";
 import WhyUsContainer from "./WhyUsContainer";
 import { MainData } from "../../Utils/Constants/Language/AboutUsData";
+import Section from "../Section";
 const AboutUs = () => {
   const { heroImgsrc } = MainData;
   // const { underlined, root, button } = FoundersyStyles();
@@ -22,7 +23,7 @@ const AboutUs = () => {
     <>
       <Grid container>
         <Grid item lg={12} md={12} xs={12}>
-          <Main hero={heroImgsrc} card={true} breadcrumbData={breadcrumbs} />
+          <Main width="650px" hero={heroImgsrc} card={true} breadcrumbData={breadcrumbs} />
         </Grid>
         <Grid item lg={12} md={12} xs={12}>
           <MissionContext />

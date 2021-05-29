@@ -19,7 +19,7 @@ const ReviewCard = ({ cardData }) => {
         <Card className={root}>
           <div>
             <Typography variant="subtitle1" style={{fontWeight:"600"}}>{authName}</Typography>
-            <Rating name="read-only" size="small" value={4} readOnly />
+            <Rating name="read-only" size="small" value={5} readOnly />
           </div>
 
           <CardContent className={content}>

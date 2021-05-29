@@ -8,12 +8,8 @@ const breakpoints = createBreakpoints({});
 export const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: MoonWhite,
-    paddingTop: "30px"
-  },
-  cardSec:{
-    display: "flex",
-    width: "100%",
-    flexDirection: "wrap"
+    paddingTop: "60px",
+    paddingBottom: "60px"
   },
   content:{
     marginTop: "40px",
@@ -53,5 +49,6 @@ export const useStyles = makeStyles((theme) => ({
     width: "100%",
     flexFlow: "wrap",
     justifyContent: "center",
+    // flexDirection: "wrap"
   },
 }));

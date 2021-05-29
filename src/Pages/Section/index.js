@@ -1,19 +1,15 @@
 import { Grid } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import PropTypes from "prop-types";
-import SectionHeading from "./SectionHeading";
+import CustomTitle from "./CustomTitle";
 import CustomImage from "../../Components/CustomImage";
 import LayoutStyle from "./style";
 
 const Section = ({
-  title,
-  subTitle,
   children,
   backColor,
   startQuote,
   endQuote,
-  highlightWords,
-  titleColor,
   patterns,
 }) => {
   const {
@@ -29,18 +25,7 @@ const Section = ({
 
   return (
     <div className={root} style={{ backgroundColor: backColor }}>
-      {patterns &&
-        patterns.map((pattern, index) => (
-          <Grid
-            className={pattern.styles}
-            style={{ position: "absolute" }}
-            key={index}
-            item
-            xs={4}
-          >
-            {pattern.image}
-          </Grid>
-        ))}
+      {patterns && patterns.map((pattern, index) => pattern.image)}
       <div className={content}>
         {startQuote && (
           <>
@@ -70,19 +55,6 @@ const Section = ({
             />
           </>
         )}
-        <div className={sectionHeader}>
-          {title && <SectionHeading header={title} />}
-
-          {subTitle && (
-            <Typography
-              className={subHeader}
-              color="textPrimary"
-              variant="subtitle1"
-            >
-              {subTitle}
-            </Typography>
-          )}
-        </div>
         <Grid item xs={12}>
           {children}
         </Grid>

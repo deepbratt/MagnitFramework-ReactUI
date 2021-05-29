@@ -8,9 +8,10 @@ const CustomImage = (props) => {
 
   const onLoad = useCallback(() => {
     // setSrc(src);
-    setTimeout(()=>{
-      setIsLoaded(true)
-    }, 2000) //simulating image load
+    setIsLoaded(true)
+    // setTimeout(()=>{
+    //   setIsLoaded(true)
+    // }, 2000) //simulating image load
   }, []);
 
   // const onError = useCallback(() => {
@@ -34,14 +35,13 @@ const CustomImage = (props) => {
 
   return (
     <>
-    {!isLoaded && <CircularProgress style={{color:props.progressColor}}/>}
+   
     <img
       {...props}
       alt={props.alt}
       src={props.src}
-      style={isLoaded ? props.style : { display: "none" }}
       onError={() => setHasError(true)}
-      onLoad={onLoad}
+     
     />
     </>
   );
