@@ -6,6 +6,7 @@ import Banner from "../../assets/ContactUs/banner.png";
 import {
   RequestAQuote,
   RequestAQuoteSub,
+  ContactUsTitle,
   SomeQuickFactsAboutUs,
   AwardSectionTitleContactUs,
   WorkFlow,
@@ -148,7 +149,7 @@ const ContactUs = () => {
                 padding: "50px 0",
               }}
             >
-              <ContactUsForm styles={label} heading="Contact /Us" />
+              <ContactUsForm styles={label} heading={ContactUsTitle} />
             </Paper>
           </Grid>
         </Grid>
