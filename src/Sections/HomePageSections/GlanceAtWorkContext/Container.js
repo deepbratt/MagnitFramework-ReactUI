@@ -22,15 +22,12 @@ const Container = ({ backColor }) => {
   const { root, card, devSec, cardSec, cardContent } = classes;
   return (
     <>
-      <Grid
-        container
-        style={{ backgroundColor: backColor }}
-        className={root}
-        elevation={0}
-      >
-        <CustomTitle underlined={false} color={whiteColor} text={title} />
-        <Grid className={cardSec}>
-          <Grid item xs={12} sm={5} md={4} lg={3} className={card}>
+      <Grid container spacing={2}>
+        <Grid item xs={12}>
+          <CustomTitle style={{marginBottom: "20px", color: "#fff"}} underlined={false} color={whiteColor} text={title} />
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} className={cardSec}>
+          <Grid item xs={12} className={card}>
             <CardContent>
               <Grid item className={devSec}>
                 <CustomImage width="220px" src={image1} alt="" />
@@ -42,7 +39,9 @@ const Container = ({ backColor }) => {
               </Grid>
             </CardContent>
           </Grid>
-          <Grid item xs={12} sm={5} md={4} lg={3} className={card}>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} className={cardSec}>
+          <Grid item xs={12} className={card}>
             <CardContent>
               <Grid className={devSec}>
                 <CustomImage width="270px" src={image2} alt="" />
@@ -54,7 +53,9 @@ const Container = ({ backColor }) => {
               </Grid>
             </CardContent>
           </Grid>
-          <Grid item xs={12} sm={5} md={4} lg={3} className={card}>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} className={cardSec}>
+          <Grid item xs={12} className={card}>
             <CardContent>
               <Grid className={devSec}>
                 <CustomImage width="275px" src={image3} alt="" />
@@ -67,6 +68,7 @@ const Container = ({ backColor }) => {
             </CardContent>
           </Grid>
         </Grid>
+
         <Grid item lg={12} md={12} xs={12}>
           <CustomButton color="secondary">{buttonText}</CustomButton>
         </Grid>

@@ -44,7 +44,6 @@ export const useStyles = makeStyles((theme) => ({
   },
   card: {
     backgroundColor: whiteColor,
-    width: "18%",
     height: "150px",
     display: "flex",
     flexDirection: "column",
@@ -56,16 +55,8 @@ export const useStyles = makeStyles((theme) => ({
       boxShadow: "0px 4px 50px 5px rgba(0, 0, 0, 0.06)",
       backgroundColor: "#fff",
     },
-    margin: "10px",
     cursor: "pointer",
-    [breakpoints.down("md")]: {
-      width: "40%",
-    },
-    [breakpoints.down("sm")]: {
-      width: "60%",
-    },
   },
-
   devSec: {
     height: "100px",
     display: "flex",
