@@ -5,7 +5,7 @@ const { Harlequin } = Colors;
 const LayoutStyle = makeStyles((theme) => ({
   root: {
     // REMOVED - SECTION PADDING
-    padding: "60px 0",
+    // padding: "60px 0",
     position: "relative",
   },
   content: {

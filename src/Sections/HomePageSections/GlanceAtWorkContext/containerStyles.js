@@ -5,7 +5,6 @@ const { Mariner, whiteColor } = Colors;
 
 export const useStyles = makeStyles((theme) => ({
   root: {
-    paddingTop: "10px",
     margin: "0px",
     paddingBottom: "20px",
     justifyContent: "space-evenly",
@@ -27,7 +26,6 @@ export const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "left",
     transition: "all .25s linear",
-    margin: "20px ",
     boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
 
     // [breakpoints.down("md")]: {
