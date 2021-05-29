@@ -35,14 +35,13 @@ const CustomImage = (props) => {
 
   return (
     <>
-    {!isLoaded && <CircularProgress style={{color:props.progressColor}}/>}
+   
     <img
       {...props}
       alt={props.alt}
       src={props.src}
-      style={isLoaded ? props.style : { display: "none" }}
       onError={() => setHasError(true)}
-      onLoad={onLoad}
+     
     />
     </>
   );

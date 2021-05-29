@@ -1,16 +1,33 @@
-import AboutUs from "./../Pages/AboutUs/AboutUs";
-import Services from "./../Pages/Services";
-import WebServices from "../Pages/WebServices";
-import Home from "../Pages/Home/index";
-// import Event from "../Pages/Event/Index";
-import Testimonials from "../Pages/Testimonials";
-import Career from "../Pages/Careers/Container";
-import AppSolutions from "../Pages/AppSolutionsPage/Container";
-import OurBlogs from "../Pages/OurBlogs";
-import Quote from "../Pages/ContactUs/index";
-import HireDeveloper from "../Pages/HireDeveloper";
-import DigitalMarketing from "../Pages/DigitalMarketing";
-import CaseStudies from "../Pages/CaseStudies";
+// import AboutUs from "./../Pages/AboutUs/AboutUs";
+// import Services from "./../Pages/Services";
+// import WebServices from "../Pages/WebServices";
+// import Home from "../Pages/Home/index";
+// // import Event from "../Pages/Event/Index";
+// import Testimonials from "../Pages/Testimonials";
+// import Career from "../Pages/Careers/Container";
+// import AppSolutions from "../Pages/AppSolutionsPage/Container";
+// import OurBlogs from "../Pages/OurBlogs";
+// import Quote from "../Pages/ContactUs/index";
+// import HireDeveloper from "../Pages/HireDeveloper";
+// import DigitalMarketing from "../Pages/DigitalMarketing";
+// import CaseStudies from "../Pages/CaseStudies";
+import  { lazy } from 'react'
+
+
+
+const AboutUs = lazy(() =>import("./../Pages/AboutUs/AboutUs"));
+const Services = lazy(() =>import("./../Pages/Services"));
+const WebServices = lazy(() =>import("../Pages/WebServices"));
+const Home = lazy(() =>import("../Pages/Home/index"));
+const Testimonials = lazy(() =>import("../Pages/Testimonials"));
+const Career = lazy(() =>import("../Pages/Careers/Container"));
+const AppSolutions = lazy(() =>import("../Pages/AppSolutionsPage/Container"));
+
+const OurBlogs = lazy(() =>import("../Pages/OurBlogs"));
+const Quote = lazy(() =>import("../Pages/ContactUs/index"));
+const HireDeveloper = lazy(() =>import("../Pages/HireDeveloper"));
+const DigitalMarketing = lazy(() =>import("../Pages/DigitalMarketing"));
+const CaseStudies = lazy(() =>import("../Pages/CaseStudies"));
 
 const pathIds = {
   home: "home",

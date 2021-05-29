@@ -13,6 +13,7 @@ import {
 import CustomButton from "../../Components/CustomButton";
 import ReadMore from "../../Components/ReadMore";
 
+
 const OpportunityContext = () => {
   const classes = useStyles();
   const {
@@ -38,9 +39,11 @@ const OpportunityContext = () => {
             <Heading4 title={heading} />
           </section>
         </Grid>
+       
         {/* <section className={cardSec}> */}
         {DataArray.map((data, index) => {
           return (
+           
             <Grid
               xs={12}
               sm={4}
@@ -50,6 +53,7 @@ const OpportunityContext = () => {
               className={card}
               key={index}
             >
+           
               <Grid className={devSec}>
                 <Grid xs={12} className={HeadSec}>
                   <Typography variant="subtitle1">{data.title}</Typography>
@@ -72,12 +76,14 @@ const OpportunityContext = () => {
                   </Typography>
                 </Grid>
               </Grid>
+            
               <Grid xs={12} className={bottomStyle}>
                 <CustomButton>{data.buttonText}</CustomButton>
               </Grid>
             </Grid>
           );
         })}
+       
         {/* </section> */}
         <Grid item xs={12}>
           <CustomButton>Learn More</CustomButton>
