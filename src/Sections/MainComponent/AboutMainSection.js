@@ -6,6 +6,7 @@ import { MainData } from "../../Utils/Constants/Language/AboutUsData";
 import BreadCrumb from "../../Components/BreadCrumb";
 import CustomImage from "../../Components/CustomImage";
 import CustomTitle from "../../Pages/Section/CustomTitle"
+import Section from "../../Pages/Section";
 
 const AboutMainSection = (props) => {
   const { title, paragraph } = MainData;
@@ -29,6 +30,7 @@ const AboutMainSection = (props) => {
             <Card>
               <CardContent className={cardSec}>
               <CustomTitle style={{marginBottom: "20px"}} text={title} underlined={true}/>
+
                 <section className={paragraphStyle}>
                   {paragraph &&
                     paragraph.map((text, index) => (
@@ -37,6 +39,7 @@ const AboutMainSection = (props) => {
                       </Typography>
                     ))}
                 </section>
+                </Section>
               </CardContent>
             </Card>
           ) : null}
