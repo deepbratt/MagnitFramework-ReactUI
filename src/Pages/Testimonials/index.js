@@ -50,13 +50,13 @@ function Testimonials() {
       </Banner>
    
       <Grid xs={12}>
-          <CardContent className={cardSec}>
-          <CustomTitle style={{marginBottom: "20px"}} text={Testmonial} underlined={true}/>
+      <Section >
+          <CustomTitle style={{marginBottom: "10px"}} text={Testmonial} underlined={true}/>
           <CustomTitle subTitle={ClientsHaveToSay}/>
-          </CardContent>
+          </Section>
       </Grid>
-     <Section  title={Testmonial} subTitle={ClientsHaveToSay}>
-     </Section>
+     {/*  title={Testmonial} subTitle={ClientsHaveToSay}>
+     </Section> */}
 
       <Grid container direction="row" justify="center">
         <VideoCard />
