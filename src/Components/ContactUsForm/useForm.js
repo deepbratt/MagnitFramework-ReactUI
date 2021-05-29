@@ -1,4 +1,5 @@
 import { useState } from "react";
+import api from "../../Utils/Constants/api.js";
 import {
   messages,
   fieldNames,
@@ -7,27 +8,37 @@ import {
   isTypeAlphaSpace,
   isEmailValid,
   isPhoneValid,
-  isTypeNumPlusBracket
+  isTypeNumPlusBracket,
 } from "../../Utils/Constants/ContactUsForm.js";
+import { useCancelToken } from "../../Utils/CustomHooks/useCancelToken.js";
 
-  const initialFValues = {
-    fullName: "",
-    email: "",
-    mobile: "",
-    companyName: "",
-    message: "",
-  };
+const initialFValues = {
+  fullName: "",
+  email: "",
+  mobile: "",
+  companyName: "",
+  message: "",
+};
 
 export function useForm(validateOnChange = false) {
   const [values, setValues] = useState(initialFValues);
   const [errors, setErrors] = useState({});
+  const [isLoading, setIsLoading] = useState(false)
+  const [toastOpen, setToastOpen] = useState(false)
+  const [requestMessage, setRequestMessage] = useState('')
+  const { createNewToken, isCancel } = useCancelToken();
 
   const validate = (fieldValues = values) => {
     let temp = { ...errors };
-    if (fieldNames.fullName in fieldValues){
-      temp.fullName = fieldValues.fullName.trim()==="" ? messages.isRequired : isNameValid(fieldValues.fullName) ? "" : messages.notValid;
+    if (fieldNames.fullName in fieldValues) {
+      temp.fullName =
+        fieldValues.fullName.trim() === ""
+          ? messages.isRequired
+          : isNameValid(fieldValues.fullName)
+          ? ""
+          : messages.notValid;
     }
-    if (fieldNames.email in fieldValues){
+    if (fieldNames.email in fieldValues) {
       temp.email =
         fieldValues.email.trim() === ""
           ? messages.isRequired
@@ -37,7 +48,12 @@ export function useForm(validateOnChange = false) {
     }
 
     if (fieldNames.mobile in fieldValues)
-      temp.mobile = fieldValues.mobile.length===0 ? messages.isRequired : isPhoneValid(fieldValues.mobile) ? "" : messages.notValid;
+      temp.mobile =
+        fieldValues.mobile.length === 0
+          ? messages.isRequired
+          : isPhoneValid(fieldValues.mobile)
+          ? ""
+          : messages.notValid;
 
     if (fieldNames.companyName in fieldValues)
       temp.companyName =
@@ -57,11 +73,11 @@ export function useForm(validateOnChange = false) {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    if (name===fieldNames.fullName && !isTypeAlphaSpace(value)){
-      return
+    if (name === fieldNames.fullName && !isTypeAlphaSpace(value)) {
+      return;
     }
-    if (name===fieldNames.mobile && !isTypeNumPlusBracket(value)){
-      return
+    if (name === fieldNames.mobile && !isTypeNumPlusBracket(value)) {
+      return;
     }
     setValues({
       ...values,
@@ -79,7 +95,24 @@ export function useForm(validateOnChange = false) {
     e.preventDefault();
     if (validate()) {
       console.log(values);
-      resetForm();
+      let requestBody = {
+        name: values.fullName,
+        email: values.email,
+        companyName: values.companyName,
+        phone: values.mobile,
+        projectDetails: values.message,
+      };
+      setIsLoading(true)
+      api.requestQuote(requestBody, createNewToken, isCancel).then((response)=>{
+        setIsLoading(false)
+        console.log(response.response)
+        setToastOpen(true)
+        setRequestMessage(response.response.data.status.toUpperCase()+": "+response.response.statusText)
+        if(response.response.statusText==="OK" || response.response.status==="success")
+        {
+          resetForm();
+        }
+      });
     }
   };
 
@@ -91,6 +124,10 @@ export function useForm(validateOnChange = false) {
     handleInputChange,
     resetForm,
     validate,
-    handleSubmit
+    handleSubmit,
+    isLoading,
+    toastOpen,
+    setToastOpen,
+    requestMessage
   };
 }
