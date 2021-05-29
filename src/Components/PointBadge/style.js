@@ -63,11 +63,11 @@ const PointBadgeStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     textAlign: "left",
-    "& > subtitle1": {
+    "& > h5": {
       color:Mirage,
       fontWeight:600,
     },
-    "& > subtitle2" : {
+    "& > h6" : {
       color:darkSilver,
 fontWeight:300
     },
@@ -77,12 +77,12 @@ fontWeight:300
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    "& > subtitle1" : {
+    "& > h5" : {
       color:Mirage,
       fontWeight:600,
     },
    
-    "& > subtitle2" : {
+    "& > h6" : {
       color:darkSilver,
 fontWeight:"normal"
     },

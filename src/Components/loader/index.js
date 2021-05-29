@@ -11,7 +11,6 @@ export const Loader=()=>{
 
 
     return (
-        
            <Animate
         start={()=>({value: startLoading})}
         update={()=>({
