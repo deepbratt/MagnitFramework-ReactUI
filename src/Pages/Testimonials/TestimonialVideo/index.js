@@ -30,7 +30,7 @@ const VideoCard = ({ Img, detail, avatar, name, date }) => {
         <Grid item xs={12} sm={4} md={4} lg={3} className={cardRoot} key={a.id}>
     <Grid>
       <CardHeader
-        avatar={<img src={a.Avatar} alt="" className={avatarImg} />}
+        avatar={<img src={a.Avatar} alt="s" className={avatarImg} />}
         title={<Typography variant="h5"  className={cardTitle}>{a.name}</Typography>}
         action={
           <Typography variant="body2" className={carddate}>
@@ -46,11 +46,11 @@ const VideoCard = ({ Img, detail, avatar, name, date }) => {
       <Grid style={{position:"relative"}}>
       <CardMedia
         component="img"
-        alt=""
+        alt="Contemplative Reptile"
         height="140"
         className={cardImage}
         image={a.Img}
-        title=""
+        title="Contemplative Reptile"
       />
       <div className={playBtn}>
         <img src={play} alt="s" />
