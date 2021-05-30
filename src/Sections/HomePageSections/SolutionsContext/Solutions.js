@@ -15,9 +15,10 @@ const Solutions = () => {
   const { whiteColor, blackColor } = Colors;
   return (
     <>
-      <Grid container className={root} elevation={0}>
-        <Grid item lg={12} md={12} xs={12}>
+      <Grid container>
+        <Grid style={{ color: whiteColor }} item lg={12} md={12} xs={12}>
           <CustomTitle
+            style={{ marginBottom: "20px" }}
             underlined={false}
             subTitle={subHeading}
             color={whiteColor}
@@ -25,8 +26,14 @@ const Solutions = () => {
             subTitleColor={whiteColor}
           />
         </Grid>
-        <PrimarySection />
-        <MidSection />
+        <Grid style={{ marginBottom: "20px" }} container spacing={2}>
+          <Grid item xs={12}>
+            <PrimarySection />
+          </Grid>
+          <Grid item xs={12}>
+            <MidSection />
+          </Grid>
+        </Grid>
         <Grid item lg={12} md={12} xs={12}>
           <CustomButton color="secondary">See More</CustomButton>
         </Grid>
