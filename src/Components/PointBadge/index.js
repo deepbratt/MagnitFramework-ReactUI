@@ -5,7 +5,7 @@ import PointBadgeStyles from "./style";
 import Read from "../ReadMore";
 
 const PointBadge = ({ horizontal, data }) => {
-  const { color, icon, title, desc, length } = data;
+  const { color, icon, title, desc } = data;
   const {
     vertical,
     inline,

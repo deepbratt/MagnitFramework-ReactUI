@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 // import dataText, { FullTimeHiring, HiringOption } from './constant';
 export const TabText = ({ data }) => {
   const { title, desc, dataText } = data;
-  const { detail, bulletText, textDiv, trialBtn } = OptionTabStyles();
+  const { detail, bulletText, textDiv } = OptionTabStyles();
   return (
     <Grid style={{ textAlign: "left" }}>
       <Typography variant="h2">{title}</Typography>

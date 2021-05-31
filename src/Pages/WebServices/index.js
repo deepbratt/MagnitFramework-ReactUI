@@ -27,8 +27,6 @@ import BreadCrumb from "../../Components/BreadCrumb";
 import CommentSection from "../../Components/CommentSection";
 import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
-import Heading5 from "../../ContainerStructure/Headings/Heading5";
-import Breakpoints from "../../Theme/theme.breakpoints";
 import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
 const Services = () => {
   const { skyBlue, linearBackground } = Colors;

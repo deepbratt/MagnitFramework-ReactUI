@@ -4,8 +4,6 @@ import Banner from "../../Components/Banner";
 import { Colors } from "../../Theme/color.constants";
 import useStyles from "./styles";
 import banner from "../../assets/Testimonials/banner.png";
-import Heading from "../../ContainerStructure/Headings/Heading4";
-import Paragraph from "../../ContainerStructure/Headings/Paragraphs/Paragraph";
 import BreadCrumb from "../../Components/BreadCrumb";
 import CommentSection from "../../Components/CommentSection";
 import VideoCard from "./TestimonialVideo";
@@ -21,7 +19,7 @@ import Section from "../Section";
 // import Section from '../Section';
 function Testimonials() {
   const { linearBackground } = Colors;
-  const { textColor, cardSec, underlined, paragraph, flex, seeMore } =
+  const { textColor, cardSec, flex } =
     useStyles();
 
   const breadCrumData = [

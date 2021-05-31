@@ -1,10 +1,7 @@
 import React from "react";
 import { useStyles } from "../../Sections/MainComponent/mainStyles";
 import { Card, CardContent, Grid, Typography } from "@material-ui/core";
-import Heading4 from "../../ContainerStructure/Headings/Heading4";
 import { MainData } from "../../Utils/Constants/Language/en/CareersData";
-import Breakpoints from "../../Theme/theme.breakpoints";
-import { Colors } from "../../Theme/color.constants";
 import CustomImage from "../../Components/CustomImage";
 import CustomButton from "../../Components/CustomButton";
 import BreadCrumb from "../../Components/BreadCrumb";
@@ -19,9 +16,7 @@ const Main = (props) => {
     hero,
     card,
     paragraph,
-    textUnderlined,
   } = classes;
-  const { Harlequin, whiteColor } = Colors;
   const breadcrumbs = [
     {
       path: "/",

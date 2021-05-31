@@ -19,7 +19,7 @@ const Container = ({ backColor }) => {
     buttonText,
   } = Data;
   const { whiteColor } = Colors;
-  const { root, card, devSec, cardSec, cardContent } = classes;
+  const { card, devSec, cardSec, cardContent } = classes;
   return (
     <>
       <Grid container spacing={2}>

@@ -1,10 +1,8 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
-import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 import { Colors } from "../../../Theme/color.constants";
 
 const { BlueRibbon, whiteColor } = Colors;
-const breakpoints = createBreakpoints({});
 
 export const THEME = createMuiTheme({
   // overrides: {

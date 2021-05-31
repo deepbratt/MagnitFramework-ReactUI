@@ -1,18 +1,14 @@
 import React from "react";
-import { useStyles } from "./solutionStyles";
-import { Typography, Grid } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import PrimarySection from "./SolutionsPrimarySection";
 import MidSection from "./SolutionsMidSection";
-import Breakpoints from "../../../Theme/theme.breakpoints";
 import { Colors } from "../../../Theme/color.constants";
 import { Data } from "../../../Utils/Constants/Language/en/SolutionsText";
 import CustomButton from "../../../Components/CustomButton";
 import CustomTitle from "../../../Pages/Section/CustomTitle";
 const Solutions = () => {
-  const classes = useStyles();
-  const { root } = classes;
   const { heading, subHeading } = Data;
-  const { whiteColor, blackColor } = Colors;
+  const { whiteColor } = Colors;
   return (
     <>
       <Grid container>

@@ -1,7 +1,5 @@
 import { Grid } from "@material-ui/core";
-import Typography from "@material-ui/core/Typography";
 import PropTypes from "prop-types";
-import CustomTitle from "./CustomTitle";
 import CustomImage from "../../Components/CustomImage";
 import LayoutStyle from "./style";
 
@@ -15,8 +13,6 @@ const Section = ({
   const {
     root,
     content,
-    subHeader,
-    sectionHeader,
     startQuote1,
     startQuote2,
     endQuote1,

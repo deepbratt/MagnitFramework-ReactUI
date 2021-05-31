@@ -8,7 +8,7 @@ import CustomImage from "../../../Components/CustomImage";
 const SolutionsPrimarySection = () => {
   const classes = useStyles();
   const { chatTitle, classifiedTitle, fundingTitle, designTitle } = Data;
-  const { cardSec, card, devSec, profileIcon } = classes;
+  const { card, devSec, profileIcon } = classes;
   const { chatIcon, classifiedIcon, fundIcon, designIcon } = icons;
   const { Tundora } = Colors;
   return (

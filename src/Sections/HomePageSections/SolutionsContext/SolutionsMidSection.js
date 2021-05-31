@@ -1,6 +1,6 @@
 import React from "react";
 import { useStyles } from "./solutionStyles";
-import { Typography, Card, Grid } from "@material-ui/core";
+import { Typography, Grid } from "@material-ui/core";
 import * as icons from "../../../assets/icons/icon.constants";
 import { Data } from "../../../Utils/Constants/Language/en/SolutionsText";
 import { Colors } from "../../../Theme/color.constants";
@@ -9,7 +9,7 @@ import CustomImage from "../../../Components/CustomImage";
 const SolutionsSecondarySection = () => {
   const classes = useStyles();
   const { foodTitle, portalTitle, datingTitle, fitnessTitle } = Data;
-  const { cardSec, card, devSec, profileIcon } = classes;
+  const { card, devSec, profileIcon } = classes;
   const { deliveryIcon, portalIcon, fitnessIcon, datingIcon } = icons;
   const { Tundora } = Colors;
   return (

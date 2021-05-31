@@ -10,7 +10,7 @@ import {
 import CustomImage from "../../../Components/CustomImage";
 import CustomTitle from "../../../Pages/Section/CustomTitle"
 const HowItWorksContext = () => {
-  const { cardSec , underlined} = useStyles();
+  const { cardSec} = useStyles();
   const { card2, root, devSec, image,  } = missionStyles();
   return (
     <>

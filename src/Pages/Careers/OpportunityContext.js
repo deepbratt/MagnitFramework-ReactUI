@@ -1,8 +1,6 @@
 import React from "react";
 import { useStyles } from "./careerStyles";
 import { Grid, Typography } from "@material-ui/core";
-import Heading4 from "../../ContainerStructure/Headings/Heading4";
-import Breakpoints from "../../Theme/theme.breakpoints";
 import { Colors } from "../../Theme/color.constants";
 import {
   DataArray,
@@ -21,13 +19,12 @@ const OpportunityContext = () => {
     devSec,
     HeadSec,
     para,
-    button,
     RightPattern,
     LeftPattern,
     remoteArea,
     bottomStyle,
   } = classes;
-  const { whiteColor, Harlequin } = Colors;
+  const { whiteColor } = Colors;
   return (
     <>
       <Grid container className={root} spacing={0} justify="center">
