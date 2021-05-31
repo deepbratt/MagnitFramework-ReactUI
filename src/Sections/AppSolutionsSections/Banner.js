@@ -1,10 +1,7 @@
 import React from "react";
 import { Typography } from "@material-ui/core";
-import Breakpoints from "../../Theme/theme.breakpoints";
 import Banner from "../../Components/Banner/index";
 import { Colors } from "../../Theme/color.constants";
-import theme from "../../Theme/GlobalFontSizes";
-import { MuiThemeProvider } from "@material-ui/core/styles";
 import {
   bannerHeading,
   bannerParagraph,
@@ -14,7 +11,7 @@ import {
 import BreadCrumb from "../../Components/BreadCrumb";
 import CustomButton from "../../Components/CustomButton";
 const BannerSection = () => {
-  const { linearBackground, Harlequin, whiteColor } = Colors;
+  const { linearBackground} = Colors;
   const breadcrumbData = [
     {
       path: "/",

@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const Main = ({ ErrorImg }) => {
   const { root, Img, head, paragraph, HomeBtn } = useStyles();
   return (
-    <Grid xs={12} className={root}>
+    <Grid item xs={12} className={root}>
       <section className={head}>
         <img src={ErrorImg} alt="error" className={Img} />
       </section>
