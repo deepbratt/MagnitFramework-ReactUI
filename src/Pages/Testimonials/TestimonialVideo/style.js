@@ -95,5 +95,24 @@ const useStyles = makeStyles((theme) => ({
       },
     },
   },
+  blogDetail: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: "20px",
+    "& > *": {
+      color: "grey",
+    },
+    "& > div > div > h6": {
+      color: "black",
+    },
+    "& > .left": {
+      display: "flex",
+      alignItems: "center",
+      "& > *": {
+        margin: "0 5px",
+      },
+    },
+  },
 }));
 export default useStyles;

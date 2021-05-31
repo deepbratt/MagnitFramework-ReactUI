@@ -6,6 +6,7 @@ import {
   Typography,
   CardHeader,
   Card,
+  Avatar,
 } from "@material-ui/core";
 import useStyles from "./style";
 import Rating from "@material-ui/lab/Rating";
@@ -20,6 +21,7 @@ const VideoCard = ({ Img, detail, avatar, name, date }) => {
     carddate,
     header,
     rating,
+    blogDetail,
   } = useStyles();
 
   return (
@@ -35,7 +37,7 @@ const VideoCard = ({ Img, detail, avatar, name, date }) => {
             key={a.id}
           >
             <Card className={cardRoot}>
-              <CardHeader
+              {/* <CardHeader
                 style={{ textAlign: "left" }}
                 avatar={<img src={a.Avatar} alt="s" className={avatarImg} />}
                 title={
@@ -57,8 +59,30 @@ const VideoCard = ({ Img, detail, avatar, name, date }) => {
                   />
                 }
                 className={header}
-              />
-
+              /> */}
+              <div className={blogDetail}>
+                <div className="left">
+                  <div>
+                    <Avatar src={a.Avatar} />
+                  </div>
+                  <div>
+                    <Typography variant="h5" className={cardTitle}>
+                      {a.name}
+                    </Typography>
+                    <Rating
+                      name="read-only"
+                      value={5}
+                      readOnly
+                      className={rating}
+                    />
+                  </div>
+                </div>
+                <div>
+                  <Typography align="right" variant="body2" component="p">
+                    {a.date}
+                  </Typography>
+                </div>
+              </div>
               <CardMedia
                 component="img"
                 alt=""
