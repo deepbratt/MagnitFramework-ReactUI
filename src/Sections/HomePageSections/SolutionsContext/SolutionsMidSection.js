@@ -16,7 +16,7 @@ const SolutionsSecondarySection = () => {
     <>
       <Grid container spacing={2}>
         <Grid item xs={12} sm={6} md={3}>
-          <Grid item xs={12} className={card}>
+          <Card className={card}>
             <Grid item className={devSec}>
               <CustomImage
                 alt="icon"
@@ -29,10 +29,10 @@ const SolutionsSecondarySection = () => {
                 {foodTitle}
               </Typography>
             </Grid>
-          </Grid>
+          </Card>
         </Grid>
         <Grid item xs={12} sm={6} md={3}>
-          <Grid item xs={12} className={card}>
+          <Card className={card}>
             <Grid item className={devSec}>
               <CustomImage
                 alt="icon"
@@ -45,11 +45,11 @@ const SolutionsSecondarySection = () => {
                 {portalTitle}
               </Typography>
             </Grid>
-          </Grid>
+          </Card>
         </Grid>
 
         <Grid item xs={12} sm={6} md={3}>
-          <Grid item xs={12} className={card}>
+          <Card className={card}>
             <Grid item className={devSec}>
               <CustomImage
                 alt="icon"
@@ -62,10 +62,10 @@ const SolutionsSecondarySection = () => {
                 {datingTitle}
               </Typography>
             </Grid>
-          </Grid>
+          </Card>
         </Grid>
         <Grid item xs={12} sm={6} md={3}>
-          <Grid item xs={12} className={card}>
+          <Card className={card}>
             <Grid item className={devSec}>
               <CustomImage
                 alt="icon"

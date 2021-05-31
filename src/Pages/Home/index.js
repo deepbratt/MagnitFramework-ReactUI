@@ -206,13 +206,13 @@ const Home = (props) => {
           />
         </Section>
       </Grid>
-      <Grid item md={12} xs={12}>
+      <Grid item xs={12}>
         <Solutions />
       </Grid>
-      <Grid item md={12} xs={12}>
+      <Grid item xs={12}>
         <PartnerContext />
       </Grid>
-      <Grid item md={12} xs={12}>
+      <Grid item xs={12}>
         <GlanceSection
           image1={Data.image1}
           image2={Data.image2}

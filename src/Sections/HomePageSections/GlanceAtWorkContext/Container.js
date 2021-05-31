@@ -1,6 +1,6 @@
 import React from "react";
 import { useStyles } from "./containerStyles";
-import { Typography, CardContent, Grid, Hidden } from "@material-ui/core";
+import { Typography, CardContent, Grid, Hidden, Card } from "@material-ui/core";
 import { Colors } from "../../../Theme/color.constants";
 import { Data } from "../../../Utils/Constants/Language/en/GlanceAtWorkData";
 import CustomButton from "../../../Components/CustomButton";
@@ -23,15 +23,8 @@ const Container = ({ backColor }) => {
     buttonText,
   } = Data;
   const { whiteColor, BlueRibbon } = Colors;
-  const {
-    root,
-    card,
-    devSec,
-    cardSec,
-    cardContent,
-    leftPattern,
-    rightPattern,
-  } = classes;
+  const { card, devSec, cardSec, cardContent, leftPattern, rightPattern } =
+    classes;
 
   const ourWorkSectionPatterns = [
     {
@@ -88,46 +81,46 @@ const Container = ({ backColor }) => {
           />
         </Grid>
         <Grid item xs={12} sm={6} md={4} className={cardSec}>
-          <Grid item xs={12} className={card}>
+          <Card className={card}>
             <CardContent>
               <Grid item className={devSec}>
                 <CustomImage width="220px" src={image1} alt="" />
               </Grid>
-              <Grid item className={cardContent}>
-                <Typography variant="h5" gutterBottom>
-                  {subtitleOne}
-                </Typography>
-              </Grid>
             </CardContent>
-          </Grid>
+          </Card>
+          <div className={cardContent}>
+            <Typography color="secondary" variant="h5">
+              {subtitleOne}
+            </Typography>
+          </div>
         </Grid>
         <Grid item xs={12} sm={6} md={4} className={cardSec}>
-          <Grid item xs={12} className={card}>
+          <Card className={card}>
             <CardContent>
               <Grid className={devSec}>
                 <CustomImage width="270px" src={image2} alt="" />
               </Grid>
-              <Grid item className={cardContent}>
-                <Typography variant="h5" gutterBottom>
-                  {subtitleTwo}
-                </Typography>
-              </Grid>
             </CardContent>
-          </Grid>
+          </Card>
+          <div className={cardContent}>
+            <Typography color="secondary" variant="h5">
+              {subtitleTwo}
+            </Typography>
+          </div>
         </Grid>
         <Grid item xs={12} sm={6} md={4} className={cardSec}>
-          <Grid item xs={12} className={card}>
+          <Card className={card}>
             <CardContent>
               <Grid className={devSec}>
                 <CustomImage width="275px" src={image3} alt="" />
               </Grid>
-              <Grid item className={cardContent}>
-                <Typography variant="h5" gutterBottom>
-                  {subtitleThree}
-                </Typography>
-              </Grid>
             </CardContent>
-          </Grid>
+          </Card>
+          <div className={cardContent}>
+            <Typography color="secondary" variant="h5">
+              {subtitleThree}
+            </Typography>
+          </div>
         </Grid>
 
         <Grid item lg={12} md={12} xs={12}>
