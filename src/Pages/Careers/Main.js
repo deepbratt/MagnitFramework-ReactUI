@@ -46,15 +46,15 @@ const Main = (props) => {
           </Card>
           <Card>
             <CardContent className={cardSec}>
-              <Grid xs={12}>
+              <Grid item xs={12}>
               <CustomTitle style={{marginBottom: "10px"}} text={heading} underlined={true}/>
               </Grid>
-              <Grid xs={12} style={{ margin: "20px" }}>
+              <Grid item xs={12} style={{ margin: "20px" }}>
                 <Typography variant="subtitle1" color="inherit">
                   {subHeading}
                 </Typography>
               </Grid>
-              <Grid xs={12} md={8} className={paragraph}>
+              <Grid item xs={12} md={8} className={paragraph}>
                 <Typography variant="body1" className={paragraph}>
                   {para}
                 </Typography>

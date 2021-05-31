@@ -51,7 +51,7 @@ const OpportunityContext = () => {
             >
            
               <Grid className={devSec}>
-                <Grid xs={12} className={HeadSec}>
+                <Grid item xs={12} className={HeadSec}>
                   <Typography variant="subtitle1">{data.title}</Typography>
                 </Grid>
                 <Grid className={remoteArea}>
@@ -62,7 +62,7 @@ const OpportunityContext = () => {
                     <Typography variant="subtitle2">{data.span}</Typography>
                   </div>
                 </Grid>
-                <Grid xs={12} className={para}>
+                <Grid item xs={12} className={para}>
                   <Typography variant="body1" component="body1">
                     <ReadMore
                       text={data.desc}
@@ -73,7 +73,7 @@ const OpportunityContext = () => {
                 </Grid>
               </Grid>
             
-              <Grid xs={12} className={bottomStyle}>
+              <Grid item xs={12} className={bottomStyle}>
                 <CustomButton>{data.buttonText}</CustomButton>
               </Grid>
             </Grid>

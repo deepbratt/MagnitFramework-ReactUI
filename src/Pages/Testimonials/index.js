@@ -39,26 +39,22 @@ function Testimonials() {
         backColor={linearBackground}
         breadCrumb={<BreadCrumb links={breadCrumData} />}
       >
+        <>
         <Typography variant="h1" gutterBottom className={textColor}>
           {Testmonial}
         </Typography>
         <Typography variant="h5" gutterBottom className={textColor}>
           {subTitle}
         </Typography>
+        </>
       </Banner>
-   
-      <Grid xs={12}>
-          <CardContent className={cardSec}>
-          <CustomTitle style={{marginBottom: "20px"}} text={Testmonial} underlined={true}/>
-          <CustomTitle subTitle={ClientsHaveToSay}/>
-          </CardContent>
-      </Grid>
-     <Section  title={Testmonial} subTitle={ClientsHaveToSay}>
-     </Section>
-
+     {/* <Section  title={Testmonial} subTitle={ClientsHaveToSay}>
+     </Section> */}
+      <CustomTitle text={Testmonial} subTitle={ClientsHaveToSay} underlined={true} />
       <Grid container direction="row" justify="center">
         <VideoCard />
         <Grid
+        item
         xs={12}
         className={flex}
       >

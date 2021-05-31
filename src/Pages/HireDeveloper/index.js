@@ -64,13 +64,13 @@ const HireDeveloper = () => {
           className={leftPattern}
           src={PatternLeft}
           alt=""
-          srcset=""
+          srcSet=""
         />
         <CustomImage
           className={rightPattern}
           src={StarFishPattern}
           alt=""
-          srcset=""
+          srcSet=""
         />
         <Section highlightWords={1}>
           <CustomTitle style={{marginBottom: "20px"}} text={ServicesSectionTitle} underlined={true}/>

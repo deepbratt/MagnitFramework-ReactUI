@@ -4,7 +4,7 @@ import Main from './Main'
 import error from "../../assets/Error/404.png"
 function Errors() {
     return (
-        <Grid xs={12}>
+        <Grid item xs={12}>
 <Main ErrorImg={error} />
         </Grid>
     )

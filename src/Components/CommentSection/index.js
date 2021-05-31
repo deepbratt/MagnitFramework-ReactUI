@@ -50,7 +50,7 @@ const CommentSection = ({children}) => {
     yellowCommaPattern
   } = SectionStyles();
   return (
-    <Grid xs={12} className={root}  >
+    <Grid item xs={12} className={root}  >
     {children}
       <Section backColor={aliceBlue}>
         <div className={reviewSlider}>
@@ -65,67 +65,67 @@ const CommentSection = ({children}) => {
             className={squareDotsPattern}
             src={SquareDottedPattern}
             alt=""
-            srcset=""
+            srcSet=""
           />
             <img
             className={yellowCommaPattern}
             src={yellowComma}
             alt=""
-            srcset=""
+            srcSet=""
           />
               <img
             className={commaPattern}
             src={comma}
             alt=""
-            srcset=""
+            srcSet=""
           />
           <img
             className={pinkDotPattern}
             src={pinkDot}
             alt=""
-            srcset=""
+            srcSet=""
           />
            <img
             className={yellowDotPattern}
             src={yellowDot}
             alt=""
-            srcset=""
+            srcSet=""
           />
           <img
             className={miniYellowPattern}
             src={miniYellow}
             alt=""
-            srcset=""
+            srcSet=""
           /> 
           <img
             className={smallDotPattern}
             src={smallDot}
             alt=""
-            srcset=""
+            srcSet=""
           /> 
           <img
             className={leftStarFishPattern}
             src={StarFishPinkPattern}
             alt=""
-            srcset=""
+            srcSet=""
           />
           <img
             className={rightStarFishPattern}
             src={StarFishPattern}
             alt=""
-            srcset=""
+            srcSet=""
           />
           <img
             className={leftDottedPattern}
             src={DottedPattern}
             alt=""
-            srcset=""
+            srcSet=""
           />
           <img
             className={rightDottedPattern}
             src={TopDottedPattern}
             alt=""
-            srcset=""
+            srcSet=""
           />
           <ReviewSlider />
         </div>
