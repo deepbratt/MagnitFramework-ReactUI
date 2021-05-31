@@ -6,7 +6,6 @@ import RequireAuth from "./container/RequireAuth";
 import { pageRoutes } from "./Components/Path";
 import Home from "./Pages/Home";
 import ContactUs from "./Pages/ContactUs";
-import Error from "./Pages/Error/Index";
 import { Suspense } from "react";
 import { Loader } from "./Components/loader";
 

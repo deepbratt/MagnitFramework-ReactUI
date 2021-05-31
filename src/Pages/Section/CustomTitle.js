@@ -26,7 +26,8 @@ const CustomTitle = (props) => {
       <span className={borderBottom ? underlinedStyles : null}>
         {props.text}
       </span>
-      {props.subTitle && (
+    </Typography>
+    {props.subTitle && (
             <Typography
               className={subHeader}
               color="textSecondary"
@@ -36,7 +37,6 @@ const CustomTitle = (props) => {
               {props.subTitle}
             </Typography>
           )}
-    </Typography>
    </div>
   );
 };

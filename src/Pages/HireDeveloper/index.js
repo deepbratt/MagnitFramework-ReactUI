@@ -25,9 +25,7 @@ import BreadCrumb from "../../Components/BreadCrumb";
 import CommentSection from "../../Components/CommentSection";
 import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
-import Heading5 from "../../ContainerStructure/Headings/Heading5";
 import Breakpoints from "../../Theme/theme.breakpoints";
-import {Data} from "../../Utils/Constants/Language/en/GlanceAtWorkData"
 import CustomTitle from "../../Pages/Section/CustomTitle"
 import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/OurWorkSectionPattern";
 const HireDeveloper = () => {
@@ -67,13 +65,13 @@ const HireDeveloper = () => {
           className={leftPattern}
           src={PatternLeft}
           alt=""
-          srcset=""
+          srcSet=""
         />
         <CustomImage
           className={rightPattern}
           src={StarFishPattern}
           alt=""
-          srcset=""
+          srcSet=""
         />
         <Section highlightWords={1}>
           <CustomTitle style={{marginBottom: "20px"}} text={ServicesSectionTitle} underlined={true}/>

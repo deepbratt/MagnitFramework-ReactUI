@@ -8,7 +8,6 @@ import {
 } from "../../Utils/Constants/Language/en/ServicesPageText";
 import Section from "../Section";
 import CustomButton from "../../Components/CustomButton";
-import Breakpoints from "../../Theme/theme.breakpoints";
 import { Link } from "react-router-dom";
 import { DoYouWant } from "../WebServices/constants";
 import PointList from "../../Components/PointBadge/PointList";
@@ -17,7 +16,6 @@ import { BannerImage } from "../../Utils/Constants/Language/en/SolutionsPageData
 import Banner from "../../Components/Banner";
 import CommentSection from "../../Components/CommentSection";
 import ServicesOffered from "../../Sections/HomePageSections/ServicesContext/Services";
-import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
 import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
 import CustomTitle from "../Section/CustomTitle"
 import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/OurWorkSectionPattern";
