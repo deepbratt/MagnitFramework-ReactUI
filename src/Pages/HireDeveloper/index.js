@@ -28,6 +28,7 @@ import CustomImage from "../../Components/CustomImage";
 import Breakpoints from "../../Theme/theme.breakpoints";
 import CustomTitle from "../../Pages/Section/CustomTitle"
 import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/OurWorkSectionPattern";
+import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
 const HireDeveloper = () => {
   const { BlueRibbon, linearBackground } = Colors;
 
