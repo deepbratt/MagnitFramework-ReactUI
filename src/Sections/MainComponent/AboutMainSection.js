@@ -5,12 +5,14 @@ import Heading from "../../ContainerStructure/Headings/Heading4";
 import { MainData } from "../../Utils/Constants/Language/AboutUsData";
 import BreadCrumb from "../../Components/BreadCrumb";
 import CustomImage from "../../Components/CustomImage";
+import CustomTitle from "../../Pages/Section/CustomTitle"
+import Section from "../../Pages/Section";
 
 const AboutMainSection = (props) => {
   const { title, paragraph } = MainData;
 
   const classes = useStyles();
-  const { root, cardSec, breadCrumbStyles, paragraphStyle, hero, card, underlined } =
+  const { root, cardSec, breadCrumbStyles, paragraphStyle, hero, card } =
     classes;
   return (
     <>
@@ -27,17 +29,17 @@ const AboutMainSection = (props) => {
           {props.card === true ? (
             <Card>
               <CardContent className={cardSec}>
-                <section className={underlined}>
-                  <Heading title={title} />
-                </section>
-                <section className={paragraphStyle}>
+              <CustomTitle style={{marginBottom: "20px"}} text={title} underlined={true}/>
+
+              <Grid item lg={7} md={7} sm={10} xs={10} className={paragraphStyle}>
                   {paragraph &&
                     paragraph.map((text, index) => (
-                      <Typography key={index} color="textSecondary" variant="body1">
+                      <Typography key={index} color="textSecondary" variant="h5">
                         {text}
                       </Typography>
                     ))}
-                </section>
+                </Grid>
+                
               </CardContent>
             </Card>
           ) : null}

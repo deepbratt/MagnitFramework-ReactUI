@@ -17,9 +17,11 @@ import { BannerImage } from "../../Utils/Constants/Language/en/SolutionsPageData
 import Banner from "../../Components/Banner";
 import CommentSection from "../../Components/CommentSection";
 import ServicesOffered from "../../Sections/HomePageSections/ServicesContext/Services";
-
+import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
+import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
+import CustomTitle from "../Section/CustomTitle"
 const Services = () => {
-  const { linearBackground } = Colors;
+  const { linearBackground, skyBlue } = Colors;
 
   const breadCrumData = [
     {
@@ -39,31 +41,25 @@ const Services = () => {
           backColor={linearBackground}
           breadCrumb={<BreadCrumb links={breadCrumData} />}
         >
-          <Typography color="textPrimary" variant="h2" gutterBottom>
+          <Typography color="textPrimary" variant="h1" gutterBottom>
             {ServicesPageBanner.title}
           </Typography>
-          <Typography color="textPrimary" variant="h6" gutterBottom>
+          <Typography color="textPrimary" variant="h5" gutterBottom>
             {ServicesPageBanner.subtitle}
           </Typography>
           <span>
-            <CustomButton
-              variant="contained"
-              size={Breakpoints()}
-              color="secondary"
-            >
-              {ServicesPageBanner.buttonText}
-            </CustomButton>
+            <CustomButton>{ServicesPageBanner.buttonText}</CustomButton>
           </span>
         </Banner>
 
         <Grid item xs={12}>
-          <Section title={ServicesOfferedSection.title}>
-
-          <ServicesOffered servicesData={ServicesOfferedSection.values}/>
+          <Section>
+          <ServicesOffered title={ServicesOfferedSection.title} servicesData={ServicesOfferedSection.values}/>
           </Section>
         </Grid>
-        <Section title={BenifitsSection.title}>
+        <Section>
           <Grid item xs={12}>
+            <CustomTitle text={BenifitsSection.title} underlined={true}/>
             <PointList
               data={BenifitsSection.data}
               horizontal={true}
@@ -71,15 +67,11 @@ const Services = () => {
             />
           </Grid>
         </Section>
-        <Section title={DoYouWant}>
+        <GlanceSection backColor={skyBlue} />
+        <Section>
+        <CustomTitle text={DoYouWant} underlined={true}/>
           <span>
-            <CustomButton
-              variant="contained"
-              size={Breakpoints()}
-              color="secondary"
-              component={Link}
-              to="/request-a-quote"
-            >
+            <CustomButton component={Link} to="/request-a-quote">
               Request a Quote
             </CustomButton>
           </span>

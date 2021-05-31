@@ -4,6 +4,7 @@ const { Citrine, darkJungleGreen } = Colors;
 
 const FooterStyle = makeStyles((theme) => ({
   root: {
+    position: "relative",
     backgroundColor: darkJungleGreen,
     // REMOVED - FOOTER PADDING
     padding: "40px 150px",

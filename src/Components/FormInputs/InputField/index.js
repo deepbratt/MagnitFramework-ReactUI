@@ -2,29 +2,33 @@ import TextField from "@material-ui/core/TextField";
 import LayoutStyle from "./style";
 
 const InputField = ({
-  placeholder,
-  helperText,
+  value,
   multiline,
   fullWidth,
+  placeholder,
+  name,
   variant,
   size,
   rows,
   rowsMax,
-  error,
+  error = null,
+  onChange,
 }) => {
   const { root, input } = LayoutStyle();
   return (
     <TextField
       className={root}
       placeholder={placeholder}
+      name={name}
+      value={value}
       variant={variant}
       multiline={multiline}
-      error={error}
-      helperText={helperText}
       fullWidth={fullWidth}
       rows={rows}
       size={size}
       rowsMax={rowsMax}
+      onChange={onChange}
+      {...(error && { error: true, helperText: error })}
       InputProps={{
         classes: { input: input },
       }}
@@ -34,8 +38,6 @@ const InputField = ({
 
 InputField.defaultProps = {
   size: "small",
-  error: false,
-  helperText: "",
   fullWidth: true,
   variant: "outlined",
   rows: "3",

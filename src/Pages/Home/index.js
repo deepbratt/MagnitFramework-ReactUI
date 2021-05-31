@@ -17,8 +17,11 @@ import Image5 from "../../assets/images/awardAccredationSection/image 6.png";
 // import CardComponent from "../../Components/CardComponent";
 import { cards } from "./cardData";
 // import CardSlyder from "../../Components/CardSlider";
+import CustomTitle from "../../Pages/Section/CustomTitle";
 import startQuote from "../../assets/images/cards/startQuote.png";
 import endQuote from "../../assets/images/cards/EndingQuoteBlue.png";
+import BackGroudnPatternLeft from "../../assets/OurBlogs/LatestBlogPattern.png";
+import BackGroudnPatternRight from "../../assets/OurBlogs/LatestBlogPatternRight.png";
 import { Colors } from "../../Theme/color.constants";
 import {
   ServicesSectionTitle,
@@ -38,15 +41,18 @@ import QuoteCard from "../../Components/QuoteCard";
 import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
 import ReviewSlider from "../../Components/ReviewSlider";
-import {
-  ServicesData,
-} from "../../Utils/Constants/Language/en/ServicesText";
-import {Data} from "../../Utils/Constants/Language/en/GlanceAtWorkData"
+import { ServicesData } from "../../Utils/Constants/Language/en/ServicesText";
+import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
+import api from "../../Utils/Constants/api";
+import axios from "axios";
+import { useCancelToken } from "../../Utils/CustomHooks/useCancelToken";
 export const AwardSectionImages = [Image1, Image2, Image3, Image4, Image5];
 
 const Home = (props) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const { leftRoot, rightRoot } = HomeStyles();
+  const { leftRoot, rightRoot, leftPattern, rightPattern } = HomeStyles();
+  // const { createNewToken, isCancel } = useCancelToken();
+
   // const {
   //   // sectionBackgroundColors,
   //   // factCards,
@@ -140,6 +146,49 @@ const Home = (props) => {
     </>,
   ];
 
+  const ourWorkSectionPatterns = [
+    {
+      image: (
+        <Hidden smDown>
+          <Grid
+            className={leftPattern}
+            style={{ position: "absolute" }}
+            item
+            xs={3}
+          >
+            <img
+              width="100%"
+              height="100%"
+              src={BackGroudnPatternLeft}
+              alt=""
+            />
+          </Grid>
+        </Hidden>
+      ),
+      styles: leftPattern,
+    },
+    {
+      image: (
+        <Hidden smDown>
+          <Grid
+            className={`${rightPattern}`}
+            style={{ position: "absolute" }}
+            item
+            xs={4}
+          >
+            <img
+              width="100%"
+              height="100%"
+              src={BackGroudnPatternRight}
+              alt=""
+            />
+          </Grid>
+        </Hidden>
+      ),
+      styles: rightPattern,
+    },
+  ];
+
   function submitForm() {
     setIsSubmitted(true);
   }
@@ -150,26 +199,50 @@ const Home = (props) => {
         <Slide />
       </Grid>
       <Grid item md={12} xs={12}>
-        <Section title={ServicesSectionTitle}>
-          <ServicesOffered servicesData={ServicesData} />
+        <Section>
+          <ServicesOffered
+            title={ServicesSectionTitle}
+            servicesData={ServicesData}
+          />
         </Section>
       </Grid>
       <Grid item md={12} xs={12}>
-        <Solutions />
+        <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
+          <Solutions />
+        </Section>
       </Grid>
       <Grid item md={12} xs={12}>
         <PartnerContext />
       </Grid>
       <Grid item md={12} xs={12}>
-        <GlanceSection subtitleOne={Data.subtitleOne} subtitleTwo={Data.subtitleTwo} subtitleThree={Data.subtitleThree} backColor={BlueRibbon} />
+        <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
+          <GlanceSection
+            image1={Data.image1}
+            image2={Data.image2}
+            image3={Data.image3}
+            subtitleOne={Data.subtitleOne}
+            subtitleTwo={Data.subtitleTwo}
+            subtitleThree={Data.subtitleThree}
+          />
+        </Section>
       </Grid>
       {/* TRAINING AND CERTIFICATION */}
-      <Section title={TrainingAndCertificationSectionTitle}>
+      <Section>
         <Grid container direction="row">
+          <Grid item lg={12} md={12} xs={12}>
+            <CustomTitle
+              underlined={true}
+              text={TrainingAndCertificationSectionTitle}
+            />
+          </Grid>
           {TCData &&
             TCData.filter((card, idx) => idx < 4).map((card, index) => (
               <Grid key={index} item xs={12}>
-                <CertificationList root={rootClasses[index]} data={card} />
+                <CertificationList
+                  toRight={index % 2 === 0 ? false : true}
+                  root={rootClasses[index]}
+                  data={card}
+                />
               </Grid>
             ))}
         </Grid>
@@ -190,11 +263,10 @@ const Home = (props) => {
         )}
       </Section>
       {/* What do our Client Say */}
-      <Section
-        title={WhatDoClientSaySectionTitle}
-        startQuote={startQuote}
-        endQuote={endQuote}
-      >
+      <Section startQuote={startQuote} endQuote={endQuote}>
+        <Grid item lg={12} md={12} xs={12}>
+          <CustomTitle underlined={true} text={WhatDoClientSaySectionTitle} />
+        </Grid>
         <ReviewSlider
           showArrows={false}
           showDots={false}
@@ -205,7 +277,8 @@ const Home = (props) => {
         {/* <ReviewSlider slides={cardArr} /> */}
       </Section>
       {/* AWARD AND ACCREDITATIONS SECTION */}
-      <Section title={AwardSectionTitle}>
+      <Section>
+        <CustomTitle underlined={true} text={AwardSectionTitle} />
         <div
           style={{
             display: "flex",

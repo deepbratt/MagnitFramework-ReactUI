@@ -7,7 +7,7 @@ import { MuiThemeProvider } from "@material-ui/core/styles";
 import {THEME} from "../../ContainerStructure/Headings/headingStyles"
 import { Array, Data } from "../../Utils/Constants/Language/en/CareersData";
 import Content from "../../Components/Card";
-import Section from "../Section";
+import CustomTitle from "../Section/CustomTitle";
 const Services = () => {
   const classes = useStyles();
   const { title, subTitle } = Data;
@@ -17,18 +17,7 @@ const Services = () => {
     <>
       <Grid className={root} elevation={0}>
         <section className={serviceHeading}>
-          <MuiThemeProvider theme={THEME}>
-            <Typography variant="h4" >
-              <Hidden smDown>
-                {title}
-                <span className={underlined}>{subTitle}</span>
-              </Hidden>
-              <Hidden mdUp>
-                {title} <br />
-                <span className={underlined}>{subTitle}</span>
-              </Hidden>
-            </Typography>
-          </MuiThemeProvider>
+        <CustomTitle style={{marginBottom: "20px"}} text={title} underlined={true}/>
         </section>
         <section className={cardSec}>
           <Content data={Array} />

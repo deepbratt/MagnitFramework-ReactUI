@@ -6,13 +6,12 @@ import {
   Toolbar,
   AppBar,
   LinearProgress,
-  Button
+  Button,
 } from "@material-ui/core";
 import { NavLink } from "react-router-dom";
 import theme from "../../../Theme/GlobalFontSizes";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import SideBar from "./Sidebar/SideBar";
-import Breakpoints from "../../../Theme/theme.breakpoints";
 import { Hidden } from "@material-ui/core";
 import { Logo } from "../../../Components/Hero/Images";
 import CustomButton from "../../../Components/CustomButton";
@@ -49,16 +48,19 @@ const Header = (props) => {
           </Hidden>
           <Hidden smDown>
             <List className={list}>
-             
-                <MuiThemeProvider theme={theme}>
-                  <ListItem>
-                   <Button className={list}>
-                   <NavLink activeClassName={active} className={link} to="/home">
-                   HOME
-                   </NavLink>
-                   </Button>
-                  </ListItem>
-                </MuiThemeProvider>
+              <MuiThemeProvider theme={theme}>
+                <ListItem>
+                  <Button className={list}>
+                    <NavLink
+                      activeClassName={active}
+                      className={link}
+                      to="/home"
+                    >
+                      HOME
+                    </NavLink>
+                  </Button>
+                </ListItem>
+              </MuiThemeProvider>
               <Menus
                 route={serviceRoute}
                 name={service}
@@ -73,11 +75,7 @@ const Header = (props) => {
                   activeClassName={active}
                   className={link}
                 >
-                  <CustomButton
-                    variant="contained"
-                    size={Breakpoints()}
-                    onClick={navigated}
-                  >
+                  <CustomButton onClick={navigated}>
                     Request A Quote
                   </CustomButton>
                 </NavLink>

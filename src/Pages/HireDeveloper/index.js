@@ -1,9 +1,9 @@
 import PointList from "../../Components/PointBadge/PointList";
 import Section from "../Section";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import { Typography } from "@material-ui/core";
 import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
-import {  webDevServicesData as servicesData, } from "../WebServices/webDevServicesData";
+import { webDevServicesData as servicesData } from "../WebServices/webDevServicesData";
 import { whyHireData as hireUsData } from "../WebServices/whyHireData";
 import { Colors } from "../../Theme/color.constants";
 import Banner from "../../Components/Banner";
@@ -14,7 +14,7 @@ import {
   WhyHireSectionTitle,
   Combining,
   WeProvideExceptional,
-  hireDeveloper
+  hireDeveloper,
 } from "./constants";
 import OptionsTab from "../../Components/OptionsTab";
 import StarFishPattern from "../../assets/patterns/starfishBlue.png";
@@ -28,6 +28,7 @@ import CustomImage from "../../Components/CustomImage";
 import Heading5 from "../../ContainerStructure/Headings/Heading5";
 import Breakpoints from "../../Theme/theme.breakpoints";
 import {Data} from "../../Utils/Constants/Language/en/GlanceAtWorkData"
+import CustomTitle from "../../Pages/Section/CustomTitle"
 const HireDeveloper = () => {
   const { skyBlue, linearBackground } = Colors;
 
@@ -42,8 +43,7 @@ const HireDeveloper = () => {
     },
   ];
 
-  const { textColor, leftPattern, rightPattern } =
-    ServicesSectionStyles();
+  const { textColor, leftPattern, rightPattern } = ServicesSectionStyles();
   return (
     <CommentSection>
       <Banner
@@ -52,21 +52,14 @@ const HireDeveloper = () => {
         breadCrumb={<BreadCrumb links={breadCrumData} />}
       >
         <Typography variant="h1" gutterBottom className={textColor}>
-         {Combining}
+          {Combining}
         </Typography>
         <Typography variant="h5" gutterBottom className={textColor}>
-         {WeProvideExceptional}
+          {WeProvideExceptional}
         </Typography>
-        <span >
-        <CustomButton
-          variant="contained"
-          size={Breakpoints()}
-          color="secondary"
-        >
-         Get Started
-        </CustomButton>
+        <span>
+          <CustomButton>Get Started</CustomButton>
         </span>
-        
       </Banner>
       <div style={{ position: "relative" }}>
         <CustomImage
@@ -81,27 +74,29 @@ const HireDeveloper = () => {
           alt=""
           srcset=""
         />
-        <Section title={ServicesSectionTitle} highlightWords={1}>
-          <section style={{ marginBottom: "10px" }}>
-            <Heading5 subTitle={hireDeveloper}/>
-          </section>
+        <Section highlightWords={1}>
+          <CustomTitle style={{marginBottom: "20px"}} text={ServicesSectionTitle} underlined={true}/>
+          <CustomTitle subTitle={hireDeveloper}/>
           <PointList data={servicesData} horizontal={false} />
         </Section>
       </div>
-      <Section title={HiringSectionTitle} highlightWords={2}>
+      <Section>
+      <CustomTitle text={HiringSectionTitle} underlined={true}/>
         <OptionsTab />
       </Section>
-      <Section title={WhyHireSectionTitle} highlightWords={3}>
+      <Section>
+      <CustomTitle text={WhyHireSectionTitle} underlined={true}/>
         <PointList data={hireUsData} horizontal={true} lgBreakpoint={6}/>
       </Section>
-        <GlanceSection subtitleOne={Data.subtitleOne} subtitleTwo={Data.subtitleTwo} subtitleThree={Data.subtitleThree}  backColor={skyBlue} />
-      <Section title={DoYouWant}>
+      <GlanceSection backColor={skyBlue} />
+      <Section>
+      <CustomTitle text={DoYouWant} underlined={true}/>
     <span >
     
         <CustomButton
           variant="contained"
           size={Breakpoints()}
-          color="secondary"
+          color="primary"
           component={Link}
           to="/request-a-quote"
           
@@ -109,9 +104,8 @@ const HireDeveloper = () => {
        Request a Quote
         </CustomButton>
         </span>
-    </Section>
+      </Section>
     </CommentSection>
-    
   );
 };
 

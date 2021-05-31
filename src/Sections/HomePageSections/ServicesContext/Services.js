@@ -2,14 +2,15 @@ import React from "react";
 import { useStyles } from "./servicesStyles";
 import { Grid } from "@material-ui/core";
 import Content from "../../../Components/Card";
-
-const ServicesOffered = ({ servicesData }) => {
+import CustomTitle from "../../../Pages/Section/CustomTitle";
+const ServicesOffered = ({ servicesData,title }) => {
   const classes = useStyles();
 
   const { root, cardSec } = classes;
 
   return (
     <>
+        <CustomTitle underlined={true}  text={title}/>
       <Grid container className={root}>
         <Grid item className={cardSec}>
           <Content data={servicesData} />

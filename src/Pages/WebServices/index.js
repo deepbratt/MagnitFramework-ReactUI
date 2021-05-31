@@ -1,5 +1,6 @@
 import PointList from "../../Components/PointBadge/PointList";
 import Section from "../Section";
+import CustomTitle from "../Section/CustomTitle";
 import { Link } from "react-router-dom";
 import { Typography } from "@material-ui/core";
 import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
@@ -28,7 +29,7 @@ import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
 import Heading5 from "../../ContainerStructure/Headings/Heading5";
 import Breakpoints from "../../Theme/theme.breakpoints";
-import {Data} from "../../Utils/Constants/Language/en/GlanceAtWorkData"
+import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
 const Services = () => {
   const { skyBlue, linearBackground } = Colors;
 
@@ -58,13 +59,7 @@ const Services = () => {
           {WeProvideExceptional}
         </Typography>
         <span>
-          <CustomButton
-            variant="contained"
-            size={Breakpoints()}
-            color="secondary"
-          >
-            Get Started
-          </CustomButton>
+          <CustomButton>Get Started</CustomButton>
         </span>
       </Banner>
       <div style={{ position: "relative" }}>
@@ -80,27 +75,21 @@ const Services = () => {
           alt=""
           srcset=""
         />
-        <Section title={ServicesSectionTitle} highlightWords={1}>
-          <section style={{ marginBottom: "10px",marginTop:'-40px' }}>
-            <Heading5 subTitle={OurExpertEngineers} />
-          </section>
+        <Section>
+          <CustomTitle style={{marginBottom: "20px"}} text={ServicesSectionTitle} underlined={true}/>
+          <CustomTitle subTitle={OurExpertEngineers}/>
           <PointList data={servicesData} horizontal={false} />
         </Section>
       </div>
-      <Section title={WhyHireSectionTitle} highlightWords={3}>
+      <Section>
+      <CustomTitle underlined={true} text={WhyHireSectionTitle} />
         <PointList data={hireUsData} horizontal={true} lgBreakpoint={6} />
       </Section>
-     
         <GlanceSection subtitleOne={Data.subtitleOne} subtitleTwo={Data.subtitleTwo} subtitleThree={Data.subtitleThree} backColor={skyBlue} />
-      <Section title={DoYouWant}>
+      <Section>
+      <CustomTitle underlined={true} text={DoYouWant} />
         <span>
-          <CustomButton
-            variant="contained"
-            size={Breakpoints()}
-            color="secondary"
-            component={Link}
-            to="/request-a-quote"
-          >
+          <CustomButton component={Link} to="/request-a-quote">
             Request a Quote
           </CustomButton>
         </span>

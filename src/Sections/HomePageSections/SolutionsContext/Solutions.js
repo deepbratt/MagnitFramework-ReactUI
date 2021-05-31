@@ -7,7 +7,7 @@ import Breakpoints from "../../../Theme/theme.breakpoints";
 import { Colors } from "../../../Theme/color.constants";
 import { Data } from "../../../Utils/Constants/Language/en/SolutionsText";
 import CustomButton from "../../../Components/CustomButton";
-
+import CustomTitle from "../../../Pages/Section/CustomTitle";
 const Solutions = () => {
   const classes = useStyles();
   const { root } = classes;
@@ -15,27 +15,27 @@ const Solutions = () => {
   const { whiteColor, blackColor } = Colors;
   return (
     <>
-      <Grid container className={root} elevation={0}>
-        <Grid style={{color: whiteColor}} item lg={12} md={12} xs={12}>
-            <Typography variant="h2">{heading}</Typography>
-            <Typography variant="h5">{subHeading}</Typography>
+      <Grid container>
+        <Grid style={{ color: whiteColor }} item lg={12} md={12} xs={12}>
+          <CustomTitle
+            style={{ marginBottom: "20px" }}
+            underlined={false}
+            subTitle={subHeading}
+            color={whiteColor}
+            text={heading}
+            subTitleColor={whiteColor}
+          />
         </Grid>
-        <PrimarySection />
-        <MidSection />
+        <Grid style={{ marginBottom: "20px" }} container spacing={2}>
+          <Grid item xs={12}>
+            <PrimarySection />
+          </Grid>
+          <Grid item xs={12}>
+            <MidSection />
+          </Grid>
+        </Grid>
         <Grid item lg={12} md={12} xs={12}>
-          <CustomButton
-            style={{
-              backgroundColor: whiteColor,
-              padding: ".3rem 1.9rem",
-              color: blackColor,
-              borderRadius: "5px",
-              marginTop: "20px"
-            }}
-            variant="contained"
-            size={Breakpoints()}
-          >
-            See More
-          </CustomButton>
+          <CustomButton color="secondary">See More</CustomButton>
         </Grid>
       </Grid>
     </>

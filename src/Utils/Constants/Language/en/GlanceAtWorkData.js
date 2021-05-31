@@ -1,5 +1,15 @@
+import Img3 from "../../../../assets/services/alif1.png";
+import Img1 from "../../../../assets/services/alif2.png";
+import Img2 from "../../../../assets/services/alif3.png";
+
+ 
+
+
 export const Data = {
     title: "Our Work",
+    image1 : Img1,
+ image2 :Img2,
+ image3 : Img3,
     subtitleOne: "HOMEDESIGN FURNITURE",
     paragraphOne: "Problem: They offer a huge collection of exquisite quality furniture all across India; customized with a human touch, finest quality wood and best practiced craft. Solution: We built a well-structured website with special attention to 3D tour, visuals, user experience, and functionality to grab the visitors' attention. We made it very easy for them to browse, find, & buy the furniture that makes their house a home.",
     subtitleTwo: "YOURDELI",

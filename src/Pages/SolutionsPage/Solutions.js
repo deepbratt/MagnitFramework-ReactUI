@@ -43,13 +43,7 @@ const Solutions = () => {
         </Section>
         <Section title={DoYouWant}>
           <span>
-            <CustomButton
-              variant="contained"
-              size={Breakpoints()}
-              color="secondary"
-              component={Link}
-              to="/request-a-quote"
-            >
+            <CustomButton component={Link} to="/request-a-quote">
               Request a Quote
             </CustomButton>
           </span>

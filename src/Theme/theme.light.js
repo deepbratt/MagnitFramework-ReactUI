@@ -12,9 +12,9 @@ export default createTheme({
       contrastText: "#fff",
     },
     secondary: {
-      main: Harlequin,
-      dark: "#008732",
-      contrastText: "#fff",
+      main: "#fff",
+      dark: "#D7D6D5",
+      contrastText: "#000000",
     },
     customColors: {
       peach: "#FFA24C",

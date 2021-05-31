@@ -14,23 +14,25 @@ const SolutionsSecondarySection = () => {
   const { Tundora } = Colors;
   return (
     <>
-      <Grid container className={cardSec}>
-        <Grid item className={card}>
-          <Grid item className={devSec}>
-            <CustomImage
-              alt="icon"
-              className={profileIcon}
-              src={deliveryIcon}
-            />
-          </Grid>
-          <Grid item>
+      <Grid container spacing={2}>
+        <Grid item xs={12} sm={6} md={3}>
+          <Grid item xs={12} className={card}>
+            <Grid item className={devSec}>
+              <CustomImage
+                alt="icon"
+                className={profileIcon}
+                src={deliveryIcon}
+              />
+            </Grid>
+            <Grid item>
               <Typography variant="h5" style={{ color: Tundora }}>
                 {foodTitle}
               </Typography>
+            </Grid>
           </Grid>
         </Grid>
-        <Card className={card}>
-
+        <Grid item xs={12} sm={6} md={3}>
+          <Grid item xs={12} className={card}>
             <Grid item className={devSec}>
               <CustomImage
                 alt="icon"
@@ -39,14 +41,15 @@ const SolutionsSecondarySection = () => {
               />
             </Grid>
             <Grid item>
-                <Typography variant="h5" style={{ color: Tundora }}>
-                  {portalTitle}
-                </Typography>
+              <Typography variant="h5" style={{ color: Tundora }}>
+                {portalTitle}
+              </Typography>
             </Grid>
-        </Card>
+          </Grid>
+        </Grid>
 
-        <Card className={card}>
-
+        <Grid item xs={12} sm={6} md={3}>
+          <Grid item xs={12} className={card}>
             <Grid item className={devSec}>
               <CustomImage
                 alt="icon"
@@ -55,12 +58,14 @@ const SolutionsSecondarySection = () => {
               />
             </Grid>
             <Grid item>
-                <Typography variant="h5" style={{ color: Tundora }}>
-                  {datingTitle}
-                </Typography>
+              <Typography variant="h5" style={{ color: Tundora }}>
+                {datingTitle}
+              </Typography>
             </Grid>
-        </Card>
-        <Card className={card}>
+          </Grid>
+        </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <Grid item xs={12} className={card}>
             <Grid item className={devSec}>
               <CustomImage
                 alt="icon"
@@ -69,11 +74,12 @@ const SolutionsSecondarySection = () => {
               />
             </Grid>
             <Grid item>
-                <Typography variant="h5" style={{ color: Tundora }}>
-                  {fitnessTitle}
-                </Typography>
+              <Typography variant="h5" style={{ color: Tundora }}>
+                {fitnessTitle}
+              </Typography>
             </Grid>
-        </Card>
+          </Grid>
+        </Grid>
       </Grid>
     </>
   );

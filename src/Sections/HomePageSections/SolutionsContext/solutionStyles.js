@@ -29,12 +29,12 @@ export const THEME = createMuiTheme({
 
 export const useStyles = makeStyles((theme) => ({
   root: {
-    paddingTop: "25px",
+    paddingTop: "60px",
     margin: "0px",
     padding: "0px",
     backgroundColor: BlueRibbon,
     width: "100%",
-    paddingBottom: "50px",
+    paddingBottom: "90px",
   },
   cardSec: {
     display: "flex",
@@ -44,7 +44,6 @@ export const useStyles = makeStyles((theme) => ({
   },
   card: {
     backgroundColor: whiteColor,
-    width: "13%",
     height: "150px",
     display: "flex",
     flexDirection: "column",
@@ -56,16 +55,8 @@ export const useStyles = makeStyles((theme) => ({
       boxShadow: "0px 4px 50px 5px rgba(0, 0, 0, 0.06)",
       backgroundColor: "#fff",
     },
-    margin: "10px",
     cursor: "pointer",
-    [breakpoints.down("md")]: {
-      width: "40%",
-    },
-    [breakpoints.down("sm")]: {
-      width: "60%",
-    },
   },
-
   devSec: {
     height: "100px",
     display: "flex",

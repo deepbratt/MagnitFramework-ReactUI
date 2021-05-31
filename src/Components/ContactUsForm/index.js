@@ -1,14 +1,33 @@
-import { InputLabel } from "@material-ui/core";
+import {
+  CircularProgress,
+  Grid,
+  InputLabel,
+} from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
 import InputField from "../../Components/FormInputs/InputField";
-import SectionHeading from "../../Pages/Section/SectionHeading";
+import CustomTitle from "../../Pages/Section/CustomTitle";
 import { contactUsLabelsText } from "../../Utils/Constants/Language";
 import CustomButton from "../CustomButton";
 import FormStyles from "./style";
+import { useForm } from "./useForm";
+import { fieldNames } from "../../Utils/Constants/ContactUsForm.js";
+import Section from "../../Pages/Section"
+import CustomToast from "../CustomToast/CustomToast";
 
 const ContactUsForm = (props) => {
   const { form, label, button, privacyPolicy } = FormStyles();
+  const {
+    values,
+    errors,
+    handleInputChange,
+    handleSubmit,
+    isLoading,
+    toastOpen,
+    setToastOpen,
+    requestMessage,
+    toastType,
+  } = useForm(true);
 
   const {
     subHeading,
@@ -21,18 +40,11 @@ const ContactUsForm = (props) => {
     privacy,
   } = contactUsLabelsText;
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(e);
-  };
-
   return (
     <>
-      <SectionHeading color={`${props.color}`} header={props.heading} />
-      <Typography variant="subtitle2" color="textSecondary" component="h5">
-        {subHeading}
-      </Typography>
-
+     
+     <Section>
+      <CustomTitle style={{marginBottom: "0px"}} underlined={props.bool} subTitle={subHeading} subTitleColor={`${props.color}`} color={`${props.color}`} text={props.heading} />
       <form className={form} onSubmit={handleSubmit}>
         <InputLabel className={`${label} ${props.styles}`} htmlFor="input-name">
           {name}
@@ -40,9 +52,12 @@ const ContactUsForm = (props) => {
 
         <InputField
           id="input-name"
-          name="name"
+          name={fieldNames.fullName}
           fullWidth
           placeholder="e.g John Martin"
+          value={values.fullName}
+          onChange={handleInputChange}
+          error={errors.fullName}
         />
 
         <InputLabel
@@ -54,8 +69,12 @@ const ContactUsForm = (props) => {
 
         <InputField
           id="input-email"
+          name={fieldNames.email}
           fullWidth
           placeholder="e.g johnmartin@gmail.com"
+          value={values.email}
+          onChange={handleInputChange}
+          error={errors.email}
         />
 
         <InputLabel
@@ -67,8 +86,12 @@ const ContactUsForm = (props) => {
 
         <InputField
           id="input-companyName"
+          name={fieldNames.companyName}
           fullWidth
           placeholder="XYZ Company"
+          value={values.companyName}
+          onChange={handleInputChange}
+          error={errors.companyName}
         />
 
         <InputLabel
@@ -78,7 +101,15 @@ const ContactUsForm = (props) => {
           {phoneNum}
         </InputLabel>
 
-        <InputField id="input-phone" fullWidth placeholder="+1 225 8777 461" />
+        <InputField
+          id="input-phone"
+          name={fieldNames.mobile}
+          fullWidth
+          placeholder="+1 225 8777 461"
+          value={values.mobile}
+          onChange={handleInputChange}
+          error={errors.mobile}
+        />
 
         <InputLabel
           className={`${label} ${props.styles}`}
@@ -89,14 +120,17 @@ const ContactUsForm = (props) => {
 
         <InputField
           id="input-message"
+          name={fieldNames.message}
           fullWidth
           placeholder="Type your message here..."
+          value={values.message}
+          onChange={handleInputChange}
+          error={errors.message}
           multiline
         />
+
         <div className={privacyPolicy}>
-          <InfoOutlinedIcon
-            style={{ color: props.captionColor }}
-          />
+          <InfoOutlinedIcon style={{ color: props.captionColor }} />
           <Typography
             style={{ color: props.captionColor }}
             variant="caption"
@@ -110,12 +144,24 @@ const ContactUsForm = (props) => {
           className={button}
           fullWidth
           type="submit"
-          size="medium"
-          variant="contained"
+          disabled={isLoading}
         >
-          {submit}
+          {isLoading ? (
+            <Grid container justify="center">
+              <CircularProgress />
+            </Grid>
+          ) : (
+            submit
+          )}
         </CustomButton>
+        <CustomToast
+          open={toastOpen}
+          onClose={() => setToastOpen(false)}
+          severity={toastType}
+          message={requestMessage}
+        />
       </form>
+      </Section>
     </>
   );
 };

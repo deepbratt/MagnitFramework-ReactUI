@@ -12,8 +12,6 @@ export const useStyles = makeStyles((theme) => ({
   cardSec: {
     display: "flex",
     flexFlow: "wrap",
-    marginTop: "40px",
-    marginBottom: "40px",
     justifyContent: "center",
   },
   card: {

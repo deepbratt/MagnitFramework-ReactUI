@@ -58,7 +58,7 @@ const LatestBlogCard = ({ cardData }) => {
       </CardActionArea>
       <CardActions className={latestBlogCardContent}>
         <NavLink to="/">
-          <CustomButton color="primary">{buttonText}</CustomButton>
+          <CustomButton>{buttonText}</CustomButton>
         </NavLink>
       </CardActions>
     </Card>
