@@ -29,8 +29,9 @@ import Heading5 from "../../ContainerStructure/Headings/Heading5";
 import Breakpoints from "../../Theme/theme.breakpoints";
 import {Data} from "../../Utils/Constants/Language/en/GlanceAtWorkData"
 import CustomTitle from "../../Pages/Section/CustomTitle"
+import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/OurWorkSectionPattern";
 const HireDeveloper = () => {
-  const { skyBlue, linearBackground } = Colors;
+  const { BlueRibbon, linearBackground } = Colors;
 
   const breadCrumData = [
     {
@@ -88,7 +89,14 @@ const HireDeveloper = () => {
       <CustomTitle text={WhyHireSectionTitle} underlined={true}/>
         <PointList data={hireUsData} horizontal={true} lgBreakpoint={6}/>
       </Section>
-      <GlanceSection backColor={skyBlue} />
+      {/* <GlanceSection backColor={skyBlue} /> */}
+      <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
+          <GlanceSection
+              title={Data.title}
+              data={Data.arr}
+              buttonText={Data.buttonText}
+            />
+        </Section>
       <Section>
       <CustomTitle text={DoYouWant} underlined={true}/>
     <span >
