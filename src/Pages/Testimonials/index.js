@@ -53,11 +53,6 @@ function Testimonials() {
       <Section >
           <CustomTitle style={{marginBottom: "10px"}} text={Testmonial} underlined={true}/>
           <CustomTitle subTitle={ClientsHaveToSay}/>
-          </Section>
-      </Grid>
-     {/*  title={Testmonial} subTitle={ClientsHaveToSay}>
-     </Section> */}
-
       <Grid container direction="row" justify="center">
         <VideoCard />
         <Grid
@@ -67,6 +62,8 @@ function Testimonials() {
         <CustomButton type="submit">See More</CustomButton>
       </Grid>
     
+      </Grid>
+      </Section>
       </Grid>
     </CommentSection>
   );

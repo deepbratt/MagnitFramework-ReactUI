@@ -10,22 +10,64 @@ import useStyles from "./style";
 import Rating from "@material-ui/lab/Rating";
 import play from "../../../assets/Testimonials/play.png";
 import VideosData from "../../../Utils/Constants/Language/en/TestimonialVideos";
+import QuoteCard from "../../../Components/QuoteCard";
+import { cards } from "../../Home/cardData";
 const VideoCard = ({ Img, detail, avatar, name, date }) => {
   const {
-    cardRoot,
-    cardImage,
-    avatarImg,
-    cardTitle,
-    cardpara,
-    carddate,
-    header,
-    rating,
-    playBtn,
   } = useStyles();
 
   return (
     <>
-    {VideosData.map((a)=>{
+
+        {cards &&
+          cards.map((data, index) => (
+            <Grid
+              key={index}
+              item
+              xs={12}
+              md={6}
+              lg={4}
+              style={{ display: "flex" }}
+            >
+              <QuoteCard cardData={data} />
+            </Grid>
+          ))}
+    
+    </>,
+    <>
+        {cards &&
+          cards.map((data, index) => (
+            <Grid
+              key={index}
+              item
+              xs={12}
+              md={6}
+              lg={4}
+              style={{ display: "flex" }}
+            >
+              <QuoteCard cardData={data} />
+            </Grid>
+          ))}
+     
+    </>,
+    <>
+     
+        {cards &&
+          cards.map((data, index) => (
+            <Grid
+              key={index}
+              item
+              xs={12}
+              md={6}
+              lg={4}
+              style={{ display: "flex" }}
+            >
+              <QuoteCard cardData={data} />
+            </Grid>
+          ))}
+   
+      
+    {/* {VideosData.map((a)=>{
       return(
         <Grid item xs={12} sm={4} md={4} lg={3} className={cardRoot} key={a.id}>
     <Grid>
@@ -66,7 +108,7 @@ const VideoCard = ({ Img, detail, avatar, name, date }) => {
       
     </Grid>
       );
-    })};
+    })}; */}
   </>
     
   );
