@@ -1,5 +1,4 @@
-import Img1 from "../../../../assets/Testimonials/linked.png";
-import Img2 from "../../../../assets/Testimonials/linked2.png";
+import defaultImage from "../../../../assets/Testimonials/cardDefault.png";
 import Avatar1 from "../../../../assets/Testimonials/prof.png";
 import Avatar2 from "../../../../assets/Testimonials/profile1.png";
 const VideosData = [
@@ -8,7 +7,7 @@ const VideosData = [
     name: "Maria Ann",
     project: "SwiftDealz",
     para: "They provide efficient, time-bound prototypes keeping all KPIs in mind. We recommend them to anyone looking to make an online footprint.  ",
-    Img: Img1,
+    Img: defaultImage,
     Avatar: Avatar2,
     date: "21 April, 2021",
   },
@@ -17,7 +16,7 @@ const VideosData = [
     name: "Akriti Mehra",
     project: "Nailit",
     para: "They offer 24/7 support with a smile. They gel up easily with our current team, working for a collaborative solution rather than a compromise. ",
-    Img: Img2,
+    Img: defaultImage,
     Avatar: Avatar1,
     date: "13 May, 2021",
   },
@@ -26,7 +25,7 @@ const VideosData = [
     name: "Adam Smith",
     project: "MyNews",
     para: "This is an amazing company. They did great CMS customization for us. They are very accommodating with changes and receptive to newer ideas.",
-    Img: Img1,
+    Img: defaultImage,
     Avatar: Avatar2,
     date: "02 July, 2020",
   },
@@ -35,7 +34,7 @@ const VideosData = [
     name: "Dev Singh",
     project: "HomeDesign",
     para: "Magnit offers the best combination of cost and capabilities to assist us with the project. They are quick with milestone deliveries and very adaptable to changing needs and improvements.",
-    Img: Img1,
+    Img: defaultImage,
     Avatar: Avatar2,
     date: "10 March, 2021",
   },
@@ -44,7 +43,7 @@ const VideosData = [
     name: "Dev Singh",
     project: "HomeDesign",
     para: "We are very happy with the constant quality check of the product, the time-bound deliveries and the quick responsiveness of Magnit Team. We recommend them to anyone looking for a class-apart technology solution.",
-    Img: Img1,
+    Img: defaultImage,
     Avatar: Avatar2,
     date: "28 June, 2021",
   },
@@ -53,7 +52,7 @@ const VideosData = [
     name: "Mellinda Burns",
     project: "Timecheck",
     para: "It is a fantastic experience to work with Magnit. They take time to research your industry and really understand your market before they offer their solutions. They are very attentive to detail and go beyond the call to help you reach your goals.",
-    Img: Img1,
+    Img: defaultImage,
     Avatar: Avatar2,
     date: "08 August, 2020",
   },

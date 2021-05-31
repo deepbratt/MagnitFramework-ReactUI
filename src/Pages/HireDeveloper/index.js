@@ -25,11 +25,11 @@ import BreadCrumb from "../../Components/BreadCrumb";
 import CommentSection from "../../Components/CommentSection";
 import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
-import Heading5 from "../../ContainerStructure/Headings/Heading5";
 import Breakpoints from "../../Theme/theme.breakpoints";
-import {Data} from "../../Utils/Constants/Language/en/GlanceAtWorkData"
-import CustomTitle from "../../Pages/Section/CustomTitle"
+import CustomTitle from "../../Pages/Section/CustomTitle";
 import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/OurWorkSectionPattern";
+import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
+
 const HireDeveloper = () => {
   const { BlueRibbon, linearBackground } = Colors;
 
@@ -67,50 +67,52 @@ const HireDeveloper = () => {
           className={leftPattern}
           src={PatternLeft}
           alt=""
-          srcset=""
+          srcSet=""
         />
         <CustomImage
           className={rightPattern}
           src={StarFishPattern}
           alt=""
-          srcset=""
+          srcSet=""
         />
         <Section highlightWords={1}>
-          <CustomTitle style={{marginBottom: "20px"}} text={ServicesSectionTitle} underlined={true}/>
-          <CustomTitle subTitle={hireDeveloper}/>
+          <CustomTitle
+            style={{ marginBottom: "20px" }}
+            text={ServicesSectionTitle}
+            underlined={true}
+          />
+          <CustomTitle subTitle={hireDeveloper} />
           <PointList data={servicesData} horizontal={false} />
         </Section>
       </div>
       <Section>
-      <CustomTitle text={HiringSectionTitle} underlined={true}/>
+        <CustomTitle text={HiringSectionTitle} underlined={true} />
         <OptionsTab />
       </Section>
       <Section>
-      <CustomTitle text={WhyHireSectionTitle} underlined={true}/>
-        <PointList data={hireUsData} horizontal={true} lgBreakpoint={6}/>
+        <CustomTitle text={WhyHireSectionTitle} underlined={true} />
+        <PointList data={hireUsData} horizontal={true} lgBreakpoint={6} />
       </Section>
       {/* <GlanceSection backColor={skyBlue} /> */}
       <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
-          <GlanceSection
-              title={Data.title}
-              data={Data.arr}
-              buttonText={Data.buttonText}
-            />
-        </Section>
+        <GlanceSection
+          title={Data.title}
+          data={Data.arr}
+          buttonText={Data.buttonText}
+        />
+      </Section>
       <Section>
-      <CustomTitle text={DoYouWant} underlined={true}/>
-    <span >
-    
-        <CustomButton
-          variant="contained"
-          size={Breakpoints()}
-          color="primary"
-          component={Link}
-          to="/request-a-quote"
-          
-        >
-       Request a Quote
-        </CustomButton>
+        <CustomTitle text={DoYouWant} underlined={true} />
+        <span>
+          <CustomButton
+            variant="contained"
+            size={Breakpoints()}
+            color="primary"
+            component={Link}
+            to="/request-a-quote"
+          >
+            Request a Quote
+          </CustomButton>
         </span>
       </Section>
     </CommentSection>

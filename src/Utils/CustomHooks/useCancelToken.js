@@ -1,5 +1,5 @@
 import { useRef, useEffect } from 'react';
-import axios ,{ CancelToken, isCancel } from 'axios';
+import axios ,{ isCancel } from 'axios';
 
 /**
  * When a component unmounts, we need to cancel any potentially

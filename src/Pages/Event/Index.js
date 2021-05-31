@@ -16,10 +16,10 @@ const Event = () => {
     EventStyles();
   return (
     <div>
-      <Grid xs={12}>
+      <Grid item xs={12}>
         <EventHead image={people} />
       </Grid>
-      <Grid xs={12} className={root}>
+      <Grid item xs={12} className={root}>
         <Card>
           <CardContent className={cardSec}>
             <section className={underlined}>
@@ -31,17 +31,17 @@ const Event = () => {
           </CardContent>
         </Card>
         <Section>
-          <Grid xs={12} container justify="center" className={cardRoot}>
+          <Grid item xs={12} container justify="center" className={cardRoot}>
             {activities.map((a) => {
               return (
-                <Grid xs={12} md={4} key={a.id}>
+                <Grid item xs={12} md={4} key={a.id}>
                   <Activity Img={a.Img} title={a.name} detail={a.para} />
                 </Grid>
               );
             })}
           </Grid>
         </Section>
-        <Grid xs={12} container alignItems="center" justify="center">
+        <Grid container alignItems="center" justify="center">
           <CustomButton type="submit">
             <Typography className={seeMore} variant="button">
               See More
