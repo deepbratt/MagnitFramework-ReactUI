@@ -12,7 +12,7 @@ const Solutions = ({ titles, content }) => {
 
   const { whiteColor } = Colors;
   return (
-    <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
+    <>
       <Grid container>
         <Grid style={{ color: whiteColor }} item lg={12} md={12} xs={12}>
           <CustomTitle
@@ -48,7 +48,7 @@ const Solutions = ({ titles, content }) => {
           <CustomButton color="secondary">See More</CustomButton>
         </Grid>
       </Grid>
-    </Section>
+    </>
   );
 };
 
