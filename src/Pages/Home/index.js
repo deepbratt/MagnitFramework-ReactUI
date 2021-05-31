@@ -43,6 +43,10 @@ import CustomImage from "../../Components/CustomImage";
 import ReviewSlider from "../../Components/ReviewSlider";
 import { ServicesData } from "../../Utils/Constants/Language/en/ServicesText";
 import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
+import {
+  SolutionsSectionHeaders,
+  SolutionsSectionContent,
+} from "../../Utils/Constants/Language/en/SolutionsText";
 import api from "../../Utils/Constants/api";
 import axios from "axios";
 import { useCancelToken } from "../../Utils/CustomHooks/useCancelToken";
@@ -208,7 +212,10 @@ const Home = (props) => {
       </Grid>
       <Grid item md={12} xs={12}>
         <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
-          <Solutions />
+          <Solutions
+            titles={SolutionsSectionHeaders}
+            content={SolutionsSectionContent}
+          />
         </Section>
       </Grid>
       <Grid item md={12} xs={12}>
@@ -217,9 +224,9 @@ const Home = (props) => {
       <Grid item md={12} xs={12}>
         <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
           <GlanceSection
-          title={Data.title}
-          data={Data.arr}
-          buttonText={Data.buttonText}
+            title={Data.title}
+            data={Data.arr}
+            buttonText={Data.buttonText}
           />
         </Section>
       </Grid>
