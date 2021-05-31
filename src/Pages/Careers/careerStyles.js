@@ -12,6 +12,7 @@ export const useStyles = makeStyles((theme) => ({
     zIndex: 1,
     flexDirection: "column",
     alignItems: "center",
+    alignContent: "flex-end",
     transition: "all .25s linear",
     boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)",
     padding: "20px",

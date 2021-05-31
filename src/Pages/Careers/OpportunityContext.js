@@ -68,7 +68,7 @@ const OpportunityContext = () => {
           {/* <section className={cardSec}> */}
           {DataArray.map((data, index) => {
             return (
-              <Grid item xs={12} sm={4} lg={3} key={index}>
+              <Grid item xs={12} sm={6} md={4} key={index}>
                 <Card className={card}>
                   <Grid>
                     <Grid xs={12}>
