@@ -1,18 +1,14 @@
 import React from "react";
-import { useStyles } from "./solutionStyles";
-import { Typography, Grid } from "@material-ui/core";
-import PrimarySection from "./SolutionsPrimarySection";
-import MidSection from "./SolutionsMidSection";
-import Breakpoints from "../../../Theme/theme.breakpoints";
+import { Grid } from "@material-ui/core";
+import SolutionsSection from "./SolutionsSection";
 import { Colors } from "../../../Theme/color.constants";
 import { Data } from "../../../Utils/Constants/Language/en/SolutionsText";
 import CustomButton from "../../../Components/CustomButton";
+import { SolutionsContent } from "../../../Utils/Constants/Language/en/SolutionsText";
 import CustomTitle from "../../../Pages/Section/CustomTitle";
 const Solutions = () => {
-  const classes = useStyles();
-  const { root } = classes;
   const { heading, subHeading } = Data;
-  const { whiteColor, blackColor } = Colors;
+  const { whiteColor } = Colors;
   return (
     <>
       <Grid container>
@@ -28,10 +24,7 @@ const Solutions = () => {
         </Grid>
         <Grid style={{ marginBottom: "20px" }} container spacing={2}>
           <Grid item xs={12}>
-            <PrimarySection />
-          </Grid>
-          <Grid item xs={12}>
-            <MidSection />
+            <SolutionsSection data={SolutionsContent} />
           </Grid>
         </Grid>
         <Grid item lg={12} md={12} xs={12}>
