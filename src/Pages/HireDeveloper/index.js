@@ -31,7 +31,7 @@ import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/
 import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
 
 const HireDeveloper = () => {
-  const { BlueRibbon, linearBackground } = Colors;
+  const { BlueRibbon, linearBackground, Ash } = Colors;
 
   const breadCrumData = [
     {
@@ -85,8 +85,8 @@ const HireDeveloper = () => {
           <PointList data={servicesData} horizontal={false} />
         </Section>
       </div>
-      <Section>
-        <CustomTitle text={HiringSectionTitle} underlined={true} />
+      <Section backColor={Ash}>
+      <CustomTitle text={HiringSectionTitle} underlined={true}/>
         <OptionsTab />
       </Section>
       <Section>
