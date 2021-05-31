@@ -20,8 +20,9 @@ import ServicesOffered from "../../Sections/HomePageSections/ServicesContext/Ser
 import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
 import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
 import CustomTitle from "../Section/CustomTitle"
+import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/OurWorkSectionPattern";
 const Services = () => {
-  const { linearBackground, skyBlue } = Colors;
+  const { linearBackground, BlueRibbon } = Colors;
 
   const breadCrumData = [
     {
@@ -67,7 +68,13 @@ const Services = () => {
             />
           </Grid>
         </Section>
-        <GlanceSection backColor={skyBlue} />
+        <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
+          <GlanceSection
+              title={Data.title}
+              data={Data.arr}
+              buttonText={Data.buttonText}
+            />
+        </Section>
         <Section>
         <CustomTitle text={DoYouWant} underlined={true}/>
           <span>
