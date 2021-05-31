@@ -46,6 +46,18 @@ const ServicesSectionStyles = makeStyles((theme) => ({
       top: "88%",
     },
   },
+
+  leftPatternGlance: {
+    position: "absolute",
+    left: "-5%",
+    bottom: "-10%",
+    zIndex: 0,
+  },
+  rightPatternGlance: {
+    position: "absolute",
+    right: "-10%",
+    top: "-10%",
+  },
  
 }));
 

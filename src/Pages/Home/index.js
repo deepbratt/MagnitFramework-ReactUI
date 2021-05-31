@@ -213,6 +213,7 @@ const Home = (props) => {
         <PartnerContext />
       </Grid>
       <Grid item md={12} xs={12}>
+
         <GlanceSection
           image1={Data.image1}
           image2={Data.image2}
@@ -221,6 +222,7 @@ const Home = (props) => {
           subtitleTwo={Data.subtitleTwo}
           subtitleThree={Data.subtitleThree}
         />
+
       </Grid>
       {/* TRAINING AND CERTIFICATION */}
       <Section>
