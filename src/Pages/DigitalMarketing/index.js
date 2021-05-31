@@ -23,15 +23,13 @@ import BreadCrumb from "../../Components/BreadCrumb";
 import CommentSection from "../../Components/CommentSection";
 import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
-import Heading5 from "../../ContainerStructure/Headings/Heading5";
-import Breakpoints from "../../Theme/theme.breakpoints";
 import CustomTitle from "../../Pages/Section/CustomTitle";
 import GlanceAtWork from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
 import BackGroudnPatternLeft from "../../assets/OurBlogs/LatestBlogPattern.png";
 import BackGroudnPatternRight from "../../assets/OurBlogs/LatestBlogPatternRight.png";
 
 const DigitalMarketing = () => {
-  const { skyBlue, linearBackground, BlueRibbon } = Colors;
+  const { linearBackground, BlueRibbon } = Colors;
 
   const breadCrumData = [
     {
@@ -135,11 +133,11 @@ const DigitalMarketing = () => {
         <PointList data={hireUsData} horizontal={true} lgBreakpoint={6} />
       </Section>
       <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
-      <GlanceAtWork
+        <GlanceAtWork
           title={Data.title}
           data={Data.arr}
           buttonText={Data.buttonText}
-          />
+        />
       </Section>
       <Section>
         <CustomTitle text={DoYouWant} underlined={true} />

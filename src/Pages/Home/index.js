@@ -43,6 +43,10 @@ import CustomImage from "../../Components/CustomImage";
 import ReviewSlider from "../../Components/ReviewSlider";
 import { ServicesData } from "../../Utils/Constants/Language/en/ServicesText";
 import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
+import {
+  SolutionsSectionHeaders,
+  SolutionsSectionContent,
+} from "../../Utils/Constants/Language/en/SolutionsText";
 import api from "../../Utils/Constants/api";
 import axios from "axios";
 import { useCancelToken } from "../../Utils/CustomHooks/useCancelToken";
@@ -207,22 +211,24 @@ const Home = (props) => {
         </Section>
       </Grid>
       <Grid item md={12} xs={12}>
-        <Solutions />
+        <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
+          <Solutions
+            titles={SolutionsSectionHeaders}
+            content={SolutionsSectionContent}
+          />
+        </Section>
       </Grid>
       <Grid item md={12} xs={12}>
         <PartnerContext />
       </Grid>
       <Grid item md={12} xs={12}>
-
-        <GlanceSection
-          image1={Data.image1}
-          image2={Data.image2}
-          image3={Data.image3}
-          subtitleOne={Data.subtitleOne}
-          subtitleTwo={Data.subtitleTwo}
-          subtitleThree={Data.subtitleThree}
-        />
-
+        <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
+          <GlanceSection
+            title={Data.title}
+            data={Data.arr}
+            buttonText={Data.buttonText}
+          />
+        </Section>
       </Grid>
       {/* TRAINING AND CERTIFICATION */}
       <Section>
