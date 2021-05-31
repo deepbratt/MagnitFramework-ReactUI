@@ -133,11 +133,11 @@ const DigitalMarketing = () => {
         <PointList data={hireUsData} horizontal={true} lgBreakpoint={6} />
       </Section>
       <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
-      <GlanceAtWork
+        <GlanceAtWork
           title={Data.title}
           data={Data.arr}
           buttonText={Data.buttonText}
-          />
+        />
       </Section>
       <Section>
         <CustomTitle text={DoYouWant} underlined={true} />

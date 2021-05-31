@@ -3,13 +3,7 @@ import PropTypes from "prop-types";
 import CustomImage from "../../Components/CustomImage";
 import LayoutStyle from "./style";
 
-const Section = ({
-  children,
-  backColor,
-  startQuote,
-  endQuote,
-  patterns,
-}) => {
+const Section = ({ children, backColor, startQuote, endQuote, patterns }) => {
   const {
     root,
     content,

@@ -46,6 +46,7 @@ export const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    justifyContent: "center",
     transition: "all .25s linear",
     borderRadius: "5px",
     boxShadow: "0px 0px 0px 0px rgba(0, 0, 0, 0)",

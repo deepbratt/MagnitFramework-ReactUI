@@ -17,15 +17,15 @@ const AdminContext = () => {
     <>
     <MuiThemeProvider theme={theme}>
       <Grid container >
-        <Grid justify="center" container>
+        <Grid container>
           <Grid item md={12} lg={12} xs={12}>
           <CustomTitle style={{marginBottom: "20px"}} underlined={false} text={adminHeading} />
           </Grid>
           <Grid item  md={12} lg={5} xs={12}>
             <CustomImage className={image} width="400px" src={adminImg} alt="image" />
           </Grid>
-          <Grid className={content} xs={10} item lg={6}>
-            <Typography variant="body2">
+          <Grid className={content} xs={12} item lg={6}>
+            <Typography variant="body1">
             {paragraph}
             </Typography>
           </Grid>

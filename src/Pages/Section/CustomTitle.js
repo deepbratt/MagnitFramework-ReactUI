@@ -19,7 +19,7 @@ const CustomTitle = (props) => {
    <div className={sectionHeader}  {...props}>
       <Typography
       color="textPrimary"
-      style={{ color: props.color, fontSize: Size() }}
+      style={{ color: props.color, fontSize: Size(), lineHeight: 1.8 }}
       variant="h2"
       {...props}
     >
