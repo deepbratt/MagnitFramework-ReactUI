@@ -60,7 +60,7 @@ const OpportunityContext = () => {
         <CustomTitle color={whiteColor} text={heading} underlined={false} />
 
         <Grid
-          style={{ marginBottom: "40px" }}
+          style={{ marginBottom: "40px", display :"flex" }}
           container
           justify="center"
           spacing={2}
@@ -68,7 +68,7 @@ const OpportunityContext = () => {
           {/* <section className={cardSec}> */}
           {DataArray.map((data, index) => {
             return (
-              <Grid item xs={12} sm={6} md={4} key={index}>
+              <Grid item xs={12} sm={6} md={4} key={index} style={{display:"flex"}}>
                 <Card className={card}>
                   <Grid>
                     <Grid xs={12}>
