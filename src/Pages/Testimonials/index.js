@@ -15,7 +15,7 @@ import {
   Testmonial,
 } from "../../Utils/Constants/Language/en/TestimonialVideos";
 import CustomButton from "../../Components/CustomButton";
-import CustomTitle from "../../Pages/Section/CustomTitle"
+import CustomTitle from "../../Pages/Section/CustomTitle";
 import Section from "../Section";
 
 // import Section from '../Section';
@@ -48,26 +48,19 @@ function Testimonials() {
           {subTitle}
         </Typography>
       </Banner>
-   
-      <Grid xs={12}>
-          <CardContent className={cardSec}>
-          <CustomTitle style={{marginBottom: "20px"}} text={Testmonial} underlined={true}/>
-          <CustomTitle subTitle={ClientsHaveToSay}/>
-          </CardContent>
-      </Grid>
-     <Section  title={Testmonial} subTitle={ClientsHaveToSay}>
-     </Section>
+      <Section>
+        <CustomTitle
+          style={{ marginBottom: "20px" }}
+          text={Testmonial}
+          underlined={true}
+        />
+        <CustomTitle subTitle={ClientsHaveToSay} />
 
-      <Grid container direction="row" justify="center">
         <VideoCard />
-        <Grid
-        xs={12}
-        className={flex}
-      >
-        <CustomButton type="submit">See More</CustomButton>
-      </Grid>
-    
-      </Grid>
+        <Grid xs={12} className={flex}>
+          <CustomButton type="submit">See More</CustomButton>
+        </Grid>
+      </Section>
     </CommentSection>
   );
 }
