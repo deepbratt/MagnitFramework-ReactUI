@@ -185,13 +185,15 @@ theme.typography.body2 = {
   },
 };
 
+
+// used in header/navbar font
 theme.typography.caption = {
   fontFamily: "Poppins",
   fontSize: "1rem", // 16px
   fontWeight: 500,
   lineHeight: "29.34px",
   [theme.breakpoints.down("lg")]: {
-    fontSize: "0.75rem",
+    fontSize: "0.9rem",
     lineHeight: "25px",
   },
 };
