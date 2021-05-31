@@ -7,6 +7,7 @@ import {
   AppBar,
   LinearProgress,
   Button,
+  Typography,
 } from "@material-ui/core";
 import { NavLink } from "react-router-dom";
 import theme from "../../../Theme/GlobalFontSizes";
@@ -56,7 +57,7 @@ const Header = (props) => {
                       className={link}
                       to="/home"
                     >
-                      HOME
+                      <Typography variant="caption">HOME</Typography>
                     </NavLink>
                   </Button>
                 </ListItem>
