@@ -24,8 +24,8 @@ const AdminContext = () => {
           <Grid item  md={12} lg={5} xs={12}>
             <CustomImage className={image} width="400px" src={adminImg} alt="image" />
           </Grid>
-          <Grid className={content} xs={10} item lg={6}>
-            <Typography variant="body2">
+          <Grid className={content} xs={12} item lg={6}>
+            <Typography variant="body1">
             {paragraph}
             </Typography>
           </Grid>
