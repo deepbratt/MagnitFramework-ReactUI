@@ -1,6 +1,6 @@
-import Img3 from "../../../../assets/services/alif1.png";
-import Img1 from "../../../../assets/services/alif2.png";
-import Img2 from "../../../../assets/services/alif3.png";
+import Img3 from "../../../../assets/services/project1.png";
+import Img1 from "../../../../assets/services/project2.png";
+import Img2 from "../../../../assets/services/project3.png";
 
 export const Data = {
   title: "Our Work",
