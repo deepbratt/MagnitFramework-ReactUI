@@ -17,7 +17,7 @@ const AdminContext = () => {
     <>
     <MuiThemeProvider theme={theme}>
       <Grid container >
-        <Grid justify="center" container>
+        <Grid container>
           <Grid item md={12} lg={12} xs={12}>
           <CustomTitle style={{marginBottom: "20px"}} underlined={false} text={adminHeading} />
           </Grid>
