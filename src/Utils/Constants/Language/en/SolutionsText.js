@@ -1,5 +1,4 @@
 import * as icons from "../../../../assets/icons/icon.constants";
-
 const {
   chatIcon,
   classifiedIcon,
@@ -11,44 +10,42 @@ const {
   datingIcon,
 } = icons;
 
-const Data = {
+export const SolutionsSectionHeaders = {
   heading: "Solutions",
   subHeading: " that are ready-made, bespoke and save your time and money",
 };
 
-export const SolutionsContent = [
+export const SolutionsSectionContent = [
   {
     title: "Chat App",
-    icon: chatIcon,
+    image: chatIcon,
   },
   {
     title: "Classified App",
-    icon: classifiedIcon,
+    image: classifiedIcon,
   },
   {
     title: "Croud funding",
-    icon: fundIcon,
+    image: fundIcon,
   },
   {
     title: "Product Design",
-    icon: designIcon,
+    image: designIcon,
   },
   {
     title: "Food Delivery App",
-    icon: deliveryIcon,
+    image: deliveryIcon,
   },
   {
     title: "Job portal",
-    icon: portalIcon,
+    image: portalIcon,
   },
   {
     title: "Social Networking App",
-    icon: datingIcon,
+    image: fitnessIcon,
   },
   {
     title: "Fitness App",
-    icon: fitnessIcon,
+    image: datingIcon,
   },
 ];
-
-export { Data };

@@ -1,13 +1,15 @@
 import React from "react";
-import { Grid } from "@material-ui/core";
-import SolutionsSection from "./SolutionsSection";
+import { useStyles } from "./solutionStyles";
+import { Typography, Grid, Card } from "@material-ui/core";
 import { Colors } from "../../../Theme/color.constants";
-import { Data } from "../../../Utils/Constants/Language/en/SolutionsText";
 import CustomButton from "../../../Components/CustomButton";
-import { SolutionsContent } from "../../../Utils/Constants/Language/en/SolutionsText";
 import CustomTitle from "../../../Pages/Section/CustomTitle";
-const Solutions = () => {
-  const { heading, subHeading } = Data;
+import CustomImage from "../../../Components/CustomImage";
+
+const Solutions = ({ titles, content }) => {
+  const classes = useStyles();
+  const { card } = classes;
+
   const { whiteColor } = Colors;
   return (
     <>
@@ -16,15 +18,30 @@ const Solutions = () => {
           <CustomTitle
             style={{ marginBottom: "20px" }}
             underlined={false}
-            subTitle={subHeading}
+            subTitle={titles.subHeading}
             color={whiteColor}
-            text={heading}
+            text={titles.heading}
             subTitleColor={whiteColor}
           />
         </Grid>
         <Grid style={{ marginBottom: "20px" }} container spacing={2}>
           <Grid item xs={12}>
-            <SolutionsSection data={SolutionsContent} />
+            <Grid container spacing={2}>
+              {content &&
+                content.map((data, index) => (
+                  <Grid key={index} item xs={12} sm={6} md={3}>
+                    <Card className={card}>
+                      <CustomImage width="60px" alt="" src={data.image} />
+
+                      <div>
+                        <Typography color="textSecondary" variant="h5">
+                          {data.title}
+                        </Typography>
+                      </div>
+                    </Card>
+                  </Grid>
+                ))}
+            </Grid>
           </Grid>
         </Grid>
         <Grid item lg={12} md={12} xs={12}>
