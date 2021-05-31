@@ -8,8 +8,12 @@ export const useStyles = makeStyles((theme) => ({
   root: {
     margin: "0px",
     backgroundColor: skyBlue,
-    padding: "50px 0px",
+    // padding: "50px 0px",
     position: "relative",
+    display: "flex",
+    width: "100%",
+    flexFlow: "wrap",
+    justifyContent: "center",
     
   },
   cardSec: {
@@ -18,11 +22,19 @@ export const useStyles = makeStyles((theme) => ({
     flexFlow: "wrap",
     justifyContent: "center",
   },
+  card:{
+    zIndex:"1"
+  },
   devSec: {
     color: blackColor,
     display: "flex",
     flexDirection: "column",
-    paddingTop: "20px",
+    transition: "all .25s linear",
+    boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)",
+    borderRadius:"5px",
+    textAlign:"center",
+    padding:"1rem",
+    margin:"1rem",
    
   },
   HeadSec:{
@@ -44,22 +56,6 @@ fontWeight:"normal"
 fontWeight:"normal"
     },
   },
-  card: {
-    background:"white",
-    height: "auto",
-    display: "flex",
-    zIndex: 1,
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent:"center", 
-    transition: "all .25s linear",
-    boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)",
-    margin: "20px",
-    padding:"20px",
-    textAlign:"center",
-    borderRadius:"5px"
- 
-  },
   button: {
     borderRadius: "none",
     fontFamily: "Poppins",
@@ -74,16 +70,16 @@ fontWeight:"normal"
   },
   RightPattern:{
     position: "absolute",
-    right: "0px",
-    top: "0px",
-    zIndex: 0,
+    right: "-116px",
+    top: "-66px",
+    zIndex: 1,
     width: "500px"
   },
   LeftPattern:{
     position: "absolute",
-    left: "0px",
-    bottom: "0px",
-    zIndex: 0,
+    left: "-112px",
+    bottom: "-59px",
+    zIndex: 1,
     width: "300px"
   },
   remoteArea:
