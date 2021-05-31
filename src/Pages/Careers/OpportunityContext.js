@@ -1,54 +1,20 @@
 import React from "react";
 import { useStyles } from "./careerStyles";
-import { Grid, Typography, Card, Hidden } from "@material-ui/core";
+import { Grid, Typography, Card } from "@material-ui/core";
 import { Colors } from "../../Theme/color.constants";
 import {
   DataArray,
   heading,
-  rightPattern,
-  leftPattern,
 } from "../../Utils/Constants/Language/en/CareersData";
 import CustomButton from "../../Components/CustomButton";
 import ReadMore from "../../Components/ReadMore";
 import CustomTitle from "../Section/CustomTitle";
 import Section from "../Section";
+import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/OurWorkSectionPattern";
 const OpportunityContext = () => {
   const classes = useStyles();
-  const { card, RightPattern, LeftPattern, remoteArea } = classes;
+  const { card, remoteArea } = classes;
   const { whiteColor, skyBlue } = Colors;
-
-  const ourWorkSectionPatterns = [
-    {
-      image: (
-        <Hidden smDown>
-          <Grid
-            className={leftPattern}
-            style={{ position: "absolute" }}
-            item
-            xs={3}
-          >
-            <img width="100%" height="100%" src={leftPattern} alt="" />
-          </Grid>
-        </Hidden>
-      ),
-      styles: LeftPattern,
-    },
-    {
-      image: (
-        <Hidden smDown>
-          <Grid
-            className={`${rightPattern}`}
-            style={{ position: "absolute" }}
-            item
-            xs={4}
-          >
-            <img width="100%" height="100%" src={rightPattern} alt="" />
-          </Grid>
-        </Hidden>
-      ),
-      styles: RightPattern,
-    },
-  ];
 
   return (
     <>
@@ -60,7 +26,7 @@ const OpportunityContext = () => {
         <CustomTitle color={whiteColor} text={heading} underlined={false} />
 
         <Grid
-          style={{ marginBottom: "40px" }}
+          style={{ marginBottom: "40px", display :"flex" }}
           container
           justify="center"
           spacing={2}
@@ -68,7 +34,7 @@ const OpportunityContext = () => {
           {/* <section className={cardSec}> */}
           {DataArray.map((data, index) => {
             return (
-              <Grid item xs={12} sm={6} md={4} key={index}>
+              <Grid item xs={12} sm={6} md={4} key={index} style={{display:"flex"}}>
                 <Card className={card}>
                   <Grid>
                     <Grid xs={12}>
