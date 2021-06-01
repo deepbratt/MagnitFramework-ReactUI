@@ -16,7 +16,6 @@ import CustomButton from "../../Components/CustomButton";
 import CustomTitle from "../../Pages/Section/CustomTitle";
 import Section from "../Section";
 
-// import Section from '../Section';
 function Testimonials() {
   const { linearBackground } = Colors;
   const { textColor, flex } = useStyles();

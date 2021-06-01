@@ -18,6 +18,7 @@ const submenuStyles = (theme) => ({
     flexGrow: 1,
     color: blackColor,
     textAlign: "left",
+    textTransform: "uppercase"
 
 
   },

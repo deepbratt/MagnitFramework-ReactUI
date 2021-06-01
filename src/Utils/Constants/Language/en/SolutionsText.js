@@ -42,10 +42,10 @@ export const SolutionsSectionContent = [
   },
   {
     title: "Social Networking App",
-    image: fitnessIcon,
+    image: datingIcon,
   },
   {
     title: "Fitness App",
-    image: datingIcon,
+    image: fitnessIcon,
   },
 ];
