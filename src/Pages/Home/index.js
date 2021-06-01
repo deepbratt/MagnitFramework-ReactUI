@@ -177,7 +177,7 @@ const Home = (props) => {
       <Grid item md={12} xs={12}>
         <Section>
         <CustomTitle underlined={true} text={ServicesSectionTitle} />
-          <CardData
+          <CardData 
             data={ServicesData}
           />
         </Section>

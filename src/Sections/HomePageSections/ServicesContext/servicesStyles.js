@@ -65,9 +65,9 @@ export const useStyles = makeStyles((theme) => ({
     justifyContent:"space-evenly" ,
     alignItems:"center",
     flexDirection:"column",
-    padding:"1rem",
-    width:"100%",
-    margin: "15px",
+    // padding:"1rem",
+    width:"300px",
+    // margin: "15px",
     marginTop:"0px",
     "&:hover": {
       border: `solid 1px ${Harlequin}`,
@@ -81,7 +81,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   badge: {
     borderRadius: "5px",
-    margin: "25px",
+    margin: "10px",
     [theme.breakpoints.down("sm")]: {
       margin: "15px",
     },
@@ -119,8 +119,6 @@ export const useStyles = makeStyles((theme) => ({
   contentRight: {
     minWidth: "100%",
     padding:"2px",
-   marginTop:"1rem",
-  
   },
   name : {
     color:Mirage,

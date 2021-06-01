@@ -18,9 +18,7 @@ const { card, } = classes;
   }
   return (
     <>
-    
-     <div style={{flexGrow:1}}>
-    <Grid container justify="space-around">
+    <Grid container justify="space-between">
       {data &&
         data.map((item, index) => (
           <Grid className={card}  key={index} item xs={12} md={breakpoint} lg={3}>
@@ -28,7 +26,7 @@ const { card, } = classes;
           </Grid>
         ))}
     </Grid>
-</div>
+
    
     </>
   );
