@@ -2,7 +2,7 @@ import PointList from "../../Components/PointBadge/PointList";
 import Section from "../Section";
 import CustomTitle from "../Section/CustomTitle";
 import { Link } from "react-router-dom";
-import { Grid, Hidden, Typography } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
 import {
   OurExpertEngineers,
@@ -28,10 +28,10 @@ import CommentSection from "../../Components/CommentSection";
 import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
 import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
-import BackGroudnPatternLeft from "../../assets/OurBlogs/LatestBlogPattern.png";
-import BackGroudnPatternRight from "../../assets/OurBlogs/LatestBlogPatternRight.png";
+import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/OurWorkSectionPattern";
+
 const Services = () => {
-  const { skyBlue, linearBackground, BlueRibbon } = Colors;
+  const { BlueRibbon, linearBackground, Ash } = Colors;
 
   const breadCrumData = [
     {
@@ -43,50 +43,8 @@ const Services = () => {
       text: "Web Development Services",
     },
   ];
-  const { textColor, leftPattern, rightPattern, leftPatternGlance, rightPatternGlance  } = ServicesSectionStyles();
 
-  const ourWorkSectionPatterns = [
-    {
-      image: (
-        <Hidden smDown>
-          <Grid
-            className={leftPatternGlance}
-            style={{ position: "absolute" }}
-            item
-            xs={3}
-          >
-            <img
-              width="100%"
-              height="100%"
-              src={BackGroudnPatternLeft}
-              alt=""
-            />
-          </Grid>
-        </Hidden>
-      ),
-      styles: leftPatternGlance,
-    },
-    {
-      image: (
-        <Hidden smDown>
-          <Grid
-            className={`${rightPatternGlance}`}
-            style={{ position: "absolute" }}
-            item
-            xs={4}
-          >
-            <img
-              width="100%"
-              height="100%"
-              src={BackGroudnPatternRight}
-              alt=""
-            />
-          </Grid>
-        </Hidden>
-      ),
-      styles: rightPatternGlance,
-    },
-  ];
+  const { textColor, leftPattern, rightPattern } = ServicesSectionStyles();
 
   return (
     <CommentSection>
@@ -128,17 +86,18 @@ const Services = () => {
           <PointList data={servicesData} horizontal={false} />
         </Section>
       </div>
-      <Section>
+      <Section backColor={Ash}>
         <CustomTitle underlined={true} text={WhyHireSectionTitle} />
+
         <PointList data={hireUsData} horizontal={true} lgBreakpoint={6} />
       </Section>
       <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
-          <GlanceSection
+        <GlanceSection
           title={Data.title}
           data={Data.arr}
           buttonText={Data.buttonText}
-          />
-        </Section>
+        />
+      </Section>
       <Section>
         <CustomTitle underlined={true} text={DoYouWant} />
         <span>

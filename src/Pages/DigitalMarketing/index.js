@@ -1,7 +1,7 @@
 import PointList from "../../Components/PointBadge/PointList";
 import Section from "../Section";
 import { Link } from "react-router-dom";
-import { Grid, Hidden, Typography } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import { hireUsData } from "./whyWorkwithUs";
 import { Colors } from "../../Theme/color.constants";
 import Banner from "../../Components/Banner";
@@ -25,11 +25,10 @@ import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
 import CustomTitle from "../../Pages/Section/CustomTitle";
 import GlanceAtWork from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
-import BackGroudnPatternLeft from "../../assets/OurBlogs/LatestBlogPattern.png";
-import BackGroudnPatternRight from "../../assets/OurBlogs/LatestBlogPatternRight.png";
+import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/OurWorkSectionPattern";
 
 const DigitalMarketing = () => {
-  const { linearBackground, BlueRibbon } = Colors;
+  const { BlueRibbon, linearBackground, Ash } = Colors;
 
   const breadCrumData = [
     {
@@ -43,49 +42,6 @@ const DigitalMarketing = () => {
   ];
 
   const { textColor, leftPattern, rightPattern } = ServicesSectionStyles();
-
-  const ourWorkSectionPatterns = [
-    {
-      image: (
-        <Hidden smDown>
-          <Grid
-            className={leftPattern}
-            style={{ position: "absolute" }}
-            item
-            xs={3}
-          >
-            <img
-              width="100%"
-              height="100%"
-              src={BackGroudnPatternLeft}
-              alt=""
-            />
-          </Grid>
-        </Hidden>
-      ),
-      styles: leftPattern,
-    },
-    {
-      image: (
-        <Hidden smDown>
-          <Grid
-            className={`${rightPattern}`}
-            style={{ position: "absolute" }}
-            item
-            xs={4}
-          >
-            <img
-              width="100%"
-              height="100%"
-              src={BackGroudnPatternRight}
-              alt=""
-            />
-          </Grid>
-        </Hidden>
-      ),
-      styles: rightPattern,
-    },
-  ];
 
   return (
     <CommentSection>
@@ -128,8 +84,9 @@ const DigitalMarketing = () => {
         </Section>
       </div>
 
-      <Section highlightWords={3}>
+      <Section highlightWords={3} backColor={Ash}>
         <CustomTitle text={WhyHireSectionTitle} underlined={true} />
+
         <PointList data={hireUsData} horizontal={true} lgBreakpoint={6} />
       </Section>
       <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>

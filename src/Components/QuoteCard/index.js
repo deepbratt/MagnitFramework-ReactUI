@@ -9,11 +9,11 @@ import EndQuote from "../../assets/images/cards/EndingQuote.png";
 import CardStyle from "./style";
 import CustomImage from "../CustomImage";
 
-const QuoteCard = ({ cardData }) => {
+const QuoteCard = ({ cardData,shadow }) => {
   const { text, authName, authImg } = cardData;
   const { root, author, content, startQuote, large, endQuote } = CardStyle();
   return (
-    <Card className={root}>
+    <Card className={root} style={{boxShadow:{shadow}}}>
       <div className={author}>
         <div>
           <Avatar alt="Remy Sharp" src={authImg} className={large} />

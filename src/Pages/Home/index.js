@@ -44,6 +44,7 @@ import {
   SolutionsSectionHeaders,
   SolutionsSectionContent,
 } from "../../Utils/Constants/Language/en/SolutionsText";
+import CardData from "../../Components/Card";
 export const AwardSectionImages = [Image1, Image2, Image3, Image4, Image5];
 
 const Home = (props) => {
@@ -51,10 +52,7 @@ const Home = (props) => {
   const { leftRoot, rightRoot, leftPattern, rightPattern } = HomeStyles();
   const rootClasses = [rightRoot, leftRoot, rightRoot, leftRoot];
 
-  const {
-    Mirage,
-    BlueRibbon,
-  } = Colors;
+  const { Mirage, BlueRibbon } = Colors;
   const WhyUsSlides = [
     <>
       <Hidden mdDown>
@@ -178,9 +176,9 @@ const Home = (props) => {
       </Grid>
       <Grid item md={12} xs={12}>
         <Section>
-          <ServicesOffered
-            title={ServicesSectionTitle}
-            servicesData={ServicesData}
+        <CustomTitle underlined={true} text={ServicesSectionTitle} />
+          <CardData 
+            data={ServicesData}
           />
         </Section>
       </Grid>
@@ -192,7 +190,7 @@ const Home = (props) => {
           />
         </Section>
       </Grid>
-      <Grid item md={12} xs={12}>
+      <Grid item xs={12}>
         <PartnerContext />
       </Grid>
       <Grid item md={12} xs={12}>

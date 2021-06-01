@@ -1,4 +1,4 @@
-import { CardContent, Grid, Typography } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import React from "react";
 import Banner from "../../Components/Banner";
 import { Colors } from "../../Theme/color.constants";
@@ -13,14 +13,12 @@ import {
   Testmonial,
 } from "../../Utils/Constants/Language/en/TestimonialVideos";
 import CustomButton from "../../Components/CustomButton";
-import CustomTitle from "../../Pages/Section/CustomTitle"
+import CustomTitle from "../../Pages/Section/CustomTitle";
 import Section from "../Section";
 
-// import Section from '../Section';
 function Testimonials() {
   const { linearBackground } = Colors;
-  const { textColor, cardSec, flex } =
-    useStyles();
+  const { textColor, flex } = useStyles();
 
   const breadCrumData = [
     {
@@ -40,28 +38,27 @@ function Testimonials() {
         breadCrumb={<BreadCrumb links={breadCrumData} />}
       >
         <>
-        <Typography variant="h1" gutterBottom className={textColor}>
-          {Testmonial}
-        </Typography>
-        <Typography variant="h5" gutterBottom className={textColor}>
-          {subTitle}
-        </Typography>
+          <Typography variant="h1" gutterBottom className={textColor}>
+            {Testmonial}
+          </Typography>
+          <Typography variant="h5" gutterBottom className={textColor}>
+            {subTitle}
+          </Typography>
         </>
       </Banner>
-     {/* <Section  title={Testmonial} subTitle={ClientsHaveToSay}>
-     </Section> */}
-      <CustomTitle text={Testmonial} subTitle={ClientsHaveToSay} underlined={true} />
-      <Grid container direction="row" justify="center">
+      <Section>
+        <CustomTitle
+          style={{ marginBottom: "20px" }}
+          text={Testmonial}
+          underlined={true}
+        />
+        <CustomTitle subTitle={ClientsHaveToSay} />
+
         <VideoCard />
-        <Grid
-        item
-        xs={12}
-        className={flex}
-      >
-        <CustomButton type="submit">See More</CustomButton>
-      </Grid>
-    
-      </Grid>
+        <Grid xs={12} className={flex}>
+          <CustomButton type="submit">See More</CustomButton>
+        </Grid>
+      </Section>
     </CommentSection>
   );
 }
