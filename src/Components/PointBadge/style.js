@@ -37,25 +37,26 @@ const PointBadgeStyles = makeStyles((theme) => ({
     justifyContent:"space-evenly" ,
     alignItems:"center",
     flexDirection:"column",
-    margin: "15px",
+    // margin: "15px",
     marginTop:"0px",
-    "&:hover": {
-      border: `solid 1px ${Harlequin}`,
-      boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
-      transition: "all .25s linear",
-    },
+    // "&:hover": {
+    //   border: `solid 1px ${Harlequin}`,
+    //   boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
+    //   transition: "all .25s linear",
+    // },
     [theme.breakpoints.down("sm")]: {
       margin: "15px 10px",
       marginTop:"0px"
     },
   },
-  // hover:{
-  //   "&:hover": {
-  //     border: `solid 1px ${Harlequin}`,
-  //     boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
-  //     transition: "all .25s linear",
-  //   },
-  // },
+  hover:{
+   
+    "&:hover": {
+      border: `solid 1px ${Harlequin}`,
+      boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
+      transition: "all .25s linear",
+    },
+  },
   devSec: {
     display: "flex",
     justifyContent: "center",
