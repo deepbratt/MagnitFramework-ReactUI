@@ -31,7 +31,7 @@ import Heading5 from "../../ContainerStructure/Headings/Heading5";
 import Breakpoints from "../../Theme/theme.breakpoints";
 import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
 const Services = () => {
-  const { skyBlue, linearBackground } = Colors;
+  const { skyBlue, linearBackground,Ash } = Colors;
 
   const breadCrumData = [
     {
@@ -81,7 +81,7 @@ const Services = () => {
           <PointList data={servicesData} horizontal={false} />
         </Section>
       </div>
-      <Section>
+      <Section backColor={Ash}>
       <CustomTitle underlined={true} text={WhyHireSectionTitle} />
         <PointList data={hireUsData} horizontal={true} lgBreakpoint={6} />
       </Section>

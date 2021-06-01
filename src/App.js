@@ -22,15 +22,6 @@ const App = (props) => {
   if (loading)
   {
     return ( 
-      //  <Grid container justify="center" style={{ position: "absolute",
-      // left:"50%",
-      //   top: "50%",
-      //   transform: "translate(0%, -44%)",
-      //   width:"100px",
-      //   }}>
-      //        <CircularProgress style={{color:Harlequin}}></CircularProgress>
-      //        <Typography variant="h5" color="textPrimary">Loading...</Typography>
-      //   </Grid>
       <Loader color={Harlequin} styles="h4"/>
     );
   }
@@ -38,7 +29,7 @@ const App = (props) => {
    return (
     <ThemeProvider theme={defaultTheme}>
      <Paper  style= {{height: "100vh"}} elevation= {0} >
-      <Suspense fallback={<Loader/>}>
+      <Suspense fallback={<Loader color={Harlequin} styles="h4"/>}>
        <Route />
        </Suspense>
      </Paper>

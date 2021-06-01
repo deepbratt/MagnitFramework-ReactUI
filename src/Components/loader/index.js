@@ -17,11 +17,11 @@ value:[startLoading]
     >
     {({value})=>{
 return(
-    <Grid container justify="center" style={{ position: "absolute",
-      left:"50%",
-        top: "50%",
-        transform: "translate(0%, -44%)",
-        width:"100px",
+    <Grid container justify="center" style={{     display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "inherit",
         }}>
              <CircularProgress value={value} style={{color:{color}}}></CircularProgress>
              <Typography variant={styles} color="textPrimary">Loading...</Typography>

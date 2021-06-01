@@ -30,7 +30,7 @@ import Breakpoints from "../../Theme/theme.breakpoints";
 import {Data} from "../../Utils/Constants/Language/en/GlanceAtWorkData"
 import CustomTitle from "../../Pages/Section/CustomTitle"
 const HireDeveloper = () => {
-  const { skyBlue, linearBackground } = Colors;
+  const { skyBlue, linearBackground,Ash } = Colors;
 
   const breadCrumData = [
     {
@@ -80,7 +80,7 @@ const HireDeveloper = () => {
           <PointList data={servicesData} horizontal={false} />
         </Section>
       </div>
-      <Section>
+      <Section backColor={Ash}>
       <CustomTitle text={HiringSectionTitle} underlined={true}/>
         <OptionsTab />
       </Section>

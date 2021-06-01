@@ -29,7 +29,7 @@ import Breakpoints from "../../Theme/theme.breakpoints";
 import CustomTitle from "../../Pages/Section/CustomTitle"
 
 const DigitalMarketing = () => {
-  const { skyBlue, linearBackground } = Colors;
+  const { skyBlue, linearBackground ,Ash} = Colors;
 
   const breadCrumData = [
     {
@@ -80,7 +80,7 @@ const DigitalMarketing = () => {
         </Section>
       </div>
 
-      <Section highlightWords={3}>
+      <Section highlightWords={3}  backColor={Ash}>
       <CustomTitle text={WhyHireSectionTitle} underlined={true}/>
         <PointList data={hireUsData} horizontal={true} lgBreakpoint={6} />
       </Section>
