@@ -27,9 +27,12 @@ import CustomTitle from "../../Pages/Section/CustomTitle";
 import GlanceAtWork from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
 import BackGroudnPatternLeft from "../../assets/OurBlogs/LatestBlogPattern.png";
 import BackGroudnPatternRight from "../../assets/OurBlogs/LatestBlogPatternRight.png";
+import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/OurWorkSectionPattern";
 
 const DigitalMarketing = () => {
+
   const { skyBlue, linearBackground ,Ash} = Colors;
+
 
   const breadCrumData = [
     {
@@ -43,49 +46,6 @@ const DigitalMarketing = () => {
   ];
 
   const { textColor, leftPattern, rightPattern } = ServicesSectionStyles();
-
-  const ourWorkSectionPatterns = [
-    {
-      image: (
-        <Hidden smDown>
-          <Grid
-            className={leftPattern}
-            style={{ position: "absolute" }}
-            item
-            xs={3}
-          >
-            <img
-              width="100%"
-              height="100%"
-              src={BackGroudnPatternLeft}
-              alt=""
-            />
-          </Grid>
-        </Hidden>
-      ),
-      styles: leftPattern,
-    },
-    {
-      image: (
-        <Hidden smDown>
-          <Grid
-            className={`${rightPattern}`}
-            style={{ position: "absolute" }}
-            item
-            xs={4}
-          >
-            <img
-              width="100%"
-              height="100%"
-              src={BackGroudnPatternRight}
-              alt=""
-            />
-          </Grid>
-        </Hidden>
-      ),
-      styles: rightPattern,
-    },
-  ];
 
   return (
     <CommentSection>
@@ -109,13 +69,13 @@ const DigitalMarketing = () => {
           className={leftPattern}
           src={PatternLeft}
           alt=""
-          srcset=""
+          srcSet=""
         />
         <CustomImage
           className={rightPattern}
           src={StarFishPattern}
           alt=""
-          srcset=""
+          srcSet=""
         />
         <Section>
           <CustomTitle
@@ -130,6 +90,7 @@ const DigitalMarketing = () => {
 
       <Section highlightWords={3}  backColor={Ash}>
       <CustomTitle text={WhyHireSectionTitle} underlined={true}/>
+
         <PointList data={hireUsData} horizontal={true} lgBreakpoint={6} />
       </Section>
       <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>

@@ -29,7 +29,7 @@ const Banner = ({
             className={patternPosition}
             src={StarFishPinkPattern}
             alt=""
-            srcset=""
+            srcSet=""
           />
           <Grid className={imageWrapper}>
             <CustomImage src={image} alt="" />

@@ -1,12 +1,10 @@
 import React from "react";
 import { useStyles } from "./mainStyles";
 import { Card, CardContent, Grid, Typography } from "@material-ui/core";
-import Heading from "../../ContainerStructure/Headings/Heading4";
 import { MainData } from "../../Utils/Constants/Language/AboutUsData";
 import BreadCrumb from "../../Components/BreadCrumb";
 import CustomImage from "../../Components/CustomImage";
 import CustomTitle from "../../Pages/Section/CustomTitle"
-import Section from "../../Pages/Section";
 
 const AboutMainSection = (props) => {
   const { title, paragraph } = MainData;

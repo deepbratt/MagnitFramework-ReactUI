@@ -25,7 +25,7 @@ const submenuStyles = (theme) => ({
     marginRight: theme.spacing(-1),
   },
   menu: {
-    marginTop: theme.spacing(-1),
+    // marginTop: theme.spacing(-1),
     display: "flex",
     color: blackColor,
     transition: "all .5s linear",
@@ -51,7 +51,7 @@ const Submenu = withStyles(submenuStyles)(
           className={classes.menu}
         >
           {/* <span style={{  textAlign: "left"}}  className={classes.title}>{title}</span> */}
-          <Typography style={{  textAlign: "left"}}  className={classes.title} variant="h6">
+          <Typography style={{  textAlign: "left"}}  className={classes.title} variant="caption">
           {title}
           </Typography>
           <ChevronRight className={classes.moreArrow} />

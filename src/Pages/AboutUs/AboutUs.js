@@ -4,8 +4,10 @@ import Main from "../../Sections/MainComponent/AboutMainSection";
 import MissionContext from "../../Sections/Mission&Vision/MissionContext";
 import WhyUsContainer from "./WhyUsContainer";
 import { MainData } from "../../Utils/Constants/Language/AboutUsData";
+
 import Section from "../Section";
 import { Colors } from "../../Theme/color.constants";
+
 const AboutUs = () => {
   const {skyBlue}=Colors;
   const { heroImgsrc } = MainData;

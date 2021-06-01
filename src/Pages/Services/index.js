@@ -8,7 +8,6 @@ import {
 } from "../../Utils/Constants/Language/en/ServicesPageText";
 import Section from "../Section";
 import CustomButton from "../../Components/CustomButton";
-import Breakpoints from "../../Theme/theme.breakpoints";
 import { Link } from "react-router-dom";
 import { DoYouWant } from "../WebServices/constants";
 import PointList from "../../Components/PointBadge/PointList";
@@ -17,11 +16,12 @@ import { BannerImage } from "../../Utils/Constants/Language/en/SolutionsPageData
 import Banner from "../../Components/Banner";
 import CommentSection from "../../Components/CommentSection";
 import ServicesOffered from "../../Sections/HomePageSections/ServicesContext/Services";
-import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
 import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
 import CustomTitle from "../Section/CustomTitle"
+import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/OurWorkSectionPattern";
+import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
 const Services = () => {
-  const { linearBackground, skyBlue } = Colors;
+  const { linearBackground, BlueRibbon, Ash } = Colors;
 
   const breadCrumData = [
     {
@@ -57,7 +57,7 @@ const Services = () => {
           <ServicesOffered title={ServicesOfferedSection.title} servicesData={ServicesOfferedSection.values}/>
           </Section>
         </Grid>
-        <Section>
+        <Section backColor={Ash}>
           <Grid item xs={12}>
             <CustomTitle text={BenifitsSection.title} underlined={true}/>
             <PointList
@@ -67,7 +67,13 @@ const Services = () => {
             />
           </Grid>
         </Section>
-        <GlanceSection backColor={skyBlue} />
+        <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
+          <GlanceSection
+              title={Data.title}
+              data={Data.arr}
+              buttonText={Data.buttonText}
+            />
+        </Section>
         <Section>
         <CustomTitle text={DoYouWant} underlined={true}/>
           <span>

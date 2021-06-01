@@ -7,7 +7,7 @@ import ReactCardFlip from "react-card-flip";
 import { useState } from "react";
 import CustomButton from "../CustomButton";
 const PointBadge = ({ horizontal, data }) => {
-  const { color, icon, title, desc, length } = data;
+  const { color, icon, title, desc } = data;
   const {
     vertical,
     inline,
@@ -24,12 +24,14 @@ const PointBadge = ({ horizontal, data }) => {
   const [isFlipped, setFlipped] = useState(false);
 
   return (
+
     <>
       {horizontal === false ? (
         <ReactCardFlip
           isFlipped={isFlipped}
           className={vertical}
           flipDirection="horizontal"
+
         >
           <Grid
             className={VertSec}

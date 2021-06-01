@@ -3,7 +3,6 @@ import api from "../../Utils/Constants/api.js";
 import {
   messages,
   fieldNames,
-  regex,
   isNameValid,
   isTypeAlphaSpace,
   isEmailValid,
