@@ -20,6 +20,7 @@ import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/C
 import CustomTitle from "../Section/CustomTitle"
 import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/OurWorkSectionPattern";
 import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
+
 const Services = () => {
   const { linearBackground, BlueRibbon, Ash } = Colors;
 
