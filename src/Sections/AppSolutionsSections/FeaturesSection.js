@@ -1,6 +1,5 @@
 import React from "react";
-import { Grid, Typography } from "@material-ui/core";
-import {useStyles} from "./useStyles"
+import { Grid } from "@material-ui/core";
 import {
   heading,
   featuresDataOne,
@@ -13,7 +12,6 @@ import CustomTitle from "../../Pages/Section/CustomTitle"
 
 const FeaturesSection = () => {
   const { Images, img } = SolutionsStyles();
-  const {underlined} = useStyles()
   return (
     <>
       <Grid justify="center" container>
@@ -24,7 +22,7 @@ const FeaturesSection = () => {
           {featuresDataOne.map((data, index) => {
             return (
               <section key={'fs1-'+index}  className={Images}>
-                <img index={index} className={img} src={data.image} />
+                <img index={index} className={img} src={data.image} alt=""/>
               </section>
             );
           })}
@@ -39,7 +37,7 @@ const FeaturesSection = () => {
           {featuresDataTwo.map((data, index) => {
             return (
               <section key={'fs2-'+index}  className={Images}>
-                <img index={index} className={img} src={data.image}/>
+                <img index={index} className={img} src={data.image} alt=""/>
               </section>
             );
           })}
@@ -49,7 +47,7 @@ const FeaturesSection = () => {
           {featuresDataThree.map((data, index) => {
             return (
               <section key={'fs3-'+index} className={Images}>
-                <img index={index} className={img} src={data.image}/>
+                <img index={index} className={img} src={data.image} alt=""/>
               </section>
             );
           })}

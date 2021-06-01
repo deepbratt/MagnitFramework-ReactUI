@@ -4,6 +4,11 @@ import { BrowserRouter as Router, Switch } from "react-router-dom";
 import Layout from "./Layout";
 import RequireAuth from "./container/RequireAuth";
 import { pageRoutes } from "./Components/Path";
+
+import Home from "./Pages/Home";
+import ContactUs from "./Pages/ContactUs";
+import { Suspense } from "react";
+
 import { Loader } from "./Components/loader";
 import { Colors } from "./Theme/color.constants";
 const Home = lazy(() =>import("./Pages/Home"));

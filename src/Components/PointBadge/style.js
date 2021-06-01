@@ -14,11 +14,7 @@ const PointBadgeStyles = makeStyles((theme) => ({
     boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)",
     transition: "all .25s linear",
     border: `solid 1px ${whiteColor}`,
-    "&:hover": {
-      border: `solid 1px ${Harlequin}`,
-      boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
-      transition: "all .25s linear",
-    },
+   
   },
   inline: {
     display: "flex",
@@ -33,6 +29,25 @@ const PointBadgeStyles = makeStyles((theme) => ({
       margin: "15px",
     },
 
+  },
+
+  VertSec: {
+    height:"250px",
+    display: "flex",
+    justifyContent:"space-evenly" ,
+    alignItems:"center",
+    flexDirection:"column",
+    margin: "15px",
+    marginTop:"0px",
+    "&:hover": {
+      border: `solid 1px ${Harlequin}`,
+      boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
+      transition: "all .25s linear",
+    },
+    [theme.breakpoints.down("sm")]: {
+      margin: "15px 10px",
+      marginTop:"0px"
+    },
   },
   devSec: {
     display: "flex",
@@ -74,18 +89,30 @@ fontWeight:300
   },
   contentRight: {
     minWidth: "100%",
+    height:"240px",
     display: "flex",
     flexDirection: "column",
-    justifyContent: "center",
-    "& > h5" : {
-      color:Mirage,
-      fontWeight:600,
-    },
+    justifyContent: "space-around",
+    alignItems:"center" ,
+    "&:hover": {
+      border: `solid 1px ${Harlequin}`,
+      boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
+     
+    }, 
    
-    "& > h6" : {
-      color:darkSilver,
+ 
+
+  },
+  name : {
+    padding:" 0rem 1rem",
+    color:Mirage,
+    fontWeight:600,
+  },
+    
+ detail : {
+    padding:"0rem 1rem",
+    color:darkSilver,
 fontWeight:"normal"
-    },
   },
 }));
 

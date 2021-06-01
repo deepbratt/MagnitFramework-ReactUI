@@ -20,7 +20,7 @@ import CustomTitle from "../../Pages/Section/CustomTitle"
 import {Colors} from "../../Theme/color.constants"
 const Solutions = () => {
  const {root} = ServicesSectionStyles()
- const {MoonWhite} = Colors
+ const {MoonWhite, Ash} = Colors
   return (
     <>
       <Grid container>
@@ -40,7 +40,7 @@ const Solutions = () => {
             <StairCaseContext />
           </Grid>
         </Section>
-        <Section>
+        <Section backColor={Ash}>
         <CustomTitle underlined={true} text={benefitsHeading} />
           <PointList data={benefitsData} horizontal={true} lgBreakpoint={6}/>
         </Section>
@@ -63,9 +63,6 @@ const Solutions = () => {
     </Grid>
         <Grid item lg={12} md={12} xs={12}>
         <CommentSection/>
-        </Grid>
-        <Grid item lg={12} md={12} xs={12}>
-          <CommentSection />
         </Grid>
       </Grid>
     </>

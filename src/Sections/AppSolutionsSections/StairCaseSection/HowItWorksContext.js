@@ -10,19 +10,19 @@ import {
 import CustomImage from "../../../Components/CustomImage";
 import CustomTitle from "../../../Pages/Section/CustomTitle"
 const HowItWorksContext = () => {
-  const { cardSec , underlined} = useStyles();
+  const { cardSec} = useStyles();
   const { card2, root, devSec, image,  } = missionStyles();
   return (
     <>
 
       <Grid container className={root}>
-    <Grid lg={12} md={12} xs={12}>
+    <Grid item lg={12} md={12} xs={12}>
     <CustomTitle underlined={true} text={stairCaseHeading} />
     </Grid>
         <Grid item style={{ paddingBottom: "20px" }} className={cardSec}>
           {StairCaseData.map((data, index) => {
             return (
-              <Card style={{ marginTop: data.margin ,}} className={card2}>
+              <Card style={{ marginTop: data.margin ,}} key={index} className={card2}>
                 <CardContent style={{ padding: "0px" }}>
                   <Grid item className={image}>
                     <CustomImage src={data.img} alt="image" />

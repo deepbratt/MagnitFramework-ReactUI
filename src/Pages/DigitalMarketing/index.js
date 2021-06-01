@@ -1,8 +1,7 @@
 import PointList from "../../Components/PointBadge/PointList";
 import Section from "../Section";
 import { Link } from "react-router-dom";
-import { Typography } from "@material-ui/core";
-import GlanceSection from "./OurWork";
+import { Grid, Hidden, Typography } from "@material-ui/core";
 import { hireUsData } from "./whyWorkwithUs";
 import { Colors } from "../../Theme/color.constants";
 import Banner from "../../Components/Banner";
@@ -24,12 +23,16 @@ import BreadCrumb from "../../Components/BreadCrumb";
 import CommentSection from "../../Components/CommentSection";
 import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
-import Heading5 from "../../ContainerStructure/Headings/Heading5";
-import Breakpoints from "../../Theme/theme.breakpoints";
-import CustomTitle from "../../Pages/Section/CustomTitle"
+import CustomTitle from "../../Pages/Section/CustomTitle";
+import GlanceAtWork from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
+import BackGroudnPatternLeft from "../../assets/OurBlogs/LatestBlogPattern.png";
+import BackGroudnPatternRight from "../../assets/OurBlogs/LatestBlogPatternRight.png";
+import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/OurWorkSectionPattern";
 
 const DigitalMarketing = () => {
-  const { skyBlue, linearBackground } = Colors;
+
+  const { skyBlue, linearBackground ,Ash} = Colors;
+
 
   const breadCrumData = [
     {
@@ -43,6 +46,7 @@ const DigitalMarketing = () => {
   ];
 
   const { textColor, leftPattern, rightPattern } = ServicesSectionStyles();
+
   return (
     <CommentSection>
       <Banner
@@ -65,28 +69,39 @@ const DigitalMarketing = () => {
           className={leftPattern}
           src={PatternLeft}
           alt=""
-          srcset=""
+          srcSet=""
         />
         <CustomImage
           className={rightPattern}
           src={StarFishPattern}
           alt=""
-          srcset=""
+          srcSet=""
         />
-        <Section >
-        <CustomTitle style={{marginBottom: "20px"}} text={ServicesSectionTitle} underlined={true}/>
-          <CustomTitle subTitle={ourExpert}/>
+        <Section>
+          <CustomTitle
+            style={{ marginBottom: "20px" }}
+            text={ServicesSectionTitle}
+            underlined={true}
+          />
+          <CustomTitle subTitle={ourExpert} />
           <PointList data={marketingServicesData} horizontal={false} />
         </Section>
       </div>
 
-      <Section highlightWords={3}>
+      <Section highlightWords={3}  backColor={Ash}>
       <CustomTitle text={WhyHireSectionTitle} underlined={true}/>
+
         <PointList data={hireUsData} horizontal={true} lgBreakpoint={6} />
       </Section>
-        <GlanceSection image1={Data.image1} image2={Data.image2} image3={Data.image3} subtitleOne={Data.subtitleOne} subtitleTwo={Data.subtitleTwo} subtitleThree={Data.subtitleThree}  backColor={skyBlue} />
+      <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
+        <GlanceAtWork
+          title={Data.title}
+          data={Data.arr}
+          buttonText={Data.buttonText}
+        />
+      </Section>
       <Section>
-      <CustomTitle text={DoYouWant} underlined={true}/>
+        <CustomTitle text={DoYouWant} underlined={true} />
         <span>
           <CustomButton component={Link} to="/request-a-quote">
             Request a Quote

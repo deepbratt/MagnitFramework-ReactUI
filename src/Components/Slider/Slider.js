@@ -61,7 +61,7 @@ const Slider = ({
         </List>
         {/* </section> */}
 
-        <CustomButton>
+        <CustomButton style={{marginBottom: "20px"}}>
           <NavLink
             style={{
               color: whiteColor,

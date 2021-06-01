@@ -25,12 +25,14 @@ import BreadCrumb from "../../Components/BreadCrumb";
 import CommentSection from "../../Components/CommentSection";
 import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
-import Heading5 from "../../ContainerStructure/Headings/Heading5";
 import Breakpoints from "../../Theme/theme.breakpoints";
-import {Data} from "../../Utils/Constants/Language/en/GlanceAtWorkData"
 import CustomTitle from "../../Pages/Section/CustomTitle"
+import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/OurWorkSectionPattern";
+import { Data } fromhttps://github.com/themagnit/MagnitFramework-ReactUI/pull/192/conflict?name=src%252FPages%252FHireDeveloper%252Findex.js&ancestor_oid=d4b5e7f7fa80303c20dd3c25ab1aeffb274231fe&base_oid=5a0fbe2954076ed48e358779a4f27cf37c2c2c10&head_oid=a03f856d31d06490e11de588d7b3ee6c31f08911 "../../Utils/Constants/Language/en/GlanceAtWorkData";
 const HireDeveloper = () => {
-  const { skyBlue, linearBackground } = Colors;
+
+  const { skyBlue, linearBackground,Ash } = Colors;
+
 
   const breadCrumData = [
     {
@@ -66,13 +68,13 @@ const HireDeveloper = () => {
           className={leftPattern}
           src={PatternLeft}
           alt=""
-          srcset=""
+          srcSet=""
         />
         <CustomImage
           className={rightPattern}
           src={StarFishPattern}
           alt=""
-          srcset=""
+          srcSet=""
         />
         <Section highlightWords={1}>
           <CustomTitle style={{marginBottom: "20px"}} text={ServicesSectionTitle} underlined={true}/>
@@ -80,7 +82,7 @@ const HireDeveloper = () => {
           <PointList data={servicesData} horizontal={false} />
         </Section>
       </div>
-      <Section>
+      <Section backColor={Ash}>
       <CustomTitle text={HiringSectionTitle} underlined={true}/>
         <OptionsTab />
       </Section>
@@ -88,7 +90,14 @@ const HireDeveloper = () => {
       <CustomTitle text={WhyHireSectionTitle} underlined={true}/>
         <PointList data={hireUsData} horizontal={true} lgBreakpoint={6}/>
       </Section>
-      <GlanceSection backColor={skyBlue} />
+      {/* <GlanceSection backColor={skyBlue} /> */}
+      <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
+          <GlanceSection
+              title={Data.title}
+              data={Data.arr}
+              buttonText={Data.buttonText}
+            />
+        </Section>
       <Section>
       <CustomTitle text={DoYouWant} underlined={true}/>
     <span >

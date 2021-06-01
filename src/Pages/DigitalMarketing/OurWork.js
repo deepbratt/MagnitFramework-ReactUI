@@ -1,7 +1,6 @@
 import React from "react";
 import { useStyles } from "../../Sections/HomePageSections/GlanceAtWorkContext/containerStyles";
-import { Typography, Card, CardContent, Grid } from "@material-ui/core";
-import Breakpoints from "../../Theme/theme.breakpoints";
+import { Typography, CardContent, Grid } from "@material-ui/core";
 import { Colors } from "../../Theme/color.constants";
 import { Data } from "./constants";
 import CustomButton from "../../Components/CustomButton/index";
@@ -21,7 +20,7 @@ const Container = ({ backColor }) => {
     buttonText,
   } = Data;
   const { whiteColor } = Colors;
-  const { root, card, devSec, cardSec, cardContent, seeMore } = classes;
+  const { root, card, devSec, cardSec, cardContent } = classes;
   return (
     <>
       <Grid

@@ -6,7 +6,6 @@ import Banner from "../../assets/ContactUs/banner.png";
 import {
   RequestAQuote,
   RequestAQuoteSub,
-  ContactUsTitle,
   SomeQuickFactsAboutUs,
   AwardSectionTitleContactUs,
   WorkFlow,
@@ -70,7 +69,7 @@ const ContactUs = () => {
       <Section>
       <CustomTitle style={{marginBottom: "20px"}} text={WorkFlow} underlined={true}/>
           <CustomTitle subTitle={RequestAQuoteSub}/>
-<Grid xs={12}>
+<Grid item xs={12}>
 <img src={flowchart} alt="d" style={{width:"100%"}}/>
 </Grid>
       </Section>

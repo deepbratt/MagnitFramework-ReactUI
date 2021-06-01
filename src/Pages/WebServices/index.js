@@ -27,11 +27,11 @@ import BreadCrumb from "../../Components/BreadCrumb";
 import CommentSection from "../../Components/CommentSection";
 import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
-import Heading5 from "../../ContainerStructure/Headings/Heading5";
-import Breakpoints from "../../Theme/theme.breakpoints";
 import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
-const Services = () => {
-  const { skyBlue, linearBackground } = Colors;
+import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/OurWorkSectionPattern";
+
+  const { skyBlue, linearBackground,Ash } = Colors;
+
 
   const breadCrumData = [
     {
@@ -43,8 +43,8 @@ const Services = () => {
       text: "Web Development Services",
     },
   ];
+  const { textColor, leftPattern, rightPattern, leftPatternGlance, rightPatternGlance  } = ServicesSectionStyles();
 
-  const { textColor, leftPattern, rightPattern } = ServicesSectionStyles();
   return (
     <CommentSection>
       <Banner
@@ -67,27 +67,39 @@ const Services = () => {
           className={leftPattern}
           src={PatternLeft}
           alt=""
-          srcset=""
+          srcSet=""
         />
         <CustomImage
           className={rightPattern}
           src={StarFishPattern}
           alt=""
-          srcset=""
+          srcSet=""
         />
         <Section>
-          <CustomTitle style={{marginBottom: "20px"}} text={ServicesSectionTitle} underlined={true}/>
-          <CustomTitle subTitle={OurExpertEngineers}/>
+          <CustomTitle
+            style={{ marginBottom: "20px" }}
+            text={ServicesSectionTitle}
+            underlined={true}
+          />
+          <CustomTitle subTitle={OurExpertEngineers} />
           <PointList data={servicesData} horizontal={false} />
         </Section>
       </div>
-      <Section>
+      <Section backColor={Ash}>
+
       <CustomTitle underlined={true} text={WhyHireSectionTitle} />
+
         <PointList data={hireUsData} horizontal={true} lgBreakpoint={6} />
       </Section>
-        <GlanceSection subtitleOne={Data.subtitleOne} subtitleTwo={Data.subtitleTwo} subtitleThree={Data.subtitleThree} backColor={skyBlue} />
+      <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
+          <GlanceSection
+          title={Data.title}
+          data={Data.arr}
+          buttonText={Data.buttonText}
+          />
+        </Section>
       <Section>
-      <CustomTitle underlined={true} text={DoYouWant} />
+        <CustomTitle underlined={true} text={DoYouWant} />
         <span>
           <CustomButton component={Link} to="/request-a-quote">
             Request a Quote

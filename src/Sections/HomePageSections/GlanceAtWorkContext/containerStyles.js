@@ -36,11 +36,15 @@ export const useStyles = makeStyles((theme) => ({
     padding: "0px 6px",
   },
   cardContent: {
-    width: "100%",
+    // width: "100%",
+    display: "flex",
+    justifyContent: "center",
     backgroundColor: Mariner,
+    // paddingBottom: "12px",
     textAlign: "center",
+    // paddingLeft: "20px",
     color: whiteColor,
-    padding: "15px",
+    // padding: "20px",
   },
   leftPattern: {
     position: "absolute",

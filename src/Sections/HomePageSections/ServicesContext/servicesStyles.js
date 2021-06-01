@@ -17,31 +17,29 @@ export const useStyles = makeStyles((theme) => ({
   card: {
     display: "flex",
     margin: "0px",
+    height:"100%",
     flexDirection: "column",
+    alignItems:"center",
+    justifyContent:"center",
     border: `solid 1px ${whiteColor}`,
-    alignItems: "center",
     transition: "all .25s linear",
     boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)",
-    "&:hover": {
-      boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
-      border: `solid 1px ${Harlequin}`,
-      transition: "all .25s linear",
-    },
+    // "&:hover": {
+    //   boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
+    //   border: `solid 1px ${Harlequin}`,
+    //   transition: "all .25s linear",
+    // },
     cursor: "pointer",
   },
-  devSub: {
-    height: "120px",
-    width: "120px",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
+
   devSec: {
-    height: "120px",
+    height: "250px",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    marginBottom: "30px",
+    // marginBottom: "30px",
+   flexDirection:"column",
+   padding:"1rem" , 
   },
   serviceHeading:{
     "& > h4":{
@@ -70,9 +68,8 @@ export const useStyles = makeStyles((theme) => ({
   },
   contentRight: {
     minWidth: "100%",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
+    padding:"2px",
+   marginTop:"1rem",
     "& > subtitle1" : {
       color:Mirage,
       fontWeight:600,
