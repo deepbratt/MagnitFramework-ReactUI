@@ -66,7 +66,7 @@ const CascadingHoverMenus = ({ data, name, route, sub }) => {
                 activeClassName={active}
                 className={link}
               >
-                <Typography variant="caption">{menuitems.title.toUpperCase()}</Typography>
+                <Typography variant="caption">{menuitems.title}</Typography>
               </NavLink>
             </MenuItem>
           ))}
@@ -80,14 +80,14 @@ const CascadingHoverMenus = ({ data, name, route, sub }) => {
               <Submenu  popupId="moreChoicesMenu" title={sub}>
                 <NavLink to="/home" activeClassName={active} className={link}>
                   <MenuItem onClick={popupState.close}>
-                    <Typography variant="caption">Full Stack Developer</Typography>
+                    <Typography style={{textTransform: "uppercase"}} variant="caption">Full Stack Developer</Typography>
                   </MenuItem>
                   <MenuItem onClick={popupState.close}>
-                    <Typography variant="caption">Frontend Developer</Typography>
+                    <Typography style={{textTransform: "uppercase"}} variant="caption">Frontend Developer</Typography>
                   </MenuItem>
 
                   <MenuItem onClick={popupState.close}>
-                    <Typography variant="caption">Backend Developer</Typography>
+                    <Typography style={{textTransform: "uppercase"}} variant="caption">Backend Developer</Typography>
                   </MenuItem>
                 </NavLink>
               </Submenu>
