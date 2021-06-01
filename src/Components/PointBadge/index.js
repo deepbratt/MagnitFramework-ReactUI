@@ -62,7 +62,7 @@ const PointBadge = ({ horizontal, data }) => {
             className={contentRight}
             onMouseLeave={() => setFlipped(false)}
           >
-            <div style={{padding:"1rem"}}>
+            <div >
               <Typography
                 color="textPrimary"
                 variant="subtitle1"
@@ -71,6 +71,8 @@ const PointBadge = ({ horizontal, data }) => {
               >
                 {title}
               </Typography>
+              </div>
+              <div>
               <Typography
                 style={{ cursor: "pointer" }}
                 variant="subtitle2"

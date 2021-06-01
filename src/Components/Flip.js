@@ -66,45 +66,43 @@ const Flip = ({ data }) => {
               </Typography>
             </Grid>
           </Grid>
-          <Grid
-            container
+        <Grid container
             className={devSec}
-            onMouseLeave={() => setIsFlipped(false)}
-          >
-            <Grid item={12} classNamw={contentRight}>
-              <Typography
-                color="textPrimary"
-                variant="subtitle1"
-                className={name}
-                gutterBottom
+          onMouseLeave={() => setIsFlipped(false)}
+        >
+          <div>
+            <Typography
+              color="textPrimary"
+              variant="subtitle1"
+              className={name}
+              gutterBottom
+            >
+              {title}
+            </Typography>
+            </div>
+            <div >
+            <Typography variant="subtitle2" className={detail} paragraph={true}>
+              {desc}
+            </Typography>
+            </div>
+          <div>
+            <CustomButton size="small">
+              {" "}
+              <NavLink
+                to={redirect}
+                style={{
+                  marginLeft: "10px",
+                  textDecoration: "none",
+                  color: whiteColor,
+                }}
               >
-                {title}
-              </Typography>
+                Read More
+              </NavLink>
+            </CustomButton>
+          </div>
+        </Grid>
+      </ReactCardFlip>
 
-              <Typography
-                variant="subtitle2"
-                className={detail}
-                paragraph={true}
-              >
-                {desc}
-              </Typography>
-            </Grid>
-            <Grid item={12}>
-              <CustomButton size="small">
-                <NavLink
-                  to={redirect}
-                  style={{
-                    marginLeft: "10px",
-                    textDecoration: "none",
-                    color: whiteColor,
-                  }}
-                >
-                  Read More
-                </NavLink>
-              </CustomButton>
-            </Grid>
-          </Grid>
-        </ReactCardFlip>
       </div>
     </>
   );
