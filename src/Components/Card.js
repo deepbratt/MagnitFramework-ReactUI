@@ -7,8 +7,9 @@ import ReadMore from "./ReadMore"
 import { NavLink } from "react-router-dom";
 import ReactCardFlip from 'react-card-flip';
 import Flip from "./Flip";
+import CustomTitle from "../Pages/Section/CustomTitle";
 
-const CardData = ({ horizontal, data, lgBreakpoint=4 }) => {
+const CardData = ({ horizontal, data, lgBreakpoint=4, title  }) => {
   const classes = useStyles();
 const { card, } = classes;
   let breakpoint = 4;
@@ -17,6 +18,7 @@ const { card, } = classes;
   }
   return (
     <>
+    
      <div style={{flexGrow:1}}>
     <Grid container justify="space-around">
       {data &&

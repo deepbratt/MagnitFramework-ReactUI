@@ -24,20 +24,20 @@ export const useStyles = makeStyles((theme) => ({
     border: `solid 1px ${whiteColor}`,
     transition: "all .25s linear",
     boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)",
-    // "&:hover": {
-    //   boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
-    //   border: `solid 1px ${Harlequin}`,
-    //   transition: "all .25s linear",
-    // },
+    
+    "&:hover": {
+      boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
+      border: `solid 1px  rgba(0,0,0,0)`,
+      transition: "all .25s linear",
+    },
     cursor: "pointer",
   },
 
   devSec: {
-    height: "250px",
+    height: "350px",
     display: "flex",
     alignItems: "center",
-    justifyContent: "center",
-    // marginBottom: "30px",
+    justifyContent: "space-evenly",
    flexDirection:"column",
    padding:"1rem" , 
   },
@@ -46,7 +46,57 @@ export const useStyles = makeStyles((theme) => ({
       color:Mirage
     } 
   },
+  supportSub: {
+    borderRadius: "5px",
+    height: "100px",
+    width: "100px",
+    padding:".8rem",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "flex-start",
+    [theme.breakpoints.down("sm")]: {
+      height: "80px",
+      width: "80px",
+    },
+  },
+  VertSec: {
+    height:"350px",
+    display: "flex",
+    justifyContent:"space-evenly" ,
+    alignItems:"center",
+    flexDirection:"column",
+    padding:"1rem",
+    width:"100%",
+    margin: "15px",
+    marginTop:"0px",
+    "&:hover": {
+      border: `solid 1px ${Harlequin}`,
+      boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
+      transition: "all .25s linear",
+    },
+    [theme.breakpoints.down("sm")]: {
+      margin: "15px 10px",
+      marginTop:"0px"
+    },
+  },
+  badge: {
+    borderRadius: "5px",
+    margin: "25px",
+    [theme.breakpoints.down("sm")]: {
+      margin: "15px",
+    },
 
+  },
+  vertical: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "end",
+    height: "100%",
+    margin: "15px",
+    cursor:"pointer",
+    zIndex: 1,
+    padding: "10px",  
+  },
   underlined: {
     position: "relative",
     zIndex: 1,
@@ -70,14 +120,15 @@ export const useStyles = makeStyles((theme) => ({
     minWidth: "100%",
     padding:"2px",
    marginTop:"1rem",
-    "& > subtitle1" : {
-      color:Mirage,
-      fontWeight:600,
-    },
-   
-    "& > subtitle2" : {
-      color:darkSilver,
+  
+  },
+  name : {
+    color:Mirage,
+    fontWeight:600,
+  },
+ 
+ detail : {
+    color:darkSilver,
 fontWeight:"normal"
-    },
   },
 }));

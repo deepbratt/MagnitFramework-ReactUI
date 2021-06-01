@@ -75,7 +75,7 @@ const PointBadge = ({ horizontal, data }) => {
                 variant="subtitle2"
                 className={detail}
               >
-                <Read text={desc} maxLines={3} />
+                {desc} 
               </Typography>
             </div>
             <div>

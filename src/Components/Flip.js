@@ -8,62 +8,61 @@ import ReactCardFlip from "react-card-flip";
 import PropTypes from "prop-types";
 import { Colors } from "../Theme/color.constants";
 import CustomButton from "./CustomButton";
+import CustomButtonStyles from "./CustomButton/style";
 const Flip = ({ horizontal, data }) => {
   const classes = useStyles();
   
-const { Harlequin } = Colors;
-  const { card, devSec, devSub, contentRight } = classes;
+const { whiteColor } = Colors;
+  const { card, devSec,vertical, devSub, contentRight,name,detail,supportSub, VertSec,badge } = classes;
   const [isFlipped, setIsFlipped] = React.useState(false);
   const { color, fill, icon, title, desc, redirect } = data;
   //   Use this Card for Services Section pass data from its Parent Contanier to here
   return (
     <>
       <ReactCardFlip
-        style={{ flexGrow: 1, backgroundColor: "green" }}
         isFlipped={isFlipped}
+        className={vertical}
         flipDirection="horizontal"
       >
-        <section
-          className={devSec}
-          style={{ backgroundColor: color, }}
+       <Grid xs={12}
+            className={ VertSec}
           onMouseEnter={() => setIsFlipped((prev) => !prev)}
-        >
-          <div>
-            <CustomImage alt="icon" src={icon} style={{ filter: fill}} />
-          </div>
-
-          <div className={contentRight}>
-            <Typography variant="subtitle2" style={{ color: color }}>
-              <ReadMore text={desc} maxLines={2} />
-              Learn More
-            </Typography>
-            <Typography color="textPrimary" variant="subtitle1" gutterBottom>
+          >
+             <section style={{ backgroundColor: color }} className={supportSub}>
+             <CustomImage alt="icon"  width="50px"
+                height="50px" src={icon} style={{ filter: fill}} className={badge} />
+            </section>
+            <section>
+            <Typography color="textPrimary" variant="subtitle1" className={name} gutterBottom>
               {title}
             </Typography>
-          </div>
-        </section>
+            </section>
+          </Grid>
+       
 
-        <section
+        <Grid
           className={devSec}
-          style={{ backgroundColor: color }}
           onMouseLeave={() => setIsFlipped((prev) => !prev)}
         >
-          <Typography color="textPrimary" variant="subtitle1" gutterBottom>
+          <Typography color="textPrimary" variant="subtitle1"  className={name} gutterBottom>
             {title}
           </Typography>
 
-          <Typography variant="subtitle2" paragraph={true}>
-            <ReadMore text={desc} maxLines={3} />
-            <NavLink
-              to={redirect}
-              style={{ marginLeft: "10px", textDecoration: "none",
-             color:Harlequin
-               }}
-            >
-          Learn More
-            </NavLink>
+          <Typography variant="subtitle2" className={detail} paragraph={true}>
+            {desc} 
+          
           </Typography>
-        </section>
+          <div>
+              <CustomButton size="small" >  <NavLink
+            to={redirect}
+            style={{ marginLeft: "10px", textDecoration: "none",
+           color:whiteColor
+             }}
+          >
+        Read More
+          </NavLink></CustomButton>
+            </div>
+        </Grid>
       </ReactCardFlip>
     </>
   );
