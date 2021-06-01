@@ -18,6 +18,7 @@ const submenuStyles = (theme) => ({
     flexGrow: 1,
     color: blackColor,
     textAlign: "left",
+    textTransform: "uppercase"
 
 
   },
@@ -52,7 +53,7 @@ const Submenu = withStyles(submenuStyles)(
         >
           {/* <span style={{  textAlign: "left"}}  className={classes.title}>{title}</span> */}
           <Typography style={{  textAlign: "left"}}  className={classes.title} variant="caption">
-          {title.toUpperCase()}
+          {title}
           </Typography>
           <ChevronRight className={classes.moreArrow} />
         </MenuItem>

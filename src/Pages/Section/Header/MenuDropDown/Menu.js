@@ -66,7 +66,7 @@ const CascadingHoverMenus = ({ data, name, route, sub }) => {
                 activeClassName={active}
                 className={link}
               >
-                <Typography variant="caption">{menuitems.title.toUpperCase()}</Typography>
+                <Typography variant="caption">{menuitems.title}</Typography>
               </NavLink>
             </MenuItem>
           ))}
