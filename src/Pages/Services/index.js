@@ -22,7 +22,7 @@ import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/
 import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
 
 const Services = () => {
-  const { linearBackground, BlueRibbon, Ash } = Colors;
+  const { linearBackground, BlueRibbon,aliceBlue } = Colors;
 
   const breadCrumData = [
     {
@@ -58,7 +58,7 @@ const Services = () => {
           <ServicesOffered title={ServicesOfferedSection.title} servicesData={ServicesOfferedSection.values}/>
           </Section>
         </Grid>
-        <Section backColor={Ash}>
+        <Section patterns={ourWorkSectionPatterns} backColor={aliceBlue}>
           <Grid item xs={12}>
             <CustomTitle text={BenifitsSection.title} underlined={true}/>
             <PointList

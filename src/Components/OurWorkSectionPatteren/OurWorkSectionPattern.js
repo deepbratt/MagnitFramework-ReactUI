@@ -30,7 +30,7 @@ export const ourWorkSectionPatterns = [
       <Hidden smDown>
         <Grid
           className={`${rightPattern}`}
-          style={{ position: "absolute", right: "-10%", top: "-10%" }}
+          style={{ position: "absolute", right: "-10%", top: "0%" }}
           item
           xs={4}
         >

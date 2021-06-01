@@ -28,7 +28,7 @@ import GlanceAtWork from "../../Sections/HomePageSections/GlanceAtWorkContext/Co
 import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/OurWorkSectionPattern";
 
 const DigitalMarketing = () => {
-  const { BlueRibbon, linearBackground, Ash } = Colors;
+  const { linearBackground, BlueRibbon, aliceBlue } = Colors;
 
   const breadCrumData = [
     {
@@ -84,7 +84,7 @@ const DigitalMarketing = () => {
         </Section>
       </div>
 
-      <Section highlightWords={3} backColor={Ash}>
+      <Section patterns={ourWorkSectionPatterns} backColor={aliceBlue}>
         <CustomTitle text={WhyHireSectionTitle} underlined={true} />
 
         <PointList data={hireUsData} horizontal={true} lgBreakpoint={6} />
