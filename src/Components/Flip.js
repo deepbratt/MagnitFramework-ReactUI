@@ -65,12 +65,11 @@ const Flip = ({ data }) => {
             </Typography>
           </Grid>
         </Grid>
-        <Grid
-          container
-          className={devSec}
+        <Grid container
+            className={devSec}
           onMouseLeave={() => setIsFlipped(false)}
         >
-          <Grid item={12} classNamw={contentRight}>
+          <div>
             <Typography
               color="textPrimary"
               variant="subtitle1"
@@ -79,12 +78,13 @@ const Flip = ({ data }) => {
             >
               {title}
             </Typography>
-
+            </div>
+            <div >
             <Typography variant="subtitle2" className={detail} paragraph={true}>
               {desc}
             </Typography>
-          </Grid>
-          <Grid item={12}>
+            </div>
+          <div>
             <CustomButton size="small">
               {" "}
               <NavLink
@@ -98,7 +98,7 @@ const Flip = ({ data }) => {
                 Read More
               </NavLink>
             </CustomButton>
-          </Grid>
+          </div>
         </Grid>
       </ReactCardFlip>
       </div>

@@ -38,7 +38,7 @@ export const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "space-evenly",
    flexDirection:"column",
-   padding:"1rem" , 
+   padding:".5rem 1rem" , 
   },
 
   serviceHeading:{

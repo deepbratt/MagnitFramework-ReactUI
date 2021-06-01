@@ -27,6 +27,7 @@ import ContactUsStyles from "./style";
 import { footerText } from "../../Utils/Constants/Language";
 import flowchart from "../../assets/ContactUs/flowchart.png"
 import CustomTitle from "../Section/CustomTitle"
+import { ContactUsTitle } from "../Home/constants";
 
 const ContactUs = () => {
   const {
@@ -153,7 +154,7 @@ const ContactUs = () => {
                 padding: "50px 0",
               }}
             >
-              <ContactUsForm styles={label} bool={true} heading="Contact Us" />
+              <ContactUsForm styles={label} bool={true} heading={ContactUsTitle} />
             </Paper>
           </Grid>
         </Grid>
