@@ -14,8 +14,8 @@ import {
 } from "../../Utils/Constants/Language/en/TestimonialVideos";
 import CustomButton from "../../Components/CustomButton";
 import CustomTitle from "../../Pages/Section/CustomTitle";
+import Section from "../Section";
 
-// import Section from '../Section';
 function Testimonials() {
   const { linearBackground } = Colors;
   const { textColor, flex } = useStyles();
@@ -46,21 +46,19 @@ function Testimonials() {
           </Typography>
         </>
       </Banner>
+      <Section>
+        <CustomTitle
+          style={{ marginBottom: "20px" }}
+          text={Testmonial}
+          underlined={true}
+        />
+        <CustomTitle subTitle={ClientsHaveToSay} />
 
-      {/* <Section  title={Testmonial} subTitle={ClientsHaveToSay}>
-     </Section> */}
-      <CustomTitle
-        text={Testmonial}
-        subTitle={ClientsHaveToSay}
-        underlined={true}
-      />
-
-      <Grid container direction="row" justify="center">
         <VideoCard />
-        <Grid item xs={12} className={flex}>
+        <Grid xs={12} className={flex}>
           <CustomButton type="submit">See More</CustomButton>
         </Grid>
-      </Grid>
+      </Section>
     </CommentSection>
   );
 }
