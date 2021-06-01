@@ -64,9 +64,6 @@ const Solutions = () => {
         <Grid item lg={12} md={12} xs={12}>
         <CommentSection/>
         </Grid>
-        <Grid item lg={12} md={12} xs={12}>
-          <CommentSection />
-        </Grid>
       </Grid>
     </>
   );
