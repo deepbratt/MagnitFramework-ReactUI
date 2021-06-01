@@ -66,7 +66,6 @@ const Flip = ({ data }) => {
               </Typography>
             </Grid>
           </Grid>
-        </Grid>
         <Grid container
             className={devSec}
           onMouseLeave={() => setIsFlipped(false)}
