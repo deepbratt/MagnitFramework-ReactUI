@@ -30,7 +30,7 @@ import CustomImage from "../../Components/CustomImage";
 import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
 import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/OurWorkSectionPattern";
 const Services = () => {
-  const { Ash, linearBackground, BlueRibbon } = Colors;
+  const { aliceBlue, linearBackground, BlueRibbon } = Colors;
 
   const breadCrumData = [
     {
@@ -84,7 +84,7 @@ const Services = () => {
           <PointList data={servicesData} horizontal={false} />
         </Section>
       </div>
-      <Section backColor={Ash}>
+      <Section patterns={ourWorkSectionPatterns} backColor={aliceBlue}>
         <CustomTitle underlined={true} text={WhyHireSectionTitle} />
         <PointList data={hireUsData} horizontal={true} lgBreakpoint={6} />
       </Section>

@@ -18,9 +18,10 @@ import { DoYouWant } from "../WebServices/constants";
 import Breakpoints from "../../Theme/theme.breakpoints";
 import CustomTitle from "../../Pages/Section/CustomTitle"
 import {Colors} from "../../Theme/color.constants"
+import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/OurWorkSectionPattern";
 const Solutions = () => {
  const {root} = ServicesSectionStyles()
- const {MoonWhite, Ash} = Colors
+ const {MoonWhite, aliceBlue} = Colors
   return (
     <>
       <Grid container>
@@ -40,7 +41,7 @@ const Solutions = () => {
             <StairCaseContext />
           </Grid>
         </Section>
-        <Section backColor={Ash}>
+        <Section patterns={ourWorkSectionPatterns} backColor={aliceBlue}>
         <CustomTitle underlined={true} text={benefitsHeading} />
           <PointList data={benefitsData} horizontal={true} lgBreakpoint={6}/>
         </Section>
