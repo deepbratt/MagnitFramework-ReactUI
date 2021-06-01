@@ -49,6 +49,13 @@ const PointBadgeStyles = makeStyles((theme) => ({
       marginTop:"0px"
     },
   },
+  // hover:{
+  //   "&:hover": {
+  //     border: `solid 1px ${Harlequin}`,
+  //     boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
+  //     transition: "all .25s linear",
+  //   },
+  // },
   devSec: {
     display: "flex",
     justifyContent: "center",

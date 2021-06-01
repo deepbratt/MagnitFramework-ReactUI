@@ -21,14 +21,14 @@ export const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems:"center",
     justifyContent:"center",
-    border: `solid 1px ${whiteColor}`,
-    transition: "all .25s linear",
-    boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)",
-    "&:hover": {
-      boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
-      border: `solid 1px ${Harlequin} `,
-      transition: "all .25s linear",
-    },
+    // border: `solid 1px ${whiteColor}`,
+    // transition: "all .25s linear",
+    // boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)",
+    // "&:hover": {
+    //   boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
+    //   border: `solid 1px ${Harlequin} `,
+    //   transition: "all .25s linear",
+    // },
     cursor: "pointer",
   },
 
