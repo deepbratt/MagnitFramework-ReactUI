@@ -1,33 +1,33 @@
 import React from "react";
 import { useStyles } from "../Sections/HomePageSections/ServicesContext/servicesStyles";
-import { Typography, CardContent, Grid } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import PropTypes from "prop-types";
-import CustomImage from "./CustomImage";
-import ReadMore from "./ReadMore"
-import { NavLink } from "react-router-dom";
-import ReactCardFlip from 'react-card-flip';
 import Flip from "./Flip";
-import CustomTitle from "../Pages/Section/CustomTitle";
 
-const CardData = ({ horizontal, data, lgBreakpoint=4, title  }) => {
+const CardData = ({ horizontal, data, lgBreakpoint = 4, title }) => {
   const classes = useStyles();
-const { card, } = classes;
+  const { card } = classes;
   let breakpoint = 4;
   if (horizontal) {
     breakpoint = 6;
   }
   return (
     <>
-    <Grid container justify="space-between">
-      {data &&
-        data.map((item, index) => (
-          <Grid className={card}  key={index} item xs={12} md={breakpoint} lg={3}>
-          <Flip horizontal={horizontal} data={item}/>
-          </Grid>
-        ))}
-    </Grid>
-
-   
+      <Grid container justify="space-between">
+        {data &&
+          data.map((item, index) => (
+            <Grid
+              className={card}
+              key={index}
+              item
+              xs={12}
+              md={breakpoint}
+              lg={3}
+            >
+              <Flip horizontal={horizontal} data={item} />
+            </Grid>
+          ))}
+      </Grid>
     </>
   );
 };
@@ -40,4 +40,3 @@ CardData.propTypes = {
   data: PropTypes.array.isRequired,
 };
 export default CardData;
-
