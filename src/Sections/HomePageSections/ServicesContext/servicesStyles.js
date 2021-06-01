@@ -24,10 +24,9 @@ export const useStyles = makeStyles((theme) => ({
     border: `solid 1px ${whiteColor}`,
     transition: "all .25s linear",
     boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)",
-    
     "&:hover": {
       boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
-      border: `solid 1px  rgba(0,0,0,0)`,
+      border: `solid 1px ${Harlequin} `,
       transition: "all .25s linear",
     },
     cursor: "pointer",
@@ -41,6 +40,7 @@ export const useStyles = makeStyles((theme) => ({
    flexDirection:"column",
    padding:"1rem" , 
   },
+
   serviceHeading:{
     "& > h4":{
       color:Mirage
@@ -66,7 +66,7 @@ export const useStyles = makeStyles((theme) => ({
     alignItems:"center",
     flexDirection:"column",
     // padding:"1rem",
-    width:"300px",
+    width:"280px",
     // margin: "15px",
     marginTop:"0px",
     "&:hover": {
@@ -76,14 +76,17 @@ export const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("sm")]: {
       margin: "15px 10px",
-      marginTop:"0px"
+      // marginTop:"10px",
+      
+     
+    
     },
   },
   badge: {
     borderRadius: "5px",
     margin: "10px",
     [theme.breakpoints.down("sm")]: {
-      margin: "15px",
+      margin: "0px",
     },
 
   },
@@ -95,7 +98,10 @@ export const useStyles = makeStyles((theme) => ({
     margin: "15px",
     cursor:"pointer",
     zIndex: 1,
-    padding: "10px",  
+    padding: "10px",
+    [theme.breakpoints.down("sm")]: {
+      marginTop:"1rem"
+    },  
   },
   underlined: {
     position: "relative",

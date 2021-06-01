@@ -28,6 +28,7 @@ const Flip = ({ data }) => {
   //   Use this Card for Services Section pass data from its Parent Contanier to here
   return (
     <>
+    <div  onMouseEnter={() => setIsFlipped(true)}  onMouseLeave={() => setIsFlipped(false)}>
       <ReactCardFlip
         isFlipped={isFlipped}
         className={vertical}
@@ -36,13 +37,14 @@ const Flip = ({ data }) => {
         <Grid
           container
           className={VertSec}
-          onMouseEnter={() => setIsFlipped((prev) => !prev)}
+          onMouseEnter={() => setIsFlipped(true)}
         >
           <Grid
             item={12}
             style={{ backgroundColor: color }}
             className={supportSub}
           >
+         
             <CustomImage
               alt="icon"
               width="50px"
@@ -66,7 +68,7 @@ const Flip = ({ data }) => {
         <Grid
           container
           className={devSec}
-          onMouseLeave={() => setIsFlipped((prev) => !prev)}
+          onMouseLeave={() => setIsFlipped(false)}
         >
           <Grid item={12} classNamw={contentRight}>
             <Typography
@@ -99,6 +101,7 @@ const Flip = ({ data }) => {
           </Grid>
         </Grid>
       </ReactCardFlip>
+      </div>
     </>
   );
 };

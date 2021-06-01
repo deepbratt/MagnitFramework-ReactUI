@@ -94,14 +94,6 @@ fontWeight:300
     flexDirection: "column",
     justifyContent: "space-around",
     alignItems:"center" ,
-    "&:hover": {
-      border: `solid 1px ${Harlequin}`,
-      boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
-     
-    }, 
-   
- 
-
   },
   name : {
     padding:" 0rem 1rem",

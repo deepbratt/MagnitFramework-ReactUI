@@ -27,6 +27,7 @@ const PointBadge = ({ horizontal, data }) => {
 
     <>
       {horizontal === false ? (
+        <div  onMouseEnter={() => setFlipped(true)}  onMouseLeave={() => setFlipped(false)}>
         <ReactCardFlip
           isFlipped={isFlipped}
           className={vertical}
@@ -35,7 +36,7 @@ const PointBadge = ({ horizontal, data }) => {
         >
           <Grid
             className={VertSec}
-            onMouseEnter={() => setFlipped((prev) => !prev)}
+            onMouseEnter={() => setFlipped(true)}
           >
             <section style={{ backgroundColor: color }} className={supportSub}>
               <CustomImage
@@ -59,7 +60,7 @@ const PointBadge = ({ horizontal, data }) => {
           </Grid>
           <Grid
             className={contentRight}
-            onMouseLeave={() => setFlipped((prev) => !prev)}
+            onMouseLeave={() => setFlipped(false)}
           >
             <div style={{padding:"1rem"}}>
               <Typography
@@ -83,6 +84,7 @@ const PointBadge = ({ horizontal, data }) => {
             </div>
           </Grid>
         </ReactCardFlip>
+        </div>
       ) : (
         <Grid className={inline} flipDirection="horizontal">
           <Grid className={devSec}>
