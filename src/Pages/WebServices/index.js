@@ -30,8 +30,8 @@ import CustomImage from "../../Components/CustomImage";
 import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
 import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/OurWorkSectionPattern";
 
-  const { skyBlue, linearBackground,Ash } = Colors;
-
+const Services = () => {
+  const { BlueRibbon, linearBackground, Ash } = Colors;
 
   const breadCrumData = [
     {
@@ -43,7 +43,8 @@ import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/
       text: "Web Development Services",
     },
   ];
-  const { textColor, leftPattern, rightPattern, leftPatternGlance, rightPatternGlance  } = ServicesSectionStyles();
+
+  const { textColor, leftPattern, rightPattern } = ServicesSectionStyles();
 
   return (
     <CommentSection>
@@ -86,18 +87,17 @@ import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/
         </Section>
       </div>
       <Section backColor={Ash}>
-
-      <CustomTitle underlined={true} text={WhyHireSectionTitle} />
+        <CustomTitle underlined={true} text={WhyHireSectionTitle} />
 
         <PointList data={hireUsData} horizontal={true} lgBreakpoint={6} />
       </Section>
       <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
-          <GlanceSection
+        <GlanceSection
           title={Data.title}
           data={Data.arr}
           buttonText={Data.buttonText}
-          />
-        </Section>
+        />
+      </Section>
       <Section>
         <CustomTitle underlined={true} text={DoYouWant} />
         <span>
