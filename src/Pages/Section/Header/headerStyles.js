@@ -88,6 +88,7 @@ export const useStyles = makeStyles((theme) => ({
     // marginTop: "5px",
     textDecoration: "none",
     color: "black",
+    textTransform: "uppercase"
   },
   active: {
     color: blackColor,
