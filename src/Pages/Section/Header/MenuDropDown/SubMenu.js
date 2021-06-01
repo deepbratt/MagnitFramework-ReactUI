@@ -52,7 +52,7 @@ const Submenu = withStyles(submenuStyles)(
         >
           {/* <span style={{  textAlign: "left"}}  className={classes.title}>{title}</span> */}
           <Typography style={{  textAlign: "left"}}  className={classes.title} variant="caption">
-          {title}
+          {title.toUpperCase()}
           </Typography>
           <ChevronRight className={classes.moreArrow} />
         </MenuItem>
