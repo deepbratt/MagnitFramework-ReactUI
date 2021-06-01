@@ -86,7 +86,7 @@ const PointBadge = ({ horizontal, data }) => {
         </ReactCardFlip>
         </div>
       ) : (
-        <Grid className={inline} flipDirection="horizontal">
+        <Grid className={inline}>
           <Grid className={devSec}>
             <section style={{ backgroundColor: color }} className={supportSub}>
               <CustomImage

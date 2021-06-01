@@ -49,6 +49,7 @@ CustomTitle.propTypes = {
   color: PropTypes.string,
   subTitle: PropTypes.string,
   underlined: PropTypes.bool,
+  subTitleColor: PropTypes.string,
 };
 
 export default CustomTitle;
