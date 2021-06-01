@@ -17,38 +17,92 @@ export const useStyles = makeStyles((theme) => ({
   card: {
     display: "flex",
     margin: "0px",
+    height:"100%",
     flexDirection: "column",
-    border: `solid 1px ${whiteColor}`,
-    alignItems: "center",
-    transition: "all .25s linear",
-    boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)",
-    "&:hover": {
-      boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
-      border: `solid 1px ${Harlequin}`,
-      transition: "all .25s linear",
-    },
+    alignItems:"center",
+    justifyContent:"center",
+    // border: `solid 1px ${whiteColor}`,
+    // transition: "all .25s linear",
+    // boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)",
+    // "&:hover": {
+    //   boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
+    //   border: `solid 1px ${Harlequin} `,
+    //   transition: "all .25s linear",
+    // },
     cursor: "pointer",
   },
-  devSub: {
-    height: "120px",
-    width: "120px",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
+
   devSec: {
-    height: "120px",
+    height: "350px",
     display: "flex",
     alignItems: "center",
-    justifyContent: "center",
-    marginBottom: "30px",
+    justifyContent: "space-evenly",
+   flexDirection:"column",
+   padding:"1rem" , 
   },
+
   serviceHeading:{
     "& > h4":{
       color:Mirage
     } 
   },
+  supportSub: {
+    borderRadius: "5px",
+    height: "100px",
+    width: "100px",
+    padding:".8rem",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "flex-start",
+    [theme.breakpoints.down("sm")]: {
+      height: "80px",
+      width: "80px",
+    },
+  },
+  VertSec: {
+    height:"350px",
+    display: "flex",
+    justifyContent:"space-evenly" ,
+    alignItems:"center",
+    flexDirection:"column",
+    // padding:"1rem",
+    width:"280px",
+    // margin: "15px",
+    marginTop:"0px",
+    "&:hover": {
+      border: `solid 1px ${Harlequin}`,
+      boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
+      transition: "all .25s linear",
+    },
+    [theme.breakpoints.down("sm")]: {
+      margin: "15px 10px",
+      // marginTop:"10px",
+      
+     
+    
+    },
+  },
+  badge: {
+    borderRadius: "5px",
+    margin: "10px",
+    [theme.breakpoints.down("sm")]: {
+      margin: "0px",
+    },
 
+  },
+  vertical: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "end",
+    height: "100%",
+    margin: "15px",
+    cursor:"pointer",
+    zIndex: 1,
+    padding: "10px",
+    [theme.breakpoints.down("sm")]: {
+      marginTop:"1rem"
+    },  
+  },
   underlined: {
     position: "relative",
     zIndex: 1,
@@ -70,17 +124,15 @@ export const useStyles = makeStyles((theme) => ({
   },
   contentRight: {
     minWidth: "100%",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    "& > subtitle1" : {
-      color:Mirage,
-      fontWeight:600,
-    },
-   
-    "& > subtitle2" : {
-      color:darkSilver,
+    padding:"2px",
+  },
+  name : {
+    color:Mirage,
+    fontWeight:600,
+  },
+ 
+ detail : {
+    color:darkSilver,
 fontWeight:"normal"
-    },
   },
 }));

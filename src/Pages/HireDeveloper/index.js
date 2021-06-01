@@ -31,7 +31,9 @@ import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/
 import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
 
 const HireDeveloper = () => {
-  const { BlueRibbon, linearBackground, Ash } = Colors;
+
+  const { BlueRibbon, linearBackground,Ash } = Colors;
+
 
   const breadCrumData = [
     {

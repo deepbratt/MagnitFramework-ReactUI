@@ -91,7 +91,7 @@ export const footerText = {
         value: "Testimonials",
       },
       {
-        route: "/contactUs",
+        route: "/request-a-quote",
         value: "Request A Quote",
       },
     ],

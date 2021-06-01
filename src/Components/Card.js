@@ -1,64 +1,43 @@
 import React from "react";
 import { useStyles } from "../Sections/HomePageSections/ServicesContext/servicesStyles";
 import { Typography, CardContent, Grid } from "@material-ui/core";
+import PropTypes from "prop-types";
 import CustomImage from "./CustomImage";
 import ReadMore from "./ReadMore"
 import { NavLink } from "react-router-dom";
+import ReactCardFlip from 'react-card-flip';
+import Flip from "./Flip";
+import CustomTitle from "../Pages/Section/CustomTitle";
 
-const CardData = ({ data }) => {
+const CardData = ({ horizontal, data, lgBreakpoint=4, title  }) => {
   const classes = useStyles();
-  const { card, devSec, devSub, contentRight } = classes;
-  //   Use this Card for Services Section pass data from its Parent Contanier to here
+const { card, } = classes;
+  let breakpoint = 4;
+  if (horizontal) {
+    breakpoint = 6;
+  }
   return (
     <>
-      <Grid container justify={"space-between"}>
-        {data.map((text, index) => {
-          return (
-            <Grid
-              item
-              xs={12}
-              sm={12}
-              md={6}
-              lg={3}
-              key={index}
-              className={card}
-            >
-              <CardContent>
-                <section className={devSec}>
-                  <section
-                    style={{ backgroundColor: text.color }}
-                    className={devSub}
-                  >
-                    <CustomImage
-                      alt="icon"
-                      src={text.icon}
-                      style={{ filter: text.fill }}
-                    />
-                  </section>
-                </section>
-                <Grid className={contentRight}>
-                  <Typography
-                    color="textPrimary"
-                    variant="subtitle1"
-                    gutterBottom
-                  >
-                    {text.title}
-                  </Typography>
+    <Grid container justify="space-between">
+      {data &&
+        data.map((item, index) => (
+          <Grid className={card}  key={index} item xs={12} md={breakpoint} lg={3}>
+          <Flip horizontal={horizontal} data={item}/>
+          </Grid>
+        ))}
+    </Grid>
 
-                  <Typography variant="subtitle2" paragraph={true}>
-                  <ReadMore text={text.desc} maxLines={3} />
-                    <NavLink to={text.redirect} style={{ marginLeft: "10px", textDecoration: "none" }}>
-                      Learn More 
-                    </NavLink>
-                  </Typography>
-                </Grid>
-              </CardContent>
-            </Grid>
-          );
-        })}
-      </Grid>
+   
     </>
   );
 };
+CardData.defaultProps = {
+  horizontal: false,
+};
 
+CardData.propTypes = {
+  horizontal: PropTypes.bool,
+  data: PropTypes.array.isRequired,
+};
 export default CardData;
+

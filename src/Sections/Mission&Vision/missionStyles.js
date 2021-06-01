@@ -70,14 +70,15 @@ export const missionStyles = makeStyles((theme) => ({
   },
   leftPattern: {
     position: "absolute",
-    left: "0px",
-    top: "0px",
-    zIndex: 0,
+    left: "-119px",
+    top: "-49px",
+    zIndex: 1,
   },
   rightPattern: {
     position: "absolute",
-    right: "0px",
-    bottom: "0px",
+    right: "-110px",
+    bottom: "-50px",
+    zIndex: 1,
   },
   underlined: {
     width: "50%",

@@ -29,8 +29,9 @@ import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
 import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
 import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/OurWorkSectionPattern";
+
 const Services = () => {
-  const { Ash, linearBackground, BlueRibbon } = Colors;
+  const { BlueRibbon, linearBackground, Ash } = Colors;
 
   const breadCrumData = [
     {
@@ -42,7 +43,8 @@ const Services = () => {
       text: "Web Development Services",
     },
   ];
-  const { textColor, leftPattern, rightPattern, leftPatternGlance, rightPatternGlance  } = ServicesSectionStyles();
+
+  const { textColor, leftPattern, rightPattern } = ServicesSectionStyles();
 
   return (
     <CommentSection>
@@ -86,15 +88,16 @@ const Services = () => {
       </div>
       <Section backColor={Ash}>
         <CustomTitle underlined={true} text={WhyHireSectionTitle} />
+
         <PointList data={hireUsData} horizontal={true} lgBreakpoint={6} />
       </Section>
       <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
-          <GlanceSection
+        <GlanceSection
           title={Data.title}
           data={Data.arr}
           buttonText={Data.buttonText}
-          />
-        </Section>
+        />
+      </Section>
       <Section>
         <CustomTitle underlined={true} text={DoYouWant} />
         <span>
