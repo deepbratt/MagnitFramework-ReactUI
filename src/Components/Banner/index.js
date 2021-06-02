@@ -46,7 +46,7 @@ Banner.defaultProps = {
 
 Banner.propTypes = {
   backColor: PropTypes.string,
-  children: PropTypes.element,
+  // children: PropTypes.element,
   breadCrumb: PropTypes.element,
 };
 
