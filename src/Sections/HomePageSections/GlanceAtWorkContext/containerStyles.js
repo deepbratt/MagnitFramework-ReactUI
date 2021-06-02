@@ -45,6 +45,7 @@ export const useStyles = makeStyles((theme) => ({
     // paddingLeft: "20px",
     color: whiteColor,
     // padding: "20px",
+    textTransform:"uppercase"
   },
   leftPattern: {
     position: "absolute",

@@ -2,9 +2,9 @@ import { Grid } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import { NavLink } from "react-router-dom";
 import FooterStyle from "./style";
-import IconFB from "../../assets/images/icon-fb.png";
-import IconTwitter from "../../assets/images/icon-twitter.png";
-import IconLI from "../../assets/images/icon-linkedIn.png";
+import InstagramIcon from "@material-ui/icons/Instagram";
+import FacebookIcon from "@material-ui/icons/Facebook";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import Logo from "../../assets/Logo-white.png";
 import { footerText } from "../../Utils/Constants/Language";
 import CustomImage from "../../Components/CustomImage";
@@ -36,13 +36,13 @@ const Footer = () => {
 
             <div className={contact}>
               <NavLink to="/fb-link">
-                <CustomImage src={IconFB} alt="Facebook Icon" />
+                <FacebookIcon color="secondary" />
               </NavLink>
               <NavLink to="/twitter-link">
-                <CustomImage src={IconTwitter} alt="Twitter Icon" />
+                <InstagramIcon color="secondary" />
               </NavLink>
               <NavLink to="/li-link">
-                <CustomImage src={IconLI} alt="Linked Icon" />
+                <LinkedInIcon color="secondary" />
               </NavLink>
             </div>
           </div>

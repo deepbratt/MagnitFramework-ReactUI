@@ -41,8 +41,8 @@ const VideosData = [
   {
     id: 5,
     name: "Dev Singh",
-    project: "HomeDesign",
-    para: "We are very happy with the constant quality check of the product, the time-bound deliveries and the quick responsiveness of Magnit Team. We recommend them to anyone looking for a class-apart technology solution.",
+    project: "Raleigh Bikes",
+    para: "A popular firm selling bicycles needed to overcome the tradition of buying bikes from dealers. So, we created a ‘Design your Bike’ section on their website and marketed it through influencer marketing.",
     Img: defaultImage,
     Avatar: Avatar2,
     date: "28 June, 2021",
@@ -50,7 +50,7 @@ const VideosData = [
   {
     id: 6,
     name: "Mellinda Burns",
-    project: "Timecheck",
+    project: "eck",
     para: "It is a fantastic experience to work with Magnit. They take time to research your industry and really understand your market before they offer their solutions. They are very attentive to detail and go beyond the call to help you reach your goals.",
     Img: defaultImage,
     Avatar: Avatar2,
