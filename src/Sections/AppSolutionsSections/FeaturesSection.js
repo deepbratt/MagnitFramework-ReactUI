@@ -24,7 +24,7 @@ const FeaturesSection = () => {
         </Grid>
 
         <Grid className={left} item md={4} xs={12}>
-          <img src={featuresDataOne.image} alt="" />
+          <img lg={4} md={8} xs={12} src={featuresDataOne.image} alt="" />
         </Grid>
         <Grid style={{ display: "flex" }} item md={8} xs={12}>
           <FeaturesRow data={featuresDataOne.content} />
@@ -36,11 +36,11 @@ const FeaturesSection = () => {
           />
         </Grid>
         <Grid className={right} item md={4} xs={12}>
-          <img src={featuresDataTwo.image} alt="" />
+          <img lg={4} md={8} xs={12} src={featuresDataTwo.image} alt="" />
         </Grid>
 
         <Grid className={left} item md={4} xs={12}>
-          <img src={featuresDataThree.image} alt="" />
+          <img lg={4} md={8} xs={12} src={featuresDataThree.image} alt="" />
         </Grid>
         <Grid style={{ display: "flex" }} item md={8} xs={12}>
           <FeaturesRow data={featuresDataThree.content} />

@@ -60,6 +60,11 @@ export const SolutionsStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("md")]: {
       justifyContent: "center",
     },
+    "& > img": {
+      [theme.breakpoints.down("sm")]: {
+        maxHeight: "400px",
+      },
+    },
   },
   right: {
     display: "flex",
@@ -67,6 +72,11 @@ export const SolutionsStyles = makeStyles((theme) => ({
     flexDirection: "row-reverse",
     [theme.breakpoints.down("md")]: {
       justifyContent: "center",
+    },
+    "& > img": {
+      [theme.breakpoints.down("sm")]: {
+        maxHeight: "400px",
+      },
     },
   },
 }));
