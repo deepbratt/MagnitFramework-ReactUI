@@ -15,11 +15,11 @@ import BreadCrumb from "../../Components/BreadCrumb";
 import { BannerImage } from "../../Utils/Constants/Language/en/SolutionsPageData";
 import Banner from "../../Components/Banner";
 import CommentSection from "../../Components/CommentSection";
-import ServicesOffered from "../../Sections/HomePageSections/ServicesContext/Services";
 import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
 import CustomTitle from "../Section/CustomTitle"
 import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/OurWorkSectionPattern";
 import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
+import CardData from "../../Components/Card";
 
 const Services = () => {
   const { linearBackground, BlueRibbon,aliceBlue } = Colors;
@@ -55,7 +55,8 @@ const Services = () => {
 
         <Grid item xs={12}>
           <Section>
-          <ServicesOffered title={ServicesOfferedSection.title} servicesData={ServicesOfferedSection.values}/>
+          <CustomTitle text={ServicesOfferedSection.title} underlined={true}/>
+          <CardData data={ServicesOfferedSection.values}/>
           </Section>
         </Grid>
         <Section patterns={ourWorkSectionPatterns} backColor={aliceBlue}>
