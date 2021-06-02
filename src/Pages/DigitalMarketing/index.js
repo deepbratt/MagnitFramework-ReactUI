@@ -1,7 +1,7 @@
 import PointList from "../../Components/PointBadge/PointList";
 import Section from "../Section";
 import { Link } from "react-router-dom";
-import { Grid, Hidden, Typography } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import { hireUsData } from "./whyWorkwithUs";
 import { Colors } from "../../Theme/color.constants";
 import Banner from "../../Components/Banner";
@@ -86,6 +86,7 @@ const DigitalMarketing = () => {
 
       <Section patterns={ourWorkSectionPatterns} backColor={aliceBlue}>
         <CustomTitle text={WhyHireSectionTitle} underlined={true} />
+
         <PointList data={hireUsData} horizontal={true} lgBreakpoint={6} />
       </Section>
       <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>

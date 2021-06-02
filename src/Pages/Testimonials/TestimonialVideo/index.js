@@ -4,22 +4,20 @@ import {
   CardContent,
   CardMedia,
   Typography,
-  CardHeader,
   Card,
   Avatar,
 } from "@material-ui/core";
 import useStyles from "./style";
 import Rating from "@material-ui/lab/Rating";
 import VideosData from "../../../Utils/Constants/Language/en/TestimonialVideos";
+
 const VideoCard = ({ Img, detail, avatar, name, date }) => {
   const {
     cardRoot,
     cardImage,
-    avatarImg,
+
     cardTitle,
-    cardpara,
-    carddate,
-    header,
+
     rating,
     blogDetail,
   } = useStyles();

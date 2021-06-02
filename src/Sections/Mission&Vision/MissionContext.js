@@ -10,22 +10,27 @@ import {
 import Patten1 from "../../assets/AboutUs/vision1.png";
 import Patten2 from "../../assets/AboutUs/vision2.png";
 import CustomImage from "../../Components/CustomImage";
+import Section from "../../Pages/Section";
+import { Colors } from "../../Theme/color.constants";
 
 const MissionContext = () => {
   const { card, root, Icon, underlined, leftPattern, rightPattern } =
     missionStyles();
   const { firstTitle, secondTitle, missionText, visionText } = MidSection;
   const { mission, vision } = MainData;
+  const {skyBlue}= Colors;
   return (
     <>
+    <Section backColor={skyBlue}>
+    <CustomImage className={leftPattern} src={Patten1} alt="" />
+        <CustomImage className={rightPattern} src={Patten2} alt="" />
       <Grid
         container
         className={root}
         spacing={2}
         justify="center"
       >
-        <CustomImage className={leftPattern} src={Patten1} alt="" />
-        <CustomImage className={rightPattern} src={Patten2} alt="" />
+       
 
         <Grid style={{ zIndex: 1, display:"flex" }} item xs={11} md={5} lg={4}>
           <Card className={card}>
@@ -81,6 +86,7 @@ const MissionContext = () => {
           </Card>
         </Grid>
       </Grid>
+      </Section>
     </>
   );
 };

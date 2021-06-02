@@ -12,29 +12,18 @@ export const useStyles = makeStyles((theme) => ({
   cardSec: {
     display: "flex",
     width: "100%",
-    marginBottom: "40px",
+
     justifyContent: "space-evenly",
     flexFlow: "wrap",
   },
   card: {
     paddingTop: "20px",
-    // width: "25%",
+    width: "100%",
     background: whiteColor,
-    height: "fit-content",
     display: "flex",
     flexDirection: "column",
-    alignItems: "left",
     transition: "all .25s linear",
     boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
-
-    // [breakpoints.down("md")]: {
-    //   width: "70%",
-
-    // },
-
-    "& .MuiCardContent-root": {
-      padding: "0px",
-    },
   },
 
   devSec: {
@@ -48,8 +37,8 @@ export const useStyles = makeStyles((theme) => ({
   },
   cardContent: {
     // width: "100%",
-    display:"flex",
-    justifyContent:"center",
+    display: "flex",
+    justifyContent: "center",
     backgroundColor: Mariner,
     // paddingBottom: "12px",
     textAlign: "center",
@@ -57,5 +46,15 @@ export const useStyles = makeStyles((theme) => ({
     color: whiteColor,
     // padding: "20px",
   },
-
+  leftPattern: {
+    position: "absolute",
+    left: "-5%",
+    bottom: "-10%",
+    zIndex: 0,
+  },
+  rightPattern: {
+    position: "absolute",
+    right: "-10%",
+    top: "-10%",
+  },
 }));
