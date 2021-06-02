@@ -131,7 +131,7 @@ PointBadge.propTypes = {
   horizontal: PropTypes.bool,
   data: PropTypes.shape({
     color: PropTypes.string.isRequired,
-    icon: PropTypes.element,
+    // icon: PropTypes.element,
     title: PropTypes.string.isRequired,
     desc: PropTypes.string.isRequired,
   }),
