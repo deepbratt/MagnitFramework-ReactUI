@@ -18,7 +18,6 @@ const Flip = ({ data }) => {
     name,
     detail,
     supportSub,
-    contentRight,
     VertSec,
     badge,
   } = classes;
@@ -42,7 +41,7 @@ const Flip = ({ data }) => {
             onMouseEnter={() => setIsFlipped(true)}
           >
             <Grid
-              item={12}
+              item xs={12}
               style={{ backgroundColor: color }}
               className={supportSub}
             >
@@ -55,7 +54,7 @@ const Flip = ({ data }) => {
                 className={badge}
               />
             </Grid>
-            <Grid item={12}>
+            <Grid item xs={12}>
               <Typography
                 color="textPrimary"
                 variant="subtitle1"
@@ -119,8 +118,8 @@ Flip.propTypes = {
   horizontal: PropTypes.bool,
   data: PropTypes.shape({
     color: PropTypes.string.isRequired,
-    fill: PropTypes.string.isRequired,
-    icon: PropTypes.element,
+    fill: PropTypes.string,
+    // icon: PropTypes.element,
     title: PropTypes.string.isRequired,
     desc: PropTypes.string.isRequired,
     redirect: PropTypes.string.isRequired,

@@ -106,7 +106,7 @@ const CaseStudies = () => {
           {AwardSectionImages &&
             AwardSectionImages.map((image, index) => (
               <CustomImage
-                key={index}
+                key={index="awards"}
                 style={{ margin: "10px 40px", width: "130px", color: colors.Mirage }}
                 src={image}
                 alt={`client${index}`}
