@@ -52,7 +52,6 @@ export const useStyles = makeStyles((theme) => ({
     width: "100%",
     // marginBottom: "50px",
     textAlign: "center",
-    marginTop: "20px",
     marginBottom: "20px",
     color: darkSilver,
   

@@ -5,4 +5,4 @@ export const TrainingAndCertificationSectionTitle =
   "Training  And Certification";
 export const AwardSectionTitle = "Awards & Accreditations";
 export const FQASectionTitle = "Frequently asked question";
-export const ContactUsTitle = "Contact Us";
+export const ContactUsTitle = "Request a Quote";

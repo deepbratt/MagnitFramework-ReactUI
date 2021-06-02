@@ -5,7 +5,10 @@ import MissionContext from "../../Sections/Mission&Vision/MissionContext";
 import WhyUsContainer from "./WhyUsContainer";
 import { MainData } from "../../Utils/Constants/Language/AboutUsData";
 import {useStyles} from "../../Sections/MainComponent/mainStyles"
+import Section from "../Section";
+import { Colors } from "../../Theme/color.constants";
 const AboutUs = () => {
+  const {skyBlue}=Colors;
   const { heroImgsrc } = MainData;
   const {hero } = useStyles();
   const breadcrumbs = [

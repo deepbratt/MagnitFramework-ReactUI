@@ -65,4 +65,15 @@ export const useStyles = makeStyles((theme) => ({
   profileIcon: {
     width: "65px",
   },
+  leftPattern: {
+    position: "absolute",
+    left: "-5%",
+    bottom: "-10%",
+    zIndex: 0,
+  },
+  rightPattern: {
+    position: "absolute",
+    right: "-10%",
+    top: "-10%",
+  },
 }));
