@@ -9,6 +9,7 @@ const LayoutStyle = makeStyles((theme) => ({
     textAlign: "center",
     color: theme.palette.text.secondary,
     margin: "0px",
+    position: "relative",
   },
 }));
 
