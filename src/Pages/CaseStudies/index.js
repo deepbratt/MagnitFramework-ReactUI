@@ -4,6 +4,7 @@ import { withRouter } from "react-router";
 // import Banner from "../../Components/Banner";
 import Section from "../Section";
 // import useStyles from "./InterActiveSection/useStyles";
+import {useStyles} from "../../Sections/MainComponent/mainStyles"
 import businessPeople from "../../assets/CaseStudies/businessPeople.png";
 import { caseStudies } from "../../Utils/Constants/Language";
 import Image1 from "../../assets/images/awardAccredationSection/image 2.png";
@@ -20,7 +21,7 @@ import FaqNonInteractive from '../../Sections/FaqNonInteractive/FaqNonInteractiv
 import CustomTitle from "../Section/CustomTitle"
 
 const CaseStudies = () => {
-  // const classes = useStyles();
+  const {img} = useStyles();
   const AwardSectionImages = [Image1, Image2, Image3, Image4, Image5];
   const colors =Colors
   const faqData = caseStudies.faqs
@@ -51,6 +52,7 @@ const CaseStudies = () => {
           card={false}
           breadcrumbData={breadcrumbData}
           width="850px"
+          class={img}
         />
       </Grid>
       <Grid item xs={12}>
