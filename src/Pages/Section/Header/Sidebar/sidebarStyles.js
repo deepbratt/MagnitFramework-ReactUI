@@ -71,4 +71,13 @@ export const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
   },
+  fabBtn:{
+    position: "absolute", 
+    bottom: "0px",
+    zIndex: 3, 
+    right: "0px",
+    marginRight: "25px",
+    marginBottom: "120px",
+    boxShadow: "none"
+  }
 }));

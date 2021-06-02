@@ -8,7 +8,7 @@ import { useStyles, THEME } from "./sidebarStyles";
 import { Logo } from "../../../../Components/Hero/Images";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import CustomImage from "../../../../Components/CustomImage";
-
+import Fab from "@material-ui/core/Fab";
 const SideBar = () => {
   const classes = useStyles();
   const {
@@ -16,11 +16,11 @@ const SideBar = () => {
     drawer,
     drawerHeader,
     closeIcon,
-    menuIcon,
     active,
     link,
     logo,
     list,
+    fabBtn
   } = classes;
   const routes = Object.values(pageRoutes);
   const [open, setOpen] = useState(false);
@@ -31,6 +31,7 @@ const SideBar = () => {
         className={drawer}
         variant="temporary"
         anchor="left"
+        transitionDuration={300}
         open={open}
         classes={{
           paper: root,
@@ -77,13 +78,21 @@ const SideBar = () => {
           })}
         </List>
       </Drawer>
-      <MenuIcon
-        className={menuIcon}
+      <Fab
+          className={fabBtn}
+          color="primary"
+          aria-label="open"
+          size="large"
+        >
+           <MenuIcon
+           style={{fontSize: "30px"}}
         onClick={() => {
           setOpen(!open);
         }}
       />
+        </Fab>
     </>
+    
   );
 };
 
