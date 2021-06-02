@@ -73,11 +73,10 @@ export const useStyles = makeStyles((theme) => ({
   },
   fabBtn:{
     position: "absolute", 
-    bottom: "0px",
+    top: "auto",
     zIndex: 3, 
     right: "0px",
-    marginRight: "25px",
-    marginBottom: "120px",
+    margin: "15px 15px 0px 0px",
     boxShadow: "none"
   }
 }));

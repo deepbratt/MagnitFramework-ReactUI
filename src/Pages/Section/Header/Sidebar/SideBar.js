@@ -31,7 +31,6 @@ const SideBar = () => {
         className={drawer}
         variant="temporary"
         anchor="left"
-        transitionDuration={300}
         open={open}
         classes={{
           paper: root,
@@ -82,7 +81,7 @@ const SideBar = () => {
           className={fabBtn}
           color="primary"
           aria-label="open"
-          size="large"
+          size="medium"
         >
            <MenuIcon
            style={{fontSize: "30px"}}
