@@ -12,6 +12,7 @@ import {
 } from "../../Utils/Constants/Language/en/SectionHeaders";
 import { Colors } from "../../Theme/color.constants";
 import { LocationIcon, PhoneIcon } from "../../assets/icons/icon.constants";
+import {useStyles} from "../../Sections/MainComponent/mainStyles"
 import { FactCardText } from "../../Utils/Constants/Language/en/ContactUsPageText";
 import ContactUsForm from "../../Components/ContactUsForm";
 import {
@@ -37,6 +38,7 @@ const ContactUs = () => {
     rosePinkColor,
     Luigi,
   } = Colors;
+  const {hero} = useStyles()
 
   const { awardSection, imageContainer, label, section, factCard, location } =
     ContactUsStyles();
@@ -64,6 +66,7 @@ const ContactUs = () => {
           card={false}
           breadcrumbData={breadcrumbs}
           width="600px"
+          class={hero}
         />
       </Grid>
       <Section>

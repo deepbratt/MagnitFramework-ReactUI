@@ -10,7 +10,7 @@ const AboutMainSection = (props) => {
   const { title, paragraph } = MainData;
 
   const classes = useStyles();
-  const { root, cardSec, breadCrumbStyles, paragraphStyle, hero, card } =
+  const { root, cardSec, breadCrumbStyles, paragraphStyle, card } =
     classes;
   return (
     <>
@@ -21,7 +21,7 @@ const AboutMainSection = (props) => {
               <BreadCrumb links={props.breadcrumbData} />
             </div>
             <CardContent className={cardSec}>
-              <CustomImage width={props.width} className={hero} alt="hero" src={props.hero} />
+              <CustomImage width={props.width} className={props.class} alt="hero" src={props.hero}/>
             </CardContent>
           </Card>
           {props.card === true ? (

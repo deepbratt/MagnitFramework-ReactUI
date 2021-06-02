@@ -4,9 +4,10 @@ import Main from "../../Sections/MainComponent/AboutMainSection";
 import MissionContext from "../../Sections/Mission&Vision/MissionContext";
 import WhyUsContainer from "./WhyUsContainer";
 import { MainData } from "../../Utils/Constants/Language/AboutUsData";
+import {useStyles} from "../../Sections/MainComponent/mainStyles"
 const AboutUs = () => {
   const { heroImgsrc } = MainData;
-  // const { underlined, root, button } = FoundersyStyles();
+  const {hero } = useStyles();
   const breadcrumbs = [
     {
       path: "/",
@@ -22,7 +23,7 @@ const AboutUs = () => {
     <>
       <Grid container>
         <Grid item lg={12} md={12} xs={12}>
-          <Main width="650px" hero={heroImgsrc} card={true} breadcrumbData={breadcrumbs} />
+          <Main width="650px" hero={heroImgsrc} class={hero} card={true} breadcrumbData={breadcrumbs} />
         </Grid>
         <Grid item lg={12} md={12} xs={12}>
           <MissionContext />
