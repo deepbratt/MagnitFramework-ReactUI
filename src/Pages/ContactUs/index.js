@@ -112,7 +112,7 @@ const ContactUs = () => {
                         </Typography>
                         {addressSection.address.map((location, index) => (
                           <Typography
-                            key={index}
+                            key={index="address"}
                             align="left"
                             gutterBottom
                             variant="caption"
@@ -131,7 +131,7 @@ const ContactUs = () => {
                         </Typography>
                         {talkToUsSection.numbers.map((num, index) => (
                           <Typography
-                            key={index}
+                            key={index+"talktous"}
                             align="left"
                             gutterBottom
                             variant="caption"

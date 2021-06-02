@@ -69,7 +69,7 @@ const Footer = () => {
             </Typography>
             {talkToUsSection.numbers.map((num, index) => (
               <Typography
-                key={index}
+                key={index+"talktous"}
                 align="left"
                 gutterBottom
                 variant="caption"
@@ -87,7 +87,7 @@ const Footer = () => {
             </Typography>
             {addressSection.address.map((location, index) => (
               <Typography
-                key={index}
+                key={index+"addressSection"}
                 align="left"
                 gutterBottom
                 variant="caption"

@@ -11,7 +11,7 @@ import { SolutionsStyles } from "../../Pages/AppSolutionsPage/SolutionsStyles";
 import CustomTitle from "../../Pages/Section/CustomTitle";
 
 const FeaturesSection = () => {
-  const { img, left, right } = SolutionsStyles();
+  const { left, right } = SolutionsStyles();
   return (
     <>
       <Grid container spacing={5}>
