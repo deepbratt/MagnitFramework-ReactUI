@@ -14,9 +14,7 @@ import Image2 from "../../assets/images/awardAccredationSection/image 3.png";
 import Image3 from "../../assets/images/awardAccredationSection/image 4.png";
 import Image4 from "../../assets/images/awardAccredationSection/image 5.png";
 import Image5 from "../../assets/images/awardAccredationSection/image 6.png";
-// import CardComponent from "../../Components/CardComponent";
 import { cards } from "./cardData";
-// import CardSlyder from "../../Components/CardSlider";
 import CustomTitle from "../../Pages/Section/CustomTitle";
 import startQuote from "../../assets/images/cards/startQuote.png";
 import endQuote from "../../assets/images/cards/EndingQuoteBlue.png";
@@ -30,7 +28,6 @@ import {
   TrainingAndCertificationSectionTitle,
   WhatDoClientSaySectionTitle,
 } from "./constants";
-// import ReviewSlider from "../../Components/ReviewSlider";
 import { trainingAndCertificationText as TCData } from "../../Utils/Constants/Language";
 import FirstColumn from "../../Components/QuoteCard/FirstColumn";
 import SecondColumn from "../../Components/QuoteCard/SecondColumn";
@@ -43,40 +40,19 @@ import CustomImage from "../../Components/CustomImage";
 import ReviewSlider from "../../Components/ReviewSlider";
 import { ServicesData } from "../../Utils/Constants/Language/en/ServicesText";
 import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
-import api from "../../Utils/Constants/api";
-import axios from "axios";
-import { useCancelToken } from "../../Utils/CustomHooks/useCancelToken";
+import {
+  SolutionsSectionHeaders,
+  SolutionsSectionContent,
+} from "../../Utils/Constants/Language/en/SolutionsText";
+import CardData from "../../Components/Card";
 export const AwardSectionImages = [Image1, Image2, Image3, Image4, Image5];
 
 const Home = (props) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { leftRoot, rightRoot, leftPattern, rightPattern } = HomeStyles();
-  // const { createNewToken, isCancel } = useCancelToken();
-
-  // const {
-  //   // sectionBackgroundColors,
-  //   // factCards,
-  //   glanceSectionBackground,
-  // } = Colors;
-  // const { peach, seaGreen, skyBlue, violet, purple, blue } = factCards;
-  // const { trainingAndCertification } = sectionBackgroundColors;
-
-  // prop for training and certification
   const rootClasses = [rightRoot, leftRoot, rightRoot, leftRoot];
 
-  const {
-    // sectionBackgroundColors, factCards,
-    Mirage,
-    BlueRibbon,
-  } = Colors;
-  // const { peach, seaGreen, skyBlue, violet, purple, blue } = factCards;
-  // const { trainingAndCertification } = sectionBackgroundColors;
-
-  // const cardArr = [
-  //   <CardSlyder cardData={cards} />,
-  //   <CardSlyder cardData={cards} />,
-  // ];
-
+  const { Mirage, BlueRibbon } = Colors;
   const WhyUsSlides = [
     <>
       <Hidden mdDown>
@@ -200,29 +176,27 @@ const Home = (props) => {
       </Grid>
       <Grid item md={12} xs={12}>
         <Section>
-          <ServicesOffered
-            title={ServicesSectionTitle}
-            servicesData={ServicesData}
-          />
+          <CustomTitle underlined={true} text={ServicesSectionTitle} />
+          <CardData data={ServicesData} />
         </Section>
       </Grid>
       <Grid item md={12} xs={12}>
         <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
-          <Solutions />
+          <Solutions
+            titles={SolutionsSectionHeaders}
+            content={SolutionsSectionContent}
+          />
         </Section>
       </Grid>
-      <Grid item md={12} xs={12}>
+      <Grid item xs={12}>
         <PartnerContext />
       </Grid>
       <Grid item md={12} xs={12}>
         <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
           <GlanceSection
-            image1={Data.image1}
-            image2={Data.image2}
-            image3={Data.image3}
-            subtitleOne={Data.subtitleOne}
-            subtitleTwo={Data.subtitleTwo}
-            subtitleThree={Data.subtitleThree}
+            title={Data.title}
+            data={Data.arr}
+            buttonText={Data.buttonText}
           />
         </Section>
       </Grid>

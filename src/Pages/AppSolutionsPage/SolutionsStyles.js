@@ -1,8 +1,8 @@
 import { makeStyles } from "@material-ui/core/styles";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
-import {Colors} from "../../Theme/color.constants"
+import { Colors } from "../../Theme/color.constants";
 const breakpoints = createBreakpoints({});
-const {Harlequin} = Colors
+const { Harlequin } = Colors;
 export const SolutionsStyles = makeStyles((theme) => ({
   card: {
     height: "125px",
@@ -12,23 +12,23 @@ export const SolutionsStyles = makeStyles((theme) => ({
   },
   supportSub: {
     borderRadius: "5px",
-    height: "110px",
-    width: "120px",
+    maxWidth: "120px",
+    minHeight: "120px",
+    maxHeight: "120px",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    
   },
-  imgSection:{
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
+  imgSection: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
-  img:{
-      width: "250px",
-      [breakpoints.down("sm")]: {
-        width: "170px",
-      },
+  img: {
+    width: "250px",
+    [breakpoints.down("sm")]: {
+      width: "170px",
+    },
   },
   underlined: {
     position: "relative",
@@ -53,5 +53,20 @@ export const SolutionsStyles = makeStyles((theme) => ({
     position: "absolute",
     top: "20px",
     left: "50px",
+  },
+  left: {
+    display: "flex",
+    justifyContent: "flex-start",
+    [theme.breakpoints.down("md")]: {
+      justifyContent: "center",
+    },
+  },
+  right: {
+    display: "flex",
+    justifyContent: "flex-end",
+    flexDirection: "row-reverse",
+    [theme.breakpoints.down("md")]: {
+      justifyContent: "center",
+    },
   },
 }));

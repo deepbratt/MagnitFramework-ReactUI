@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 // import dataText, { FullTimeHiring, HiringOption } from './constant';
 export const TabText = ({ data }) => {
   const { title, desc, dataText } = data;
-  const { detail, bulletText, textDiv, trialBtn } = OptionTabStyles();
+  const { detail, bulletText, textDiv } = OptionTabStyles();
   return (
     <Grid style={{ textAlign: "left" }}>
       <Typography variant="h2">{title}</Typography>
@@ -18,7 +18,7 @@ export const TabText = ({ data }) => {
 
       {dataText.map((a) => {
         return (
-          <Grid xs={12} className={textDiv} key={a.id}>
+          <Grid item xs={12} className={textDiv} key={a.id}>
             <Grid>
               <img
                 src={vector}
@@ -26,7 +26,7 @@ export const TabText = ({ data }) => {
                 style={{ marginRight: ".4rem", width: "19px", height: "19px" }}
               />
             </Grid>
-            <Grid xs={11}>
+            <Grid item xs={11}>
               <Typography variant="button" className={bulletText}>
                 {a.text}
               </Typography>

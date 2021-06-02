@@ -1,6 +1,5 @@
-
 import Section from "../../Pages/Section";
-import { Avatar, } from "@material-ui/core";
+import { Avatar } from "@material-ui/core";
 import { Colors } from "../../Theme/color.constants";
 import StarFishPattern from "../../assets/patterns/starfishBlue.png";
 import StarFishPinkPattern from "../../assets/patterns/leftStarfish.png";
@@ -15,7 +14,7 @@ import smallDot from "../../assets/patterns/smalldot.png";
 import SquareDottedPattern from "../../assets/patterns/dotsPattern.png";
 import ReviewSlider from "../ReviewSlider";
 import SectionStyles from "./style";
-import {Grid } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import Avatar1 from "../../assets/services/Avatar1.png";
 import Avatar2 from "../../assets/services/Avatar2.png";
 import Avatar3 from "../../assets/services/Avatar3.png";
@@ -23,14 +22,14 @@ import Avatar4 from "../../assets/services/Avatar4.png";
 import Avatar5 from "../../assets/services/Avatar5.png";
 import Avatar6 from "../../assets/services/Avatar6.png";
 
-const CommentSection = ({children}) => {
+const CommentSection = ({ children }) => {
   const { aliceBlue } = Colors;
   const {
     root,
     // background,
-    
+
     reviewSlider,
-   
+
     leftStarFishPattern,
     pinkDotPattern,
     yellowDotPattern,
@@ -47,14 +46,13 @@ const CommentSection = ({children}) => {
     avatar6,
     squareDotsPattern,
     commaPattern,
-    yellowCommaPattern
+    yellowCommaPattern,
   } = SectionStyles();
   return (
-    <Grid xs={12} className={root}  >
-    {children}
+    <Grid item xs={12} className={root}>
+      {children}
       <Section backColor={aliceBlue}>
         <div className={reviewSlider}>
-      
           <Avatar alt="" src={Avatar1} className={avatar1} />
           <Avatar alt="" src={Avatar2} className={avatar2} />
           <Avatar alt="" src={Avatar3} className={avatar3} />
@@ -65,69 +63,49 @@ const CommentSection = ({children}) => {
             className={squareDotsPattern}
             src={SquareDottedPattern}
             alt=""
-            srcset=""
+            srcSet=""
           />
-            <img
+          <img
             className={yellowCommaPattern}
             src={yellowComma}
             alt=""
-            srcset=""
+            srcSet=""
           />
-              <img
-            className={commaPattern}
-            src={comma}
-            alt=""
-            srcset=""
-          />
-          <img
-            className={pinkDotPattern}
-            src={pinkDot}
-            alt=""
-            srcset=""
-          />
-           <img
-            className={yellowDotPattern}
-            src={yellowDot}
-            alt=""
-            srcset=""
-          />
+          <img className={commaPattern} src={comma} alt="" srcSet="" />
+          <img className={pinkDotPattern} src={pinkDot} alt="" srcSet="" />
+          <img className={yellowDotPattern} src={yellowDot} alt="" srcSet="" />
           <img
             className={miniYellowPattern}
             src={miniYellow}
             alt=""
-            srcset=""
-          /> 
-          <img
-            className={smallDotPattern}
-            src={smallDot}
-            alt=""
-            srcset=""
-          /> 
+            srcSet=""
+          />
+          <img className={smallDotPattern} src={smallDot} alt="" srcSet="" />
           <img
             className={leftStarFishPattern}
             src={StarFishPinkPattern}
             alt=""
-            srcset=""
+            srcSet=""
           />
           <img
             className={rightStarFishPattern}
             src={StarFishPattern}
             alt=""
-            srcset=""
+            srcSet=""
           />
           <img
             className={leftDottedPattern}
             src={DottedPattern}
             alt=""
-            srcset=""
+            srcSet=""
           />
           <img
             className={rightDottedPattern}
             src={TopDottedPattern}
             alt=""
-            srcset=""
+            srcSet=""
           />
-          <ReviewSlider />
+          <ReviewSlider showArrows={false} />
         </div>
       </Section>
     </Grid>

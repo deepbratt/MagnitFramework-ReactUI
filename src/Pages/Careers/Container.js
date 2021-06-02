@@ -7,6 +7,7 @@ import Section from "../Section";
 import { Data, Array } from "../../Utils/Constants/Language/en/CareersData";
 import PointList from "../../Components/PointBadge/PointList";
 import CustomTitle from "../Section/CustomTitle";
+
 const CareerContainer = () => {
   return (
     <>
@@ -16,7 +17,7 @@ const CareerContainer = () => {
         </Grid>
         <Grid item lg={12} md={12} xs={12}>
           <Section>
-          <CustomTitle text={Data.title} underlined={true}/>
+            <CustomTitle text={Data.title} underlined={true} />
             <PointList lgBreakpoint={3} data={Array} />
           </Section>
         </Grid>

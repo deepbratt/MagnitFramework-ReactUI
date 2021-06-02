@@ -22,7 +22,6 @@ const Home = lazy(() =>import("../Pages/Home/index"));
 const Testimonials = lazy(() =>import("../Pages/Testimonials"));
 const Career = lazy(() =>import("../Pages/Careers/Container"));
 const AppSolutions = lazy(() =>import("../Pages/AppSolutionsPage/Container"));
-
 const OurBlogs = lazy(() =>import("../Pages/OurBlogs"));
 const Quote = lazy(() =>import("../Pages/ContactUs/index"));
 const HireDeveloper = lazy(() =>import("../Pages/HireDeveloper"));

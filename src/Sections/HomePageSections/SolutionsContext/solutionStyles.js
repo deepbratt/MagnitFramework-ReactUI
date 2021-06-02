@@ -1,10 +1,8 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
-import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 import { Colors } from "../../../Theme/color.constants";
 
 const { BlueRibbon, whiteColor } = Colors;
-const breakpoints = createBreakpoints({});
 
 export const THEME = createMuiTheme({
   // overrides: {
@@ -48,6 +46,7 @@ export const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    justifyContent: "center",
     transition: "all .25s linear",
     borderRadius: "5px",
     boxShadow: "0px 0px 0px 0px rgba(0, 0, 0, 0)",
@@ -65,5 +64,16 @@ export const useStyles = makeStyles((theme) => ({
   },
   profileIcon: {
     width: "65px",
+  },
+  leftPattern: {
+    position: "absolute",
+    left: "-5%",
+    bottom: "-10%",
+    zIndex: 0,
+  },
+  rightPattern: {
+    position: "absolute",
+    right: "-10%",
+    top: "-10%",
   },
 }));

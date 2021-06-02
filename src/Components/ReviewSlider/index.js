@@ -7,8 +7,8 @@ import { Grid } from "@material-ui/core";
 import { reviewSliderText } from "../../Utils/Constants/Language";
 import CustomImage from "../CustomImage";
 
-const slideArr = reviewSliderText.map((a) => {
-  return <ReviewCard cardData={a} />;
+const slideArr = reviewSliderText.map((a, index) => {
+  return <ReviewCard key={index} cardData={a} />;
 });
 
 const ReviewSlider = ({ slides, showArrows, showDots, indicatorsPosition }) => {
