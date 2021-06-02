@@ -176,10 +176,8 @@ const Home = (props) => {
       </Grid>
       <Grid item md={12} xs={12}>
         <Section>
-        <CustomTitle underlined={true} text={ServicesSectionTitle} />
-          <CardData 
-            data={ServicesData}
-          />
+          <CustomTitle underlined={true} text={ServicesSectionTitle} />
+          <CardData data={ServicesData} />
         </Section>
       </Grid>
       <Grid item md={12} xs={12}>

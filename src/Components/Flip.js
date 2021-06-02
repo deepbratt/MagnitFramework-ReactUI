@@ -71,7 +71,7 @@ const Flip = ({ data }) => {
             className={devSec}
             onMouseLeave={() => setIsFlipped(false)}
           >
-            <Grid item={12} classNamw={contentRight}>
+            <Grid item={12} className={contentRight}>
               <Typography
                 color="textPrimary"
                 variant="subtitle1"

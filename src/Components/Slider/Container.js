@@ -3,18 +3,31 @@ import { useStyles } from "./sliderStyles";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Slider from "./Slider";
-import { Data, array, Img1,Img2,Img3} from "../../Utils/Constants/Language/en/SliderText";
-const { headingLineOne, headingLineTwo, headingLineFirstSlide, headingLineSecondSlide,headingLineThirdSlide, buttonText } = Data;
+import {
+  Data,
+  array,
+  Img1,
+  Img2,
+  Img3,
+} from "../../Utils/Constants/Language/en/SliderText";
+const {
+  headingLineOne,
+  headingLineTwo,
+  headingLineFirstSlide,
+  headingLineSecondSlide,
+  headingLineThirdSlide,
+  buttonText,
+} = Data;
 const slideArr = [
   <Slider
-  headingOne={headingLineOne}
-  headingTwo={headingLineTwo}
-  headingThree={headingLineFirstSlide}
-  text={buttonText}
-  data={array}
-  Img={Img1}
-/>,
-  
+    headingOne={headingLineOne}
+    headingTwo={headingLineTwo}
+    headingThree={headingLineFirstSlide}
+    text={buttonText}
+    data={array}
+    Img={Img1}
+  />,
+
   <Slider
     headingOne={headingLineOne}
     headingTwo={headingLineTwo}
@@ -30,15 +43,14 @@ const slideArr = [
     text={buttonText}
     data={array}
     Img={Img3}
- 
   />,
 ];
-const Container = ( props) => {
+const Container = (props) => {
   const classes = useStyles();
-  const { slide } = classes
-  const show = props.indicator
-  const slides = props.slides
-  console.log(show)
+  const { slide } = classes;
+  const show = props.indicator;
+  const slides = props.slides;
+  console.log(show);
   return (
     <Carousel
       className={slide}
