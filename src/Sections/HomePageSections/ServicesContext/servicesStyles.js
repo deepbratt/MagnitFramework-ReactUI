@@ -21,14 +21,14 @@ export const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    // border: `solid 1px ${whiteColor}`,
-    // transition: "all .25s linear",
-    // boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)",
-    // "&:hover": {
-    //   boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
-    //   border: `solid 1px ${Harlequin} `,
-    //   transition: "all .25s linear",
-    // },
+    border: `solid 1px ${whiteColor}`,
+    transition: "all .25s linear",
+    boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)",
+    "&:hover": {
+      boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
+      border: `solid 1px ${Harlequin} `,
+      transition: "all .25s linear",
+    },
     cursor: "pointer",
   },
 
@@ -38,20 +38,15 @@ export const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "space-evenly",
     flexDirection: "column",
-    padding: "1rem",
+    padding: ".5rem 1rem",
   },
 
   serviceHeading: {
     "& > h4": {
       color: Mirage,
     },
-  },
-  supportSub: {
-    borderRadius: "5px",
-    height: "100px",
     width: "100px",
     padding: ".8rem",
-    display: "flex",
     justifyContent: "center",
     alignItems: "flex-start",
     [theme.breakpoints.down("sm")]: {
@@ -69,21 +64,14 @@ export const useStyles = makeStyles((theme) => ({
     width: "280px",
     // margin: "15px",
     marginTop: "0px",
-    "&:hover": {
-      border: `solid 1px ${Harlequin}`,
-      boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
-      transition: "all .25s linear",
-    },
+    // "&:hover": {
+    //   border: `solid 1px ${Harlequin}`,
+    //   boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
+    //   transition: "all .25s linear",
+    // },
     [theme.breakpoints.down("sm")]: {
       margin: "15px 10px",
       // marginTop:"10px",
-    },
-  },
-  badge: {
-    borderRadius: "5px",
-    margin: "10px",
-    [theme.breakpoints.down("sm")]: {
-      margin: "0px",
     },
   },
   vertical: {
@@ -91,7 +79,6 @@ export const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "end",
     height: "100%",
-    margin: "15px",
     cursor: "pointer",
     zIndex: 1,
     padding: "10px",

@@ -18,9 +18,10 @@ import { DoYouWant } from "../WebServices/constants";
 import Breakpoints from "../../Theme/theme.breakpoints";
 import CustomTitle from "../../Pages/Section/CustomTitle";
 import { Colors } from "../../Theme/color.constants";
+import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/OurWorkSectionPattern";
 const Solutions = () => {
   const { root } = ServicesSectionStyles();
-  const { MoonWhite, Ash } = Colors;
+  const { MoonWhite, aliceBlue, Ash } = Colors;
   return (
     <>
       <CommentSection>
@@ -42,6 +43,27 @@ const Solutions = () => {
             </Grid>
           </Section>
           <Section backColor={Ash}>
+            <CustomTitle underlined={true} text={benefitsHeading} />
+            <PointList data={benefitsData} horizontal={true} lgBreakpoint={6} />
+          </Section>
+          <Grid item lg={12} md={12} xs={12}>
+            <Section>
+              <CustomTitle underlined={true} text={DoYouWant} />
+              <span>
+                <CustomButton
+                  variant="contained"
+                  size={Breakpoints()}
+                  color="primary"
+                  component={Link}
+                  to="/request-a-quote"
+                >
+                  Request a Quote
+                </CustomButton>
+              </span>
+            </Section>
+          </Grid>
+
+          <Section patterns={ourWorkSectionPatterns} backColor={aliceBlue}>
             <CustomTitle underlined={true} text={benefitsHeading} />
             <PointList data={benefitsData} horizontal={true} lgBreakpoint={6} />
           </Section>

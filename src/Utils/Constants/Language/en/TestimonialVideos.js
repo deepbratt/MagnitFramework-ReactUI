@@ -50,7 +50,7 @@ const VideosData = [
   {
     id: 6,
     name: "Mellinda Burns",
-    project: "Timecheck",
+    project: "eck",
     para: "It is a fantastic experience to work with Magnit. They take time to research your industry and really understand your market before they offer their solutions. They are very attentive to detail and go beyond the call to help you reach your goals.",
     Img: defaultImage,
     Avatar: Avatar2,

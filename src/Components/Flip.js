@@ -71,7 +71,7 @@ const Flip = ({ data }) => {
             className={devSec}
             onMouseLeave={() => setIsFlipped(false)}
           >
-            <Grid item={12} className={contentRight}>
+            <div>
               <Typography
                 color="textPrimary"
                 variant="subtitle1"
@@ -80,7 +80,8 @@ const Flip = ({ data }) => {
               >
                 {title}
               </Typography>
-
+            </div>
+            <div>
               <Typography
                 variant="subtitle2"
                 className={detail}
@@ -88,9 +89,10 @@ const Flip = ({ data }) => {
               >
                 {desc}
               </Typography>
-            </Grid>
-            <Grid item={12}>
+            </div>
+            <div>
               <CustomButton size="small">
+                {" "}
                 <NavLink
                   to={redirect}
                   style={{
@@ -102,7 +104,7 @@ const Flip = ({ data }) => {
                   Read More
                 </NavLink>
               </CustomButton>
-            </Grid>
+            </div>
           </Grid>
         </ReactCardFlip>
       </div>
