@@ -61,9 +61,8 @@ const FooterStyle = makeStyles((theme) => ({
     alignItems: "center",
     alignContent: "center",
 
-    "& > a > img": {
-      height: "100%",
-      padding: "0 15px 18px 0",
+    "& > *": {
+      padding: "0 10px 15px 0",
     },
   },
   sectionBorder: {

@@ -12,7 +12,6 @@ import {
 import { NavLink } from "react-router-dom";
 import theme from "../../../Theme/GlobalFontSizes";
 import { MuiThemeProvider } from "@material-ui/core/styles";
-import SideBar from "./Sidebar/SideBar";
 import { Hidden } from "@material-ui/core";
 import { Logo } from "../../../Components/Hero/Images";
 import CustomButton from "../../../Components/CustomButton";
@@ -43,10 +42,6 @@ const Header = (props) => {
           <section>
             <CustomImage className={logo} alt="logo" src={Logo} />
           </section>
-          {/* Header SideBar */}
-          <Hidden mdUp>
-            <SideBar />
-          </Hidden>
           <Hidden smDown>
             <List className={list}>
               <MuiThemeProvider theme={theme}>

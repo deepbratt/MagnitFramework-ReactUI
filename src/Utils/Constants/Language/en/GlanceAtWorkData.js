@@ -19,7 +19,7 @@ export const Data = {
     },
     {
       image: Img3,
-      subtitle: "Timecheck",
+      subtitle: "TIMECHECK",
       paragraph:
         "Problem: In the booming Edtech industry, Timecheck allows students to feed in their schedules so that they don’t miss a deadline and get help from professionals in subjects they don’t understand.Solution: it needed to be more than just a quick deadline notification. We embedded a precise time tracking system so that all members can see how much time is left till the deadline.  The fear of time left got more engagement than just showing the deadline.",
     },

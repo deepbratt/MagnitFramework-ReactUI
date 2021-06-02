@@ -27,20 +27,19 @@ export const useStyles = makeStyles((theme) => ({
     textAlign: "left",
   },
   supportSub: {
+    display: "flex",
     borderRadius: "5px",
     height: "120px",
     width: "120px",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
   },
-  para:{
+  para: {
+    display: "flex",
+    flexDirection: "column",
+   
     textAlign: "left",
     [breakpoints.down("sm")]: {
       marginBottom: "20px",
       textAlign: "center",
     },
-  }
+  },
 }));
-
-
