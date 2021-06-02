@@ -1,6 +1,5 @@
 import Grid from "@material-ui/core/Grid";
 import { connect } from "react-redux";
-import ServicesOffered from "../../Sections/HomePageSections/ServicesContext/Services";
 import Slide from "../../Components/Slider/Container";
 import Solutions from "../../Sections/HomePageSections/SolutionsContext/Solutions";
 import PartnerContext from "../../Sections/HomePageSections/PartnerWithUsContext/Maincontainer";
@@ -81,7 +80,7 @@ const Home = (props) => {
         {cards &&
           cards.map((data, index) => (
             <Grid
-              key={index}
+              key={index+"2nd"}
               item
               xs={12}
               md={6}
@@ -103,7 +102,7 @@ const Home = (props) => {
         {cards &&
           cards.map((data, index) => (
             <Grid
-              key={index}
+              key={index+"3rd"}
               item
               xs={12}
               md={6}
@@ -211,7 +210,7 @@ const Home = (props) => {
           </Grid>
           {TCData &&
             TCData.filter((card, idx) => idx < 4).map((card, index) => (
-              <Grid key={index} item xs={12}>
+              <Grid key={index+"4th"} item xs={12}>
                 <CertificationList
                   toRight={index % 2 === 0 ? false : true}
                   root={rootClasses[index]}

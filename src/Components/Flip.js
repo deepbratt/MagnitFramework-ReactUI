@@ -18,7 +18,6 @@ const Flip = ({ data }) => {
     name,
     detail,
     supportSub,
-    contentRight,
     VertSec,
     badge,
   } = classes;

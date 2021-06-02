@@ -16,12 +16,11 @@ const CustomTitle = (props) => {
   const { underlinedStyles, sectionHeader, subHeader } = LayoutStyle();
   const borderBottom = props.underlined;
   return (
-    <div className={sectionHeader} {...props}>
+    <div className={sectionHeader}>
       <Typography
         color="textPrimary"
         style={{ color: props.color, fontSize: Size(), lineHeight: 1.8 }}
         variant="h2"
-        {...props}
       >
         <span className={borderBottom ? underlinedStyles : null}>
           {props.text}

@@ -5,11 +5,11 @@ import StarFishPinkPattern from "../../assets/patterns/starfish-pink.png";
 import { Colors } from "../../Theme/color.constants";
 import CustomImage from "../CustomImage";
 const Banner = ({
-  backColor,
+  // backColor,
   image,
   breadCrumb,
   children,
-  backgroundPattern,
+  // backgroundPattern,
 }) => {
   const { linearBackground } = Colors;
   const { root, imageWrapper, content, patternPosition } = BannerStyles();

@@ -10,6 +10,7 @@ const ReviewCard = ({ cardData }) => {
   const { grid, root, avatar, content, large } = ReviewSliderStyles();
   return (
     <Grid
+      item
       className={grid}
       container
       xs={12}
