@@ -21,7 +21,7 @@ const CardData = ({ horizontal, data, lgBreakpoint = 4, title }) => {
               key={index}
               item
               xs={12}
-              md={breakpoint}
+              md={6}
               lg={3}
             >
               <Flip horizontal={horizontal} data={item} />
