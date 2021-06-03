@@ -15,6 +15,14 @@ export const useStyles = makeStyles((theme) => ({
     backgroundImage: `linear-gradient(${mainSlide},white)`,
     position: "relative",
   },
+  img: {
+    [breakpoints.down("md")]: {
+      width: "600px",
+    },
+    [breakpoints.down("xs")]: {
+      width: "550px",
+    },
+  },
   breadCrumbStyles: {
     position: "absolute",
     top: "20px",
@@ -59,43 +67,5 @@ export const useStyles = makeStyles((theme) => ({
       width: "350px",
     },
   },
-  underlined: {
-    position: "relative",
-    zIndex: 1,
-    marginLeft: "10px",
-    "&:after ": {
-      position: "absolute",
-      height: "17px",
-      content: '""',
-      zIndex: -1,
-      width: "49px",
-      right: 0,
-      color: Mirage,
-      backgroundColor: Harlequin,
-      bottom: "5px",
-      [breakpoints.down("sm")]: {
-        height: "11px",
-        width: "30px",
-      },
-    },
-  },
-  textUnderlined: {
-    position: "relative",
-    zIndex: 1,
-    marginLeft: "10px",
-    "&:after ": {
-      position: "absolute",
-      height: "17px",
-      content: '""',
-      zIndex: -1,
-      width: "100px",
-      right: 0,
-      backgroundColor: Harlequin,
-      bottom: "5px",
-      [breakpoints.down("sm")]: {
-        height: "11px",
-        width: "70px",
-      },
-    },
-  },
+ 
 }));

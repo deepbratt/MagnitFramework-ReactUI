@@ -103,7 +103,7 @@ const ReviewSlider = ({ slides, showArrows, showDots, indicatorsPosition }) => {
           <Grid
             container
             justify="center"
-            key={i}
+            key={i+"2nd"}
             elevation={0}
             style={{
               margin: 0,
