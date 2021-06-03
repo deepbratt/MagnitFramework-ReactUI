@@ -1,7 +1,8 @@
 import { CircularProgress, Grid, Typography } from '@material-ui/core'
 import React,{useEffect,useState} from 'react'
 import { Animate } from 'react-move'
-
+import CustomImage from "../CustomImage"
+import dot from "../../assets/dot.svg"
 export const Loader=({color,styles})=>{
     const [startLoading, handleLoading] = useState(0);
 
@@ -23,8 +24,12 @@ return(
     alignItems: "center",
     height: "inherit",
         }}>
-             <CircularProgress value={value} style={{color:{color}}}></CircularProgress>
-             <Typography variant={styles} color="textPrimary">Loading...</Typography>
+           
+            <CustomImage
+                alt="icon"
+                src={dot}
+               value={startLoading}
+              />
         </Grid>
            
         );
