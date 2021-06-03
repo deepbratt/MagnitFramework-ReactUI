@@ -29,6 +29,7 @@ const Flip = ({ data }) => {
       <div
         onMouseEnter={() => setIsFlipped(true)}
         onMouseLeave={() => setIsFlipped(false)}
+        style={{flexGrow:1}}
       >
         <ReactCardFlip
           isFlipped={isFlipped}
@@ -40,8 +41,8 @@ const Flip = ({ data }) => {
             className={VertSec}
             onMouseEnter={() => setIsFlipped(true)}
           >
-            <Grid
-              item xs={12}
+            <div
+             
               style={{ backgroundColor: color }}
               className={supportSub}
             >
@@ -53,8 +54,8 @@ const Flip = ({ data }) => {
                 style={{ filter: fill }}
                 className={badge}
               />
-            </Grid>
-            <Grid item xs={12}>
+            </div>
+            <div>
               <Typography
                 color="textPrimary"
                 variant="subtitle1"
@@ -63,7 +64,7 @@ const Flip = ({ data }) => {
               >
                 {title}
               </Typography>
-            </Grid>
+            </div>
           </Grid>
           <Grid
             container
