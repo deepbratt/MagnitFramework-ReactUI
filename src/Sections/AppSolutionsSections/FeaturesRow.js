@@ -7,7 +7,7 @@ import CustomImage from "../../Components/CustomImage";
 const FeaturesRow = (props) => {
   const { flexDirection, data } = props;
 
-  const { cardSec, para } = useStyles();
+  const { para } = useStyles();
   const { supportSub } = SolutionsStyles();
 
   return (

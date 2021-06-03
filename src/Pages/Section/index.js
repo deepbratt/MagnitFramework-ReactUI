@@ -15,7 +15,7 @@ const Section = ({ children, backColor, startQuote, endQuote, patterns }) => {
 
   return (
     <div className={root} style={{ backgroundColor: backColor }}>
-      {patterns && patterns.map((pattern, index) => pattern.image)}
+      {patterns && patterns.map((pattern, index) => <span key={index}>{pattern.image}</span>)}
       <div className={content}>
         {startQuote && (
           <>
