@@ -6,7 +6,6 @@ import { ThemeProvider } from "@material-ui/styles";
 import { DarkTheme, NightTheme } from "./Theme/index";
 import Route from "./routes"
 import { Loader } from "./Components/loader";
-import { CircularProgress, Grid, Typography } from "@material-ui/core";
 
 import { Colors } from "../src/Theme/color.constants";
 const { Harlequin } = Colors;

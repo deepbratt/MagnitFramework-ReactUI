@@ -15,7 +15,7 @@ const CardData = ({ horizontal, data, lgBreakpoint = 4, title }) => {
     <>
       <Grid container justify="space-between">
         {data &&
-          data.map((item, index) => (
+          data.map((items, index) => (
             <Grid
               className={card}
               key={index}
@@ -24,7 +24,7 @@ const CardData = ({ horizontal, data, lgBreakpoint = 4, title }) => {
               md={6}
               lg={3}
             >
-              <Flip horizontal={horizontal} data={item} />
+              <Flip horizontal={horizontal} data={items} />
             </Grid>
           ))}
       </Grid>

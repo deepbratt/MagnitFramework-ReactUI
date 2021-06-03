@@ -21,12 +21,12 @@ const Container = (props) => {
             text={props.title}
           />
         </Grid>
-        {props.data.map((item, index) => (
+        {props.data.map((items, index) => (
           <Grid item xs={12} lg={4} md={4} key={"ourWork-" + index}>
             <Card style={{ height: "100%" }}>
-              <CustomImage src={item.image} style={{ width: "100%" }} />
+              <CustomImage src={items.image} style={{ width: "100%" }} />
               <CardContent className={cardContent}>
-                <Typography variant="h5" >{item.subtitle}</Typography>
+                <Typography variant="h5" >{items.subtitle}</Typography>
               </CardContent>
             </Card>
           </Grid>

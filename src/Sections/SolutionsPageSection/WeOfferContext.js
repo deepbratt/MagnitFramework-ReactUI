@@ -7,7 +7,7 @@ import CustomImage from "../../Components/CustomImage";
 
 const WeOfferContext = ({ data }) => {
   const classes = useStyles();
-  const { root, cardSec, card, devSec, button } = classes;
+  const { root, cardSec, card, devSec } = classes;
   const { DoveGray } = Colors;
   return (
     <>

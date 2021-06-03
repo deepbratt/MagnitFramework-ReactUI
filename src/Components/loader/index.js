@@ -7,7 +7,7 @@ export const Loader=({color,styles})=>{
 
     useEffect(() => {
             handleLoading(false)
-    })
+    },[startLoading])
     return (
            <Animate
         start={()=>({value: startLoading})}

@@ -7,13 +7,14 @@ import Section from "../Section";
 import { Data, Array } from "../../Utils/Constants/Language/en/CareersData";
 import PointList from "../../Components/PointBadge/PointList";
 import CustomTitle from "../Section/CustomTitle";
-
+import {useStyles} from "../../Sections/MainComponent/mainStyles"
 const CareerContainer = () => {
+  const {hero} = useStyles()
   return (
     <>
       <Grid container>
         <Grid item lg={12} md={12} xs={12}>
-          <Main width="550px" hero={banner} />
+          <Main width="550px" hero={banner} class={hero} />
         </Grid>
         <Grid item lg={12} md={12} xs={12}>
           <Section>

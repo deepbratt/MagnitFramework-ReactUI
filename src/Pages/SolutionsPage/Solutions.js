@@ -12,7 +12,6 @@ import {
 } from "../../Utils/Constants/Language/en/SolutionsPageData";
 import Section from "../Section";
 import CustomButton from "../../Components/CustomButton";
-import Breakpoints from "../../Theme/theme.breakpoints";
 import { Link } from "react-router-dom";
 import { DoYouWant } from "../WebServices/constants";
 import PointList from "../../Components/PointBadge/PointList";

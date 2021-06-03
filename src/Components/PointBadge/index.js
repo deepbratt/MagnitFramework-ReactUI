@@ -88,7 +88,7 @@ const PointBadge = ({ horizontal, data }) => {
         </ReactCardFlip>
         </div>
       ) : (
-        <Grid className={inline} flipDirection="horizontal">
+        <Grid className={inline}>
           <Grid className={devSec}>
             <section style={{ backgroundColor: color }} className={supportSub}>
               <CustomImage
@@ -131,7 +131,7 @@ PointBadge.propTypes = {
   horizontal: PropTypes.bool,
   data: PropTypes.shape({
     color: PropTypes.string.isRequired,
-    icon: PropTypes.element,
+    // icon: PropTypes.element,
     title: PropTypes.string.isRequired,
     desc: PropTypes.string.isRequired,
   }),
