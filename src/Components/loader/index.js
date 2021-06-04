@@ -2,7 +2,7 @@ import { CircularProgress, Grid, Typography } from '@material-ui/core'
 import React,{useEffect,useState} from 'react'
 import { Animate } from 'react-move'
 import CustomImage from "../CustomImage"
-import loader from "../../assets/loader.svg"
+import Magnit from "../../assets/Magnit.svg"
 export const Loader=({color,styles})=>{
     const [startLoading, handleLoading] = useState(0);
 
@@ -27,7 +27,7 @@ return(
         
             <CustomImage
                 alt="icon"
-                src={loader}
+                src={Magnit}
                value={startLoading}
               />
              
