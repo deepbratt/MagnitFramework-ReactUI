@@ -3,16 +3,21 @@ import ReviewCard from "./ReviewCard";
 import ReviewSliderStyles from "./style";
 import prev from "../../assets/services/prev.png";
 import next from "../../assets/services/next.png";
-import { Grid } from "@material-ui/core";
+import { Grid, useMediaQuery, useTheme } from "@material-ui/core";
 import { reviewSliderText } from "../../Utils/Constants/Language";
 import CustomImage from "../CustomImage";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const slideArr = reviewSliderText.map((a, index) => {
   return <ReviewCard key={index} cardData={a} />;
 });
 
-const ReviewSlider = ({ slides, showArrows, showDots, indicatorsPosition }) => {
+const ReviewSlider = ({ slides, showArrows, showDots, indicatorsPosition, itemsPerSlide }) => {
   const visible = !showDots ? "hidden" : "visible";
+  const theme = useTheme();
+  const isMDDown = useMediaQuery(theme.breakpoints.up('md'));
   const indicatorStyles = {
     background: "rgba(98, 173, 244, 1)",
     width: 16,
@@ -22,7 +27,7 @@ const ReviewSlider = ({ slides, showArrows, showDots, indicatorsPosition }) => {
     margin: "0px 8px",
     visibility: visible,
   };
-  const { nextBtn, prevBtn, carouselRoot } = ReviewSliderStyles();
+  const { nextBtn, prevBtn, carouselRoot, sliderRoot } = ReviewSliderStyles();
   const customDots = (onClickHandler, isSelected, index, label) => {
     if (isSelected) {
       return (
@@ -55,68 +60,27 @@ const ReviewSlider = ({ slides, showArrows, showDots, indicatorsPosition }) => {
   };
 
   return (
-    <Carousel
-      renderArrowPrev={(onClickHandler, hasPrev, label) =>
-        hasPrev && (
-          <button
-            type="button"
-            onClick={onClickHandler}
-            title={label}
-            className={prevBtn}
-          >
-            <CustomImage
-              src={prev}
-              alt="prev"
-              style={{ width: "19px", height: "16px", marginTop: "0.1rem" }}
-            />
-          </button>
-        )
-      }
-      renderArrowNext={(onClickHandler, hasPrev, label) =>
-        hasPrev && (
-          <button
-            type="button"
-            onClick={onClickHandler}
-            title={label}
-            className={nextBtn}
-          >
-            <CustomImage
-              src={next}
-              alt="next"
-              style={{ width: "19px", height: "16px", marginTop: "0.1rem" }}
-            />
-          </button>
-        )
-      }
-      autoPlay
-      showStatus={false}
-      interval={5500}
-      showArrows={showArrows}
-      infiniteLoop={true}
-      transitionTime={500}
-      renderIndicator={customDots}
-      className={indicatorsPosition ? carouselRoot : null}
-      showThumbs={false}
-    >
-      {slides.map((slide, i) => {
+    <Slider dots={true}
+    infinite={true}
+    speed= {500}
+    slidesToShow= {isMDDown ? itemsPerSlide: 1}
+    slidesToScroll={1} arrows={false} className={sliderRoot}>
+                {slides.map((slide, i) => {
         return (
           <Grid
             container
             justify="center"
             key={i+"2nd"}
-            elevation={0}
             style={{
-              margin: 0,
-              padding: 0,
               display: "flex",
-              backgroundColor: "transparent",
+              height:"100%"
             }}
           >
             {slide}
           </Grid>
         );
       })}
-    </Carousel>
+    </Slider>
   );
 };
 
@@ -124,6 +88,7 @@ ReviewSlider.defaultProps = {
   slides: slideArr,
   showArrows: true,
   showDots: true,
+  itemsPerSlide:1
 };
 
 export default ReviewSlider;
