@@ -63,6 +63,7 @@ export const SolutionsStyles = makeStyles((theme) => ({
     "& > img": {
       [theme.breakpoints.down("sm")]: {
         maxHeight: "400px",
+        marginTop: "30px"
       },
     },
   },
@@ -79,4 +80,15 @@ export const SolutionsStyles = makeStyles((theme) => ({
       },
     },
   },
+  reversed:{
+    display: "flex",
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column-reverse"
+    },
+  },
+  container:{
+    [theme.breakpoints.down("sm")]: {
+      marginLeft: "-12px"
+    },
+  }
 }));
