@@ -96,6 +96,24 @@ const ReviewSliderStyles = makeStyles((theme) => ({
     },
   },
 
+  sliderRoot:{
+    display:"flex",
+    justifyContent:"Center",
+    '& > .slick-list':{
+      display:"flex !important",
+      '& > .slick-track':{
+        display:"flex !important",
+        "& > .slick-slide":{
+          "& > div":{
+            display:"flex !important",
+            height:"100%",
+            justifyContent:"Center"
+          }
+        }
+      }
+    }
+  },
+
 }));
 
 export default ReviewSliderStyles;

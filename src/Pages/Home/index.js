@@ -53,74 +53,11 @@ const Home = (props) => {
   const rootClasses = [rightRoot, leftRoot, rightRoot, leftRoot];
 
   const { Mirage, BlueRibbon } = Colors;
-  const WhyUsSlides = [
-    <>
-      <Hidden mdDown>
-        {cards &&
-          cards.map((data, index) => (
-            <Grid
-              key={index}
-              item
-              xs={12}
-              md={6}
-              lg={4}
-              style={{ display: "flex" }}
-            >
+  const WhyUsSlides = cards.map((data, index) => (
+              <Grid key={index} style={{display:"flex", flexDirection:"column", height:"100%"}} alignItems="center">
               <QuoteCard cardData={data} />
-            </Grid>
-          ))}
-      </Hidden>
-      <Hidden lgUp>
-        <Grid item>
-          <SecondColumn />
-        </Grid>
-      </Hidden>
-    </>,
-    <>
-      <Hidden mdDown>
-        {cards &&
-          cards.map((data, index) => (
-            <Grid
-              key={index+"2nd"}
-              item
-              xs={12}
-              md={6}
-              lg={4}
-              style={{ display: "flex" }}
-            >
-              <QuoteCard cardData={data} />
-            </Grid>
-          ))}
-      </Hidden>
-      <Hidden lgUp>
-        <Grid item>
-          <ThirdColumn />
-        </Grid>
-      </Hidden>
-    </>,
-    <>
-      <Hidden mdDown>
-        {cards &&
-          cards.map((data, index) => (
-            <Grid
-              key={index+"3rd"}
-              item
-              xs={12}
-              md={6}
-              lg={4}
-              style={{ display: "flex" }}
-            >
-              <QuoteCard cardData={data} />
-            </Grid>
-          ))}
-      </Hidden>
-      <Hidden lgUp>
-        <Grid item>
-          <FirstColumn />
-        </Grid>
-      </Hidden>
-    </>,
-  ];
+              </Grid>
+          ))
 
   const ourWorkSectionPatterns = [
     {
@@ -245,6 +182,7 @@ const Home = (props) => {
           showArrows={false}
           showDots={false}
           slides={WhyUsSlides}
+          itemsPerSlide={3}
         />
 
         <CustomButton>See More</CustomButton>
