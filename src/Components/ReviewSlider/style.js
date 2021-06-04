@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 import { Colors } from "../../Theme/color.constants";
 const breakpoints = createBreakpoints({});
-const {Mirage}=Colors;
+const {Mirage,lightBlue}=Colors;
 const ReviewSliderStyles = makeStyles((theme) => ({
   grid: {
     margin: "80px 0",
@@ -111,7 +111,17 @@ const ReviewSliderStyles = makeStyles((theme) => ({
           }
         }
       }
-    }
+    },
+    "& > .slick-dots li button:before":{
+      fontSize: "17px",
+      color: lightBlue,
+      opacity: "10"
+    },
+    "& > .slick-dots li.slick-active button:before":{
+      fontSize: "25px",
+      opacity: "10"
+    },
+   
   },
 
 }));

@@ -121,5 +121,8 @@ export const Colors = {
   vividCerlean: "#00ABEF",
   atomsphere: "#0095E1",
   carmine: "#0071CA",
-  peaFowl: "#0044AE"
+  peaFowl: "#0044AE",
+
+  // Review Slider
+  lightBlue: "#62ADF4"
 };
