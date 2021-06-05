@@ -121,10 +121,6 @@ const ReviewSliderStyles = makeStyles((theme) => ({
       fontSize: "25px",
       opacity: "10"
     },
-    "& > .slick-dots":{
-      bottom: "0px",
-      marginBottom: "15px"
-    }
    
   },
 
