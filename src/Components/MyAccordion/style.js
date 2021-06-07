@@ -3,7 +3,7 @@ import { Colors } from "../../Theme/color.constants";
 const {Mirage,darkSilver}= Colors
 const LayoutStyle = makeStyles((theme) => ({
   root: {
-    paddingTop: "80px",
+    paddingTop: "35px",
     // "& > h6": {
     //   [theme.breakpoints.down("md")]: {
     //     fontSize: "0.625rem"

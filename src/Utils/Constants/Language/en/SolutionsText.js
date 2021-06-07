@@ -25,7 +25,7 @@ export const SolutionsSectionContent = [
     image: classifiedIcon,
   },
   {
-    title: "Croud funding",
+    title: "Crowd Funding",
     image: fundIcon,
   },
   {
@@ -37,7 +37,7 @@ export const SolutionsSectionContent = [
     image: deliveryIcon,
   },
   {
-    title: "Job portal",
+    title: "Job Portal",
     image: portalIcon,
   },
   {
