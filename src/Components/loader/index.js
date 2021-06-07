@@ -31,7 +31,7 @@ return(
 
             <CustomImage
           
-            width="250px"
+            width="200px"
                 alt="icon"
                 src={Mag}
               />
