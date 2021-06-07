@@ -88,10 +88,16 @@ export const useStyles = makeStyles((theme) => ({
     // marginTop: "5px",
     textDecoration: "none",
     color: "black",
-    textTransform: "uppercase"
+    textTransform: "uppercase",
   },
   active: {
     color: blackColor,
+  },
+  events:{
+      textDecoration: "none",
+      color: "black",
+      textTransform: "uppercase",
+      pointerEvents: "none"
   },
   logo: {
     width: "9rem",

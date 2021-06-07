@@ -4,6 +4,7 @@ import { Animate } from 'react-move'
 import CustomImage from "../CustomImage"
 import Mag from "../../assets/Mag.svg"
 import Bounce from 'react-reveal/Bounce';
+
 export const Loader=({color,styles})=>{
     const [startLoading, handleLoading] = useState(0);
 
@@ -27,6 +28,7 @@ return(
    
         }}>
         <Bounce duration={3000}>
+
             <CustomImage
           
             width="200px"
@@ -34,6 +36,7 @@ return(
                 src={Mag}
               />
              </Bounce>
+
         </Grid>
            
         );
