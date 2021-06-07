@@ -29,7 +29,7 @@ return(
         <Bounce duration={3000}>
             <CustomImage
           
-            width="250px"
+            width="200px"
                 alt="icon"
                 src={Mag}
               />
