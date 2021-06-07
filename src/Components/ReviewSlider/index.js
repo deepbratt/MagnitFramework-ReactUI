@@ -1,4 +1,3 @@
-import { Carousel } from "react-responsive-carousel";
 import ReviewCard from "./ReviewCard";
 import ReviewSliderStyles from "./style";
 // import prev from "../../assets/services/prev.png";
@@ -21,7 +20,7 @@ const ReviewSlider = ({
   // indicatorsPosition,
   itemsPerSlide,
 }) => {
-  const visible = !showDots ? "hidden" : "visible";
+  // const visible = !showDots ? "hidden" : "visible";
   const theme = useTheme();
   const isMDUp = useMediaQuery(theme.breakpoints.up("md"));
   // const indicatorStyles = {

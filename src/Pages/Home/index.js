@@ -28,9 +28,6 @@ import {
   WhatDoClientSaySectionTitle,
 } from "./constants";
 import { trainingAndCertificationText as TCData } from "../../Utils/Constants/Language";
-import FirstColumn from "../../Components/QuoteCard/FirstColumn";
-import SecondColumn from "../../Components/QuoteCard/SecondColumn";
-import ThirdColumn from "../../Components/QuoteCard/ThirdColumn";
 import CertificationList from "../../Components/certificationList";
 import HomeStyles from "./style";
 import QuoteCard from "../../Components/QuoteCard";
@@ -44,7 +41,6 @@ import {
   SolutionsSectionContent,
 } from "../../Utils/Constants/Language/en/SolutionsText";
 import CardData from "../../Components/Card";
-import ServicesOffered from "../../Sections/HomePageSections/ServicesContext/Services";
 export const AwardSectionImages = [Image1, Image2, Image3, Image4, Image5];
 
 const Home = (props) => {
@@ -54,7 +50,7 @@ const Home = (props) => {
 
   const { Mirage, BlueRibbon } = Colors;
   const WhyUsSlides = cards.map((data, index) => (
-              <Grid key={index} style={{display:"flex", flexDirection:"column", height:"100%"}} alignItems="center">
+              <Grid container key={index} style={{display:"flex", flexDirection:"column", height:"100%"}} alignItems="center">
               <QuoteCard cardData={data} />
               </Grid>
           ))
