@@ -30,7 +30,7 @@ import {
 
 const Header = (props) => {
   const classes = useStyles();
-  const { logo, list, appbarsolid, link, root, active } = classes;
+  const { logo, list, appbarsolid, link, root, active, events } = classes;
   const navigated = () => {
     props.resetLoader();
   };
@@ -62,9 +62,10 @@ const Header = (props) => {
                 name={service}
                 data={servicesData}
                 sub={subMenu}
+                Class={link}
               />
-              <Menus name={insight} data={InsightsData} />
-              <Menus name={company} data={CompanyData} />
+              <Menus Class={events} name={insight} data={InsightsData} />
+              <Menus Class={events} name={company} data={CompanyData} />
               <ListItem>
                 <NavLink
                   to="request-a-quote"
