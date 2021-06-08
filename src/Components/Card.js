@@ -7,10 +7,10 @@ import Flip from "./Flip";
 const CardData = ({ horizontal, data, lgBreakpoint = 4, title }) => {
   const classes = useStyles();
   const { card } = classes;
-  let breakpoint = 4;
-  if (horizontal) {
-    breakpoint = 6;
-  }
+  // let breakpoint = 4;
+  // if (horizontal) {
+  //   breakpoint = 6;
+  // }
   return (
     <>
       <Grid container justify="space-between">
