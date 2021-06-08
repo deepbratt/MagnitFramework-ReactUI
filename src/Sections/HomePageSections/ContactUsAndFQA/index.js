@@ -31,7 +31,7 @@ const ContactUsAndFQA = () => {
               </CardContent>
             </Grid>
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid style={{paddingTop: "20px"}} item xs={12} md={6}>
             <Section>
               <CustomTitle style={{marginBottom: "0px"}} text={FQASectionTitle} underlined={true}/>
               <MyAccordion questions={QuestionData} />
