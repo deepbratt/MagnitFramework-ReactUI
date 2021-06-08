@@ -69,7 +69,7 @@ const Footer = () => {
               {navigation.title}
             </Typography>
             {navigation.links.map((link, idx) => (
-              <NavLink key={idx} to={link.route}>
+              <NavLink key={idx+"nav"} to={link.route}>
                 <Typography align="left" gutterBottom variant="caption">
                   {link.value}
                 </Typography>

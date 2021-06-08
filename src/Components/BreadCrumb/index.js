@@ -11,7 +11,7 @@ const BreadCrumb = ({ links }) => {
         aria-label="breadcrumb"
       >
         {links.map((link, index) => (
-          <Link key={index} color="inherit" href={link.path}>
+          <Link key={index+"breadcrumbs"} color="inherit" href={link.path}>
             <Typography color="textPrimary" variant="h6">{link.text}</Typography>
           </Link>
         ))}

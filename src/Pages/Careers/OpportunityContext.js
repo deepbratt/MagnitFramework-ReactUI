@@ -34,10 +34,10 @@ const OpportunityContext = () => {
           {/* <section className={cardSec}> */}
           {DataArray.map((data, index) => {
             return (
-              <Grid item xs={12} sm={6} md={4} key={index} style={{display:"flex"}}>
+              <Grid item xs={12} sm={6} md={4} key={index+"opportuinity"} style={{display:"flex"}}>
                 <Card className={card}>
                   <Grid>
-                    <Grid xs={12}>
+                    <Grid item xs={12}>
                       <Typography color="textPrimary" variant="h5">
                         {data.title}
                       </Typography>
@@ -52,7 +52,7 @@ const OpportunityContext = () => {
                         </Typography>
                       </div>
                     </Grid>
-                    <Grid xs={12}>
+                    <Grid item xs={12}>
                       <Typography
                         color="textSecondary"
                         variant="body1"
@@ -67,7 +67,7 @@ const OpportunityContext = () => {
                     </Grid>
                   </Grid>
 
-                  <Grid xs={12}>
+                  <Grid item xs={12}>
                     <CustomButton>{data.buttonText}</CustomButton>
                   </Grid>
                 </Card>

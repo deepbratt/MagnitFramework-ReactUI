@@ -11,7 +11,7 @@ const AboutUsNumberContext = () => {
         <Grid container justify="center" direction="row" alignItems="stretch">
           {Stats &&
             Stats.map((stats, index) => (
-              <Grid key={index} item xs={12} md={5} lg={3} style={{display:"flex"}} >
+              <Grid key={index+"stats"} item xs={12} md={5} lg={3} style={{display:"flex"}} >
                 <FactCard
                   icon={stats.icon}
                   title={stats.title}

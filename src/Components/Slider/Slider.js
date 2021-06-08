@@ -52,7 +52,7 @@ const Slider = ({
               key={"slider-listitem-" + index}
               className={listItem}
             >
-              <Typography key={index} variant="h4">
+              <Typography variant="h4">
                 <CheckIcon className={value === "LIGHT" ? tick : tickSub} />
                 {text}
               </Typography>

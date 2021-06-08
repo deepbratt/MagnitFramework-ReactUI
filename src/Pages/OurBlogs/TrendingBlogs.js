@@ -57,7 +57,7 @@ const TrendingBlogs = ({ featureImage, cardData }) => {
             {body &&
               body.map((para, index) => (
                 <Typography
-                  key={index}
+                  key={index+"blogstrending"}
                   variant="body2"
                   gutterBottom
                   component="p"

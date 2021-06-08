@@ -18,7 +18,7 @@ const CardData = ({ horizontal, data, lgBreakpoint = 4, title }) => {
           data.map((items, index) => (
             <Grid
               className={card}
-              key={index}
+              key={index+"cardflip"}
               item
               xs={12}
               md={6}
