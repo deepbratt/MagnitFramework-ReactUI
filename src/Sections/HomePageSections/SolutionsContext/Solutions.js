@@ -30,7 +30,7 @@ const Solutions = ({ titles, content }) => {
               {content &&
                 content.map((data, index) => (
                   <Grid key={index} item xs={12} sm={6} md={3}>
-                    <Card className={card}>
+                    <Card style={{borderRadius: "5px"}} className={card}>
                       <CustomImage width="60px" alt="" src={data.image} />
 
                       <div>
