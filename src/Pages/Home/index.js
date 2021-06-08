@@ -50,7 +50,7 @@ const Home = (props) => {
 
   const { Mirage, BlueRibbon } = Colors;
   const WhyUsSlides = cards.map((data, index) => (
-              <Grid container key={index} style={{display:"flex", flexDirection:"column", height:"100%"}} alignItems="center">
+              <Grid container key={index+"quoteCard"} style={{display:"flex", flexDirection:"column", height:"100%"}} alignItems="center">
               <QuoteCard cardData={data} />
               </Grid>
           ))
@@ -144,7 +144,7 @@ const Home = (props) => {
           </Grid>
           {TCData &&
             TCData.filter((card, idx) => idx < 4).map((card, index) => (
-              <Grid key={index+"4th"} item xs={12}>
+              <Grid key={index+"4thhometcdata"} item xs={12}>
                 <CertificationList
                   toRight={index % 2 === 0 ? false : true}
                   root={rootClasses[index]}

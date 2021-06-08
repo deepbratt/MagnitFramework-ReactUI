@@ -64,7 +64,7 @@ const Container = (props) => {
       showThumbs={false}
     >
       {slides.map((slide, i) => {
-        return <section key={i}>{slide}</section>;
+        return <section key={i+"slidercontainer"}>{slide}</section>;
       })}
     </Carousel>
   );

@@ -23,7 +23,7 @@ const HowItWorksContext = () => {
             return (
               <Card
                 style={{ marginTop: data.margin }}
-                key={index}
+                key={index+"staircasedata"}
                 className={card2}
               >
                 <CardContent style={{ padding: "0px" }}>

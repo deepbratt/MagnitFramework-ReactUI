@@ -16,7 +16,7 @@ const PointList = ({ horizontal, data, lgBreakpoint = 4 }) => {
           <Grid
             style={{ marginBottom: "20px" }}
             className={horizontal ? null : hover}
-            key={index}
+            key={index+"pointlist"}
             item
             xs={12}
             md={breakpoint}

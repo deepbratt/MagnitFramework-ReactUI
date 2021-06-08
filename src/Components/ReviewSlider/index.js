@@ -10,7 +10,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const slideArr = reviewSliderText.map((a, index) => {
-  return <ReviewCard key={index} cardData={a} />;
+  return <ReviewCard key={index+"reviewslider"} cardData={a} />;
 });
 
 const ReviewSlider = ({
@@ -80,7 +80,7 @@ const ReviewSlider = ({
           <Grid
             container
             justify="center"
-            key={i + "2nd"}
+            key={i + "2ndslider"}
             style={{
               display: "flex",
               height: "100%",

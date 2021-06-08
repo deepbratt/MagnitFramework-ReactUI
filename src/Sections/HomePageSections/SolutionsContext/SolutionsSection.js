@@ -12,7 +12,7 @@ const SolutionsSection = ({data}) => {
       <Grid container justify="center" spacing={2}>
         {data && data.map((data,index)=>{
           return(
-            <Grid key={index} item xs={10} sm={5} md={3}>
+            <Grid key={index+"sloutionscontent"} item xs={10} sm={5} md={3}>
             <Grid item xs={12} className={card}>
               <Grid item className={devSec}>
                 <CustomImage alt="icon" className={profileIcon} src={data.icon} />

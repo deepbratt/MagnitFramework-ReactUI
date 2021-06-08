@@ -92,7 +92,7 @@ const ContactUs = () => {
                           item
                           xs={12}
                           md={3}
-                          key={index}
+                          key={index+"awrdssection"}
                           className={imageContainer}
                         >
                           <img src={image} alt={`client${index}`} />
@@ -115,7 +115,7 @@ const ContactUs = () => {
                         </Typography>
                         {addressSection.address.map((location, index) => (
                           <Typography
-                            key={index="address"}
+                            key={index="addresses"}
                             align="left"
                             gutterBottom
                             variant="caption"
@@ -134,7 +134,7 @@ const ContactUs = () => {
                         </Typography>
                         {talkToUsSection.numbers.map((num, index) => (
                           <Typography
-                            key={index+"talktous"}
+                            key={index+"talktousnumber"}
                             align="left"
                             gutterBottom
                             variant="caption"
