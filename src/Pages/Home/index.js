@@ -4,7 +4,7 @@ import Slide from "../../Components/Slider/Container";
 import Solutions from "../../Sections/HomePageSections/SolutionsContext/Solutions";
 import PartnerContext from "../../Sections/HomePageSections/PartnerWithUsContext/Maincontainer";
 import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ContactUsAndFQA from "../../Sections/HomePageSections/ContactUsAndFQA";
 import { Typography, Hidden } from "@material-ui/core";
 import Section from "../Section";
@@ -47,6 +47,7 @@ const Home = (props) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { leftRoot, rightRoot, leftPattern, rightPattern } = HomeStyles();
   const rootClasses = [rightRoot, leftRoot, rightRoot, leftRoot];
+  const [isMounted, setIsMounted] = useState(false)
 
   const { Mirage, BlueRibbon } = Colors;
   const WhyUsSlides = cards.map((data, index) => (
@@ -102,6 +103,15 @@ const Home = (props) => {
     setIsSubmitted(true);
   }
 
+  useEffect(()=>{
+    // mounted = true
+    setIsMounted(true)
+    return ()=>{
+      // mounted = false
+      setIsMounted(false)
+    }
+  },[])
+
   return (
     <div className="App">
       <Grid item md={12} xs={12}>
@@ -142,13 +152,14 @@ const Home = (props) => {
               text={TrainingAndCertificationSectionTitle}
             />
           </Grid>
-          {TCData &&
+          {isMounted &&
             TCData.filter((card, idx) => idx < 4).map((card, index) => (
               <Grid key={index+"4thhometcdata"} item xs={12}>
                 <CertificationList
                   toRight={index % 2 === 0 ? false : true}
                   root={rootClasses[index]}
                   data={card}
+                  mounted = {isMounted}
                 />
               </Grid>
             ))}

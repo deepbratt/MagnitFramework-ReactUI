@@ -11,6 +11,7 @@
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.1",
+    "lottie-web": "^5.7.11",
     "material-ui-popup-state": "^1.8.3",
     "material-ui-rating": "^4.0.0-beta.2",
     "prop-types": "^15.7.2",
