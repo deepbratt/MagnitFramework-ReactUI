@@ -1,9 +1,9 @@
-import defaultImage from "../../../../assets/Testimonials/cardDefault.png";
 import Avatar1 from "../../../../assets/Testimonials/prof.png";
 import HomeDesign from "../../../../assets/Testimonials/homedesign.png";
 import Raleigh from "../../../../assets/Testimonials/raleigh.png";
 import MyNews from "../../../../assets/Testimonials/myNews.png";
 import NailIt from "../../../../assets/Testimonials/nailit.png";
+import SwiftDeals from "../../../../assets/Testimonials/swiftDeals.png";
 import TimeCheck from "../../../../assets/Testimonials/timeCheck.png";
 import Avatar2 from "../../../../assets/Testimonials/profile1.png";
 const VideosData = [
@@ -12,7 +12,7 @@ const VideosData = [
     name: "Maria Ann",
     project: "SwiftDealz",
     para: "They provide efficient, time-bound prototypes keeping all KPIs in mind. We recommend them to anyone looking to make an online footprint.  ",
-    Img: defaultImage,
+    Img: SwiftDeals,
     Avatar: Avatar2,
     date: "21 April, 2021",
   },
@@ -45,7 +45,7 @@ const VideosData = [
   },
   {
     id: 5,
-    name: "Dev Singh",
+    name: "James Smith",
     project: "Raleigh Bikes",
     para: "A popular firm selling bicycles needed to overcome the tradition of buying bikes from dealers. So, we created a ‘Design your Bike’ section on their website and marketed it through influencer marketing.",
     Img: Raleigh,
