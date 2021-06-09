@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import Paper from "@material-ui/core/Paper";
 import {useStyles} from "./globalStyles"
@@ -28,9 +28,9 @@ const App = (props) => {
    return (
     <ThemeProvider theme={defaultTheme}>
      <Paper  style= {{height: "100vh"}} elevation= {0} >
-      <Suspense fallback={<Loader color={Harlequin} styles="h4"/>}>
+     
        <Route />
-       </Suspense>
+     
      </Paper>
     </ThemeProvider>
   );}
