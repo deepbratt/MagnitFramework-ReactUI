@@ -1,19 +1,43 @@
 import { Grid, Typography } from "@material-ui/core";
-import Lottie from "react-lottie";
+import { useEffect, useRef, useState } from "react";
+// import Lottie from "react-lottie";
 import CertificationListStyles from "./style";
+import lottie from 'lottie-web';
 
-const CertificationList = ({ root, data, toRight }) => {
+const CertificationList = ({ root, data, toRight, mounted }) => {
+  const elem = useRef(null)
+  const [isMounted, setIsMounted] = useState(false)
   const { text, imageWrapper, leftAlignment, rightAlignment } =
     CertificationListStyles();
   const { title, content, animationData } = data;
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData.default,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
+
+
+  useEffect(() => {
+    let anim = lottie.loadAnimation({
+      animationData: animationData.default,
+      loop: true,
+      renderer: 'svg',
+      container: elem.current,
+      autoplay: false,
+    });
+
+    const play = () => {
+      anim.play();
+    };
+    if(mounted){
+      setIsMounted(mounted)
+      anim.addEventListener('DOMLoaded', play);
+    }
+
+    return () => {
+      anim.removeEventListener('DOMLoaded', play);
+      anim.stop()
+      anim.destroy();
+      anim = ""
+      setIsMounted(false)
+    }
+  }, [mounted, animationData.default]);
+
   return (
     <Grid container className={`${root}`}>
       <Grid item xs={12} md={6}>
@@ -27,7 +51,7 @@ const CertificationList = ({ root, data, toRight }) => {
         </div>
       </Grid>
       <Grid item xs={12} md={6} className={imageWrapper}>
-        <Lottie options={defaultOptions} width="400px" />
+        {isMounted && <div ref={elem} style={{width:"400px"}}></div>}
       </Grid>
     </Grid>
   );
