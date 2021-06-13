@@ -7,7 +7,7 @@ import CustomImage from "../../Components/CustomImage";
 const FeaturesRow = (props) => {
   const { flexDirection, data } = props;
 
-  const { cardSec, para } = useStyles();
+  const { para } = useStyles();
   const { supportSub } = SolutionsStyles();
 
   return (
@@ -22,7 +22,7 @@ const FeaturesRow = (props) => {
       {data.map((text, index) => {
         return (
           <Grid
-            key={index}
+            key={index+"featurerow"}
             style={{
               display: "flex",
               justifyContent: "center",

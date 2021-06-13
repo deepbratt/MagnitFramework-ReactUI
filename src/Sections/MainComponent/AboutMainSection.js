@@ -10,7 +10,7 @@ const AboutMainSection = (props) => {
   const { title, paragraph } = MainData;
 
   const classes = useStyles();
-  const { root, cardSec, breadCrumbStyles, paragraphStyle, hero, card } =
+  const { root, cardSec, breadCrumbStyles, paragraphStyle, card } =
     classes;
   return (
     <>
@@ -21,7 +21,7 @@ const AboutMainSection = (props) => {
               <BreadCrumb links={props.breadcrumbData} />
             </div>
             <CardContent className={cardSec}>
-              <CustomImage width={props.width} className={hero} alt="hero" src={props.hero} />
+              <CustomImage width={props.width} className={props.class} alt="hero" src={props.hero}/>
             </CardContent>
           </Card>
           {props.card === true ? (
@@ -32,7 +32,7 @@ const AboutMainSection = (props) => {
               <Grid item lg={7} md={7} sm={10} xs={10} className={paragraphStyle}>
                   {paragraph &&
                     paragraph.map((text, index) => (
-                      <Typography key={index} color="textSecondary" variant="h5">
+                      <Typography key={index+"paragraph"} color="textSecondary" variant="h5">
                         {text}
                       </Typography>
                     ))}

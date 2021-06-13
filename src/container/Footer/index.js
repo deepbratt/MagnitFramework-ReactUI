@@ -1,6 +1,6 @@
 import { Grid } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import FooterStyle from "./style";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import FacebookIcon from "@material-ui/icons/Facebook";
@@ -35,15 +35,31 @@ const Footer = () => {
             </Typography>
 
             <div className={contact}>
-              <NavLink to="/fb-link">
+              <Link
+                to={{
+                  pathname: "https://www.facebook.com/Magnit-102896788671971",
+                }}
+                target="_blank"
+              >
                 <FacebookIcon color="secondary" />
-              </NavLink>
-              <NavLink to="/twitter-link">
+              </Link>
+              <Link
+                to={{
+                  pathname:
+                    "https://www.instagram.com/magnit321/?fbclid=IwAR38BHwlVMHmzIP5F-0xTa_9LdXZSiH8g00Z2kXWKtfyMmeuBMFBEUhV6Ps",
+                }}
+                target="_blank"
+              >
                 <InstagramIcon color="secondary" />
-              </NavLink>
-              <NavLink to="/li-link">
+              </Link>
+              <Link
+                to={{
+                  pathname: "https://www.linkedin.com/company/themagnit/",
+                }}
+                target="_blank"
+              >
                 <LinkedInIcon color="secondary" />
-              </NavLink>
+              </Link>
             </div>
           </div>
         </Grid>
@@ -53,7 +69,7 @@ const Footer = () => {
               {navigation.title}
             </Typography>
             {navigation.links.map((link, idx) => (
-              <NavLink key={idx} to={link.route}>
+              <NavLink key={idx+"nav"} to={link.route}>
                 <Typography align="left" gutterBottom variant="caption">
                   {link.value}
                 </Typography>
@@ -69,7 +85,7 @@ const Footer = () => {
             </Typography>
             {talkToUsSection.numbers.map((num, index) => (
               <Typography
-                key={index}
+                key={index+"talktous"}
                 align="left"
                 gutterBottom
                 variant="caption"
@@ -87,7 +103,7 @@ const Footer = () => {
             </Typography>
             {addressSection.address.map((location, index) => (
               <Typography
-                key={index}
+                key={index+"addressSection"}
                 align="left"
                 gutterBottom
                 variant="caption"

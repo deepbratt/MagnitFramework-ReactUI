@@ -7,7 +7,7 @@ import CustomImage from "../../Components/CustomImage";
 
 const WeOfferContext = ({ data }) => {
   const classes = useStyles();
-  const { root, cardSec, card, devSec, button } = classes;
+  const { root, cardSec, card, devSec } = classes;
   const { DoveGray } = Colors;
   return (
     <>
@@ -22,8 +22,8 @@ const WeOfferContext = ({ data }) => {
           {data.values &&
             data.values.map((data, index) => {
               return (
-                <Grid item lg={3} md={5} sm={12} className={card}>
-                  <Grid item key={index}>
+                <Grid item key={index+"whatweoffercontext"} lg={3} md={5} sm={12} className={card}>
+                  <Grid item>
                     <Grid item className={devSec}>
                       <Grid item>
                         <CustomImage

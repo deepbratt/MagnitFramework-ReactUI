@@ -86,6 +86,27 @@ export const useStyles = makeStyles((theme) => ({
       marginTop: "1rem",
     },
   },
+  badge: {
+    borderRadius: "5px",
+    // padding: "25px",
+    margin: "25px",
+    [theme.breakpoints.down("sm")]: {
+      margin: "15px",
+    },
+
+  },
+  supportSub: {
+    borderRadius: "5px",
+    height: "100px",
+    width: "100px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "flex-start",
+    [theme.breakpoints.down("sm")]: {
+      height: "80px",
+      width: "80px",
+    },
+  },
   underlined: {
     position: "relative",
     zIndex: 1,

@@ -15,7 +15,7 @@ const SecondarySection = (props) => {
       {data.map((text, index) => {
         return (
           <Grid item className={cardSec}>
-            <Grid key={index} container>
+            <Grid key={index+"secondarysection"} container>
               <Grid
                 style={{
                   display: "flex",

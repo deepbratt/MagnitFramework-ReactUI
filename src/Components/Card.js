@@ -7,24 +7,24 @@ import Flip from "./Flip";
 const CardData = ({ horizontal, data, lgBreakpoint = 4, title }) => {
   const classes = useStyles();
   const { card } = classes;
-  let breakpoint = 4;
-  if (horizontal) {
-    breakpoint = 6;
-  }
+  // let breakpoint = 4;
+  // if (horizontal) {
+  //   breakpoint = 6;
+  // }
   return (
     <>
       <Grid container justify="space-between">
         {data &&
-          data.map((item, index) => (
+          data.map((items, index) => (
             <Grid
               className={card}
-              key={index}
+              key={index+"cardflip"}
               item
               xs={12}
               md={6}
               lg={3}
             >
-              <Flip horizontal={horizontal} data={item} />
+              <Flip horizontal={horizontal} data={items} />
             </Grid>
           ))}
       </Grid>

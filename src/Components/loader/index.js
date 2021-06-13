@@ -1,13 +1,16 @@
-import { CircularProgress, Grid, Typography } from '@material-ui/core'
+import { Grid } from '@material-ui/core'
 import React,{useEffect,useState} from 'react'
 import { Animate } from 'react-move'
+import CustomImage from "../CustomImage"
+import Mag from "../../assets/Mag.svg"
+import Bounce from 'react-reveal/Bounce';
 
 export const Loader=({color,styles})=>{
     const [startLoading, handleLoading] = useState(0);
 
     useEffect(() => {
             handleLoading(false)
-    })
+    },[startLoading])
     return (
            <Animate
         start={()=>({value: startLoading})}
@@ -22,9 +25,18 @@ return(
     justifyContent: "center",
     alignItems: "center",
     height: "inherit",
+   
         }}>
-             <CircularProgress value={value} style={{color:{color}}}></CircularProgress>
-             <Typography variant={styles} color="textPrimary">Loading...</Typography>
+        <Bounce duration={3000}>
+
+            <CustomImage
+          
+            width="200px"
+                alt="icon"
+                src={Mag}
+              />
+             </Bounce>
+
         </Grid>
            
         );

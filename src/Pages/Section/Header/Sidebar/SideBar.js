@@ -51,12 +51,11 @@ const SideBar = () => {
         <List style={{ marginTop: "30px" }}>
           {routes.map(({ path, sidebarName, ...prop }, index) => {
             return (
-              <>
+              <span key={"sidebar"+index}>
                 <NavLink
                   activeClassName={active}
                   className={link}
                   to={path}
-                  key={`route-${index}}`}
                   onClick={() => {
                     setOpen();
                   }}
@@ -64,7 +63,6 @@ const SideBar = () => {
                   <MuiThemeProvider theme={THEME}>
                     <ListItem>
                       <ListItemText
-                        key={index}
                         style={{ paddingLeft: "30px", paddingBottom: "15px" }}
                         primary={sidebarName}
                         className={list}
@@ -72,7 +70,7 @@ const SideBar = () => {
                     </ListItem>
                   </MuiThemeProvider>
                 </NavLink>
-              </>
+              </span>
             );
           })}
         </List>

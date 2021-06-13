@@ -32,9 +32,9 @@ const Event = () => {
         </Card>
         <Section>
           <Grid item xs={12} container justify="center" className={cardRoot}>
-            {activities.map((a) => {
+            {activities.map((a,index) => {
               return (
-                <Grid item xs={12} md={4} key={a.id}>
+                <Grid item xs={12} md={4} key={a.id+"-"+index}>
                   <Activity Img={a.Img} title={a.name} detail={a.para} />
                 </Grid>
               );

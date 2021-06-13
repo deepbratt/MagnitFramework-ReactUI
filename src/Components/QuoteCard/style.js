@@ -5,6 +5,7 @@ const CardStyle = makeStyles((theme) => ({
     margin: "20px 10px",
     padding: "40px",
     maxWidth: "500px",
+    height:"100%",
     [theme.breakpoints.down("sm")]: {
       margin: "10px 5px",
       padding: "20px",

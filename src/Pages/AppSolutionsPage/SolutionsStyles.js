@@ -60,6 +60,12 @@ export const SolutionsStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("md")]: {
       justifyContent: "center",
     },
+    "& > img": {
+      [theme.breakpoints.down("sm")]: {
+        maxHeight: "400px",
+        marginTop: "30px"
+      },
+    },
   },
   right: {
     display: "flex",
@@ -68,5 +74,21 @@ export const SolutionsStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("md")]: {
       justifyContent: "center",
     },
+    "& > img": {
+      [theme.breakpoints.down("sm")]: {
+        maxHeight: "400px",
+      },
+    },
   },
+  reversed:{
+    display: "flex",
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column-reverse"
+    },
+  },
+  container:{
+    [theme.breakpoints.down("sm")]: {
+      marginLeft: "-12px"
+    },
+  }
 }));

@@ -16,7 +16,7 @@ import { NavLink } from "react-router-dom";
 import Submenu from "./SubMenu";
 const ParentPopupState = React.createContext(null);
 const { WildSand } = Colors;
-const CascadingHoverMenus = ({ data, name, route, sub }) => {
+const CascadingHoverMenus = ({ data, name, route, sub, Class }) => {
   const { list, listItem, link, active, menu } = useStyles();
   const StyledMenuItem = withStyles((theme) => ({
     paper: {
@@ -36,7 +36,7 @@ const CascadingHoverMenus = ({ data, name, route, sub }) => {
           <Button className={list} {...bindHover(popupState)}>
             <NavLink
               activeClassName={active}
-              className={link}
+              className={Class}
               onClick={popupState.close}
               to={route ? route : "/home"}
             >
@@ -58,7 +58,7 @@ const CascadingHoverMenus = ({ data, name, route, sub }) => {
           {data.map((menuitems, menuindex) => (
             <MenuItem
               onClick={popupState.close}
-              key={menuindex}
+              key={menuindex+"menuindex"}
               className={menu}
             >
               <NavLink

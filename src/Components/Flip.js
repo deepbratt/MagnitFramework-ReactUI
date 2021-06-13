@@ -18,7 +18,6 @@ const Flip = ({ data }) => {
     name,
     detail,
     supportSub,
-    contentRight,
     VertSec,
     badge,
   } = classes;
@@ -30,6 +29,7 @@ const Flip = ({ data }) => {
       <div
         onMouseEnter={() => setIsFlipped(true)}
         onMouseLeave={() => setIsFlipped(false)}
+        style={{flexGrow:1}}
       >
         <ReactCardFlip
           isFlipped={isFlipped}
@@ -41,8 +41,8 @@ const Flip = ({ data }) => {
             className={VertSec}
             onMouseEnter={() => setIsFlipped(true)}
           >
-            <Grid
-              item={12}
+            <div
+             
               style={{ backgroundColor: color }}
               className={supportSub}
             >
@@ -54,8 +54,8 @@ const Flip = ({ data }) => {
                 style={{ filter: fill }}
                 className={badge}
               />
-            </Grid>
-            <Grid item={12}>
+            </div>
+            <div>
               <Typography
                 color="textPrimary"
                 variant="subtitle1"
@@ -64,7 +64,7 @@ const Flip = ({ data }) => {
               >
                 {title}
               </Typography>
-            </Grid>
+            </div>
           </Grid>
           <Grid
             container
@@ -119,8 +119,8 @@ Flip.propTypes = {
   horizontal: PropTypes.bool,
   data: PropTypes.shape({
     color: PropTypes.string.isRequired,
-    fill: PropTypes.string.isRequired,
-    icon: PropTypes.element,
+    fill: PropTypes.string,
+    // icon: PropTypes.element,
     title: PropTypes.string.isRequired,
     desc: PropTypes.string.isRequired,
     redirect: PropTypes.string.isRequired,
