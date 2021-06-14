@@ -3,6 +3,8 @@ import * as GraphicDesignAnimationData from "../../../Components/certificationLi
 import * as MarketingAnimationData from "../../../Components/certificationList/marketingAnimation.json";
 // import * as CulturallyAlignedAnimationData from "../../../Components/certificationList/culturallyAlignedAnimation.json";
 import Avatar7 from "../../../assets/services/Avatar7.png";
+
+export const GA_ID = "G-YZH3HVL36W";
 export const reviewSliderText = [
   {
     id: 1,
