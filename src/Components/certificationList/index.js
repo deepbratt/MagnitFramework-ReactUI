@@ -13,32 +13,36 @@ const CertificationList = ({ root, data, toRight, mounted }) => {
 
 
   useEffect(() => {
-    let anim = lottie.loadAnimation({
-      animationData: animationData.default,
-      loop: true,
-      renderer: 'svg',
-      container: elem.current,
-      autoplay: false,
-    });
-
-    const play = () => {
-      anim.play();
-    };
     if(mounted){
-      // console.log('mounted inner: ', mounted)
       setIsMounted(mounted)
-      anim.addEventListener('DOMLoaded', play);
+    }
+  }, [mounted]);
+
+  useEffect(()=>{
+    
+    if(isMounted){
+      let dataJson = JSON.parse(animationData)
+      let anim = lottie.loadAnimation({
+        animationData: dataJson.default,
+        loop: true,
+        renderer: 'svg',
+        container: elem.current,
+        autoplay: false,
+      });
+      anim.play();
     }
 
     return () => {
-      anim.removeEventListener('DOMLoaded', play);
-      anim.stop()
-      anim.destroy();
-      anim = ""
-      setIsMounted(false)
-      // console.log('component unmounted')
+      lottie.pause()
+      lottie.stop()
+      lottie.destroy();
+      // setIsMounted(false)
     }
-  }, [mounted, animationData.default]);
+  },[isMounted])
+
+  if(!isMounted){
+    return null
+  }
 
   return (
     <Grid container className={`${root}`}>
@@ -53,8 +57,7 @@ const CertificationList = ({ root, data, toRight, mounted }) => {
         </div>
       </Grid>
       <Grid item xs={12} md={6} className={imageWrapper}>
-        {/* {console.log(isMounted)} */}
-        {isMounted ?<div ref={elem} style={{width:"400px"}}></div> : null}
+        {isMounted && <div ref={elem} style={{width:"400px"}}></div>}
       </Grid>
     </Grid>
   );
