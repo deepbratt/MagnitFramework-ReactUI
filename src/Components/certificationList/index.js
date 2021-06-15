@@ -25,6 +25,7 @@ const CertificationList = ({ root, data, toRight, mounted }) => {
       anim.play();
     };
     if(mounted){
+      // console.log('mounted inner: ', mounted)
       setIsMounted(mounted)
       anim.addEventListener('DOMLoaded', play);
     }
@@ -35,6 +36,7 @@ const CertificationList = ({ root, data, toRight, mounted }) => {
       anim.destroy();
       anim = ""
       setIsMounted(false)
+      // console.log('component unmounted')
     }
   }, [mounted, animationData.default]);
 
@@ -51,7 +53,8 @@ const CertificationList = ({ root, data, toRight, mounted }) => {
         </div>
       </Grid>
       <Grid item xs={12} md={6} className={imageWrapper}>
-        {isMounted && <div ref={elem} style={{width:"400px"}}></div>}
+        {/* {console.log(isMounted)} */}
+        {isMounted ?<div ref={elem} style={{width:"400px"}}></div> : null}
       </Grid>
     </Grid>
   );
