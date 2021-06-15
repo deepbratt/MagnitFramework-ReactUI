@@ -37,19 +37,19 @@ export const trainingAndCertificationText = [
     title: "Web Development",
     content:
       "We provide training in web development in various programming languages followed by Internships to put your knowledge to work. Starting from basic HTML to advanced React.js we make sure that students have all language tools in their arsenal before providing them with opportunities to work. The students can polish their knowledge by working on US level projects as a part of the training program. Well built network and experienced teachers are some of the benefits of taking part in the program.",
-    animationData: WebDesignAnimationData,
+    animationData: JSON.stringify(WebDesignAnimationData),
   },
   {
     title: "Graphic Design",
     content:
       "Challenge your creative limits and think outside the box with our Graphic design training program. We provide an exclusive training on designing logos, posters, banners. Ads, Cards etc. Through this program you will learn to approach problems with a 360 degree mindset to create innovative and effective solutions that your customers will love. The course will be taught with industry level powerful design tools.You’ll practice design thinking on a real-life project. and how to create prototypes to test your new ideas before investing a lot of time and money.",
-    animationData: GraphicDesignAnimationData,
+    animationData: JSON.stringify(GraphicDesignAnimationData),
   },
   {
     title: "Digital Marketing",
     content:
       " Learn to create professional first-impression with eye-catching material through a Digital Marketing campaign in our training programs. From brainstorming to execution, you will learn the process of understanding your audience to create a campaign that hits straight home. The course is designed to bring marketers up-to-date with the latest and most powerful tools in each step of marketing. You will be taught both the creative as well as execution part of running successful ad campaigns as well as the methods to test their success.",
-    animationData: MarketingAnimationData,
+    animationData: JSON.stringify(MarketingAnimationData),
   },
 ];
 
