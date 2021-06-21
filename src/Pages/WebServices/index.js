@@ -29,6 +29,8 @@ import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
 import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
 import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/OurWorkSectionPattern";
+import MetaTags from "../../Components/MetaTags";
+import { metadata } from "../../Utils/Constants/Language";
 
 const Services = () => {
   const { aliceBlue, linearBackground, BlueRibbon } = Colors;
@@ -45,9 +47,11 @@ const Services = () => {
   ];
 
   const { textColor, leftPattern, rightPattern } = ServicesSectionStyles();
+  const {title, canonical, description, keywords} = metadata.webDevelopment
 
   return (
     <CommentSection>
+      <MetaTags title={title} description={description} canonical={canonical} keywords={keywords}/>
       <Banner
         image={BannerImage}
         backColor={linearBackground}

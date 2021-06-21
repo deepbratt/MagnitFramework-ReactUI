@@ -20,6 +20,7 @@ import CustomTitle from "../Section/CustomTitle"
 import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/OurWorkSectionPattern";
 import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
 import CardData from "../../Components/Card";
+import MetaTags from "../../Components/MetaTags";
 
 const Services = () => {
   const { linearBackground, BlueRibbon,aliceBlue } = Colors;
@@ -37,6 +38,7 @@ const Services = () => {
   return (
     <>
       <CommentSection>
+          <MetaTags title={"Services | Magnit"} description="services...." canonical="services" keywords="services, services"/>
         <Banner
           image={BannerImage}
           backColor={linearBackground}
