@@ -18,12 +18,17 @@ import { DoYouWant } from "../WebServices/constants";
 import CustomTitle from "../../Pages/Section/CustomTitle";
 import { Colors } from "../../Theme/color.constants";
 import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/OurWorkSectionPattern";
+import MetaTags from "../../Components/MetaTags";
+import { metadata } from "../../Utils/Constants/Language";
 const Solutions = () => {
   const { root } = ServicesSectionStyles();
   const { MoonWhite, aliceBlue } = Colors;
+  const {title, canonical, description, keywords} = metadata.appDevelopment
+
   return (
     <>
       <CommentSection>
+      <MetaTags title={title} description={description} canonical={canonical} keywords={keywords}/>
         <Grid container>
           <Grid item lg={12} md={12} xs={12} className={root}>
             <Banner />

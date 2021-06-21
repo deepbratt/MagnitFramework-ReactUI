@@ -164,3 +164,36 @@ export const caseStudies = {
   faqAns:
     " FaqNonInteractive FaqNonInteractive FaqNonInteractive FaqNonInteractive  FaqNonInteractive FaqNonInteractive FaqNonInteractive FaqNonInteractive  FaqNonInteractive FaqNonInteractive FaqNonInteractive FaqNonInteractive  FaqNonInteractive FaqNonInteractive FaqNonInteractive FaqNonInteractive  FaqNonInteractive FaqNonInteractive FaqNonInteractive FaqNonInteractive  FaqNonInteractive FaqNonInteractive FaqNonInteractive FaqNonInteractive",
 };
+
+export const metadata={
+  home:{
+    title:"Magnet | Developer hiring, Web & App development IT Services Company",
+    canonical:"/",
+    keywords:"",
+    description:"Magnet a Software solution company providing services of Developer hiring,web & app development and Digital marketing SEO SMM PPC. Contact Us"
+  },
+  developerHiring:{
+    title:"Magnet | For team development we offer service of developer hiring",
+    canonical:"hire-developer",
+    keywords:"",
+    description:"For the  quick growth of business hire developers.For team development Magnit offer service of developer hiring.Contact us to hire programmers."
+  },
+  webDevelopment:{
+    title:"Magnet I Website design and Web development agency in USA",
+    canonical:"web-development-services",
+    keywords:"",
+    description:"Magnit is Website design and Web development agency in USA. Affordable website development pricing .Contact us for web development services"
+  },
+  appDevelopment:{
+    title:"Magnet | IOS and Android Mobile App development company in USA",
+    canonical:"app-solutions",
+    keywords:"",
+    description:"We are IOS and Android Mobile App development company in USA.Software development company USA having low Software development cost.Contact Us"
+  },
+  digitalMarketing:{
+    title:"Magnet | Digital marketing agency in USA offering SEO SMM PPC services",
+    canonical:"digital-marketing",
+    keywords:"",
+    description:"Digital marketing agency in USA offer SEO SMM PPC Web Analytics & content marketing services. We have affordable monthly SEO pricing Packages"
+  },
+}
