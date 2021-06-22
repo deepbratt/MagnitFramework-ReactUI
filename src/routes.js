@@ -6,13 +6,12 @@ import RequireAuth from "./container/RequireAuth";
 import { pageRoutes } from "./Components/Path";
 import { Loader } from "./Components/loader";
 import { Colors } from "./Theme/color.constants";
-import { GA_ID } from "./Utils/Constants/Language";
-import ReactGA from 'react-ga';
-import RouteChangeTracker from "./Components/RouteChangeTracker";
+// import { GA_ID } from "./Utils/Constants/Language";
+// import RouteChangeTracker from "./Components/RouteChangeTracker";
 const Home = lazy(() => import("./Pages/Home"));
 const Error = lazy(() => import("./Pages/Error/Index"));
 
-ReactGA.initialize(GA_ID);
+// ReactGA.initialize(GA_ID);
 
 const Routes = () => {
   const routeArray = Object.values(pageRoutes);
@@ -21,7 +20,7 @@ const Routes = () => {
   return (
     <Suspense fallback={<Loader color={Harlequin} styles="h4" />}>
       <Router>
-        <RouteChangeTracker/>
+        {/* <RouteChangeTracker/> */}
         <Layout>
           <Switch>
             <RequireAuth path="/" exact component={Home} />

@@ -26,6 +26,8 @@ import CustomImage from "../../Components/CustomImage";
 import CustomTitle from "../../Pages/Section/CustomTitle";
 import GlanceAtWork from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
 import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/OurWorkSectionPattern";
+import { metadata } from "../../Utils/Constants/Language";
+import MetaTags from "../../Components/MetaTags";
 
 const DigitalMarketing = () => {
   const { linearBackground, BlueRibbon, aliceBlue } = Colors;
@@ -42,9 +44,11 @@ const DigitalMarketing = () => {
   ];
 
   const { textColor, leftPattern, rightPattern } = ServicesSectionStyles();
+  const {title, canonical, description, keywords} = metadata.digitalMarketing
 
   return (
     <CommentSection>
+      <MetaTags title={title} description={description} canonical={canonical} keywords={keywords}/>
       <Banner
         image={BannerImage}
         backColor={linearBackground}

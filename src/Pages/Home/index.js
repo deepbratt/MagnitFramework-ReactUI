@@ -27,7 +27,7 @@ import {
   TrainingAndCertificationSectionTitle,
   WhatDoClientSaySectionTitle,
 } from "./constants";
-import { trainingAndCertificationText as TCData } from "../../Utils/Constants/Language";
+import { metadata, trainingAndCertificationText as TCData } from "../../Utils/Constants/Language";
 import CertificationList from "../../Components/certificationList";
 import HomeStyles from "./style";
 import QuoteCard from "../../Components/QuoteCard";
@@ -41,6 +41,7 @@ import {
   SolutionsSectionContent,
 } from "../../Utils/Constants/Language/en/SolutionsText";
 import CardData from "../../Components/Card";
+import MetaTags from "../../Components/MetaTags";
 export const AwardSectionImages = [Image1, Image2, Image3, Image4, Image5];
 
 const Home = (props) => {
@@ -48,6 +49,7 @@ const Home = (props) => {
   const { leftRoot, rightRoot, leftPattern, rightPattern } = HomeStyles();
   const rootClasses = [rightRoot, leftRoot, rightRoot, leftRoot];
   const [isMounted, setIsMounted] = useState(false)
+  const {title, canonical, description, keywords} = metadata.home
 
   const { Mirage, BlueRibbon } = Colors;
   const WhyUsSlides = cards.map((data, index) => (
@@ -114,6 +116,7 @@ const Home = (props) => {
 
   return (
     <div className="App">
+      <MetaTags title={title} description={description} canonical={canonical} keywords={keywords}/>
       <Grid item md={12} xs={12}>
         <Slide />
       </Grid>

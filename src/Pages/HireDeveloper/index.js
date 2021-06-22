@@ -29,6 +29,8 @@ import Breakpoints from "../../Theme/theme.breakpoints";
 import CustomTitle from "../../Pages/Section/CustomTitle";
 import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/OurWorkSectionPattern";
 import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
+import MetaTags from "../../Components/MetaTags";
+import { metadata } from "../../Utils/Constants/Language";
 
 const HireDeveloper = () => {
   const { BlueRibbon, linearBackground, aliceBlue } = Colors;
@@ -45,8 +47,10 @@ const HireDeveloper = () => {
   ];
 
   const { textColor, leftPattern, rightPattern } = ServicesSectionStyles();
+  const {title, canonical, description, keywords} = metadata.developerHiring
   return (
     <CommentSection>
+      <MetaTags title={title} description={description} canonical={canonical} keywords={keywords}/>
       <Banner
         image={BannerImage}
         backColor={linearBackground}
