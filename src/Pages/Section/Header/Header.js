@@ -40,7 +40,7 @@ const Header = (props) => {
       <AppBar className={root} position="sticky">
         <Toolbar className={appbarsolid}>
           <section>
-            <CustomImage className={logo} alt="logo" src={"https://s3.us-east-2.amazonaws.com/cdn.themagnit.com/cdnTestFolder/MagnitLogo.023506f8.webp"} />
+            <CustomImage className={logo} alt="logo" src={Logo} />
           </section>
           <Hidden smDown>
             <List className={list}>

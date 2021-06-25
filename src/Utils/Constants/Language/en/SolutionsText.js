@@ -18,34 +18,34 @@ export const SolutionsSectionHeaders = {
 export const SolutionsSectionContent = [
   {
     title: "Chat App",
-    image: "https://s3.us-east-2.amazonaws.com/cdn.themagnit.com/cdnTestFolder/chat-1.webp",
+    image: chatIcon,
   },
   {
     title: "Classified App",
-    image: "https://s3.us-east-2.amazonaws.com/cdn.themagnit.com/cdnTestFolder/Group-19.webp",
+    image: classifiedIcon,
   },
   {
     title: "Crowd Funding",
-    image: "https://s3.us-east-2.amazonaws.com/cdn.themagnit.com/cdnTestFolder/money-bag-1.webp",
+    image: fundIcon,
   },
   {
     title: "Product Design",
-    image: "https://s3.us-east-2.amazonaws.com/cdn.themagnit.com/cdnTestFolder/Group.webp",
+    image: designIcon,
   },
   {
     title: "Food Delivery App",
-    image: "https://s3.us-east-2.amazonaws.com/cdn.themagnit.com/cdnTestFolder/order-food-1 (1).webp",
+    image: deliveryIcon,
   },
   {
     title: "Job Portal",
-    image: "https://s3.us-east-2.amazonaws.com/cdn.themagnit.com/cdnTestFolder/employee-1.webp",
+    image: portalIcon,
   },
   {
     title: "Social Networking App",
-    image: "https://s3.us-east-2.amazonaws.com/cdn.themagnit.com/cdnTestFolder/social-media-1.webp",
+    image: datingIcon,
   },
   {
     title: "Fitness App",
-    image: "https://s3.us-east-2.amazonaws.com/cdn.themagnit.com/cdnTestFolder/barbell-1.webp",
+    image: fitnessIcon,
   },
 ];
