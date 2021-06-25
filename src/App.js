@@ -14,26 +14,25 @@ const App = (props) => {
   const { value } = props;
   // IF the value is Dark change it to Dark and vice versa
   const defaultTheme = value === "DARK" ? { ...DarkTheme } : { ...NightTheme };
-  const [loading, setloading] = React.useState(true);
-  React.useEffect(() => {
-    setloading(false);
-  }, []);
-  if (loading)
-  {
-    return ( 
-      <Loader color={Harlequin} styles="h4"/>
-    );
-  }
-   else {
+  // const [loading, setloading] = React.useState(true);
+  // React.useEffect(() => {
+  //   setloading(false);
+  // }, []);
+  // if (loading)
+  // {
+  //   return ( 
+  //     <Loader color={Harlequin} styles="h4"/>
+  //   );
+  // }
    return (
     <ThemeProvider theme={defaultTheme}>
      <Paper  style= {{height: "100vh"}} elevation= {0} >
-      <Suspense fallback={<Loader color={Harlequin} styles="h4"/>}>
+      {/* <Suspense fallback={<Loader color={Harlequin} styles="h4"/>}> */}
        <Route />
-       </Suspense>
+       {/* </Suspense> */}
      </Paper>
     </ThemeProvider>
-  );}
+  );
 };
 
 const mapStateToProps = (state) => ({
