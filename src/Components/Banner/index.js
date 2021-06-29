@@ -1,16 +1,11 @@
 import { Grid } from "@material-ui/core";
 import PropTypes from "prop-types";
 import BannerStyles from "./styles";
-import StarFishPinkPattern from "../../assets/patterns/starfish-pink.png";
-import { Colors } from "../../Theme/color.constants";
 import CustomImage from "../CustomImage";
-const Banner = ({
-  // backColor,
-  image,
-  breadCrumb,
-  children,
-  // backgroundPattern,
-}) => {
+import { Colors } from "../../Theme/color.constants";
+import StarFishPinkPattern from "../../assets/patterns/starfish-pink.png";
+
+const Banner = ({ image, breadCrumb, children }) => {
   const { linearBackground } = Colors;
   const { root, imageWrapper, content, patternPosition } = BannerStyles();
   return (
@@ -46,7 +41,6 @@ Banner.defaultProps = {
 
 Banner.propTypes = {
   backColor: PropTypes.string,
-  // children: PropTypes.element,
   breadCrumb: PropTypes.element,
 };
 

@@ -1,17 +1,18 @@
-import { Grid, Typography } from "@material-ui/core";
+import { useState } from "react";
 import PropTypes from "prop-types";
+import { Grid, Typography } from "@material-ui/core";
+import Read from "../ReadMore";
+import CustomButton from "../CustomButton";
+import ReactCardFlip from "react-card-flip";
 import CustomImage from "../CustomImage";
 import PointBadgeStyles from "./style";
-import Read from "../ReadMore";
-import ReactCardFlip from "react-card-flip";
-import { useState } from "react";
-import CustomButton from "../CustomButton";
+
 const PointBadge = ({ horizontal, data }) => {
-  const { color, icon, title, desc } = data;
+  const { image, title, description } = data;
+
   const {
     vertical,
     inline,
-    badge,
     name,
     detail,
     devSec,
@@ -20,84 +21,70 @@ const PointBadge = ({ horizontal, data }) => {
     contentRight,
     VertSec,
   } = PointBadgeStyles();
- 
+
   const [isFlipped, setFlipped] = useState(false);
 
   return (
-
     <>
       {horizontal === false ? (
-        <div  onMouseEnter={() => setFlipped(true)}  onMouseLeave={() => setFlipped(false)}>
-        <ReactCardFlip
-          isFlipped={isFlipped}
-          className={vertical}
-          flipDirection="horizontal"
-
+        <div
+          onMouseEnter={() => setFlipped(true)}
+          onMouseLeave={() => setFlipped(false)}
         >
-          <Grid
-            className={VertSec}
-            onMouseEnter={() => setFlipped(true)}
+          <ReactCardFlip
+            isFlipped={isFlipped}
+            className={vertical}
+            flipDirection="horizontal"
           >
-            <section style={{ backgroundColor: color }} className={supportSub}>
-              <CustomImage
-                alt="icon"
-                width="50px"
-                height="50px"
-                className={badge}
-                src={icon}
-              />
-            </section>
-            <section>
-              <Typography
-                color="textPrimary"
-                variant="subtitle1"
-                className={name}
-                gutterBottom
-              >
-                {title}
-              </Typography>
-            </section>
-          </Grid>
-          <Grid
-            className={contentRight}
-            onMouseLeave={() => setFlipped(false)}
-          >
-            <div >
-              <Typography
-                color="textPrimary"
-                variant="subtitle1"
-               className={name}
-                gutterBottom
-              >
-                {title}
-              </Typography>
+            <Grid className={VertSec} onMouseEnter={() => setFlipped(true)}>
+              <section className={supportSub}>
+                <CustomImage alt="image" width="100%" src={image} />
+              </section>
+              <section>
+                <Typography
+                  color="textPrimary"
+                  variant="subtitle1"
+                  className={name}
+                  gutterBottom
+                >
+                  {title}
+                </Typography>
+              </section>
+            </Grid>
+            <Grid
+              className={contentRight}
+              onMouseLeave={() => setFlipped(false)}
+            >
+              <div>
+                <Typography
+                  color="textPrimary"
+                  variant="subtitle1"
+                  className={name}
+                  gutterBottom
+                >
+                  {title}
+                </Typography>
               </div>
               <div>
-              <Typography
-                style={{ cursor: "pointer" }}
-                variant="subtitle2"
-                className={detail}
-              >
-                {desc} 
-              </Typography>
-            </div>
-            <div>
-              <CustomButton size="small">Read More</CustomButton>
-            </div>
-          </Grid>
-        </ReactCardFlip>
+                <Typography
+                  style={{ cursor: "pointer" }}
+                  variant="subtitle2"
+                  className={detail}
+                >
+                  {description}
+                </Typography>
+              </div>
+              <div>
+                <CustomButton size="small">Read More</CustomButton>
+              </div>
+            </Grid>
+          </ReactCardFlip>
         </div>
       ) : (
         <Grid className={inline}>
           <Grid className={devSec}>
-            <section style={{ backgroundColor: color }} className={supportSub}>
-              <CustomImage
-                alt="icon"
-                width="50px"
-                height="50px"
-                className={badge}
-                src={icon}
-              />
+            <section className={supportSub}>
+              <CustomImage alt="image" width="100%" src={image} />
             </section>
           </Grid>
           <Grid className={contentLeft}>
@@ -114,7 +101,7 @@ const PointBadge = ({ horizontal, data }) => {
               variant="subtitle2"
               component="h6"
             >
-              <Read text={desc} ellipses="... Read More" maxLines={2} />
+              <Read text={description} ellipses="... Read More" maxLines={2} />
             </Typography>
           </Grid>
         </Grid>
@@ -129,12 +116,7 @@ PointBadge.defaultProps = {
 
 PointBadge.propTypes = {
   horizontal: PropTypes.bool,
-  data: PropTypes.shape({
-    color: PropTypes.string.isRequired,
-    // icon: PropTypes.element,
-    title: PropTypes.string.isRequired,
-    desc: PropTypes.string.isRequired,
-  }),
+  data: PropTypes.object.isRequired,
 };
 
 export default PointBadge;

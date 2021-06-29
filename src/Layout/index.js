@@ -69,7 +69,7 @@ const Layout = ({ children }) => {
             {children}
           </Grid>
           <Grid item xs={12}>
-            <Footer />
+            <Footer z/>
           </Grid>
         </Grid>
       )}
