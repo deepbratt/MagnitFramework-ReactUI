@@ -4,11 +4,10 @@ import { Card, CardContent, Grid, Typography } from "@material-ui/core";
 import BreadCrumb from "../../Components/BreadCrumb";
 import CustomImage from "../../Components/CustomImage";
 import CustomTitle from "../../Pages/Section/CustomTitle";
-import { splitString } from "../../Utils/globalFunctions";
 
 const AboutMainSection = (props) => {
-  const { data, width, breadcrumbData } = props;
-  const bannerText = splitString(data.subHeading, "<br/>");
+  const { data, width, breadcrumbData, bannerText } = props;
+  
 
   const classes = useStyles();
   const { root, cardSec, breadCrumbStyles, paragraphStyle, card } = classes;

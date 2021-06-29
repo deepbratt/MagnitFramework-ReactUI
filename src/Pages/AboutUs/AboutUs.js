@@ -7,6 +7,7 @@ import Main from "../../Sections/MainComponent/AboutMainSection";
 import MissionContext from "../../Sections/Mission&Vision/MissionContext";
 import { getPageDataApi } from "../../Utils/APIs/pagesApi";
 import { useStyles } from "../../Sections/MainComponent/mainStyles";
+import { splitString } from "../../Utils/globalFunctions";
 
 const AboutUs = () => {
   const [metaData, setMetaData] = useState({});
@@ -46,6 +47,14 @@ const AboutUs = () => {
     console.log("useEffect");
   }, [getPageData]);
 
+  const getBannerText = () => {
+    let bannerText = splitString(
+      sections.banner.dataArray[0].subHeading,
+      "<br/>"
+    );
+    return bannerText;
+  };
+
   return (
     <>
       {isLoading ? (
@@ -68,6 +77,7 @@ const AboutUs = () => {
             <Main
               width="650px"
               data={sections.banner.dataArray[0]}
+              bannerText={getBannerText()}
               class={hero}
               card={true}
               breadcrumbData={breadcrumbs}
@@ -84,7 +94,10 @@ const AboutUs = () => {
             <MissionContext data={sections.ourObjectives.dataArray} />
           </Grid>
           <Grid style={{ order: sections.benefits.order }} item md={12} xs={12}>
-            <WhyUsContainer title={sections.benefits.title} data={sections.benefits.dataArray} />
+            <WhyUsContainer
+              title={sections.benefits.title}
+              data={sections.benefits.dataArray}
+            />
           </Grid>
         </Grid>
       )}
