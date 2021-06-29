@@ -1,16 +1,14 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { Grid } from "@material-ui/core";
 import Main from "./Main";
-import { banner } from "../../Utils/Constants/Language/en/CareersData";
-import Opportunities from "./OpportunityContext";
 import Section from "../Section";
-import { Data, Array } from "../../Utils/Constants/Language/en/CareersData";
-import PointList from "../../Components/PointBadge/PointList";
-import CustomTitle from "../Section/CustomTitle";
-import { useStyles } from "../../Sections/MainComponent/mainStyles";
-import { getPageDataApi } from "../../Utils/APIs/pagesApi";
-import MetaTags from "../../Components/MetaTags";
+import Opportunities from "./OpportunityContext";
 import { Loader } from "../../Components/loader";
+import CustomTitle from "../Section/CustomTitle";
+import MetaTags from "../../Components/MetaTags";
+import PointList from "../../Components/PointBadge/PointList";
+import { getPageDataApi } from "../../Utils/APIs/pagesApi";
+import { useStyles } from "../../Sections/MainComponent/mainStyles";
 
 const CareerContainer = () => {
   const { hero } = useStyles();
@@ -39,6 +37,18 @@ const CareerContainer = () => {
     console.log("useEffect");
   }, [getPageData]);
 
+  const jobBenifitsDataArray = (jobBenifitsData) => {
+    let data = jobBenifitsData.map(({ title, text, icon, buttonLabel, link }) => ({
+      title: title,
+      description: text,
+      image: icon,
+      buttonLabel: buttonLabel,
+      buttonLink: link,
+    }));
+    console.log("newData", data);
+    return data;
+  };
+
   return (
     <>
       {isLoading ? (
@@ -58,11 +68,7 @@ const CareerContainer = () => {
             md={12}
             xs={12}
           >
-            <Main
-              width="550px"
-              hero={sections.banner.dataArray[0].image}
-              class={hero}
-            />
+            <Main width="550px" data={sections.banner} class={hero} />
           </Grid>
           <Grid
             style={{ order: sections.jobBenifits.order }}
@@ -78,7 +84,7 @@ const CareerContainer = () => {
               />
               <PointList
                 lgBreakpoint={3}
-                data={sections.jobBenifits.dataArray}
+                data={jobBenifitsDataArray(sections.jobBenifits.dataArray)}
               />
             </Section>
           </Grid>

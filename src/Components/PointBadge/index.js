@@ -74,9 +74,11 @@ const PointBadge = ({ horizontal, data }) => {
                   {description}
                 </Typography>
               </div>
-              <div>
-                <CustomButton size="small">Read More</CustomButton>
-              </div>
+              {data.buttonLabel && (
+                <div>
+                  <CustomButton size="small">{data.buttonLabel}</CustomButton>
+                </div>
+              )}
             </Grid>
           </ReactCardFlip>
         </div>

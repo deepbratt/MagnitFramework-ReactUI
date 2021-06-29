@@ -10,12 +10,12 @@ import { useStyles } from "../Sections/HomePageSections/ServicesContext/services
 
 const Flip = ({ data }) => {
   const classes = useStyles();
-
+  const [isFlipped, setIsFlipped] = React.useState(false);
   const { whiteColor } = Colors;
+  const { image, title, description, buttonLabel, buttonLink } = data;
+
   const { devSec, vertical, name, detail, supportSub, VertSec, badge } =
     classes;
-  const [isFlipped, setIsFlipped] = React.useState(false);
-  const { image, title, description, buttonLabel, buttonLink } = data;
   //   Use this Card for Services Section pass data from its Parent Contanier to here
   return (
     <>
@@ -105,11 +105,10 @@ Flip.defaultProps = {
 Flip.propTypes = {
   horizontal: PropTypes.bool,
   data: PropTypes.shape({
-    color: PropTypes.string.isRequired,
-    fill: PropTypes.string,
-    // icon: PropTypes.element,
     title: PropTypes.string.isRequired,
-    desc: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    buttonLabel: PropTypes.string,
+    buttonLink: PropTypes.string,
     redirect: PropTypes.string.isRequired,
   }),
 };

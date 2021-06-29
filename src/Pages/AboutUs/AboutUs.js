@@ -1,14 +1,12 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { Grid } from "@material-ui/core";
+import WhyUsContainer from "./WhyUsContainer";
+import { Loader } from "../../Components/loader";
+import MetaTags from "../../Components/MetaTags";
 import Main from "../../Sections/MainComponent/AboutMainSection";
 import MissionContext from "../../Sections/Mission&Vision/MissionContext";
-import WhyUsContainer from "./WhyUsContainer";
-import { MainData } from "../../Utils/Constants/Language/AboutUsData";
 import { getPageDataApi } from "../../Utils/APIs/pagesApi";
 import { useStyles } from "../../Sections/MainComponent/mainStyles";
-import MetaTags from "../../Components/MetaTags";
-import { Typography } from "@material-ui/core";
-import { Loader } from "../../Components/loader";
 
 const AboutUs = () => {
   const [metaData, setMetaData] = useState({});
@@ -86,7 +84,7 @@ const AboutUs = () => {
             <MissionContext data={sections.ourObjectives.dataArray} />
           </Grid>
           <Grid style={{ order: sections.benefits.order }} item md={12} xs={12}>
-            <WhyUsContainer data={sections.benefits.dataArray} />
+            <WhyUsContainer title={sections.benefits.title} data={sections.benefits.dataArray} />
           </Grid>
         </Grid>
       )}
