@@ -72,13 +72,13 @@ const Services = () => {
           className={leftPattern}
           src={PatternLeft}
           alt=""
-          srcSet=""
+          
         />
         <CustomImage
           className={rightPattern}
           src={StarFishPattern}
           alt=""
-          srcSet=""
+          
         />
         <Section>
           <CustomTitle

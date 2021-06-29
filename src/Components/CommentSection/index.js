@@ -61,47 +61,47 @@ const CommentSection = ({ children, data, order }) => {
             className={squareDotsPattern}
             src={SquareDottedPattern}
             alt=""
-            srcSet=""
+            
           />
           <img
             className={yellowCommaPattern}
             src={yellowComma}
             alt=""
-            srcSet=""
+            
           />
-          <img className={commaPattern} src={comma} alt="" srcSet="" />
-          <img className={pinkDotPattern} src={pinkDot} alt="" srcSet="" />
-          <img className={yellowDotPattern} src={yellowDot} alt="" srcSet="" />
+          <img className={commaPattern} src={comma} alt=""  />
+          <img className={pinkDotPattern} src={pinkDot} alt=""  />
+          <img className={yellowDotPattern} src={yellowDot} alt=""  />
           <img
             className={miniYellowPattern}
             src={miniYellow}
             alt=""
-            srcSet=""
+            
           />
-          <img className={smallDotPattern} src={smallDot} alt="" srcSet="" />
+          <img className={smallDotPattern} src={smallDot} alt=""  />
           <img
             className={leftStarFishPattern}
             src={StarFishPinkPattern}
             alt=""
-            srcSet=""
+            
           />
           <img
             className={rightStarFishPattern}
             src={StarFishPattern}
             alt=""
-            srcSet=""
+            
           />
           <img
             className={leftDottedPattern}
             src={DottedPattern}
             alt=""
-            srcSet=""
+            
           />
           <img
             className={rightDottedPattern}
             src={TopDottedPattern}
             alt=""
-            srcSet=""
+            
           />
           <ReviewSlider slides={data} showArrows={false} />
         </div>

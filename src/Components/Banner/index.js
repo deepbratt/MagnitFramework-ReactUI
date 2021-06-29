@@ -24,7 +24,7 @@ const Banner = ({ image, breadCrumb, children }) => {
             className={patternPosition}
             src={StarFishPinkPattern}
             alt=""
-            srcSet=""
+            
           />
           <Grid className={imageWrapper}>
             <CustomImage src={image} alt="" />
