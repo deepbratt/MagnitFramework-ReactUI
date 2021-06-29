@@ -6,8 +6,9 @@ import Read from "../ReadMore";
 import ReactCardFlip from "react-card-flip";
 import { useState } from "react";
 import CustomButton from "../CustomButton";
-const PointBadge = ({ horizontal, data }) => {
-  const { color, icon, title, desc } = data;
+import {webDevServicesData} from "../../Pages/WebServices/webDevServicesData"
+const PointBadge = ({ horizontal, data}) => {
+  const { color, icon, title, desc,description,image,buttonLabel } = data;
   const {
     vertical,
     inline,
@@ -38,15 +39,16 @@ const PointBadge = ({ horizontal, data }) => {
             className={VertSec}
             onMouseEnter={() => setFlipped(true)}
           >
-            <section style={{ backgroundColor: color }} className={supportSub}>
+
+              <section  className={supportSub}>
               <CustomImage
                 alt="icon"
-                width="50px"
-                height="50px"
+                width="100%"
                 className={badge}
-                src={icon}
+                src={image}
               />
             </section>
+    
             <section>
               <Typography
                 color="textPrimary"
@@ -78,11 +80,11 @@ const PointBadge = ({ horizontal, data }) => {
                 variant="subtitle2"
                 className={detail}
               >
-                {desc} 
+                {description} 
               </Typography>
             </div>
             <div>
-              <CustomButton size="small">Read More</CustomButton>
+              <CustomButton size="small">{buttonLabel}</CustomButton>
             </div>
           </Grid>
         </ReactCardFlip>
@@ -90,13 +92,12 @@ const PointBadge = ({ horizontal, data }) => {
       ) : (
         <Grid className={inline}>
           <Grid className={devSec}>
-            <section style={{ backgroundColor: color }} className={supportSub}>
+       
+           <section className={supportSub}>
               <CustomImage
-                alt="icon"
-                width="50px"
-                height="50px"
-                className={badge}
-                src={icon}
+              alt="icon"
+              height="100%"
+              src={image}
               />
             </section>
           </Grid>
@@ -114,7 +115,7 @@ const PointBadge = ({ horizontal, data }) => {
               variant="subtitle2"
               component="h6"
             >
-              <Read text={desc} ellipses="... Read More" maxLines={2} />
+              <Read text={description} ellipses="... Read More" maxLines={2} />
             </Typography>
           </Grid>
         </Grid>

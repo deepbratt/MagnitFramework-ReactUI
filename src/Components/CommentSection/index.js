@@ -21,8 +21,11 @@ import Avatar3 from "../../assets/services/Avatar3.png";
 import Avatar4 from "../../assets/services/Avatar4.png";
 import Avatar5 from "../../assets/services/Avatar5.png";
 import Avatar6 from "../../assets/services/Avatar6.png";
+import useApi from "../../Utils/webDevelopmentApi"
 
-const CommentSection = ({ children }) => {
+
+const CommentSection = ({ children,data }) => {
+
   const { aliceBlue } = Colors;
   const {
     root,
@@ -105,7 +108,7 @@ const CommentSection = ({ children }) => {
             alt=""
             srcSet=""
           />
-          <ReviewSlider showArrows={false} />
+          <ReviewSlider slides={data}  showArrows={false} />
         </div>
       </Section>
     </Grid>

@@ -10,11 +10,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const slideArr = reviewSliderText.map((a, index) => {
-  return <ReviewCard key={index} cardData={a} />;
-});
-
-const ReviewSlider = ({ slides, showArrows, showDots, indicatorsPosition, itemsPerSlide }) => {
+const ReviewSlider = ({ slides, showArrows, showDots, indicatorsPosition, itemsPerSlide,order }) => {
   const visible = !showDots ? "hidden" : "visible";
   const theme = useTheme();
   const isMDDown = useMediaQuery(theme.breakpoints.up('md'));
@@ -63,6 +59,7 @@ const ReviewSlider = ({ slides, showArrows, showDots, indicatorsPosition, itemsP
     <Slider dots={true}
     infinite={true}
     speed= {500}
+    autoplay
     slidesToShow= {isMDDown ? itemsPerSlide: 1}
     slidesToScroll={1} arrows={false} className={sliderRoot}>
                 {slides.map((slide, i) => {
@@ -73,7 +70,8 @@ const ReviewSlider = ({ slides, showArrows, showDots, indicatorsPosition, itemsP
             key={i+"2nd"}
             style={{
               display: "flex",
-              height:"100%"
+              height:"100%",
+              order: order
             }}
           >
             {slide}
@@ -85,7 +83,7 @@ const ReviewSlider = ({ slides, showArrows, showDots, indicatorsPosition, itemsP
 };
 
 ReviewSlider.defaultProps = {
-  slides: slideArr,
+
   showArrows: true,
   showDots: true,
   itemsPerSlide:1

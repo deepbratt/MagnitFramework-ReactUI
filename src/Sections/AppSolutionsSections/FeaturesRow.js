@@ -38,7 +38,6 @@ const FeaturesRow = (props) => {
               xs={12}
               md={4}
               lg={2}
-              style={{ backgroundColor: text.color }}
               className={supportSub}
             >
               <CustomImage alt="icon-data" src={text.icon} />
@@ -48,7 +47,7 @@ const FeaturesRow = (props) => {
               <Typography color="textPrimary" variant="h5">
                 {text.title}
               </Typography>
-              <Typography variant="body1">{text.desc}</Typography>
+              <Typography variant="body1">{text.text}</Typography>
             </Grid>
           </Grid>
         );

@@ -31,7 +31,7 @@ const Banner = ({
             alt=""
             srcSet=""
           />
-          <Grid className={imageWrapper}>
+            <Grid className={imageWrapper}>
             <CustomImage src={image} alt="" />
           </Grid>
         </Grid>

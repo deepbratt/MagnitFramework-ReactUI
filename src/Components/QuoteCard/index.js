@@ -10,17 +10,17 @@ import CardStyle from "./style";
 import CustomImage from "../CustomImage";
 
 const QuoteCard = ({ cardData,shadow }) => {
-  const { text, authName, authImg } = cardData;
+  const { review, clientName, clientImage,rating, projectName } = cardData;
   const { root, author, content, startQuote, large, endQuote } = CardStyle();
   return (
     <Card className={root} style={{boxShadow:{shadow}}}>
       <div className={author}>
         <div>
-          <Avatar alt="Remy Sharp" src={authImg} className={large} />
+          <Avatar alt="Remy Sharp" src={clientImage} className={large} />
         </div>
         <div>
-          <Typography variant="h5">By {authName}</Typography>
-          <Rating name="read-only" value={5} readOnly />
+          <Typography variant="h5">By {clientName}, {projectName}</Typography>
+          <Rating name="read-only" value={rating} readOnly />
         </div>
       </div>
 
@@ -29,7 +29,7 @@ const QuoteCard = ({ cardData,shadow }) => {
           <CustomImage className={startQuote} src={StartQuote} alt="Start Quote Icon" />
           <CustomImage className={startQuote} src={StartQuote} alt="Start Quote Icon" />
           <Typography align="left" variant="body2" component="p" paragraph>
-            {text}
+            {review}
           </Typography>
         </CardContent>
         <div style={{ display: "flex", justifyContent: "flex-end" }}>

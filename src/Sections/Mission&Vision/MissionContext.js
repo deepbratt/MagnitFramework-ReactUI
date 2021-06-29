@@ -13,11 +13,10 @@ import CustomImage from "../../Components/CustomImage";
 import Section from "../../Pages/Section";
 import { Colors } from "../../Theme/color.constants";
 
-const MissionContext = () => {
+const MissionContext = ({data}) => {
   const { card, root, Icon, underlined, leftPattern, rightPattern } =
     missionStyles();
   const { firstTitle, secondTitle, missionText, visionText } = MidSection;
-  const { mission, vision } = MainData;
   const {skyBlue}= Colors;
   return (
     <>
@@ -31,16 +30,18 @@ const MissionContext = () => {
         justify="center"
       >
        
-
-        <Grid style={{ zIndex: 1, display:"flex" }} item xs={11} md={5} lg={4}>
+{/* 
+       {data.map((data,index)=>{
+         return(
+          <Grid key = {index} style={{ zIndex: 1, display:"flex" }} item xs={11} md={5} lg={4}>
           <Card className={card}>
             <Grid item xs={12}>
               <CardContent>
                 <Grid item xs={12}>
-                  <CustomImage className={Icon} src={mission} alt="Icon" />
+                  <CustomImage className={Icon} src={data.icon} alt="Icon" />
                 </Grid>
                 <Grid item xs={12}>
-                  <Typography variant="h4">{firstTitle}</Typography>
+                  <Typography variant="h4">{data.title}</Typography>
                 </Grid>
                 <Grid item xs={12}>
                   <Typography
@@ -48,7 +49,7 @@ const MissionContext = () => {
                     variant="body2"
                     gutterBottom
                   >
-                    {missionText}
+                    {data.text}
                   </Typography>
                 </Grid>
                 <Grid container justify="center">
@@ -58,33 +59,10 @@ const MissionContext = () => {
             </Grid>
           </Card>
         </Grid>
+         )
+       })} */}
 
-        <Grid style={{ zIndex: 1, display:"flex" }} item xs={11} md={5} lg={4}>
-          <Card className={card} style={{display:"flex", alignItems:"start"}}>
-            <Grid item xs={12}>
-              <CardContent>
-                <Grid item xs={12}>
-                  <CustomImage className={Icon} src={vision} alt="Icon" />
-                </Grid>
-                <Grid item xs={12}>
-                  <Typography variant="h4">{secondTitle}</Typography>
-                </Grid>
-                <Grid item xs={12}>
-                  <Typography
-                    color="textSecondary"
-                    variant="body2"
-                    gutterBottom
-                  >
-                    {visionText}
-                  </Typography>
-                </Grid>
-                <Grid container justify="center">
-                  <Grid className={underlined} item xs={3} />
-                </Grid>
-              </CardContent>
-            </Grid>
-          </Card>
-        </Grid>
+ 
       </Grid>
       </Section>
     </>

@@ -22,7 +22,7 @@ const Flip = ({ data }) => {
     badge,
   } = classes;
   const [isFlipped, setIsFlipped] = React.useState(false);
-  const { color, fill, icon, title, desc, redirect } = data;
+  const { color, fill, image, title, description, buttonLink,buttonLabel } = data;
   //   Use this Card for Services Section pass data from its Parent Contanier to here
   return (
     <>
@@ -48,11 +48,9 @@ const Flip = ({ data }) => {
             >
               <CustomImage
                 alt="icon"
-                width="50px"
-                height="50px"
-                src={icon}
+                width="100%"
+                src={image}
                 style={{ filter: fill }}
-                className={badge}
               />
             </div>
             <div>
@@ -87,21 +85,19 @@ const Flip = ({ data }) => {
                 className={detail}
                 paragraph={true}
               >
-                {desc}
+                {description}
               </Typography>
             </div>
             <div>
               <CustomButton size="small">
-                {" "}
                 <NavLink
-                  to={redirect}
+                  to={buttonLink}
                   style={{
-                    marginLeft: "10px",
                     textDecoration: "none",
                     color: whiteColor,
                   }}
                 >
-                  Read More
+                  {buttonLabel}
                 </NavLink>
               </CustomButton>
             </div>

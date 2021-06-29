@@ -26,7 +26,7 @@ const Container = (props) => {
             <Card style={{ height: "100%" }}>
               <CustomImage src={items.image} style={{ width: "100%" }} />
               <CardContent className={cardContent}>
-                <Typography variant="h5" >{items.subtitle}</Typography>
+                <Typography variant="h5" >{items.title}</Typography>
               </CardContent>
             </Card>
           </Grid>

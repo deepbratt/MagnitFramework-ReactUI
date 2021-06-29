@@ -1,19 +1,44 @@
 import { Grid, Typography } from "@material-ui/core";
 import Lottie from "react-lottie";
+import axios from "axios";
+import { useState,useEffect } from "react";
 import CertificationListStyles from "./style";
 
 const CertificationList = ({ root, data, toRight }) => {
   const { text, imageWrapper, leftAlignment, rightAlignment } =
     CertificationListStyles();
-  const { title, content, animationData } = data;
+  const { title, description, jsonFile } = data;
+
+  const [jsonData, setJsonData] = useState()
+  const [mounted, setIsMounted] = useState()
+
+
+  useEffect(() => {
+    if(mounted && jsonData){
+      setIsMounted(mounted)
+    }
+  }, [mounted, jsonData]);
+
+  useEffect(()=>{
+    getJsonData().then(res=>{
+      setJsonData(res)
+    })
+  },[])
+
+  async function getJsonData(){
+    let jsonResponse = await axios.get(jsonFile)
+    console.log(jsonResponse)
+    return jsonResponse.data
+  }
   const defaultOptions = {
     loop: true,
     autoplay: true,
-    animationData: animationData.default,
+    animationData: jsonData,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
+
   return (
     <Grid container className={`${root}`}>
       <Grid item xs={12} md={6}>
@@ -22,7 +47,7 @@ const CertificationList = ({ root, data, toRight }) => {
             {title}
           </Typography>
           <Typography variant="body2" component="p">
-            {content}
+            {description}
           </Typography>
         </div>
       </Grid>

@@ -4,24 +4,15 @@ import CustomTitle from "../Section/CustomTitle";
 import { Link } from "react-router-dom";
 import { Typography } from "@material-ui/core";
 import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
-import {
-  OurExpertEngineers,
-  webDevServicesData as servicesData,
-  WeHireTheMost,
-  WeProvideExceptional,
-} from "./webDevServicesData";
-import { whyHireData as hireUsData } from "./whyHireData";
 import { Colors } from "../../Theme/color.constants";
 import Banner from "../../Components/Banner";
 import {
   DoYouWant,
-  ServicesSectionTitle,
-  WhyHireSectionTitle,
 } from "./constants";
-
+import useApi from "../../Utils/webDevelopmentApi"
+import DocumentMeta from "react-document-meta";
 import StarFishPattern from "../../assets/patterns/starfishBlue.png";
 import ServicesSectionStyles from "./style";
-import BannerImage from "../../assets/services/BannerImage.png";
 import PatternLeft from "../../assets/PatternLeft.png";
 import BreadCrumb from "../../Components/BreadCrumb";
 import CommentSection from "../../Components/CommentSection";
@@ -29,9 +20,34 @@ import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
 import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
 import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/OurWorkSectionPattern";
-
+import ReviewCard from "../../Components/ReviewSlider/ReviewCard";
+import { Grid } from "@material-ui/core";
 const Services = () => {
   const { aliceBlue, linearBackground, BlueRibbon } = Colors;
+  const {data,review,metaData,banner,loading} = useApi()
+  const payload = data.sections
+
+  const { title, description, canonical, keywords } = metaData;
+  const meta = {
+    title: title,
+    description: description,
+    canonical: canonical,
+    meta: {
+      charset: "utf-8",
+      name: {
+        keywords: keywords,
+      },
+    },
+  };
+  const slides = review.map((data, index) => (
+    <Grid
+      key={index}
+      style={{ display: "flex", flexDirection: "column", height: "100%"}}
+      alignItems="center"
+    >
+      <ReviewCard cardData={data} />
+    </Grid>
+  ));
 
   const breadCrumData = [
     {
@@ -45,24 +61,33 @@ const Services = () => {
   ];
 
   const { textColor, leftPattern, rightPattern } = ServicesSectionStyles();
-
+ 
+ if(loading) return <p>Loading</p>
   return (
-    <CommentSection>
-      <Banner
-        image={BannerImage}
+    <DocumentMeta {...meta}>
+    <CommentSection data={slides}>
+      {banner.map((data)=>{
+        return(
+          <>
+          <Banner
+        image={data.image}
         backColor={linearBackground}
         breadCrumb={<BreadCrumb links={breadCrumData} />}
       >
-        <Typography variant="h1" gutterBottom className={textColor}>
-          {WeHireTheMost}
+          <Typography variant="h1" gutterBottom className={textColor}>
+          {data.heading}
         </Typography>
         <Typography variant="h5" gutterBottom className={textColor}>
-          {WeProvideExceptional}
+          {data.subHeading}
         </Typography>
         <span>
-          <CustomButton>Get Started</CustomButton>
+          <CustomButton>{data.buttonLabel}</CustomButton>
         </span>
-      </Banner>
+        </Banner>
+          </>
+        )
+      })}
+   
       <div style={{ position: "relative" }}>
         <CustomImage
           className={leftPattern}
@@ -79,22 +104,22 @@ const Services = () => {
         <Section>
           <CustomTitle
             style={{ marginBottom: "20px" }}
-            text={ServicesSectionTitle}
+            text={payload.services.title}
             underlined={true}
           />
-          <CustomTitle subTitle={OurExpertEngineers} />
-          <PointList data={servicesData} horizontal={false} />
+          <CustomTitle subTitle={payload.services.subTitle} />
+          <PointList data={payload.services.dataArray} horizontal={false} />
         </Section>
       </div>
       <Section patterns={ourWorkSectionPatterns} backColor={aliceBlue}>
-        <CustomTitle underlined={true} text={WhyHireSectionTitle} />
+        <CustomTitle underlined={true} text={payload.benefits.title} />
 
-        <PointList data={hireUsData} horizontal={true} lgBreakpoint={6} />
+        <PointList data={payload.benefits.dataArray} horizontal={true} lgBreakpoint={6} />
       </Section>
       <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
         <GlanceSection
-          title={Data.title}
-          data={Data.arr}
+          title={payload.ourWork.title}
+          data={payload.ourWork.dataArray}
           buttonText={Data.buttonText}
         />
       </Section>
@@ -107,6 +132,7 @@ const Services = () => {
         </span>
       </Section>
     </CommentSection>
+    </DocumentMeta>
   );
 };
 

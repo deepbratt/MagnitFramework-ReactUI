@@ -8,42 +8,95 @@ import AdminContext from "../../Sections/AppSolutionsSections/AdminContext";
 import CommentSection from "../../Components/CommentSection";
 import Section from "../../Pages/Section";
 import PointList from "../../Components/PointBadge/PointList";
-import {
-  benefitsHeading,
-  benefitsData,
-} from "../../Utils/Constants/Language/en/SolutionsPageData";
+import ReviewCard from "../../Components/ReviewSlider/ReviewCard";
 import CustomButton from "../../Components/CustomButton";
 import { Link } from "react-router-dom";
 import { DoYouWant } from "../WebServices/constants";
 import CustomTitle from "../../Pages/Section/CustomTitle";
 import { Colors } from "../../Theme/color.constants";
+import useApi from "../../Utils/appSolutionsApi";
+import DocumentMeta from "react-document-meta";
 import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/OurWorkSectionPattern";
 const Solutions = () => {
   const { root } = ServicesSectionStyles();
   const { MoonWhite, aliceBlue } = Colors;
+  const { data, review, banner, metaData, loading } = useApi();
+  const payload = data.sections;
+  const { title, description, canonical, keywords } = metaData;
+  const meta = {
+    title: title,
+    description: description,
+    canonical: canonical,
+    meta: {
+      charset: "utf-8",
+      name: {
+        keywords: keywords,
+      },
+    },
+  };
+
+  const slides = review.map((data, index) => (
+    <Grid
+      key={index}
+      style={{ display: "flex", flexDirection: "column", height: "100%" }}
+      alignItems="center"
+    >
+      <ReviewCard cardData={data} />
+    </Grid>
+  ));
+
+  if (loading) return <p>{loading}</p>;
   return (
     <>
-      <CommentSection>
-        <Grid container>
-          <Grid item lg={12} md={12} xs={12} className={root}>
-            <Banner />
+      <DocumentMeta {...meta}>
+        <CommentSection data={slides}>
+          <Grid
+            style={{ order: payload.banner.order }}
+            item
+            lg={12}
+            md={12}
+            xs={12}
+            className={root}
+          >
+            <Banner data={banner} />
           </Grid>
           <Section>
-            <Grid item xs={12}>
-              <FeaturesSection />
+            <Grid style={{ order: payload.appSolutions.order }} item xs={12}>
+              <FeaturesSection
+                title={payload.appSolutions.title}
+                data={payload.appSolutions.dataArray}
+              />
             </Grid>
           </Section>
           <Section backColor={MoonWhite}>
-            <AdminContext />
+            <AdminContext
+              order={payload.appAdminPanel.order}
+              text={payload.appAdminPanel.title}
+              data={payload.appAdminPanel.dataArray}
+            />
           </Section>
           <Section>
-            <Grid item lg={12} md={12} xs={12}>
-              <StairCaseContext />
+            <Grid
+              style={{ order: payload.howitWorks.order }}
+              item
+              lg={12}
+              md={12}
+              xs={12}
+            >
+              <StairCaseContext
+                text={payload.howitWorks.title}
+                data={payload.howitWorks.dataArray}
+              />
             </Grid>
           </Section>
           <Section patterns={ourWorkSectionPatterns} backColor={aliceBlue}>
-            <CustomTitle underlined={true} text={benefitsHeading} />
-            <PointList data={benefitsData} horizontal={true} lgBreakpoint={6} />
+            <CustomTitle underlined={true} text={payload.benefits.title} />
+            <PointList
+              order={payload.benefits.order}
+              data={payload.benefits.dataArray}
+              horizontal={true}
+              lgBreakpoint={6}
+            />
           </Section>
           <Grid item lg={12} md={12} xs={12}>
             <Section>
@@ -55,8 +108,8 @@ const Solutions = () => {
               </span>
             </Section>
           </Grid>
-        </Grid>
-      </CommentSection>
+        </CommentSection>
+      </DocumentMeta>
     </>
   );
 };

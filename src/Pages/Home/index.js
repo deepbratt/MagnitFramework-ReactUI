@@ -1,5 +1,6 @@
 import Grid from "@material-ui/core/Grid";
 import { connect } from "react-redux";
+import DocumentMeta from "react-document-meta";
 import Slide from "../../Components/Slider/Container";
 import Solutions from "../../Sections/HomePageSections/SolutionsContext/Solutions";
 import PartnerContext from "../../Sections/HomePageSections/PartnerWithUsContext/Maincontainer";
@@ -13,51 +14,54 @@ import Image2 from "../../assets/images/awardAccredationSection/image 3.png";
 import Image3 from "../../assets/images/awardAccredationSection/image 4.png";
 import Image4 from "../../assets/images/awardAccredationSection/image 5.png";
 import Image5 from "../../assets/images/awardAccredationSection/image 6.png";
-import { cards } from "./cardData";
 import CustomTitle from "../../Pages/Section/CustomTitle";
 import startQuote from "../../assets/images/cards/startQuote.png";
 import endQuote from "../../assets/images/cards/EndingQuoteBlue.png";
 import BackGroudnPatternLeft from "../../assets/OurBlogs/LatestBlogPattern.png";
 import BackGroudnPatternRight from "../../assets/OurBlogs/LatestBlogPatternRight.png";
 import { Colors } from "../../Theme/color.constants";
-import {
-  ServicesSectionTitle,
-  AwardSectionTitle,
-  ContactUsTitle,
-  TrainingAndCertificationSectionTitle,
-  WhatDoClientSaySectionTitle,
-} from "./constants";
-import { trainingAndCertificationText as TCData } from "../../Utils/Constants/Language";
-import FirstColumn from "../../Components/QuoteCard/FirstColumn";
-import SecondColumn from "../../Components/QuoteCard/SecondColumn";
-import ThirdColumn from "../../Components/QuoteCard/ThirdColumn";
+import { ContactUsTitle } from "./constants";
 import CertificationList from "../../Components/certificationList";
 import HomeStyles from "./style";
 import QuoteCard from "../../Components/QuoteCard";
 import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
 import ReviewSlider from "../../Components/ReviewSlider";
-import { ServicesData } from "../../Utils/Constants/Language/en/ServicesText";
 import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
-import {
-  SolutionsSectionHeaders,
-  SolutionsSectionContent,
-} from "../../Utils/Constants/Language/en/SolutionsText";
 import CardData from "../../Components/Card";
-import ServicesOffered from "../../Sections/HomePageSections/ServicesContext/Services";
+import useApi from "../../Utils/homePageApi";
+import {Loader} from "../../Components/loader/index"
 export const AwardSectionImages = [Image1, Image2, Image3, Image4, Image5];
 
 const Home = (props) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { leftRoot, rightRoot, leftPattern, rightPattern } = HomeStyles();
   const rootClasses = [rightRoot, leftRoot, rightRoot, leftRoot];
-
+  const { data, loading, review, metaData } = useApi();
+  const payload = data.sections;
   const { Mirage, BlueRibbon } = Colors;
-  const WhyUsSlides = cards.map((data, index) => (
-              <Grid key={index} style={{display:"flex", flexDirection:"column", height:"100%"}} alignItems="center">
-              <QuoteCard cardData={data} />
-              </Grid>
-          ))
+  const { title, description, canonical, keywords } = metaData;
+  const meta = {
+    title: title,
+    description: description,
+    canonical: canonical,
+    meta: {
+      charset: "utf-8",
+      name: {
+        keywords: keywords,
+      },
+    },
+  };
+
+  const WhyUsSlides = review.map((data, index) => (
+    <Grid
+      key={index}
+      style={{ display: "flex", flexDirection: "column", height: "100%" ,order: payload.reviews.order}}
+      alignItems="center"
+    >
+      <QuoteCard cardData={data} />
+    </Grid>
+  ));
 
   const ourWorkSectionPatterns = [
     {
@@ -106,110 +110,136 @@ const Home = (props) => {
     setIsSubmitted(true);
   }
 
+  if(loading) return <p>Loading</p>
+
   return (
-    <div className="App">
-      <Grid item md={12} xs={12}>
-        <Slide />
-      </Grid>
-      <Grid item md={12} xs={12}>
-        <Section>
-          <CustomTitle underlined={true} text={ServicesSectionTitle} />
-          <CardData data={ServicesData} />
-        </Section>
-      </Grid>
-      <Grid item md={12} xs={12}>
-        <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
-          <Solutions
-            titles={SolutionsSectionHeaders}
-            content={SolutionsSectionContent}
-          />
-        </Section>
-      </Grid>
-      <Grid item xs={12}>
-        <PartnerContext />
-      </Grid>
-      <Grid item md={12} xs={12}>
-        <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
-          <GlanceSection
-            title={Data.title}
-            data={Data.arr}
-            buttonText={Data.buttonText}
-          />
-        </Section>
-      </Grid>
-      {/* TRAINING AND CERTIFICATION */}
-      <Section>
-        <Grid container direction="row">
-          <Grid item lg={12} md={12} xs={12}>
-            <CustomTitle
-              underlined={true}
-              text={TrainingAndCertificationSectionTitle}
-            />
-          </Grid>
-          {TCData &&
-            TCData.filter((card, idx) => idx < 4).map((card, index) => (
-              <Grid key={index+"4th"} item xs={12}>
-                <CertificationList
-                  toRight={index % 2 === 0 ? false : true}
-                  root={rootClasses[index]}
-                  data={card}
-                />
-              </Grid>
-            ))}
+    <DocumentMeta {...meta}>
+      <div className="App">
+        <Grid style={{ order: payload.homeSlider.order }} item md={12} xs={12}>
+          <Slide data={payload} />
         </Grid>
-        <CustomButton>See More</CustomButton>
-      </Section>
-      {/* NEWSLETTER SECTION
+        <Grid style={{ order: payload.services.order }} item md={12} xs={12}>
+          <Section>
+            <CustomTitle underlined={true} text={payload.services.title} />
+            <CardData data={payload.services.dataArray} />
+          </Section>
+        </Grid>
+        <Grid
+          style={{ order: payload.ourSolutions.order }}
+          item
+          md={12}
+          xs={12}
+        >
+          <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
+            <Solutions
+              title={payload.ourSolutions.title}
+              content={payload.ourSolutions.dataArray}
+              subTitle={payload.ourSolutions.subTitle}
+            />
+          </Section>
+        </Grid>
+        <Grid style={{ order: payload.benefits.order }} item xs={12}>
+          <PartnerContext
+            title={payload.benefits.title}
+            data={payload.benefits.dataArray}
+          />
+        </Grid>
+        <Grid style={{ order: payload.ourWork.order }} item md={12} xs={12}>
+          <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
+            <GlanceSection
+              title={payload.ourWork.title}
+              data={payload.ourWork.dataArray}
+              buttonText={Data.buttonText}
+            />
+          </Section>
+        </Grid>
+        {/* TRAINING AND CERTIFICATION */}
+        <Section>
+          <Grid
+            style={{ order: payload.trainingCertification.order }}
+            container
+            direction="row"
+          >
+            <Grid item lg={12} md={12} xs={12}>
+              <CustomTitle
+                underlined={true}
+                text={payload.trainingCertification.title}
+              />
+            </Grid>
+            {payload.trainingCertification.dataArray &&
+              payload.trainingCertification.dataArray
+                .filter((card, idx) => idx < 4)
+                .map((card, index) => (
+                  <Grid key={index + "4th"} item xs={12}>
+                    <CertificationList
+                      toRight={index % 2 === 0 ? false : true}
+                      root={rootClasses[index]}
+                      data={card}
+                    />
+                  </Grid>
+                ))}
+          </Grid>
+          <CustomButton>See More</CustomButton>
+        </Section>
+        {/* NEWSLETTER SECTION
       <Section>
         <NewsletterForm />
       </Section> */}
-      {/* CONTACT US FORM SECTION */}
-      <Section>
-        {!isSubmitted ? (
-          <ContactUsAndFQA submitForm={submitForm} heading={ContactUsTitle} />
-        ) : (
-          <Typography style={{ textAlign: "center" }} variant="button">
-            Submitted
-          </Typography>
-        )}
-      </Section>
-      {/* What do our Client Say */}
-      <Section startQuote={startQuote} endQuote={endQuote}>
-        <Grid item lg={12} md={12} xs={12}>
-          <CustomTitle underlined={true} text={WhatDoClientSaySectionTitle} />
-        </Grid>
-        <ReviewSlider
-          showArrows={false}
-          showDots={false}
-          slides={WhyUsSlides}
-          itemsPerSlide={3}
-        />
+        {/* CONTACT US FORM SECTION */}
+        <Section>
+          {!isSubmitted ? (
+            <ContactUsAndFQA
+              submitForm={submitForm}
+              data={payload.FAQs.dataArray}
+              faqHeading={payload.FAQs.title}
+              heading={ContactUsTitle}
+            />
+          ) : (
+            <Typography style={{ textAlign: "center" }} variant="button">
+              Submitted
+            </Typography>
+          )}
+        </Section>
+        {/* What do our Client Say */}
+        <Section startQuote={startQuote} endQuote={endQuote}>
+          <Grid item lg={12} md={12} xs={12}>
+            <CustomTitle underlined={true} text={payload.reviews.title} />
+          </Grid>
+          <ReviewSlider
+            showArrows={false}
+            showDots={false}
+            slides={WhyUsSlides}
+            itemsPerSlide={3}
+            
+          />
 
-        <CustomButton>See More</CustomButton>
-        {/* <ReviewSlider slides={cardArr} /> */}
-      </Section>
-      {/* AWARD AND ACCREDITATIONS SECTION */}
-      <Section>
-        <CustomTitle underlined={true} text={AwardSectionTitle} />
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "space-evenly",
-          }}
-        >
-          {AwardSectionImages &&
-            AwardSectionImages.map((image, index) => (
-              <CustomImage
-                style={{ margin: "10px 40px", width: "130px", color: Mirage }}
-                src={image}
-                alt={`client${index}`}
-                key={`awards-accred-${index}`}
-              />
-            ))}
-        </div>
-      </Section>
-    </div>
+          <CustomButton>See More</CustomButton>
+          {/* <ReviewSlider slides={cardArr} /> */}
+        </Section>
+        {/* AWARD AND ACCREDITATIONS SECTION */}
+        <Section>
+          <CustomTitle underlined={true} text={payload.awards.title} />
+          <Grid item
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "space-evenly",
+              order: payload.awards.order,
+            }}
+          >
+            {payload.awards.dataArray &&
+              payload.awards.dataArray.map((data, index) => (
+                <CustomImage
+                  style={{ margin: "10px 40px", width: "130px", color: Mirage }}
+                  src={data.image}
+                  alt={`client${index}`}
+                  key={`awards-accred-${index}`}
+                />
+              ))}
+          </Grid>
+        </Section>
+      </div>
+    </DocumentMeta>
   );
 };
 
