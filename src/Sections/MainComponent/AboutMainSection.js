@@ -1,16 +1,18 @@
 import React from "react";
 import { useStyles } from "./mainStyles";
 import { Card, CardContent, Grid, Typography } from "@material-ui/core";
-import { MainData } from "../../Utils/Constants/Language/AboutUsData";
 import BreadCrumb from "../../Components/BreadCrumb";
 import CustomImage from "../../Components/CustomImage";
 import CustomTitle from "../../Pages/Section/CustomTitle";
+import { splitString } from "../../Utils/globalFunctions";
 
 const AboutMainSection = (props) => {
   const { data, width, breadcrumbData } = props;
+  const bannerText = splitString(data.subHeading, "<br/>");
 
   const classes = useStyles();
   const { root, cardSec, breadCrumbStyles, paragraphStyle, card } = classes;
+
   return (
     <>
       <Grid container className={root}>
@@ -45,11 +47,16 @@ const AboutMainSection = (props) => {
                   xs={10}
                   className={paragraphStyle}
                 >
-                  {data.subHeading && (
-                    <Typography color="textSecondary" variant="h5">
-                      {data.subHeading}
-                    </Typography>
-                  )}
+                  {bannerText &&
+                    bannerText.map((text, index) => (
+                      <Typography
+                        key={index}
+                        color="textSecondary"
+                        variant="h5"
+                      >
+                        {text}
+                      </Typography>
+                    ))}
                 </Grid>
               </CardContent>
             </Card>
