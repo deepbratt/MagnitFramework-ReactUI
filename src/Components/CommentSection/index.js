@@ -15,13 +15,12 @@ import SquareDottedPattern from "../../assets/patterns/dotsPattern.png";
 import ReviewSlider from "../ReviewSlider";
 import SectionStyles from "./style";
 import { Grid } from "@material-ui/core";
-import Avatar1 from "../../assets/services/Avatar1.png";
-import Avatar2 from "../../assets/services/Avatar2.png";
-import Avatar3 from "../../assets/services/Avatar3.png";
-import Avatar4 from "../../assets/services/Avatar4.png";
-import Avatar5 from "../../assets/services/Avatar5.png";
-import Avatar6 from "../../assets/services/Avatar6.png";
-import useApi from "../../Utils/webDevelopmentApi"
+import Avatar1 from "../../assets/services/Avatar1.webp";
+import Avatar2 from "../../assets/services/Avatar2.webp";
+import Avatar3 from "../../assets/services/Avatar3.webp";
+import Avatar4 from "../../assets/services/Avatar4.webp";
+import Avatar5 from "../../assets/services/Avatar5.webp";
+import Avatar6 from "../../assets/services/Avatar6.webp";
 
 
 const CommentSection = ({ children,data }) => {
