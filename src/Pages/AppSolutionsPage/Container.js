@@ -17,6 +17,7 @@ import { Colors } from "../../Theme/color.constants";
 import useApi from "../../Utils/appSolutionsApi";
 import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/OurWorkSectionPattern";
 import MetaTags from "../../Components/MetaTags";
+import { Loader } from "../../Components/loader";
 const Solutions = () => {
   const { root } = ServicesSectionStyles();
   const { MoonWhite, aliceBlue } = Colors;
@@ -33,10 +34,10 @@ const Solutions = () => {
     </Grid>
   ));
 
-  if (loading) return <p>{loading}</p>;
+  if (loading) return <Loader/>;
   return (
     <>
-          <MetaTags title={title} description={description} canonical={canonical} keywords={keywords}/>
+        <MetaTags title={title} description={description} canonical={canonical} keywords={keywords}/>
         <CommentSection data={slides}>
           <Grid
             style={{ order: payload.banner.order }}

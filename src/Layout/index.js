@@ -9,7 +9,7 @@ import { useEffect, useRef, useState } from "react";
 import { LinearProgress } from "@material-ui/core";
 import { Hidden } from "@material-ui/core";
 import SideBar from "../Pages/Section/Header/Sidebar/SideBar";
-import ReactGA from 'react-ga4';
+import ReactGA from "react-ga4";
 
 const Layout = ({ children }) => {
   const { root, paper } = LayoutStyle();
@@ -19,18 +19,18 @@ const Layout = ({ children }) => {
   const location = useLocation();
   const element = useRef();
   const childRef = useRef();
-  ReactGA.initialize('G-YZH3HVL36W', {
-    'debug': true
+  ReactGA.initialize("G-YZH3HVL36W", {
+    debug: true,
   });
-  
+
   const onUpdate = () => {
-    ReactGA.set({ page: window.location.pathname })
-    ReactGA.pageview(window.location.pathname)
-  }
+    ReactGA.set({ page: window.location.pathname });
+    ReactGA.pageview(window.location.pathname);
+  };
 
   useEffect(() => {
     element.current.scrollIntoView();
-    onUpdate()
+    onUpdate();
   }, [location.pathname]);
 
   useEffect(() => {
@@ -65,11 +65,17 @@ const Layout = ({ children }) => {
       </Hidden>
       {loaded > 100 && (
         <Grid container>
-          <Grid className={paper} ref={childRef} item xs={12}>
+          <Grid
+            // style={{ minHeight: "70vh" }}
+            className={paper}
+            ref={childRef}
+            item
+            xs={12}
+          >
             {children}
           </Grid>
           <Grid item xs={12}>
-            <Footer z/>
+            <Footer />
           </Grid>
         </Grid>
       )}

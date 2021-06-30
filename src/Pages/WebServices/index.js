@@ -21,6 +21,7 @@ import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
 import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/OurWorkSectionPattern";
 import ReviewCard from "../../Components/ReviewSlider/ReviewCard";
 import { Grid } from "@material-ui/core";
+import { Loader } from "../../Components/loader";
 import MetaTags from "../../Components/MetaTags";
 const Services = () => {
   const { aliceBlue, linearBackground, BlueRibbon } = Colors;
@@ -52,7 +53,7 @@ const Services = () => {
   const { textColor, leftPattern, rightPattern } = ServicesSectionStyles();
 
  
- if(loading) return <p>Loading</p>
+ if(loading) return <Loader/>
   return (
     <>
     <MetaTags title={title} description={description} canonical={canonical} keywords={keywords}/>

@@ -112,7 +112,7 @@ const Home = (props) => {
   },[])
 
 
-  if(loading) return <p>Loading</p>
+  if(loading) return <Loader/>
 
   return (
     <>
@@ -146,6 +146,13 @@ const Home = (props) => {
             title={payload.benefits.title}
             data={payload.benefits.dataArray}/>
         </Grid>
+        <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
+          <GlanceSection
+            title={payload.ourWork.title}
+            data={payload.ourWork.dataArray}
+            buttonText={Data.buttonText}
+          />
+        </Section>
         {/* TRAINING AND CERTIFICATION */}
         <Section>
           <Grid

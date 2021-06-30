@@ -19,6 +19,7 @@ import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/
 import { Grid } from "@material-ui/core";
 import ReviewCard from "../../Components/ReviewSlider/ReviewCard";
 import MetaTags from "../../Components/MetaTags";
+import { Loader } from "../../Components/loader";
 
 const DigitalMarketing = () => {
   const { linearBackground, BlueRibbon, aliceBlue } = Colors;
@@ -49,7 +50,7 @@ const DigitalMarketing = () => {
     </Grid>
   ));
 
-  if (loading) return <p>Loading</p>;
+  if (loading) return <Loader/>;
   return (
     <>
       <MetaTags

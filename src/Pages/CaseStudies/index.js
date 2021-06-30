@@ -12,11 +12,6 @@ import Section from "../Section";
 // import useStyles from "./InterActiveSection/useStyles";
 import { useStyles } from "../../Sections/MainComponent/mainStyles";
 import { caseStudies } from "../../Utils/Constants/Language";
-import Image1 from "../../assets/images/awardAccredationSection/image 2.png";
-import Image2 from "../../assets/images/awardAccredationSection/image 3.png";
-import Image3 from "../../assets/images/awardAccredationSection/image 4.png";
-import Image4 from "../../assets/images/awardAccredationSection/image 5.png";
-import Image5 from "../../assets/images/awardAccredationSection/image 6.png";
 import CustomImage from "../../Components/CustomImage";
 import { Loader } from "../../Components/loader";
 import MetaTags from "../../Components/MetaTags";
@@ -34,7 +29,7 @@ const CaseStudies = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   const { img } = useStyles();
-  const AwardSectionImages = [Image1, Image2, Image3, Image4, Image5];
+
   const colors = Colors;
   const faqData = caseStudies.faqs;
   const arrLength = faqData.length;
