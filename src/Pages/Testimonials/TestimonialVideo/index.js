@@ -53,7 +53,7 @@ const VideoCard = ({ data }) => {
                 </div>
                 <div>
                   <Typography align="right" variant="body2" component="p">
-                    {review.Date}
+                  {new Date(review.Date).toLocaleDateString("en-US", {month: "long", day: "numeric", year: "numeric"})}
                   </Typography>
                 </div>
               </div>
