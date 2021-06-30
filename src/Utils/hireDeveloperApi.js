@@ -31,7 +31,7 @@ const useApi = () =>{
     }, []);
   
     const getData = async () => {
-      let result = await axios.get("http://api.themagnit.com/v1/pages/bySlug/hireDeveloper")
+      let result = await axios.get("http://api.themagnit.com/v1/pages/bySlug/hire-developer")
       return result
    
     };

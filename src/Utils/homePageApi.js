@@ -30,7 +30,7 @@ const useApi = () =>{
     }, []);
   
     const getData = async () => {
-      let result = await axios.get("http://api.themagnit.com/v1/pages/bySlug/homePage")
+      let result = await axios.get("http://api.themagnit.com/v1/pages/bySlug/home")
       return result
    
     };
