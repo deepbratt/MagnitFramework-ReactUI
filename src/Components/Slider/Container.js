@@ -3,54 +3,15 @@ import { useStyles } from "./sliderStyles";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Slider from "./Slider";
-import {
-  Data,
-  array,
-  Img1,
-  Img2,
-  Img3,
-} from "../../Utils/Constants/Language/en/SliderText";
-const {
-  headingLineOne,
-  headingLineTwo,
-  headingLineFirstSlide,
-  headingLineSecondSlide,
-  headingLineThirdSlide,
-  buttonText,
-} = Data;
-const slideArr = [
-  <Slider
-    headingOne={headingLineOne}
-    headingTwo={headingLineTwo}
-    headingThree={headingLineFirstSlide}
-    text={buttonText}
-    data={array}
-    Img={Img1}
-  />,
+import { Grid } from "@material-ui/core";
 
-  <Slider
-    headingOne={headingLineOne}
-    headingTwo={headingLineTwo}
-    headingThree={headingLineSecondSlide}
-    text={buttonText}
-    data={array}
-    Img={Img2}
-  />,
-  <Slider
-    headingOne={headingLineOne}
-    headingTwo={headingLineTwo}
-    headingThree={headingLineThirdSlide}
-    text={buttonText}
-    data={array}
-    Img={Img3}
-  />,
-];
 const Container = (props) => {
   const classes = useStyles();
   const { slide } = classes;
   const show = props.indicator;
-  const slides = props.slides;
-  console.log(show);
+  // const slides = props.slides;
+  const data = props.data.homeSlider.dataArray;
+ 
   return (
     <Carousel
       className={slide}
@@ -63,14 +24,18 @@ const Container = (props) => {
       showIndicators={show}
       showThumbs={false}
     >
-      {slides.map((slide, i) => {
-        return <section key={i+"slidercontainer"}>{slide}</section>;
-      })}
+
+      {data.map((data, index) => (
+        <Grid
+          key={index}
+          style={{ display: "flex", flexDirection: "column", height: "100%" }}
+          alignItems="center"
+        >
+          <Slider array={data.items} data={data} />
+        </Grid>
+      ))}
     </Carousel>
   );
 };
 
-Container.defaultProps = {
-  slides: slideArr,
-};
 export default Container;

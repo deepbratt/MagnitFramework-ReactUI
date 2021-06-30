@@ -6,11 +6,10 @@ import ContactUsForm from "../../../Components/ContactUsForm";
 import MyAccordion from "../../../Components/MyAccordion";
 import { FQASectionTitle,ContactUsTitle } from "../../../Pages/Home/constants";
 import Section from "../../../Pages/Section/index";
-import QuestionData from "./questions.json";
 import LayoutStyle from "./style";
 import CustomTitle from "../../../Pages/Section/CustomTitle"
 
-const ContactUsAndFQA = () => {
+const ContactUsAndFQA = ({data,faqHeading}) => {
   const { root, wrap, content, cover, form, label } = LayoutStyle();
 
   return (
@@ -33,8 +32,8 @@ const ContactUsAndFQA = () => {
           </Grid>
           <Grid style={{paddingTop: "20px"}} item xs={12} md={6}>
             <Section>
-              <CustomTitle style={{marginBottom: "0px"}} text={FQASectionTitle} underlined={true}/>
-              <MyAccordion questions={QuestionData} />
+              <CustomTitle style={{marginBottom: "0px"}} text={faqHeading} underlined={true}/>
+              <MyAccordion questions={data} />
             </Section>
           </Grid>
         </Grid>

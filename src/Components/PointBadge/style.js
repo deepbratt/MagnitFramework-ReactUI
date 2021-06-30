@@ -8,18 +8,17 @@ const PointBadgeStyles = makeStyles((theme) => ({
     justifyContent: "end",
     height: "100%",
     margin: "15px",
-    cursor:"pointer",
+    cursor: "pointer",
     zIndex: 1,
-    padding: "10px",
+
     boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)",
     transition: "all .25s linear",
     border: `solid 1px ${whiteColor}`,
-   
   },
   inline: {
     display: "flex",
     margin: "20px 0px",
-    alignItems:"flex-start",
+    alignItems: "flex-start",
   },
   badge: {
     borderRadius: "5px",
@@ -28,17 +27,16 @@ const PointBadgeStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       margin: "15px",
     },
-
   },
 
   VertSec: {
-    height:"250px",
+    height: "250px",
     display: "flex",
-    justifyContent:"space-evenly" ,
-    alignItems:"center",
-    flexDirection:"column",
+    justifyContent: "space-evenly",
+    alignItems: "center",
+    flexDirection: "column",
     // margin: "15px",
-    marginTop:"0px",
+    marginTop: "0px",
     // "&:hover": {
     //   border: `solid 1px ${Harlequin}`,
     //   boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
@@ -46,10 +44,10 @@ const PointBadgeStyles = makeStyles((theme) => ({
     // },
     [theme.breakpoints.down("sm")]: {
       margin: "15px 10px",
-      marginTop:"0px"
+      marginTop: "0px",
     },
   },
-  hover:{
+  hover: {
     "&:hover": {
       border: `solid 1px ${Harlequin}`,
       boxShadow: "0px 4px 100px 5px rgba(0, 0, 0, 0.06)",
@@ -59,12 +57,12 @@ const PointBadgeStyles = makeStyles((theme) => ({
   devSec: {
     display: "flex",
     justifyContent: "center",
-    alignItems:"flex-start",
+    alignItems: "flex-start",
     margin: "15px",
-    marginTop:"0px",
+    marginTop: "0px",
     [theme.breakpoints.down("sm")]: {
       margin: "15px 10px",
-      marginTop:"0px"
+      marginTop: "0px",
     },
   },
   supportSub: {
@@ -86,32 +84,33 @@ const PointBadgeStyles = makeStyles((theme) => ({
     justifyContent: "center",
     textAlign: "left",
     "& > h5": {
-      color:Mirage,
-      fontWeight:600,
+      color: Mirage,
+      fontWeight: 600,
     },
-    "& > h6" : {
-      color:darkSilver,
-fontWeight:300
+    "& > h6": {
+      color: darkSilver,
+      fontWeight: 300,
     },
   },
   contentRight: {
     minWidth: "100%",
-    height:"240px",
+    height: "240px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-around",
-    alignItems:"center" ,
+    alignItems: "center",
   },
-  name : {
-    padding:" 0rem 1rem",
-    color:Mirage,
-    fontWeight:600,
+  name: {
+    padding: " 0rem 1rem",
+    color: Mirage,
+    fontWeight: 600,
+    textTransform: "capitalize",
   },
-    
- detail : {
-    padding:"0rem 1rem",
-    color:darkSilver,
-fontWeight:"normal"
+
+  detail: {
+    padding: "0rem 1rem",
+    color: darkSilver,
+    fontWeight: "normal",
   },
 }));
 

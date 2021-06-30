@@ -1,4 +1,6 @@
 import { Grid, Typography } from "@material-ui/core";
+import Lottie from "react-lottie";
+import axios from "axios";
 import { useEffect, useRef, useState } from "react";
 // import Lottie from "react-lottie";
 import CertificationListStyles from "./style";
@@ -9,40 +11,71 @@ const CertificationList = ({ root, data, toRight, mounted }) => {
   const [isMounted, setIsMounted] = useState(false)
   const { text, imageWrapper, leftAlignment, rightAlignment } =
     CertificationListStyles();
-  const { title, content, animationData } = data;
+  const { title, description, jsonFile } = data;
+  const [jsonData, setJsonData] = useState()
 
 
   useEffect(() => {
-    if(mounted){
+    if(mounted && jsonData){
       setIsMounted(mounted)
     }
-  }, [mounted]);
+  }, [mounted, jsonData]);
 
   useEffect(()=>{
-    
-    if(isMounted){
-      let dataJson = JSON.parse(animationData)
-      let anim = lottie.loadAnimation({
-        animationData: dataJson.default,
-        loop: true,
-        renderer: 'svg',
-        container: elem.current,
-        autoplay: false,
-      });
-      anim.play();
-    }
+    getJsonData().then(res=>{
+      setJsonData(res)
+    })
+  },[])
 
-    return () => {
-      lottie.pause()
-      lottie.stop()
-      lottie.destroy();
-      // setIsMounted(false)
-    }
-  },[isMounted])
-
-  if(!isMounted){
-    return null
+  async function getJsonData(){
+    let jsonResponse = await axios.get(jsonFile)
+    console.log(jsonResponse)
+    return jsonResponse.data
   }
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: jsonData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
+
+
+
+  // useEffect(() => {
+  //   if(mounted){
+  //     setIsMounted(mounted)
+  //   }
+  // }, [mounted]);
+
+  // useEffect(()=>{
+    
+  //   if(isMounted){
+  //     let dataJson = JSON.parse(animationData)
+  //     let anim = lottie.loadAnimation({
+  //       animationData: dataJson.default,
+  //       loop: true,
+  //       renderer: 'svg',
+  //       container: elem.current,
+  //       autoplay: false,
+  //     });
+  //     anim.play();
+  //   }
+
+  //   return () => {
+  //     lottie.pause()
+  //     lottie.stop()
+  //     lottie.destroy();
+  //     // setIsMounted(false)
+  //   }
+  // },[isMounted])
+
+  // if(!isMounted){
+  //   return null
+  // }
+
 
   return (
     <Grid container className={`${root}`}>
@@ -52,7 +85,7 @@ const CertificationList = ({ root, data, toRight, mounted }) => {
             {title}
           </Typography>
           <Typography variant="body2" component="p">
-            {content}
+            {description}
           </Typography>
         </div>
       </Grid>

@@ -29,51 +29,27 @@ export const marketingServicesData = [
     {
       length: 57,
       color: skyblue,
-      icon: SeoIcon,
-      title: "SEO",
-      desc:
-        "Organic page 1 rank for your business. Stand at top for the product or the service you offer. Dominate search results with our effective keyword strategy.",
     },
     {
       length: 57,
       color: lightblue,
-      icon: AnalyticsIcon,
-      title: "Web Analytics",
-      desc:
-      "Get insights beyond data and numbers. We use the latest data analysis technology to create a compelling top ranked campaign for you.",
 
     },
     {
       length: 50,
       color: Orchid,
-      icon: PpcIcon,
-      title: "PPC",
-      desc:
-        "We increase your ROI with the lowest costs and highest conversions across search engines and social media platforms through in-depth analysis.",
     },
     {
       length: 57,
       color: pastelOrange,
-      icon: SocialMediaIcon,
-      title: "Social Media",
-      desc:
-        "From posts to advertising to reviews to replies we take care of 360-degree marketing campaigns for your business on social media platforms that suit your needs.",
     },
     {
       length: 57,
       color: persianGreen,
-      icon: contentMediaIcon,
-      title: "Content Marketing",
-      desc:
-        "We use the content to crush your competition. Through original, unique, lead-generating and traffic-to-conversion creating content.",
     },
     {
       length: 57,
       color: yellowOrange,
-      icon: ReputatuionIcon,
-      title: "Reputation Management",
-      desc:
-        "We establish and protect a positive reputation for your brand across search results and social media.",
     },
   ];
   export const Data = {

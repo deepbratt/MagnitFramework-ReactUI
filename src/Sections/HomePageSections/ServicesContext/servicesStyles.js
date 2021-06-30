@@ -93,7 +93,6 @@ export const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       margin: "15px",
     },
-
   },
   supportSub: {
     borderRadius: "5px",
@@ -133,6 +132,7 @@ export const useStyles = makeStyles((theme) => ({
   name: {
     color: Mirage,
     fontWeight: 600,
+    textTransform: "capitalize",
   },
 
   detail: {

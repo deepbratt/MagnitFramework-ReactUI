@@ -6,7 +6,7 @@ import { Avatar, Grid } from "@material-ui/core";
 import ReviewSliderStyles from "./style";
 
 const ReviewCard = ({ cardData }) => {
-  const { text, authName, authImg } = cardData;
+  const { clientName, projectName, rating, review, clientImage } = cardData;
   const { grid, root, avatar, content, large } = ReviewSliderStyles();
   return (
     <Grid
@@ -20,15 +20,15 @@ const ReviewCard = ({ cardData }) => {
       <Grid item sm={12} lg={6}>
         <div className={avatar}>
           <div>
-            <Avatar alt="Remy Sharp" src={authImg} className={large} />
+            <Avatar alt="Remy Sharp" src={clientImage} className={large} />
           </div>
         </div>
         <Card className={root}>
           <div>
             <Typography variant="subtitle1" style={{ fontWeight: "600" }}>
-              {authName}
+              {`${clientName} (${projectName})`}
             </Typography>
-            <Rating name="read-only" size="small" value={5} readOnly />
+            <Rating name="read-only" size="small" value={rating} readOnly />
           </div>
 
           <CardContent className={content}>
@@ -38,7 +38,7 @@ const ReviewCard = ({ cardData }) => {
               style={{ fontWeight: "400" }}
               paragraph
             >
-              {text}
+              {review}
             </Typography>
           </CardContent>
         </Card>

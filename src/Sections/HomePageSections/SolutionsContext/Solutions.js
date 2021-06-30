@@ -6,7 +6,7 @@ import CustomButton from "../../../Components/CustomButton";
 import CustomTitle from "../../../Pages/Section/CustomTitle";
 import CustomImage from "../../../Components/CustomImage";
 
-const Solutions = ({ titles, content }) => {
+const Solutions = ({ title, content, subTitle}) => {
   const classes = useStyles();
   const { card } = classes;
 
@@ -18,9 +18,9 @@ const Solutions = ({ titles, content }) => {
           <CustomTitle
             style={{ marginBottom: "20px" }}
             underlined={false}
-            subTitle={titles.subHeading}
+            subTitle={subTitle}
             color={whiteColor}
-            text={titles.heading}
+            text={title}
             subTitleColor={whiteColor}
           />
         </Grid>

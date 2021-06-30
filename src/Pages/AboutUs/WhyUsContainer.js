@@ -1,16 +1,21 @@
 import React from "react";
-import {PatrnerWithUsSectionTitle,PrimaryArray} from "../../Utils/Constants/Language/en/PartnerWithUsData"
+import PropTypes from "prop-types";
 import Section from "../Section";
-import PointList from "../../Components/PointBadge/PointList"
-import CustomTitle from "../Section/CustomTitle"
-const WhyUsContainer = () => {
+import PointList from "../../Components/PointBadge/PointList";
+import CustomTitle from "../Section/CustomTitle";
+
+const WhyUsContainer = ({ title, data }) => {
   return (
-    <Section title={PatrnerWithUsSectionTitle}>
-    <CustomTitle text={"Why Us?"} underlined={true}/>
-    <PointList data={PrimaryArray} horizontal={true} lgBreakpoint={6}/>
-  </Section>
+    <Section>
+      <CustomTitle text={title} underlined={true} />
+      <PointList data={data} horizontal={true} lgBreakpoint={6} />
+    </Section>
   );
 };
 
-export default WhyUsContainer
+WhyUsContainer.propTypes = {
+  title: PropTypes.string,
+  data: PropTypes.array.isRequired,
+};
 
+export default WhyUsContainer;
