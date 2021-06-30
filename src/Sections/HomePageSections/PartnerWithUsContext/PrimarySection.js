@@ -13,7 +13,7 @@ const PrimarySection = (props) => {
     <>
       {data.map((text, index) => {
         return (
-          <Grid key={index} item className={cardSec}>
+          <Grid key={index+"primarysection"} item className={cardSec}>
             <Grid container>
               <Grid
                 style={{

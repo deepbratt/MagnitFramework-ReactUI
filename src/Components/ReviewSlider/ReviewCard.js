@@ -4,6 +4,7 @@ import Typography from "@material-ui/core/Typography";
 import Rating from "@material-ui/lab/Rating";
 import { Avatar, Grid } from "@material-ui/core";
 import ReviewSliderStyles from "./style";
+import Avatar1 from "../../assets/Testimonials/avatar1.png";
 
 const ReviewCard = ({ cardData }) => {
   const { clientName, image, review, projectName, rating, clientImage } = cardData;

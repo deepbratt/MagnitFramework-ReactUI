@@ -14,6 +14,7 @@ const Footer = () => {
   const { navigation, copyrights, lifeTimeSupport, terms, disclaimer } =
     footerText;
 
+
   const [data, setData] = useState([]);
   const [mounted, setIsMounted] = useState();
   const [isLoading, setIsLoading] = useState(true);

@@ -22,7 +22,7 @@ const FeaturesRow = (props) => {
       {data.map((text, index) => {
         return (
           <Grid
-            key={index}
+            key={index+"featurerow"}
             style={{
               display: "flex",
               justifyContent: "center",

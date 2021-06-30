@@ -18,7 +18,7 @@ const ContactUsAndFQA = ({data,faqHeading}) => {
         <Grid container direction="row" spacing={2}>
           <Grid item xs={12} md={6}>
             <Grid item className={wrap}>
-              <img className={cover} src={image} alt="A lady with laptop" />
+              <img className={cover} src={"https://s3.us-east-2.amazonaws.com/cdn.themagnit.com/cdnTestFolder/contact-us-banner.webp"} alt="A lady with laptop" />
               <CardContent className={content}>
                 <ContactUsForm
                   className={form}

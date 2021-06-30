@@ -15,26 +15,14 @@ import { DoYouWant } from "../WebServices/constants";
 import CustomTitle from "../../Pages/Section/CustomTitle";
 import { Colors } from "../../Theme/color.constants";
 import useApi from "../../Utils/appSolutionsApi";
-import DocumentMeta from "react-document-meta";
 import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/OurWorkSectionPattern";
+import MetaTags from "../../Components/MetaTags";
 const Solutions = () => {
   const { root } = ServicesSectionStyles();
   const { MoonWhite, aliceBlue } = Colors;
   const { data, review, banner, metaData, loading } = useApi();
   const payload = data.sections;
   const { title, description, canonical, keywords } = metaData;
-  const meta = {
-    title: title,
-    description: description,
-    canonical: canonical,
-    meta: {
-      charset: "utf-8",
-      name: {
-        keywords: keywords,
-      },
-    },
-  };
-
   const slides = review.map((data, index) => (
     <Grid
       key={index}
@@ -48,7 +36,7 @@ const Solutions = () => {
   if (loading) return <p>{loading}</p>;
   return (
     <>
-      <DocumentMeta {...meta}>
+          <MetaTags title={title} description={description} canonical={canonical} keywords={keywords}/>
         <CommentSection data={slides}>
           <Grid
             style={{ order: payload.banner.order }}
@@ -109,7 +97,6 @@ const Solutions = () => {
             </Section>
           </Grid>
         </CommentSection>
-      </DocumentMeta>
     </>
   );
 };

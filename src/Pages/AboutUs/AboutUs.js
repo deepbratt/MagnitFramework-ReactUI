@@ -4,11 +4,12 @@ import Main from "../../Sections/MainComponent/AboutMainSection";
 import MissionContext from "../../Sections/Mission&Vision/MissionContext";
 import WhyUsContainer from "./WhyUsContainer";
 import { MainData } from "../../Utils/Constants/Language/AboutUsData";
-import {useStyles} from "../../Sections/MainComponent/mainStyles"
+import { useStyles } from "../../Sections/MainComponent/mainStyles";
+import MetaTags from "../../Components/MetaTags";
 
 const AboutUs = () => {
   const { heroImgsrc } = MainData;
-  const {hero } = useStyles();
+  const { hero } = useStyles();
   const breadcrumbs = [
     {
       path: "/",
@@ -23,8 +24,15 @@ const AboutUs = () => {
   return (
     <>
       <Grid container>
+      <MetaTags title="About us | Magnit" description="about us..." canonical="about" keywords="about, us, about"/>
         <Grid item lg={12} md={12} xs={12}>
-          <Main width="650px" hero={heroImgsrc} class={hero} card={true} breadcrumbData={breadcrumbs} />
+          <Main
+            width="650px"
+            hero={heroImgsrc}
+            class={hero}
+            card={true}
+            breadcrumbData={breadcrumbs}
+          />
         </Grid>
         <Grid item lg={12} md={12} xs={12}>
           <MissionContext />

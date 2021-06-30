@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { Typography } from "@material-ui/core";
 import { Colors } from "../../Theme/color.constants";
 import Banner from "../../Components/Banner";
-import DocumentMeta from "react-document-meta";
 import { DoYouWant, Data } from "./constants";
 import useApi from "../../Utils/digitalMarketingApi";
 import StarFishPattern from "../../assets/patterns/starfishBlue.png";
@@ -19,23 +18,13 @@ import GlanceAtWork from "../../Sections/HomePageSections/GlanceAtWorkContext/Co
 import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/OurWorkSectionPattern";
 import { Grid } from "@material-ui/core";
 import ReviewCard from "../../Components/ReviewSlider/ReviewCard";
+import MetaTags from "../../Components/MetaTags";
 const DigitalMarketing = () => {
   const { linearBackground, BlueRibbon, aliceBlue } = Colors;
   const { data, review, banner, loading, metaData } = useApi();
   const payload = data.sections;
 
   const { title, description, canonical, keywords } = metaData;
-  const meta = {
-    title: title,
-    description: description,
-    canonical: canonical,
-    meta: {
-      charset: "utf-8",
-      name: {
-        keywords: keywords,
-      },
-    },
-  };
 
   const breadCrumData = [
     {
@@ -61,7 +50,8 @@ const DigitalMarketing = () => {
 
   if (loading) return <p>Loading</p>;
   return (
-    <DocumentMeta {...meta}>
+    <>
+    <MetaTags title={title} description={description} canonical={canonical} keywords={keywords}/>
       <CommentSection data={slides}>
         {banner.map((data) => {
           return (
@@ -134,7 +124,7 @@ const DigitalMarketing = () => {
           </span>
         </Section>
       </CommentSection>
-    </DocumentMeta>
+      </>
   );
 };
 

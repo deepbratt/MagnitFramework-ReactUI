@@ -5,7 +5,7 @@ import Slide from "../../Components/Slider/Container";
 import Solutions from "../../Sections/HomePageSections/SolutionsContext/Solutions";
 import PartnerContext from "../../Sections/HomePageSections/PartnerWithUsContext/Maincontainer";
 import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ContactUsAndFQA from "../../Sections/HomePageSections/ContactUsAndFQA";
 import { Typography, Hidden } from "@material-ui/core";
 import Section from "../Section";
@@ -31,6 +31,7 @@ import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
 import CardData from "../../Components/Card";
 import useApi from "../../Utils/homePageApi";
 import {Loader} from "../../Components/loader/index"
+import MetaTags from "../../Components/MetaTags";
 export const AwardSectionImages = [Image1, Image2, Image3, Image4, Image5];
 
 const Home = (props) => {
@@ -41,17 +42,6 @@ const Home = (props) => {
   const payload = data.sections;
   const { Mirage, BlueRibbon } = Colors;
   const { title, description, canonical, keywords } = metaData;
-  const meta = {
-    title: title,
-    description: description,
-    canonical: canonical,
-    meta: {
-      charset: "utf-8",
-      name: {
-        keywords: keywords,
-      },
-    },
-  };
 
   const WhyUsSlides = review.map((data, index) => (
     <Grid
@@ -62,6 +52,8 @@ const Home = (props) => {
       <QuoteCard cardData={data} />
     </Grid>
   ));
+
+  const [isMounted, setIsMounted] = useState(false)
 
   const ourWorkSectionPatterns = [
     {
@@ -110,10 +102,21 @@ const Home = (props) => {
     setIsSubmitted(true);
   }
 
+  useEffect(()=>{
+    // mounted = true
+    setIsMounted(true)
+    return ()=>{
+      // mounted = false
+      setIsMounted(false)
+    }
+  },[])
+
+
   if(loading) return <p>Loading</p>
 
   return (
-    <DocumentMeta {...meta}>
+    <>
+    <MetaTags title={title} description={description} canonical={canonical} keywords={keywords}/>
       <div className="App">
         <Grid style={{ order: payload.homeSlider.order }} item md={12} xs={12}>
           <Slide data={payload} />
@@ -141,17 +144,7 @@ const Home = (props) => {
         <Grid style={{ order: payload.benefits.order }} item xs={12}>
           <PartnerContext
             title={payload.benefits.title}
-            data={payload.benefits.dataArray}
-          />
-        </Grid>
-        <Grid style={{ order: payload.ourWork.order }} item md={12} xs={12}>
-          <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
-            <GlanceSection
-              title={payload.ourWork.title}
-              data={payload.ourWork.dataArray}
-              buttonText={Data.buttonText}
-            />
-          </Section>
+            data={payload.benefits.dataArray}/>
         </Grid>
         {/* TRAINING AND CERTIFICATION */}
         <Section>
@@ -166,7 +159,7 @@ const Home = (props) => {
                 text={payload.trainingCertification.title}
               />
             </Grid>
-            {payload.trainingCertification.dataArray &&
+            {isMounted && payload.trainingCertification.dataArray &&
               payload.trainingCertification.dataArray
                 .filter((card, idx) => idx < 4)
                 .map((card, index) => (
@@ -175,6 +168,7 @@ const Home = (props) => {
                       toRight={index % 2 === 0 ? false : true}
                       root={rootClasses[index]}
                       data={card}
+                      mounted = {isMounted}
                     />
                   </Grid>
                 ))}
@@ -239,7 +233,7 @@ const Home = (props) => {
           </Grid>
         </Section>
       </div>
-    </DocumentMeta>
+    </>
   );
 };
 

@@ -1,4 +1,4 @@
-import { CircularProgress, Grid, Typography } from '@material-ui/core'
+import { Grid } from '@material-ui/core'
 import React,{useEffect,useState} from 'react'
 import { Animate } from 'react-move'
 import CustomImage from "../CustomImage"

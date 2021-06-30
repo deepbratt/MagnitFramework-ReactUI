@@ -32,7 +32,7 @@ const VideoCard = ({ Img, detail, avatar, name, date }) => {
             xs={12}
             sm={6}
             md={4}
-            key={a.id}
+            key={a.id+"videodata"}
           >
             <Card className={cardRoot}>
               {/* <CardHeader

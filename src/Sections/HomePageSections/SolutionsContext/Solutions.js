@@ -29,7 +29,7 @@ const Solutions = ({ title, content, subTitle}) => {
             <Grid container spacing={2}>
               {content &&
                 content.map((data, index) => (
-                  <Grid key={index} item xs={12} sm={6} md={3}>
+                  <Grid key={index+"solutionscontentdata"} item xs={12} sm={6} md={3}>
                     <Card style={{borderRadius: "5px"}} className={card}>
                       <CustomImage width="60px" alt="" src={data.image} />
 

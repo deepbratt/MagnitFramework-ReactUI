@@ -11,7 +11,6 @@ import {
   DoYouWant,
 } from "./constants";
 import useApi from "../../Utils/hireDeveloperApi"
-import DocumentMeta from "react-document-meta";
 import StarFishPattern from "../../assets/patterns/starfishBlue.png";
 import ServicesSectionStyles from "../WebServices/style";
 import PatternLeft from "../../assets/PatternLeft.png";
@@ -23,23 +22,12 @@ import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
 import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/OurWorkSectionPattern";
 import ReviewCard from "../../Components/ReviewSlider/ReviewCard";
 import { Grid } from "@material-ui/core";
+import MetaTags from "../../Components/MetaTags";
 const HireDeveloper = () => {
   const { aliceBlue, linearBackground, BlueRibbon } = Colors;
   const {data,review,metaData,banner,loading} = useApi()
   const payload = data.sections
-
   const { title, description, canonical, keywords } = metaData;
-  const meta = {
-    title: title,
-    description: description,
-    canonical: canonical,
-    meta: {
-      charset: "utf-8",
-      name: {
-        keywords: keywords,
-      },
-    },
-  };
   const slides = review.map((data, index) => (
     <Grid
       key={index}
@@ -62,10 +50,12 @@ const HireDeveloper = () => {
   ];
 
   const { textColor, leftPattern, rightPattern } = ServicesSectionStyles();
+
  
  if(loading) return <p>Loading</p>
   return (
-    <DocumentMeta {...meta}>
+    <>
+    <MetaTags title={title} description={description} canonical={canonical} keywords={keywords}/>
     <CommentSection data={slides}>
       {banner.map((data)=>{
         return(
@@ -138,7 +128,7 @@ const HireDeveloper = () => {
         </span>
       </Section>
     </CommentSection>
-    </DocumentMeta>
+    </>
   );
 };
 

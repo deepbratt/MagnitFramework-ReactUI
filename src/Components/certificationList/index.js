@@ -1,16 +1,18 @@
 import { Grid, Typography } from "@material-ui/core";
 import Lottie from "react-lottie";
 import axios from "axios";
-import { useState,useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
+// import Lottie from "react-lottie";
 import CertificationListStyles from "./style";
+import lottie from 'lottie-web';
 
-const CertificationList = ({ root, data, toRight }) => {
+const CertificationList = ({ root, data, toRight, mounted }) => {
+  const elem = useRef(null)
+  const [isMounted, setIsMounted] = useState(false)
   const { text, imageWrapper, leftAlignment, rightAlignment } =
     CertificationListStyles();
   const { title, description, jsonFile } = data;
-
   const [jsonData, setJsonData] = useState()
-  const [mounted, setIsMounted] = useState()
 
 
   useEffect(() => {
@@ -39,6 +41,42 @@ const CertificationList = ({ root, data, toRight }) => {
     },
   };
 
+
+
+
+  // useEffect(() => {
+  //   if(mounted){
+  //     setIsMounted(mounted)
+  //   }
+  // }, [mounted]);
+
+  // useEffect(()=>{
+    
+  //   if(isMounted){
+  //     let dataJson = JSON.parse(animationData)
+  //     let anim = lottie.loadAnimation({
+  //       animationData: dataJson.default,
+  //       loop: true,
+  //       renderer: 'svg',
+  //       container: elem.current,
+  //       autoplay: false,
+  //     });
+  //     anim.play();
+  //   }
+
+  //   return () => {
+  //     lottie.pause()
+  //     lottie.stop()
+  //     lottie.destroy();
+  //     // setIsMounted(false)
+  //   }
+  // },[isMounted])
+
+  // if(!isMounted){
+  //   return null
+  // }
+
+
   return (
     <Grid container className={`${root}`}>
       <Grid item xs={12} md={6}>
@@ -52,7 +90,7 @@ const CertificationList = ({ root, data, toRight }) => {
         </div>
       </Grid>
       <Grid item xs={12} md={6} className={imageWrapper}>
-        <Lottie options={defaultOptions} width="400px" />
+        {isMounted && <div ref={elem} style={{width:"400px"}}></div>}
       </Grid>
     </Grid>
   );

@@ -113,7 +113,7 @@ const OurBlogs = () => {
           {LatestBlogsSectionText.cards &&
             LatestBlogsSectionText.cards.map((card, index) => (
               <Grid
-                key={index}
+                key={index+"blogslatest"}
                 item
                 xs={12}
                 sm={6}

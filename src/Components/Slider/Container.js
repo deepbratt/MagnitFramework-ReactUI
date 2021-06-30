@@ -24,6 +24,7 @@ const Container = (props) => {
       showIndicators={show}
       showThumbs={false}
     >
+
       {data.map((data, index) => (
         <Grid
           key={index}
