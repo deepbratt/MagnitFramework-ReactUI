@@ -26,7 +26,7 @@ const Banner = ({ image, breadCrumb, children }) => {
             alt=""
             
           />
-          <Grid className={imageWrapper}>
+            <Grid className={imageWrapper}>
             <CustomImage src={image} alt="" />
           </Grid>
         </Grid>

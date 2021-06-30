@@ -8,8 +8,7 @@ import CustomImage from "../CustomImage";
 import PointBadgeStyles from "./style";
 
 const PointBadge = ({ horizontal, data }) => {
-  const { image, title, description } = data;
-
+  const { title, description, image, buttonLabel } = data;
   const {
     vertical,
     inline,
@@ -76,7 +75,7 @@ const PointBadge = ({ horizontal, data }) => {
               </div>
               {data.buttonLabel && (
                 <div>
-                  <CustomButton size="small">{data.buttonLabel}</CustomButton>
+                  <CustomButton size="small">{buttonLabel}</CustomButton>
                 </div>
               )}
             </Grid>

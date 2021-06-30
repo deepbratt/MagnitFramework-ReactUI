@@ -167,36 +167,26 @@ export const StairCaseData = [
     img: vector1,
     color: lochmara,
     margin: "130px",
-    title: "Ideate",
-    desc: "We understand your business and goals",
   },
   {
     img: vector2,
     color: cerulean,
     margin: "100px",
-    title: "Journey Mapping",
-    desc: "We do a deep analysis of your industry and target market",
   },
   {
     img: vector3,
     color: robbinEggBlue,
     margin: "70px",
-    title: "Preparing Solutions",
-    desc: "Based on the goals and research, we tailor solutions that cater to your needs",
   },
   {
     img: vector4,
     color: caribbeanGreen,
-    margin: "50px",
-    title: "Wireframing",
-    desc: " We secure front and back end, full stack development, delivering working software in relevant intervals.",
+    margin: "50px"
   },
   {
     img: vector1,
     margin: "5px",
     color: pastelGreen,
-    title: "Launch",
-    desc: " Once all tests are done, your app goes live with a life-time support from our end.",
   },
 ];
 

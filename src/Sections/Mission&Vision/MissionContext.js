@@ -1,12 +1,6 @@
 import React from "react";
-
 import { missionStyles } from "./missionStyles";
 import { Card, CardContent, Grid, Typography } from "@material-ui/core";
-
-import {
-  MidSection,
-  MainData,
-} from "../../Utils/Constants/Language/AboutUsData";
 import Patten1 from "../../assets/AboutUs/vision1.png";
 import Patten2 from "../../assets/AboutUs/vision2.png";
 import CustomImage from "../../Components/CustomImage";
@@ -14,9 +8,7 @@ import Section from "../../Pages/Section";
 import { Colors } from "../../Theme/color.constants";
 
 const MissionContext = ({ data }) => {
-  const { card, root, Icon, underlined, leftPattern, rightPattern } =
-    missionStyles();
-  const { firstTitle, secondTitle, missionText, visionText } = MidSection;
+  const { card, Icon, underlined, leftPattern, rightPattern } = missionStyles();
 
   const { skyBlue } = Colors;
   return (

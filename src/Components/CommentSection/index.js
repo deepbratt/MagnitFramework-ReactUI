@@ -57,52 +57,21 @@ const CommentSection = ({ children, data }) => {
           <Avatar alt="" src={Avatar4} className={avatar4} />
           <Avatar alt="" src={Avatar5} className={avatar5} />
           <Avatar alt="" src={Avatar6} className={avatar6} />
-          <img
-            className={squareDotsPattern}
-            src={SquareDottedPattern}
-            alt=""
-            
-          />
-          <img
-            className={yellowCommaPattern}
-            src={yellowComma}
-            alt=""
-            
-          />
-          <img className={commaPattern} src={comma} alt=""  />
-          <img className={pinkDotPattern} src={pinkDot} alt=""  />
-          <img className={yellowDotPattern} src={yellowDot} alt=""  />
-          <img
-            className={miniYellowPattern}
-            src={miniYellow}
-            alt=""
-            
-          />
-          <img className={smallDotPattern} src={smallDot} alt=""  />
+          <img className={squareDotsPattern} src={SquareDottedPattern} alt="" />
+          <img className={yellowCommaPattern} src={yellowComma} alt="" />
+          <img className={commaPattern} src={comma} alt="" />
+          <img className={pinkDotPattern} src={pinkDot} alt="" />
+          <img className={yellowDotPattern} src={yellowDot} alt="" />
+          <img className={miniYellowPattern} src={miniYellow} alt="" />
+          <img className={smallDotPattern} src={smallDot} alt="" />
           <img
             className={leftStarFishPattern}
             src={StarFishPinkPattern}
             alt=""
-            
           />
-          <img
-            className={rightStarFishPattern}
-            src={StarFishPattern}
-            alt=""
-            
-          />
-          <img
-            className={leftDottedPattern}
-            src={DottedPattern}
-            alt=""
-            
-          />
-          <img
-            className={rightDottedPattern}
-            src={TopDottedPattern}
-            alt=""
-            
-          />
+          <img className={rightStarFishPattern} src={StarFishPattern} alt="" />
+          <img className={leftDottedPattern} src={DottedPattern} alt="" />
+          <img className={rightDottedPattern} src={TopDottedPattern} alt="" />
           <ReviewSlider slides={data} showArrows={false} />
         </div>
       </Section>

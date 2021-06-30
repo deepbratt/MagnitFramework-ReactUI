@@ -6,19 +6,24 @@ import CustomButton from "../CustomButton";
 import { Link } from "react-router-dom";
 
 // import dataText, { FullTimeHiring, HiringOption } from './constant';
-export const TabText = ({ data }) => {
-  const { title, desc, dataText } = data;
+export const TabText = ({
+  payload,
+  heading,
+  text,
+  buttonLink,
+  buttonLabel,
+}) => {
   const { detail, bulletText, textDiv } = OptionTabStyles();
   return (
     <Grid style={{ textAlign: "left" }}>
-      <Typography variant="h2">{title}</Typography>
+      <Typography variant="h2">{heading}</Typography>
       <Typography variant="button" className={detail} color="initial">
-        {desc}
+        {text}
       </Typography>
 
-      {dataText.map((a) => {
+      {payload.map((a, index) => {
         return (
-          <Grid item xs={12} className={textDiv} key={a.id}>
+          <Grid key={index} item xs={12} className={textDiv} key={a.id}>
             <Grid>
               <img
                 src={vector}
@@ -28,15 +33,15 @@ export const TabText = ({ data }) => {
             </Grid>
             <Grid item xs={11}>
               <Typography variant="button" className={bulletText}>
-                {a.text}
+                {a}
               </Typography>
             </Grid>
           </Grid>
         );
       })}
       <span style={{ textTransform: "initial" }}>
-        <CustomButton component={Link} to="/request-a-quote">
-          Get a Risk Free Trial (Start your trial in 24 hours!)
+        <CustomButton component={Link} to={buttonLink}>
+          {buttonLabel}
         </CustomButton>
       </span>
     </Grid>

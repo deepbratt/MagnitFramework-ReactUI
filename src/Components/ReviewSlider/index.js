@@ -60,7 +60,7 @@ const ReviewSlider = ({
 
   return (
     <Slider
-      dots={true}
+      dots={showDots}
       infinite={true}
       speed={500}
       slidesToShow={isMDUp ? itemsPerSlide : 1}

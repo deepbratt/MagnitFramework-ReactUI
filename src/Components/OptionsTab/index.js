@@ -8,12 +8,11 @@ import Box from "@material-ui/core/Box";
 import OptionTabStyles from "./style";
 import { TabText } from "./TabText";
 import Breakpoints from "../../Theme/theme.breakpoints";
-import {FixedCostHiring, FullTimeHiring, PayAsYou} from "../../Utils/Constants/Language/en/tabText";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
-  const { tabPanel, } = OptionTabStyles();
-  
+  const { tabPanel } = OptionTabStyles();
+
   return (
     <div
       className={tabPanel}
@@ -44,10 +43,12 @@ function a11yProps(index) {
     "aria-controls": `vertical-tabpanel-${index}`,
   };
 }
-export default function OptionsTab() {
+export default function OptionsTab({ data }) {
   const { root, tabs, tab, tabPanel } = OptionTabStyles();
   const [value, setValue] = React.useState(0);
-
+  const item1 = data[0];
+  const item2 = data[1];
+  const item3 = data[2];
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -62,18 +63,41 @@ export default function OptionsTab() {
         aria-label="Vertical tabs example"
       >
         <Tab className={tab} label="Full Time Hiring" {...a11yProps(0)} />
-        <Tab className={tab} label="Pay as you Go Hiring" {...a11yProps(1)} />
-        <Tab className={tab} label="Fixed Cost Hiring" {...a11yProps(2)} />
+        <Tab className={tab} label="Pay as you go hiring" {...a11yProps(1)} />
+        <Tab className={tab} label="Fixed cost hiring" {...a11yProps(2)} />
       </Tabs>
-      <TabPanel className={tabPanel} value={value} index={0}>
-        <TabText data={FullTimeHiring} />
-      </TabPanel>
-      <TabPanel className={tabPanel} value={value} index={1}>
-      <TabText data={PayAsYou} />
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-      <TabText data={FixedCostHiring} />
-      </TabPanel>
+
+      {item1 && item2 && item3 && (
+        <>
+          <TabPanel className={tabPanel} value={value} index={0}>
+            <TabText
+              heading={item1.heading}
+              text={item1.text}
+              buttonLabel={item1.buttonLabel}
+              buttonLink={item1.buttonLink}
+              payload={item1.items}
+            />
+          </TabPanel>
+          <TabPanel className={tabPanel} value={value} index={1}>
+            <TabText
+              heading={item2.heading}
+              text={item2.text}
+              buttonLabel={item2.buttonLabel}
+              buttonLink={item2.buttonLink}
+              payload={item2.items}
+            />
+          </TabPanel>
+          <TabPanel value={value} index={2}>
+            <TabText
+              heading={item3.heading}
+              text={item3.text}
+              buttonLabel={item3.buttonLabel}
+              buttonLink={item3.buttonLink}
+              payload={item3.items}
+            />
+          </TabPanel>
+        </>
+      )}
     </div>
   );
 }

@@ -13,9 +13,9 @@ const Flip = ({ data }) => {
   const [isFlipped, setIsFlipped] = React.useState(false);
   const { whiteColor } = Colors;
   const { image, title, description, buttonLabel, buttonLink } = data;
-
   const { devSec, vertical, name, detail, supportSub, VertSec, badge } =
     classes;
+
   //   Use this Card for Services Section pass data from its Parent Contanier to here
   return (
     <>
@@ -83,7 +83,6 @@ const Flip = ({ data }) => {
                 <NavLink
                   to={buttonLink}
                   style={{
-                    marginLeft: "10px",
                     textDecoration: "none",
                     color: whiteColor,
                   }}
