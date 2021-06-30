@@ -7,6 +7,7 @@ import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/C
 import { Colors } from "../../Theme/color.constants";
 import Banner from "../../Components/Banner";
 import OptionsTab from "../../Components/OptionsTab";
+import { Loader } from "../../Components/loader";
 import {
   DoYouWant,
 } from "./constants";
@@ -52,7 +53,7 @@ const HireDeveloper = () => {
   const { textColor, leftPattern, rightPattern } = ServicesSectionStyles();
 
  
- if(loading) return <p>Loading</p>
+  if(loading) return <Loader/>
   return (
     <>
     <MetaTags title={title} description={description} canonical={canonical} keywords={keywords}/>
@@ -84,13 +85,13 @@ const HireDeveloper = () => {
           className={leftPattern}
           src={PatternLeft}
           alt=""
-          srcSet=""
+          
         />
         <CustomImage
           className={rightPattern}
           src={StarFishPattern}
           alt=""
-          srcSet=""
+          
         />
         <Section>
           <CustomTitle

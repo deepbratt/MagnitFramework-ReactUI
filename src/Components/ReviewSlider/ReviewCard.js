@@ -4,10 +4,9 @@ import Typography from "@material-ui/core/Typography";
 import Rating from "@material-ui/lab/Rating";
 import { Avatar, Grid } from "@material-ui/core";
 import ReviewSliderStyles from "./style";
-import Avatar1 from "../../assets/Testimonials/avatar1.png";
 
 const ReviewCard = ({ cardData }) => {
-  const { clientName, image, review, projectName, rating, clientImage } = cardData;
+  const { clientName, projectName, rating, review, clientImage } = cardData;
   const { grid, root, avatar, content, large } = ReviewSliderStyles();
   return (
     <Grid
@@ -27,7 +26,7 @@ const ReviewCard = ({ cardData }) => {
         <Card className={root}>
           <div>
             <Typography variant="subtitle1" style={{ fontWeight: "600" }}>
-              {clientName}, {projectName}
+              {`${clientName} (${projectName})`}
             </Typography>
             <Rating name="read-only" size="small" value={rating} readOnly />
           </div>

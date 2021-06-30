@@ -1,15 +1,18 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { useStyles } from "./containerStyles";
 import { Typography, Grid, Card } from "@material-ui/core";
-import { Colors } from "../../../Theme/color.constants";
+import CardContent from "@material-ui/core/CardContent";
 import CustomButton from "../../../Components/CustomButton";
 import CustomImage from "../../../Components/CustomImage";
 import CustomTitle from "../../../Pages/Section/CustomTitle";
-import CardContent from "@material-ui/core/CardContent";
+import { Colors } from "../../../Theme/color.constants";
+
 const Container = (props) => {
   const classes = useStyles();
   const { whiteColor } = Colors;
   const { cardContent } = classes;
+
   return (
     <>
       <Grid container spacing={2}>
@@ -23,10 +26,17 @@ const Container = (props) => {
         </Grid>
         {props.data.map((items, index) => (
           <Grid item xs={12} lg={4} md={4} key={"ourWork-" + index}>
-            <Card style={{ height: "100%", display:"flex", flexDirection:"column", justifyContent:"space-between" }}>
+            <Card
+              style={{
+                height: "100%",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+              }}
+            >
               <CustomImage src={items.image} style={{ width: "100%" }} />
               <CardContent className={cardContent}>
-                <Typography variant="h5" >{items.title}</Typography>
+                <Typography variant="h5">{items.title}</Typography>
               </CardContent>
             </Card>
           </Grid>

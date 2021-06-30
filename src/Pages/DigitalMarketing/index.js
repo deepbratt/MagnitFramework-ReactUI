@@ -19,6 +19,8 @@ import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/
 import { Grid } from "@material-ui/core";
 import ReviewCard from "../../Components/ReviewSlider/ReviewCard";
 import MetaTags from "../../Components/MetaTags";
+import { Loader } from "../../Components/loader";
+
 const DigitalMarketing = () => {
   const { linearBackground, BlueRibbon, aliceBlue } = Colors;
   const { data, review, banner, loading, metaData } = useApi();
@@ -48,10 +50,15 @@ const DigitalMarketing = () => {
     </Grid>
   ));
 
-  if (loading) return <p>Loading</p>;
+  if (loading) return <Loader/>;
   return (
     <>
-    <MetaTags title={title} description={description} canonical={canonical} keywords={keywords}/>
+      <MetaTags
+        title={title}
+        description={description}
+        canonical={canonical}
+        keywords={keywords}
+      />
       <CommentSection data={slides}>
         {banner.map((data) => {
           return (
@@ -124,7 +131,7 @@ const DigitalMarketing = () => {
           </span>
         </Section>
       </CommentSection>
-      </>
+    </>
   );
 };
 

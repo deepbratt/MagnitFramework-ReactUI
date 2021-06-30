@@ -9,9 +9,8 @@ import {
 } from "@material-ui/core";
 import useStyles from "./style";
 import Rating from "@material-ui/lab/Rating";
-import VideosData from "../../../Utils/Constants/Language/en/TestimonialVideos";
 
-const VideoCard = ({ Img, detail, avatar, name, date }) => {
+const VideoCard = ({ data }) => {
   const {
     cardRoot,
     cardImage,
@@ -24,7 +23,7 @@ const VideoCard = ({ Img, detail, avatar, name, date }) => {
 
   return (
     <Grid container justify="center" spacing={2}>
-      {VideosData.map((a) => {
+      {data.map((review, index) => {
         return (
           <Grid
             style={{ display: "flex" }}
@@ -32,44 +31,21 @@ const VideoCard = ({ Img, detail, avatar, name, date }) => {
             xs={12}
             sm={6}
             md={4}
-            key={a.id+"videodata"}
+            key={index + "review"}
           >
             <Card className={cardRoot}>
-              {/* <CardHeader
-                style={{ textAlign: "left" }}
-                avatar={<img src={a.Avatar} alt="s" className={avatarImg} />}
-                title={
-                  <Typography variant="h5" className={cardTitle}>
-                    {a.name}
-                  </Typography>
-                }
-                action={
-                  <Typography variant="body2" className={carddate}>
-                    {a.date}
-                  </Typography>
-                }
-                subheader={
-                  <Rating
-                    name="read-only"
-                    value={5}
-                    readOnly
-                    className={rating}
-                  />
-                }
-                className={header}
-              /> */}
               <div className={blogDetail}>
                 <div className="left">
                   <div>
-                    <Avatar src={a.Avatar} />
+                    <Avatar src={review.clientImage} />
                   </div>
                   <div>
                     <Typography variant="h5" className={cardTitle}>
-                      {a.name}
+                      {review.clientName}
                     </Typography>
                     <Rating
                       name="read-only"
-                      value={5}
+                      value={review.rating}
                       readOnly
                       className={rating}
                     />
@@ -77,7 +53,7 @@ const VideoCard = ({ Img, detail, avatar, name, date }) => {
                 </div>
                 <div>
                   <Typography align="right" variant="body2" component="p">
-                    {a.date}
+                    {review.Date}
                   </Typography>
                 </div>
               </div>
@@ -86,16 +62,16 @@ const VideoCard = ({ Img, detail, avatar, name, date }) => {
                 alt=""
                 height="140"
                 className={cardImage}
-                image={a.Img}
+                image={review.image}
                 title=""
               />
 
               <CardContent>
                 <Typography align="left" color="textPrimary" variant="h4">
-                  {a.project}
+                  {review.projectName}
                 </Typography>
                 <Typography align="left" color="textSecondary" variant="body1">
-                  {a.para}
+                  {review.review}
                 </Typography>
               </CardContent>
             </Card>

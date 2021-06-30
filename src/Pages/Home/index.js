@@ -112,7 +112,7 @@ const Home = (props) => {
   },[])
 
 
-  if(loading) return <p>Loading</p>
+  if(loading) return <Loader/>
 
   return (
     <>

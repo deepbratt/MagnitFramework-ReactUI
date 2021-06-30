@@ -1,35 +1,28 @@
 import React from "react";
-import { useStyles } from "../Sections/HomePageSections/ServicesContext/servicesStyles";
-import { Typography, Grid } from "@material-ui/core";
-import CustomImage from "./CustomImage";
+import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 import ReactCardFlip from "react-card-flip";
-import PropTypes from "prop-types";
-import { Colors } from "../Theme/color.constants";
+import { Typography, Grid } from "@material-ui/core";
 import CustomButton from "./CustomButton";
+import CustomImage from "./CustomImage";
+import { Colors } from "../Theme/color.constants";
+import { useStyles } from "../Sections/HomePageSections/ServicesContext/servicesStyles";
 
 const Flip = ({ data }) => {
   const classes = useStyles();
-
-  const { whiteColor } = Colors;
-  const {
-    devSec,
-    vertical,
-    name,
-    detail,
-    supportSub,
-    VertSec,
-    badge,
-  } = classes;
   const [isFlipped, setIsFlipped] = React.useState(false);
-  const { color, fill, image, title, description, buttonLink,buttonLabel } = data;
+  const { whiteColor } = Colors;
+  const { image, title, description, buttonLabel, buttonLink } = data;
+  const { devSec, vertical, name, detail, supportSub, VertSec, badge } =
+    classes;
+
   //   Use this Card for Services Section pass data from its Parent Contanier to here
   return (
     <>
       <div
         onMouseEnter={() => setIsFlipped(true)}
         onMouseLeave={() => setIsFlipped(false)}
-        style={{flexGrow:1}}
+        style={{ flexGrow: 1 }}
       >
         <ReactCardFlip
           isFlipped={isFlipped}
@@ -41,16 +34,13 @@ const Flip = ({ data }) => {
             className={VertSec}
             onMouseEnter={() => setIsFlipped(true)}
           >
-            <div
-             
-              style={{ backgroundColor: color }}
-              className={supportSub}
-            >
+            <div className={supportSub}>
               <CustomImage
                 alt="icon"
                 width="100%"
+                height="100%"
                 src={image}
-                style={{ filter: fill }}
+                className={badge}
               />
             </div>
             <div>
@@ -114,11 +104,10 @@ Flip.defaultProps = {
 Flip.propTypes = {
   horizontal: PropTypes.bool,
   data: PropTypes.shape({
-    color: PropTypes.string.isRequired,
-    fill: PropTypes.string,
-    // icon: PropTypes.element,
     title: PropTypes.string.isRequired,
-    desc: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    buttonLabel: PropTypes.string,
+    buttonLink: PropTypes.string,
     redirect: PropTypes.string.isRequired,
   }),
 };

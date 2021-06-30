@@ -1,14 +1,11 @@
-import ReviewCard from "./ReviewCard";
 import ReviewSliderStyles from "./style";
 // import prev from "../../assets/services/prev.png";
 // import next from "../../assets/services/next.png";
 import { Grid, useMediaQuery, useTheme } from "@material-ui/core";
-import { reviewSliderText } from "../../Utils/Constants/Language";
 // import CustomImage from "../CustomImage";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 
 const ReviewSlider = ({
   slides,
@@ -62,7 +59,6 @@ const ReviewSlider = ({
   // };
 
   return (
-
     <Slider
       dots={showDots}
       infinite={true}
@@ -73,12 +69,12 @@ const ReviewSlider = ({
       className={sliderRoot}
       autoplay
     >
-      {slides.map((slide, i) => {
+      {slides.map((slide, index) => {
         return (
           <Grid
             container
             justify="center"
-            key={i + "2ndslider"}
+            key={index + "slide"}
             style={{
               display: "flex",
               height: "100%",
@@ -93,7 +89,6 @@ const ReviewSlider = ({
 };
 
 ReviewSlider.defaultProps = {
-
   showArrows: true,
   showDots: true,
   itemsPerSlide: 1,
