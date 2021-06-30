@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import {
   Card,
   CardActions,
@@ -5,23 +6,23 @@ import {
   Grid,
   Typography,
 } from "@material-ui/core";
-import { useEffect } from "react";
-import { useState } from "react";
 import CustomButton from "../../Components/CustomButton";
 import CustomImage from "../../Components/CustomImage";
 import { splitString } from "../../Utils/globalFunctions";
+import { NavLink } from "react-router-dom";
 
 import OurBlogsStyles from "./style";
 
-const TrendingBlogs = ({ cardData, blogsBodyText }) => {
+const TrendingBlogs = ({ cardData }) => {
   const [blogsBody, setBlogsBody] = useState([]);
-  const { title, text, date, image, buttonLabel } = cardData;
+  const { title, text, date, image, buttonLabel, link } = cardData;
 
   const { coverImage, content, blogDetail, light } = OurBlogsStyles();
   useEffect(() => {
     let blogsText = splitString(text, "<br/>");
     setBlogsBody(blogsText);
   }, [text]);
+
   return (
     <Grid container>
       <Grid item xs={12} lg={6}>
@@ -38,7 +39,7 @@ const TrendingBlogs = ({ cardData, blogsBodyText }) => {
                   variant="body2"
                   component="p"
                 >
-                  {date}
+                  {new Date(date).toLocaleDateString("en-US", {month: "long", day: "numeric", year: "numeric"})}
                 </Typography>
               </div>
             </div>
@@ -58,7 +59,9 @@ const TrendingBlogs = ({ cardData, blogsBodyText }) => {
               ))}
           </CardContent>
           <CardActions>
-            <CustomButton>{buttonLabel}</CustomButton>
+            <NavLink to={link}>
+              <CustomButton>{buttonLabel}</CustomButton>
+            </NavLink>
           </CardActions>
         </Card>
       </Grid>

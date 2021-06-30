@@ -162,12 +162,12 @@ const OurBlogs = () => {
             >
               <CustomTitle
                 color={whiteColor}
-                text={sections.trendingBlogs.title}
+                text={sections.latestBlogs.title}
                 underlined={false}
               />
               <Grid container justify="center" spacing={2}>
-                {LatestBlogsSectionText.cards &&
-                  LatestBlogsSectionText.cards.map((card, index) => (
+                {sections.latestBlogs.dataArray &&
+                  sections.latestBlogs.dataArray.map((card, index) => (
                     <Grid
                       key={index + "blogslatest"}
                       item

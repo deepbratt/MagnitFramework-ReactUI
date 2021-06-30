@@ -7,7 +7,7 @@ import ReviewSliderStyles from "./style";
 import Avatar1 from "../../assets/Testimonials/avatar1.png";
 
 const ReviewCard = ({ cardData }) => {
-  const { clientName, projectName, rating, review } = cardData;
+  const { clientName, projectName, rating, review, clientImage } = cardData;
   const { grid, root, avatar, content, large } = ReviewSliderStyles();
   return (
     <Grid
@@ -21,7 +21,7 @@ const ReviewCard = ({ cardData }) => {
       <Grid item sm={12} lg={6}>
         <div className={avatar}>
           <div>
-            <Avatar alt="Remy Sharp" src={Avatar1} className={large} />
+            <Avatar alt="Remy Sharp" src={clientImage} className={large} />
           </div>
         </div>
         <Card className={root}>

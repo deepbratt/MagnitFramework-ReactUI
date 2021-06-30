@@ -8,8 +8,9 @@ import CustomButton from "../../Components/CustomButton";
 import { NavLink } from "react-router-dom";
 
 const LatestBlogCard = ({ cardData }) => {
-  const { coverImage, imageText, title, body, buttonText, detail } = cardData;
-  const { date } = detail;
+  const { title, text, date, image, buttonLabel, link } = cardData;
+
+
   const {
     latestBlogCard,
     latestBlogCardContent,
@@ -17,48 +18,32 @@ const LatestBlogCard = ({ cardData }) => {
     coverImg,
     dateStyle,
   } = OurBlogsStyles();
+
   return (
     <Card className={latestBlogCard}>
       <CardActionArea>
-        {/* <CardMedia image={coverImage} title={imageText} /> */}
-        <img className={coverImg} src={coverImage} alt={imageText} />
+        <img className={coverImg} src={image} alt="Blog cover" />
         <CardContent className={latestBlogCardContent}>
           <div className={latestBlogDetail}>
-            {/* <div style={{ marginRight: "8px" }}>
-              <Typography className={authorName} variant="h6" component="h3">
-                {authName}
-              </Typography>
-              <Typography
-                className={authorDesig}
-                variant="subtitle2"
-                color="textSecondary"
-                component="p"
-              >
-                {authDesig}
-              </Typography>
-            </div>
-            <div className={latestBlogDetailCategory}>
-              <Typography variant="h6" component="h3">
-                {category}
-              </Typography>
-            </div> */}
             <div>
               <Typography className={dateStyle} variant="h6" component="h3">
-                {date}
+                {new Date(date).toLocaleDateString("en-US", {month: "long", day: "numeric", year: "numeric"})}
               </Typography>
             </div>
           </div>
           <Typography gutterBottom variant="h6" component="h2">
             {title}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            {body[0].substr(0, 100)}...
-          </Typography>
+          {text && (
+            <Typography variant="body2" gutterBottom component="p">
+              {text.substr(0, 70)}...
+            </Typography>
+          )}
         </CardContent>
       </CardActionArea>
       <CardActions className={latestBlogCardContent}>
-        <NavLink to="/">
-          <CustomButton>{buttonText}</CustomButton>
+        <NavLink to={link}>
+          <CustomButton>{buttonLabel}</CustomButton>
         </NavLink>
       </CardActions>
     </Card>
