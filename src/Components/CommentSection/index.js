@@ -23,7 +23,7 @@ import StarFishPinkPattern from "../../assets/patterns/leftStarfish.png";
 import SquareDottedPattern from "../../assets/patterns/dotsPattern.png";
 import SectionStyles from "./style";
 
-const CommentSection = ({ children, data, order }) => {
+const CommentSection = ({ children, data }) => {
   const { aliceBlue } = Colors;
   const {
     root,

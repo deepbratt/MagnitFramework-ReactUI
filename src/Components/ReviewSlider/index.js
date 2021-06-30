@@ -1,17 +1,11 @@
-import ReviewCard from "./ReviewCard";
 import ReviewSliderStyles from "./style";
 // import prev from "../../assets/services/prev.png";
 // import next from "../../assets/services/next.png";
 import { Grid, useMediaQuery, useTheme } from "@material-ui/core";
-import { reviewSliderText } from "../../Utils/Constants/Language";
 // import CustomImage from "../CustomImage";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-const slideArr = reviewSliderText.map((a, index) => {
-  return <ReviewCard key={index + "reviewslider"} cardData={a} />;
-});
 
 const ReviewSlider = ({
   slides,
@@ -86,7 +80,7 @@ const ReviewSlider = ({
               height: "100%",
             }}
           >
-            <ReviewCard cardData={slide} />
+            {slide}
           </Grid>
         );
       })}

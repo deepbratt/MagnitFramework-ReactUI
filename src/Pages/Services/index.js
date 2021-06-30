@@ -17,6 +17,7 @@ import { DoYouWant } from "../WebServices/constants";
 import { getPageDataApi } from "../../Utils/APIs/pagesApi";
 import { Colors } from "../../Theme/color.constants";
 import { Loader } from "../../Components/loader";
+import ReviewCard from "../../Components/ReviewSlider/ReviewCard";
 
 const Services = () => {
   const { linearBackground, BlueRibbon, aliceBlue } = Colors;
@@ -55,6 +56,15 @@ const Services = () => {
     getPageData();
     console.log("useEffect");
   }, [getPageData]);
+
+  
+  const getSlides = () => {
+    const slideArr = sections.reviews.dataArray.map((review, index) => (
+      <ReviewCard key={index} cardData={review} />
+    ));
+    return slideArr;
+  };
+
 
   return (
     <>
@@ -127,7 +137,7 @@ const Services = () => {
             </Section>
           </Grid>
           <Grid style={{ order: sections.reviews.order }} item xs={12}>
-            <CommentSection data={sections.reviews.dataArray} />
+            <CommentSection data={sections.reviews ? getSlides() : []} />
           </Grid>
         </Grid>
       )}
