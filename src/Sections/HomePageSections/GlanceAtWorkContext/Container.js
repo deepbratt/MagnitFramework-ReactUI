@@ -26,7 +26,7 @@ const Container = (props) => {
         </Grid>
         {props.data.map((items, index) => (
           <Grid item xs={12} lg={4} md={4} key={"ourWork-" + index}>
-            <Card style={{ height: "100%" }}>
+            <Card style={{ height: "100%", display:"flex", flexDirection:"column", justifyContent:"space-between" }}>
               <CustomImage src={items.image} style={{ width: "100%" }} />
               <CardContent className={cardContent}>
                 <Typography variant="h5">{items.title}</Typography>
