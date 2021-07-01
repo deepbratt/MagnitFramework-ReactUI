@@ -32,7 +32,7 @@ const useApi = () =>{
     }, []);
   
     const getData = async () => {
-      let result = await axios.get("http://api.themagnit.com/v1/pages/bySlug/digitalMarketing")
+      let result = await axios.get("http://api.themagnit.com/v1/pages/bySlug/digital-marketing")
       return result
    
     };
