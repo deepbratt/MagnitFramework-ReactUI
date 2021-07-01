@@ -67,7 +67,7 @@ const CommentSection = ({ children, data , alt}) => {
           <img
             className={leftStarFishPattern}
             src={StarFishPinkPattern}
-            alt=""
+            alt={alt}
           />
           <img className={rightStarFishPattern} src={StarFishPattern} alt={alt} />
           <img className={leftDottedPattern} src={DottedPattern} alt={alt} />
