@@ -10,7 +10,7 @@ import {
 } from "../../Utils/Constants/Language/en/AppSolutionsData";
 import BreadCrumb from "../../Components/BreadCrumb";
 import CustomButton from "../../Components/CustomButton";
-const BannerSection = ({data}) => {
+const BannerSection = ({data,alt}) => {
   const { linearBackground} = Colors;
   const breadcrumbData = [
     {
@@ -29,6 +29,7 @@ const BannerSection = ({data}) => {
          <>
           <Banner
         image={data.image}
+        alt={alt}
         backColor={linearBackground}
         breadCrumb={<BreadCrumb links={breadcrumbData} />}
       >

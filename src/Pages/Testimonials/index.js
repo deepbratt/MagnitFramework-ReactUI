@@ -11,7 +11,6 @@ import CustomTitle from "../../Pages/Section/CustomTitle";
 import MetaTags from "../../Components/MetaTags";
 import VideoCard from "./TestimonialVideo";
 import {
-  ClientsHaveToSay,
   subTitle,
   Testmonial,
 } from "../../Utils/Constants/Language/en/TestimonialVideos";
@@ -80,16 +79,16 @@ function Testimonials() {
           />
           <Grid style={{ order: sections.banner.order }} item xs={12}>
             <Banner
-              image={banner}
+              image={sections.banner.dataArray[0].image}
               backColor={linearBackground}
               breadCrumb={<BreadCrumb links={breadCrumData} />}
             >
               <>
                 <Typography variant="h1" gutterBottom className={textColor}>
-                  {Testmonial}
+                  {sections.banner.dataArray[0].heading}
                 </Typography>
                 <Typography variant="h5" gutterBottom className={textColor}>
-                  {subTitle}
+                  {sections.banner.dataArray[0].subHeading}
                 </Typography>
               </>
             </Banner>

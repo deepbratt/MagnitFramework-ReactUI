@@ -7,7 +7,7 @@ import ReactCardFlip from "react-card-flip";
 import CustomImage from "../CustomImage";
 import PointBadgeStyles from "./style";
 
-const PointBadge = ({ horizontal, data }) => {
+const PointBadge = ({ horizontal, data, alt }) => {
   const { title, description, image, buttonLabel } = data;
   const {
     vertical,
@@ -37,7 +37,7 @@ const PointBadge = ({ horizontal, data }) => {
           >
             <Grid className={VertSec} onMouseEnter={() => setFlipped(true)}>
               <section className={supportSub}>
-                <CustomImage alt="image" width="100%" src={image} />
+                <CustomImage alt={alt} width="100%" src={image} />
               </section>
               <section>
                 <Typography
@@ -85,7 +85,7 @@ const PointBadge = ({ horizontal, data }) => {
         <Grid className={inline}>
           <Grid className={devSec}>
             <section className={supportSub}>
-              <CustomImage alt="image" width="100%" src={image} />
+              <CustomImage alt={alt} width="100%" src={image} />
             </section>
           </Grid>
           <Grid className={contentLeft}>

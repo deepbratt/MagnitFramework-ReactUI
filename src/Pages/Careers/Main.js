@@ -38,7 +38,7 @@ const Main = ({ data, width }) => {
               <CustomImage
                 width={width}
                 className={hero}
-                alt="hero"
+                alt="careers at magnit"
                 src={image}
               />
             </CardContent>

@@ -7,7 +7,7 @@ import CustomImage from "../../../Components/CustomImage";
 import CustomTitle from "../../../Pages/Section/CustomTitle";
 import useLoop from "./useLoop";
 
-const HowItWorksContext = ({ data, text }) => {
+const HowItWorksContext = ({ data, text, alt }) => {
   const { cardSec } = useStyles();
   const { margin, color } = useLoop();
   const { card2, root, devSec, image } = missionStyles();
@@ -35,7 +35,7 @@ const HowItWorksContext = ({ data, text }) => {
                 >
                   <CardContent style={{ padding: "0px" }}>
                     <Grid item className={image}>
-                      <CustomImage src={data.image} alt="image" />
+                      <CustomImage src={data.image} alt={alt}/>
                     </Grid>
                     <CardContent
                       style={{

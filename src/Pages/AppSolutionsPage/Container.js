@@ -47,13 +47,14 @@ const Solutions = () => {
             xs={12}
             className={root}
           >
-            <Banner data={banner} />
+            <Banner alt="app solutions" data={banner} />
           </Grid>
           <Section>
             <Grid style={{ order: payload.appSolutions.order }} item xs={12}>
               <FeaturesSection
                 title={payload.appSolutions.title}
                 data={payload.appSolutions.dataArray}
+                alt="app solutions"
               />
             </Grid>
           </Section>
@@ -61,6 +62,7 @@ const Solutions = () => {
             <AdminContext
               order={payload.appAdminPanel.order}
               text={payload.appAdminPanel.title}
+              alt="app solutions"
               data={payload.appAdminPanel.dataArray}
             />
           </Section>
@@ -75,6 +77,7 @@ const Solutions = () => {
               <StairCaseContext
                 text={payload.howitWorks.title}
                 data={payload.howitWorks.dataArray}
+                alt="app solutions"
               />
             </Grid>
           </Section>
@@ -85,6 +88,7 @@ const Solutions = () => {
               data={payload.benefits.dataArray}
               horizontal={true}
               lgBreakpoint={6}
+              alt="app solutions"
             />
           </Section>
           <Grid item lg={12} md={12} xs={12}>

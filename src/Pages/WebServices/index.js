@@ -35,7 +35,7 @@ const Services = () => {
       style={{ display: "flex", flexDirection: "column", height: "100%"}}
       alignItems="center"
     >
-      <ReviewCard cardData={data} />
+      <ReviewCard  alt="web development" cardData={data} />
     </Grid>
   ));
 
@@ -57,12 +57,13 @@ const Services = () => {
   return (
     <>
     <MetaTags title={title} description={description} canonical={canonical} keywords={keywords}/>
-    <CommentSection data={slides}>
+    <CommentSection alt="web development" data={slides}>
       {banner.map((data)=>{
         return(
           <>
           <Banner
         image={data.image}
+        alt="web development"
         backColor={linearBackground}
         breadCrumb={<BreadCrumb links={breadCrumData} />}
       >
@@ -84,13 +85,13 @@ const Services = () => {
         <CustomImage
           className={leftPattern}
           src={PatternLeft}
-          alt=""
+          alt="web development"
           
         />
         <CustomImage
           className={rightPattern}
           src={StarFishPattern}
-          alt=""
+          alt="web development"
           
         />
         <Section>
@@ -100,19 +101,20 @@ const Services = () => {
             underlined={true}
           />
           <CustomTitle subTitle={payload.services.subTitle} />
-          <PointList data={payload.services.dataArray} horizontal={false} />
+          <PointList alt="web development" data={payload.services.dataArray} horizontal={false} />
         </Section>
       </div>
       <Section patterns={ourWorkSectionPatterns} backColor={aliceBlue}>
         <CustomTitle underlined={true} text={payload.benefits.title} />
 
-        <PointList data={payload.benefits.dataArray} horizontal={true} lgBreakpoint={6} />
+        <PointList alt="web development" data={payload.benefits.dataArray} horizontal={true} lgBreakpoint={6} />
       </Section>
       <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
         <GlanceSection
           title={payload.ourWork.title}
           data={payload.ourWork.dataArray}
           buttonText={Data.buttonText}
+          alt="web development"
         />
       </Section>
       <Section>

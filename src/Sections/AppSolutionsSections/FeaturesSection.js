@@ -10,7 +10,7 @@ import FeaturesRow from "./FeaturesRow";
 import { SolutionsStyles } from "../../Pages/AppSolutionsPage/SolutionsStyles";
 import CustomTitle from "../../Pages/Section/CustomTitle";
 
-const FeaturesSection = ({data,title}) => {
+const FeaturesSection = ({data,title,alt}) => {
   const { left, right , reversed,container} = SolutionsStyles();
   const item1 = data[0]
   const item2 = data[1]
@@ -27,26 +27,27 @@ const FeaturesSection = ({data,title}) => {
         </Grid>
 
         <Grid className={left} item md={4} xs={12}>
-          <img lg={4} md={8} xs={12} src={item1.image} alt="" />
+          <img lg={4} md={8} xs={12} src={item1.image} alt={alt} />
         </Grid>
         <Grid style={{ display: "flex" }} item md={8} xs={12}>
-          <FeaturesRow data={item1.dataArray} />
+          <FeaturesRow alt={alt} data={item1.dataArray} />
         </Grid>
         <Grid style={{ display: "flex" }} item md={8} xs={12}>
           <FeaturesRow
             data={item2.dataArray}
             flexDirection="row-reverse"
+            alt={alt}
           />
         </Grid>
         <Grid className={right} item md={4} xs={12}>
-          <img lg={4} md={8} xs={12} src={item2.image} alt="" />
+          <img lg={4} md={8} xs={12} src={item2.image} alt={alt} />
         </Grid>
         <Grid item className={reversed}>
         <Grid className={left} item md={4} xs={12}>
-          <img lg={4} md={8} xs={12} src={item3.image} alt="" />
+          <img lg={4} md={8} xs={12} src={item3.image} alt={alt} />
         </Grid>
         <Grid style={{ display: "flex" }} item md={8} xs={12}>
-          <FeaturesRow data={item3.dataArray} />
+          <FeaturesRow alt={alt} data={item3.dataArray} />
         </Grid>
         </Grid>
       </Grid>

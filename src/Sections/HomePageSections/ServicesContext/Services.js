@@ -3,7 +3,7 @@ import { useStyles } from "./servicesStyles";
 import { Grid } from "@material-ui/core";
 import Content from "../../../Components/Card";
 import CustomTitle from "../../../Pages/Section/CustomTitle";
-const ServicesOffered = ({ servicesData, title }) => {
+const ServicesOffered = ({ servicesData, title , alt}) => {
   const classes = useStyles();
 
   const { root, cardSec } = classes;
@@ -13,7 +13,7 @@ const ServicesOffered = ({ servicesData, title }) => {
       <CustomTitle underlined={true} text={title} />
       <Grid container className={root}>
         <Grid item className={cardSec}>
-          <Content data={servicesData} />
+          <Content alt={alt} data={servicesData} />
         </Grid>
       </Grid>
     </>
