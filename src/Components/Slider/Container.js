@@ -31,7 +31,7 @@ const Container = (props) => {
           style={{ display: "flex", flexDirection: "column", height: "100%" }}
           alignItems="center"
         >
-          <Slider array={data.items} data={data} />
+          <Slider alt={props.alt} array={data.items} data={data} />
         </Grid>
       ))}
     </Carousel>

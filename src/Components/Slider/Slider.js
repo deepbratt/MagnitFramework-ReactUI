@@ -7,7 +7,7 @@ import CustomImage from "../CustomImage";
 import CustomButton from "../CustomButton";
 import { NavLink } from "react-router-dom";
 
-const Slider = ({ value, data, array }) => {
+const Slider = ({ value, data, array, alt }) => {
   const { democrat, vividCerlean, atomsphere, carmine, peaFowl, whiteColor } =
     Colors;
   const classes = useStyles();
@@ -78,7 +78,7 @@ const Slider = ({ value, data, array }) => {
           // justify="flex-start"
         >
           <CustomImage
-            alt="sliderImg"
+            alt={alt}
             src={data.backgroundImage}
             className={vector}
           />
