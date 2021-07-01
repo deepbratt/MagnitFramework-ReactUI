@@ -4,7 +4,7 @@ import axios from "axios";
 import { useEffect, useRef, useState } from "react";
 // import Lottie from "react-lottie";
 import CertificationListStyles from "./style";
-import lottie from 'lottie-web';
+// import lottie from 'lottie-web';
 
 const CertificationList = ({ root, data, toRight, mounted }) => {
   const elem = useRef(null)

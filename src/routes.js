@@ -1,10 +1,10 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy } from "react";
 // import { useSelector } from "react-redux";
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 import Layout from "./Layout";
 import RequireAuth from "./container/RequireAuth";
 import { pageRoutes } from "./Components/Path";
-import { Loader } from "./Components/loader";
+// import { Loader } from "./Components/loader";
 import { Colors } from "./Theme/color.constants";
 // import { GA_ID } from "./Utils/Constants/Language";
 // import RouteChangeTracker from "./Components/RouteChangeTracker";
@@ -18,7 +18,7 @@ const Routes = () => {
   // const isLoggedIn = useSelector((state) => state.userReducer.isLoggedin);
   const { Harlequin } = Colors;
   return (
-    <Suspense fallback={<Loader color={Harlequin} styles="h4" />}>
+    // <Suspense fallback={<Loader color={Harlequin} styles="h4" />}>
       <Router>
         {/* <RouteChangeTracker/> */}
         <Layout>
@@ -40,7 +40,7 @@ const Routes = () => {
           </Switch>
         </Layout>
       </Router>
-    </Suspense>
+    // </Suspense>
   );
 };
 export default Routes;
