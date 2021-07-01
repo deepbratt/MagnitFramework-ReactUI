@@ -34,7 +34,7 @@ const Container = (props) => {
                 justifyContent: "space-between",
               }}
             >
-              <CustomImage src={items.image} alt={alt} style={{ width: "100%" }} />
+              <CustomImage src={items.image} alt={props.alt} style={{ width: "100%" }} />
               <CardContent className={cardContent}>
                 <Typography variant="h5">{items.title}</Typography>
               </CardContent>
