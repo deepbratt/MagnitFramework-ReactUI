@@ -1,6 +1,6 @@
 import Grid from "@material-ui/core/Grid";
 import { connect } from "react-redux";
-import DocumentMeta from "react-document-meta";
+import { NavLink } from "react-router-dom";
 import Slide from "../../Components/Slider/Container";
 import Solutions from "../../Sections/HomePageSections/SolutionsContext/Solutions";
 import PartnerContext from "../../Sections/HomePageSections/PartnerWithUsContext/Maincontainer";
@@ -30,7 +30,7 @@ import ReviewSlider from "../../Components/ReviewSlider";
 import { Data } from "../../Utils/Constants/Language/en/GlanceAtWorkData";
 import CardData from "../../Components/Card";
 import useApi from "../../Utils/homePageApi";
-import {Loader} from "../../Components/loader/index"
+import { Loader } from "../../Components/loader/index";
 import MetaTags from "../../Components/MetaTags";
 export const AwardSectionImages = [Image1, Image2, Image3, Image4, Image5];
 
@@ -46,14 +46,19 @@ const Home = (props) => {
   const WhyUsSlides = review.map((data, index) => (
     <Grid
       key={index}
-      style={{ display: "flex", flexDirection: "column", height: "100%" ,order: payload.reviews.order}}
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        height: "100%",
+        order: payload.reviews.order,
+      }}
       alignItems="center"
     >
       <QuoteCard cardData={data} />
     </Grid>
   ));
 
-  const [isMounted, setIsMounted] = useState(false)
+  const [isMounted, setIsMounted] = useState(false);
 
   const ourWorkSectionPatterns = [
     {
@@ -69,7 +74,7 @@ const Home = (props) => {
               width="100%"
               height="100%"
               src={BackGroudnPatternLeft}
-              alt=""
+              alt="magnit home"
             />
           </Grid>
         </Hidden>
@@ -89,7 +94,7 @@ const Home = (props) => {
               width="100%"
               height="100%"
               src={BackGroudnPatternRight}
-              alt=""
+              alt="magnit home"
             />
           </Grid>
         </Hidden>
@@ -102,21 +107,25 @@ const Home = (props) => {
     setIsSubmitted(true);
   }
 
-  useEffect(()=>{
+  useEffect(() => {
     // mounted = true
-    setIsMounted(true)
-    return ()=>{
+    setIsMounted(true);
+    return () => {
       // mounted = false
-      setIsMounted(false)
-    }
-  },[])
+      setIsMounted(false);
+    };
+  }, []);
 
-
-  if(loading) return <Loader/>
+  if (loading) return <Loader />;
 
   return (
     <>
-    <MetaTags title={title} description={description} canonical={canonical} keywords={keywords}/>
+      <MetaTags
+        title={title}
+        description={description}
+        canonical={canonical}
+        keywords={keywords}
+      />
       <div className="App">
         <Grid style={{ order: payload.homeSlider.order }} item md={12} xs={12}>
           <Slide data={payload} />
@@ -144,7 +153,8 @@ const Home = (props) => {
         <Grid style={{ order: payload.benefits.order }} item xs={12}>
           <PartnerContext
             title={payload.benefits.title}
-            data={payload.benefits.dataArray}/>
+            data={payload.benefits.dataArray}
+          />
         </Grid>
         <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
           <GlanceSection
@@ -166,7 +176,8 @@ const Home = (props) => {
                 text={payload.trainingCertification.title}
               />
             </Grid>
-            {isMounted && payload.trainingCertification.dataArray &&
+            {isMounted &&
+              payload.trainingCertification.dataArray &&
               payload.trainingCertification.dataArray
                 .filter((card, idx) => idx < 4)
                 .map((card, index) => (
@@ -175,12 +186,12 @@ const Home = (props) => {
                       toRight={index % 2 === 0 ? false : true}
                       root={rootClasses[index]}
                       data={card}
-                      mounted = {isMounted}
+                      mounted={isMounted}
                     />
                   </Grid>
                 ))}
           </Grid>
-          <CustomButton>See More</CustomButton>
+          {/* <CustomButton>See More</CustomButton> */}
         </Section>
         {/* NEWSLETTER SECTION
       <Section>
@@ -211,16 +222,18 @@ const Home = (props) => {
             showDots={false}
             slides={WhyUsSlides}
             itemsPerSlide={3}
-            
           />
 
-          <CustomButton>See More</CustomButton>
+          <NavLink style={{ textDecoration: "none" }} to="/testimonial">
+            <CustomButton>See More</CustomButton>
+          </NavLink>
           {/* <ReviewSlider slides={cardArr} /> */}
         </Section>
         {/* AWARD AND ACCREDITATIONS SECTION */}
         <Section>
           <CustomTitle underlined={true} text={payload.awards.title} />
-          <Grid item
+          <Grid
+            item
             style={{
               display: "flex",
               flexWrap: "wrap",

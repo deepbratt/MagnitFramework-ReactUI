@@ -84,13 +84,13 @@ const HireDeveloper = () => {
         <CustomImage
           className={leftPattern}
           src={PatternLeft}
-          alt=""
+          alt="Hire developer"
           
         />
         <CustomImage
           className={rightPattern}
           src={StarFishPattern}
-          alt=""
+          alt="Hire developer"
           
         />
         <Section>

@@ -1,12 +1,13 @@
 import React from "react";
 import { useStyles } from "./solutionStyles";
 import { Typography, Grid, Card } from "@material-ui/core";
+import { NavLink } from "react-router-dom";
 import { Colors } from "../../../Theme/color.constants";
 import CustomButton from "../../../Components/CustomButton";
 import CustomTitle from "../../../Pages/Section/CustomTitle";
 import CustomImage from "../../../Components/CustomImage";
 
-const Solutions = ({ title, content, subTitle}) => {
+const Solutions = ({ title, content, subTitle }) => {
   const classes = useStyles();
   const { card } = classes;
 
@@ -29,8 +30,14 @@ const Solutions = ({ title, content, subTitle}) => {
             <Grid container spacing={2}>
               {content &&
                 content.map((data, index) => (
-                  <Grid key={index+"solutionscontentdata"} item xs={12} sm={6} md={3}>
-                    <Card style={{borderRadius: "5px"}} className={card}>
+                  <Grid
+                    key={index + "solutionscontentdata"}
+                    item
+                    xs={12}
+                    sm={6}
+                    md={3}
+                  >
+                    <Card style={{ borderRadius: "5px" }} className={card}>
                       <CustomImage width="60px" alt="" src={data.image} />
 
                       <div>
@@ -45,7 +52,9 @@ const Solutions = ({ title, content, subTitle}) => {
           </Grid>
         </Grid>
         <Grid item lg={12} md={12} xs={12}>
-          <CustomButton color="secondary">See More</CustomButton>
+          <NavLink style={{ textDecoration: "none" }} to="app-solutions">
+            <CustomButton color="secondary">See More</CustomButton>
+          </NavLink>
         </Grid>
       </Grid>
     </>

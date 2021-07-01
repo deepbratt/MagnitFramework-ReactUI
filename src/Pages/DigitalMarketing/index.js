@@ -86,8 +86,8 @@ const DigitalMarketing = () => {
           <CustomImage
             className={leftPattern}
             src={PatternLeft}
-            alt=""
-            srcSet=""
+            alt="Digital Marketing"
+            srcSet="Digital Marketing"
           />
           <CustomImage
             className={rightPattern}
