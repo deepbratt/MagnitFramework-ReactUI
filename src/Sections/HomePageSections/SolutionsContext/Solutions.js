@@ -7,7 +7,7 @@ import CustomButton from "../../../Components/CustomButton";
 import CustomTitle from "../../../Pages/Section/CustomTitle";
 import CustomImage from "../../../Components/CustomImage";
 
-const Solutions = ({ title, content, subTitle }) => {
+const Solutions = ({ title, content, subTitle,alt}) => {
   const classes = useStyles();
   const { card } = classes;
 
@@ -30,15 +30,9 @@ const Solutions = ({ title, content, subTitle }) => {
             <Grid container spacing={2}>
               {content &&
                 content.map((data, index) => (
-                  <Grid
-                    key={index + "solutionscontentdata"}
-                    item
-                    xs={12}
-                    sm={6}
-                    md={3}
-                  >
-                    <Card style={{ borderRadius: "5px" }} className={card}>
-                      <CustomImage width="60px" alt="" src={data.image} />
+                  <Grid key={index+"solutionscontentdata"} item xs={12} sm={6} md={3}>
+                    <Card style={{borderRadius: "5px"}} className={card}>
+                      <CustomImage width="60px" alt={alt} src={data.image} />
 
                       <div>
                         <Typography color="textSecondary" variant="h5">

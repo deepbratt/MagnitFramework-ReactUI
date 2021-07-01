@@ -8,7 +8,7 @@ import CustomImage from "./CustomImage";
 import { Colors } from "../Theme/color.constants";
 import { useStyles } from "../Sections/HomePageSections/ServicesContext/servicesStyles";
 
-const Flip = ({ data }) => {
+const Flip = ({ data , alt}) => {
   const classes = useStyles();
   const [isFlipped, setIsFlipped] = React.useState(false);
   const { whiteColor } = Colors;
@@ -36,7 +36,7 @@ const Flip = ({ data }) => {
           >
             <div className={supportSub}>
               <CustomImage
-                alt="icon"
+                alt={alt}
                 width="100%"
                 height="100%"
                 src={image}

@@ -46,11 +46,11 @@ const DigitalMarketing = () => {
       style={{ display: "flex", flexDirection: "column", height: "100%" }}
       alignItems="center"
     >
-      <ReviewCard cardData={data} />
+      <ReviewCard alt="digital marketing" cardData={data} />
     </Grid>
   ));
 
-  if (loading) return <Loader/>;
+  if (loading) return <Loader />;
   return (
     <>
       <MetaTags
@@ -59,12 +59,13 @@ const DigitalMarketing = () => {
         canonical={canonical}
         keywords={keywords}
       />
-      <CommentSection data={slides}>
+      <CommentSection alt="digital marketing" data={slides}>
         {banner.map((data) => {
           return (
             <>
               <Banner
                 image={data.image}
+                alt="digital marketing"
                 backColor={linearBackground}
                 breadCrumb={<BreadCrumb links={breadCrumData} />}
               >
@@ -86,14 +87,12 @@ const DigitalMarketing = () => {
           <CustomImage
             className={leftPattern}
             src={PatternLeft}
-            alt="Digital Marketing"
-            srcSet="Digital Marketing"
+            alt="digital marketing"
           />
           <CustomImage
             className={rightPattern}
             src={StarFishPattern}
-            alt=""
-            srcSet=""
+            alt="digital marketing"
           />
           <Section>
             <CustomTitle
@@ -102,7 +101,11 @@ const DigitalMarketing = () => {
               underlined={true}
             />
             <CustomTitle subTitle={payload.services.subTitle} />
-            <PointList data={payload.services.dataArray} horizontal={false} />
+            <PointList
+              alt="digital marketing"
+              data={payload.services.dataArray}
+              horizontal={false}
+            />
           </Section>
         </div>
 
@@ -113,6 +116,7 @@ const DigitalMarketing = () => {
             data={payload.benefits.dataArray}
             horizontal={true}
             lgBreakpoint={6}
+            alt="digital marketing"
           />
         </Section>
         <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
@@ -120,6 +124,7 @@ const DigitalMarketing = () => {
             title={payload.ourWork.title}
             data={payload.ourWork.dataArray}
             buttonText={Data.buttonText}
+            alt="digital marketing"
           />
         </Section>
         <Section>

@@ -5,7 +5,7 @@ import CustomImage from "../CustomImage";
 import { Colors } from "../../Theme/color.constants";
 import StarFishPinkPattern from "../../assets/patterns/starfish-pink.png";
 
-const Banner = ({ image, breadCrumb, children }) => {
+const Banner = ({ image, breadCrumb, children,alt }) => {
   const { linearBackground } = Colors;
   const { root, imageWrapper, content, patternPosition } = BannerStyles();
   return (
@@ -27,7 +27,7 @@ const Banner = ({ image, breadCrumb, children }) => {
             
           />
             <Grid className={imageWrapper}>
-            <CustomImage src={image} alt="" />
+            <CustomImage src={image} alt={alt} />
           </Grid>
         </Grid>
       </Grid>

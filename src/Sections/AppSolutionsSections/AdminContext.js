@@ -11,7 +11,7 @@ import CustomImage from "../../Components/CustomImage"
 import CustomTitle from "../../Pages/Section/CustomTitle"
 import { useStyles } from "./useStyles";
 
-const AdminContext = ({data,text}) => {
+const AdminContext = ({data,text,alt}) => {
   const {content, image } = useStyles();
   return (
     <>
@@ -25,7 +25,7 @@ const AdminContext = ({data,text}) => {
           <CustomTitle style={{marginBottom: "20px"}} underlined={false} text={text} />
           </Grid>
           <Grid item  md={12} lg={5} xs={12}>
-            <CustomImage className={image} width="400px" src={data.image} alt="image" />
+            <CustomImage className={image} width="400px" src={data.image} alt={alt} />
           </Grid>
           <Grid className={content} xs={12} item lg={6}>
             <Typography variant="body1">
