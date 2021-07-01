@@ -49,7 +49,7 @@ const Home = (props) => {
       style={{ display: "flex", flexDirection: "column", height: "100%" ,order: payload.reviews.order}}
       alignItems="center"
     >
-      <QuoteCard cardData={data} />
+      <QuoteCard alt="home" cardData={data} />
     </Grid>
   ));
 
@@ -69,7 +69,7 @@ const Home = (props) => {
               width="100%"
               height="100%"
               src={BackGroudnPatternLeft}
-              alt=""
+              alt="home"
             />
           </Grid>
         </Hidden>
@@ -89,7 +89,7 @@ const Home = (props) => {
               width="100%"
               height="100%"
               src={BackGroudnPatternRight}
-              alt=""
+              alt="home"
             />
           </Grid>
         </Hidden>
@@ -119,12 +119,12 @@ const Home = (props) => {
     <MetaTags title={title} description={description} canonical={canonical} keywords={keywords}/>
       <div className="App">
         <Grid style={{ order: payload.homeSlider.order }} item md={12} xs={12}>
-          <Slide data={payload} />
+          <Slide alt="home" data={payload} />
         </Grid>
         <Grid style={{ order: payload.services.order }} item md={12} xs={12}>
           <Section>
             <CustomTitle underlined={true} text={payload.services.title} />
-            <CardData data={payload.services.dataArray} />
+            <CardData alt="home" data={payload.services.dataArray} />
           </Section>
         </Grid>
         <Grid
@@ -138,12 +138,14 @@ const Home = (props) => {
               title={payload.ourSolutions.title}
               content={payload.ourSolutions.dataArray}
               subTitle={payload.ourSolutions.subTitle}
+              alt="home"
             />
           </Section>
         </Grid>
         <Grid style={{ order: payload.benefits.order }} item xs={12}>
           <PartnerContext
             title={payload.benefits.title}
+            alt="home"
             data={payload.benefits.dataArray}/>
         </Grid>
         <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
@@ -151,6 +153,7 @@ const Home = (props) => {
             title={payload.ourWork.title}
             data={payload.ourWork.dataArray}
             buttonText={Data.buttonText}
+            alt="home"
           />
         </Section>
         {/* TRAINING AND CERTIFICATION */}
@@ -233,8 +236,9 @@ const Home = (props) => {
                 <CustomImage
                   style={{ margin: "10px 40px", width: "130px", color: Mirage }}
                   src={data.image}
-                  alt={`client${index}`}
+                  alt="home"
                   key={`awards-accred-${index}`}
+
                 />
               ))}
           </Grid>

@@ -9,14 +9,14 @@ import EndQuote from "../../assets/images/cards/EndingQuote.png";
 import CardStyle from "./style";
 import CustomImage from "../CustomImage";
 
-const QuoteCard = ({ cardData,shadow }) => {
+const QuoteCard = ({ cardData,shadow, alt }) => {
   const { review, clientName, clientImage,rating, projectName } = cardData;
   const { root, author, content, startQuote, large, endQuote } = CardStyle();
   return (
     <Card className={root} style={{boxShadow:{shadow}}}>
       <div className={author}>
         <div>
-          <Avatar alt="Remy Sharp" src={clientImage} className={large} />
+          <Avatar alt={alt} src={clientImage} className={large} />
         </div>
         <div>
           <Typography variant="h5">By {clientName}, {projectName}</Typography>
@@ -33,8 +33,8 @@ const QuoteCard = ({ cardData,shadow }) => {
           </Typography>
         </CardContent>
         <div style={{ display: "flex", justifyContent: "flex-end" }}>
-          <CustomImage className={endQuote} src={EndQuote} alt="End Quote Icon" />
-          <CustomImage className={endQuote} src={EndQuote} alt="End Quote Icon" />
+          <CustomImage className={endQuote} src={EndQuote} alt={alt} />
+          <CustomImage className={endQuote} src={EndQuote} alt={alt} />
         </div>
       </CardActionArea>
     </Card>

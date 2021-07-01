@@ -23,7 +23,7 @@ import StarFishPinkPattern from "../../assets/patterns/leftStarfish.png";
 import SquareDottedPattern from "../../assets/patterns/dotsPattern.png";
 import SectionStyles from "./style";
 
-const CommentSection = ({ children, data }) => {
+const CommentSection = ({ children, data , alt}) => {
   const { aliceBlue } = Colors;
   const {
     root,
@@ -51,27 +51,27 @@ const CommentSection = ({ children, data }) => {
       {children}
       <Section backColor={aliceBlue}>
         <div className={reviewSlider}>
-          <Avatar alt="" src={Avatar1} className={avatar1} />
-          <Avatar alt="" src={Avatar2} className={avatar2} />
-          <Avatar alt="" src={Avatar3} className={avatar3} />
-          <Avatar alt="" src={Avatar4} className={avatar4} />
-          <Avatar alt="" src={Avatar5} className={avatar5} />
-          <Avatar alt="" src={Avatar6} className={avatar6} />
-          <img className={squareDotsPattern} src={SquareDottedPattern} alt="" />
-          <img className={yellowCommaPattern} src={yellowComma} alt="" />
-          <img className={commaPattern} src={comma} alt="" />
-          <img className={pinkDotPattern} src={pinkDot} alt="" />
-          <img className={yellowDotPattern} src={yellowDot} alt="" />
-          <img className={miniYellowPattern} src={miniYellow} alt="" />
-          <img className={smallDotPattern} src={smallDot} alt="" />
+          <Avatar alt={alt} src={Avatar1} className={avatar1} />
+          <Avatar alt={alt} src={Avatar2} className={avatar2} />
+          <Avatar alt={alt} src={Avatar3} className={avatar3} />
+          <Avatar alt={alt} src={Avatar4} className={avatar4} />
+          <Avatar alt={alt} src={Avatar5} className={avatar5} />
+          <Avatar alt={alt} src={Avatar6} className={avatar6} />
+          <img className={squareDotsPattern} src={SquareDottedPattern} alt={alt} />
+          <img className={yellowCommaPattern} src={yellowComma} alt={alt} />
+          <img className={commaPattern} src={comma} alt={alt} />
+          <img className={pinkDotPattern} src={pinkDot} alt={alt} />
+          <img className={yellowDotPattern} src={yellowDot} alt={alt} />
+          <img className={miniYellowPattern} src={miniYellow} alt={alt} />
+          <img className={smallDotPattern} src={smallDot} alt={alt} />
           <img
             className={leftStarFishPattern}
             src={StarFishPinkPattern}
             alt=""
           />
-          <img className={rightStarFishPattern} src={StarFishPattern} alt="" />
-          <img className={leftDottedPattern} src={DottedPattern} alt="" />
-          <img className={rightDottedPattern} src={TopDottedPattern} alt="" />
+          <img className={rightStarFishPattern} src={StarFishPattern} alt={alt} />
+          <img className={leftDottedPattern} src={DottedPattern} alt={alt} />
+          <img className={rightDottedPattern} src={TopDottedPattern} alt={alt} />
           <ReviewSlider slides={data} showArrows={false} />
         </div>
       </Section>

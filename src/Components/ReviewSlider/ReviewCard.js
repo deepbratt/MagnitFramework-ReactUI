@@ -5,7 +5,7 @@ import Rating from "@material-ui/lab/Rating";
 import { Avatar, Grid } from "@material-ui/core";
 import ReviewSliderStyles from "./style";
 
-const ReviewCard = ({ cardData }) => {
+const ReviewCard = ({ cardData , alt}) => {
   const { clientName, projectName, rating, review, clientImage } = cardData;
   const { grid, root, avatar, content, large } = ReviewSliderStyles();
   return (
@@ -20,7 +20,7 @@ const ReviewCard = ({ cardData }) => {
       <Grid item sm={12} lg={6}>
         <div className={avatar}>
           <div>
-            <Avatar alt="Remy Sharp" src={clientImage} className={large} />
+            <Avatar alt={alt} src={clientImage} className={large} />
           </div>
         </div>
         <Card className={root}>

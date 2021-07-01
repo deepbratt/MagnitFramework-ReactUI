@@ -35,7 +35,7 @@ const HireDeveloper = () => {
       style={{ display: "flex", flexDirection: "column", height: "100%"}}
       alignItems="center"
     >
-      <ReviewCard cardData={data} />
+      <ReviewCard  alt="hire developer" cardData={data} />
     </Grid>
   ));
 
@@ -57,12 +57,13 @@ const HireDeveloper = () => {
   return (
     <>
     <MetaTags title={title} description={description} canonical={canonical} keywords={keywords}/>
-    <CommentSection data={slides}>
+    <CommentSection alt="hire developer" data={slides}>
       {banner.map((data)=>{
         return(
           <>
           <Banner
         image={data.image}
+        alt="hire developer"
         backColor={linearBackground}
         breadCrumb={<BreadCrumb links={breadCrumData} />}
       >
@@ -84,13 +85,13 @@ const HireDeveloper = () => {
         <CustomImage
           className={leftPattern}
           src={PatternLeft}
-          alt=""
+          alt="hire developer"
           
         />
         <CustomImage
           className={rightPattern}
           src={StarFishPattern}
-          alt=""
+          alt="hire developer"
           
         />
         <Section>
@@ -100,7 +101,7 @@ const HireDeveloper = () => {
             underlined={true}
           />
           <CustomTitle subTitle={payload.services.subTitle} />
-          <PointList data={payload.services.dataArray} horizontal={false} />
+          <PointList alt="hire developer" data={payload.services.dataArray} horizontal={false} />
         </Section>
       </div>
       <Section backColor={aliceBlue}>
@@ -110,7 +111,7 @@ const HireDeveloper = () => {
       <Section patterns={ourWorkSectionPatterns} backColor={aliceBlue}>
         <CustomTitle underlined={true} text={payload.benefits.title} />
 
-        <PointList data={payload.benefits.dataArray} horizontal={true} lgBreakpoint={6} />
+        <PointList alt="hire developer" data={payload.benefits.dataArray} horizontal={true} lgBreakpoint={6} />
        
       </Section>
       <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
@@ -118,6 +119,7 @@ const HireDeveloper = () => {
           title={payload.ourWork.title}
           data={payload.ourWork.dataArray}
           buttonText={Data.buttonText}
+          alt="hire developer"
         />
       </Section>
       <Section>

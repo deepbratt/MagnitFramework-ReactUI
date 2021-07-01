@@ -3,7 +3,7 @@ import { Grid } from "@material-ui/core";
 import PointBadge from ".";
 import PointBadgeStyles from "./style";
 
-const PointList = ({ horizontal, data, lgBreakpoint = 4 }) => {
+const PointList = ({ horizontal, data, lgBreakpoint = 4 , alt}) => {
   const { hover } = PointBadgeStyles();
   let breakpoint = 4;
   if (horizontal) {
@@ -22,7 +22,7 @@ const PointList = ({ horizontal, data, lgBreakpoint = 4 }) => {
             md={breakpoint}
             lg={lgBreakpoint}
           >
-            <PointBadge horizontal={horizontal} data={items} />
+            <PointBadge alt={alt} horizontal={horizontal} data={items} />
           </Grid>
         ))}
     </Grid>
