@@ -65,13 +65,7 @@ const Layout = ({ children }) => {
       </Hidden>
       {loaded > 100 && (
         <Grid container>
-          <Grid
-            // style={{ minHeight: "70vh" }}
-            className={paper}
-            ref={childRef}
-            item
-            xs={12}
-          >
+          <Grid className={paper} ref={childRef} item xs={12}>
             {children}
           </Grid>
           <Grid item xs={12}>
