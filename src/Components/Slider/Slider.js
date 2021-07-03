@@ -7,26 +7,24 @@ import CustomImage from "../CustomImage";
 import CustomButton from "../CustomButton";
 import { NavLink } from "react-router-dom";
 
-const Slider = ({
-  value,
-  headingOne,
-  headingTwo,
-  headingThree,
-  text,
-  data,
-  Img,
-}) => {
-  const {
-   
-    democrat,
-    vividCerlean,
-    atomsphere,
-    carmine,
-    peaFowl,
-    whiteColor,
-  } = Colors;
+const Slider = ({ value, data, array, alt }) => {
+  const { democrat, vividCerlean, atomsphere, carmine, peaFowl, whiteColor } =
+    Colors;
   const classes = useStyles();
-  const { tick, tickSub, sec, vector, gridImage, gridText, listItem } = classes;
+  const { tick, tickSub, sec, vector, gridImage, gridText, listItem, listSec } =
+    classes;
+  function truncateString(string, limit) {
+    if (string.length > limit) {
+      return string.substring(0, limit);
+    } else {
+      return string;
+    }
+  }
+
+  function subString(string, limit) {
+    return string.substring(32, limit);
+  }
+
   return (
     <Grid
       container
@@ -39,37 +37,34 @@ const Slider = ({
       }}
     >
       <Grid item xs={12} sm={12} md={7} lg={7} className={gridText}>
-        <Typography variant="h1">
-          {headingOne} <br />
-          {headingTwo} <br />
-          {headingThree} <br />
-        </Typography>
-        {/* <section className={listSec}> */}
-        <List>
-          {data.map((text, index) => (
-            <ListItem
-              style={{ paddingLeft: "0px" }}
-              key={"slider-listitem-" + index}
-              className={listItem}
-            >
-              <Typography variant="h4">
-                <CheckIcon className={value === "LIGHT" ? tick : tickSub} />
-                {text}
-              </Typography>
-            </ListItem>
-          ))}
-        </List>
-        {/* </section> */}
+        <Typography variant="h1">{truncateString(data.title, 31)}</Typography>
+        <Typography variant="h1">{subString(data.title, 60)} </Typography>
+        <section className={listSec}>
+          <List>
+            {array.map((text, index) => (
+              <ListItem
+                style={{ paddingLeft: "0px" }}
+                key={"slider-listitem-" + index}
+                className={listItem}
+              >
+                <Typography key={index} variant="h4">
+                  <CheckIcon className={value === "LIGHT" ? tick : tickSub} />
+                  {text}
+                </Typography>
+              </ListItem>
+            ))}
+          </List>
+        </section>
 
-        <CustomButton style={{marginBottom: "20px"}}>
+        <CustomButton style={{ marginBottom: "20px" }}>
           <NavLink
             style={{
               color: whiteColor,
               textDecoration: "none",
             }}
-            to="/request-a-quote"
+            to={data.buttonLink}
           >
-            {text}
+            {data.buttonLabel}
           </NavLink>
         </CustomButton>
       </Grid>
@@ -82,9 +77,14 @@ const Slider = ({
           className={gridImage}
           // justify="flex-start"
         >
-          <CustomImage alt="sliderImg" src={Img} className={vector} />
+          <CustomImage
+            alt={alt}
+            src={data.backgroundImage}
+            className={vector}
+          />
         </Grid>
       </Hidden>
+
       {/* <Hidden smDown>
         <Grid item xs={12} md={4} lg={1}></Grid>
       </Hidden> */}

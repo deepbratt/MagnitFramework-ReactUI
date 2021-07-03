@@ -9,6 +9,8 @@ import { useEffect, useRef, useState } from "react";
 import { LinearProgress } from "@material-ui/core";
 import { Hidden } from "@material-ui/core";
 import SideBar from "../Pages/Section/Header/Sidebar/SideBar";
+import ReactGA from "react-ga4";
+
 const Layout = ({ children }) => {
   const { root, paper } = LayoutStyle();
   // const layoutType = useSelector((state) => state.layoutReducer.layoutType);
@@ -17,9 +19,18 @@ const Layout = ({ children }) => {
   const location = useLocation();
   const element = useRef();
   const childRef = useRef();
+  ReactGA.initialize("G-YZH3HVL36W", {
+    debug: true,
+  });
+
+  const onUpdate = () => {
+    ReactGA.set({ page: window.location.pathname });
+    ReactGA.pageview(window.location.pathname);
+  };
 
   useEffect(() => {
     element.current.scrollIntoView();
+    onUpdate();
   }, [location.pathname]);
 
   useEffect(() => {

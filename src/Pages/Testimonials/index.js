@@ -1,24 +1,30 @@
+import React, { useState, useEffect, useCallback } from "react";
 import { Grid, Typography } from "@material-ui/core";
-import React from "react";
+import Section from "../Section";
 import Banner from "../../Components/Banner";
-import { Colors } from "../../Theme/color.constants";
 import useStyles from "./styles";
-import banner from "../../assets/Testimonials/banner.png";
 import BreadCrumb from "../../Components/BreadCrumb";
+import CustomButton from "../../Components/CustomButton";
 import CommentSection from "../../Components/CommentSection";
+import banner from "../../assets/Testimonials/banner.png";
+import CustomTitle from "../../Pages/Section/CustomTitle";
+import MetaTags from "../../Components/MetaTags";
 import VideoCard from "./TestimonialVideo";
 import {
-  ClientsHaveToSay,
   subTitle,
   Testmonial,
 } from "../../Utils/Constants/Language/en/TestimonialVideos";
-import CustomButton from "../../Components/CustomButton";
-import CustomTitle from "../../Pages/Section/CustomTitle";
-import Section from "../Section";
+import { Colors } from "../../Theme/color.constants";
+import { getPageDataApi } from "../../Utils/APIs/pagesApi";
+import { Loader } from "../../Components/loader";
+import ReviewCard from "../../Components/ReviewSlider/ReviewCard";
 
 function Testimonials() {
   const { linearBackground } = Colors;
   const { textColor, flex } = useStyles();
+  const [metaData, setMetaData] = useState({});
+  const [sections, setSections] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
 
   const breadCrumData = [
     {
@@ -30,36 +36,85 @@ function Testimonials() {
       text: "Testimonials",
     },
   ];
-  return (
-    <CommentSection>
-      <Banner
-        image={banner}
-        backColor={linearBackground}
-        breadCrumb={<BreadCrumb links={breadCrumData} />}
-      >
-        <>
-          <Typography variant="h1" gutterBottom className={textColor}>
-            {Testmonial}
-          </Typography>
-          <Typography variant="h5" gutterBottom className={textColor}>
-            {subTitle}
-          </Typography>
-        </>
-      </Banner>
-      <Section>
-        <CustomTitle
-          style={{ marginBottom: "20px" }}
-          text={Testmonial}
-          underlined={true}
-        />
-        <CustomTitle subTitle={ClientsHaveToSay} />
 
-        <VideoCard />
-        <Grid xs={12} className={flex}>
-          <CustomButton type="submit">See More</CustomButton>
+  const getPageData = useCallback(async () => {
+    setIsLoading(true);
+    await getPageDataApi("testimonials")
+      .then((response) => {
+        if (response.status === "success") {
+          console.log("response", response);
+          setMetaData(response.data.result.metaData);
+          setSections(response.data.result.sections);
+          setIsLoading(false);
+        }
+      })
+      .catch((error) => {
+        console.error("error", error);
+      });
+  }, []);
+
+  useEffect(() => {
+    getPageData();
+    console.log("useEffect");
+  }, [getPageData]);
+
+  const getSlides = () => {
+    const slideArr = sections.reviews.dataArray.map((review, index) => (
+      <ReviewCard key={index} cardData={review} />
+    ));
+    return slideArr;
+  };
+
+  return (
+    <>
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <Grid container>
+          <MetaTags
+            title={metaData.title}
+            description={metaData.description}
+            canonical={metaData.canonical}
+            keywords={metaData.keywords}
+          />
+          <Grid style={{ order: sections.banner.order }} item xs={12}>
+            <Banner
+              image={sections.banner.dataArray[0].image}
+              backColor={linearBackground}
+              breadCrumb={<BreadCrumb links={breadCrumData} />}
+            >
+              <>
+                <Typography variant="h1" gutterBottom className={textColor}>
+                  {sections.banner.dataArray[0].heading}
+                </Typography>
+                <Typography variant="h5" gutterBottom className={textColor}>
+                  {sections.banner.dataArray[0].subHeading}
+                </Typography>
+              </>
+            </Banner>
+          </Grid>
+          <Grid style={{ order: sections.reviews.order }} item xs={12}>
+            <Section>
+              <CustomTitle
+                style={{ marginBottom: "20px" }}
+                text={sections.reviews.title}
+                underlined={true}
+              />
+              <CustomTitle subTitle={sections.reviews.subTitle} />
+
+              <VideoCard data={sections.reviews.dataArray} />
+              <Grid xs={12} className={flex}>
+                <CustomButton type="submit">See More</CustomButton>
+              </Grid>
+            </Section>
+          </Grid>
+
+          <Grid style={{ order: sections.reviews.order }} item xs={12}>
+            <CommentSection data={sections.reviews ? getSlides() : []} />
+          </Grid>
         </Grid>
-      </Section>
-    </CommentSection>
+      )}
+    </>
   );
 }
 

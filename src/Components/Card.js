@@ -4,13 +4,10 @@ import { Grid } from "@material-ui/core";
 import PropTypes from "prop-types";
 import Flip from "./Flip";
 
-const CardData = ({ horizontal, data, lgBreakpoint = 4, title }) => {
+const CardData = ({ horizontal, data, lgBreakpoint = 4, title , alt}) => {
   const classes = useStyles();
   const { card } = classes;
-  // let breakpoint = 4;
-  // if (horizontal) {
-  //   breakpoint = 6;
-  // }
+  
   return (
     <>
       <Grid container justify="space-between">
@@ -24,7 +21,7 @@ const CardData = ({ horizontal, data, lgBreakpoint = 4, title }) => {
               md={6}
               lg={3}
             >
-              <Flip horizontal={horizontal} data={items} />
+              <Flip alt={alt} horizontal={horizontal} data={items} />
             </Grid>
           ))}
       </Grid>

@@ -2,22 +2,12 @@ import PointList from "../../Components/PointBadge/PointList";
 import Section from "../Section";
 import { Link } from "react-router-dom";
 import { Typography } from "@material-ui/core";
-import { hireUsData } from "./whyWorkwithUs";
 import { Colors } from "../../Theme/color.constants";
 import Banner from "../../Components/Banner";
-import {
-  combiningEngineering,
-  DoYouWant,
-  marketingServicesData,
-  ourExpert,
-  ServicesSectionTitle,
-  weCutTo,
-  WhyHireSectionTitle,
-  Data,
-} from "./constants";
+import { DoYouWant, Data } from "./constants";
+import useApi from "../../Utils/digitalMarketingApi";
 import StarFishPattern from "../../assets/patterns/starfishBlue.png";
 import ServicesSectionStyles from "../WebServices/style";
-import BannerImage from "../../assets/services/BannerImage.png";
 import PatternLeft from "../../assets/PatternLeft.png";
 import BreadCrumb from "../../Components/BreadCrumb";
 import CommentSection from "../../Components/CommentSection";
@@ -26,9 +16,17 @@ import CustomImage from "../../Components/CustomImage";
 import CustomTitle from "../../Pages/Section/CustomTitle";
 import GlanceAtWork from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
 import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/OurWorkSectionPattern";
+import { Grid } from "@material-ui/core";
+import ReviewCard from "../../Components/ReviewSlider/ReviewCard";
+import MetaTags from "../../Components/MetaTags";
+import { Loader } from "../../Components/loader";
 
 const DigitalMarketing = () => {
   const { linearBackground, BlueRibbon, aliceBlue } = Colors;
+  const { data, review, banner, loading, metaData } = useApi();
+  const payload = data.sections;
+
+  const { title, description, canonical, keywords } = metaData;
 
   const breadCrumData = [
     {
@@ -42,69 +40,103 @@ const DigitalMarketing = () => {
   ];
 
   const { textColor, leftPattern, rightPattern } = ServicesSectionStyles();
+  const slides = review.map((data, index) => (
+    <Grid
+      key={index}
+      style={{ display: "flex", flexDirection: "column", height: "100%" }}
+      alignItems="center"
+    >
+      <ReviewCard alt="digital marketing" cardData={data} />
+    </Grid>
+  ));
 
+  if (loading) return <Loader />;
   return (
-    <CommentSection>
-      <Banner
-        image={BannerImage}
-        backColor={linearBackground}
-        breadCrumb={<BreadCrumb links={breadCrumData} />}
-      >
-        <Typography variant="h1" gutterBottom className={textColor}>
-          {combiningEngineering}
-        </Typography>
-        <Typography variant="h5" gutterBottom className={textColor}>
-          {weCutTo}
-        </Typography>
-        <span>
-          <CustomButton>Get Started</CustomButton>
-        </span>
-      </Banner>
-      <div style={{ position: "relative" }}>
-        <CustomImage
-          className={leftPattern}
-          src={PatternLeft}
-          alt=""
-          srcSet=""
-        />
-        <CustomImage
-          className={rightPattern}
-          src={StarFishPattern}
-          alt=""
-          srcSet=""
-        />
-        <Section>
-          <CustomTitle
-            style={{ marginBottom: "20px" }}
-            text={ServicesSectionTitle}
-            underlined={true}
+    <>
+      <MetaTags
+        title={title}
+        description={description}
+        canonical={canonical}
+        keywords={keywords}
+      />
+      <CommentSection alt="digital marketing" data={slides}>
+        {banner.map((data) => {
+          return (
+            <>
+              <Banner
+                image={data.image}
+                alt="digital marketing"
+                backColor={linearBackground}
+                breadCrumb={<BreadCrumb links={breadCrumData} />}
+              >
+                <Typography variant="h1" gutterBottom className={textColor}>
+                  {data.heading}
+                </Typography>
+                <Typography variant="h5" gutterBottom className={textColor}>
+                  {data.subHeading}
+                </Typography>
+                <span>
+                  <CustomButton>{data.buttonLabel}</CustomButton>
+                </span>
+              </Banner>
+            </>
+          );
+        })}
+
+        <div style={{ position: "relative" }}>
+          <CustomImage
+            className={leftPattern}
+            src={PatternLeft}
+            alt="digital marketing"
           />
-          <CustomTitle subTitle={ourExpert} />
-          <PointList data={marketingServicesData} horizontal={false} />
+          <CustomImage
+            className={rightPattern}
+            src={StarFishPattern}
+            alt="digital marketing"
+          />
+          <Section>
+            <CustomTitle
+              style={{ marginBottom: "20px" }}
+              text={payload.services.title}
+              underlined={true}
+            />
+            <CustomTitle subTitle={payload.services.subTitle} />
+            <PointList
+              alt="digital marketing"
+              data={payload.services.dataArray}
+              horizontal={false}
+            />
+          </Section>
+        </div>
+
+        <Section patterns={ourWorkSectionPatterns} backColor={aliceBlue}>
+          <CustomTitle text={payload.benefits.title} underlined={true} />
+
+          <PointList
+            data={payload.benefits.dataArray}
+            horizontal={true}
+            lgBreakpoint={6}
+            alt="digital marketing"
+          />
         </Section>
-      </div>
-
-      <Section patterns={ourWorkSectionPatterns} backColor={aliceBlue}>
-        <CustomTitle text={WhyHireSectionTitle} underlined={true} />
-
-        <PointList data={hireUsData} horizontal={true} lgBreakpoint={6} />
-      </Section>
-      <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
-        <GlanceAtWork
-          title={Data.title}
-          data={Data.arr}
-          buttonText={Data.buttonText}
-        />
-      </Section>
-      <Section>
-        <CustomTitle text={DoYouWant} underlined={true} />
-        <span>
-          <CustomButton component={Link} to="/request-a-quote">
-            Request a Quote
-          </CustomButton>
-        </span>
-      </Section>
-    </CommentSection>
+        <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
+          <GlanceAtWork
+            title={payload.ourWork.title}
+            data={payload.ourWork.dataArray}
+            buttonText={Data.buttonText}
+            alt="digital marketing"
+          />
+        </Section>
+        <Section>
+          <CustomTitle text={DoYouWant} underlined={true} />
+          <span>
+            <CustomButton component={Link} to="/request-a-quote">
+              Request a Quote
+            </CustomButton>
+          </span>
+        </Section>
+      </CommentSection>
+    </>
   );
 };
 

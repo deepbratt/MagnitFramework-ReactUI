@@ -11,9 +11,9 @@ const Data = {
   buttonText: "Partner with us save 50%",
 };
 
-export const Img1 = img1
-export const Img2 = img2
-export const Img3 = img3
+export const Img1 = "https://s3.us-east-2.amazonaws.com/cdn.themagnit.com/cdnTestFolder/Group1.webp"
+export const Img2 = "https://s3.us-east-2.amazonaws.com/cdn.themagnit.com/cdnTestFolder/Group2.webp"
+export const Img3 = "https://s3.us-east-2.amazonaws.com/cdn.themagnit.com/cdnTestFolder/Group3.webp"
 const subTitle = "Industry-specific skills";
 const subtTitleTwo = "Fair and transparent pricing";
 const subTitleThree = "Adaptable and innovative solutions";

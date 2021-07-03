@@ -5,7 +5,7 @@ import { Typography, Grid } from "@material-ui/core";
 import CustomImage from "../../Components/CustomImage";
 
 const FeaturesRow = (props) => {
-  const { flexDirection, data } = props;
+  const { flexDirection, data , alt} = props;
 
   const { para } = useStyles();
   const { supportSub } = SolutionsStyles();
@@ -38,17 +38,16 @@ const FeaturesRow = (props) => {
               xs={12}
               md={4}
               lg={2}
-              style={{ backgroundColor: text.color }}
               className={supportSub}
             >
-              <CustomImage alt="icon-data" src={text.icon} />
+              <CustomImage alt={alt} src={text.icon} />
             </Grid>
 
             <Grid className={para} item xs={12} md={8} lg={10}>
               <Typography color="textPrimary" variant="h5">
                 {text.title}
               </Typography>
-              <Typography variant="body1">{text.desc}</Typography>
+              <Typography variant="body1">{text.text}</Typography>
             </Grid>
           </Grid>
         );

@@ -10,7 +10,7 @@ import {
 } from "../../Utils/Constants/Language/en/AppSolutionsData";
 import BreadCrumb from "../../Components/BreadCrumb";
 import CustomButton from "../../Components/CustomButton";
-const BannerSection = () => {
+const BannerSection = ({data,alt}) => {
   const { linearBackground} = Colors;
   const breadcrumbData = [
     {
@@ -24,21 +24,28 @@ const BannerSection = () => {
   ];
   return (
     <>
-      <Banner
-        image={bannerImage}
+     {data.map((data)=>{
+       return(
+         <>
+          <Banner
+        image={data.image}
+        alt={alt}
         backColor={linearBackground}
         breadCrumb={<BreadCrumb links={breadcrumbData} />}
       >
         <Typography color="textPrimary" variant="h1" gutterBottom>
-          {bannerHeading}
+          {data.heading}
         </Typography>
         <Typography color="textPrimary" variant="h5" gutterBottom>
-          {bannerParagraph}
+          {data.subHeading}
         </Typography>
         <section style={{ marginTop: "15px" }}>
-          <CustomButton>{bannerButtonText}</CustomButton>
+          <CustomButton>{data.buttonLabel}</CustomButton>
         </section>
       </Banner>
+         </>
+       )
+     })}
     </>
   );
 };

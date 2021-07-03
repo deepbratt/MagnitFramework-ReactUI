@@ -1,4 +1,6 @@
 import { Grid, Typography } from "@material-ui/core";
+import Lottie from "react-lottie";
+import axios from "axios";
 import { useEffect, useRef, useState } from "react";
 // import Lottie from "react-lottie";
 import CertificationListStyles from "./style";
@@ -9,52 +11,87 @@ const CertificationList = ({ root, data, toRight, mounted }) => {
   const [isMounted, setIsMounted] = useState(false)
   const { text, imageWrapper, leftAlignment, rightAlignment } =
     CertificationListStyles();
-  const { title, content, animationData } = data;
+  const { title, description, jsonFile } = data;
+  const [jsonData, setJsonData] = useState()
+
+  // useEffect(() => {
+  //   if(mounted){
+  //     setIsMounted(mounted)
+  //   }
+  // }, [mounted]);
+
+  // useEffect(()=>{
+    
+  //   if(isMounted){
+  //     let dataJson = JSON.parse(animationData)
+  //     let anim = lottie.loadAnimation({
+  //       animationData: dataJson.default,
+  //       loop: true,
+  //       renderer: 'svg',
+  //       container: elem.current,
+  //       autoplay: false,
+  //     });
+  //     anim.play();
+  //   }
+
+  //   return () => {
+  //     lottie.pause()
+  //     lottie.stop()
+  //     lottie.destroy();
+  //     // setIsMounted(false)
+  //   }
+  // },[isMounted])
+
+  // if(!isMounted){
+  //   return null
+  // }
 
 
-  useEffect(() => {
-    let anim = lottie.loadAnimation({
-      animationData: animationData.default,
-      loop: true,
-      renderer: 'svg',
-      container: elem.current,
-      autoplay: false,
-    });
 
-    const play = () => {
-      anim.play();
-    };
-    if(mounted){
-      setIsMounted(mounted)
-      anim.addEventListener('DOMLoaded', play);
-    }
 
-    return () => {
-      anim.removeEventListener('DOMLoaded', play);
-      anim.stop()
-      anim.destroy();
-      anim = ""
-      setIsMounted(false)
-    }
-  }, [mounted, animationData.default]);
+useEffect(() => {
+  if(mounted && jsonData){
+    setIsMounted(mounted)
+  }
+}, [mounted, jsonData]);
 
-  return (
-    <Grid container className={`${root}`}>
-      <Grid item xs={12} md={6}>
-        <div className={`${text} ${toRight ? rightAlignment : leftAlignment}`}>
-          <Typography color="textPrimary" variant="h3">
-            {title}
-          </Typography>
-          <Typography variant="body2" component="p">
-            {content}
-          </Typography>
-        </div>
-      </Grid>
-      <Grid item xs={12} md={6} className={imageWrapper}>
-        {isMounted && <div ref={elem} style={{width:"400px"}}></div>}
-      </Grid>
+useEffect(()=>{
+  getJsonData().then(res=>{
+    setJsonData(res)
+  })
+},[])
+
+async function getJsonData(){
+  let jsonResponse = await axios.get(jsonFile)
+  console.log(jsonResponse)
+  return jsonResponse.data
+}
+const defaultOptions = {
+  loop: true,
+  autoplay: true,
+  animationData: jsonData,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice",
+  },
+};
+
+return (
+  <Grid container className={`${root}`}>
+    <Grid item xs={12} md={6}>
+      <div className={`${text} ${toRight ? rightAlignment : leftAlignment}`}>
+        <Typography color="textPrimary" variant="h3">
+          {title}
+        </Typography>
+        <Typography variant="body2" component="p">
+          {description}
+        </Typography>
+      </div>
     </Grid>
-  );
+    <Grid item xs={12} md={6} className={imageWrapper}>
+      <Lottie options={defaultOptions} width="400px" />
+    </Grid>
+  </Grid>
+);
 };
 
 export default CertificationList;

@@ -1,15 +1,18 @@
 import React from "react";
 import { useStyles } from "./containerStyles";
 import { Typography, Grid, Card } from "@material-ui/core";
-import { Colors } from "../../../Theme/color.constants";
+import { NavLink } from "react-router-dom";
+import CardContent from "@material-ui/core/CardContent";
 import CustomButton from "../../../Components/CustomButton";
 import CustomImage from "../../../Components/CustomImage";
 import CustomTitle from "../../../Pages/Section/CustomTitle";
-import CardContent from "@material-ui/core/CardContent";
+import { Colors } from "../../../Theme/color.constants";
+
 const Container = (props) => {
   const classes = useStyles();
   const { whiteColor } = Colors;
   const { cardContent } = classes;
+
   return (
     <>
       <Grid container spacing={2}>
@@ -23,16 +26,25 @@ const Container = (props) => {
         </Grid>
         {props.data.map((items, index) => (
           <Grid item xs={12} lg={4} md={4} key={"ourWork-" + index}>
-            <Card style={{ height: "100%" }}>
-              <CustomImage src={items.image} style={{ width: "100%" }} />
+            <Card
+              style={{
+                height: "100%",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+              }}
+            >
+              <CustomImage src={items.image} alt={props.alt} style={{ width: "100%" }} />
               <CardContent className={cardContent}>
-                <Typography variant="h5" >{items.subtitle}</Typography>
+                <Typography variant="h5">{items.title}</Typography>
               </CardContent>
             </Card>
           </Grid>
         ))}
         <Grid item lg={12} md={12} xs={12}>
+        <NavLink style={{ textDecoration: "none" }} to="testimonial">
           <CustomButton color="secondary">{props.buttonText}</CustomButton>
+          </NavLink>
         </Grid>
       </Grid>
     </>

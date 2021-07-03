@@ -60,6 +60,11 @@ const FooterStyle = makeStyles((theme) => ({
     justifyContent: "flex-start",
     alignItems: "center",
     alignContent: "center",
+    width: "50%",
+
+    [theme.breakpoints.down("md")]: {
+      width: "40%",
+    },
 
     "& > *": {
       padding: "0 10px 15px 0",

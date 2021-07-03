@@ -10,7 +10,7 @@ import Plus from "../../assets/icons/expandIcon.png";
 import Minus from "../../assets/icons/closeIcon.png";
 import Data from "../../Pages/ContactUs/questions";
 
-const MyAccordion = () => {
+const MyAccordion = ({questions}) => {
   const [expanded, setExpanded] = useState(false);
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
@@ -20,26 +20,26 @@ const MyAccordion = () => {
     {
       ariaControl: "panel1a-content",
       ariaId: "panel1a-header",
-      summary: Data[0].summary,
-      detail: Data[0].detail,
+      summary: questions[0].questions,
+      detail: questions[0].answers,
     },
     {
       ariaControl: "panel2a-content",
       ariaId: "panel2a-header",
-      summary: Data[1].summary,
-      detail: Data[1].detail,
+      summary: questions[1].questions,
+      detail: questions[1].answers,
     },
     {
       ariaControl: "panel3a-content",
       ariaId: "panel3a-header",
-      summary: Data[2].summary,
-      detail: Data[2].detail,
+      summary: questions[2].questions,
+      detail: questions[2].answers,
     },
     {
       ariaControl: "panel4a-content",
       ariaId: "panel4a-header",
-      summary: Data[3].summary,
-      detail: Data[3].detail,
+      summary: questions[3].questions,
+      detail: questions[3].answers,
     },
   ];
 
@@ -69,7 +69,7 @@ const MyAccordion = () => {
           </AccordionDetails>
         </Accordion>
       ))}
-      <CustomButton>See More</CustomButton>
+      {/* <CustomButton>See More</CustomButton> */}
     </div>
   );
 };

@@ -1,12 +1,13 @@
 import React from "react";
 import { useStyles } from "./solutionStyles";
 import { Typography, Grid, Card } from "@material-ui/core";
+import { NavLink } from "react-router-dom";
 import { Colors } from "../../../Theme/color.constants";
 import CustomButton from "../../../Components/CustomButton";
 import CustomTitle from "../../../Pages/Section/CustomTitle";
 import CustomImage from "../../../Components/CustomImage";
 
-const Solutions = ({ titles, content }) => {
+const Solutions = ({ title, content, subTitle,alt}) => {
   const classes = useStyles();
   const { card } = classes;
 
@@ -18,9 +19,9 @@ const Solutions = ({ titles, content }) => {
           <CustomTitle
             style={{ marginBottom: "20px" }}
             underlined={false}
-            subTitle={titles.subHeading}
+            subTitle={subTitle}
             color={whiteColor}
-            text={titles.heading}
+            text={title}
             subTitleColor={whiteColor}
           />
         </Grid>
@@ -31,7 +32,7 @@ const Solutions = ({ titles, content }) => {
                 content.map((data, index) => (
                   <Grid key={index+"solutionscontentdata"} item xs={12} sm={6} md={3}>
                     <Card style={{borderRadius: "5px"}} className={card}>
-                      <CustomImage width="60px" alt="" src={data.image} />
+                      <CustomImage width="60px" alt={alt} src={data.image} />
 
                       <div>
                         <Typography color="textSecondary" variant="h5">
@@ -45,7 +46,9 @@ const Solutions = ({ titles, content }) => {
           </Grid>
         </Grid>
         <Grid item lg={12} md={12} xs={12}>
-          <CustomButton color="secondary">See More</CustomButton>
+          <NavLink style={{ textDecoration: "none" }} to="app-solutions">
+            <CustomButton color="secondary">See More</CustomButton>
+          </NavLink>
         </Grid>
       </Grid>
     </>
