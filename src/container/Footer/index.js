@@ -27,14 +27,14 @@ const Footer = () => {
 
   useEffect(() => {
     loadData().then((res) => {
-      setData(res.data.data.result);
+      setData(res.data.data.result.sections.company.dataArray);
       setIsLoading(false)
     });
   }, []);
 
   async function loadData() {
     let response = await axios.get(
-      "http://api.themagnit.com/v1/companies"
+      "http://api.themagnit.com/v1/pages/bySlug/footer"
     );
     return response;
   }
