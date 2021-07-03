@@ -1,7 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { useStyles } from "./containerStyles";
 import { Typography, Grid, Card } from "@material-ui/core";
+import { NavLink } from "react-router-dom";
 import CardContent from "@material-ui/core/CardContent";
 import CustomButton from "../../../Components/CustomButton";
 import CustomImage from "../../../Components/CustomImage";
@@ -42,7 +42,9 @@ const Container = (props) => {
           </Grid>
         ))}
         <Grid item lg={12} md={12} xs={12}>
+        <NavLink style={{ textDecoration: "none" }} to="testimonial">
           <CustomButton color="secondary">{props.buttonText}</CustomButton>
+          </NavLink>
         </Grid>
       </Grid>
     </>

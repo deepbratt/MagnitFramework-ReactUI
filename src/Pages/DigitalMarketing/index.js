@@ -46,11 +46,11 @@ const DigitalMarketing = () => {
       style={{ display: "flex", flexDirection: "column", height: "100%" }}
       alignItems="center"
     >
-      <ReviewCard  alt="digital marketing" cardData={data} />
+      <ReviewCard alt="digital marketing" cardData={data} />
     </Grid>
   ));
 
-  if (loading) return <Loader/>;
+  if (loading) return <Loader />;
   return (
     <>
       <MetaTags
@@ -88,13 +88,11 @@ const DigitalMarketing = () => {
             className={leftPattern}
             src={PatternLeft}
             alt="digital marketing"
-            srcSet=""
           />
           <CustomImage
             className={rightPattern}
             src={StarFishPattern}
             alt="digital marketing"
-            srcSet=""
           />
           <Section>
             <CustomTitle
@@ -103,7 +101,11 @@ const DigitalMarketing = () => {
               underlined={true}
             />
             <CustomTitle subTitle={payload.services.subTitle} />
-            <PointList alt="digital marketing" data={payload.services.dataArray} horizontal={false} />
+            <PointList
+              alt="digital marketing"
+              data={payload.services.dataArray}
+              horizontal={false}
+            />
           </Section>
         </div>
 

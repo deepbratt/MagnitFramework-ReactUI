@@ -1,6 +1,7 @@
 import React from "react";
 import { useStyles } from "./solutionStyles";
 import { Typography, Grid, Card } from "@material-ui/core";
+import { NavLink } from "react-router-dom";
 import { Colors } from "../../../Theme/color.constants";
 import CustomButton from "../../../Components/CustomButton";
 import CustomTitle from "../../../Pages/Section/CustomTitle";
@@ -45,7 +46,9 @@ const Solutions = ({ title, content, subTitle,alt}) => {
           </Grid>
         </Grid>
         <Grid item lg={12} md={12} xs={12}>
-          <CustomButton color="secondary">See More</CustomButton>
+          <NavLink style={{ textDecoration: "none" }} to="app-solutions">
+            <CustomButton color="secondary">See More</CustomButton>
+          </NavLink>
         </Grid>
       </Grid>
     </>

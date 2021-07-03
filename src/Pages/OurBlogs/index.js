@@ -2,13 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import { Grid, Hidden, Typography } from "@material-ui/core";
 import Banner from "../../Components/Banner";
 import { Colors } from "../../Theme/color.constants";
-import {
-  BannerText,
-  TrendingBlogsSectionText,
-  LatestBlogsSectionText,
-} from "../../Utils/Constants/Language/en/OurBlogsPageText";
 import MetaTags from "../../Components/MetaTags";
-import BannerImage from "../../assets/OurBlogs/BannerImage.png";
 import BackGroudnPatternLeft from "../../assets/OurBlogs/LatestBlogPattern.png";
 import BackGroudnPatternRight from "../../assets/OurBlogs/LatestBlogPatternRight.png";
 import BreadCrumb from "../../Components/BreadCrumb";
@@ -21,10 +15,8 @@ import OurBlogsStyles from "./style";
 import CustomTitle from "../Section/CustomTitle";
 import { getPageDataApi } from "../../Utils/APIs/pagesApi";
 import { Loader } from "../../Components/loader";
-import { splitString } from "../../Utils/globalFunctions";
 
 const OurBlogs = () => {
-  const { title, subtitle, subHeading } = BannerText;
   const { linearBackground, BlueRibbon, whiteColor } = Colors;
   const { leftPattern, rightPattern } = OurBlogsStyles();
 
@@ -85,7 +77,7 @@ const OurBlogs = () => {
               width="100%"
               height="100%"
               src={BackGroudnPatternLeft}
-              alt=""
+              alt="magnit blogs"
             />
           </Grid>
         </Hidden>
@@ -105,7 +97,7 @@ const OurBlogs = () => {
               width="100%"
               height="100%"
               src={BackGroudnPatternRight}
-              alt=""
+              alt="magnit blogs"
             />
           </Grid>
         </Hidden>
