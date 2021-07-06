@@ -34,7 +34,7 @@ const Footer = () => {
 
   async function loadData() {
     let response = await axios.get(
-      "http://api.themagnit.com/v1/pages/bySlug/footer"
+      "https://api.themagnit.com/v1/pages/bySlug/footer"
     );
     return response;
   }
