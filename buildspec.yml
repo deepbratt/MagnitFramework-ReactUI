@@ -3,10 +3,6 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - rm -rf node_modules/
-      - rm -rf package-lock.json
-  install:
-    command:
       - npm install
   build:
     commands:
