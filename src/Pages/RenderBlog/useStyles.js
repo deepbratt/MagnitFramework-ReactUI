@@ -1,20 +1,17 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles((theme) => ({
-    imageStyles: {
-      textAlign:"center",
-      margin:"auto",
-      color:"red",
-      background:"blue !important"
-    },
-  
-    container:{
-      background:"white", minHeight:"50vh", border:"1px solid black", width:"100%",
-      '& > img':{
-        textAlign:"center",
-        background:"red",
-        // display:'block',
-        // margin:"auto",
-      }
-    }
-  }));
+  bannerClass: {
+    textAlign: "center",
+    margin: "auto",
+    height:"50vh",
+    width:"100vw"
+  },
+
+  container: {
+    background: "white",
+    minHeight: "50vh",
+    width: "100%",
+    textAlign:"left"
+  },
+}));

@@ -15,18 +15,18 @@ import OurBlogsStyles from "./style";
 
 const TrendingBlogs = ({ cardData }) => {
   const [blogsBody, setBlogsBody] = useState([]);
-  const { title, text, date, image, buttonLabel, link } = cardData;
+  const { title, text, descriptionLong, date, image, banner, buttonLabel, link, canonical } = cardData;
 
   const { coverImage, content, blogDetail, light } = OurBlogsStyles();
   useEffect(() => {
-    let blogsText = splitString(text, "<br/>");
+    let blogsText = splitString(text || descriptionLong, "<br/>");
     setBlogsBody(blogsText);
-  }, [text]);
+  }, [text, descriptionLong]);
 
   return (
     <Grid container>
       <Grid item xs={12} lg={6}>
-        <CustomImage className={coverImage} src={image} alt="" />
+        <CustomImage className={coverImage} src={image || banner} alt="" />
       </Grid>
       <Grid item xs={12} lg={6}>
         <Card>
@@ -59,8 +59,8 @@ const TrendingBlogs = ({ cardData }) => {
               ))}
           </CardContent>
           <CardActions>
-            <NavLink to={link}>
-              <CustomButton>{buttonLabel}</CustomButton>
+            <NavLink to={link || "blog/"+canonical}>
+              <CustomButton>{buttonLabel || "Read More"}</CustomButton>
             </NavLink>
           </CardActions>
         </Card>

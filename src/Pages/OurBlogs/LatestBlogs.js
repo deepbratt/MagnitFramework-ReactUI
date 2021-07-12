@@ -8,7 +8,7 @@ import CustomButton from "../../Components/CustomButton";
 import { NavLink } from "react-router-dom";
 
 const LatestBlogCard = ({ cardData }) => {
-  const { title, text, date, image, buttonLabel, link } = cardData;
+  const { title, text, date, banner, buttonLabel, link, descriptionLong, image, canonical } = cardData;
 
 
   const {
@@ -22,7 +22,7 @@ const LatestBlogCard = ({ cardData }) => {
   return (
     <Card className={latestBlogCard}>
       <CardActionArea>
-        <img className={coverImg} src={image} alt="Blog cover" />
+        <img className={coverImg} src={banner || image} alt="Blog cover" />
         <CardContent className={latestBlogCardContent}>
           <div className={latestBlogDetail}>
             <div>
@@ -34,16 +34,16 @@ const LatestBlogCard = ({ cardData }) => {
           <Typography gutterBottom variant="h6" component="h2">
             {title}
           </Typography>
-          {text && (
+          {(text || descriptionLong) && (
             <Typography variant="body2" gutterBottom component="p">
-              {text.substr(0, 70)}...
+              {text ? text.substr(0,70) : descriptionLong.substr(0, 70)}...
             </Typography>
           )}
         </CardContent>
       </CardActionArea>
       <CardActions className={latestBlogCardContent}>
-        <NavLink to={link}>
-          <CustomButton>{buttonLabel}</CustomButton>
+        <NavLink to={link || "blog/"+canonical}>
+          <CustomButton>{"Read More"}</CustomButton>
         </NavLink>
       </CardActions>
     </Card>
