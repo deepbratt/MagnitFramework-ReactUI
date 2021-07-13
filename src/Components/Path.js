@@ -12,6 +12,7 @@
 // import DigitalMarketing from "../Pages/DigitalMarketing";
 // import CaseStudies from "../Pages/CaseStudies";
 import  { lazy } from 'react'
+import RenderBlog from '../Pages/RenderBlog';
 
 
 
@@ -44,7 +45,8 @@ const pathIds = {
   hireDeveloper: "hire-developer",
   digitalMarketing: "digital-marketing",
   pricing: "pricing",
-  notFound: "404"
+  notFound: "404",
+  renderBlog: 'render-blog'
 };
 
 const pathRouting = {
@@ -63,7 +65,8 @@ const pathRouting = {
   hireDeveloper: "/hire-developer",
   digitalMarketing: "/digital-marketing",
   pricing: "/pricing",
-  notFound:"error"
+  notFound:"error",
+  renderBlog:'/blog/:canonicalId'
 };
 
 const pageRoutes = {
@@ -127,6 +130,12 @@ const pageRoutes = {
     sidebarName: "Digital Marketing",
     component: DigitalMarketing,
   },
+  [pathIds.renderBlog]: {
+    path: pathRouting.renderBlog,
+    // sidebarName: "Digital Marketing",
+    component: RenderBlog,
+  },
+  
   // [pathIds.solutions]: {
   //   path: pathRouting.solutions,
   //   sidebarName: "Solutions",

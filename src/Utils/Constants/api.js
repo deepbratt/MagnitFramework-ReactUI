@@ -50,6 +50,24 @@ const api = {
         //   };
         //   let responseData = await response();
         //   console.log(responseData);
+    },
+    getBlogByCanonical: async function(canonicalId){
+        try{
+            const response = await axiosInstance.get("blogs/bySlug/"+canonicalId)
+            return response
+        }catch(error){
+            console.log('error: ',error)
+            return error
+        }
+    },
+    getLatestBlogsByPagination: async function(limit,page){
+        try{
+            const response = await axiosInstance.get(`blogs?sort=-date&limit=${limit}&page=${page}`)
+            return response
+        }catch(error){
+            console.log('error: ',error)
+            return error
+        }
     }
 }
 

@@ -5,7 +5,6 @@ const MetaTags = ({ canonical, title, description, keywords }) => {
     const helmet = Helmet
   useEffect(() => {
     window.document.title = title;
-    console.log(window.document.title);
   }, [title]);
   return (
     <Helmet defer={false}>

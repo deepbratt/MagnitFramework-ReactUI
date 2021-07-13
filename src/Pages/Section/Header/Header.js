@@ -39,9 +39,9 @@ const Header = (props) => {
     <>
       <AppBar className={root} position="sticky">
         <Toolbar className={appbarsolid}>
-          <section>
+          <NavLink to="/">
             <CustomImage className={logo} alt="logo" src={Logo} />
-          </section>
+          </NavLink>
           <Hidden smDown>
             <List className={list}>
               <MuiThemeProvider theme={theme}>
