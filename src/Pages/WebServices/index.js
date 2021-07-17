@@ -94,6 +94,35 @@ const Services = () => {
           alt="web development"
           
         />
+        <Grid
+          style={{ order: payload.seoText.order, color: "black" }}
+          item
+          md={12}
+          xs={12}
+        >
+          <Section>
+          <CustomTitle
+            style={{ marginBottom: "20px" }}
+            h1h2={payload.seoText.title}
+            underlined={true}
+            variant={'h1'}
+          />
+          <Typography variant="body1">
+              {payload.seoText.dataArray[0].h1Detail}
+            </Typography>
+          </Section>
+          <Section>
+            <CustomTitle
+            style={{ marginBottom: "20px" }}
+            h1h2={payload.seoText.subTitle}
+            underlined={true}
+            variant={'h2'}
+          />
+            <Typography variant="body1">
+              {payload.seoText.dataArray[0].h2Detail}
+            </Typography>
+          </Section>
+        </Grid>
         <Section>
           <CustomTitle
             style={{ marginBottom: "20px" }}
