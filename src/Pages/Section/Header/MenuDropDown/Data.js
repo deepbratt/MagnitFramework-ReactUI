@@ -15,6 +15,10 @@ export const servicesData = [
     title: "Digital Marketing",
     path: "/digital-marketing",
   },
+  {
+    title: "Hire Developer",
+    path: "/hire-developer",
+  },
 ];
 
 export const insight = "Insights";

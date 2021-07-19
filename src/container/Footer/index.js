@@ -62,9 +62,9 @@ const Footer = () => {
                   <div className={contact}>
                     {socialMedia.dataArray.map((data) => {
                       return (
-                        <Link to={data.link} target="_blank">
-                          <img height="auto" width="100%" src={data.icon} />
-                        </Link>
+                        <a href={data.link} target="_blank" rel="noreferrer">
+                          <img height="auto" width="100%" src={data.icon} alt=""/>
+                        </a>
                       );
                     })}
                   </div>
