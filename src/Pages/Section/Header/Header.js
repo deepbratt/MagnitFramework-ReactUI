@@ -39,29 +39,25 @@ const Header = (props) => {
     <>
       <AppBar className={root} position="sticky">
         <Toolbar className={appbarsolid}>
-          <section>
+          <NavLink to="/">
             <CustomImage className={logo} alt="logo" src={Logo} />
-          </section>
+          </NavLink>
           <Hidden smDown>
             <List className={list}>
               <MuiThemeProvider theme={theme}>
                 <ListItem>
-                  <Button className={list}>
-                    <NavLink
-                      activeClassName={active}
-                      className={link}
-                      to="/home"
-                    >
+                  <NavLink activeClassName={active} className={link} to="/">
+                    <Button className={list}>
                       <Typography variant="caption">HOME</Typography>
-                    </NavLink>
-                  </Button>
+                    </Button>
+                  </NavLink>
                 </ListItem>
               </MuiThemeProvider>
               <Menus
                 route={serviceRoute}
                 name={service}
                 data={servicesData}
-                sub={subMenu}
+                // sub={subMenu}
                 Class={link}
               />
               <Menus Class={events} name={insight} data={InsightsData} />

@@ -8,8 +8,8 @@ import { Loader } from "./Components/loader";
 import { Colors } from "./Theme/color.constants";
 // import { GA_ID } from "./Utils/Constants/Language";
 // import RouteChangeTracker from "./Components/RouteChangeTracker";
-const Home = lazy(() => import("./Pages/Home"));
-const Error = lazy(() => import("./Pages/Error/Index"));
+import Home from "./Pages/Home"
+import Error from "./Pages/Error/Index"
 
 // ReactGA.initialize(GA_ID);
 
@@ -18,7 +18,7 @@ const Routes = () => {
   // const isLoggedIn = useSelector((state) => state.userReducer.isLoggedin);
   const { Harlequin } = Colors;
   return (
-    <Suspense fallback={<Loader color={Harlequin} styles="h4" />}>
+    // <Suspense fallback={<Loader color={Harlequin} styles="h4" />}>
       <Router>
         {/* <RouteChangeTracker/> */}
         <Layout>
@@ -40,7 +40,7 @@ const Routes = () => {
           </Switch>
         </Layout>
       </Router>
-    </Suspense>
+    // </Suspense>
   );
 };
 export default Routes;

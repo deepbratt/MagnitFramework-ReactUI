@@ -23,7 +23,6 @@ const useApi = () =>{
         setReview(res.data.data.result.sections.reviews.dataArray)
         setBanner(res.data.data.result.sections.banner.dataArray)
         setMetaData(res.data.data.result.metaData)
-
       }).then(() => setLoading(false))
       .catch((error) => {
         setError({ errorMessage: error.status });

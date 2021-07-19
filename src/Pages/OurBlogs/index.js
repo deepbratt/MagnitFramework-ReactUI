@@ -15,6 +15,7 @@ import OurBlogsStyles from "./style";
 import CustomTitle from "../Section/CustomTitle";
 import { getPageDataApi } from "../../Utils/APIs/pagesApi";
 import { Loader } from "../../Components/loader";
+import api from "../../Utils/Constants/api";
 
 const OurBlogs = () => {
   const { linearBackground, BlueRibbon, whiteColor } = Colors;
@@ -23,26 +24,55 @@ const OurBlogs = () => {
   const [metaData, setMetaData] = useState({});
   const [sections, setSections] = useState({});
   const [isLoading, setIsLoading] = useState(true);
+  const [latestBlogsLimit, setLatestBlogsLimit] = useState(1)
+  const [latestBlogsPage, setLatestBlogsPage] = useState(1)
+  const [totalLatestBlogs, setTotalLatestBlogs] = useState(0)
+  const [latestBlogsTotalPages, setLatestBlogsTotalPages] = useState(0)
+  const [loadingLatestBlogs, setLoadingLatestBlogs] = useState(false)
+  const [latestBlogsArray, setLatestBlogsArray] = useState([])
 
   const getPageData = useCallback(async () => {
     setIsLoading(true);
     await getPageDataApi("blogs")
       .then((response) => {
         if (response.status === "success") {
-          console.log("response", response);
           setMetaData(response.data.result.metaData);
           setSections(response.data.result.sections);
+          setLatestBlogsArray(response.data.result.sections.latestBlogs.dataArray)
+          let LimitLatestBlog = response.data.result.sections.latestBlogs.queryParams.limit
+          setLatestBlogsLimit(LimitLatestBlog);
+          api.getLatestBlogsByPagination(LimitLatestBlog, latestBlogsPage).then(result=>{
+            if(result.data.status === "success"){
+              setTotalLatestBlogs(result.data.total_results)
+              let temp = Math.ceil(result.data.total_results/LimitLatestBlog)
+              temp = temp <= 0 ? 1 : temp
+              setLatestBlogsTotalPages(temp)
+            }
+          })
           setIsLoading(false);
         }
-      })
+      }).then(()=>isLoading(false))
       .catch((error) => {
         console.error("error", error);
       });
   }, []);
 
+  const handlePageChange = (page) =>{
+    if(page === latestBlogsPage){
+      return
+    }
+    setLoadingLatestBlogs(true)
+    api.getLatestBlogsByPagination(latestBlogsLimit, page).then(response=>{
+      if(response.data.status==="success"){
+        setLatestBlogsArray(response.data.data.result)
+        setLatestBlogsPage(page)
+      }
+    }).then(()=>setLoadingLatestBlogs(false))
+  }
+
   useEffect(() => {
     getPageData();
-    console.log("useEffect");
+    // console.log("useEffect");
   }, [getPageData]);
 
   const breadCrumData = [
@@ -158,8 +188,8 @@ const OurBlogs = () => {
                 underlined={false}
               />
               <Grid container justify="center" spacing={2}>
-                {sections.latestBlogs.dataArray &&
-                  sections.latestBlogs.dataArray.map((card, index) => (
+                {latestBlogsArray && !loadingLatestBlogs ?
+                  latestBlogsArray.map((card, index) => (
                     <Grid
                       key={index + "blogslatest"}
                       item
@@ -170,7 +200,7 @@ const OurBlogs = () => {
                     >
                       <LatestBlogs cardData={card} />
                     </Grid>
-                  ))}
+                  )) : <Loader/>}
                 <Grid item xs={12}>
                   <div
                     style={{
@@ -179,7 +209,7 @@ const OurBlogs = () => {
                       marginTop: "40px",
                     }}
                   >
-                    <Pagination count={4} color="primary" />
+                    <Pagination count={latestBlogsTotalPages} color="primary" onChange={(event, value)=>handlePageChange(value)}/>
                   </div>
                 </Grid>
               </Grid>

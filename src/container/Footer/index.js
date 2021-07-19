@@ -1,6 +1,6 @@
 import { Grid } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import FooterStyle from "./style";
@@ -53,18 +53,18 @@ const Footer = () => {
             >
               <Grid item xs={12} md={4} lg={3}>
                 <div className={section}>
-                  <div className={logo}>
+                  <NavLink className={logo} to="/">
                     <CustomImage src={Logo} alt="Maginit Logo" />
-                  </div>
+                  </NavLink>
                   <Typography align="left" gutterBottom variant="h5">
                     {socialMedia.heading}
                   </Typography>
                   <div className={contact}>
                     {socialMedia.dataArray.map((data) => {
                       return (
-                        <Link to={data.link} target="_blank">
-                          <img height="auto" width="100%" src={data.icon} />
-                        </Link>
+                        <a href={data.link} target="_blank" rel="noreferrer">
+                          <img height="auto" width="100%" src={data.icon} alt=""/>
+                        </a>
                       );
                     })}
                   </div>

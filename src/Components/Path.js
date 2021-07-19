@@ -12,21 +12,33 @@
 // import DigitalMarketing from "../Pages/DigitalMarketing";
 // import CaseStudies from "../Pages/CaseStudies";
 import  { lazy } from 'react'
+import RenderBlog from '../Pages/RenderBlog';
 
 
-
-const AboutUs = lazy(() =>import("./../Pages/AboutUs/AboutUs"));
-const Services = lazy(() =>import("./../Pages/Services"));
-const WebServices = lazy(() =>import("../Pages/WebServices"));
-const Home = lazy(() =>import("../Pages/Home/index"));
-const Testimonials = lazy(() =>import("../Pages/Testimonials"));
-const Career = lazy(() =>import("../Pages/Careers/Container"));
-const AppSolutions = lazy(() =>import("../Pages/AppSolutionsPage/Container"));
-const OurBlogs = lazy(() =>import("../Pages/OurBlogs"));
-const Quote = lazy(() =>import("../Pages/ContactUs/index"));
-const HireDeveloper = lazy(() =>import("../Pages/HireDeveloper"));
-const DigitalMarketing = lazy(() =>import("../Pages/DigitalMarketing"));
-const CaseStudies = lazy(() =>import("../Pages/CaseStudies"));
+import AboutUs from "./../Pages/AboutUs/AboutUs"
+import Home from "../Pages/Home/index"
+import Services from "./../Pages/Services"
+import WebServices from "./../Pages/WebServices"
+import Testimonials from "./../Pages/Testimonials"
+import OurBlogs from "./../Pages/OurBlogs"
+import Quote from "./../Pages/ContactUs"
+import HireDeveloper from "./../Pages/HireDeveloper"
+import DigitalMarketing from "./../Pages/DigitalMarketing"
+import CaseStudies from "./../Pages/CaseStudies"
+import AppSolutions from "./../Pages/AppSolutionsPage/Container"
+import Career from "./../Pages/Careers/Container"
+// const AboutUs = lazy(() =>import("./../Pages/AboutUs/AboutUs"));
+// const Services = lazy(() =>import("./../Pages/Services"));
+// const WebServices = lazy(() =>import("../Pages/WebServices"));
+// const Home = lazy(() =>import("../Pages/Home/index"));
+// const Testimonials = lazy(() =>import("../Pages/Testimonials"));
+// const Career = lazy(() =>import("../Pages/Careers/Container"));
+// const AppSolutions = lazy(() =>import("../Pages/AppSolutionsPage/Container"));
+// const OurBlogs = lazy(() =>import("../Pages/OurBlogs"));
+// const Quote = lazy(() =>import("../Pages/ContactUs/index"));
+// const HireDeveloper = lazy(() =>import("../Pages/HireDeveloper"));
+// const DigitalMarketing = lazy(() =>import("../Pages/DigitalMarketing"));
+// const CaseStudies = lazy(() =>import("../Pages/CaseStudies"));
 
 const pathIds = {
   home: "home",
@@ -44,7 +56,8 @@ const pathIds = {
   hireDeveloper: "hire-developer",
   digitalMarketing: "digital-marketing",
   pricing: "pricing",
-  notFound: "404"
+  notFound: "404",
+  renderBlog: 'render-blog'
 };
 
 const pathRouting = {
@@ -63,7 +76,8 @@ const pathRouting = {
   hireDeveloper: "/hire-developer",
   digitalMarketing: "/digital-marketing",
   pricing: "/pricing",
-  notFound:"error"
+  notFound:"error",
+  renderBlog:'/blog/:canonicalId'
 };
 
 const pageRoutes = {
@@ -127,6 +141,12 @@ const pageRoutes = {
     sidebarName: "Digital Marketing",
     component: DigitalMarketing,
   },
+  [pathIds.renderBlog]: {
+    path: pathRouting.renderBlog,
+    // sidebarName: "Digital Marketing",
+    component: RenderBlog,
+  },
+  
   // [pathIds.solutions]: {
   //   path: pathRouting.solutions,
   //   sidebarName: "Solutions",
