@@ -66,8 +66,9 @@ const Solutions = () => {
               h1h2={payload.seoText.title}
               underlined={true}
               variant={"h1"}
+              h1h2Style={{marginTop:"0px"}}
             />
-            <Typography variant="body1">
+            <Typography variant="body1" color="textSecondary">
               {payload.seoText.dataArray[0].h1Detail}
             </Typography>
           </Section>
@@ -78,7 +79,7 @@ const Solutions = () => {
             underlined={true}
             variant={'h2'}
           />
-            <Typography variant="body1">
+            <Typography variant="body1" color="textSecondary">
               {payload.seoText.dataArray[1].h2Detail}
             </Typography>
           </Section>
@@ -89,7 +90,7 @@ const Solutions = () => {
             underlined={true}
             variant={'h2'}
           />
-            <Typography variant="body1">
+            <Typography variant="body1" color="textSecondary" style={{marginBottom:"-60px"}}>
               {payload.seoText.dataArray[2].h2Detail}
             </Typography>
           </Section>

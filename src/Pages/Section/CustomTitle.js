@@ -28,7 +28,7 @@ const CustomTitle = (props) => {
       </Typography>
       {props.h1h2 && (<Typography
         color="textPrimary"
-        style={{ color: props.color, lineHeight: 1.8 }}
+        style={Object.assign({},{ color: props.color, lineHeight: 1.8, fontSize: "1.7rem", marginTop:"-60px" }, props.h1h2Style)}
         variant={props.variant}
       >
         <span className={borderBottom ? underlinedStyles : null}>

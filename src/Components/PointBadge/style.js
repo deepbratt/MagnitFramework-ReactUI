@@ -104,7 +104,7 @@ const PointBadgeStyles = makeStyles((theme) => ({
     padding: " 0rem 1rem",
     color: Mirage,
     fontWeight: 600,
-    textTransform: "capitalize",
+    // textTransform: "capitalize",
   },
 
   detail: {
