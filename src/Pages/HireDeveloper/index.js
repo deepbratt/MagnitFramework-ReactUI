@@ -59,71 +59,78 @@ const HireDeveloper = () => {
         canonical={canonical}
         keywords={keywords}
       />
-      <CommentSection alt="hire developer" data={slides}>
-        {banner.map((data) => {
-          return (
-            <>
-              <Banner
-                image={data.image}
-                alt="hire developer"
-                backColor={linearBackground}
-                breadCrumb={<BreadCrumb links={breadCrumData} />}
-              >
-                <Typography variant="h1" gutterBottom className={textColor}>
-                  {data.heading}
-                </Typography>
-                <Typography variant="h5" gutterBottom className={textColor}>
-                  {data.subHeading}
-                </Typography>
-                <span>
-                  <CustomButton>{data.buttonLabel}</CustomButton>
-                </span>
-              </Banner>
-            </>
-          );
-        })}
+      <Grid container>
+        <Grid item xs={12} style={{ order: payload.banner.order }}>
+          {banner.map((data) => {
+            return (
+              <>
+                <Banner
+                  image={data.image}
+                  alt="hire developer"
+                  backColor={linearBackground}
+                  breadCrumb={<BreadCrumb links={breadCrumData} />}
+                >
+                  <Typography variant="h1" gutterBottom className={textColor}>
+                    {data.heading}
+                  </Typography>
+                  <Typography variant="h5" gutterBottom className={textColor}>
+                    {data.subHeading}
+                  </Typography>
+                  <span>
+                    <CustomButton>{data.buttonLabel}</CustomButton>
+                  </span>
+                </Banner>
+              </>
+            );
+          })}
 
-        <div style={{ position: "relative" }}>
-          <CustomImage
-            className={leftPattern}
-            src={PatternLeft}
-            alt="hire developer"
-          />
-          <CustomImage
-            className={rightPattern}
-            src={StarFishPattern}
-            alt="hire developer"
-          />
-          <Grid
-            style={{ order: payload.seoText.order, color: "black" }}
-            item
-            md={12}
-            xs={12}
-          >
-            <Section>
-              <CustomTitle
-                style={{ marginBottom: "20px" }}
-                h1h2={payload.seoText.title}
-                underlined={true}
-                variant={"h1"}
-                h1h2Style={{marginTop:0}}
-              />
-              <Typography variant="body1" color="textSecondary">
-                {payload.seoText.dataArray[0].h1Detail}
-              </Typography>
-            </Section>
-            <Section>
-              <CustomTitle
-                style={{ marginBottom: "20px" }}
-                h1h2={payload.seoText.subTitle}
-                underlined={true}
-                variant={"h2"}
-              />
-              <Typography variant="body1" color="textSecondary" style={{marginBottom:"-60px"}}>
-                {payload.seoText.dataArray[0].h2Detail}
-              </Typography>
-            </Section>
-          </Grid>
+          <div style={{ position: "relative" }}>
+            <CustomImage
+              className={leftPattern}
+              src={PatternLeft}
+              alt="hire developer"
+            />
+            <CustomImage
+              className={rightPattern}
+              src={StarFishPattern}
+              alt="hire developer"
+            />
+          </div>
+        </Grid>
+        <Grid
+          style={{ order: payload.seoText.order, color: "black" }}
+          item
+          md={12}
+          xs={12}
+        >
+          <Section>
+            <CustomTitle
+              style={{ marginBottom: "20px" }}
+              h1h2={payload.seoText.title}
+              underlined={true}
+              variant={"h1"}
+              h1h2Style={{ marginTop: 0 }}
+            />
+            <Typography variant="body1" color="textSecondary">
+              {payload.seoText.dataArray[0].h1Detail}
+            </Typography>
+          </Section>
+          <Section>
+            <CustomTitle
+              style={{ marginBottom: "20px" }}
+              h1h2={payload.seoText.subTitle}
+              underlined={true}
+              variant={"h2"}
+            />
+            <Typography
+              variant="body1"
+              color="textSecondary"
+            >
+              {payload.seoText.dataArray[0].h2Detail}
+            </Typography>
+          </Section>
+        </Grid>
+        <Grid item xs={12} style={{ order: payload.services.order }}>
           <Section>
             <CustomTitle
               style={{ marginBottom: "20px" }}
@@ -137,38 +144,47 @@ const HireDeveloper = () => {
               horizontal={false}
             />
           </Section>
-        </div>
-        <Section backColor={aliceBlue}>
-          <CustomTitle text={payload.hiringOptions.title} underlined={true} />
-          <OptionsTab data={payload.hiringOptions.dataArray} />
-        </Section>
-        <Section patterns={ourWorkSectionPatterns} backColor={aliceBlue}>
-          <CustomTitle underlined={true} text={payload.benefits.title} />
+        </Grid>
 
-          <PointList
-            alt="hire developer"
-            data={payload.benefits.dataArray}
-            horizontal={true}
-            lgBreakpoint={6}
-          />
-        </Section>
-        <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
-          <GlanceSection
-            title={payload.ourWork.title}
-            data={payload.ourWork.dataArray}
-            buttonText={Data.buttonText}
-            alt="hire developer"
-          />
-        </Section>
-        <Section>
-          <CustomTitle underlined={true} text={DoYouWant} />
-          <span>
-            <CustomButton component={Link} to="/request-a-quote">
-              Request a Quote
-            </CustomButton>
-          </span>
-        </Section>
-      </CommentSection>
+        <Grid item xs={12} style={{ order: payload.hiringOptions.order }}>
+          <Section backColor={aliceBlue}>
+            <CustomTitle text={payload.hiringOptions.title} underlined={true} />
+            <OptionsTab data={payload.hiringOptions.dataArray} />
+          </Section>
+        </Grid>
+        <Grid item xs={12} style={{ order: payload.benefits.order }}>
+          <Section patterns={ourWorkSectionPatterns} backColor={aliceBlue}>
+            <CustomTitle underlined={true} text={payload.benefits.title} />
+            <PointList
+              alt="hire developer"
+              data={payload.benefits.dataArray}
+              horizontal={true}
+              lgBreakpoint={6}
+            />
+          </Section>
+        </Grid>
+        <Grid item xs={12} style={{ order: payload.ourWork.order }}>
+          <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
+            <GlanceSection
+              title={payload.ourWork.title}
+              data={payload.ourWork.dataArray}
+              buttonText={Data.buttonText}
+              alt="hire developer"
+            />
+          </Section>
+        </Grid>
+        <Grid item xs={12} style={{ order: payload.reviews.order }}>
+          <Section>
+            <CustomTitle underlined={true} text={DoYouWant} />
+            <span>
+              <CustomButton component={Link} to="/request-a-quote">
+                Request a Quote
+              </CustomButton>
+            </span>
+          </Section>
+          <CommentSection alt="hire developer" data={slides} />
+        </Grid>
+      </Grid>
     </>
   );
 };
