@@ -59,71 +59,78 @@ const DigitalMarketing = () => {
         canonical={canonical}
         keywords={keywords}
       />
-      <CommentSection alt="digital marketing" data={slides}>
-        {banner.map((data) => {
-          return (
-            <>
-              <Banner
-                image={data.image}
-                alt="digital marketing"
-                backColor={linearBackground}
-                breadCrumb={<BreadCrumb links={breadCrumData} />}
-              >
-                <Typography variant="h1" gutterBottom className={textColor}>
-                  {data.heading}
-                </Typography>
-                <Typography variant="h5" gutterBottom className={textColor}>
-                  {data.subHeading}
-                </Typography>
-                <span>
-                  <CustomButton>{data.buttonLabel}</CustomButton>
-                </span>
-              </Banner>
-            </>
-          );
-        })}
+      <Grid container>
+        <Grid item xs={12} style={{ order: payload.banner.order }}>
+          {banner.map((data) => {
+            return (
+              <>
+                <Banner
+                  image={data.image}
+                  alt="digital marketing"
+                  backColor={linearBackground}
+                  breadCrumb={<BreadCrumb links={breadCrumData} />}
+                >
+                  <Typography variant="h1" gutterBottom className={textColor}>
+                    {data.heading}
+                  </Typography>
+                  <Typography variant="h5" gutterBottom className={textColor}>
+                    {data.subHeading}
+                  </Typography>
+                  <span>
+                    <CustomButton>{data.buttonLabel}</CustomButton>
+                  </span>
+                </Banner>
+              </>
+            );
+          })}
+          <div style={{ position: "relative" }}>
+            <CustomImage
+              className={leftPattern}
+              src={PatternLeft}
+              alt="digital marketing"
+            />
+            <CustomImage
+              className={rightPattern}
+              src={StarFishPattern}
+              alt="digital marketing"
+            />
+          </div>
+        </Grid>
 
-        <div style={{ position: "relative" }}>
-          <CustomImage
-            className={leftPattern}
-            src={PatternLeft}
-            alt="digital marketing"
-          />
-          <CustomImage
-            className={rightPattern}
-            src={StarFishPattern}
-            alt="digital marketing"
-          />
-          <Grid
-            style={{ order: payload.seoText.order, color: "black" }}
-            item
-            md={12}
-            xs={12}
-          >
-            <Section>
-              <CustomTitle
-                style={{ marginBottom: "20px" }}
-                h1h2={payload.seoText.title}
-                underlined={true}
-                variant={"h1"}
-                h1h2Style={{marginTop:0}}
-              />
-              <Typography variant="body1" color="textSecondary">
-                {payload.seoText.dataArray[0].h1Detail}
-              </Typography>
-            </Section>
-            <Section>
-              <CustomTitle
-                style={{ marginBottom: "20px" }}
-                h1h2={payload.seoText.subTitle}
-                underlined={true}
-                variant={"h2"}
-              />
-              <Typography variant="body1" color="textSecondary" style={{marginBottom:"-60px"}}>
-                {payload.seoText.dataArray[0].h2Detail}
-              </Typography>
-            </Section>
-          </Grid>
+        <Grid
+          style={{ order: payload.seoText.order, color: "black" }}
+          item
+          md={12}
+          xs={12}
+        >
+          <Section>
+            <CustomTitle
+              style={{ marginBottom: "20px" }}
+              h1h2={payload.seoText.title}
+              underlined={true}
+              variant={"h1"}
+              h1h2Style={{ marginTop: 0 }}
+            />
+            <Typography variant="body1" color="textSecondary">
+              {payload.seoText.dataArray[0].h1Detail}
+            </Typography>
+          </Section>
+          <Section>
+            <CustomTitle
+              style={{ marginBottom: "20px" }}
+              h1h2={payload.seoText.subTitle}
+              underlined={true}
+              variant={"h2"}
+            />
+            <Typography
+              variant="body1"
+              color="textSecondary"
+            >
+              {payload.seoText.dataArray[0].h2Detail}
+            </Typography>
+          </Section>
+        </Grid>
+        <Grid item xs={12} style={{ order: payload.services.order }}>
           <Section>
             <CustomTitle
               style={{ marginBottom: "20px" }}
@@ -137,35 +144,44 @@ const DigitalMarketing = () => {
               horizontal={false}
             />
           </Section>
-        </div>
+        </Grid>
 
-        <Section patterns={ourWorkSectionPatterns} backColor={aliceBlue}>
-          <CustomTitle text={payload.benefits.title} underlined={true} />
+        <Grid item xs={12} style={{ order: payload.benefits.order }}>
+          <Section patterns={ourWorkSectionPatterns} backColor={aliceBlue}>
+            <CustomTitle text={payload.benefits.title} underlined={true} />
 
-          <PointList
-            data={payload.benefits.dataArray}
-            horizontal={true}
-            lgBreakpoint={6}
-            alt="digital marketing"
-          />
-        </Section>
-        <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
-          <GlanceAtWork
-            title={payload.ourWork.title}
-            data={payload.ourWork.dataArray}
-            buttonText={Data.buttonText}
-            alt="digital marketing"
-          />
-        </Section>
-        <Section>
-          <CustomTitle text={DoYouWant} underlined={true} />
-          <span>
-            <CustomButton component={Link} to="/request-a-quote">
-              Request a Quote
-            </CustomButton>
-          </span>
-        </Section>
-      </CommentSection>
+            <PointList
+              data={payload.benefits.dataArray}
+              horizontal={true}
+              lgBreakpoint={6}
+              alt="digital marketing"
+            />
+          </Section>
+        </Grid>
+        <Grid item xs={12} style={{ order: payload.ourWork.order }}>
+          <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
+            <GlanceAtWork
+              title={payload.ourWork.title}
+              data={payload.ourWork.dataArray}
+              buttonText={Data.buttonText}
+              alt="digital marketing"
+            />
+          </Section>
+        </Grid>
+        <Grid item xs={12} style={{ order: payload.reviews.order - 1 }}>
+          <Section>
+            <CustomTitle text={DoYouWant} underlined={true} />
+            <span>
+              <CustomButton component={Link} to="/request-a-quote">
+                Request a Quote
+              </CustomButton>
+            </span>
+          </Section>
+        </Grid>
+        <Grid item xs={12} style={{ order: payload.reviews.order }}>
+          <CommentSection alt="digital marketing" data={slides} />
+        </Grid>
+      </Grid>
     </>
   );
 };

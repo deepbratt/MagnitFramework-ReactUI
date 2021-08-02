@@ -22,7 +22,7 @@ const LatestBlogCard = ({ cardData }) => {
   return (
     <Card className={latestBlogCard}>
       <CardActionArea>
-        <img className={coverImg} src={banner || image} alt="Blog cover" />
+        <img className={coverImg} src={banner || image} height={"260px"} width={'100%'} alt="Blog cover" />
         <CardContent className={latestBlogCardContent}>
           <div className={latestBlogDetail}>
             <div>
