@@ -32,6 +32,7 @@ import CardData from "../../Components/Card";
 import useApi from "../../Utils/homePageApi";
 import { Loader } from "../../Components/loader/index";
 import MetaTags from "../../Components/MetaTags";
+import { Helmet } from "react-helmet";
 export const AwardSectionImages = [Image1, Image2, Image3, Image4, Image5];
 
 const Home = (props) => {
@@ -126,7 +127,12 @@ const Home = (props) => {
         canonical={canonical}
         keywords={keywords}
       />
-      <div className="App">
+      <Helmet>
+        <link rel="preload" href="https://s3.us-east-2.amazonaws.com/cdn.themagnit.com/878121fb-3e93-47cf-92fa-25d8d49c04a2.webp" as="image"/>
+        <link rel="preload" href="https://s3.us-east-2.amazonaws.com/cdn.themagnit.com/8ebabc01-eb87-4078-87cf-6218302a07c1.webp" as="image"/>
+        <link rel="preload" href="https://s3.us-east-2.amazonaws.com/cdn.themagnit.com/af73ba61-396d-4d0b-9e20-04092f6e5444.webp" as="image"/>
+      </Helmet>
+      <Grid container className="App">
         <Grid style={{ order: payload.homeSlider.order }} item md={12} xs={12}>
           <Slide alt="home" data={payload} />
         </Grid>
@@ -138,22 +144,26 @@ const Home = (props) => {
         >
           <Section>
             <CustomTitle
-            h1h2={payload.seoText.title}
-            underlined={true}
-            variant={'h1'}
-            h1h2Style={{marginTop:"0px"}}
-          />
+              h1h2={payload.seoText.title}
+              underlined={true}
+              variant={"h1"}
+              // h1h2Style={{ marginTop: "0px" }}
+            />
             <Typography variant="body1" color="textSecondary">
               {payload.seoText.dataArray[0].h1Detail}
             </Typography>
           </Section>
           <Section>
-          <CustomTitle
-            h1h2={payload.seoText.subTitle}
-            underlined={true}
-            variant={'h2'}
-          />
-          <Typography variant="body1" color="textSecondary" style={{marginBottom:"-60px"}}>
+            <CustomTitle
+              h1h2={payload.seoText.subTitle}
+              underlined={true}
+              variant={"h2"}
+            />
+            <Typography
+              variant="body1"
+              color="textSecondary"
+              // style={{ marginBottom: "0px" }}
+            >
               {payload.seoText.dataArray[0].h2Detail}
             </Typography>
           </Section>
@@ -186,21 +196,26 @@ const Home = (props) => {
             data={payload.benefits.dataArray}
           />
         </Grid>
-        <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
-          <GlanceSection
-            title={payload.ourWork.title}
-            data={payload.ourWork.dataArray}
-            buttonText={Data.buttonText}
-            alt="home"
-          />
-        </Section>
+        <Grid md={12} xs={12} item style={{ order: payload.ourWork.order }}>
+          <Section backColor={BlueRibbon} patterns={ourWorkSectionPatterns}>
+            <GlanceSection
+              title={payload.ourWork.title}
+              data={payload.ourWork.dataArray}
+              buttonText={Data.buttonText}
+              alt="home"
+            />
+          </Section>
+        </Grid>
         {/* TRAINING AND CERTIFICATION */}
-        <Section>
-          <Grid
-            style={{ order: payload.trainingCertification.order }}
-            container
-            direction="row"
-          >
+        <Grid
+          style={{ order: payload.trainingCertification.order }}
+          container
+          item
+          md={12}
+          xs={12}
+          direction="row"
+        >
+          <Section>
             <Grid item lg={12} md={12} xs={12}>
               <CustomTitle
                 underlined={true}
@@ -221,69 +236,81 @@ const Home = (props) => {
                     />
                   </Grid>
                 ))}
-          </Grid>
-          {/* <CustomButton>See More</CustomButton> */}
-        </Section>
+          </Section>
+        </Grid>
+        {/* <CustomButton>See More</CustomButton> */}
         {/* NEWSLETTER SECTION
       <Section>
         <NewsletterForm />
       </Section> */}
         {/* CONTACT US FORM SECTION */}
-        <Section>
-          {!isSubmitted ? (
-            <ContactUsAndFQA
-              submitForm={submitForm}
-              data={payload.FAQs.dataArray}
-              faqHeading={payload.FAQs.title}
-              heading={ContactUsTitle}
+        <Grid item xs={12} md={12} style={{order: payload.FAQs.order}}>
+          <Section>
+            {!isSubmitted ? (
+              <ContactUsAndFQA
+                submitForm={submitForm}
+                data={payload.FAQs.dataArray}
+                faqHeading={payload.FAQs.title}
+                heading={ContactUsTitle}
+              />
+            ) : (
+              <Typography style={{ textAlign: "center" }} variant="button">
+                Submitted
+              </Typography>
+            )}
+          </Section>
+          {/* What do our Client Say */}
+          <Section startQuote={startQuote} endQuote={endQuote}>
+            <Grid item lg={12} md={12} xs={12}>
+              <CustomTitle underlined={true} text={payload.reviews.title} />
+            </Grid>
+            <ReviewSlider
+              showArrows={false}
+              showDots={false}
+              slides={WhyUsSlides}
+              itemsPerSlide={3}
             />
-          ) : (
-            <Typography style={{ textAlign: "center" }} variant="button">
-              Submitted
-            </Typography>
-          )}
-        </Section>
-        {/* What do our Client Say */}
-        <Section startQuote={startQuote} endQuote={endQuote}>
-          <Grid item lg={12} md={12} xs={12}>
-            <CustomTitle underlined={true} text={payload.reviews.title} />
-          </Grid>
-          <ReviewSlider
-            showArrows={false}
-            showDots={false}
-            slides={WhyUsSlides}
-            itemsPerSlide={3}
-          />
 
-          <NavLink style={{ textDecoration: "none" }} to="/testimonial">
-            <CustomButton>See More</CustomButton>
-          </NavLink>
-          {/* <ReviewSlider slides={cardArr} /> */}
-        </Section>
+            <NavLink style={{ textDecoration: "none" }} to="/testimonial">
+              <CustomButton>See More</CustomButton>
+            </NavLink>
+            {/* <ReviewSlider slides={cardArr} /> */}
+          </Section>
+        </Grid>
         {/* AWARD AND ACCREDITATIONS SECTION */}
-        <Section>
-          <CustomTitle underlined={true} text={payload.awards.title} />
-          <Grid
-            item
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              justifyContent: "space-evenly",
-              order: payload.awards.order,
-            }}
-          >
-            {payload.awards.dataArray &&
-              payload.awards.dataArray.map((data, index) => (
-                <CustomImage
-                  style={{ margin: "10px 40px", width: "130px", color: Mirage }}
-                  src={data.image}
-                  alt="home"
-                  key={`awards-accred-${index}`}
-                />
-              ))}
-          </Grid>
-        </Section>
-      </div>
+        <Grid
+          item
+          style={{
+            order: payload.awards.order,
+          }}
+          md={12}
+          xs={12}
+        >
+          <Section>
+            <CustomTitle underlined={true} text={payload.awards.title} />
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+              }}
+            >
+              {payload.awards.dataArray &&
+                payload.awards.dataArray.map((data, index) => (
+                  <CustomImage
+                    style={{
+                      margin: "10px 40px",
+                      width: "130px",
+                      color: Mirage,
+                    }}
+                    src={data.image}
+                    alt="home"
+                    key={`awards-accred-${index}`}
+                  />
+                ))}
+            </div>
+          </Section>
+        </Grid>
+      </Grid>
     </>
   );
 };
