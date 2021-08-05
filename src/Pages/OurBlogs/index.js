@@ -26,7 +26,6 @@ const OurBlogs = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [latestBlogsLimit, setLatestBlogsLimit] = useState(1)
   const [latestBlogsPage, setLatestBlogsPage] = useState(1)
-  const [totalLatestBlogs, setTotalLatestBlogs] = useState(0)
   const [latestBlogsTotalPages, setLatestBlogsTotalPages] = useState(0)
   const [loadingLatestBlogs, setLoadingLatestBlogs] = useState(false)
   const [latestBlogsArray, setLatestBlogsArray] = useState([])
@@ -43,7 +42,6 @@ const OurBlogs = () => {
           setLatestBlogsLimit(LimitLatestBlog);
           api.getLatestBlogsByPagination(LimitLatestBlog, latestBlogsPage).then(result=>{
             if(result.data.status === "success"){
-              setTotalLatestBlogs(result.data.total_results)
               let temp = Math.ceil(result.data.total_results/LimitLatestBlog)
               temp = temp <= 0 ? 1 : temp
               setLatestBlogsTotalPages(temp)

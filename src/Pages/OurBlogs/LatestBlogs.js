@@ -8,7 +8,7 @@ import CustomButton from "../../Components/CustomButton";
 import { NavLink } from "react-router-dom";
 
 const LatestBlogCard = ({ cardData }) => {
-  const { title, text, date, banner, buttonLabel, link, descriptionLong, image, canonical } = cardData;
+  const { title, text, date, banner, link, descriptionLong, image, canonical } = cardData;
 
 
   const {
