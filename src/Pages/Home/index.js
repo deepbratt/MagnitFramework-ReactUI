@@ -127,11 +127,6 @@ const Home = (props) => {
         canonical={canonical}
         keywords={keywords}
       />
-      <Helmet>
-        <link rel="preload" href="https://s3.us-east-2.amazonaws.com/cdn.themagnit.com/878121fb-3e93-47cf-92fa-25d8d49c04a2.webp" as="image"/>
-        <link rel="preload" href="https://s3.us-east-2.amazonaws.com/cdn.themagnit.com/8ebabc01-eb87-4078-87cf-6218302a07c1.webp" as="image"/>
-        <link rel="preload" href="https://s3.us-east-2.amazonaws.com/cdn.themagnit.com/af73ba61-396d-4d0b-9e20-04092f6e5444.webp" as="image"/>
-      </Helmet>
       <Grid container className="App">
         <Grid style={{ order: payload.homeSlider.order }} item md={12} xs={12}>
           <Slide alt="home" data={payload} />

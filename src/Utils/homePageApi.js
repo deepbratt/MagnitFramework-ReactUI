@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState,useEffect } from "react";
+import { cacheImages } from "./globalFunctions";
 
 const useApi = () =>{
     const [data, setData] = useState([]);
@@ -21,7 +22,8 @@ const useApi = () =>{
         setData(res.data.data.result)
         setReview(res.data.data.result.sections.reviews.dataArray)
         setMetaData(res.data.data.result.metaData)
-
+        const srcArray = res.data.data.result.sections.homeSlider.dataArray.map((item)=>item.backgroundImage)
+        cacheImages(srcArray)
       }).then(() => setLoading(false))
       .catch((error) => {
         setError({ errorMessage: error.status });
@@ -34,6 +36,7 @@ const useApi = () =>{
       return result
    
     };
+
     return{data,loading,review,error,metaData,setLoading}
 }
 
