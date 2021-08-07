@@ -77,7 +77,9 @@ const OpportunityContext = ({ data }) => {
                     </Grid>
 
                     <Grid item xs={12}>
+                      <a href={"mailto:"+data.link} style={{textDecoration:"none"}}>
                       <CustomButton>{data.buttonLabel}</CustomButton>
+                      </a>
                     </Grid>
                   </Card>
                 </Grid>
@@ -85,9 +87,9 @@ const OpportunityContext = ({ data }) => {
             })}
         </Grid>
         {/* </section> */}
-        <Grid item xs={12}>
+        {/* <Grid item xs={12}>
           <CustomButton color="secondary">Learn More</CustomButton>
-        </Grid>
+        </Grid> */}
       </Section>
     </>
   );

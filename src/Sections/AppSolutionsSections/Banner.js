@@ -10,6 +10,7 @@ import {
 } from "../../Utils/Constants/Language/en/AppSolutionsData";
 import BreadCrumb from "../../Components/BreadCrumb";
 import CustomButton from "../../Components/CustomButton";
+import { NavLink } from "react-router-dom";
 const BannerSection = ({data,alt}) => {
   const { linearBackground} = Colors;
   const breadcrumbData = [
@@ -40,7 +41,9 @@ const BannerSection = ({data,alt}) => {
           {data.subHeading}
         </Typography>
         <section style={{ marginTop: "15px" }}>
+          <NavLink to={'request-a-quote'} style={{textDecoration:"none"}}>
           <CustomButton>{data.buttonLabel}</CustomButton>
+          </NavLink>
         </section>
       </Banner>
          </>

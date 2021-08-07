@@ -6,11 +6,11 @@ import CustomButton from "../../Components/CustomButton";
 import BreadCrumb from "../../Components/BreadCrumb";
 import CustomTitle from "../../Pages/Section/CustomTitle";
 import { splitString } from "../../Utils/globalFunctions";
+import { NavLink } from "react-router-dom";
 
-const Main = ({ data, width }) => {
+const Main = ({ data, width, executeScroll }) => {
   const classes = useStyles();
   const { root, breadCrumbStyles, cardSec, hero, card, paragraph } = classes;
-
   const { dataArray } = data;
   const { heading, subHeading, buttonLabel, image } = dataArray[0];
   const bannerText = splitString(subHeading, "<br />");
@@ -25,6 +25,7 @@ const Main = ({ data, width }) => {
       text: "Careers",
     },
   ];
+
 
   return (
     <>
@@ -66,7 +67,7 @@ const Main = ({ data, width }) => {
           </Card>
 
           <Grid>
-            <CustomButton>{buttonLabel}</CustomButton>
+            <CustomButton onClick={()=>executeScroll()}>{buttonLabel}</CustomButton>
           </Grid>
         </Grid>
       </Grid>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import { Grid } from "@material-ui/core";
 import Main from "./Main";
 import Section from "../Section";
@@ -11,10 +11,13 @@ import { getPageDataApi } from "../../Utils/APIs/pagesApi";
 import { useStyles } from "../../Sections/MainComponent/mainStyles";
 
 const CareerContainer = () => {
+  const jobRef = useRef(null)
   const { hero } = useStyles();
   const [metaData, setMetaData] = useState({});
   const [sections, setSections] = useState({});
   const [isLoading, setIsLoading] = useState(true);
+
+  const executeScroll = () => jobRef.current.scrollIntoView({ behavior: 'smooth' })
 
   const getPageData = useCallback(async () => {
     setIsLoading(true);
@@ -68,7 +71,7 @@ const CareerContainer = () => {
             md={12}
             xs={12}
           >
-            <Main width="550px" data={sections.banner} class={hero} />
+            <Main width="550px" data={sections.banner} class={hero} executeScroll={executeScroll}/>
           </Grid>
           <Grid
             style={{ order: sections.jobBenifits.order }}
@@ -94,6 +97,7 @@ const CareerContainer = () => {
             lg={12}
             md={12}
             xs={12}
+            ref={jobRef}
           >
             <Opportunities data={sections.opportunites} />
           </Grid>

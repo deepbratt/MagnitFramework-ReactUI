@@ -1,7 +1,7 @@
 import PointList from "../../Components/PointBadge/PointList";
 import Section from "../Section";
 import CustomTitle from "../Section/CustomTitle";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Typography } from "@material-ui/core";
 import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
 import { Colors } from "../../Theme/color.constants";
@@ -22,6 +22,7 @@ import { Grid } from "@material-ui/core";
 import { Loader } from "../../Components/loader";
 import MetaTags from "../../Components/MetaTags";
 import { useEffect } from "react";
+import RequestQuoteSection from "../../Sections/RequestQuoteSection";
 const Services = () => {
   const { aliceBlue, linearBackground, BlueRibbon } = Colors;
   const { data, review, metaData, banner, loading } = useApi();
@@ -82,7 +83,9 @@ const Services = () => {
                     {data.subHeading}
                   </Typography>
                   <span>
-                    <CustomButton>{data.buttonLabel}</CustomButton>
+                    <NavLink to={'/request-a-quote'} style={{textDecoration:"none"}}>
+                      <CustomButton>{data.buttonLabel}</CustomButton>
+                    </NavLink>
                   </span>
                 </Banner>
               </>
@@ -171,12 +174,7 @@ const Services = () => {
         </Grid>
         <Grid item xs={12} style={{ order: payload.reviews.order - 1 }}>
           <Section>
-            <CustomTitle underlined={true} text={DoYouWant} />
-            <span>
-              <CustomButton component={Link} to="/request-a-quote">
-                Request a Quote
-              </CustomButton>
-            </span>
+            <RequestQuoteSection/>
           </Section>
         </Grid>
         <Grid item xs={12} style={{ order: payload.reviews.order }}>

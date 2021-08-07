@@ -197,3 +197,5 @@ export const metadata={
     description:"Digital marketing agency in USA offer SEO SMM PPC Web Analytics & content marketing services. We have affordable monthly SEO pricing Packages"
   },
 }
+
+export const DoYouWant = "Do You Want to Discuss Your Project?"
