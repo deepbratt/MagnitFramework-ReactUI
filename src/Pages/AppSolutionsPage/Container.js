@@ -18,6 +18,7 @@ import useApi from "../../Utils/appSolutionsApi";
 import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/OurWorkSectionPattern";
 import MetaTags from "../../Components/MetaTags";
 import { Loader } from "../../Components/loader";
+import RequestQuoteSection from "../../Sections/RequestQuoteSection";
 const Solutions = () => {
   const { root } = ServicesSectionStyles();
   const { MoonWhite, aliceBlue } = Colors;
@@ -149,12 +150,7 @@ const Solutions = () => {
           style={{ order: payload.reviews.order }}
         >
           <Section>
-            <CustomTitle underlined={true} text={DoYouWant} />
-            <span>
-              <CustomButton component={Link} to="/request-a-quote">
-                Request a Quote
-              </CustomButton>
-            </span>
+            <RequestQuoteSection/>
           </Section>
           <CommentSection data={slides} />
         </Grid>

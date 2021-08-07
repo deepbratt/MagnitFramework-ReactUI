@@ -18,6 +18,7 @@ import { getPageDataApi } from "../../Utils/APIs/pagesApi";
 import { Colors } from "../../Theme/color.constants";
 import { Loader } from "../../Components/loader";
 import ReviewCard from "../../Components/ReviewSlider/ReviewCard";
+import RequestQuoteSection from "../../Sections/RequestQuoteSection";
 
 const Services = () => {
   const { linearBackground, BlueRibbon, aliceBlue } = Colors;
@@ -131,12 +132,7 @@ const Services = () => {
           </Grid>
           <Grid style={{ order: sections.reviews.order }} item xs={12}>
             <Section>
-              <CustomTitle text={DoYouWant} underlined={true} />
-              <span>
-                <CustomButton component={Link} to="/request-a-quote">
-                  Request a Quote
-                </CustomButton>
-              </span>
+              <RequestQuoteSection/>
             </Section>
           </Grid>
           <Grid style={{ order: sections.reviews.order }} item xs={12}>

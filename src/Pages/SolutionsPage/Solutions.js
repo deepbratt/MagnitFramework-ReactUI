@@ -15,6 +15,7 @@ import CustomButton from "../../Components/CustomButton";
 import { Link } from "react-router-dom";
 import { DoYouWant } from "../WebServices/constants";
 import PointList from "../../Components/PointBadge/PointList";
+import RequestQuoteSection from "../../Sections/RequestQuoteSection";
 
 const Solutions = () => {
   const { linearBackground } = Colors;
@@ -40,12 +41,8 @@ const Solutions = () => {
             <PointList data={benefitsData} horizontal={true} lgBreakpoint={6} />
           </Grid>
         </Section>
-        <Section title={DoYouWant}>
-          <span>
-            <CustomButton component={Link} to="/request-a-quote">
-              Request a Quote
-            </CustomButton>
-          </span>
+        <Section>
+          <RequestQuoteSection/>
         </Section>
       </CommentSection>
     </>

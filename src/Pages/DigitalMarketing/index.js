@@ -20,6 +20,7 @@ import { Grid } from "@material-ui/core";
 import ReviewCard from "../../Components/ReviewSlider/ReviewCard";
 import MetaTags from "../../Components/MetaTags";
 import { Loader } from "../../Components/loader";
+import RequestQuoteSection from "../../Sections/RequestQuoteSection";
 
 const DigitalMarketing = () => {
   const { linearBackground, BlueRibbon, aliceBlue } = Colors;
@@ -172,12 +173,7 @@ const DigitalMarketing = () => {
         </Grid>
         <Grid item xs={12} style={{ order: payload.reviews.order - 1 }}>
           <Section>
-            <CustomTitle text={DoYouWant} underlined={true} />
-            <span>
-              <CustomButton component={Link} to="/request-a-quote">
-                Request a Quote
-              </CustomButton>
-            </span>
+            <RequestQuoteSection/>
           </Section>
         </Grid>
         <Grid item xs={12} style={{ order: payload.reviews.order }}>

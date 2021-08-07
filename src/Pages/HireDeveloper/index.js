@@ -22,6 +22,7 @@ import { ourWorkSectionPatterns } from "../../Components/OurWorkSectionPatteren/
 import ReviewCard from "../../Components/ReviewSlider/ReviewCard";
 import { Grid } from "@material-ui/core";
 import MetaTags from "../../Components/MetaTags";
+import RequestQuoteSection from "../../Sections/RequestQuoteSection";
 const HireDeveloper = () => {
   const { aliceBlue, linearBackground, BlueRibbon } = Colors;
   const { data, review, metaData, banner, loading } = useApi();
@@ -177,12 +178,7 @@ const HireDeveloper = () => {
         </Grid>
         <Grid item xs={12} style={{ order: payload.reviews.order }}>
           <Section>
-            <CustomTitle underlined={true} text={DoYouWant} />
-            <span>
-              <CustomButton component={Link} to="/request-a-quote">
-                Request a Quote
-              </CustomButton>
-            </span>
+            <RequestQuoteSection/>
           </Section>
           <CommentSection alt="hire developer" data={slides} />
         </Grid>

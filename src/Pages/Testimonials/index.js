@@ -20,6 +20,7 @@ import { getPageDataApi } from "../../Utils/APIs/pagesApi";
 import { Loader } from "../../Components/loader";
 import ReviewCard from "../../Components/ReviewSlider/ReviewCard";
 import { DoYouWant } from "../WebServices/constants";
+import RequestQuoteSection from "../../Sections/RequestQuoteSection";
 
 function Testimonials() {
   const { linearBackground } = Colors;
@@ -113,12 +114,7 @@ function Testimonials() {
 
           <Grid style={{ order: sections.reviews.order }} item xs={12}>
           <Section>
-            <CustomTitle underlined={true} text={DoYouWant} />
-            <span>
-              <CustomButton component={Link} to="/request-a-quote">
-                Request a Quote
-              </CustomButton>
-            </span>
+            <RequestQuoteSection/>
           </Section>
             <CommentSection data={sections.reviews ? getSlides() : []} />
           </Grid>
