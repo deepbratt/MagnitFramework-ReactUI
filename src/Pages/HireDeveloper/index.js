@@ -1,7 +1,7 @@
 import PointList from "../../Components/PointBadge/PointList";
 import Section from "../Section";
 import CustomTitle from "../Section/CustomTitle";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Typography } from "@material-ui/core";
 import GlanceSection from "../../Sections/HomePageSections/GlanceAtWorkContext/Container";
 import { Colors } from "../../Theme/color.constants";
@@ -77,7 +77,9 @@ const HireDeveloper = () => {
                     {data.subHeading}
                   </Typography>
                   <span>
+                    <NavLink to={'/request-a-quote'} style={{textDecoration:"none"}}>
                     <CustomButton>{data.buttonLabel}</CustomButton>
+                    </NavLink>
                   </span>
                 </Banner>
               </>

@@ -53,6 +53,7 @@ const PointBadge = ({ horizontal, data, alt }) => {
             <Grid
               className={contentRight}
               onMouseLeave={() => setFlipped(false)}
+              style={{justifyContent: data.buttonLink !=="/" ? "space-around" :"center"}}
             >
               <div>
                 <Typography
@@ -73,11 +74,11 @@ const PointBadge = ({ horizontal, data, alt }) => {
                   {description}
                 </Typography>
               </div>
-              {data.buttonLabel && (
+              {data.buttonLabel && data.buttonLink !=="/" ?  (
                 <div>
                   <CustomButton size="small">{buttonLabel}</CustomButton>
                 </div>
-              )}
+              ) : null}
             </Grid>
           </ReactCardFlip>
         </div>

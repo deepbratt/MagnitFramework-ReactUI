@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback }  from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink, useHistory } from "react-router-dom";
 import Section from "../Section";
 import { Grid, Typography } from "@material-ui/core";
 import Banner from "../../Components/Banner";
@@ -24,6 +24,7 @@ const Services = () => {
   const [metaData, setMetaData] = useState({});
   const [sections, setSections] = useState({});
   const [isLoading, setIsLoading] = useState(true);
+  const history = useHistory()
 
   const breadCrumData = [
     {
@@ -92,9 +93,11 @@ const Services = () => {
                 {sections.banner.dataArray[0].subHeading}
               </Typography>
               <span>
+                <NavLink to={'/request-a-quote'} style={{textDecoration:"none"}}>
                 <CustomButton>
                   {sections.banner.dataArray[0].buttonLabel}
                 </CustomButton>
+                </NavLink>
               </span>
             </Banner>
 

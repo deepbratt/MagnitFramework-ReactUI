@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
+import { Link } from "react-router-dom";
 import { Grid, Typography } from "@material-ui/core";
 import Section from "../Section";
 import Banner from "../../Components/Banner";
@@ -18,6 +19,7 @@ import { Colors } from "../../Theme/color.constants";
 import { getPageDataApi } from "../../Utils/APIs/pagesApi";
 import { Loader } from "../../Components/loader";
 import ReviewCard from "../../Components/ReviewSlider/ReviewCard";
+import { DoYouWant } from "../WebServices/constants";
 
 function Testimonials() {
   const { linearBackground } = Colors;
@@ -103,13 +105,21 @@ function Testimonials() {
               <CustomTitle subTitle={sections.reviews.subTitle} />
 
               <VideoCard data={sections.reviews.dataArray} />
-              <Grid xs={12} className={flex}>
+              {/* <Grid xs={12} className={flex}>
                 <CustomButton type="submit">See More</CustomButton>
-              </Grid>
+              </Grid> */}
             </Section>
           </Grid>
 
           <Grid style={{ order: sections.reviews.order }} item xs={12}>
+          <Section>
+            <CustomTitle underlined={true} text={DoYouWant} />
+            <span>
+              <CustomButton component={Link} to="/request-a-quote">
+                Request a Quote
+              </CustomButton>
+            </span>
+          </Section>
             <CommentSection data={sections.reviews ? getSlides() : []} />
           </Grid>
         </Grid>
