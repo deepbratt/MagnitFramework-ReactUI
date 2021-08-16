@@ -57,9 +57,11 @@ export const useStyles = makeStyles((theme) => ({
   VertSec: {
     height: "350px",
     display: "flex",
-    justifyContent: "space-evenly",
+    justifyContent: "space-between",
     alignItems: "center",
     flexDirection: "column",
+    padding:"10px",
+    // paddingBottom:0,
     // padding:"1rem",
     width: "280px",
     // margin: "15px",
@@ -96,8 +98,8 @@ export const useStyles = makeStyles((theme) => ({
   },
   supportSub: {
     borderRadius: "5px",
-    height: "100px",
-    width: "100px",
+    height: "80%",
+    width: "auto",
     display: "flex",
     justifyContent: "center",
     alignItems: "flex-start",
