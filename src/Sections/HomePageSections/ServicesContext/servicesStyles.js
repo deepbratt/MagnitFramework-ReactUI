@@ -103,10 +103,10 @@ export const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "flex-start",
-    [theme.breakpoints.down("sm")]: {
-      height: "80px",
-      width: "80px",
-    },
+    // [theme.breakpoints.down("sm")]: {
+    //   height: "80px",
+    //   width: "80px",
+    // },
   },
   underlined: {
     position: "relative",
