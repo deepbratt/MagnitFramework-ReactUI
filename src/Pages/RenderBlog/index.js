@@ -6,10 +6,9 @@ import DOMPurify from "dompurify";
 import { useStyles } from "./useStyles";
 import { Loader } from "../../Components/loader";
 import api from "../../Utils/Constants/api";
-import { useCancelToken } from "../../Utils/CustomHooks/useCancelToken";
 import axios from "axios";
 import Section from "../Section";
-import Banner from "../../Components/Banner";
+import NotFound from "../Error/Index";
 
 const RenderBlog = () => {
   const { canonicalId } = useParams();
@@ -17,6 +16,7 @@ const RenderBlog = () => {
   const [htmlString, setHtmlString] = useState("");
   const { container, bannerClass } = useStyles();
   const [isLoading, setLoading] = useState(false);
+  const [error, setError] = useState(false)
 
   const createMarkup = (html) => {
     return {
@@ -37,22 +37,22 @@ const RenderBlog = () => {
       api
         .getBlogByCanonical(canonicalId)
         .then((response) => {
-          if (response.data.status === "success") {
-            console.log(response);
+          if (response.data && response.data.status === "success") {
             setData(response.data.data.result);
             fetchHtml(response.data.data.result.html).then((result) => {
               setHtmlString(result.data);
             });
           } else {
-            console.log(response.data);
+            console.log(response.response);
+            setError(true)
           }
         })
         .then(() => setLoading(false));
     }
   }, [canonicalId]);
 
-  if (isLoading || !htmlString) {
-    return <Loader />;
+  if (isLoading || !htmlString || error) {
+    return error ? <NotFound/>  : <Loader />;
   }
 
   return (
