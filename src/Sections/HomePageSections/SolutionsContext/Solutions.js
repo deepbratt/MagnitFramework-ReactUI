@@ -25,21 +25,20 @@ const Solutions = ({ title, content, subTitle,alt}) => {
             subTitleColor={whiteColor}
           />
         </Grid>
-        <Grid style={{ marginBottom: "20px" }} container spacing={2}>
+        <Grid style={{ marginBottom: "20px", color:"white" }} container spacing={2}>
           <Grid item xs={12}>
             <Grid container spacing={2}>
               {content &&
                 content.map((data, index) => (
                   <Grid key={index+"solutionscontentdata"} item xs={12} sm={6} md={3}>
                     <Card style={{borderRadius: "5px"}} className={card}>
-                      <CustomImage width="60px" alt={alt} src={data.image} />
-
-                      <div>
-                        <Typography color="textSecondary" variant="h5">
-                          {data.title}
-                        </Typography>
-                      </div>
+                      <CustomImage width="100%" height="100%" alt={alt} src={data.image} />
                     </Card>
+                    <div>
+                      <Typography variant="h5">
+                        {data.title}
+                      </Typography>
+                    </div>
                   </Grid>
                 ))}
             </Grid>
