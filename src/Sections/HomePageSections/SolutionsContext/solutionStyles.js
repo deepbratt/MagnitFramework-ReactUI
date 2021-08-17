@@ -41,8 +41,9 @@ export const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   card: {
-    backgroundColor: whiteColor,
-    height: "150px",
+    backgroundColor: "transparent",
+    // backgroundColor: whiteColor,
+    // height: "150px",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -54,7 +55,7 @@ export const useStyles = makeStyles((theme) => ({
       boxShadow: "0px 4px 50px 5px rgba(0, 0, 0, 0.06)",
       backgroundColor: "#fff",
     },
-    cursor: "pointer",
+    // cursor: "pointer",
   },
   devSec: {
     height: "100px",
