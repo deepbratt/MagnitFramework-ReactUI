@@ -58,7 +58,7 @@ const PointBadgeStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "flex-start",
-    margin: "15px",
+    // margin: "15px",
     marginTop: "0px",
     [theme.breakpoints.down("sm")]: {
       margin: "15px 10px",
@@ -83,6 +83,7 @@ const PointBadgeStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     textAlign: "left",
+    marginLeft:"15px",
     "& > h5": {
       color: Mirage,
       fontWeight: 600,
