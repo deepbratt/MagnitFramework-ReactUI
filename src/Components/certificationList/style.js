@@ -19,7 +19,7 @@ const CertificationListStyles = makeStyles((theme) => ({
       maxwidth: "458px",
       maxHeight: "258px",
       [theme.breakpoints.down("sm")]: {
-        maxwidth: "300px",
+        maxWidth: "300px",
         maxHeight: "300px",
       },
     },

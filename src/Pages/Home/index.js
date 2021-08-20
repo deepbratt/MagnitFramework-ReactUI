@@ -203,13 +203,13 @@ const Home = (props) => {
         {/* TRAINING AND CERTIFICATION */}
         <Grid
           style={{ order: payload.trainingCertification.order }}
-          container
           item
           md={12}
           xs={12}
-          direction="row"
+          // direction="row"
         >
           <Section>
+            <Grid container>
             <Grid item lg={12} md={12} xs={12}>
               <CustomTitle
                 underlined={true}
@@ -230,6 +230,7 @@ const Home = (props) => {
                     />
                   </Grid>
                 ))}
+                </Grid>
           </Section>
         </Grid>
         {/* <CustomButton>See More</CustomButton> */}
