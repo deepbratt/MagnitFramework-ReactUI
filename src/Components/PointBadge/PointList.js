@@ -10,7 +10,7 @@ const PointList = ({ horizontal, data, lgBreakpoint = 4 , alt}) => {
     breakpoint = 6;
   }
   return (
-    <Grid container>
+    <Grid container spacing={1}>
       {data &&
         data.map((items, index) => (
           <Grid

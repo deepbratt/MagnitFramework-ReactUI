@@ -4,9 +4,9 @@ const { darkSilver, coldBlue } = Colors;
 const CertificationListStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
-    justifyContent: "center",
-    alignContent: "center",
-    alignItems: "center",
+    // justifyContent: "space-between",
+    // alignContent: "center",
+    // alignItems: "stretch",
   },
   text: {
     textAlign: "left",
@@ -33,22 +33,26 @@ const CertificationListStyles = makeStyles((theme) => ({
     },
   },
   leftAlignment: {
+    height:"100%",
     textAlign: "left",
-    padding: "20px",
+    padding: "0",
     background: `linear-gradient(#FFF, #FFF), 
-        linear-gradient(to right, ${coldBlue}, #FFF)`,
+        linear-gradient(to right, ${coldBlue} 0%, #FFF 50%)`,
     backgroundOrigin: "padding-box, border-box",
     backgroundRepeat: "no-repeat" /* this is important */,
     border: "5px solid transparent",
+    borderRight:0
   },
   rightAlignment: {
+    height:"100%",
     textAlign: "right",
-    padding: "20px",
+    padding: "0",
     background: `linear-gradient(#FFF, #FFF), 
-        linear-gradient(to left, ${coldBlue}, #FFF)`,
+        linear-gradient(to left, ${coldBlue} 0%, #FFF 50%)`,
     backgroundOrigin: "padding-box, border-box",
     backgroundRepeat: "no-repeat" /* this is important */,
     border: "5px solid transparent",
+    borderLeft:0
   },
 }));
 
