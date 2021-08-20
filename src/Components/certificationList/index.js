@@ -4,15 +4,24 @@ import axios from "axios";
 import { useEffect, useRef, useState } from "react";
 // import Lottie from "react-lottie";
 import CertificationListStyles from "./style";
-import lottie from 'lottie-web';
+import lottie from "lottie-web";
+import CustomImage from "../CustomImage";
+import DigitalMarketingTraining from "../../assets/training/Digital_Marketing.jpg";
+import GraphicDesigningTraining from "../../assets/training/Graphic_designer.jpg";
+import WebDevelopmentTraining from "../../assets/training/Web_Development.jpg";
+const TrainingImages = {
+  "digital_marketing":DigitalMarketingTraining,
+  "graphic_design":GraphicDesigningTraining,
+  "web_development":WebDevelopmentTraining,
+};
 
 const CertificationList = ({ root, data, toRight, mounted }) => {
-  const elem = useRef(null)
-  const [isMounted, setIsMounted] = useState(false)
+  const elem = useRef(null);
+  const [isMounted, setIsMounted] = useState(false);
   const { text, imageWrapper, leftAlignment, rightAlignment } =
     CertificationListStyles();
   const { title, description, jsonFile } = data;
-  const [jsonData, setJsonData] = useState()
+  const [jsonData, setJsonData] = useState();
 
   // useEffect(() => {
   //   if(mounted){
@@ -21,7 +30,7 @@ const CertificationList = ({ root, data, toRight, mounted }) => {
   // }, [mounted]);
 
   // useEffect(()=>{
-    
+
   //   if(isMounted){
   //     let dataJson = JSON.parse(animationData)
   //     let anim = lottie.loadAnimation({
@@ -46,52 +55,50 @@ const CertificationList = ({ root, data, toRight, mounted }) => {
   //   return null
   // }
 
+  useEffect(() => {
+    if (mounted && jsonData) {
+      setIsMounted(mounted);
+    }
+  }, [mounted, jsonData]);
 
+  useEffect(() => {
+    getJsonData().then((res) => {
+      setJsonData(res);
+    });
+  }, []);
 
-
-useEffect(() => {
-  if(mounted && jsonData){
-    setIsMounted(mounted)
+  async function getJsonData() {
+    let jsonResponse = await axios.get(jsonFile);
+    console.log(jsonResponse);
+    return jsonResponse.data;
   }
-}, [mounted, jsonData]);
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: jsonData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
 
-useEffect(()=>{
-  getJsonData().then(res=>{
-    setJsonData(res)
-  })
-},[])
-
-async function getJsonData(){
-  let jsonResponse = await axios.get(jsonFile)
-  console.log(jsonResponse)
-  return jsonResponse.data
-}
-const defaultOptions = {
-  loop: true,
-  autoplay: true,
-  animationData: jsonData,
-  rendererSettings: {
-    preserveAspectRatio: "xMidYMid slice",
-  },
-};
-
-return (
-  <Grid container className={`${root}`}>
-    <Grid item xs={12} md={6}>
-      <div className={`${text} ${toRight ? rightAlignment : leftAlignment}`}>
-        <Typography color="textPrimary" variant="h3">
-          {title}
-        </Typography>
-        <Typography variant="body2" component="p">
-          {description}
-        </Typography>
-      </div>
+  return (
+    <Grid container className={`${text} ${toRight ? rightAlignment : leftAlignment}`} direction={toRight ? "row-reverse" : "row"}>
+      <Grid item xs={12} md={6} style={{padding:"20px"}}>
+        <div>
+          <Typography color="textPrimary" variant="h3">
+            {title}
+          </Typography>
+          <Typography variant="body2" component="p">
+            {description}
+          </Typography>
+        </div>
+      </Grid>
+      <Grid item xs={12} md={6} className={imageWrapper} style={{textAlign: toRight ? "left" : "right"}}>
+        {/* <Lottie options={defaultOptions} width="400px" /> */}
+        <CustomImage src={TrainingImages[title.replace(/ /g,"_").toLowerCase()]}/>
+      </Grid>
     </Grid>
-    <Grid item xs={12} md={6} className={imageWrapper}>
-      <Lottie options={defaultOptions} width="400px" />
-    </Grid>
-  </Grid>
-);
+  );
 };
 
 export default CertificationList;
