@@ -95,7 +95,7 @@ const CertificationList = ({ root, data, toRight, mounted }) => {
       </Grid>
       <Grid item xs={12} md={6} className={imageWrapper} style={{textAlign: toRight ? "left" : "right"}}>
         {/* <Lottie options={defaultOptions} width="400px" /> */}
-        <CustomImage src={TrainingImages[title.replace(/ /g,"_").toLowerCase()]} height="100%"/>
+        <CustomImage src={TrainingImages[title.replace(/ /g,"_").toLowerCase()]}/>
       </Grid>
     </Grid>
   );
