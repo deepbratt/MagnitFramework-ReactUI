@@ -32,9 +32,16 @@ const Container = (props) => {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
+                borderRadius: "5px",
               }}
             >
-              <CustomImage src={items.image} alt={props.alt} style={{ width: "100%" }} />
+              <div style={{ padding: "10px" }}>
+                <CustomImage
+                  src={items.image}
+                  alt={props.alt}
+                  style={{ width: "100%" }}
+                />
+              </div>
               <CardContent className={cardContent}>
                 <Typography variant="h5">{items.title}</Typography>
               </CardContent>
@@ -42,8 +49,8 @@ const Container = (props) => {
           </Grid>
         ))}
         <Grid item lg={12} md={12} xs={12}>
-        <NavLink style={{ textDecoration: "none" }} to="testimonial">
-          <CustomButton color="secondary">{props.buttonText}</CustomButton>
+          <NavLink style={{ textDecoration: "none" }} to="testimonial">
+            <CustomButton color="secondary">{props.buttonText}</CustomButton>
           </NavLink>
         </Grid>
       </Grid>
