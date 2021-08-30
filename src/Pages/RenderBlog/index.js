@@ -60,7 +60,8 @@ const RenderBlog = () => {
       <MetaTags canonical={data.canonical} keywords={data.keywords} description={data.description} title={data.title}/>
       <Grid item xs={12}>
         {/* <img src={data.banner} alt={data.canonical} className={bannerClass}/> */}
-        <div className={bannerClass} style={{background:`url(${data.banner}) no-repeat center`, backgroundSize:"100%"}}/>
+        {/* <div className={bannerClass} style={{background:`url(${data.banner}) no-repeat center`, backgroundSize:"100%"}}/> */}
+        <img src={data.banner} alt="banner" style={{width:"100%", height:"70vh"}}/>
       </Grid>
       <Grid item xs={12}>
         <Section>

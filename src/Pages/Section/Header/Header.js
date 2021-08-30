@@ -64,7 +64,7 @@ const Header = (props) => {
               <Menus Class={events} name={company} data={CompanyData} />
               <ListItem>
                 <NavLink
-                  to="request-a-quote"
+                  to="/request-a-quote"
                   activeClassName={active}
                   className={link}
                 >

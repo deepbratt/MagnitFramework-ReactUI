@@ -28,7 +28,7 @@ const ContactUs = () => {
       text: "Home",
     },
     {
-      path: "/request/quote",
+      path: "/request-a-quote",
       text: "Request A Quote",
     },
   ];
