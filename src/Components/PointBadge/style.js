@@ -1,19 +1,19 @@
 import { makeStyles } from "@material-ui/core";
 import { Colors } from "../../Theme/color.constants";
-const { Harlequin, Mirage, darkSilver, whiteColor } = Colors;
+const { Harlequin, Mirage, darkSilver } = Colors;
 const PointBadgeStyles = makeStyles((theme) => ({
   vertical: {
     display: "flex",
     flexDirection: "column",
-    justifyContent: "end",
+    justifyContent: "center",
+    alignItems:"center",
     height: "100%",
-    margin: "15px",
     cursor: "pointer",
     zIndex: 1,
-
-    boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)",
-    transition: "all .25s linear",
-    border: `solid 1px ${whiteColor}`,
+    padding: "10px",
+    [theme.breakpoints.down("sm")]: {
+      marginTop: "1rem",
+    },
   },
   inline: {
     display: "flex",
@@ -23,18 +23,22 @@ const PointBadgeStyles = makeStyles((theme) => ({
   badge: {
     borderRadius: "5px",
     // padding: "25px",
-    margin: "25px",
+    margin: "auto",
     [theme.breakpoints.down("sm")]: {
       margin: "15px",
     },
   },
 
   VertSec: {
-    height: "250px",
+    height: "350px",
     display: "flex",
-    justifyContent: "space-evenly",
-    alignItems: "center",
     flexDirection: "column",
+    justifyContent: "space-between",
+    alignItems: "center",
+    // padding:"10px",
+    // paddingBottom:0,
+    // padding:"1rem",
+    width: "auto",
     // margin: "15px",
     marginTop: "0px",
     // "&:hover": {
@@ -44,7 +48,7 @@ const PointBadgeStyles = makeStyles((theme) => ({
     // },
     [theme.breakpoints.down("sm")]: {
       margin: "15px 10px",
-      marginTop: "0px",
+      // marginTop:"10px",
     },
   },
   hover: {
@@ -77,6 +81,20 @@ const PointBadgeStyles = makeStyles((theme) => ({
       width: "80px",
     },
   },
+  supportSubVert:  {
+    borderRadius: "5px",
+    height: "100%%",
+    width: "100%",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "flex-start",
+    textAlign:"center",
+    margin:"auto"
+    // [theme.breakpoints.down("sm")]: {
+    //   height: "80px",
+    //   width: "80px",
+    // },
+  },
   contentLeft: {
     maxWidth: "100%",
     display: "flex",
@@ -94,12 +112,12 @@ const PointBadgeStyles = makeStyles((theme) => ({
     },
   },
   contentRight: {
-    minWidth: "100%",
-    height: "240px",
+    height: "350px",
     display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-around",
     alignItems: "center",
+    justifyContent: "space-evenly",
+    flexDirection: "column",
+    padding: ".5rem 1rem",
   },
   name: {
     padding: " 0rem 1rem",
