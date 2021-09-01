@@ -19,6 +19,8 @@ const PointBadge = ({ horizontal, data, alt }) => {
     contentLeft,
     contentRight,
     VertSec,
+    supportSubVert,
+    badge
   } = PointBadgeStyles();
 
   const [isFlipped, setFlipped] = useState(false);
@@ -29,6 +31,7 @@ const PointBadge = ({ horizontal, data, alt }) => {
         <div
           onMouseEnter={() => setFlipped(true)}
           onMouseLeave={() => setFlipped(false)}
+          style={{flexGrow:1}}
         >
           <ReactCardFlip
             isFlipped={isFlipped}
@@ -36,8 +39,8 @@ const PointBadge = ({ horizontal, data, alt }) => {
             flipDirection="horizontal"
           >
             <Grid className={VertSec} onMouseEnter={() => setFlipped(true)}>
-              <section className={supportSub}>
-                <CustomImage alt={alt} width="100%" src={image} />
+              <section className={supportSubVert}>
+                <CustomImage alt={alt} width="auto" height="80%" src={image} className={badge} />
               </section>
               <section>
                 <Typography
