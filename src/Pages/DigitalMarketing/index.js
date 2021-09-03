@@ -101,7 +101,7 @@ const DigitalMarketing = () => {
         </Grid>
 
         <Grid
-          style={{ order: payload.seoText.order, color: "black" }}
+          style={{ order: payload.seoText.order, color: "black",marginBottom:!payload.seoText.dataArray[0].h2Detail && payload.seoText.order=== 2 && "-60px" }}
           item
           md={12}
           xs={12}
@@ -118,7 +118,7 @@ const DigitalMarketing = () => {
               {payload.seoText.dataArray[0].h1Detail}
             </Typography>
           </Section>
-          <Section>
+          {payload.seoText.dataArray[0].h2Detail && <Section>
             <CustomTitle
               style={{ marginBottom: "20px" }}
               h1h2={payload.seoText.subTitle}
@@ -131,7 +131,7 @@ const DigitalMarketing = () => {
             >
               {payload.seoText.dataArray[0].h2Detail}
             </Typography>
-          </Section>
+          </Section>}
         </Grid>
         <Grid item xs={12} style={{ order: payload.services.order }}>
           <Section>

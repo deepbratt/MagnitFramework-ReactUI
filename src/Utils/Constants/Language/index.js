@@ -198,4 +198,4 @@ export const metadata={
   },
 }
 
-export const DoYouWant = "Do You Want to Discuss Your Project?"
+export const DoYouWant = "Lets Discuss Your Project"
