@@ -131,7 +131,7 @@ const Home = (props) => {
           <Slide alt="home" data={payload} />
         </Grid>
         <Grid
-          style={{ order: payload.seoText.order, color: "black" }}
+          style={{ order: payload.seoText.order, color: "black" , margin: payload.seoText.order===2 ? "60px 0 -60px 0" : 0}}
           item
           md={12}
           xs={12}
@@ -147,7 +147,7 @@ const Home = (props) => {
               {payload.seoText.dataArray[0].h1Detail}
             </Typography>
           </Section>
-          <Section>
+          {payload.seoText.dataArray[0].h2Detail && <Section>
             <CustomTitle
               h1h2={payload.seoText.subTitle}
               underlined={true}
@@ -160,7 +160,7 @@ const Home = (props) => {
             >
               {payload.seoText.dataArray[0].h2Detail}
             </Typography>
-          </Section>
+          </Section>}
         </Grid>
         <Grid style={{ order: payload.services.order }} item md={12} xs={12}>
           <Section>

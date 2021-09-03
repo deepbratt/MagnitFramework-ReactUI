@@ -56,7 +56,7 @@ const Solutions = () => {
           <Banner alt="app solutions" data={banner} />
         </Grid>
         <Grid
-          style={{ order: payload.seoText.order, color: "black" }}
+          style={{ order: payload.seoText.order, color: "black" ,marginBottom:!payload.seoText.dataArray[0].h2Detail && payload.seoText.order=== 2 && "-60px"}}
           item
           md={12}
           xs={12}
@@ -84,7 +84,7 @@ const Solutions = () => {
               {payload.seoText.dataArray[1].h2Detail}
             </Typography>
           </Section>
-          <Section>
+          {payload.seoText.dataArray[2].h2Detail && <Section>
             <CustomTitle
               style={{ marginBottom: "20px" }}
               h1h2={payload.seoText.dataArray[2].title}
@@ -94,7 +94,7 @@ const Solutions = () => {
             <Typography variant="body1" color="textSecondary">
               {payload.seoText.dataArray[2].h2Detail}
             </Typography>
-          </Section>
+          </Section>}
         </Grid>
         <Grid style={{ order: payload.appSolutions.order }} item xs={12}>
           <Section>
