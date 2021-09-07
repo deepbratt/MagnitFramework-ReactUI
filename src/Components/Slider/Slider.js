@@ -33,10 +33,10 @@ const Slider = ({ value, data, array, alt }) => {
       justify="center"
       alignItems="center"
       style={{
-        background: `linear-gradient(to right,${democrat} 0%,${vividCerlean} 15%, ${atomsphere} 39%, ${carmine} 69%,${peaFowl} 99%)`,
+        // background: `linear-gradient(to right,${democrat} 0%,${vividCerlean} 15%, ${atomsphere} 39%, ${carmine} 69%,${peaFowl} 99%)`,
       }}
     >
-      <Grid item xs={12} sm={12} md={7} lg={7} className={gridText}>
+      <Grid item xs={12} sm={12} md={12} lg={12} className={gridText}>
         <Typography variant="h1">{truncateString(data.title, 31)}</Typography>
         <Typography variant="h1">{subString(data.title, 60)} </Typography>
         <section className={listSec}>
@@ -68,7 +68,7 @@ const Slider = ({ value, data, array, alt }) => {
           </NavLink>
         </CustomButton>
       </Grid>
-      <Hidden smDown>
+      {/* <Hidden smDown>
         <Grid
           item
           xs={12}
@@ -83,7 +83,7 @@ const Slider = ({ value, data, array, alt }) => {
             className={vector}
           />
         </Grid>
-      </Hidden>
+      </Hidden> */}
 
       {/* <Hidden smDown>
         <Grid item xs={12} md={4} lg={1}></Grid>
