@@ -27,3 +27,6 @@ jobs:
       - name: Deploy app build to Production S3 bucket
         if: github.ref == 'refs/heads/main'
         run: aws s3 sync ./build/ s3://themagnit.com --delete
+      - name: Cache clear
+        if: github.ref == 'refs/heads/main'
+        run:  aws cloudfront create-invalidation --distribution-id "E2DTRUX2Y6N549" --paths "/*"
