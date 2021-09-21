@@ -11,7 +11,6 @@
 // import HireDeveloper from "../Pages/HireDeveloper";
 // import DigitalMarketing from "../Pages/DigitalMarketing";
 // import CaseStudies from "../Pages/CaseStudies";
-import  { lazy } from 'react'
 import RenderBlog from '../Pages/RenderBlog';
 
 
@@ -27,6 +26,10 @@ import DigitalMarketing from "./../Pages/DigitalMarketing"
 import CaseStudies from "./../Pages/CaseStudies"
 import AppSolutions from "./../Pages/AppSolutionsPage/Container"
 import Career from "./../Pages/Careers/Container"
+import WebDevelopment from '../Pages/SEOpages/web-development';
+import MobileAppDevelopment from '../Pages/SEOpages/mobile-development';
+import DeveloperHiring from '../Pages/SEOpages/developer-hiring';
+import DigitalMarketingUSA from '../Pages/SEOpages/digital-marketing-usa';
 // const AboutUs = lazy(() =>import("./../Pages/AboutUs/AboutUs"));
 // const Services = lazy(() =>import("./../Pages/Services"));
 // const WebServices = lazy(() =>import("../Pages/WebServices"));
@@ -57,7 +60,11 @@ const pathIds = {
   digitalMarketing: "digital-marketing",
   pricing: "pricing",
   notFound: "404",
-  renderBlog: 'render-blog'
+  renderBlog: 'render-blog',
+  webDevelopmentUSA: 'web-development' ,
+  appDevelopmentUSA: 'app-development' ,
+  developerHiringUSA: 'developer-hiring' ,
+  digitalMarketingUSA: 'digital-marketing-usa' ,
 };
 
 const pathRouting = {
@@ -77,7 +84,11 @@ const pathRouting = {
   digitalMarketing: "/digital-marketing",
   pricing: "/pricing",
   notFound:"error",
-  renderBlog:'/blog/:canonicalId'
+  renderBlog:'/blog/:canonicalId',
+  webDevelopmentUSA:"/web-development-usa",
+  appDevelopmentUSA:"/app-development-usa",
+  developerHiringUSA: '/developer-hiring-usa' ,
+  digitalMarketingUSA: '/digital-marketing-usa' ,
 };
 
 const pageRoutes = {
@@ -140,6 +151,26 @@ const pageRoutes = {
     path: pathRouting.digitalMarketing,
     sidebarName: "Digital Marketing",
     component: DigitalMarketing,
+  },
+  [pathIds.webDevelopmentUSA]: {
+    path: pathRouting.webDevelopmentUSA,
+    // sidebarName: "Digital Marketing",
+    component: WebDevelopment,
+  },
+  [pathIds.appDevelopmentUSA]: {
+    path: pathRouting.appDevelopmentUSA,
+    // sidebarName: "Digital Marketing",
+    component: MobileAppDevelopment,
+  },
+  [pathIds.developerHiringUSA]: {
+    path: pathRouting.developerHiringUSA,
+    // sidebarName: "Digital Marketing",
+    component: DeveloperHiring,
+  },
+  [pathIds.digitalMarketingUSA]: {
+    path: pathRouting.digitalMarketingUSA,
+    // sidebarName: "Digital Marketing",
+    component: DigitalMarketingUSA,
   },
   [pathIds.renderBlog]: {
     path: pathRouting.renderBlog,

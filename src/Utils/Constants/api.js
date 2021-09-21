@@ -10,6 +10,14 @@ const axiosInstance = axios.create({
 })
 
 const api = {
+    getData: async function(endpoint){
+        try{
+            const response = await axiosInstance.get(endpoint)
+            return response
+        }catch(error){
+            return error
+        }
+    },
     requestQuote: async function(requestBody, createNewToken, isCancel){
         try{
             const response = await axiosInstance.post("Quote/createQuote", requestBody, {cancelToken:createNewToken})
