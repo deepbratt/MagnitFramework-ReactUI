@@ -1,19 +1,19 @@
 import { Grid } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import FooterStyle from "./style";
 import Logo from "../../assets/Logo-white.png";
 import { footerText } from "../../Utils/Constants/Language";
 import CustomImage from "../../Components/CustomImage";
+import { pathRouting } from "../../Components/Path";
 
 const Footer = () => {
   const { root, logo, section, policy, contact, sectionBorder, copyright } =
     FooterStyle();
   const { navigation, copyrights, lifeTimeSupport, terms, disclaimer } =
     footerText;
-
 
   const [data, setData] = useState([]);
   const [mounted, setIsMounted] = useState();
@@ -28,7 +28,7 @@ const Footer = () => {
   useEffect(() => {
     loadData().then((res) => {
       setData(res.data.data.result.sections.company.dataArray);
-      setIsLoading(false)
+      setIsLoading(false);
     });
   }, []);
 
@@ -63,7 +63,12 @@ const Footer = () => {
                     {socialMedia.dataArray.map((data) => {
                       return (
                         <a href={data.link} target="_blank" rel="noreferrer">
-                          <img height="auto" width="100%" src={data.icon} alt=""/>
+                          <img
+                            height="auto"
+                            width="100%"
+                            src={data.icon}
+                            alt=""
+                          />
                         </a>
                       );
                     })}

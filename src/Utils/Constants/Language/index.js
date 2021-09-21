@@ -3,6 +3,7 @@ import * as GraphicDesignAnimationData from "../../../Components/certificationLi
 import * as MarketingAnimationData from "../../../Components/certificationList/marketingAnimation.json";
 // import * as CulturallyAlignedAnimationData from "../../../Components/certificationList/culturallyAlignedAnimation.json";
 import Avatar7 from "../../../assets/services/Avatar7.png";
+import { pathRouting } from "../../../Components/Path";
 
 export const GA_ID = "G-YZH3HVL36W";
 export const reviewSliderText = [
@@ -95,6 +96,22 @@ export const footerText = {
       {
         route: "/request-a-quote",
         value: "Request A Quote",
+      },
+      {
+        route: pathRouting.webDevelopmentUSA,
+        value: "Web Development in USA",
+      },
+      {
+        route: pathRouting.appDevelopmentUSA,
+        value: "Mobile App Development in USA",
+      },
+      {
+        route: pathRouting.digitalMarketingUSA,
+        value: "Digital Marketing in USA",
+      },
+      {
+        route: pathRouting.developerHiringUSA,
+        value: "Hire Developer in USA",
       },
     ],
   },
