@@ -6,14 +6,6 @@ import { useEffect, useRef, useState } from "react";
 import CertificationListStyles from "./style";
 import lottie from "lottie-web";
 import CustomImage from "../CustomImage";
-import DigitalMarketingTraining from "../../assets/training/Digital_Marketing.jpg";
-import GraphicDesigningTraining from "../../assets/training/Graphic_designer.jpg";
-import WebDevelopmentTraining from "../../assets/training/Web_Development.jpg";
-const TrainingImages = {
-  "digital_marketing":DigitalMarketingTraining,
-  "graphic_design":GraphicDesigningTraining,
-  "web_development":WebDevelopmentTraining,
-};
 
 const CertificationList = ({ root, data, toRight, mounted }) => {
   const elem = useRef(null);
@@ -56,6 +48,7 @@ const CertificationList = ({ root, data, toRight, mounted }) => {
   // }
 
   useEffect(() => {
+    console.log(jsonFile)
     if (mounted && jsonData) {
       setIsMounted(mounted);
     }
@@ -95,7 +88,7 @@ const CertificationList = ({ root, data, toRight, mounted }) => {
       </Grid>
       <Grid item xs={12} md={6} className={imageWrapper} style={{textAlign: toRight ? "left" : "right"}}>
         {/* <Lottie options={defaultOptions} width="400px" /> */}
-        <CustomImage src={TrainingImages[title.replace(/ /g,"_").toLowerCase()]}/>
+        <CustomImage src={jsonFile} alt={title}/>
       </Grid>
     </Grid>
   );
