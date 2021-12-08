@@ -58,8 +58,8 @@ export const footerText = {
   talkToUsSection: {
     title: "Contact Us",
     numbers: [
-      "USA: +1 (214) 329-9898,",
-      "+1 (469) 626-8836",
+      "USA: +1 (214) 329-9898",
+      "USA: +1 (469) 626-8836",
       "India: +91 63993 52116",
       "Pakistan: +92 335 1222515",
       "Email: info@themagnit.com",
