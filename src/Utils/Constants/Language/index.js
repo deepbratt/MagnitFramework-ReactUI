@@ -56,7 +56,7 @@ export const trainingAndCertificationText = [
 
 export const footerText = {
   talkToUsSection: {
-    title: "TALK TO US",
+    title: "Contact Us",
     numbers: [
       "USA: +1 (214) 329-9898,",
       "+1 (469) 626-8836",
