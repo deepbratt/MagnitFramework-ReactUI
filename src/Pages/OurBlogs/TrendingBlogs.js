@@ -15,7 +15,17 @@ import OurBlogsStyles from "./style";
 
 const TrendingBlogs = ({ cardData }) => {
   const [blogsBody, setBlogsBody] = useState([]);
-  const { title, text, descriptionLong, date, image, banner, buttonLabel, link, canonical } = cardData;
+  const {
+    title,
+    text,
+    descriptionLong,
+    date,
+    image,
+    banner,
+    buttonLabel,
+    link,
+    canonical,
+  } = cardData;
 
   const { coverImage, content, blogDetail, light } = OurBlogsStyles();
   useEffect(() => {
@@ -39,7 +49,11 @@ const TrendingBlogs = ({ cardData }) => {
                   variant="body2"
                   component="p"
                 >
-                  {new Date(date).toLocaleDateString("en-US", {month: "long", day: "numeric", year: "numeric"})}
+                  {new Date(date).toLocaleDateString("en-US", {
+                    month: "long",
+                    day: "numeric",
+                    year: "numeric",
+                  })}
                 </Typography>
               </div>
             </div>
@@ -59,7 +73,7 @@ const TrendingBlogs = ({ cardData }) => {
               ))}
           </CardContent>
           <CardActions>
-            <NavLink to={link || "blog/"+canonical}>
+            <NavLink to={"blog/" + canonical}>
               <CustomButton>{buttonLabel || "Read More"}</CustomButton>
             </NavLink>
           </CardActions>
