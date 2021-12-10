@@ -26,10 +26,9 @@ const Main = ({ data, width, executeScroll }) => {
     },
   ];
 
-
   return (
     <>
-      <Grid container className={root} style={{ marginBottom: "80px" }}>
+      <Grid container className={root}>
         <Grid item xs={12}>
           <Card className={card}>
             <div className={breadCrumbStyles}>
@@ -65,9 +64,10 @@ const Main = ({ data, width, executeScroll }) => {
               </Grid>
             </CardContent>
           </Card>
-
-          <Grid>
-            <CustomButton onClick={()=>executeScroll()}>{buttonLabel}</CustomButton>
+          <Grid item>
+            <CustomButton onClick={() => executeScroll()}>
+              {buttonLabel}
+            </CustomButton>
           </Grid>
         </Grid>
       </Grid>

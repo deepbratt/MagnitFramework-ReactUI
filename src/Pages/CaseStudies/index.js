@@ -99,8 +99,8 @@ const CaseStudies = () => {
             style={{
               order: sections.caseStudies.order,
               display: "flex",
+              marginTop: "0px",
               marginBottom: "150px",
-              marginTop: "100px",
             }}
             container
             item
@@ -118,8 +118,8 @@ const CaseStudies = () => {
             <Grid
               style={{
                 display: "flex",
-                marginBottom: "150px",
                 marginTop: "100px",
+                marginBottom: "150px",
               }}
               item
               xs={12}
